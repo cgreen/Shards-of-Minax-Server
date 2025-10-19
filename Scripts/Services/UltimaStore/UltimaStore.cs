@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
+using Server.Custom;
 using Server.Commands;
 using Server.Mobiles;
 using Server.Items;
@@ -79,6 +80,22 @@ namespace Server.Engines.UOStore
         public static void Initialize()
         {
             // Featured
+			UltimaStore.Register<KingLootbox>(new TextDefinition[] { new TextDefinition("Kings Lootbox"), new TextDefinition("A Kings Ransom!") }, 0, 0xE41, 0, 2331, 400, StoreCategory.Featured);
+			UltimaStore.Register<ElderLootbox>(new TextDefinition[] { new TextDefinition("Elder Lootbox"), new TextDefinition("Magic Maps!") }, 0, 0xE41, 0, 2331, 400, StoreCategory.Featured);
+			UltimaStore.Register<WorldLootbox>(new TextDefinition[] { new TextDefinition("World Lootbox"), new TextDefinition("Treasures of the World") }, 0, 0xE41, 0, 2534, 250, StoreCategory.Featured);
+			UltimaStore.Register<GearLootbox>(new TextDefinition[] { new TextDefinition("Gear Lootbox"), new TextDefinition("Powerful Gear") }, 0, 0xE41, 0, 1005, 250, StoreCategory.Featured);
+			UltimaStore.Register<MagicalLootbox>(new TextDefinition[] { new TextDefinition("Magical Lootbox"), new TextDefinition("Items of Power") }, 0, 0xE41, 0, 2704, 200, StoreCategory.Featured);			
+			UltimaStore.Register<DecorativeLootbox>(new TextDefinition[] { new TextDefinition("Decorative Lootbox"), new TextDefinition("Decorative Items") }, 0, 0xE41, 0, 2534, 200, StoreCategory.Featured);		
+			UltimaStore.Register<OneHandedTransformDeed>(new TextDefinition[] { new TextDefinition("OneHanded Transform Deed"), new TextDefinition("Make a weapon one handed") }, 0, 0x14F0, 0, 0, 50, StoreCategory.Featured);
+			UltimaStore.Register<MirrorOfKalandra>(new TextDefinition[] { new TextDefinition("Mirror Of Kalandra"), new TextDefinition("Duplicate an Item") }, 0, 0x4044, 0, 0, 1000, StoreCategory.Featured);
+			UltimaStore.Register<MirrorOfHonesty>(new TextDefinition[] { new TextDefinition("Mirror Of Honesty"), new TextDefinition("Finds Secrets") }, 0, 0x2252, 0, 0, 1000, StoreCategory.Featured);
+			UltimaStore.Register<MedalOfHonor>(new TextDefinition[] { new TextDefinition("Medal Of Honor"), new TextDefinition("The highest honor is Britannia") }, 0, 0x14F0, 0, 0, 1200, StoreCategory.Featured);				
+			UltimaStore.Register<ZeonRune>(new TextDefinition[] { new TextDefinition("ZeonRune"), new TextDefinition("Advanced") }, 0, 0x1423, 0, 0, 750, StoreCategory.Featured);
+			UltimaStore.Register<MasterBall>(new TextDefinition[] { new TextDefinition("Master Ball"), new TextDefinition("Catch ANY creature!") }, 0, 0x1423, 0, 0, 5000, StoreCategory.Featured);
+
+
+
+
             StoreCategory cat = StoreCategory.Featured;
             Register<VirtueShield>(1109616, 1158384, 0x7818, 0, 0, 1500, cat);
             Register<SoulstoneToken>(1158404, 1158405, 0x2A93, 0, 2598, 1000, cat, ConstructSoulstone);
@@ -88,6 +105,23 @@ namespace Server.Engines.UOStore
             Register<MythicCharacterToken>(new TextDefinition[] { 1156614, 1156615 }, 1156679, 0x2AAA, 0, 0, 2500, cat);
 
             // Character
+			UltimaStore.Register<MaxxiaScroll>(new TextDefinition[] { new TextDefinition("Maxxia Scroll"), new TextDefinition("For Advancement") }, 0, 0xE34, 0, 0, 750, StoreCategory.Character);
+			UltimaStore.Register<VirtueDistillationFlask>(new TextDefinition[] { new TextDefinition("Virtue Distillation Flask"), new TextDefinition("Distills Virtues into Orbs") }, 0, 0x1832, 0, 0, 750, StoreCategory.Character);
+			UltimaStore.Register<CompassionStone>(new TextDefinition[] { new TextDefinition("Compassion Stone"), new TextDefinition("Consentrated Compassion") }, 0, 0x1869, 0, 0, 750, StoreCategory.Character);
+			UltimaStore.Register<HonestyStone>(new TextDefinition[] { new TextDefinition("Honesty Stone"), new TextDefinition("Consentrated Honesty") }, 0, 0x186A, 0, 0, 750, StoreCategory.Character);
+			UltimaStore.Register<HonorStone>(new TextDefinition[] { new TextDefinition("Honor Stone"), new TextDefinition("Consentrated Honor") }, 0, 0x186B, 0, 0, 750, StoreCategory.Character);
+			UltimaStore.Register<JusticeStone>(new TextDefinition[] { new TextDefinition("Justice Stone"), new TextDefinition("Consentrated Justice") }, 0, 0x186C, 0, 0, 750, StoreCategory.Character);
+			UltimaStore.Register<SacrificeStone>(new TextDefinition[] { new TextDefinition("Sacrifice Stone"), new TextDefinition("Sacrifice Compassion") }, 0, 0x186D, 0, 0, 750, StoreCategory.Character);
+			UltimaStore.Register<SpiritualityStone>(new TextDefinition[] { new TextDefinition("Spirituality Stone"), new TextDefinition("Consentrated Spirituality") }, 0, 0x186E, 0, 0, 750, StoreCategory.Character);
+			UltimaStore.Register<ValorStone>(new TextDefinition[] { new TextDefinition("Valor Stone"), new TextDefinition("Consentrated Valor") }, 0, 0x186F, 0, 0, 750, StoreCategory.Character);
+			UltimaStore.Register<HumilityStone>(new TextDefinition[] { new TextDefinition("Humility Stone"), new TextDefinition("Consentrated Humility") }, 0, 0x1870, 0, 0, 750, StoreCategory.Character);		
+			UltimaStore.Register<GenderChangeDeed>(new TextDefinition[] { new TextDefinition("Gender Change Deed"), new TextDefinition("Change the slot of gender") }, 0, 0x14F0, 0, 0, 750, StoreCategory.Character);
+			UltimaStore.Register<CapacityIncreaseDeed>(new TextDefinition[] { new TextDefinition("Capacity Increase Deed"), new TextDefinition("Increase backpack") }, 0, 0x14F0, 0, 0, 750, StoreCategory.Character);			
+			UltimaStore.Register<StatCapOrb>(new TextDefinition[] { new TextDefinition("StatCap Orb"), new TextDefinition("Raise stat cap +1") }, 0, 0x1869, 0, 0, 750, StoreCategory.Character);
+			UltimaStore.Register<SkillOrb>(new TextDefinition[] { new TextDefinition("SkillOrb"), new TextDefinition("Raise skillcap +1") }, 0, 0x1869, 0, 0, 750, StoreCategory.Character);			
+			UltimaStore.Register<MurderRemovalDeed>(new TextDefinition[] { new TextDefinition("Murder Removal Deed"), new TextDefinition("pay off the guards") }, 0, 0x14F0, 0, 0, 750, StoreCategory.Character);
+
+			
             cat = StoreCategory.Character;
 
             Register<HABPromotionalToken>(new TextDefinition[] { 1158741, 1156615 }, 1158740, 0x2AAA, 0, 0, 600, cat);
@@ -118,6 +152,55 @@ namespace Server.Engines.UOStore
             Register<NameChangeToken>(new TextDefinition[] { 1156608, 1156615 }, 1156641, 0x2AAA, 0, 0, 1000, cat);
 
             // Equipment
+			UltimaStore.Register<BashingShield>(new TextDefinition[] { new TextDefinition("Bashing Shield"), new TextDefinition("A Parry Weapon!") }, 0, 0x1B76, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<BeggersStick>(new TextDefinition[] { new TextDefinition("Beggers Stick"), new TextDefinition("A Begging Weapon!") }, 0, 0x13F8, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<CampingLanturn>(new TextDefinition[] { new TextDefinition("Camping Lanturn"), new TextDefinition("A Camping Weapon!") }, 0, 0xA22, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<CarpentersHammer>(new TextDefinition[] { new TextDefinition("Carpenters Hammer"), new TextDefinition("A Carpentry Weapon!") }, 0, 0x143D, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<CooksCleaver>(new TextDefinition[] { new TextDefinition("Cooks Cleaver"), new TextDefinition("A Cooking Weapon!") }, 0, 0xEC3, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<DetectivesBoneHarvester>(new TextDefinition[] { new TextDefinition("Detectives Bone Harvester"), new TextDefinition("A Forensics Weapon!") }, 0, 0x26BB, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<DistractingHammer>(new TextDefinition[] { new TextDefinition("Distracting Hammer"), new TextDefinition("A Discordance Weapon!") }, 0, 0xFB5, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<FletchersBow>(new TextDefinition[] { new TextDefinition("Fletchers Bow"), new TextDefinition("A Fletching Weapon!") }, 0, 0xF42, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<FocusKryss>(new TextDefinition[] { new TextDefinition("Focus Kryss"), new TextDefinition("A Focus Weapon!") }, 0, 0x1401, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<GourmandsFork>(new TextDefinition[] { new TextDefinition("Gourmands Fork"), new TextDefinition("A TasteID Weapon!") }, 0, 0x1405, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<HolyKnightSword>(new TextDefinition[] { new TextDefinition("Holy Sword"), new TextDefinition("A Chivalry Weapon!") }, 0, 0x13B9, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<IllegalCrossbow>(new TextDefinition[] { new TextDefinition("Illegal Crossbow"), new TextDefinition("A Stealing Weapon!") }, 0, 0xF50, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<IntelligenceEvaluator>(new TextDefinition[] { new TextDefinition("IntelligenceEvaluator"), new TextDefinition("A Evaluate Intelligence Weapon!") }, 0, 0x13B4, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<LoreSword>(new TextDefinition[] { new TextDefinition("Lore Sword"), new TextDefinition("A Arms Lore Weapon!") }, 0, 0xF61, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<MageWand>(new TextDefinition[] { new TextDefinition("Mage Wand"), new TextDefinition("A Magery Weapon!") }, 0, 0xDF2, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<MallKatana>(new TextDefinition[] { new TextDefinition("Mall Katana"), new TextDefinition("A Bushido Weapon!") }, 0, 0x13FF, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<MeatPicks>(new TextDefinition[] { new TextDefinition("Meat Picks"), new TextDefinition("A Lockpicking Weapon!") }, 0, 0x27AD, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<MeditationFans>(new TextDefinition[] { new TextDefinition("Meditation Fans"), new TextDefinition("A Meditation Weapon!") }, 0, 0x27A3, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<MysticStaff>(new TextDefinition[] { new TextDefinition("Mystic Staff"), new TextDefinition("A Mysticism Weapon!") }, 0, 0x2D25, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<NecromancersStaff>(new TextDefinition[] { new TextDefinition("Necromancers Staff"), new TextDefinition("A Necromancy Weapon!") }, 0, 0x13F8, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<NinjaBow>(new TextDefinition[] { new TextDefinition("Ninja Bow"), new TextDefinition("A Ninjitsu Weapon!") }, 0, 0x26C2, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<Nunchucks>(new TextDefinition[] { new TextDefinition("Nunchucks"), new TextDefinition("A Provocation Weapon!") }, 0, 0x27AE, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<PoisonBlade>(new TextDefinition[] { new TextDefinition("Poison Blade"), new TextDefinition("A Poisoning Weapon!") }, 0, 0xF52, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<RangersCrossbow>(new TextDefinition[] { new TextDefinition("Rangers Crossbow"), new TextDefinition("A Tracking Weapon!") }, 0, 0x13FD, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<ResonantHarp>(new TextDefinition[] { new TextDefinition("Resonant Harp"), new TextDefinition("A Musicianship Weapon!") }, 0, 0x13B2, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<RevealingAxe>(new TextDefinition[] { new TextDefinition("Revealing Axe"), new TextDefinition("A DetectHidden Weapon!") }, 0, 0xF45, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<Scalpel>(new TextDefinition[] { new TextDefinition("Scalpel"), new TextDefinition("A Healing Weapon!") }, 0, 0xEC4, 0, 2331, 500, StoreCategory.Equipment);			
+			UltimaStore.Register<ScribeSword>(new TextDefinition[] { new TextDefinition("Scribe Sword"), new TextDefinition("A Inscribe Weapon!") }, 0, 0xF61, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<ShadowSai>(new TextDefinition[] { new TextDefinition("Shadow Sai"), new TextDefinition("A Hiding Weapon!") }, 0, 0x27AF, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<SilentBlade>(new TextDefinition[] { new TextDefinition("Silent Blade"), new TextDefinition("A Stealth Weapon!") }, 0, 0x1441, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<SleepAid>(new TextDefinition[] { new TextDefinition("Sleep Aid"), new TextDefinition("A Peacemaking Weapon!") }, 0, 0x143B, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<SmithSmasher>(new TextDefinition[] { new TextDefinition("Smith Smasher"), new TextDefinition("A Blacksmith Weapon!") }, 0, 0x13E3, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<SnoopersPaddle>(new TextDefinition[] { new TextDefinition("Snoopers Paddle"), new TextDefinition("A Snooping Weapon!") }, 0, 0x27A6, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<SpellWeaversWand>(new TextDefinition[] { new TextDefinition("Spell Weavers Wand"), new TextDefinition("A Spellweaving Weapon!") }, 0, 0xDF2, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<SpiritScepter>(new TextDefinition[] { new TextDefinition("Spirit Scepter"), new TextDefinition("A Spirit Speak Weapon!") }, 0, 0x26BC, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<TacticalMultitool>(new TextDefinition[] { new TextDefinition("Tactical Multitool"), new TextDefinition("A Tactics Weapon!") }, 0, 0x143D, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<TenFootPole>(new TextDefinition[] { new TextDefinition("Ten Foot Pole"), new TextDefinition("A RemoveTrap Weapon!") }, 0, 0xE89, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<VeterinaryLance>(new TextDefinition[] { new TextDefinition("Veterinary Lance"), new TextDefinition("A Parry Weapon!") }, 0, 0x26C0, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<VivisectionKnife>(new TextDefinition[] { new TextDefinition("Vivisection Knife"), new TextDefinition("A Anatomy Weapon!") }, 0, 0xEC4, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<WitchBurningTorch>(new TextDefinition[] { new TextDefinition("Witch Burning Torch"), new TextDefinition("A Magic Resist Weapon!") }, 0, 0xF6B, 0, 2331, 500, StoreCategory.Equipment);			
+			UltimaStore.Register<MerchantsShotgun>(new TextDefinition[] { new TextDefinition("Merchants Shotgun"), new TextDefinition("A ItemID Weapon!") }, 0, 0x13FD, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<ExplorersMachete>(new TextDefinition[] { new TextDefinition("Explorers Machete"), new TextDefinition("A Cartography Weapon!") }, 0, 0x2D35, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<SewingNeedle>(new TextDefinition[] { new TextDefinition("Sewing Needle"), new TextDefinition("A Tailoring Weapon!") }, 0, 0x1403, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<GearLauncher>(new TextDefinition[] { new TextDefinition("Gear Launcher"), new TextDefinition("A Tinkering Weapon!") }, 0, 0x13FD, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<ArtificerWand>(new TextDefinition[] { new TextDefinition("Artificer Wand"), new TextDefinition("A Imbuing Weapon!") }, 0, 0xDF3, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<FishermansTrident>(new TextDefinition[] { new TextDefinition("Fishermans Trident"), new TextDefinition("A Fishing Weapon!") }, 0, 0xE87, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<AnimalClaws>(new TextDefinition[] { new TextDefinition("Animal Claws"), new TextDefinition("A Animal Lore Weapon!") }, 0, 0x27AB, 0, 2331, 500, StoreCategory.Equipment);
+			UltimaStore.Register<WrestlingBelt>(new TextDefinition[] { new TextDefinition("Wrestling Belt"), new TextDefinition("A Animal Lore Weapon!") }, 0, 0x2790, 0, 2331, 500, StoreCategory.Equipment);			
+	
             cat = StoreCategory.Equipment;
             Register<VirtueShield>(1109616, 1158384, 0x7818, 0, 0, 1500, cat);
             Register<HoodedBritanniaRobe>(1125155, 1158016, 0xA0AB, 0, 0, 1500, cat, ConstructRobe);

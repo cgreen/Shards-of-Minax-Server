@@ -37,7 +37,8 @@ namespace Server.Mobiles
 				Add(new GenericBuyInfo(typeof(BanishingOrb), 500, 10, 0xE2E, 0));
 				Add(new GenericBuyInfo(typeof(BanishingRod), 100000, 10, 0xE81, 0));
 				Add(new GenericBuyInfo(typeof(Pokeball), 5000, 10, 0x1870, 0));
-				Add(new GenericBuyInfo(typeof(MasterBall), 100000, 10, 0x1870, 0));
+				Add(new GenericBuyInfo(typeof(PetBondingPotion), 5000, 10, 0x9CBC, 0));
+				Add(new GenericBuyInfo(typeof(StableSlotIncreaseToken), 100000, 10, 0x2AAA, 0));
                 Add(new AnimalBuyInfo(1, typeof(PackHorse), 616, 10, 291, 0));
                 Add(new AnimalBuyInfo(1, typeof(PackLlama), 523, 10, 292, 0));
                 Add(new AnimalBuyInfo(1, typeof(Dog), 158, 10, 217, 0));

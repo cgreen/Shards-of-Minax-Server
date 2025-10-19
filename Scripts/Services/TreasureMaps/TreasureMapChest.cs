@@ -585,30 +585,45 @@ namespace Server.Items
             return CheckLoot(from, true) && base.CheckLift(from, item, ref reject);
         }
 
-        public override void OnItemLifted(Mobile from, Item item)
-        {
-            bool notYetLifted = !m_Lifted.Contains(item);
+		public override void OnItemLifted(Mobile from, Item item)
+		{
+			// Safety check to prevent crash
+			if (from == null || item == null)
+				return;
 
-            from.RevealingAction();
+			if (m_Lifted == null)
+				m_Lifted = new List<Item>();
 
-            if (notYetLifted)
-            {
-                m_Lifted.Add(item);
+			bool notYetLifted = !m_Lifted.Contains(item);
 
-                if (0.1 >= Utility.RandomDouble()) // 10% chance to spawn a new monster
-                {
-                    var spawn = TreasureMap.Spawn(Level, GetWorldLocation(), Map, from, false);
+			from.RevealingAction();
 
-                    spawn.Hue = 2725;
-                }
-            }
+			if (notYetLifted)
+			{
+				m_Lifted.Add(item);
 
-            base.OnItemLifted(from, item);
-        }
+				if (0.1 >= Utility.RandomDouble()) // 10% chance to spawn a new monster
+				{
+					var spawn = TreasureMap.Spawn(Level, GetWorldLocation(), Map, from, false);
+
+					if (spawn != null)
+						spawn.Hue = 2725;
+				}
+			}
+
+			base.OnItemLifted(from, item);
+		}
+
 
         public void SpawnAncientGuardian(Mobile from)
         {
-            ExecuteTrap(from);
+            
+			// safety: make sure our guardian list is initialized
+			if (AncientGuardians == null)
+				AncientGuardians = new List<Mobile>();
+					
+			
+			ExecuteTrap(from);
 
             if (!AncientGuardians.Any(g => g.Alive))
             {
@@ -722,6 +737,11 @@ namespace Server.Items
                         break;
                     }
             }
+
+			// post-load safety: ensure our lists exist
+			if (Guardians        == null) Guardians        = new List<Mobile>();
+			if (AncientGuardians == null) AncientGuardians = new List<Mobile>();
+
 
             if (!Temporary)
             {

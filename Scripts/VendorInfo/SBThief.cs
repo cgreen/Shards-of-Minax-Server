@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Server.Items;
+using Server.CustomPoisons;
 
 namespace Server.Mobiles
 {
@@ -42,6 +43,8 @@ namespace Server.Mobiles
                 Add(new GenericBuyInfo(typeof(HairDye), 37, 20, 0xEFF, 0));
 				Add(new GenericBuyInfo(typeof(PlantingGloves), 5000, 10, 0x13C6, 0));
 				Add(new GenericBuyInfo(typeof(ThiefsGlove), 5000, 10, 0x13C6, 0));
+				Add(new GenericBuyInfo(typeof(SnoopersMasterScope), 500, 10, 0x14F5, 0));
+				Add(new GenericBuyInfo(typeof(PoisonersKit), 500, 10, 0xAD77, 0));
 				Add(new GenericBuyInfo(typeof(GlovesOfTheGrandmasterThief), 50000, 10, 0x13C6, 0));
             }
         }

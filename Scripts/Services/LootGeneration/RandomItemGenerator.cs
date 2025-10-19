@@ -24,15 +24,15 @@ namespace Server.Items
 
         public static void Configure()
         {
-            FeluccaLuckBonus = Config.Get("Loot.FeluccaLuckBonus", 1000);
-            FeluccaBudgetBonus = Config.Get("Loot.FeluccaBudgetBonus", 100);
+            FeluccaLuckBonus = Config.Get("Loot.FeluccaLuckBonus", 2000);
+            FeluccaBudgetBonus = Config.Get("Loot.FeluccaBudgetBonus", 200);
 
-            MaxBaseBudget = Config.Get("Loot.MaxBaseBudget", 700);
-            MinBaseBudget = Config.Get("Loot.MinBaseBudget", 150);
+            MaxBaseBudget = Config.Get("Loot.MaxBaseBudget", 2000);
+            MinBaseBudget = Config.Get("Loot.MinBaseBudget", 500);
             MaxProps = Config.Get("Loot.MaxProps", 11);
 
-            MaxAdjustedBudget = Config.Get("Loot.MaxAdjustedBudget", 1450);
-            MinAdjustedBudget = Config.Get("Loot.MinAdjustedBudget", 150);
+            MaxAdjustedBudget = Config.Get("Loot.MaxAdjustedBudget", 5000);
+            MinAdjustedBudget = Config.Get("Loot.MinAdjustedBudget", 700);
         }
 
         private RandomItemGenerator()
