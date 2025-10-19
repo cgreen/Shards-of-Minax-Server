@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="BrenraIceborn">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      The ancient ice encasing the woman shimmers with inner light. Cracks spiral across its surface. Her eyes—wide, luminous, unsettlingly aware—follow you with the patience of a glacier. A faint voice drifts into your mind, cold and clear.<BR><BR>
+      <i>"Traveler... I dream, but I am not asleep. I am Brenra, once daughter of Moonglow’s frost... now the memory of an age entombed. Why have you come to the edge of the world, where even memory shivers?"</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Are you... alive? Or something else?" next="self"/>
+    <Option text="What is this ice that holds you?" next="ice"/>
+    <Option text="I seek knowledge, and perhaps to help you." next="help"/>
+    <Option text="I was just drawn here, without knowing why." next="drawn"/>
+	<Option text="Who were you before the ice?" next="pastIntro"/>
+    <Option text="I should go." action="Close"/>
+  </Dialogue>
+
+  <!-- Self branch -->
+  <Dialogue id="self">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      Her lips do not move, but the words echo in your bones.<BR>
+      <i>"Alive? I was. I am. I may be again. Aelric fears me, for he knows old stories—of how Minax’s shadow once tried to claim my soul and failed. Kaelen, dear reckless Kaelen, dreams of setting me free. But freedom is never simple in the cold. I remember every century. Every secret." </i>
+      <BR><BR>
+      The ice flexes, creaking.<BR>
+      <i>"If you would help me, you must first help them. And you must face the thing that prowls my frozen dreams..."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="What prowls your dreams?" next="bonefiendIntro"/>
+    <Option text="Tell me of Aelric and Kaelen." next="relationships"/>
+    <Option text="Why did Minax try to claim you?" next="minaxPast"/>
+    <Option text="This is too strange for me." action="Close"/>
+  </Dialogue>
+
+  <!-- Ice branch -->
+  <Dialogue id="ice">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      Her fingers twitch against the blue crystal.<BR>
+      <i>"This is no mortal ice. It was forged in the Obelisk’s birth, in an age before men or paladins. It sings to Irinya in her sleep, and calls the Silent Hunter to my side each night. I am the vessel and the warden, and in my dreaming, the thing called FrozenBonefiend has grown strong..."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="The FrozenBonefiend?" next="bonefiendIntro"/>
+    <Option text="What happens if the ice shatters?" next="danger"/>
+    <Option text="Tell me about Irinya and the Silent Hunter." next="irinya"/>
+    <Option text="I must go." action="Close"/>
+  </Dialogue>
+
+  <!-- Help branch -->
+  <Dialogue id="help">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      Brenra’s voice stirs a chilly wind in your thoughts.<BR>
+      <i>"Help comes in many forms. Aelric thinks to preserve me as a warning. Kaelen would risk all to thaw my heart. Irinya walks the spirit’s edge, warning that I may be a gate—an end, or a beginning. Will you help? Or will you run from the bone-chill of truth?"</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will help, if you ask it." next="bonefiendQuest"/>
+    <Option text="I need to know more about your friends." next="relationships"/>
+    <Option text="What is the bone-chill of truth?" next="truth"/>
+    <Option text="I'm not ready for this." action="Close"/>
+  </Dialogue>
+
+  <!-- Drawn branch -->
+  <Dialogue id="drawn">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      <i>"Fate and frost entwine in Frostmere. Many who stand before the Obelisk are called, but few listen. Perhaps your soul echoes mine—caught between worlds, haunted by memories not your own. Will you share my burden, or will you flee into the snow?"</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll stay and listen." next="bonefiendQuest"/>
+    <Option text="What burden do you mean?" next="truth"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Relationships branch -->
+  <Dialogue id="relationships">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      <i>"Aelric is wise, but fear curdles his vision. He sees only risk—never renewal. Kaelen is fire in the frost, brave but blinded by longing for lost magics. Irinya and the Silent Hunter drift along the edge of dreams; they understand what it means to be a prison and a promise." </i>
+      <BR>
+      <i>"Would you have me speak of them further, or would you carry my errand into the cold?"</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Tell me more of Aelric." next="aelric"/>
+    <Option text="Tell me more of Kaelen." next="kaelen"/>
+    <Option text="Tell me more of Irinya and the Silent Hunter." next="irinya"/>
+    <Option text="Let’s talk about your errand." next="bonefiendQuest"/>
+    <Option text="Not now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="aelric">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      <i>"Aelric was a child when the snows first sealed my fate. He is ancient now, but his soul grew old long before his bones. He keeps the council together, for good or ill. He wishes the world would leave its old ghosts buried. But ghosts do not rest—especially not in Frostmere."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="What of Kaelen?" next="kaelen"/>
+    <Option text="What of Irinya?" next="irinya"/>
+    <Option text="Let's speak of your errand." next="bonefiendQuest"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="kaelen">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      <i>"Kaelen is reckless, and perhaps that is why he will live when wiser men falter. He sees in me hope, not doom. If you would trust anyone with a broken secret, trust him. Yet, he may not survive the trial unless you stand beside him..."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Tell me of Irinya and the Silent Hunter." next="irinya"/>
+    <Option text="Let’s talk about your errand." next="bonefiendQuest"/>
+    <Option text="Enough about them." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="irinya">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      <i>"Irinya listens to the winds that coil around the Obelisk. Her soul is spun of prophecy and pain. She knows what hunts in the deep frost, and what it means when my hand shifts in the ice. The Silent Hunter follows her path; he is my shadow, but not my jailer. Listen to their warnings, but do not be ruled by fear."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about your errand." next="bonefiendQuest"/>
+    <Option text="I must be going." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax Lore -->
+  <Dialogue id="minaxPast">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      <i>"Minax saw in me a wellspring—a soul twisted by winter, unbroken by her darkness. She sought to remake me as her instrument, but the Obelisk’s will is older and colder than her hate. Still, her followers return, gnawing at the bones of my dreams. One such horror crawls now in the snow outside Frostmere, gnawing the bones of the dead—will you end it?"</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Tell me of this horror." next="bonefiendIntro"/>
+    <Option text="I need time to consider." action="Close"/>
+  </Dialogue>
+
+  <!-- Danger if ice shatters -->
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      The ice groans, a haunting dirge.<BR>
+      <i>"If the ice shatters unbidden, my prison fails—and the hunger beneath the world may wake. I am not its master, but I am its seal. The FrozenBonefiend yearns to break me, and if it succeeds, Frostmere will know a night without dawn."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Then I must act." next="bonefiendQuest"/>
+    <Option text="This is more than I can bear." action="Close"/>
+  </Dialogue>
+
+  <!-- Truth / Burden -->
+  <Dialogue id="truth">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      <i>"The bone-chill of truth is this: no magic can seal the world from darkness forever. Someone must always stand between hope and hunger. Will you face the nightmare on my behalf, or leave it to gnaw at the world’s edge?"</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will do what must be done." next="bonefiendQuest"/>
+    <Option text="Not today." action="Close"/>
+  </Dialogue>
+
+  <!-- Bonefiend Intro -->
+  <Dialogue id="bonefiendIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      <i>"FrozenBonefiend—a corpse knotted with ancient ice, jaw full of memory, claws full of hunger. It crawls from the shadow of my own nightmare. It stalks the outskirts, stealing the breath from hearths and the marrow from the dead. Its malice grows with each dusk. Will you face it?"</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="How can I find and defeat it?" next="bonefiendQuest"/>
+    <Option text="This is beyond me." action="Close"/>
+  </Dialogue>
+
+  <!-- Main Quest Node -->
+  <Dialogue id="bonefiendQuest">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      The air grows colder. Brenra’s hand presses against the ice, fingers nearly free.<BR>
+      <i>"The FrozenBonefiend nests in the hollow under Deadlight Ridge—where frost-lotus grows from bone and shadow. You must hunt it there. Beware: its breath is pure oblivion, and its touch will try to numb your will. Bring me the fragment of my lost soul it wears—a shard of crystal blue, caught in its ribs."</i>
+      <BR><BR>
+      <i>"If you succeed, I may remember more... or perhaps be one step closer to freedom—or destruction."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will hunt the Bonefiend and return the shard."
+      action="GiveItem:FactionKillQuestScroll(FrozenBonefiend,1,Frostmere,700)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Where is Deadlight Ridge?" next="ridge"/>
+    <Option text="How will I know the shard?" next="shard"/>
+    <Option text="Is there no other way?" next="noOtherWay"/>
+    <Option text="This is not my path." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest acceptance -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      <i>"Go now, and do not listen if the Bonefiend calls your name. The frost remembers all things, and so do I. Return to me with the shard, and I will share what wisdom remains in my waking heart."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will return with the shard." action="Close"/>
+  </Dialogue>
+
+  <!-- Deadlight Ridge info -->
+  <Dialogue id="ridge">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      <i>"South-east of the Obelisk, where the wind howls like a grieving widow and the snow never settles. The Ridge watches all who approach. Seek the bone cairn at its base; there, the shadow burrows deep."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I will hunt the Bonefiend." next="bonefiendQuest"/>
+    <Option text="What of the shard?" next="shard"/>
+    <Option text="I am not ready for this." action="Close"/>
+  </Dialogue>
+
+  <!-- Shard info -->
+  <Dialogue id="shard">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      <i>"A splinter of memory and frost—clear as truth, cold as the void. It will gleam in the creature’s ribs, pulsing with pale blue light. Beware: the Bonefiend’s dying curse may cling to it still."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will find it." next="accept"/>
+    <Option text="This quest is too great for me." action="Close"/>
+  </Dialogue>
+
+  <!-- No other way -->
+  <Dialogue id="noOtherWay">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      <i>"If there was another way, I would beg it of you. But the world is cold, and the night is long. We must face our own shadows, or be devoured by them."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Then I will do what must be done." next="accept"/>
+    <Option text="No, forgive me." action="Close"/>
+  </Dialogue>
+
+  <!-- Past & Personality Branch -->
+  <Dialogue id="pastIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      Her frozen eyes blink slowly, unnervingly human.<BR><BR>
+      <i>"Before the ice? A question not asked in a long while..."</i><BR>
+      A pause. The Obelisk hums faintly.<BR><BR>
+      <i>"I was born in Moonglow, in an age when the stars were brighter and magic knew shame. I studied not at the Lyceum, but beneath the glacial ruins of Tel'Anor. My focus was frostbinding—an art now banned. They said we ‘played with silence.’ And we did."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Why was frostbinding forbidden?" next="forbidden"/>
+    <Option text="You sound like you regret your power." next="regret"/>
+    <Option text="Tel'Anor... that name is familiar." condition="SkillAtLeast:Magery,80" next="telanorReveal"/>
+    <Option text="Magic often brings fear... and envy." condition="SkillAtLeast:EvalInt,60" next="magicFear"/>
+    <Option text="This is fascinating. Go on." next="pastFamily"/>
+    <Option text="That’s enough for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="forbidden">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      A whisper, sharp and brittle.<BR><BR>
+      <i>"Because frost remembers. It preserves what should decay. My peers feared that too deeply. They said our spells slowed the turning of fate, that we disrupted cycles. They were not wrong. But they were too afraid to wield the stillness."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Did you agree with them?" next="regret"/>
+    <Option text="Tell me more about your family." next="pastFamily"/>
+  </Dialogue>
+
+  <Dialogue id="regret">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      A hint of sorrow seeps through the frost.<BR><BR>
+      <i>"I regret nothing... except leaving my sister to the heat. Her name was Velexia. A fire mage. We argued endlessly, yet we were the same blood. When I chose exile to study the Obelisk... she chose war."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Did you ever see her again?" next="velexia"/>
+    <Option text="Is that why you're so cautious now?" next="pastFamily"/>
+  </Dialogue>
+
+  <Dialogue id="velexia">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      <i>"Only once. She came north to find me, bearing wounds from Minax's beasts. We did not reconcile—but she gave me her flame pendant... a gift of warmth I cannot wear, only remember."</i><BR><BR>
+      A faint pulse of blue light flickers in her robes.
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="May I see it?" next="pendantView"/>
+    <Option text="That’s a powerful memory." next="pastFamily"/>
+  </Dialogue>
+
+  <Dialogue id="pendantView">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      She gestures, and a vision appears in your mind—<BR>
+      A bronze pendant shaped like a flame, spinning slowly in snow.<BR><BR>
+      <i>"This memory costs you nothing, yet it warms the soul."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Thank you." action="AddStat:Int,5,120" />
+    <Option text="That felt... real." next="pastFamily"/>
+  </Dialogue>
+
+  <Dialogue id="pastFamily">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      <i>"I had no children. No lover. My devotion was to study, to silence, to the geometry of stillness. My friends? Most were afraid of what I became. Except one..."</i><BR><BR>
+      She trails off. The wind howls faintly through the trees.
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Who was that one friend?" next="loverHint"/>
+    <Option text="How does one devote themselves to stillness?" next="stillness"/>
+    <Option text="Let’s speak of something else." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="loverHint">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      Her gaze sharpens, almost mischievous.<BR><BR>
+      <i>"His name was Elien. A cartographer of magic ley lines. He said the northern flows danced differently near me... but perhaps it was just poetry."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Is he still alive?" next="elienFate"/>
+    <Option text="You miss him." next="emotion"/>
+  </Dialogue>
+
+  <Dialogue id="elienFate">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      <i>"He followed a ley line south... and never returned. Irinya says she hears his footsteps in the frozen valleys, but I believe that is her mercy speaking."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I could search for his remains..." next="hintReward"/>
+    <Option text="A tragic fate." next="emotion"/>
+  </Dialogue>
+
+  <Dialogue id="emotion">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      <i>"Emotion is dangerous, but necessary. The cold must not consume everything."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You are not so cold, after all." next="giftTest"/>
+    <Option text="Let’s return to more urgent matters." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="hintReward">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      A thread of ice spins around your wrist.<BR><BR>
+      <i>"If you truly seek him... look in the Crystal Scar, west of the frozen mirror-lake. I felt his ley-sigil stir once beneath the frost there."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I will go." action="Close"/>
+    <Option text="Later, perhaps." action="Close"/>
+  </Dialogue>
+
+  <!-- Gift if player is empathetic -->
+  <Dialogue id="giftTest">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      <i>"You have warmth in you. Rare in this place."</i><BR>
+      She breathes—a fog curling from the ice.<BR><BR>
+      <i>"Take this... an ember of my sister’s fire, bound in frost."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I accept." action="GiveItem:MaxxiaScroll()" />
+    <Option text="I can’t accept that." action="Close"/>
+  </Dialogue>
+
+  <!-- Magery check bonus lore -->
+  <Dialogue id="telanorReveal">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      <i>"You know Tel'Anor?"</i><BR>
+      Her gaze sharpens, appraising.<BR>
+      <i>"Then you know its library burned... and its mirror-vault was sealed. But not before I took what I needed. Three scrolls. One of them still sleeps beneath this ice."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="May I one day read it?" next="grantAccess"/>
+    <Option text="Such knowledge must be protected." next="pastFamily"/>
+  </Dialogue>
+
+  <Dialogue id="grantAccess">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      <i>"If I ever thaw... and you still draw breath... yes."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Then I will see that day." action="AddSkill:Magery,5,180"/>
+    <Option text="Let us speak of other things." action="Close"/>
+  </Dialogue>
+
+  <!-- EvalInt empathy lore -->
+  <Dialogue id="magicFear">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99d9ea'>
+      A subtle nod. <i>"Yes. Fear of what cannot be controlled. Envy of those who can wield stillness or fire, shadow or wind. We are the echoes of what they cannot touch."</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="And you embraced the echo?" next="pastFamily"/>
+    <Option text="Sounds like loneliness." next="emotion"/>
+  </Dialogue>
+
+
+</DialogueFile>

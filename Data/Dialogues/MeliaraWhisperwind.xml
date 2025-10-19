@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="MeliaraWhisperwind">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#C6AFE8'>
+      A pale woman sits within a swirl of drifting silks, her eyes half-lidded as if peering through you—and something beyond. Wisps of dream-stuff curl about her fingers.<BR><BR>
+      "The waking world is only half the truth, wanderer. Dreams ride the air above Aerilon, as real as wind or stone. I am Meliara, Dreamsinger of the Veil.<BR>
+      Do you seek solace, secrets... or the paths that flicker between?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I bring a dream-touched artifact for interpretation." next="artifactIntro"/>
+    <Option text="Who are you, Meliara?" next="who"/>
+    <Option text="What is the Dream Veil?" next="veil"/>
+    <Option text="Eryndil sent me—he trusts your visions." next="eryndil"/>
+	<Option text="Tell me of your past, Meliara. Dreams do not grow from nothing." next="pastIntro"/>
+    <Option text="I only wished to look upon the famed Dreamsinger." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="who">
+    <NPCText>
+      <![CDATA[
+      She smiles faintly, the gesture both warm and distant.<BR><BR>
+      "In the waking, I was once a student of Wind, a rival to those who built Aerilon’s engines. But in dream, I wandered deeper. Now I drift the Veil—gathering echoes, half-truths, and warnings.<BR>
+      Eryndil, the archivist, calls me friend; Selara Vael mistrusts what cannot be measured. But secrets come to me unbidden—sometimes even answers."
+      ]]>
+    </NPCText>
+    <Option text="Tell me of Eryndil." next="eryndil"/>
+    <Option text="What of Selara Vael?" next="selara"/>
+    <Option text="I carry an artifact touched by dream." next="artifactIntro"/>
+    <Option text="What is the Dream Veil?" next="veil"/>
+    <Option text="I will return when ready." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="eryndil">
+    <NPCText>
+      <![CDATA[
+      "Eryndil walks between past and present as I walk between sleep and waking. He trusts my visions when his books grow silent.<BR>
+      He once confided his fear: that Aerilon’s fate is written in a language only dreamers can read. He is wise—but not always brave."
+      ]]>
+    </NPCText>
+    <Option text="I bring an artifact, as Eryndil suggested." next="artifactIntro"/>
+    <Option text="What do you see for Eryndil’s future?" next="eryndilFuture"/>
+    <Option text="What is the Dream Veil?" next="veil"/>
+    <Option text="I must go for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="selara">
+    <NPCText>
+      <![CDATA[
+      "Selara’s mind is a fortress—sharp, proud, unyielding. She fears what cannot be held or counted. Yet sometimes, I glimpse her in dream: walking a path of doubt, haunted by the shadow of her own ambition.<BR>
+      She does not despise me, though. Once, in secret, she asked for a vision of her future. I told her only this: 'Not all storms come from without.'"
+      ]]>
+    </NPCText>
+    <Option text="Your words are... enigmatic." next="enigmatic"/>
+    <Option text="Back to matters at hand." next="artifactIntro"/>
+    <Option text="What is the Dream Veil?" next="veil"/>
+    <Option text="Farewell, for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="enigmatic">
+    <NPCText>
+      <![CDATA[
+      "Dreams are riddles, not maps. Would you have me offer a lantern to every shadow? Some truths are best glimpsed only in the corner of one’s eye."
+      ]]>
+    </NPCText>
+    <Option text="I carry a dream-touched artifact." next="artifactIntro"/>
+    <Option text="What is the Dream Veil?" next="veil"/>
+    <Option text="Enough riddles for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="veil">
+    <NPCText>
+      <![CDATA[
+      Her eyes brighten, distant but eager.<BR><BR>
+      "The Dream Veil is a borderland, thin as breath, where waking thoughts and sleeping truths mingle. There, memories twist and futures whisper. To some, it is madness. To me, it is home.<BR>
+      Many in Aerilon scorn such mysteries. Yet even the crystals above us sometimes sing in their slumber. Listen long enough, and all things dream."
+      ]]>
+    </NPCText>
+    <Option text="I seek to understand a dream artifact." next="artifactIntro"/>
+    <Option text="I wish to know more about you." next="who"/>
+    <Option text="Farewell, for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="eryndilFuture">
+    <NPCText>
+      <![CDATA[
+      "Eryndil’s path branches like a river in flood: wisdom, loneliness, perhaps betrayal. Yet always, he seeks the dreamer’s key. Help him, and Aerilon may yet wake to a dawn without regret."
+      ]]>
+    </NPCText>
+    <Option text="I carry an artifact for your insight." next="artifactIntro"/>
+    <Option text="Thank you for your vision." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      She inclines her head serenely.<BR><BR>
+      "Even a passing glance is a kind of dream. May the Veil brush gently upon your brow, wanderer."
+      ]]>
+    </NPCText>
+    <Option text="Wait—actually, I need your help." next="artifactIntro"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- QUEST BRANCHES BEGIN HERE -->
+
+  <Dialogue id="artifactIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#E5C8F9'>
+      Meliara’s fingers graze the artifact, her gaze unfocusing.<BR><BR>
+      "Ah... the Veil shivers at your touch. This object is more than it seems—a vessel of hope, regret, and prophecy. Its dreams are tangled with shadow iron and the restless earth.<BR>
+      I sense it calls to one who has shaped or studied the spirits of metal and dusk... a scholar of the Shadow Iron Elementals, far from this city.<BR>
+      Would you bear it beyond Aerilon’s spires, and place it in the right hands?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will deliver the artifact to the Shadow Iron Elemental Scholar."
+            action="GiveItem:FactionDeliveryQuestScroll(Shadow Iron Elemental Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="questAccept"/>
+    <Option text="Who are these scholars?" next="scholars"/>
+    <Option text="What danger lies in this errand?" next="risk"/>
+    <Option text="Why must it leave Aerilon?" next="whyLeave"/>
+    <Option text="I need time to ponder." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="questAccept">
+    <NPCText>
+      <![CDATA[
+      She hands you a velvet pouch, faintly glowing, within which the artifact softly hums.<BR><BR>
+      "Give this into the care of a Shadow Iron Elemental Scholar outside our walls. Only they may quiet its restless dreams. Beware: Minax’s followers hunger for any trace of prophecy, and Wind’s agents covet all that blurs waking and dream.<BR>
+      Return to me when the delivery is done. In dreams, all journeys end where they began."
+      ]]>
+    </NPCText>
+    <Option text="I will see it safely delivered." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="scholars">
+    <NPCText>
+      <![CDATA[
+      "They are few—keepers of forbidden lore who commune with the spirit-matter of shadow iron. Some were once students of Wind, others miners or alchemists exiled from Minoc.<BR>
+      Seek one who bears the Scholar’s mark and knows the names of sleeping stones. They will understand the artifact’s need."
+      ]]>
+    </NPCText>
+    <Option text="I accept the task." 
+            action="GiveItem:FactionDeliveryQuestScroll(Shadow Iron Elemental Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="questAccept"/>
+    <Option text="Tell me more about the artifact’s dreams." next="artifactLore"/>
+    <Option text="I must consider this carefully." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="risk">
+    <NPCText>
+      <![CDATA[
+      Her lips curve in a secret smile.<BR><BR>
+      "To bear a dream between waking worlds is always perilous. Envy, greed, and misunderstanding are as sharp as blades.<BR>
+      Should you be threatened, whisper the word ‘Oneiros’—the Veil may answer, if your heart is true."
+      ]]>
+    </NPCText>
+    <Option text="I accept this risk and the task." 
+            action="GiveItem:FactionDeliveryQuestScroll(Shadow Iron Elemental Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="questAccept"/>
+    <Option text="Perhaps I am not suited for this dream." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="whyLeave">
+    <NPCText>
+      <![CDATA[
+      "Not all dreams may rest in the sky. This artifact is restless—tethered to the elementals deep below. If it lingers, its dreams will fester, seeping into Aerilon’s crystal hearts. Only by placing it in the right hands can the balance be kept."
+      ]]>
+    </NPCText>
+    <Option text="Then I will deliver it." 
+            action="GiveItem:FactionDeliveryQuestScroll(Shadow Iron Elemental Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="questAccept"/>
+    <Option text="What dreams lie within the artifact?" next="artifactLore"/>
+    <Option text="I must decline for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="artifactLore">
+    <NPCText>
+      <![CDATA[
+      "It is filled with memories—not only of Lord British, but of all who have walked the line between fate and freedom. Within, a fragment of the King’s final vision lingers, echoing with hope... and warning. Give it to one who understands dreams, and you may yet change what is to come."
+      ]]>
+    </NPCText>
+    <Option text="I accept the task." 
+            action="GiveItem:FactionDeliveryQuestScroll(Shadow Iron Elemental Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="questAccept"/>
+    <Option text="Thank you for sharing your wisdom." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="pastIntro">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#C6AFE8'>
+    Meliara’s expression shifts—softening, but not quite smiling. She lowers her gaze as if watching her own reflection drift across unseen water.<BR><BR>
+    "A rare question. Most seek my foresight, not my footprints."<BR>
+    She gestures gently, and the air thickens with silvery motes.<BR>
+    "Then walk with me, if only in words. What would you know?"
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="What was your life before the Dream Veil?" next="beforeVeil"/>
+  <Option text="How did you gain the gift of dreamsight?" next="dreamGift"/>
+  <Option text="Have you loved, or been loved?" next="love"/>
+  <Option text="What do you dream of now?" next="nowDream"/>
+  <Option text="That is enough of the past." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="beforeVeil">
+  <NPCText>
+    <![CDATA[
+    "In the stone halls of Wind, I was nothing special. A middling apprentice, bright enough, but too curious. I asked questions the masters refused to hear. So I listened instead to what they called silence—and it whispered back."<BR><BR>
+    "One night, I walked into a ritual I was forbidden to witness. When I awoke, I was no longer theirs. Nor fully yours."
+    ]]>
+  </NPCText>
+  <Option text="That sounds dangerous. Were you banished?" next="banished"/>
+  <Option text="What did you see in that ritual?" next="ritualVision"/>
+  <Option text="Your path is strange, but you walk it well." next="pastCompliment"/>
+</Dialogue>
+
+<Dialogue id="banished">
+  <NPCText>
+    <![CDATA[
+    "Banished? No. Worse. They *forgot me.* My name erased from ledgers, my chambers claimed by others. In their eyes, I had never been."<BR>
+    She exhales slowly, her voice threaded with sorrow.<BR>
+    "Yet here I remain. Wind does not forget, not truly. One day, they will remember—and tremble."
+    ]]>
+  </NPCText>
+  <Option text="You deserve better than oblivion." action="Fame:+100" next="greeting"/>
+  <Option text="Perhaps they were wise to fear you." action="Karma:-100" next="greeting"/>
+</Dialogue>
+
+<Dialogue id="ritualVision">
+  <NPCText>
+    <![CDATA[
+    "I saw a mirror of sky, broken across an ocean. I saw Lord British, lost within a dream not his own. I saw Minax... *not yet monstrous*, but mourning something she could not name."<BR>
+    Her eyes shimmer faintly.<BR>
+    "I have spent every moment since trying to understand what was true—and what was merely mine."
+    ]]>
+  </NPCText>
+  <Option text="Was Lord British truly dreaming?" next="lordBritishDream"/>
+  <Option text="What sorrow could Minax carry?" next="minaxSorrow"/>
+  <Option text="Such visions would break lesser minds." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="pastCompliment">
+  <NPCText>
+    <![CDATA[
+    "Kindness... not often shown to seers. Thank you."<BR>
+    A soft warmth lingers in her aura, and a mote of dreamlight drifts to your shoulder.
+    ]]>
+  </NPCText>
+  <Option text="(You feel oddly invigorated.)" action="AddStat:Int,5,1800" next="greeting"/>
+</Dialogue>
+
+<Dialogue id="dreamGift">
+  <NPCText>
+    <![CDATA[
+    "Not a gift... a wound the world whispers through."<BR>
+    She gently touches her temple.<BR>
+    "The Veil bled into me when I crossed the threshold uninvited. Now I sleep little, and when I do, I walk among truths half-formed."<BR>
+    "Sometimes I envy those who close their eyes and see only black."
+    ]]>
+  </NPCText>
+  <Option text="Would you give up your sight if you could?" next="giveItUp"/>
+  <Option text="There is beauty in your burden." next="beautyInBurden"/>
+  <Option text="You are a conduit—dangerous, and needed." next="conduit"/>
+</Dialogue>
+
+<Dialogue id="giveItUp">
+  <NPCText>
+    <![CDATA[
+    "No."<BR>
+    A fierce stillness enters her voice.<BR>
+    "I would not. Even when it hurts, I *know*. And that is worth all the sleepless nights."
+    ]]>
+  </NPCText>
+  <Option text="Then may your knowing shape the waking world." action="Fame:+50" next="greeting"/>
+</Dialogue>
+
+<Dialogue id="beautyInBurden">
+  <NPCText>
+    <![CDATA[
+    "A rare sentiment. You have the soul of a poet."<BR>
+    She draws a sigil in the air—dreamlight curls behind it like perfume.
+    ]]>
+  </NPCText>
+  <Option text="(You feel creativity swell within you.)" action="AddSkill:Inscription,10,600" next="greeting"/>
+</Dialogue>
+
+<Dialogue id="conduit">
+  <NPCText>
+    <![CDATA[
+    "Dangerous... yes. To others. To myself. But necessary."<BR>
+    Her hand tightens around her sash.<BR>
+    "The dreams must be spoken, or they fester into prophecy denied."
+    ]]>
+  </NPCText>
+  <Option text="I will help carry that burden, if I can." action="Karma:+100" next="greeting"/>
+</Dialogue>
+
+<Dialogue id="love">
+  <NPCText>
+    <![CDATA[
+    "A question from the heart."<BR><BR>
+    "There was one—a crystal engineer. His dreams were of machines and stars, not prophecy. For a time, we shared both our silences and our shadows. But the Veil... it takes more than it gives."<BR>
+    "He could not follow. And I could not stay."
+    ]]>
+  </NPCText>
+  <Option text="Do you still see him in dreams?" next="seeHim"/>
+  <Option text="You loved truly. That matters most." action="Karma:+50" next="greeting"/>
+</Dialogue>
+
+<Dialogue id="seeHim">
+  <NPCText>
+    <![CDATA[
+    She nods slowly.<BR>
+    "Sometimes. He is always building, reaching. Never looking back. That is how I know he lives."<BR>
+    "That is how I know I still do."
+    ]]>
+  </NPCText>
+  <Option text="That is beautiful... and painful." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="nowDream">
+  <NPCText>
+    <![CDATA[
+    "Now? I dream of a sky that sings. Of a gate carved from light. Of a king lost in the weave of fate—and a hand that reaches, still."<BR>
+    She closes her eyes briefly.<BR>
+    "I do not yet know whose hand it is. Perhaps... it is yours."
+    ]]>
+  </NPCText>
+  <Option text="(You feel a strange warmth in your palm.)" action="PlaySound:0x015" next="greeting"/>
+</Dialogue>
+
+<Dialogue id="lordBritishDream">
+  <NPCText>
+    <![CDATA[
+    "Yes. Or something wearing his shape. His dream spirals inward, deeper than the Veil should allow. It is not slumber. It is... *containment.*"<BR>
+    "If he wakes, the world will shift. If he sleeps, the shards may shatter again."
+    ]]>
+  </NPCText>
+  <Option text="Then we must find a way to reach him." action="AddStat:Int,10,1200" next="greeting"/>
+</Dialogue>
+
+<Dialogue id="minaxSorrow">
+  <NPCText>
+    <![CDATA[
+    "Even monsters mourn. I saw her standing over a grave without a name. Rage comes from loss as often as hatred. But her grief is poison now."<BR>
+    "She seeks the Gem not for power... but to undo a moment that cannot be undone."
+    ]]>
+  </NPCText>
+  <Option text="That makes her even more dangerous." action="Karma:-50" next="greeting"/>
+  <Option text="Then perhaps... she can still be reached." action="Karma:+50" next="greeting"/>
+</Dialogue>
+
+
+</DialogueFile>

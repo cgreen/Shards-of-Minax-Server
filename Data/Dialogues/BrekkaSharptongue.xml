@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="BrekkaSharptongue">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b8423b'>
+      Before you stands a broad-shouldered woman clad in battered studded armor and a mud-stained cloak. A deep red bandana crosses her brow, and her eyes flick up and down your frame, wary and piercing.
+      <BR><BR>
+      "Stop there. Name's Brekka. I keep the night watch, whether folk like it or not. I’ve got little patience for drifters and less for spies.<BR>
+      And I’ve been watching you. So—state your business, or turn around and head back to whatever swamp spat you out."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Just a traveler, looking for honest work." next="suspicion"/>
+    <Option text="Are you accusing me of something?" next="accusation"/>
+    <Option text="You seem on edge. Trouble brewing?" next="trouble"/>
+    <Option text="Who put you in charge, anyway?" next="authority"/>
+    <Option text="Never mind, I’ll be on my way." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="suspicion">
+    <NPCText>
+      <![CDATA[
+      She crosses her arms, steel eyes never leaving yours.<BR><BR>
+      "Honest work, eh? Lot of folk say that. Some go missing, some get caught slipping notes to Minax's mongrels, and a few end up with a knife in their back—mine, if I catch them."
+      <BR><BR>
+      "You want work? Prove you’re no snake in the grass. There’s a beast out there—ChromaticOgre, clever for an ogre, mean as sin. Bring me its tusk and I’ll have less reason to think you’re a spy. Maybe."
+      ]]>
+    </NPCText>
+    <Option text="What makes you think there’s a spy in town?" next="spy"/>
+    <Option text="Tell me about this ChromaticOgre." next="ogreInfo"/>
+    <Option text="Why do you distrust outsiders?" next="outsider"/>
+    <Option text="Fine, I’ll take the job."
+      action="GiveItem:FactionKillQuestScroll(ChromaticOgre,1,Eldermoor,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="On second thought, I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accusation">
+    <NPCText>
+      <![CDATA[
+      Brekka leans in, voice low and sharp.<BR><BR>
+      "I trust what I see, and I see strangers at our gates while Minax’s filth creeps closer every moon. Funny thing—spies never say they’re spies, do they?"
+      <BR>
+      "But actions talk. You want my trust? Earn it. There’s work fit for the bold, and the clean-handed. Or are you just passing through?"
+      ]]>
+    </NPCText>
+    <Option text="What work?" next="ogreQuest"/>
+    <Option text="Not interested in games." action="Close"/>
+    <Option text="You seem to know a lot about spies. Old habits?" next="oldhabits"/>
+  </Dialogue>
+
+  <Dialogue id="oldhabits">
+    <NPCText>
+      <![CDATA[
+      Brekka’s jaw clenches, but a sly grin tugs at her mouth.<BR>
+      "Wasn’t always a watchman, if that’s what you’re poking at. Used to run with a rough crew before Halric gave me a chance—first man in Eldermoor who offered me mercy instead of a noose. I pay that debt in blood, every day. So don’t test me."
+      ]]>
+    </NPCText>
+    <Option text="Why’d you change sides?" next="change"/>
+    <Option text="Alright, about that work…" next="ogreQuest"/>
+  </Dialogue>
+
+  <Dialogue id="change">
+    <NPCText>
+      <![CDATA[
+      "There’s only two kinds of folk left out here—those who build, and those who burn. I got tired of burning, and Eldermoor needed fighters more than outlaws. So I put down my old colors and picked up the town’s."
+      <BR>
+      "Now I keep the peace, and sometimes, that means watching for old friends in new masks. Or new enemies with old tricks."
+      ]]>
+    </NPCText>
+    <Option text="What can I do to prove myself?" next="ogreQuest"/>
+    <Option text="I’m not here to cause trouble." next="trustwin"/>
+  </Dialogue>
+
+  <Dialogue id="trustwin">
+    <NPCText>
+      <![CDATA[
+      "If you mean that, do the job. The ogre’s a real threat—and I’d sleep better knowing someone new can handle themselves."
+      ]]>
+    </NPCText>
+    <Option text="I’ll do it." 
+      action="GiveItem:FactionKillQuestScroll(ChromaticOgre,1,Eldermoor,600)" 
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="I’ll think about it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="trouble">
+    <NPCText>
+      <![CDATA[
+      Brekka nods to the battered palisade, then scans the horizon.<BR>
+      "Always trouble. Minax’s monsters sniff at our fences. Mayor Halric’s lost too much sleep to trust anyone, Edda’s got her eye on the woods, and I’ve heard Mira wants to run off to Sunreach. But the real trouble is inside—folk turning on each other, afraid every shadow’s a traitor."
+      ]]>
+    </NPCText>
+    <Option text="Sounds like you don’t trust your own town." next="outsider"/>
+    <Option text="I want to help, not cause trouble." next="ogreQuest"/>
+  </Dialogue>
+
+  <Dialogue id="authority">
+    <NPCText>
+      <![CDATA[
+      She snorts, adjusting the battered ironbound jerkin she wears.<BR>
+      "No one put me anywhere. I took up arms when raiders hit, and folk followed because I was louder, meaner, and didn’t die easy. Halric grumbles, but even he knows it—sometimes, you need a bad woman on your side."
+      ]]>
+    </NPCText>
+    <Option text="You and Halric get along?" next="halric"/>
+    <Option text="I want to prove myself." next="ogreQuest"/>
+  </Dialogue>
+
+  <Dialogue id="halric">
+    <NPCText>
+      <![CDATA[
+      "He’s stubborn as a frost ox, but fair. I owe him. Doesn’t mean we always see eye to eye—he’d rather talk, I’d rather act. But Eldermoor needs both, if it’s going to survive."
+      ]]>
+    </NPCText>
+    <Option text="I respect that. How can I help?" next="ogreQuest"/>
+    <Option text="Sounds complicated. Maybe I’ll move on." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="outsider">
+    <NPCText>
+      <![CDATA[
+      Brekka’s voice drops, serious.<BR>
+      "We learned to keep our doors shut since Lord British vanished and the cityfolk forgot we exist. Sometimes it’s for the best. But if you want in—earn your place. One good deed counts for more than a hundred pretty words."
+      ]]>
+    </NPCText>
+    <Option text="What deed would that be?" next="ogreQuest"/>
+    <Option text="Fair enough. Goodbye." action="Close"/>
+  </Dialogue>
+
+  <!-- Main Quest Offer Branch -->
+  <Dialogue id="ogreQuest">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b8423b'>
+      Brekka gestures toward the marsh beyond town, her voice rough.<BR><BR>
+      "The ChromaticOgre—ugly brute, rainbow scars across its hide, mean as hunger. It’s clever, for an ogre. Stole chickens last week, smashed Thalen’s supply cart, and yesterday it dragged a sheep off right under Aldric’s nose. Worst of all, it seems to vanish into the fog, only showing itself when it wants to."
+      <BR><BR>
+      "Some folk whisper it’s been touched by Minax’s magic—changes color in the moonlight, maybe even talks. I don’t know about that, but I do know it’s left three corpses behind."
+      <BR><BR>
+      "So here’s your chance: Hunt it down. Bring me a tusk as proof. If you’re as brave as you say, you’ll earn both coin and my watchful eye… less watchful, maybe."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll take down the ChromaticOgre."
+      action="GiveItem:FactionKillQuestScroll(ChromaticOgre,1,Eldermoor,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="How dangerous is it, really?" next="ogreInfo"/>
+    <Option text="Why not send Thalen or Aldric?" next="whyNot"/>
+    <Option text="This all sounds like Minax’s work." next="minax"/>
+    <Option text="I’ll think about it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Brekka offers a rare, approving nod.<BR><BR>
+      "Good. It prowls near the old willow stand by dusk, sometimes slinks up by the marsh at dawn. Watch the ground—those colors it wears aren’t just for show. Some say it hypnotizes, but I say it’s just mean."
+      <BR><BR>
+      "Bring me its tusk and you’ll have gold, a pint at Brenvar’s inn, and a little less suspicion from me. Don’t die quick."
+      ]]>
+    </NPCText>
+    <Option text="Understood. I’ll be back—with proof." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ogreInfo">
+    <NPCText>
+      <![CDATA[
+      Brekka’s brow furrows.<BR><BR>
+      "It’s not just big, it’s clever. Painted stripes—blue, green, gold—like some carnival beast. Hard to spot at dusk. Edda claims it talks to itself in riddles. And I’ve seen wounds on it heal, quick as a blink. Minax’s magic, if you ask me."
+      <BR>
+      "But its weak spot is pride. Challenge it and it’ll come running. Just don’t let it land the first hit."
+      ]]>
+    </NPCText>
+    <Option text="Sounds nasty. I’ll handle it."
+      action="GiveItem:FactionKillQuestScroll(ChromaticOgre,1,Eldermoor,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="whyNot">
+    <NPCText>
+      <![CDATA[
+      "Thalen’s got a hammer, not a sword, and Aldric… well, he’s better with wolves than ogres. Besides, I’d rather risk a stranger than one of our own. Mira’s too quick-witted for this sort of brute work."
+      ]]>
+    </NPCText>
+    <Option text="Fine, I’ll do it."
+      action="GiveItem:FactionKillQuestScroll(ChromaticOgre,1,Eldermoor,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Not my fight." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      "I’d bet my boots on it. Mira swears she saw the beast’s eyes glow violet when the moon rose, and Aldric found strange runes in the mud. Edda thinks the ogre is just a sick animal, but I know dark magic when I see it."
+      <BR>
+      "You want to impress me? Bring back anything odd you find on its corpse—a rune, a token, whatever. The town’s got enough secrets without letting Minax’s curses walk our fields."
+      ]]>
+    </NPCText>
+    <Option text="All the more reason to end it."
+      action="GiveItem:FactionKillQuestScroll(ChromaticOgre,1,Eldermoor,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="This is bigger than I thought. I’ll return." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="spy">
+    <NPCText>
+      <![CDATA[
+      "I keep a list. No one leaves, no one enters, not without me knowing. But someone’s been slipping through—strange tracks by the east gate, a missing crate of steel, gossip where it shouldn’t be."
+      <BR>
+      "I have my eyes on half this town, including you. Prove you’re not the problem—handle the ogre, help the people, and maybe I’ll stop watching you every minute."
+      ]]>
+    </NPCText>
+    <Option text="Then give me a chance to prove myself." next="ogreQuest"/>
+    <Option text="Trust goes both ways, you know." next="trustwin"/>
+    <Option text="If you’re wrong, you owe me an apology." next="apology"/>
+  </Dialogue>
+
+  <Dialogue id="apology">
+    <NPCText>
+      <![CDATA[
+      Brekka snorts.<BR>
+      "Don’t hold your breath, but maybe I’ll buy you a drink at Brenvar’s if you live through this. Not many do."
+      ]]>
+    </NPCText>
+    <Option text="We’ll see. I’ll take your job." next="ogreQuest"/>
+    <Option text="No thanks. I’ll find my own way." action="Close"/>
+  </Dialogue>
+
+</DialogueFile>

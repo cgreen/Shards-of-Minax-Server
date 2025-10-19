@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="NadiaTheDagger">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#de425b'>
+      A tall, sharp-eyed woman leans against a pillar, hood shadowing her features. The glint of a crimson blade at her side leaves no doubt: this is Nadia the Dagger.<BR><BR>
+      She nods once, as if sizing you up.<BR>
+      “Most people in the Undermarket don’t dare speak to me. Either you’re new, or you’re reckless. What do you want?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ve heard stories about you." next="aboutNadia"/>
+    <Option text="I want work. Dangerous work." next="dangerWork"/>
+    <Option text="How did you end up here?" next="origin"/>
+    <Option text="What do you think of Zahid?" next="zahidOpinion"/>
+    <Option text="Who do you trust in Qasaria?" next="trust"/>
+    <Option text="I’m just passing through." next="dismiss"/>
+  </Dialogue>
+
+  <!-- About Nadia's Reputation -->
+  <Dialogue id="aboutNadia">
+    <NPCText>
+      <![CDATA[
+      Nadia’s lips twitch in a half-smirk.<BR>
+      “Stories? I used to believe half of them myself. Truth is, the more legends they spread, the fewer actually try to test me.<BR>
+      I’ve been a caravan blade, a bodyguard, and an executioner by request. Now I’m my own master—or as close as you get in Zahid’s shadow.”
+      ]]>
+    </NPCText>
+    <Option text="Why work for Zahid?" next="zahidOpinion"/>
+    <Option text="Tell me about your past." next="origin"/>
+    <Option text="You seem dangerous." next="dangerous"/>
+  </Dialogue>
+
+  <!-- Dangerous Player Option -->
+  <Dialogue id="dangerous">
+    <NPCText>
+      <![CDATA[
+      Her gaze flickers over you—appraising.<BR>
+      “Dangerous? Good. That’s the only language anyone understands in Qasaria’s underbelly.<BR>
+      If you want to be more than a rumor, you’ll need teeth. Or, you could hire mine—for a price.”
+      ]]>
+    </NPCText>
+    <Option text="I’d like to hire you." next="hire"/>
+    <Option text="I prefer to stand on my own." next="dangerWork"/>
+  </Dialogue>
+
+  <!-- Nadia's Origin Story -->
+  <Dialogue id="origin">
+    <NPCText>
+      <![CDATA[
+      Nadia crosses her arms.<BR>
+      “Born in chains. Sold between merchant princes like a bolt of silk.<BR>
+      Learned to fight because nobody cared if a slave girl lived. Learned to kill because that’s the only way to live free.<BR>
+      The Sapphire Caravans tried to break me. Zahid gave me a blade and let me choose my targets.”<BR>
+      She shrugs.<BR>
+      “Now I choose who I trust, who I follow, and who I cut. Some days, I even sleep.”
+      ]]>
+    </NPCText>
+    <Option text="Did you ever go back for revenge?" next="revenge"/>
+    <Option text="What keeps you loyal to Zahid?" next="zahidOpinion"/>
+    <Option text="You sound strong. I respect that." action="Karma:50" next="greeting"/>
+  </Dialogue>
+
+  <!-- Revenge branch -->
+  <Dialogue id="revenge">
+    <NPCText>
+      <![CDATA[
+      Her smile turns cold.<BR>
+      “A few caravan masters went missing. A few more learned to sleep with their eyes open.<BR>
+      I’m not here for vengeance. That’s for the dead. I’m here for freedom. And coin.”
+      ]]>
+    </NPCText>
+    <Option text="Would you ever leave the Undermarket?" next="leaveUM"/>
+    <Option text="I want to work with you." next="dangerWork"/>
+    <Option text="Thanks for the honesty." next="greeting"/>
+  </Dialogue>
+
+  <!-- Would she ever leave? -->
+  <Dialogue id="leaveUM">
+    <NPCText>
+      <![CDATA[
+      Nadia considers.<BR>
+      “If there’s a place I can walk in daylight and not have to watch my back—maybe.<BR>
+      Until then, this is home. Besides, nowhere else pays as well for what I do.”
+      ]]>
+    </NPCText>
+    <Option text="Let’s get to business." next="dangerWork"/>
+    <Option text="Stay sharp, Nadia." action="Close"/>
+  </Dialogue>
+
+  <!-- Zahid Opinion -->
+  <Dialogue id="zahidOpinion">
+    <NPCText>
+      <![CDATA[
+      Nadia’s tone is unreadable.<BR>
+      “Zahid doesn’t own me. He respects me. That’s rare. We have a pact—no lies, no chains, no debts unpaid.<BR>
+      If you’re smart, you’ll never put him in your debt, and never try to put a leash on me.”
+      ]]>
+    </NPCText>
+    <Option text="Do you ever argue with him?" next="argue"/>
+    <Option text="Would you ever turn on him?" next="betrayal"/>
+    <Option text="Let’s talk work." next="dangerWork"/>
+  </Dialogue>
+
+  <!-- Trust in Qasaria -->
+  <Dialogue id="trust">
+    <NPCText>
+      <![CDATA[
+      “Trust?” Nadia gives a short laugh.<BR>
+      “Trust is a knife. You only hand it to someone if you’re willing to bleed.<BR>
+      I trust Zahid, for now. Maybe Karim, on a lucky day. The rest, I trust to do what benefits them. Same as me.”
+      ]]>
+    </NPCText>
+    <Option text="Fair enough. Any jobs for someone like me?" next="dangerWork"/>
+    <Option text="Would you trust me?" condition="SkillAtLeast:Stealth,80" next="earnTrust"/>
+    <Option text="That’s a bleak way to live." action="Karma:-50" next="greeting"/>
+  </Dialogue>
+
+  <!-- Earn Trust (Stealth 80+) -->
+  <Dialogue id="earnTrust">
+    <NPCText>
+      <![CDATA[
+      Nadia sizes you up with new respect.<BR>
+      “You move quiet. That’s a start. Prove you can keep secrets, and I might watch your back—instead of your throat.”
+      ]]>
+    </NPCText>
+    <Option text="Let’s see what trouble we can make." next="dangerWork"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Argue with Zahid -->
+  <Dialogue id="argue">
+    <NPCText>
+      <![CDATA[
+      Nadia grins.<BR>
+      “He’s clever, but not always wise. I argue with him when he’s wrong.<BR>
+      He listens—sometimes. Sometimes, I listen. That’s why we’re both still breathing.”
+      ]]>
+    </NPCText>
+    <Option text="Strong partnership, then." next="greeting"/>
+    <Option text="Let’s get to work." next="dangerWork"/>
+  </Dialogue>
+
+  <!-- Would she betray Zahid? -->
+  <Dialogue id="betrayal">
+    <NPCText>
+      <![CDATA[
+      Her eyes harden.<BR>
+      “If Zahid ever broke our pact, I’d cut him. He knows it. I respect that he’d expect nothing less.<BR>
+      Loyalty is earned daily, not owed. Remember that.”
+      ]]>
+    </NPCText>
+    <Option text="Understood. Let’s talk business." next="dangerWork"/>
+    <Option text="Thanks for the warning." action="Close"/>
+  </Dialogue>
+
+  <!-- Danger Work (Quest branch) -->
+  <Dialogue id="dangerWork">
+    <NPCText>
+      <![CDATA[
+      Nadia leans in.<BR>
+      “There’s always a blade to sharpen. Right now, Zahid wants a traitor rooted out of the Undermarket. Stealth and silence—no open slaughter.<BR>
+      Find proof of their betrayal, and you’ll have coin and my favor. Fail, and you’ll wish you’d stayed above ground.<BR>
+      Are you ready?”
+      ]]>
+    </NPCText>
+    <Option text="I’m ready. Give me the details."
+            action="GiveItem:FactionDeliveryQuestScroll(Traitor in Undermarket,Qasaria,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="acceptQuest"/>
+    <Option text="What do I do if I find them?" next="dealWithTraitor"/>
+    <Option text="I’ll pass for now." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Details -->
+  <Dialogue id="acceptQuest">
+    <NPCText>
+      <![CDATA[
+      Nadia presses a slim parchment into your hand.<BR>
+      “Find the traitor, gather proof. Bring it to Zahid or me—alive, if possible. If you’re caught, I don’t know you. If you succeed, you’ll have earned more than just coin.”
+      ]]>
+    </NPCText>
+    <Option text="I won’t let you down." action="Close"/>
+  </Dialogue>
+
+  <!-- Deal with Traitor -->
+  <Dialogue id="dealWithTraitor">
+    <NPCText>
+      <![CDATA[
+      “Kill only if you must. Sometimes information is worth more than blood.<BR>
+      Zahid likes to ask questions before he buries the answers.”
+      ]]>
+    </NPCText>
+    <Option text="Understood. I’ll be careful."
+            action="GiveItem:FactionDeliveryQuestScroll(Traitor in Undermarket,Qasaria,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="acceptQuest"/>
+    <Option text="Not my style. I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <!-- Hire Nadia (with fame/karma/skill check) -->
+  <Dialogue id="hire">
+    <NPCText>
+      <![CDATA[
+      Nadia raises an eyebrow.<BR>
+      “You want me as muscle or as a knife? Either way, I don’t come cheap. I require proof you’re worth my time.”<BR><BR>
+      <I>Her eyes narrow—she’s testing your reputation.</I>
+      ]]>
+    </NPCText>
+    <Option text="I have a reputation." condition="FameAtLeast:3000" action="SendMessage:She nods, impressed." next="acceptHire"/>
+    <Option text="I can pay in secrets." condition="KarmaBelow:0" action="SendMessage:She grins darkly." next="acceptHire"/>
+    <Option text="I can prove my skill." condition="SkillAtLeast:Stealth,90" action="SendMessage:Nadia gives you a rare approving nod." next="acceptHire"/>
+    <Option text="Never mind." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptHire">
+    <NPCText>
+      <![CDATA[
+      Nadia slips her blade back into its sheath.<BR>
+      “Good. For now, I’ll watch your back, not slit it.<BR>
+      If you cross me, it’ll be the last mistake you make.”<BR><BR>
+      <I>You sense she’ll help on your next dangerous task, for a price...</I>
+      ]]>
+    </NPCText>
+    <Option text="Agreed." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismiss -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Nadia looks away.<BR>
+      “If you want a quiet life, stay in the sun. Shadows bite.”
+      ]]>
+    </NPCText>
+    <Option text="Maybe next time." action="Close"/>
+  </Dialogue>
+</DialogueFile>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="BrenvarInnkeeper">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#e2b58b'>
+      You find yourself in the warm, smoky hearth of the Stubborn Boar Inn. Behind the battered oak counter stands a broad-shouldered man in a stained linen shirt and faded apron, cleaning a tankard that’s older than most dogs. A battered tankard-shaped brooch pins his short cloak, and a salt-and-pepper beard frames a face both gruff and tired.
+      <BR><BR>
+      Brenvar eyes you with a skeptical squint, then nods once.<BR>
+      "If you’ve coin or tales, take a seat. If you’ve trouble, take it elsewhere. I’m Brenvar—the man who keeps the ale flowing, the lies half-truthful, and this old place in one piece. Now, what’ll it be?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Looking for work. Anyone here in need of help?" next="work"/>
+    <Option text="Heard you’re the man to talk to for rumors." next="rumors"/>
+    <Option text="Is that your daughter, Mira? She seems restless." next="mira"/>
+    <Option text="A pint of your strongest, and a story for the road." next="story"/>
+    <Option text="Just passing through. No trouble from me." next="exit"/>
+  </Dialogue>
+
+  <!-- Work/Quest path -->
+  <Dialogue id="work">
+    <NPCText>
+      <![CDATA[
+      Brenvar grunts, setting the tankard down with a thunk.<BR><BR>
+      "You want to help, eh? Well, these are hard times, stranger. Used to be my worries stopped at watered-down ale and the mayor’s taxes. Now it’s monsters, Minax cultists, and not enough hands to sweep the sawdust."
+      <BR><BR>
+      He leans in, lowering his voice.<BR>
+      "But if you’re the bold sort, there’s a beast out there that needs dealing with. Local folks call it the NecroEttin—two heads full of spite, a hide covered in grave-dirt, and a taste for livestock. Last night it tore through Aldric’s traps and scared Mira half to death coming home from the mill."
+      ]]>
+    </NPCText>
+    <Option text="NecroEttin? That’s not your usual barfight monster…" next="ettinLore"/>
+    <Option text="Why don’t you handle it yourself?" next="whyNotMe"/>
+    <Option text="This sounds like trouble tied to Minax?" next="minax"/>
+    <Option text="Alright, I’ll take care of your NecroEttin problem." 
+            action="GiveItem:FactionKillQuestScroll(NecroEttin,1,Eldermoor,650)" 
+            condition="!HasItem:FactionKillQuestScroll"
+            next="accept"/>
+    <Option text="No thanks, monster hunting isn’t for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ettinLore">
+    <NPCText>
+      <![CDATA[
+      "Aye, it’s not. Old tales say Ettins are dumb brutes, but this one? It wears a necklace of skulls and sometimes chants in a language colder than a widow’s tears. Edda, our herbalist, swears she saw it digging up graves for bones—and when the fog’s thick, the thing’s eyes glow green. Mira’s still trembling."
+      ]]>
+    </NPCText>
+    <Option text="Sounds like it needs putting down. Where was it seen last?" next="accept"/>
+    <Option text="Maybe the mayor should raise a militia?" next="militia"/>
+    <Option text="Creepy stuff. Any idea what’s driving it?" next="minax"/>
+  </Dialogue>
+
+  <Dialogue id="whyNotMe">
+    <NPCText>
+      <![CDATA[
+      Brenvar snorts, shaking his head.<BR><BR>
+      "Look at me—years of innkeeping, not monster-hunting. My days of swinging a cudgel ended when Mira was born, and my knees can’t chase Ettins. Aldric’s my best friend and a fine hunter, but he took a knock to the leg last autumn. Thalen the smith is all bluster, not enough sense. And as for the mayor? Halric would sooner die than ask for help, even from his own kin."
+      ]]>
+    </NPCText>
+    <Option text="So you need an outsider’s help?" next="accept"/>
+    <Option text="You don’t trust the mayor?" next="mayor"/>
+    <Option text="I see. Well, I’ll think about it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="militia">
+    <NPCText>
+      <![CDATA[
+      Brenvar sighs.<BR><BR>
+      "Halric’s stretched thin—half the men are mending fences or standing watch at the palisade. He’d send Thalen, but the smith can’t even lift a hammer straight these days, let alone a sword. Mira’s got more courage than sense, but if I lost her… well, best not think it. Eldermoor stands, but only just."
+      ]]>
+    </NPCText>
+    <Option text="Alright, I’ll hunt this NecroEttin for you." 
+            action="GiveItem:FactionKillQuestScroll(NecroEttin,1,Eldermoor,650)" 
+            condition="!HasItem:FactionKillQuestScroll"
+            next="accept"/>
+    <Option text="Let someone else handle it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="mayor">
+    <NPCText>
+      <![CDATA[
+      Brenvar’s eyes narrow, voice dropping.<BR><BR>
+      "Halric’s my oldest friend, and a bigger fool you’ll not find south of Britain. He’d do anything for Eldermoor, but he’s too proud. Taxes me near to starvation, says it’s for the ‘good of the town.’ Meanwhile, I do what I must to keep bread on the table—and ale in the mugs. If you help us, you’ll have earned my thanks… and maybe loosen Halric’s tongue a bit."
+      ]]>
+    </NPCText>
+    <Option text="I’m in. Where do I find this NecroEttin?" next="accept"/>
+    <Option text="You two ever agree on anything?" next="oldFriends"/>
+  </Dialogue>
+
+  <Dialogue id="oldFriends">
+    <NPCText>
+      <![CDATA[
+      Brenvar grins, though it fades quickly.<BR><BR>
+      "Once, maybe. Before Minax, before all this. These days, we fight over taxes, ale rations, and whose turn it is to patch the palisade. But when danger comes? We’re still a team—though I’ll deny it if you tell him."
+      ]]>
+    </NPCText>
+    <Option text="Alright, I’ll help." 
+            action="GiveItem:FactionKillQuestScroll(NecroEttin,1,Eldermoor,650)" 
+            condition="!HasItem:FactionKillQuestScroll"
+            next="accept"/>
+    <Option text="No promises. Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Brenvar looks around and lowers his voice.<BR><BR>
+      "Too much is going wrong these days to blame on bad luck. Edda thinks Minax’s cultists are using dead magic in the swamps, twisting beasts that ought to stay dead. I’ve seen strange folk in black hoods passing through, always asking about the old graveyard. If you find anything—a token, a rune, something foul—show Edda or Miralda, not me. I want nothing to do with dark magic."
+      ]]>
+    </NPCText>
+    <Option text="Makes sense. I’ll take the job." 
+            action="GiveItem:FactionKillQuestScroll(NecroEttin,1,Eldermoor,650)" 
+            condition="!HasItem:FactionKillQuestScroll"
+            next="accept"/>
+    <Option text="Too dangerous for my tastes." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Brenvar nods, pouring you a half-mug of his best.<BR><BR>
+      "You’ve got more spine than half the town. The NecroEttin’s lair is in the old moss-pit, east of the marsh and not far from the standing stones. It skulks out at dusk, looking for easy prey. Bring me its blackened tusk or one of those cursed skulls it wears. Do that, and I’ll see you paid—a purse of coin, and a round of ale on the house. Eldermoor remembers those who keep us safe."
+      ]]>
+    </NPCText>
+    <Option text="I’ll be back with proof. Keep the ale cold." action="Close"/>
+  </Dialogue>
+
+  <!-- Rumors path -->
+  <Dialogue id="rumors">
+    <NPCText>
+      <![CDATA[
+      Brenvar polishes a mug, eyeing you with a hint of mischief.<BR><BR>
+      "Depends what you’re buying. News flows like cider here—sweet or sour. Aldric’s seen tracks in the woods that look like nothing born of this earth. Mira’s got dreams of Sunreach and ships she’ll never see. Edda, she’s brewing up cures—and curses—out by the marsh. And if you’re looking to make coin fast, I hear Thalen’s lost half his steel to a thief. Just don’t ask about my own business. Some secrets are better left in the barrel."
+      ]]>
+    </NPCText>
+    <Option text="What’s this about Thalen’s missing steel?" next="thalen"/>
+    <Option text="What do you mean by ‘secrets in the barrel’?" next="smuggle"/>
+    <Option text="Tell me more about Edda’s brews." next="edda"/>
+    <Option text="Thanks, I’ll keep my ears open." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="thalen">
+    <NPCText>
+      <![CDATA[
+      Brenvar laughs.<BR><BR>
+      "Thalen’s a fine smith but a terrible gambler. Last week, he lost a shipment of steel ingots—some say to bandits, others say he drank them away. If you help him recover them, he might owe you a favor. But don’t tell him I sent you, or I’ll never hear the end of it."
+      ]]>
+    </NPCText>
+    <Option text="Thanks for the tip." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="smuggle">
+    <NPCText>
+      <![CDATA[
+      Brenvar’s eyes narrow, and his voice turns sharp.<BR><BR>
+      "Let’s just say the best ale in Eldermoor comes from places the mayor doesn’t approve of. If you know what’s good for you, you’ll drink, tip, and keep your nose out of other folk’s barrels. Understood?"
+      ]]>
+    </NPCText>
+    <Option text="Understood. Mum’s the word." action="Close"/>
+    <Option text="If you need help moving goods, I’m discreet." next="smuggleOffer"/>
+  </Dialogue>
+
+  <Dialogue id="smuggleOffer">
+    <NPCText>
+      <![CDATA[
+      Brenvar studies you, weighing your offer.<BR><BR>
+      "Maybe you’re not just another nosy outlander after all. If you can handle yourself, and the Ettin’s corpse grows cold, come see me again. There’s more work in Eldermoor than the mayor will ever admit—and some of it pays better than honesty."
+      ]]>
+    </NPCText>
+    <Option text="I’ll keep that in mind." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="edda">
+    <NPCText>
+      <![CDATA[
+      "Edda’s the wisest woman I know—half healer, half wild spirit. Some folk say she’s too friendly with the Verdant Tribes, but I say that’s our business. If you catch a fever or a curse, she’ll put you right… for a price."
+      ]]>
+    </NPCText>
+    <Option text="Thank you for the advice." action="Close"/>
+  </Dialogue>
+
+  <!-- Mira path -->
+  <Dialogue id="mira">
+    <NPCText>
+      <![CDATA[
+      A flicker of sadness crosses Brenvar’s eyes.<BR><BR>
+      "Aye, Mira’s my daughter—bright as a summer dawn, but restless as the river after rain. She wants more than mud and fences. Talks of Sunreach and far-off cities. I want her safe, but I won’t chain her here. If you see her wandering near the marsh, steer her home, would you?"
+      ]]>
+    </NPCText>
+    <Option text="Of course. She deserves a chance to see the world." next="miraDream"/>
+    <Option text="You ever think of leaving Eldermoor yourself?" next="brenvarDream"/>
+    <Option text="I’ll watch out for her." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="miraDream">
+    <NPCText>
+      <![CDATA[
+      Brenvar chuckles sadly.<BR><BR>
+      "Maybe so. Every bird must leave the nest, though it breaks the father’s heart. Just—keep her safe if you can. She’s all I’ve got."
+      ]]>
+    </NPCText>
+    <Option text="I’ll look out for her." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="brenvarDream">
+    <NPCText>
+      <![CDATA[
+      He snorts.<BR><BR>
+      "Leave Eldermoor? No. This place is in my blood and bones, same as the peat and the rain. I’ll keep this inn standing as long as breath’s in me. But for Mira… she should have the chance I never did."
+      ]]>
+    </NPCText>
+    <Option text="Understood. Thank you for sharing." action="Close"/>
+  </Dialogue>
+
+  <!-- Story/ale path -->
+  <Dialogue id="story">
+    <NPCText>
+      <![CDATA[
+      Brenvar pours you a mug, eyes twinkling.<BR><BR>
+      "Here’s a tale for a weary soul: When I was a younger man, I rowed smuggler’s ale down the Misty Creek, dodging the mayor’s watchmen and the worst of the marsh spirits. Aldric, my best friend, would watch the banks with a bow while I sang old ballads to keep the river’s ghosts at bay. We lost more than one barrel to the swamp, but what we kept—well, it’s what keeps this place running."
+      ]]>
+    </NPCText>
+    <Option text="You ever miss those days?" next="nostalgia"/>
+    <Option text="Maybe you could use another hand on your next run." next="smuggleOffer"/>
+    <Option text="Thanks for the drink and the tale." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="nostalgia">
+    <NPCText>
+      <![CDATA[
+      "Some nights, when the moon’s high and the inn’s quiet, I remember. But these days, I’m more barkeep than rogue. Still, Eldermoor’s secrets run deep—and if you stick around, maybe you’ll learn a few."
+      ]]>
+    </NPCText>
+    <Option text="Maybe I will." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="exit">
+    <NPCText>
+      <![CDATA[
+      Brenvar nods, unconvinced.<BR><BR>
+      "Passing through, eh? Mind the marshes, and keep your purse close. The world’s not as safe as it was. If you change your mind, the Boar’s door is always open—if you’ve coin and manners."
+      ]]>
+    </NPCText>
+    <Option text="Safe travels." action="Close"/>
+  </Dialogue>
+
+</DialogueFile>

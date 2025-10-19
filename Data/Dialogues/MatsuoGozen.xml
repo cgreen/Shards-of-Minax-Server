@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="MatsuoGozen">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#e7c6b3'>
+      A poised woman in a crimson kimono fans herself on the porch, gaze sharp as a blade.<BR><BR>
+      “You stand before Matsuo Gozen, once shield of the Shogun, now guardian of Hinokami’s grace.<BR>
+      State your purpose. Are you here for instruction, for gossip, or to test the edge of tradition?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I wish to learn the art of the onna-bugeisha." next="assess"/>
+    <Option text="I come seeking wisdom and etiquette." next="wisdom"/>
+    <Option text="What is your story, Gozen?" next="backstory"/>
+	<Option text="Tell me of your life before Hinokami." next="backstory_intro"/>
+    <Option text="Just looking around." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Assessing the Warrior -->
+  <Dialogue id="assess">
+    <NPCText>
+      <![CDATA[
+      Matsuo flicks her fan open with a *snap*, eyes narrowing.<BR><BR>
+      “Martial grace is not won by blood alone, but by discipline and honor. <BR>
+      Are you prepared to be judged as both a warrior and a guest of Hinokami?”
+      ]]>
+    </NPCText>
+    <Option text="Judge me by my skill and spirit." next="gendercheck"/>
+    <Option text="I have faced battle, but seek true discipline." next="gendercheck"/>
+    <Option text="Perhaps I should return later." action="Close"/>
+  </Dialogue>
+
+  <!-- Check for female/female-presenting character -->
+  <Dialogue id="gendercheck">
+    <NPCText>
+      <![CDATA[
+      Matsuo regards you closely, her fan pausing.<BR>
+      ]]>
+    </NPCText>
+    <Option text="Continue..." next="female" condition="IsFemale"/>
+    <Option text="Continue..." next="outsider" condition="!IsFemale"/>
+  </Dialogue>
+
+  <!-- For female/female-presenting characters -->
+  <Dialogue id="female">
+    <NPCText>
+      <![CDATA[
+      Her sternness softens ever so slightly.<BR>
+      “Few seek the path of the onna-bugeisha these days. If you would train under me, you must balance poise with ferocity. Shall we begin?”<BR>
+      She flips her fan, revealing the steel edge.<BR>
+      “Show me you can strike—yet know when to sheath the blade.”
+      ]]>
+    </NPCText>
+    <Option text="I am ready. Teach me your riposte." next="train_riposte" action="AddSkill:Swords,3,600"/>
+    <Option text="I seek training in etiquette and the sword." next="train_both" action="AddSkill:Swords,2,600;AddSkill:Etiquette,2,600"/>
+    <Option text="Another time, perhaps." action="Close"/>
+  </Dialogue>
+
+  <!-- For male or outsider characters -->
+  <Dialogue id="outsider">
+    <NPCText>
+      <![CDATA[
+      Matsuo’s gaze lingers, skeptical.<BR>
+      “Tradition guards these teachings. Outsiders must prove their honor—talk is cheap, but action weighs heavy in Hinokami.<BR>
+      Bring me proof of a worthy deed—help a villager, defend the shrine, or win respect in the arena. Then, perhaps, I will consider your request.”
+      ]]>
+    </NPCText>
+    <Option text="What deed would prove my worth?" next="outsider_quest"/>
+    <Option text="Understood. I will return when I have proved myself." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="outsider_quest">
+    <NPCText>
+      <![CDATA[
+      “Aid Lady Aiko with the cherry blossom festival, or rescue a merchant from the Verdant border. Return with a <B>Petal of Honor</B>—a token you will earn from those you aid. Only then shall the dojo’s doors open to you.”
+      ]]>
+    </NPCText>
+    <Option text="I accept this challenge." action="SendMessage:Seek those in need throughout Hinokami. Return with the Petal of Honor."/>
+    <Option text="I will prove myself before returning." action="Close"/>
+    <Option text="I already have the Petal of Honor." next="verify_petal" condition="HasItem:PetalOfHonor"/>
+  </Dialogue>
+
+  <Dialogue id="verify_petal">
+    <NPCText>
+      <![CDATA[
+      Matsuo’s eyes widen, then nods approvingly.<BR>
+      “You have earned this. I will instruct you—but remember, honor is a path, not a destination.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, sensei." next="train_both" action="TakeItem:PetalOfHonor;AddSkill:Swords,2,600;AddSkill:Etiquette,2,600"/>
+    <Option text="I am not yet ready." action="Close"/>
+  </Dialogue>
+
+  <!-- Training Options -->
+  <Dialogue id="train_riposte">
+    <NPCText>
+      <![CDATA[
+      She walks you through the dance of the fan—slashing, deflecting, striking.<BR>
+      “The fan is not merely for grace, but for cunning. Let every motion be both invitation and threat.”<BR>
+      You feel your swordplay quicken, with a subtle edge of elegance.
+      ]]>
+    </NPCText>
+    <Option text="Bow in gratitude." action="SendMessage:You feel more graceful in combat. (+3 Swords for 10m)" />
+    <Option text="Ask about etiquette training." next="train_etiquette"/>
+    <Option text="End training." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="train_etiquette">
+    <NPCText>
+      <![CDATA[
+      “Strength is wasted without respect. In Hinokami, every bow, every word, is a blade or a shield.”<BR>
+      Matsuo teaches you the nuances of posture, speech, and composure.<BR>
+      You sense that even in conversation, you are now harder to provoke.
+      ]]>
+    </NPCText>
+    <Option text="Thank you, sensei." action="AddSkill:Etiquette,2,600;SendMessage:You have gained etiquette training (+2 Etiquette for 10m)." />
+    <Option text="Return to sword training." next="train_riposte"/>
+    <Option text="End training." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="train_both">
+    <NPCText>
+      <![CDATA[
+      “Both sword and word—learn them together, and you shall walk the path of the onna-bugeisha in full.”<BR>
+      Matsuo guides you through a ritual blending blade forms with graceful bows and subtle social moves.<BR>
+      “Let the world see your strength, but only as much as you wish.”
+      ]]>
+    </NPCText>
+    <Option text="Bow and thank Matsuo Gozen." action="SendMessage:You feel both deadlier and more poised. (+2 Swords, +2 Etiquette for 10m)" />
+    <Option text="Ask for more advanced lessons." next="advanced"/>
+    <Option text="End training." action="Close"/>
+  </Dialogue>
+
+  <!-- Advanced Lessons -->
+  <Dialogue id="advanced">
+    <NPCText>
+      <![CDATA[
+      Matsuo’s eyes flash with pride.<BR>
+      “You have learned well, but beware: in times of chaos, even the sharpest blade may falter if the spirit breaks. Seek wisdom in adversity, and return to me when you are ready for the Hidden Form.”
+      ]]>
+    </NPCText>
+    <Option text="What is the Hidden Form?" next="hidden_form"/>
+    <Option text="I will return when I am worthy." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="hidden_form">
+    <NPCText>
+      <![CDATA[
+      “The Hidden Form is taught only to those who have aided Hinokami in our darkest hour. Should Minax’s assassins threaten our shrine, stand with us and your name will be inscribed among the defenders.”<BR>
+      (This quest will become available in future updates.)
+      ]]>
+    </NPCText>
+    <Option text="I understand. I await the call." action="Close"/>
+  </Dialogue>
+
+  <!-- Wisdom & Etiquette Path -->
+  <Dialogue id="wisdom">
+    <NPCText>
+      <![CDATA[
+      “Wisdom is the mother of all arts. You wish etiquette? Learn first that in every gesture, intent hides. A fan may conceal a dagger, but it also shields a heart.”<BR>
+      Matsuo demonstrates a courtly bow, then a subtle feint.<BR>
+      “Shall I instruct you in these ways?”
+      ]]>
+    </NPCText>
+    <Option text="Please teach me." next="train_etiquette"/>
+    <Option text="Perhaps I should learn swordplay instead." next="assess"/>
+    <Option text="Another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Backstory Path -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      Matsuo Gozen closes her fan, eyes distant.<BR>
+      “I crossed the seas from Tokuno with Shogun Takamura’s retinue, when Minax’s shadow first fell. I held the line at the Blossom Gate, and I have seen the best— and worst—of both worlds. Now, I instruct those who would keep our flame alive, in sword and in soul.”<BR>
+      She fixes you with a fierce smile.<BR>
+      “Every exile shapes her own legend. What legend will you write?”
+      ]]>
+    </NPCText>
+    <Option text="Perhaps you will teach me to shape my own." next="assess"/>
+    <Option text="Thank you for sharing your story." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismiss -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      “Then observe. The ways of Hinokami are open to any who show respect—and sharp eyes.”
+      ]]>
+    </NPCText>
+    <Option text="I will watch and learn." action="Close"/>
+    <Option text="On second thought, may I train with you?" next="assess"/>
+  </Dialogue>
+
+  <!-- BACKSTORY BRANCH -->
+  <Dialogue id="backstory_intro">
+    <NPCText>
+      <![CDATA[
+      Matsuo folds her fan slowly, her tone lower and more personal.<BR><BR>
+      “Before Hinokami… there was fire. Blood on rice fields, cherry blossoms falling on scorched armor. I was the edge of a fallen empire’s last breath. We fought to hold Tokuno against the storm Minax sent… and failed.”<BR><BR>
+      She turns, letting the silence hang.<BR>
+      “But a warrior endures. Even exile can be a rebirth.”
+      ]]>
+    </NPCText>
+    <Option text="You survived a war against Minax?" next="tokuno_war"/>
+    <Option text="What brought you to this land?" next="arrival_britannia"/>
+    <Option text="Do you ever miss Tokuno?" next="nostalgia"/>
+    <Option text="Do you still follow the warrior path?" next="path"/>
+    <Option text="Thank you for sharing." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="tokuno_war">
+    <NPCText>
+      <![CDATA[
+      “I was one of the <I>Hibashira</I>—the Fire Pillars. Our order was elite, trained to end battles with a single stroke.”<BR>
+      She lifts her sleeve, revealing a faint scar like lightning.<BR>
+      “Minax twisted Tokuno’s warlords with her promises. Some we slew. Others… we could not.”<BR><BR>
+      “But her greatest weapon was despair. It broke more blades than any army.”
+      ]]>
+    </NPCText>
+    <Option text="And yet you did not break." next="arrival_britannia"/>
+    <Option text="Were others of the Hibashira lost?" next="fallen_comrades"/>
+  </Dialogue>
+
+  <Dialogue id="fallen_comrades">
+    <NPCText>
+      <![CDATA[
+      Matsuo closes her eyes.<BR>
+      “We were seven. Only I remain.”<BR><BR>
+      She retrieves a worn prayer strip tucked in her obi, its ink faded.<BR>
+      “Every moon, I light lanterns for them. In Hinokami, I rebuilt what I could—discipline, honor, memory. But there are nights I wake with sword in hand… alone.”
+      ]]>
+    </NPCText>
+    <Option text="I will honor their memory too." action="Karma:+100;SendMessage:You feel a quiet respect settle over you."/>
+    <Option text="They live on through your teachings." action="Fame:+100;SendMessage:Your words seem to strengthen her resolve."/>
+    <Option text="That is a burden few could bear." next="arrival_britannia"/>
+  </Dialogue>
+
+  <Dialogue id="arrival_britannia">
+    <NPCText>
+      <![CDATA[
+      “We crossed the Sea of Tears in silence. No homeland. No banner. Just a ship full of survivors and a Shogun with nothing left to rule.”<BR><BR>
+      “Hinokami rose from hardship. But we brought more than weapons—we brought art, tradition, and the belief that grace could bloom even in foreign soil.”
+      ]]>
+    </NPCText>
+    <Option text="What art do you cherish most?" next="arts"/>
+    <Option text="You built a legacy from ashes." next="path"/>
+    <Option text="Let us speak of something else." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="arts">
+    <NPCText>
+      <![CDATA[
+      A rare smile tugs at her lips.<BR>
+      “Ikebana. The placing of flowers with intent. Even in war, I would gather blossoms. Balance requires contrast. Beauty softens wrath. Without grace, a warrior becomes a beast.”<BR><BR>
+      “Would you… like to learn?”
+      ]]>
+    </NPCText>
+    <Option text="Yes, I would." next="learn_ikebana" condition="KarmaAtLeast:0"/>
+    <Option text="I don’t think I have the patience for that." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="learn_ikebana">
+    <NPCText>
+      <![CDATA[
+      She gently places a single blossom in a ceramic dish and gestures for you to do the same.<BR><BR>
+      “Feel the shape of it. The flow. The tension between life and stillness.”<BR><BR>
+      You feel something stir—discipline, serenity, perhaps something more.
+      ]]>
+    </NPCText>
+    <Option text="I feel... focused." action="AddStat:Int,5,600;SendMessage:You feel more centered. (+5 Int for 10m)"/>
+    <Option text="Strange how flowers can teach the soul." action="AddSkill:Etiquette,2,600;SendMessage:You gain insight in decorum and poise."/>
+    <Option text="Thank you for this lesson." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="nostalgia">
+    <NPCText>
+      <![CDATA[
+      Matsuo fans herself slowly.<BR><BR>
+      “Every time I smell cherry blossoms, I remember the courtyard at dawn. I remember the <I>shamisen</I> before a duel, the laughter before war.”<BR><BR>
+      “But Hinokami is not lesser—it is the second act. The soul’s story does not end with exile.”
+      ]]>
+    </NPCText>
+    <Option text="You speak like a poet." action="Fame:+50;SendMessage:Matsuo nods, perhaps a little flattered."/>
+    <Option text="Have you written these memories down?" next="poetry"/>
+    <Option text="Thank you for sharing." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="poetry">
+    <NPCText>
+      <![CDATA[
+      She hesitates, then retrieves a small lacquered scroll from her sleeve.<BR><BR>
+      “One verse, for the wind to carry:<BR><BR>
+      <CENTER><I>Steel meets silk in dusk—<BR>Even in foreign gardens,<BR>The blade remembers.</I></CENTER><BR><BR>
+      “You may carry it. Let its words temper you.”
+      ]]>
+    </NPCText>
+    <Option text="Accept the poem scroll." 
+            action="GiveItem:HinokamiPoemScroll;Karma:+50;SendMessage:You receive a scroll of memory and grace." 
+            condition="!HasItem:HinokamiPoemScroll"/>
+    <Option text="Thank you, Gozen." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="path">
+    <NPCText>
+      <![CDATA[
+      “The warrior’s path never ends. It narrows. It turns. But it remains.”<BR><BR>
+      “I teach not to win battles—but to preserve the thread that binds us. Bushido is not a sword art. It is a way to live.”<BR>
+      She rises, gazing toward the training ring.<BR>
+      “If you are still curious… the dojo welcomes those who bow in respect.”
+      ]]>
+    </NPCText>
+    <Option text="I would train with you now." next="assess"/>
+    <Option text="I needed to hear this. Thank you." action="Karma:+75;SendMessage:You feel the clarity of her path settle into your bones."/>
+    <Option text="Farewell, Gozen." action="Close"/>
+  </Dialogue>
+
+
+</DialogueFile>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="SergioDumar">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#DDAA55'>
+      Sergio Dumar greets you with a broad smile, his eyes always scanning the crowd.<BR><BR>
+      “Welcome, friend! Thirsty, or simply in search of gossip? In Sunreach, a clever ear and a finer palate are worth their weight in gold—sometimes more.”<BR>
+      His hand lingers on a crystal decanter. “But between us, perhaps you seek a… special vintage?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’m interested in your special vintages." next="specialWine"/>
+    <Option text="Any news from the Five Houses?" next="gossip"/>
+    <Option text="You seem to know everyone in Sunreach." next="connections"/>
+	<Option text="Tell me more about yourself, Sergio." next="backstoryIntro"/>
+    <Option text="I have no business here." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="specialWine">
+    <NPCText>
+      <![CDATA[
+      Sergio’s grin widens; there’s a subtle threat beneath the charm.<BR><BR>
+      “Discerning! For a select few, I offer bottles with… unique properties. Magistrate Thornwall swears by my midnight reserve—cures what ails and silences what talks too much, eh?”<BR><BR>
+      He lowers his voice: “I have a problem, friend. A rival vintner is blackmailing me with rumors of my ‘special’ blends. I’d reward someone willing to… ensure their silence. Interested?”
+      ]]>
+    </NPCText>
+    <Option text="What exactly do you need done?" next="questDetails"/>
+    <Option text="Poison? Are you confessing to a crime?" next="crime"/>
+    <Option text="Maybe I’ll just try your normal wine." next="normalWine"/>
+    <Option text="I’m no criminal." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="questDetails">
+    <NPCText>
+      <![CDATA[
+      Sergio’s eyes flicker dangerously.<BR><BR>
+      “Nothing so crude as murder. I want you to find the evidence my rival—Vittorio Salvi—claims to have. Letters, recipes, samples—destroy them, and his leverage vanishes. If you wish to teach him a lesson, I won’t stop you. Discretion, of course, is vital.”<BR>
+      He slides a velvet pouch toward you. “You’ll find Salvi in the merchant quarter. Succeed, and a cask of my finest—and perhaps more—awaits.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll take care of it." 
+            action="GiveItem:FactionDeliveryQuestScroll(Vittorio Salvi,Sunreach,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="acceptQuest"/>
+    <Option text="What do I do with the evidence once I find it?" next="evidence"/>
+    <Option text="Suppose I want to negotiate with your rival instead?" next="negotiate"/>
+    <Option text="This is too risky for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptQuest">
+    <NPCText>
+      <![CDATA[
+      Sergio claps you on the shoulder, jovial once more.<BR><BR>
+      “Excellent! Return when the matter is… corked. And take care—Vittorio’s not above hiring brutes to protect his secrets.”<BR><BR>
+      (You received a quest: Find and destroy the evidence of Sergio’s poisons held by Vittorio Salvi in the merchant quarter.)
+      ]]>
+    </NPCText>
+    <Option text="I’ll be back when it’s done." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="evidence">
+    <NPCText>
+      <![CDATA[
+      “Burn it, drown it, bring it here for a bonus—whatever ensures it never sees the light of day. If you do bring it to me, I’ll see you’re well rewarded… and not mentioned to anyone, you understand.”
+      ]]>
+    </NPCText>
+    <Option text="Understood. I’ll handle it." 
+            action="GiveItem:FactionDeliveryQuestScroll(Vittorio Salvi,Sunreach,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="acceptQuest"/>
+    <Option text="I’ll think about it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="negotiate">
+    <NPCText>
+      <![CDATA[
+      Sergio shrugs, swirling a glass. “You’re bold—or foolish. If you can make Vittorio drop his accusations, I’ll pay you just as well. But betray me, and I promise: you’ll taste my reserve for the last time.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll see what I can do." 
+            action="GiveItem:FactionDeliveryQuestScroll(Vittorio Salvi,Sunreach,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="acceptQuest"/>
+    <Option text="Maybe this isn’t for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="crime">
+    <NPCText>
+      <![CDATA[
+      Sergio leans close, breath heavy with wine.<BR>
+      “Crime is such a harsh word. In Sunreach, we call it… advantage. Poison is merely a tool. The real crime is letting rivals get the better of you, yes?”<BR><BR>
+      He straightens, smiling. “If you’re not interested, there’s always wine to drink and gossip to share.”
+      ]]>
+    </NPCText>
+    <Option text="Let’s talk about something else." next="gossip"/>
+    <Option text="I’ll try your special work, after all." next="questDetails"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="normalWine">
+    <NPCText>
+      <![CDATA[
+      “A safe choice, though a dull one. Still, I have a new import from Qasaria—smooth as a midnight breeze. Care for a glass?”<BR><BR>
+      (You share a drink. The warmth is real—at least, this time.)
+      ]]>
+    </NPCText>
+    <Option text="Tell me about the city council." next="gossip"/>
+    <Option text="I should be going." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="gossip">
+    <NPCText>
+      <![CDATA[
+      Sergio leans in, voice conspiratorial.<BR><BR>
+      “Ah, the council! Five houses, a thousand secrets. Darius Veynar grows fat on his own ambition; Lady Seraphine stirs trouble in every port. Myself? I simply serve a good drink and a better rumor.”<BR>
+      He winks. “If you ever want to hear what really goes on beneath the city, you know where to find me.”
+      ]]>
+    </NPCText>
+    <Option text="Any news of Minax in Sunreach?" next="minax"/>
+    <Option text="How do you know so much?" next="connections"/>
+    <Option text="I should go." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Sergio’s smile fades slightly.<BR><BR>
+      “Minax’s shadow falls everywhere, but her agents prefer poison over blades—my kind of company, in some ways. She pays well, but trust me: her gifts always come with a hidden cost. I stick to my business and keep my enemies close, eh?”<BR>
+      He pours another glass. “Let’s toast to your health—while it lasts.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll drink to that." action="Close"/>
+    <Option text="Back to business. About your rival..." next="specialWine"/>
+  </Dialogue>
+
+  <Dialogue id="connections">
+    <NPCText>
+      <![CDATA[
+      Sergio laughs, his mood lightening.<BR><BR>
+      “In Sunreach, knowledge is poured by the glass. Every ship’s captain, every councilman, every hungry beggar comes through my door. A little wine, a little gold, and secrets flow. Lady Seraphine herself uses my cellar for her private meetings—though what’s said there, stays there.”<BR>
+      He gives you a meaningful look. “And you, my friend—what secrets do you keep?”
+      ]]>
+    </NPCText>
+    <Option text="Maybe I’ll share them… for the right price." next="gossip"/>
+    <Option text="I prefer to stay anonymous." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="backstoryIntro">
+  <NPCText>
+    <![CDATA[
+    Sergio pours himself a measure of amber wine and raises an eyebrow.<BR><BR>
+    “Curiosity—now that’s the best vintage. Very well. But remember, friend… stories have tannins, too. Bitter ones.”<BR>
+    He swirls the glass. “What shall I reveal to you?”
+    ]]>
+  </NPCText>
+  <Option text="How did you become a vintner in Sunreach?" next="origin"/>
+  <Option text="You sound like someone who’s seen blood as well as grapes." next="darkPast"/>
+  <Option text="Any loves or regrets, Sergio?" next="personal"/>
+  <Option text="Enough talk. Back to business." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="origin">
+  <NPCText>
+    <![CDATA[
+    “Once, long ago, I was meant for the priesthood.”<BR>
+    He snorts. “I studied with monks near Skara Brae. But I discovered I preferred fermented sin to dry scripture.”<BR><BR>
+    “When I came to Sunreach, I sold sacramental wine to pirates and prophets alike. The city drank, and I listened.”<BR>
+    A brief smile. “And now they toast to Sergio, not the gods.”
+    ]]>
+  </NPCText>
+  <Option text="Do you miss that old life?" next="originFollowup"/>
+  <Option text="It suits you—both parts, really." condition="KarmaAtLeast:0" action="Karma:10" next="originFollowup"/>
+  <Option text="I don’t trust men who hide behind wine and robes." condition="KarmaBelow:0" action="Karma:-10" next="originDark"/>
+</Dialogue>
+
+<Dialogue id="originFollowup">
+  <NPCText>
+    <![CDATA[
+    “No regrets, my friend. Wine teaches you that everything changes. Some grapes rot. Some ripen. And some ferment into truth.”<BR>
+    He lifts his glass in silent toast.
+    ]]>
+  </NPCText>
+  <Option text="What about the darker rumors?" next="darkPast"/>
+  <Option text="Let’s talk of something lighter." next="personal"/>
+</Dialogue>
+
+<Dialogue id="originDark">
+  <NPCText>
+    <![CDATA[
+    Sergio’s eyes harden slightly.<BR>
+    “You’ll find few saints in Sunreach. If I seem charming, it’s because charm keeps knives out of your ribs.”<BR>
+    A sip. “You think I hide? I say I survive.”
+    ]]>
+  </NPCText>
+  <Option text="Fair enough. Let’s continue." next="personal"/>
+  <Option text="I still don’t trust you." action="Karma:-10" next="greeting"/>
+</Dialogue>
+
+<Dialogue id="darkPast">
+  <NPCText>
+    <![CDATA[
+    He chuckles darkly. “Ah, so you’ve heard the whispers.”<BR><BR>
+    “There was once a noble who insulted Lady Seraphine. The next day, he drank himself to death—on a bottle I supplied. Total accident, of course.”<BR>
+    His grin sharpens. “But it earned me her favor. And now… well, let’s just say I cater to clients with very specific tastes.”
+    ]]>
+  </NPCText>
+  <Option text="So you are a poisoner." next="poisoner"/>
+  <Option text="Seraphine trusts you?" next="seraphineTrust"/>
+  <Option text="I won’t ask further." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="poisoner">
+  <NPCText>
+    <![CDATA[
+    “Not officially.” He winks.<BR><BR>
+    “Every wine has a bouquet, a balance… and an aftertaste. Sometimes, that aftertaste is silence. But I never serve such vintages unless paid in advance.”
+    ]]>
+  </NPCText>
+  <Option text="Do you enjoy it? The power?" next="philosophy"/>
+  <Option text="You’re a monster." action="Karma:-15" next="greeting"/>
+</Dialogue>
+
+<Dialogue id="philosophy">
+  <NPCText>
+    <![CDATA[
+    Sergio leans close.<BR><BR>
+    “Enjoy? No. But I respect it. There’s truth in poison, friend. It reveals who your enemies are—and who deserves your loyalty.”<BR><BR>
+    “In this city, even the water’s for sale. Better to sell wine… and own your sins.”
+    ]]>
+  </NPCText>
+  <Option text="You’re more philosopher than criminal." action="Karma:10" next="greeting"/>
+  <Option text="I suppose I understand." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="seraphineTrust">
+  <NPCText>
+    <![CDATA[
+    “Lady Seraphine sees value in loyalty—and discretion. I offer both.”<BR>
+    He tilts his head. “And perhaps one day, I’ll offer you the same. If you prove you’re not just another thirsty fool.”
+    ]]>
+  </NPCText>
+  <Option text="I hope to earn that." action="Fame:50" next="greeting"/>
+  <Option text="I’ll pass, thanks." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="personal">
+  <NPCText>
+    <![CDATA[
+    A strange softness touches his expression.<BR><BR>
+    “There was someone. A healer, long ago. She hated my friends, my wine, my city. So I let her go.”<BR>
+    He raises his glass. “To love—too strong to drink, too delicate to keep.”
+    ]]>
+  </NPCText>
+  <Option text="Do you still think of her?" next="personal2"/>
+  <Option text="Better to drink than dwell." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="personal2">
+  <NPCText>
+    <![CDATA[
+    “Only when the wine tastes like regret.”<BR>
+    He swirls his glass again. “But that’s enough sentiment. You’ll ruin my reputation.”
+    ]]>
+  </NPCText>
+  <Option text="I like hearing the real you." condition="IsFemale" action="SendMessage:He looks at you with unexpected warmth." next="greeting"/>
+  <Option text="Don’t worry. I won’t tell." condition="IsMale" action="SendMessage:He raises his glass toward you in silent camaraderie." next="greeting"/>
+</Dialogue>
+
+
+</DialogueFile>

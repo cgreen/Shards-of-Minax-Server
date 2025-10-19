@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="ZahiraTheVeiledAlchemist">
+
+  <!-- ========================================== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#d6be8b'>
+      A woman in a tarnished Britannian court robe, her face shadowed by a pale-gold veil, measures reagents behind her stall. Her eyes—clever, wary—flicker to you.<BR><BR>
+      "Ah. A stranger, or perhaps a seeker. In Qasaria, one finds both in abundance. I am Zahira, once of Britain, now peddler of potions and—should you possess discretion—remedies less legal. Are you here to buy, or is your curiosity less... mercantile?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek potent elixirs and rare knowledge." next="potions"/>
+    <Option text="Your accent is Britannian. What brings you to Qasaria?" next="backstory"/>
+    <Option text="You seem wary. Have you enemies here?" next="enemies"/>
+    <Option text="I am simply browsing your wares." next="vendor"/>
+	<Option text="Tell me your story, Zahira." next="backstoryDeep"/>
+    <Option text="Good day, alchemist." action="Close"/>
+  </Dialogue>
+
+  <!-- Potion trade branch -->
+  <Dialogue id="potions">
+    <NPCText>
+      <![CDATA[
+      Zahira lifts a vial, sunlight catching iridescent motes within.<BR><BR>
+      "Potions for vigor, shadow, sleep... even liquid courage for the arena, if your heart is reckless. Yet my best brews require desert ingredients—dangerous to gather, but powerful to wield.<BR>
+      Tell me, do you possess a steady hand and the nerve to brave the Ash Serpents? My experiments await only a capable agent."
+      ]]>
+    </NPCText>
+    <Option text="I am ready to seek your reagents." next="questIntro"/>
+    <Option text="Ash Serpents? What are those?" next="ashSerpents"/>
+    <Option text="I would know more about your research." next="research"/>
+    <Option text="On second thought, I’ll browse your wares." next="vendor"/>
+  </Dialogue>
+
+  <!-- Zahira’s past -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      The alchemist’s voice grows softer, tinged with bitterness.<BR><BR>
+      "Britain—city of marble, politics, and suspicion. They called me genius, then heretic, when the war turned and Minax's shadow crept near. I fled with little more than my veils and recipes.<BR>
+      Here, the Council of Jewels tolerates my presence, so long as I profit them. But beware: not all in Qasaria forget old grudges. Safiya watches my stalls. Karim’s spies linger in the alleys."
+      ]]>
+    </NPCText>
+    <Option text="Are you truly innocent of Minax’s crimes?" next="innocence"/>
+    <Option text="What is your history with Safiya or Karim?" next="council"/>
+    <Option text="That sounds like a lonely exile." next="lonely"/>
+    <Option text="Let us speak of potions, not politics." next="potions"/>
+  </Dialogue>
+
+  <!-- Enemies/rumors branch -->
+  <Dialogue id="enemies">
+    <NPCText>
+      <![CDATA[
+      Zahira glances left, then right, lowering her voice.<BR><BR>
+      "A veiled woman in Qasaria attracts whispers—some about my wares, others about my allegiances. The Ash Serpents, desert raiders, would ransom my knowledge for a drop of silver.<BR>
+      Worse still, there are those who believe I yet serve Minax. I assure you: my loyalty is to my craft—and to those who show me trust."
+      ]]>
+    </NPCText>
+    <Option text="How might I earn your trust, Zahira?" next="questIntro"/>
+    <Option text="Tell me more of these rumors." next="innocence"/>
+    <Option text="Let’s speak of business, not whispers." next="vendor"/>
+  </Dialogue>
+
+  <!-- Vendor fallback -->
+  <Dialogue id="vendor">
+    <NPCText>
+      <![CDATA[
+      Zahira shrugs, her bangles chiming.<BR><BR>
+      "Then browse, stranger, but know—my best recipes are not for sale to cowards, nor for those who ask too many questions. When you crave adventure, return."
+      ]]>
+    </NPCText>
+    <Option text="On second thought, what rare tasks do you offer?" next="questIntro"/>
+    <Option text="Thank you, Zahira." action="Close"/>
+  </Dialogue>
+
+  <!-- Alchemy research lore -->
+  <Dialogue id="research">
+    <NPCText>
+      <![CDATA[
+      "I seek what no court or council could offer—freedom to test, to mix, to risk.<BR>
+      The venom of the Ash Serpent, they say, is pure poison—yet I have crafted healing draughts from its very essence. The petals of moon-sand lilies, the amber of sunburied scorpions—these, too, hold secrets.<BR>
+      If you bring me such reagents, I can brew wonders not found in any apothecary’s stall."
+      ]]>
+    </NPCText>
+    <Option text="I will gather these for you." next="questIntro"/>
+    <Option text="That sounds too dangerous." action="Close"/>
+  </Dialogue>
+
+  <!-- Ash Serpent info -->
+  <Dialogue id="ashSerpents">
+    <NPCText>
+      <![CDATA[
+      Zahira’s eyes narrow.<BR><BR>
+      "Desert raiders who worship venom and sand, half-brigand, half-cultist. Their leader, Ashan, wields a staff tipped with an ancient fang. They guard the oasis where sandworms breed, making the gathering of venom perilous.<BR>
+      But their venom is the key to my latest elixir—a tonic that can mend wounds even Minax’s magic cannot."
+      ]]>
+    </NPCText>
+    <Option text="I will face them for your sake." next="questIntro"/>
+    <Option text="I’ll not risk crossing a cult." action="Close"/>
+  </Dialogue>
+
+  <!-- Council connections -->
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      "Safiya al-Sapphire detests rivals; she would rather see my potions banned than admit their worth. Karim al-Emerald has offered me coin for secrets, but trust is a rare reagent. Even Yasmin sends scholars to bargain for healing arts lost to her mages.<BR>
+      My only allegiance is to discovery. Still, a wise traveler keeps many doors open."
+      ]]>
+    </NPCText>
+    <Option text="Would you have me spy on the council?" next="spy"/>
+    <Option text="I am no spy. Speak to me of adventure instead." next="questIntro"/>
+  </Dialogue>
+
+  <!-- Loneliness -->
+  <Dialogue id="lonely">
+    <NPCText>
+      <![CDATA[
+      Zahira’s eyes soften briefly.<BR><BR>
+      "Loneliness is the alchemist’s companion; exile sharpens both mind and caution. Yet here in Qasaria’s sands, I am free to pursue what Britain forbade. Freedom and fear are siblings, both born of exile."
+      ]]>
+    </NPCText>
+    <Option text="You deserve better than exile." next="potions"/>
+    <Option text="Let’s speak of your work." next="potions"/>
+    <Option text="Farewell, Zahira." action="Close"/>
+  </Dialogue>
+
+  <!-- Innocence/sympathy -->
+  <Dialogue id="innocence">
+    <NPCText>
+      <![CDATA[
+      Zahira’s fingers clench the edge of her stall.<BR><BR>
+      "What is innocence, when even the wise fall to fear? I brewed potions for wounded soldiers—nothing more. Yet rumors grow in the shadows, and trust dies beneath Minax’s moon.<BR>
+      Believe what you will. But if you help me, I will prove my worth with action, not words."
+      ]]>
+    </NPCText>
+    <Option text="Let me help, then." next="questIntro"/>
+    <Option text="I do not judge your past." next="potions"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Spy/side quest branch -->
+  <Dialogue id="spy">
+    <NPCText>
+      <![CDATA[
+      Zahira arches a brow.<BR><BR>
+      "In Qasaria, everyone is a spy for someone. But if you learn whispers about me—whether from Safiya, Karim, or the Shadowmaster Zahid—bring them to me before they reach the council’s ears. Knowledge is as precious as gold."
+      ]]>
+    </NPCText>
+    <Option text="I’ll remember that. For now, your desert reagents?" next="questIntro"/>
+    <Option text="I want no part of intrigue." next="potions"/>
+  </Dialogue>
+
+  <!-- QUEST INTRO -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ebc06d'>
+      Zahira leans in, her veil brushing the sand-dusted vials.<BR><BR>
+      "There is an oasis in the Serpent's Teeth—far south, past Qasaria’s last minaret. There, the Ash Serpents guard sandworm broods and moon-sand lilies. I require three things:<BR>
+      <UL>
+      <LI>Fresh sandworm venom, drawn from a living beast
+      <LI>Petals of a moon-sand lily, glowing by starlight
+      <LI>Amber from a sunburied scorpion’s mound
+      </UL>
+      None of these are easily gathered. Bring them to me, and I will craft you an elixir found nowhere else.<BR>
+      Do you accept the dangers of the desert for alchemy’s reward?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I accept. Mark what I must find." 
+            action="GiveItem:FactionDeliveryQuestScroll(Desert Reagents,Qasaria,500)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="questAccept"/>
+    <Option text="Tell me more about the rewards." next="reward"/>
+    <Option text="What dangers await at the oasis?" next="danger"/>
+    <Option text="I am not ready for this task." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="questAccept">
+    <NPCText>
+      <![CDATA[
+      Zahira offers you a folded parchment, inked in her looping Britannian hand.<BR><BR>
+      "Take this list. Return alive, and I shall brew an elixir for you—one to heal, resist poison, or even reveal lies. Qasaria’s sands remember the brave."
+      ]]>
+    </NPCText>
+    <Option text="I will return, Zahira." action="Close"/>
+  </Dialogue>
+
+  <!-- Reward explanations -->
+  <Dialogue id="reward">
+    <NPCText>
+      <![CDATA[
+      "Bring me all three reagents, and you may choose your reward: a draught of desert healing (restores and cures), a philter against poisons, or a serum that exposes deception in the hearts of men.<BR>
+      Few can offer such gifts—even in Qasaria’s shadowed markets."
+      ]]>
+    </NPCText>
+    <Option text="I accept your challenge." 
+            action="GiveItem:FactionDeliveryQuestScroll(Desert Reagents,Qasaria,500)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="questAccept"/>
+    <Option text="I must decline." action="Close"/>
+  </Dialogue>
+
+  <!-- Danger warning -->
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      Zahira’s gaze darkens.<BR><BR>
+      "The Ash Serpents are fierce, and their leader, Ashan, wields magic as old as the dunes. The sandworms burrow beneath the oasis, emerging without warning. The lilies are guarded by venomous locusts.<BR>
+      Go armed, and go at night—the petals bloom only under the moon’s gaze."
+      ]]>
+    </NPCText>
+    <Option text="I will brave the dangers for your reward." 
+            action="GiveItem:FactionDeliveryQuestScroll(Desert Reagents,Qasaria,500)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="questAccept"/>
+    <Option text="Perhaps I should reconsider." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="backstoryDeep">
+  <NPCText>
+    <![CDATA[
+    Zahira pauses, her hands stilling over a vial of glimmering sand.<BR><BR>
+    “Stories are like alchemy, you know—delicate balances, potent truths, and dangerous when mishandled. Still... you’ve asked kindly.”<BR><BR>
+    She exhales softly.<BR>
+    “I was once the Court Alchemist of Britain. Not the title you're thinking—there were others above me, but I held the ear of Lord British’s cousin, the Duchess of Goldleaf. She trusted my brews to soothe her mind, her pain... and her dreams.”<BR>
+    Zahira’s voice dips.<BR>
+    “Then came Minax. Then came fear.”<BR><BR>
+    "One night, a vial went missing. Another alchemist—Jeval Rane—claimed I brewed elixirs for Minax’s spies. I fled before the gallows found me. Britain has not spoken my name since."<BR><BR>
+    She looks at you.<BR>
+    “Do you believe I’m a traitor, stranger? Or merely a scapegoat?”
+    ]]>
+  </NPCText>
+  <Option text="You were betrayed. I can see it." next="betrayed" action="Karma:+250"/>
+  <Option text="You don’t deny brewing for Minax..." next="interrogate" action="Karma:-100"/>
+  <Option text="Who was Jeval Rane?" next="jeval"/>
+  <Option text="What were those vials you brewed for the Duchess?" next="dreampotions"/>
+  <Option text="Your past is your own. Tell me what drives you now." next="motivation"/>
+</Dialogue>
+
+<Dialogue id="betrayed">
+  <NPCText>
+    <![CDATA[
+    Zahira’s eyes shine for a moment.<BR><BR>
+    “Thank you. Few offer belief without bribe or blood. In truth, I *did* create powerful tinctures—but never for Minax. My loyalty was to healing. My work was twisted into a weapon I never crafted.”<BR>
+    She reaches under the counter, sliding you a small token wrapped in cloth.
+    ]]>
+  </NPCText>
+  <Option text="What is this?" action="GiveItem:GoldCoin(1)"/>
+  <Option text="How can I help you reclaim your name?" next="motivation"/>
+</Dialogue>
+
+<Dialogue id="interrogate">
+  <NPCText>
+    <![CDATA[
+    Zahira’s voice cools.<BR><BR>
+    “I see. Perhaps you’re from Trinsic—or Yew. Righteous minds never tire of hunting witches, even when the flames burn the innocent.”<BR>
+    “If you seek only judgment, leave. If you seek *truth*, listen.”<BR><BR>
+    “Jeval Rane accused many. Then he vanished. Some say his last brew bore a silver scorpion mark... my mark. But I never brewed such a thing.”<BR>
+    “I believe he was silenced. But not by me.”
+    ]]>
+  </NPCText>
+  <Option text="Then who silenced him?" next="jeval"/>
+  <Option text="Let us speak of your current work." next="motivation"/>
+</Dialogue>
+
+<Dialogue id="jeval">
+  <NPCText>
+    <![CDATA[
+    “Jeval Rane was arrogant, brilliant, and dangerous. A master of illusions and venom. We studied together at the Lycaeum. He coveted every formula I crafted.”<BR><BR>
+    “He disappeared a week after accusing me. His body was never found—but a broken amphora bearing the sigil of the Onyx Warlord was discovered near the Scorpion Pits. Coincidence?”<BR><BR>
+    She watches you closely.<BR>
+    “There are whispers he made a pact with the Undermarket... or Minax herself. I still wonder which betrayal killed him first.”
+    ]]>
+  </NPCText>
+  <Option text="Perhaps we’ll uncover the truth together." action="Fame:+250"/>
+  <Option text="You’ve given me much to ponder." action="Close"/>
+</Dialogue>
+
+<Dialogue id="dreampotions">
+  <NPCText>
+    <![CDATA[
+    Zahira’s gaze turns distant.<BR><BR>
+    “Ah, the Dreamvials. Brewed from the petals of nightshade orchids and distilled moonlight. They didn’t induce sleep—they allowed the Duchess to enter memory. To revisit those she lost.”<BR><BR>
+    “Some claimed I opened doors meant to stay shut. Perhaps they were right. But in her eyes, I saw peace I never knew.”<BR>
+    “Now, I search for desert analogs—plants that hold the same mnemonic magic. But gathering them means venturing where no map dares tread.”
+    ]]>
+  </NPCText>
+  <Option text="Let me help you find one of those plants." action="GiveItem:FactionDeliveryQuestScroll(Mnemonic Bloom,Qasaria,300)" condition="!HasItem:FactionDeliveryQuestScroll"/>
+  <Option text="You’re more than a potion-seller." next="motivation"/>
+</Dialogue>
+
+<Dialogue id="motivation">
+  <NPCText>
+    <![CDATA[
+    “I do not crave titles, nor vengeance. Only discovery. To brew what others fear to name. To heal what others call cursed.”<BR><BR>
+    “If I ever clear my name, it will be because someone like you brought me proof—or because I crafted something so vital, even my enemies must kneel.”<BR>
+    Her eyes sharpen.<BR>
+    “Would you help me, stranger? I do not ask for blind loyalty. Only that you walk beside me until the sands offer truth.”
+    ]]>
+  </NPCText>
+  <Option text="You have my aid. Let’s find that truth." action="AttachXml:XmlQuestTracker,BackstoryAlly" next="trustbond"/>
+  <Option text="I’ll return when I’m ready." action="Close"/>
+</Dialogue>
+
+<Dialogue id="trustbond">
+  <NPCText>
+    <![CDATA[
+    Zahira nods solemnly, drawing a symbol on your palm in alchemical ash.<BR><BR>
+    “So be it. I name you **Ash-Bound**, ally of the Veiled Alchemist. If others doubt me, show them this mark. It fades with betrayal.”<BR>
+    “Now, we begin.”
+    ]]>
+  </NPCText>
+  <Option text="Lead on, Zahira." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

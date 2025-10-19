@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="AyameGhostHunter">
+
+  <!-- ====== ROOT: GREETING ====== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+        <BASEFONT COLOR='#afe9e2'>
+        A wary woman in an icy blue kimono inspects you with a piercing stare. Her short spear gleams, adorned with ofuda talismans. Whispered prayers fall from her lips between each sentence.<BR><BR>
+        “Stay alert, traveler. This town is thick with spirits and worse. I am Ayame—yokai hunter, spear-wielder, and last line between Hinokami and corruption.”<BR><BR>
+        “Do you seek protection, wish to help cleanse these lands, or have you come to question my sanity as so many do?”
+        </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="What do you mean—spirits and corruption?" next="corruption"/>
+    <Option text="I want to help you hunt ghosts or yokai." next="help"/>
+    <Option text="Are you sure the council is really possessed?" next="council"/>
+    <Option text="Maybe you should rest, Ayame." next="doubt"/>
+	<Option text="Tell me more about yourself, Ayame." next="backstory_intro"/>
+    <Option text="Just passing by." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== LORE: CORRUPTION ====== -->
+  <Dialogue id="corruption">
+    <NPCText>
+      <![CDATA[
+        Ayame lowers her spear, voice taut.<BR>
+        “Minax’s shadow twists more than just men—it festers in the unseen. Many you meet here carry yokai in their eyes, or worse. Council, merchants, even the shrine maidens... I alone see the signs.”<BR><BR>
+        “Do you trust your senses, or would you rather test your courage and see for yourself?”
+      ]]>
+    </NPCText>
+    <Option text="Tell me how to see the possessed." next="reveal"/>
+    <Option text="Maybe it’s safer to leave this alone." action="Close"/>
+    <Option text="Give me a task—let me help cleanse Hinokami." next="help"/>
+  </Dialogue>
+
+  <!-- ====== LORE: REVEAL ====== -->
+  <Dialogue id="reveal">
+    <NPCText>
+      <![CDATA[
+        Ayame draws a slip of parchment covered in swirling kanji.<BR>
+        “These are ofuda—spirit wards. Press it to any Hinokami citizen and the truth will surface: a shimmer of malice, a flicker in the eyes, or a violent outburst if the yokai is strong.”<BR><BR>
+        “Are you brave enough to test someone? I will entrust you with a ward.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll do it. Give me an ofuda ward." 
+            action="GiveItem:SpiritWardOfuda" 
+            condition="!HasItem:SpiritWardOfuda"
+            next="wardGiven"/>
+    <Option text="What if the person really is possessed?" next="danger"/>
+    <Option text="I’m not ready for this." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== GIVING WARD ====== -->
+  <Dialogue id="wardGiven">
+    <NPCText>
+      <![CDATA[
+        Ayame slips a ward into your hand. It tingles with faint power.<BR>
+        “Choose wisely. If you use it on the wrong person, you may offend them. But the truly possessed will reveal themselves—and perhaps attack.<BR><BR>
+        Return to me if you find proof, and I’ll reward you with coin and a greater blessing.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I’ll begin at once." action="Close"/>
+    <Option text="What should I do if a yokai attacks me?" next="danger"/>
+  </Dialogue>
+
+  <!-- ====== QUEST: HELP HUNT ====== -->
+  <Dialogue id="help">
+    <NPCText>
+      <![CDATA[
+        Ayame’s expression softens for a moment.<BR>
+        “Good. Spirits gather wherever Minax’s shadow falls. Just last night, villagers heard moans by the old well and saw lantern-lights floating in the forest.”<BR><BR>
+        “I can offer two tasks. Will you confront a haunted villager, or investigate the well for restless ghosts?”
+      ]]>
+    </NPCText>
+    <Option text="Give me the ward—I’ll confront a villager." 
+            action="GiveItem:SpiritWardOfuda" 
+            condition="!HasItem:SpiritWardOfuda"
+            next="wardGiven"/>
+    <Option text="I’ll investigate the haunted well." 
+            action="GiveItem:YokaiWellScroll"
+            condition="!HasItem:YokaiWellScroll"
+            next="wellTask"/>
+    <Option text="Can I do both?" next="doubleTask"/>
+    <Option text="I need more time to prepare." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== WELL TASK ====== -->
+  <Dialogue id="wellTask">
+    <NPCText>
+      <![CDATA[
+        “Take this talisman. Toss it into the well at midnight, and any angry spirits will manifest. Defeat them, and bring me proof—a fragment of spectral cloth.”<BR>
+        “Do not go alone if you value your life.”
+      ]]>
+    </NPCText>
+    <Option text="I accept. I’ll return with proof." action="Close"/>
+    <Option text="Is there a reward for this task?" next="reward"/>
+  </Dialogue>
+
+  <!-- ====== ASK FOR BOTH TASKS ====== -->
+  <Dialogue id="doubleTask">
+    <NPCText>
+      <![CDATA[
+        Ayame nods. “Such courage is rare. Take both items, but beware—too much meddling with spirits marks you in their eyes.”<BR>
+        “Return with proof from both tasks, and I’ll grant you a special blessing.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Ayame. I’ll see this done."
+            action="GiveItem:SpiritWardOfuda"
+            condition="!HasItem:SpiritWardOfuda"
+            next="giveWellScroll"/>
+    <Option text="I’ll start with the well first." 
+            action="GiveItem:YokaiWellScroll"
+            condition="!HasItem:YokaiWellScroll"
+            next="wellTask"/>
+    <Option text="Actually, I’m not ready." action="Close"/>
+  </Dialogue>
+
+  <!-- Grant both items if needed -->
+  <Dialogue id="giveWellScroll">
+    <NPCText>
+      <![CDATA[
+        Ayame presses the talisman for the haunted well into your hand.<BR>
+        “Spirits see bravery as both an offering and a challenge. Walk carefully, friend.” 
+      ]]>
+    </NPCText>
+    <Option text="Understood." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== DANGER / ADVICE ====== -->
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+        “If a yokai attacks, defend yourself! Use iron, prayer, or run for the shrine. Never show fear—they feed on it.”<BR>
+        “Should you survive, bring me a token of their defeat: a talon, a torn mask, or a wisp of ghostly hair.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I’ll remember that." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== COUNCIL BRANCH ====== -->
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+        Ayame’s eyes flash with suspicion.<BR>
+        “They walk and speak as men, but sometimes their shadows twist, and their words ring hollow. If you trust them, you risk Hinokami’s soul.”<BR><BR>
+        “Bring me proof—anything strange from a council member—and I’ll trust you more than anyone else here.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll investigate the council." action="Close"/>
+    <Option text="Maybe you are right to be cautious." next="greeting"/>
+    <Option text="You sound obsessed, Ayame." next="doubt"/>
+  </Dialogue>
+
+  <!-- ====== DOUBT/INSANITY BRANCH ====== -->
+  <Dialogue id="doubt">
+    <NPCText>
+      <![CDATA[
+        Ayame snorts. “Madness and clarity are sisters—one steps from the other with every new moon. I hope you never learn which side you walk.”<BR>
+        “Still, only a fool ignores what lurks in the mists. If you change your mind, my offer stands.”
+      ]]>
+    </NPCText>
+    <Option text="I will keep my eyes open." action="Close"/>
+    <Option text="Actually, tell me about your work." next="greeting"/>
+  </Dialogue>
+
+  <!-- ====== REWARD ====== -->
+  <Dialogue id="reward">
+    <NPCText>
+      <![CDATA[
+        “Bring me spectral cloth, or any proof of a banished yokai, and I’ll reward you: coin, and a blessing of protection for a day.”<BR>
+        “Few in Hinokami appreciate my work, but you—perhaps you see the true battle.”
+      ]]>
+    </NPCText>
+    <Option text="I won’t let you down." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== BACKSTORY INTRO ====== -->
+  <Dialogue id="backstory_intro">
+    <NPCText>
+      <![CDATA[
+        Ayame exhales sharply, her grip on the spear relaxing just slightly.<BR>
+        “No one ever asks that. Not without suspicion. But maybe… you’re different.”<BR><BR>
+        “I was not always a hunter. I was once a shrine maiden of the Amateru Path. I lived among blossoms and prayers, not blades and banshees.”
+      ]]>
+    </NPCText>
+    <Option text="What changed?" next="backstory_change"/>
+    <Option text="So you were a spiritual healer?" next="backstory_role"/>
+    <Option text="I didn't expect that from a warrior." next="backstory_disarm"/>
+    <Option text="You seem more spirit than flesh now..." next="backstory_poetic"/>
+  </Dialogue>
+
+  <!-- ====== BACKSTORY - CATALYST ====== -->
+  <Dialogue id="backstory_change">
+    <NPCText>
+      <![CDATA[
+        “My village fell. Not to armies or fire—but to whispers.”<BR>
+        “The elder smiled sweetly one day and drank ink the next. Children giggled in languages they never learned. And the night sky bent the wrong way.”<BR><BR>
+        “Only I could see the yokai feeding. I fled, spear in hand, voice hoarse from prayers that no longer worked.”<BR>
+        “Since then... I’ve hunted the unseen.”
+      ]]>
+    </NPCText>
+    <Option text="You survived where others couldn’t." next="backstory_respect"/>
+    <Option text="That’s a heavy burden." next="backstory_grief"/>
+    <Option text="Is that when you came to Hinokami?" next="backstory_hinokami"/>
+  </Dialogue>
+
+  <!-- ====== BACKSTORY - ROLE ====== -->
+  <Dialogue id="backstory_role">
+    <NPCText>
+      <![CDATA[
+        “Yes. I once painted sutras and chanted beneath moonlight.”<BR>
+        “The spirits whispered secrets then too—but gentler ones. I thought I understood the balance. I was wrong.”<BR><BR>
+        “Now I write my prayers in blood. And sometimes the spirits answer.”
+      ]]>
+    </NPCText>
+    <Option text="Have the spirits ever helped you?" next="backstory_spirithelp"/>
+    <Option text="And you still believe?" next="backstory_faith"/>
+  </Dialogue>
+
+  <!-- ====== BACKSTORY - PLAYER SUPPORT ====== -->
+  <Dialogue id="backstory_respect">
+    <NPCText>
+      <![CDATA[
+        Ayame meets your eyes, surprised.<BR>
+        “Few call it courage. Most just say madness.”<BR>
+        “Here—take this. A minor ward. May it shield you when your mind starts to crack like mine.” 
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I’ll carry your strength with me." 
+            action="GiveItem:MinorSpiritWard"
+            condition="!HasItem:MinorSpiritWard"
+            next="close_backstory"/>
+    <Option text="You are more stable than you think." 
+            action="Karma:+500" next="close_backstory"/>
+  </Dialogue>
+
+  <!-- ====== BACKSTORY - GRIEF ====== -->
+  <Dialogue id="backstory_grief">
+    <NPCText>
+      <![CDATA[
+        “Some nights, I dream of their faces. They stare... then split open.”<BR>
+        “Grief is a river with no mouth. I’ve just learned to breathe underwater.”<BR>
+        “But I thank you for seeing the weight. Most do not.”
+      ]]>
+    </NPCText>
+    <Option text="Your strength humbles me." action="Karma:+250" next="close_backstory"/>
+    <Option text="I will remember your story." next="close_backstory"/>
+  </Dialogue>
+
+  <!-- ====== BACKSTORY - ARRIVAL AT HINOKAMI ====== -->
+  <Dialogue id="backstory_hinokami">
+    <NPCText>
+      <![CDATA[
+        “I wandered for years. Monasteries turned me away. Towns feared me. Pirates tried to hire me.”<BR>
+        “Only Hinokami’s monks offered shelter—though they keep their distance. They pray. I pierce.”<BR>
+        “Maybe balance still exists.”
+      ]]>
+    </NPCText>
+    <Option text="You were meant to be here." action="Fame:+250" next="close_backstory"/>
+    <Option text="You keep Hinokami safe in your own way." next="close_backstory"/>
+  </Dialogue>
+
+  <!-- ====== BACKSTORY - SPIRITS HELPING ====== -->
+  <Dialogue id="backstory_spirithelp">
+    <NPCText>
+      <![CDATA[
+        “A fox once warned me of a poisoned blade.”<BR>
+        “A whisper led me to a buried charm that saved a child from drowning.”<BR>
+        “They are not all evil... but they are all dangerous.”<BR>
+        “Some ask for favors. Others only hunger. I answer the ones who bleed.”
+      ]]>
+    </NPCText>
+    <Option text="Would you teach me to listen to spirits?" 
+            condition="SkillAtLeast:SpiritSpeak,60"
+            action="AddSkill:SpiritSpeak,10,600"
+            next="teach_spirits"/>
+    <Option text="You walk between worlds, Ayame." next="close_backstory"/>
+  </Dialogue>
+
+  <!-- ====== BACKSTORY - FAITH ====== -->
+  <Dialogue id="backstory_faith">
+    <NPCText>
+      <![CDATA[
+        Ayame pauses.<BR>
+        “I do. Because without belief, all I’ve done means nothing.”<BR>
+        “I believe not in gods, but in the hope that one blade, one prayer, one act... still matters.”<BR>
+        “Even if no one sees it but the dead.”
+      ]]>
+    </NPCText>
+    <Option text="You give meaning to your fight." action="Karma:+500" next="close_backstory"/>
+    <Option text="I’ll carry that belief too." next="close_backstory"/>
+  </Dialogue>
+
+  <!-- ====== BACKSTORY - POETIC RESPONSE ====== -->
+  <Dialogue id="backstory_poetic">
+    <NPCText>
+      <![CDATA[
+        “That’s the kindest curse I’ve heard.”<BR>
+        “Some say I’m half-yokai now. Others whisper I never bled when cut. I know only this: my path chose me. I walk it until it ends.”<BR><BR>
+        “But perhaps you were meant to walk beside it for a time.”
+      ]]>
+    </NPCText>
+    <Option text="Our paths cross for a reason." action="Karma:+250" next="close_backstory"/>
+    <Option text="I’ll walk with you—for now." next="close_backstory"/>
+  </Dialogue>
+
+  <!-- ====== TEACHING SPIRIT LISTENING ====== -->
+  <Dialogue id="teach_spirits">
+    <NPCText>
+      <![CDATA[
+        Ayame presses a charm into your hand.<BR>
+        “This charm once guided me to safety. Meditate with it under moonlight, and your hearing may shift. Spirits whisper softly at first. Listen carefully.”<BR><BR>
+        *(You gain a temporary boost to your Spirit Speak skill.)*
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I will use it wisely." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== CLOSE BACKSTORY ====== -->
+  <Dialogue id="close_backstory">
+    <NPCText>
+      <![CDATA[
+        Ayame returns to sharpening her spear, but her eyes linger on you a moment longer.<BR>
+        “Be careful where your curiosity takes you. The past has long shadows.”<BR><BR>
+        *(You feel something old and sorrowful stir behind her gaze.)*
+      ]]>
+    </NPCText>
+    <Option text="I’ll tread carefully, hunter." action="Close"/>
+    <Option text="I’ll be back soon." action="Close"/>
+  </Dialogue>
+
+
+</DialogueFile>

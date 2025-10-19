@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="MiraKess_CloakOfTheSpire">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#4da5a6'>
+      The shadows in the Scholar’s District ripple, resolving into a slender woman clad in iridescent blues and inky black. Her hooded gaze flickers with suspicion.<BR><BR>
+      “You saw nothing, yes? Good. You must be new, or very bold, to approach the Cloak of the Spire unannounced.<BR>
+      Mira Kess, at your service—or perhaps not. My eyes see further than most, and my memory is long. Tell me: do you seek coin, secrets, or perhaps a cause? All three carry risk in Aerilon, especially lately.”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I heard you deal in…delicate errands." next="taskIntro"/>
+    <Option text="Are you always this suspicious?" next="paranoia"/>
+    <Option text="Who are you, Mira Kess?" next="backstory"/>
+    <Option text="What does the Cloak of the Spire do?" next="cloakRole"/>
+	<Option text="Tell me something real about yourself." next="realTalk"/>
+    <Option text="I’m just passing by." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Backstory & Paranoia -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      She studies you, lips twisting in a half-smile.<BR><BR>
+      “A simple question with tangled answers. I was born in Minoc, sharpened in Magincia’s markets, forged in Wind’s shadows. Spymaster for Selara Vael—though she’s clever enough to doubt me, and wise enough to use my talents anyway.<BR>
+      Corvus Deyne and I have been rivals since he tried to blackmail me with a fake journal—imagine, the gall. Eryndil thinks I keep too many secrets, but he catalogues skeletons of his own.<BR>
+      I serve Aerilon… and myself. Sometimes in that order.”]]>
+    </NPCText>
+    <Option text="Sounds dangerous. How do you survive?" next="paranoia"/>
+    <Option text="Tell me of your rivals." next="rivals"/>
+    <Option text="What do you need done?" next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="paranoia">
+    <NPCText>
+      <![CDATA[
+      Mira laughs quietly, a sound like shattering glass.<BR><BR>
+      “Paranoia is a form of loyalty, if you wear it correctly. The Azure Conclave breeds plots as rabbits breed kits. One day you dine with the archmages, the next your shadow is found on the Low Platforms—without you attached.<BR>
+      Trust nothing, question everything. That’s why I’m alive, and why Selara keeps me close… even if she’s reading this conversation through one of her pet scryers.”]]>
+    </NPCText>
+    <Option text="You sound prepared for betrayal." next="rivals"/>
+    <Option text="I’m here for work, not wordplay." next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="rivals">
+    <NPCText>
+      <![CDATA[
+      Mira leans closer, voice a velvet whisper.<BR><BR>
+      “Corvus Deyne wants war, and he’s not above sending his own ‘agents’ to trip me up. His spies are as subtle as flaming golems. If you see a tall, brooding mage in blood-red, count your coin twice.<BR>
+      Selara Vael is more dangerous still—her mind is a labyrinth, and I walk its corridors. Eryndil? He’s the only one who listens, and that makes him both a friend…and a liability.<BR>
+      But enough. I have need of someone discrete. Can you manage that?”]]>
+    </NPCText>
+    <Option text="Discretion is my specialty." next="taskIntro"/>
+    <Option text="You seem… almost lonely." next="lonely"/>
+  </Dialogue>
+
+  <Dialogue id="lonely">
+    <NPCText>
+      <![CDATA[
+      Mira’s expression flickers—a hint of warmth, quickly masked.<BR><BR>
+      “Lonely? Perhaps. The air up here is thin, and trust is thinner. But a spy who wants friends ends up with enemies in every shadow. Aerilon needs sentinels, not dreamers.<BR>
+      Still… I remember what it meant to laugh, once.”]]>
+    </NPCText>
+    <Option text="Let’s talk about business, then." next="taskIntro"/>
+    <Option text="I’d rather have an enemy I know than a friend I can’t trust." next="enemyFriend"/>
+  </Dialogue>
+
+  <Dialogue id="enemyFriend">
+    <NPCText>
+      <![CDATA[
+      She chuckles, low and genuine.<BR><BR>
+      “You’ll fit in here. Now, let’s get to work.”]]>
+    </NPCText>
+    <Option text="Ready for the assignment." next="taskIntro"/>
+  </Dialogue>
+
+  <!-- Role Explanation -->
+  <Dialogue id="cloakRole">
+    <NPCText>
+      <![CDATA[
+      “The Cloak of the Spire sees what the Conclave does not, and says what the archmages dare not. I keep Aerilon’s secrets hidden—and sometimes, hidden Aerilon’s secrets.<BR>
+      I trust no one. That’s my curse and my gift. If you want to help the city, prove you can keep your mouth shut and your feet quiet.”]]>
+    </NPCText>
+    <Option text="I’d like to prove myself." next="taskIntro"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Mira shrugs, fading into the background.<BR><BR>
+      “You’ll forgive my lack of trust. In Aerilon, idlers become informants or suspects. Should you desire purpose—or a little danger—return to the shadows and seek me.”]]>
+    </NPCText>
+    <Option text="On second thought, do you need help?" next="taskIntro"/>
+    <Option text="No thanks, I like breathing easy." action="Close"/>
+  </Dialogue>
+
+  <!-- QUEST OFFER: "Sleeper Cell Delivery" -->
+  <Dialogue id="taskIntro">
+    <NPCText>
+      <![CDATA[
+      Mira produces a slim, rune-marked scroll from the folds of her cloak, her voice dropping to a conspiratorial hush.<BR><BR>
+      “Here’s the truth: Minax’s poison is seeping into Aerilon, thread by thread. I have word of a sleeper cell—someone in our midst with the 'Sewer Rat Aficionado' trait. You’d never suspect them…unless you’ve lived in the shadows as long as I have.<BR><BR>
+      I need a trusted outsider to deliver a sealed message to this contact, outside the city. My regular agents are too well known, and I suspect one has already turned.<BR><BR>
+      Deliver this to the recipient. Don’t open it. Don’t let anyone else touch it. If you succeed, I will ensure your name is spoken favorably in Conclave halls… and, perhaps, keep your name off less savory lists.<BR><BR>
+      Do you accept this, or do you prefer easier dangers?”]]>
+    </NPCText>
+    <Option text="I’ll deliver your message—no questions asked."
+            action="GiveItem:FactionDeliveryQuestScroll(Sewer Rat Aficionado,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="What’s so important about the 'Sewer Rat Aficionado'?" next="sewerRat"/>
+    <Option text="Will this anger Minax’s agents?" next="minax"/>
+    <Option text="What happens if I fail?" next="fail"/>
+    <Option text="This sounds too dangerous for me." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Mira hands you the sealed scroll, her gloved touch lingering as if weighing your soul.<BR><BR>
+      “Deliver it quietly. My contact will know you by the scent of this wax—pine and stormroot, the mark of Aerilon’s true cloak. Bring back proof of delivery, and the Conclave will owe you a favor. Fail… and you’ll wish you’d never seen my face.”]]>
+    </NPCText>
+    <Option text="I won’t disappoint you, Mira." action="Close"/>
+  </Dialogue>
+
+  <!-- Sewer Rat Lore -->
+  <Dialogue id="sewerRat">
+    <NPCText>
+      <![CDATA[
+      Mira’s lips quirk in a rare grin.<BR><BR>
+      “Every city’s underbelly has its masters. Our 'Sewer Rat Aficionado' isn’t just a name—it’s a legacy. Only someone who knows the sewers of Britannia, from Britain to Minax’s old lairs, can move undetected by surface spies.<BR>
+      The Conclave can’t risk public dealings with such folk, but I can. Deliver this, and you’ll gain a friend among the unseen.”]]>
+    </NPCText>
+    <Option text="I understand. I’ll take the scroll."
+            action="GiveItem:FactionDeliveryQuestScroll(Sewer Rat Aficionado,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I’ll pass. Rats make me nervous." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax Lore -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      She scowls, scanning the shadows.<BR><BR>
+      “Minax’s followers hate losing pawns, even minor ones. My hope is to subvert their network with this delivery. If you’re watched, you may face trouble—spies, saboteurs, or worse.<BR>
+      But if you succeed, you’ll tip the scales for Aerilon, if only a little.”]]>
+    </NPCText>
+    <Option text="I’m not afraid. I’ll do it."
+            action="GiveItem:FactionDeliveryQuestScroll(Sewer Rat Aficionado,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Danger’s not for me. Good luck." action="Close"/>
+  </Dialogue>
+
+  <!-- Failure Consequences -->
+  <Dialogue id="fail">
+    <NPCText>
+      <![CDATA[
+      Mira’s tone grows icy.<BR><BR>
+      “If you fail, word will spread—perhaps to Corvus Deyne, or worse, to Minax herself. I protect those who succeed, but I do not mourn those who fall.<BR>
+      Deliver the scroll, keep your secrets, and Aerilon may yet embrace you. Or walk away, and know the shadows never forget.”]]>
+    </NPCText>
+    <Option text="I’ll take the risk. Give me the scroll."
+            action="GiveItem:FactionDeliveryQuestScroll(Sewer Rat Aficionado,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Not today." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="realTalk">
+  <NPCText>
+    <![CDATA[
+    Mira tilts her head. A shadow of amusement dances across her lips.<BR><BR>
+    “Real? That’s a dangerous request in Aerilon. Real things bleed, vanish, or get used. Still… perhaps you’ll indulge me.”<BR>
+    She produces a small obsidian token and rolls it across her knuckles.<BR><BR>
+    “Ask, and I might answer. But beware: answers cost.”
+    ]]>
+  </NPCText>
+  <Option text="Where were you trained?" next="training"/>
+  <Option text="Have you ever truly loved someone?" next="loved"/>
+  <Option text="What’s your greatest fear?" next="fear"/>
+  <Option text="Ever think of leaving this place?" next="leaving"/>
+  <Option text="Show me something personal." next="showItem" condition="RandomChance:33"/>
+  <Option text="On second thought, forget it." action="Close"/>
+</Dialogue>
+
+<Dialogue id="training">
+  <NPCText>
+    <![CDATA[
+    Mira traces a line on her cloak.<BR><BR>
+    “Wind taught me structure. Magincia taught me masks. The streets of Vesper taught me to steal, lie, and vanish.”<BR>
+    She lifts her hood slightly.<BR>
+    “But it was here in Aerilon I learned to fear silence. Because silence means someone's watching.”<BR>
+    <BASEFONT COLOR='#aaaaaa'>(You feel her eyes watching your reaction.)</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="And who taught you trust?" next="trust"/>
+  <Option text="Sounds like you’re always running." next="running"/>
+</Dialogue>
+
+<Dialogue id="trust">
+  <NPCText>
+    <![CDATA[
+    “Trust? That’s a luxury for people with short lifespans.”<BR>
+    Mira gestures to her belt, where a dagger glints.<BR>
+    “This was a gift from my sister. She gave it to me the day she sold me to Wind's recruiters. I still trust her… to act in her own interest.”<BR><BR>
+    <BASEFONT COLOR='#ff9f9f'><i>You gain insight into Mira's distrustful nature.</i></BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="What became of your sister?" next="sister"/>
+  <Option text="Thank you for sharing that." action="SendMessage:She watches you a little more softly now."/>
+</Dialogue>
+
+<Dialogue id="sister">
+  <NPCText>
+    <![CDATA[
+    Mira’s face goes blank.<BR><BR>
+    “She lives. Somewhere. Selling people, I imagine. I still send her coded letters—every year on the same date. She’s never answered.”<BR>
+    A pause. “But I still write. I suppose that makes me weaker than I let on.”
+    ]]>
+  </NPCText>
+  <Option text="Everyone needs something to hold onto." next="soften"/>
+  <Option text="Weak? No. Human." next="soften"/>
+</Dialogue>
+
+<Dialogue id="soften">
+  <NPCText>
+    <![CDATA[
+    Mira looks at you for a long moment.<BR><BR>
+    “If you speak the truth… then maybe I’ll speak yours someday.”<BR>
+    <BASEFONT COLOR='#ccffcc'><i>You feel something shift in her perception of you.</i></BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Let’s return to work." next="taskIntro"/>
+  <Option text="Tell me something else about you." next="realTalk"/>
+</Dialogue>
+
+<Dialogue id="running">
+  <NPCText>
+    <![CDATA[
+    “Always. From lies, lovers, agents, past selves. There’s no stillness in the spire—not for someone like me.”<BR><BR>
+    She looks down. “But… sometimes I stop. Just long enough to listen to the wind.”<BR>
+    <BASEFONT COLOR='#ccccff'><i>She seems lost in thought.</i></BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="That’s… beautiful, Mira." next="soften"/>
+  <Option text="Sounds exhausting." next="soften"/>
+</Dialogue>
+
+<Dialogue id="loved">
+  <NPCText>
+    <![CDATA[
+    Mira arches an eyebrow. “Intimacy. Bold question.”<BR><BR>
+    She steps closer, lowering her voice.<BR>
+    “Yes. Once. A shadowdancer from the Daggerfall Isles. He wore six names and smiled like a broken promise. I buried him beneath a ruined chapel, with a rune carved into his ring.”<BR>
+    She smiles sadly. “I still wear it. On my ankle. Beneath the boot.”<BR>
+    <BASEFONT COLOR='#cfa7ff'><i>You gain empathy for Mira’s complexity.</i></BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Thank you for trusting me with that." next="soften"/>
+  <Option text="Do you still mourn him?" next="mourn"/>
+</Dialogue>
+
+<Dialogue id="mourn">
+  <NPCText>
+    <![CDATA[
+    Mira’s eyes harden.<BR><BR>
+    “No. I mourn who I was around him. The naive fool who believed she could love and live in shadows.”<BR>
+    A beat. “But sometimes I drink fig wine and sit where he used to sleep. And for one hour, I forget why he died.”
+    ]]>
+  </NPCText>
+  <Option text="Let’s change the subject." next="realTalk"/>
+  <Option text="You carry a heavy burden." next="soften"/>
+</Dialogue>
+
+<Dialogue id="fear">
+  <NPCText>
+    <![CDATA[
+    “Oblivion.”<BR><BR>
+    She doesn’t flinch.<BR>
+    “Not death. Not pain. Just… being forgotten. That all the moves I made were someone else’s game. That I mattered only in someone else’s footnote.”<BR><BR>
+    Mira chuckles. “That’s why I archive my own secrets. Even if the world forgets me—I won’t.”
+    ]]>
+  </NPCText>
+  <Option text="I won’t forget you." action="SendMessage:You feel Mira watching you with quiet intensity."/>
+  <Option text="Everyone deserves to be remembered." next="soften"/>
+</Dialogue>
+
+<Dialogue id="leaving">
+  <NPCText>
+    <![CDATA[
+    “Every damn day.”<BR><BR>
+    Mira looks up at the sky.<BR>
+    “There’s a ship in the Sky Docks. Old, junky. No name. I’ve paid the captain thrice to wait. He never does. But one day, I’ll be on it before dawn—and I won’t tell anyone.”<BR><BR>
+    “Even spies need dreams. Mine just smell of rust and salted wind.”
+    ]]>
+  </NPCText>
+  <Option text="Maybe I’ll meet you out there." action="SendMessage:She smiles… almost wistfully."/>
+  <Option text="Aerilon needs you more than any skyship." next="soften"/>
+</Dialogue>
+
+<Dialogue id="showItem">
+  <NPCText>
+    <![CDATA[
+    Mira hesitates, then draws a small glass pendant from beneath her sash. Inside, a sliver of crystal flickers faintly.<BR><BR>
+    “My mother’s soul fragment. Or so I was told. She died when I was six. I carry this as a ward—and a warning.”<BR><BR>
+    “If it ever turns black… I know I’ve crossed too far into the dark.”
+    ]]>
+  </NPCText>
+  <Option text="That’s… haunting. But beautiful." next="soften"/>
+  <Option text="May it stay bright, always." next="soften"/>
+</Dialogue>
+
+
+</DialogueFile>

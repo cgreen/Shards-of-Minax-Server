@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="AqilTheSeer">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ecd48e'>
+      Before you stands an old man, his eyes covered by an embroidered strip of indigo silk. His flowing shroud and golden robe glimmer in the desert sun. He leans on a bone-white crook carved with ancient runes.<BR><BR>
+      He turns, as if seeing you with other senses.<BR><BR>
+      <I>“The shifting winds whisper new names… Another seeker approaches, guided by fate or folly. I am Aqil, once scribe of Qasaria’s Sun Temple—now, a blind watcher of what stirs beneath the sands.<BR>
+      Speak, and perhaps the Ancients will let me answer. Or perhaps, as ever, you will find only riddles.”</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek wisdom, Seer." next="wisdom"/>
+    <Option text="Tell me of yourself, Aqil." next="backstory"/>
+    <Option text="Do your visions show Lord British’s fate?" next="lordBritish"/>
+    <Option text="What do you know of the Ancients?" next="ancients"/>
+    <Option text="Can you foretell Qasaria’s future?" next="qasariaFuture"/>
+    <Option text="I heard you speak of a hidden relic..." next="questIntro"/>
+	<Option text="I wish to know more about your past." next="aqilPast"/>
+    <Option text="Farewell, Seer." action="Close"/>
+  </Dialogue>
+
+  <!-- Who is Aqil? -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ecd48e'>
+      Aqil smiles, lines etched deep by years of desert wind.<BR>
+      <I>“In youth, I was a scribe of the Sun Temple, chronicler to the Council of Jewels—before sight was stolen by a shadow in the crypts.<BR>
+      Safiya al-Sapphire once trusted my numbers; Yasmin al-Topaz envied my memory; even Sultan Rafiq sometimes sought my counsel.<BR>
+      Now, I listen to voices others do not hear, and see only what the Ancients permit. Beware, for prophecy is a cruel mirror; it shows not comfort, but only necessity.”</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You know the Council well. Are they in danger?" next="council"/>
+    <Option text="How did you lose your sight?" next="blinded"/>
+    <Option text="What wisdom can you share?" next="wisdom"/>
+    <Option text="Let us speak of something else." next="greeting"/>
+  </Dialogue>
+
+  <!-- Council Gossip -->
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ecd48e'>
+      <I>“Each gem on the council's circlet desires to outshine the others. Rafiq broods, Safiya schemes, Karim whispers, Yasmin hungers for forbidden truths, and Omar delights in chaos.<BR>
+      Minax’s shadow lies on every ambition. Trust not the coin alone—nor the promise of swords. Only those who listen to the desert’s silence will hear the warning before it comes.”</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Do your visions warn of Minax?" next="minax"/>
+    <Option text="What prophecy do you offer for me?" next="questIntro"/>
+    <Option text="Let us change the subject." next="greeting"/>
+  </Dialogue>
+
+  <!-- How Aqil Was Blinded -->
+  <Dialogue id="blinded">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ecd48e'>
+      Aqil’s hand brushes his silk blindfold.<BR>
+      <I>“Some say knowledge is power. In the crypts below Qasaria, I sought the glyphs of the Ancients—alone. Shadows gathered, and I saw what mortals should not.<BR>
+      The darkness took my sight, but left me new eyes—visions unbidden, sometimes unwanted. It is a fair trade, perhaps, for wisdom without comfort.”</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="What did you see?" next="ancients"/>
+    <Option text="Thank you for sharing, Aqil." next="greeting"/>
+  </Dialogue>
+
+  <!-- Requesting Wisdom -->
+  <Dialogue id="wisdom">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ecd48e'>
+      <I>“You seek wisdom? The sand remembers what stone forgets.<BR>
+      All things turn in cycles—desert, city, even the Gem of Immortality. Beware those who promise the end of suffering, for they only trade one shadow for another.”</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Do you speak of Minax?" next="minax"/>
+    <Option text="What prophecy have you for me?" next="questIntro"/>
+    <Option text="Tell me of the Ancients." next="ancients"/>
+    <Option text="Enough riddles, I have other questions." next="greeting"/>
+  </Dialogue>
+
+  <!-- Ancients Lore -->
+  <Dialogue id="ancients">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ecd48e'>
+      <I>“The Ancients ruled when the world was young, when the Gem of Immortality was whole.<BR>
+      Their magic still slumbers beneath our feet, waiting for a true seeker to wake it—yet beware, for not all relics wish to be found.<BR>
+      If you seek their power, bring both wisdom and humility—or the sand will reclaim your bones.”</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Is there truly a relic hidden below Qasaria?" next="questIntro"/>
+    <Option text="Does Minax seek the Ancients’ magic?" next="minax"/>
+    <Option text="I wish to know more of Qasaria." next="qasariaFuture"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Lord British Prophecy -->
+  <Dialogue id="lordBritish">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ecd48e'>
+      Aqil tilts his head, listening to distant winds.<BR>
+      <I>“Lord British walks the crossroads between life and legend. I see him among stars, and in the darkest mirror of Minax’s dreams.<BR>
+      His return is possible—but not certain. For now, Britannia must survive without its old sun. Some will rise in his absence, others will fall.<BR>
+      Seek the shard that holds his memory. In it, fate’s door may open.”</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Where is this shard?" next="questIntro"/>
+    <Option text="Do others seek it too?" next="minax"/>
+    <Option text="Thank you, Seer." next="greeting"/>
+  </Dialogue>
+
+  <!-- Qasaria's Fate -->
+  <Dialogue id="qasariaFuture">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ecd48e'>
+      <I>“Qasaria shines now, gold upon sand, but pride blinds as surely as silk.<BR>
+      If the Council does not unite, Minax’s shadow will feast upon our splendor.<BR>
+      If you would aid Qasaria, seek out what sleeps beneath the Bazaar. The Ancients’ heart may yet save—or doom—us all.”</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You mean a relic?" next="questIntro"/>
+    <Option text="Tell me more of the Council’s divisions." next="council"/>
+    <Option text="Your words trouble me, Seer. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax Prophecy -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ecd48e'>
+      Aqil’s fingers grip his crook.<BR>
+      <I>“Minax weaves a net of greed and fear. She bargains with Safiya, tempts Omar with violence, and whispers secrets to Karim.<BR>
+      Only Yasmin resists, guarding the old ways—but her power wanes. If you cross Minax’s path, do not trust the obvious foe. The knife is always hidden in the second hand.”</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="If I aid Yasmin, could I stop Minax?" next="questIntro"/>
+    <Option text="What of Safiya’s bargains?" next="council"/>
+    <Option text="I wish to serve Qasaria’s true cause." next="questIntro"/>
+    <Option text="Let us speak of other things." next="greeting"/>
+  </Dialogue>
+
+  <!-- Quest Introduction -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ecd48e'>
+      Aqil’s voice drops, almost a whisper.<BR>
+      <I>“The Ancients left tokens beneath Qasaria—one is close to waking. I have seen it: a <B>Sand-Shard of Memory</B>, veiled in dream, lost in the Bazaar’s catacombs.<BR>
+      Many seek it: Minax’s agents, the Council’s spies, even Yasmin’s own apprentices. If you wish to test your fate, find this shard and bring it to the Sun Temple.<BR>
+      Beware—shadows gather where relics lie. Take this scroll; it will mark the true path, but only if you walk with purpose.”</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will seek the Sand-Shard of Memory."
+            action="GiveItem:FactionDeliveryQuestScroll(Sun Temple, Qasaria, 500)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="questAccepted"/>
+    <Option text="What dangers await below the Bazaar?" next="questDangers"/>
+    <Option text="What if I choose not to meddle with fate?" next="greeting"/>
+  </Dialogue>
+
+  <!-- Quest Accepted -->
+  <Dialogue id="questAccepted">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ecd48e'>
+      Aqil lifts his crook, tracing a circle in the air.<BR>
+      <I>“So fate turns. Take the scroll—its ink is mixed with ancient dust; follow where it guides, and beware Minax’s laughter in the dark.<BR>
+      Return to the Sun Temple when you hold the Sand-Shard. The path ahead may split—will you serve the Council, Yasmin, or a greater cause? Destiny is a web: choose your strand with care.”</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Seer. I will not fail." action="Close"/>
+    <Option text="Can I aid Yasmin further?" next="yasmin"/>
+    <Option text="If I wished to betray the Council...?" next="betray"/>
+  </Dialogue>
+
+  <!-- Quest Dangers -->
+  <Dialogue id="questDangers">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ecd48e'>
+      <I>“Catacombs under Qasaria hold more than bones: smugglers, undead, whispers that twist the mind.<BR>
+      Watch for Zahid’s assassins—Shadowmaster of the Undermarket would claim the shard for his own.<BR>
+      If the shadows touch you, return to the surface—lest your soul be lost beneath the sand.”</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I am prepared. Give me the quest scroll."
+            action="GiveItem:FactionDeliveryQuestScroll(Sun Temple, Qasaria, 500)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="questAccepted"/>
+    <Option text="Perhaps I am not ready." next="greeting"/>
+  </Dialogue>
+
+  <!-- Serve Yasmin -->
+  <Dialogue id="yasmin">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ecd48e'>
+      <I>“Yasmin al-Topaz stands between Minax and Qasaria’s ruin. If you trust her, seek her counsel with the shard. Yet remember, even Yasmin is not free from the Ancients’ games.<BR>
+      She may ask you to sacrifice what you most value, for wisdom always demands a price.”</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will seek her counsel." action="Close"/>
+    <Option text="I must consider my path carefully." next="greeting"/>
+  </Dialogue>
+
+  <!-- Betrayal Path -->
+  <Dialogue id="betray">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ecd48e'>
+      Aqil’s lips curl in a thin smile.<BR>
+      <I>“Fate is patient; betrayal breeds consequences. Deliver the shard to Safiya or Zahid, and you may profit—for a season. But every bargain with shadow is a debt that must be paid.”</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Thank you for your honesty." action="Close"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="aqilPast">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#ecd48e'>
+    Aqil leans slightly on his crook, the desert wind curling his robe like flame.<BR>
+    <I>“Few ask about the road that made me. Fewer still walk it beside me.<BR>
+    Sit if you have time. Let me remember what the sands have buried.”</I>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Tell me of your youth in Qasaria." next="aqilYouth"/>
+  <Option text="How did you become blind?" next="aqilBlindness"/>
+  <Option text="Were you ever in love, Seer?" next="aqilLove"/>
+  <Option text="What was your role in the Council’s archives?" next="aqilScholar"/>
+  <Option text="Another time, perhaps." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="aqilYouth">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#ecd48e'>
+    <I>“I was born beneath the dome of the Amber Gate, third son of a spice merchant. My mind wandered faster than my father’s camels.<BR>
+    The High Priestess Samira saw my hunger for knowledge and took me as her pupil. I copied texts until my fingers bled ink, and learned to listen to the wind between words.”</I>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="You studied under Samira? What was she like?" next="samira"/>
+  <Option text="That sounds like a lonely path." next="aqilSolitude"/>
+  <Option text="Let’s return to your present." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="samira">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#ecd48e'>
+    Aqil smiles faintly.<BR>
+    <I>“Samira was sharp as desert glass, and twice as dangerous. She taught that truth is sacred—but never safe.<BR>
+    Even now, she guards the Obelisk of Eternity. When I speak of prophecy, I wonder if she hears, and nods... or weeps.”</I>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="She must have cared for you deeply." next="aqilEmotion"/>
+  <Option text="What does the Obelisk truly do?" next="ancients"/>
+</Dialogue>
+
+<Dialogue id="aqilSolitude">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#ecd48e'>
+    <I>“It was. But in loneliness I heard the deeper voices.<BR>
+    Scrolls became my siblings. The glyphs of the Ancients—my language. And when I spoke them aloud... the wind would change.<BR>
+    I think I was always meant to be a listener. Even before I lost my eyes.”</I>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="What did you hear in those scrolls?" next="ancients"/>
+  <Option text="You are more than a listener, Seer." action="SendMessage:Your words grant him comfort." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="aqilBlindness">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#ecd48e'>
+    <I>“It was beneath the Bazaar, far below where light dies. I found a sealed reliquary—a relic not meant to be opened.<BR>
+    When I read its sigils, I saw the moment of my death a thousand times over. My eyes could not contain the truth. They burned… and something else looked back at me.<BR>
+    Yet I lived. And now I see further than I ever did.”</I>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Did it speak to you?" next="relicWhispers"/>
+  <Option text="Was it a trap set by Minax?" next="minax"/>
+  <Option text="That explains your warnings." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="relicWhispers">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#ecd48e'>
+    Aqil’s voice drops low.<BR>
+    <I>“It whispered of the Shardborne, of a world that once was whole. I saw Lord British cast into a prism of dreams… and Minax standing alone, touching the Gem with bloody hands.<BR>
+    The relic still whispers. Perhaps it waits for you.”</I>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Where is the relic now?" next="questIntro"/>
+  <Option text="That vision chills me." action="AddStat:Int,-5,60" next="greeting"/>
+</Dialogue>
+
+<Dialogue id="aqilLove">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#ecd48e'>
+    Aqil is quiet for a time.<BR>
+    <I>“Yes. Her name was Leilani—a dancer of the southern caravans. Her laughter could stop storms.<BR>
+    I asked her to stay. She said prophets are poor lovers.<BR>
+    I do not blame her.”</I>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="She may yet return to you." condition="IsFemale" action="SendMessage:You say it gently, and he smiles faintly." next="greeting"/>
+  <Option text="That must have broken your heart." next="brokenHeart"/>
+</Dialogue>
+
+<Dialogue id="brokenHeart">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#ecd48e'>
+    <I>“No heart breaks all at once. It withers, like a map in flame.<BR>
+    But even sorrow teaches. From her, I learned beauty fades—but memory endures.<BR>
+    And now, I dance only with fate.”</I>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Your story humbles me." action="Karma:+250" next="greeting"/>
+  <Option text="Thank you for sharing that." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="aqilScholar">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#ecd48e'>
+    <I>“Before I became ‘the Seer,’ I was known as Aqil of the Inkstone—a chief archivist.<BR>
+    I mapped the genealogy of Qasaria’s founders, translated runes from the Western Expanse, even built the first sand-clock tower near the Sun Temple.<BR>
+    But scholars are rarely remembered unless they go mad... or blind.”</I>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="You built the sand-clock tower?" next="sandclock"/>
+  <Option text="You deserve more recognition." condition="StatAtLeast:Int,90" action="Fame:+250" next="greeting"/>
+</Dialogue>
+
+<Dialogue id="sandclock">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#ecd48e'>
+    <I>“I did. Its gears came from Vesper, the sand from the Red Dunes, and the bell chimes at each solar hour.<BR>
+    There is a hidden compartment beneath the foundation—where I left a sealed scroll.<BR>
+    One day, someone clever might find it.”</I>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Should I look for it?" action="SendMessage:A hidden relic beneath the sand-clock? Interesting..." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="aqilEmotion">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#ecd48e'>
+    Aqil chuckles.<BR>
+    <I>“Perhaps she did. She once told me: ‘Your mind is a desert storm—brilliant, but always elsewhere.’<BR>
+    She taught me to pause. To breathe. That, too, is prophecy.”</I>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="You speak of her with great warmth." next="greeting"/>
+</Dialogue>
+
+
+</DialogueFile>

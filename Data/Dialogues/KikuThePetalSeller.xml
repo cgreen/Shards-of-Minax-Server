@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="KikuThePetalSeller">
+
+  <!-- ================== GREETING ==================== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#F8B0DD'>
+      A young woman arranges flowers on a delicate lacquered cart. She looks up, reading your face with a gentle smile.<BR><BR>
+      “Ah, traveler! Welcome to Hinokami’s blossom market. I am Kiku. May I offer you petals to reflect your spirit... or perhaps something to heal the heart?”<BR><BR>
+      (You notice she somehow seems to know how you’re feeling before you speak.)
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’m curious about your flowers." next="aboutFlowers"/>
+    <Option text="How did you know how I feel?" next="emotionSense"/>
+    <Option text="Are you taking part in the festival?" next="festival"/>
+    <Option text="Do you need help gathering rare blooms?" next="questOffer"/>
+	<Option text="Tell me more about yourself, Kiku." next="kikuIntro"/>
+    <Option text="I just want to buy some flowers." action="OpenVendor" />
+    <Option text="Farewell, Kiku." action="Close"/>
+  </Dialogue>
+
+  <!-- ================== ABOUT FLOWERS ==================== -->
+  <Dialogue id="aboutFlowers">
+    <NPCText>
+      <![CDATA[
+      Kiku bows and gestures to her cart.<BR><BR>
+      “Every flower has a secret meaning. Cherry blossoms for hope, irises for courage, white lilies for peace. I choose what fits your heart’s colors.”<BR>
+      She pauses, selecting a blossom.<BR>
+      “Right now... you carry the scent of [emotion] about you. May I offer something to match, or to help you change?”
+      ]]>
+    </NPCText>
+    <Option text="What do you sense in me?" next="emotionSense"/>
+    <Option text="I’d like something for hope." action="GiveItem:CherryBlossom(1)" next="petalGift"/>
+    <Option text="I’d like something for peace." action="GiveItem:WhiteLily(1)" next="petalGift"/>
+    <Option text="Maybe something for courage?" action="GiveItem:Iris(1)" next="petalGift"/>
+    <Option text="Tell me more about the meanings." next="meanings"/>
+    <Option text="Thank you, I’ll browse for now." action="Close"/>
+  </Dialogue>
+
+  <!-- ================== EMOTION SENSE ==================== -->
+  <Dialogue id="emotionSense">
+    <NPCText>
+      <![CDATA[
+      Kiku laughs softly.<BR><BR>
+      “People wear their moods like auras. I do not need magic—flowers simply whisper what is needed, if one listens.”<BR>
+      She offers a blossom, chosen to match your mood.<BR>
+      (If you bring her rare blooms, she may reveal secret meanings.)
+      ]]>
+    </NPCText>
+    <Option text="Do certain flowers grant special blessings?" next="meanings"/>
+    <Option text="What if I bring you a rare flower?" next="questOffer"/>
+    <Option text="That’s a lovely gift. Thank you." next="petalGift"/>
+    <Option text="I must go now." action="Close"/>
+  </Dialogue>
+
+  <!-- ================== PETAL GIFT (generic node after giving flower) ==================== -->
+  <Dialogue id="petalGift">
+    <NPCText>
+      <![CDATA[
+      Kiku tucks the chosen flower gently behind your ear or in your hair.<BR>
+      “May this bring you gentle fortune today. If you return with rare petals from the wilds, I can share even deeper secrets… or weave a charm for you.”<BR>
+      (You feel subtly lighter, as if your burdens eased.)
+      ]]>
+    </NPCText>
+    <Option text="I’ll seek rare flowers for you!" next="questOffer"/>
+    <Option text="Thank you, Kiku. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ================== MEANINGS ==================== -->
+  <Dialogue id="meanings">
+    <NPCText>
+      <![CDATA[
+      Kiku’s eyes twinkle as she recites:<BR>
+      “Cherry blossom: fleeting hope.<BR>
+      Iris: steadfast courage.<BR>
+      Lily: gentle peace.<BR>
+      Camellia: devotion.<BR>
+      Orchid: hidden beauty.<BR>
+      Each has a secret if given at the right time or to the right person.”<BR>
+      She smiles, inviting you to look closer.<BR>
+      “In Hinokami, flowers can open doors… and sometimes, hearts.”
+      ]]>
+    </NPCText>
+    <Option text="Can you make a special charm if I bring you something rare?" next="questOffer"/>
+    <Option text="Thank you for the lesson." action="Close"/>
+  </Dialogue>
+
+  <!-- ================== FESTIVAL HOOK ==================== -->
+  <Dialogue id="festival">
+    <NPCText>
+      <![CDATA[
+      “Yes! The Blossom Festival is soon, honoring our sun goddess and ancestors. There will be dance, lanterns, and the making of petal charms. If you bring me a **Moon Lotus** or **Sakura Dewdrop**, I can make you a charm that shines during the night parade.”<BR>
+      She looks hopeful.<BR>
+      “Will you help me find these blooms?”
+      ]]>
+    </NPCText>
+    <Option text="I will search for a Moon Lotus." next="lotusQuest"/>
+    <Option text="What is a Sakura Dewdrop?" next="dewdropExplain"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- ================== QUEST OFFER (for rare blooms) ==================== -->
+  <Dialogue id="questOffer">
+    <NPCText>
+      <![CDATA[
+      Kiku brightens.<BR>
+      “Sometimes, petals from outside Hinokami carry new omens. I hear the **Frostmere Blue Orchid** is guarded by icy spirits, and the **Sunreach Firebloom** only opens at dawn. Bring me any rare flower, and I will craft a charm to match its story.”<BR>
+      (You sense she’ll reward you differently based on what you bring.)
+      ]]>
+    </NPCText>
+    <Option text="What can you do with a Frostmere Blue Orchid?" next="frostmere"/>
+    <Option text="What about a Sunreach Firebloom?" next="firebloom"/>
+    <Option text="I will return if I find something rare." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== FROSTMERE ORCHID branch: Only if player brings the item ========== -->
+  <Dialogue id="frostmere">
+    <NPCText>
+      <![CDATA[
+      Kiku’s eyes widen.<BR>
+      “The Blue Orchid holds the spirit of winter. If you bring me one, I will make you a charm of ice—said to ward off sorrow and protect travelers in cold lands.”<BR>
+      (Bring her a Frostmere Blue Orchid to unlock a unique reward.)
+      ]]>
+    </NPCText>
+    <Option text="I have a Frostmere Blue Orchid for you."
+            condition="HasItem:FrostmereBlueOrchid"
+            action="GiveItem:CharmOfWinterProtection(1);RemoveItem:FrostmereBlueOrchid(1);SendMessage:A chill, comforting presence surrounds you."
+            next="orchidGift"/>
+    <Option text="Not yet, but I will return." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="orchidGift">
+    <NPCText>
+      <![CDATA[
+      Kiku weaves the blue orchid into a delicate bracelet.<BR>
+      “Wear this, and sorrow will find you slower. Thank you for bringing a little winter to Hinokami’s spring.”<BR>
+      (You feel more resilient to cold and melancholy.)
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Kiku." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== SUNREACH FIREBLOOM branch: Only if player brings the item ========== -->
+  <Dialogue id="firebloom">
+    <NPCText>
+      <![CDATA[
+      “Firebloom? That flower is brave as sunrise. With it, I can make a charm to spark your courage—even in Minax’s darkest shadow.”<BR>
+      (Bring her a Sunreach Firebloom for a different reward.)
+      ]]>
+    </NPCText>
+    <Option text="I have a Sunreach Firebloom for you."
+            condition="HasItem:SunreachFirebloom"
+            action="GiveItem:CharmOfDawnCourage(1);RemoveItem:SunreachFirebloom(1);SendMessage:You feel emboldened, as if dawn broke within your heart."
+            next="firebloomGift"/>
+    <Option text="Not yet, but I will return." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="firebloomGift">
+    <NPCText>
+      <![CDATA[
+      Kiku binds the fiery petals with a red silk thread.<BR>
+      “This will light your spirit when courage runs low. Carry it when facing great peril.”<BR>
+      (A spark of confidence flares in your chest.)
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Kiku." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== MOON LOTUS & SAKURA DEWDROP (Festival) ========== -->
+  <Dialogue id="lotusQuest">
+    <NPCText>
+      <![CDATA[
+      “The Moon Lotus only blooms beneath a full moon. If you bring one, I’ll craft a charm to guide you safely through dreams and shadows.”<BR>
+      (Find a Moon Lotus and return here for a festival reward.)
+      ]]>
+    </NPCText>
+    <Option text="I will bring you a Moon Lotus." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dewdropExplain">
+    <NPCText>
+      <![CDATA[
+      “A Sakura Dewdrop is a petal kissed by morning dew from the oldest cherry tree. It is rare—said to reveal the path to hidden beauty.”<BR>
+      She smiles, “Bring one, and I will share a charm for seeing the unseen.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll look for one!" action="Close"/>
+  </Dialogue>
+
+<Dialogue id="kikuIntro">
+  <NPCText>
+    <![CDATA[
+    Kiku smiles wistfully, adjusting a stray blossom in her cart.<BR><BR>
+    “There isn’t much to tell… or perhaps, too much hidden among petals.”<BR>
+    She closes her eyes briefly.<BR>
+    “I was once trained to be a shrine maiden in Tokuno, before the flames of Minax fell. When we fled, I brought only seeds, my heart, and my teacher’s bell.”<BR><BR>
+    “Now, I serve as a voice for flowers. And sometimes, perhaps, they speak back.”
+    ]]>
+  </NPCText>
+  <Option text="You were a shrine maiden? That sounds important." next="shrineMaiden"/>
+  <Option text="How do you speak to flowers?" next="flowerTalk"/>
+  <Option text="What happened when you fled Tokuno?" next="tokunoFlee"/>
+  <Option text="That bell you mentioned...?" next="bellLore"/>
+  <Option text="You must miss your old life." next="regret"/>
+  <Option text="Thank you for sharing that with me." next="kindnessReward"/>
+</Dialogue>
+
+<!-- SHRINE MAIDEN -->
+<Dialogue id="shrineMaiden">
+  <NPCText>
+    <![CDATA[
+    “It was a life of silence and discipline. We served Amateru through offerings, lanterns, and poetry. I thought I would grow old tending her shrine… until it burned beneath Minax’s falling stars.”<BR>
+    She touches her sleeve reverently.<BR>
+    “Now, each flower I sell is an offering. To her. To memory.”
+    ]]>
+  </NPCText>
+  <Option text="Your devotion is admirable." next="kindnessReward"/>
+  <Option text="I’d like to offer something at your cart, in her honor." condition="GoldAtLeast:500" action="GiveGold:500;Karma:+250" next="offeringThanks"/>
+  <Option text="Let us speak of lighter things." next="aboutFlowers"/>
+</Dialogue>
+
+<!-- FLOWER LANGUAGE -->
+<Dialogue id="flowerTalk">
+  <NPCText>
+    <![CDATA[
+    “Flowers speak through the way they bloom. Their colors, scents, the places they choose to grow. When I touch a blossom, I feel its purpose—joy, protection, mourning.”<BR>
+    She holds up a red camellia.<BR>
+    “This one tells me you’ve recently taken a great risk… Am I wrong?”
+    ]]>
+  </NPCText>
+  <Option text="You’re right. How did you know?" next="empathyReveal"/>
+  <Option text="Maybe flowers know more than we do." next="petalGift"/>
+  <Option text="Let’s talk about something else." next="aboutFlowers"/>
+</Dialogue>
+
+<Dialogue id="empathyReveal">
+  <NPCText>
+    <![CDATA[
+    Kiku bows gently.<BR>
+    “Then you carry both weight… and wisdom. Let this flower guide your recovery.”<BR>
+    She pins the red camellia to your sleeve.<BR><BR>
+    (You feel stronger, emotionally fortified.)
+    ]]>
+  </NPCText>
+  <Option text="Thank you." action="AddStat:Int,5,300;Karma:+100" />
+</Dialogue>
+
+<!-- TOKUNO STORY -->
+<Dialogue id="tokunoFlee">
+  <NPCText>
+    <![CDATA[
+    Kiku’s voice lowers.<BR>
+    “Minax unleashed fire from the sky. My family fled to the docks. My mother… she didn’t make it.”<BR>
+    She looks away, holding back tears.<BR>
+    “We sailed through storm and shadow. Hinokami is all I have now. And my cart. And the petals.”
+    ]]>
+  </NPCText>
+  <Option text="I’m so sorry." next="griefResponse"/>
+  <Option text="Minax will pay for what she’s done." next="vengeance"/>
+  <Option text="How can I honor her memory?" next="offeringThanks"/>
+</Dialogue>
+
+<Dialogue id="griefResponse">
+  <NPCText>
+    <![CDATA[
+    She nods quietly.<BR>
+    “Thank you. When people take the time to *see* others… it matters more than words.”
+    ]]>
+  </NPCText>
+  <Option text="You’re not alone in this." next="kindnessReward"/>
+</Dialogue>
+
+<Dialogue id="vengeance">
+  <NPCText>
+    <![CDATA[
+    Kiku’s eyes narrow slightly, then soften.<BR>
+    “Even flowers need warriors. Just… do not let revenge twist your roots. Grow toward the sun.”<BR>
+    She places a white petal in your palm.
+    ]]>
+  </NPCText>
+  <Option text="I will remember your words." action="AddStat:Str,5,300;Karma:+50"/>
+</Dialogue>
+
+<!-- THE BELL -->
+<Dialogue id="bellLore">
+  <NPCText>
+    <![CDATA[
+    She holds out a tiny silver bell strung with violet thread.<BR>
+    “This was my teacher’s. It rang only for rites of passage or when we spoke to spirits.”<BR>
+    She tilts her head.<BR>
+    “It’s silent now. But when the cherry blossoms fall just right, I sometimes hear it again.”
+    ]]>
+  </NPCText>
+  <Option text="Can you use it to bless someone?" next="blessingOffer"/>
+  <Option text="I hope it rings again someday." next="kindnessReward"/>
+</Dialogue>
+
+<Dialogue id="blessingOffer">
+  <NPCText>
+    <![CDATA[
+    Kiku’s eyes brighten.<BR>
+    “Would you accept a quiet blessing?”<BR>
+    She raises the bell, its tone faint as wind through reeds.<BR>
+    (You feel spiritually cleansed.)
+    ]]>
+  </NPCText>
+  <Option text="I accept." action="Heal:15;AddStat:Dex,3,180;Karma:+100" />
+</Dialogue>
+
+<!-- REGRET -->
+<Dialogue id="regret">
+  <NPCText>
+    <![CDATA[
+    “Some days I miss it all. My temple. The gardens. The tea.”<BR>
+    She exhales slowly.<BR>
+    “But even fallen blossoms nourish the soil. Hinokami is my garden now.”
+    ]]>
+  </NPCText>
+  <Option text="Then you’ve made something beautiful from pain." next="kindnessReward"/>
+</Dialogue>
+
+<!-- PLAYER OFFERS SUPPORT -->
+<Dialogue id="offeringThanks">
+  <NPCText>
+    <![CDATA[
+    Kiku clasps her hands together.<BR>
+    “Thank you for your kindness. The shrine may be gone, but the spirit lives on. I’ll use your offering to plant more in her name.”<BR>
+    (Karma increased.)
+    ]]>
+  </NPCText>
+  <Option text="May they bloom brightly." action="Karma:+250" />
+</Dialogue>
+
+<!-- FINAL REWARD FOR COMPASSIONATE CHOICES -->
+<Dialogue id="kindnessReward">
+  <NPCText>
+    <![CDATA[
+    Kiku smiles with quiet warmth.<BR>
+    “You’ve shown me kindness. Let me offer something in return.”<BR>
+    She gifts you a small sachet filled with fragrant petals.<BR>
+    “May it soothe the nights ahead.”
+    ]]>
+  </NPCText>
+  <Option text="Thank you, Kiku." action="GiveItem:PetalSachet(1);Karma:+100;PlaySound:0x015" />
+</Dialogue>
+
+
+</DialogueFile>

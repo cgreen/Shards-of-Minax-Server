@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="KagemuraShadowDancer">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#eec87d'>
+      A lithe figure bows low, fox mask gleaming in the lantern light.<BR>
+      <I>"Welcome, traveler, to Hinokami’s Lantern Stage. I am Kagemura, Shadow Dancer, mask-bearer and teller of living dreams."</I><BR><BR>
+      "The spirit fox within me sees many fates—yours flickers with intrigue!<BR>
+      Will you join my next kabuki play, or simply linger for a tale?"<BR>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I wish to join your play." next="play_intro"/>
+    <Option text="Tell me a story, Fox Spirit." next="lore_story"/>
+    <Option text="Who are you really, Kagemura?" next="who"/>
+	<Option text="Tell me of your past, Shadow Dancer." next="past_intro"/>
+    <Option text="I must go for now." action="Close"/>
+  </Dialogue>
+
+  <!-- Kabuki Play Introduction -->
+  <Dialogue id="play_intro">
+    <NPCText>
+      <![CDATA[
+      Kagemura’s tail flicks behind his kimono (or does it?).<BR>
+      <I>"Tonight’s piece is <B>‘Moonlit Shadows: The Fall of Minax’</B>—a tale woven of illusion, memory, and truth.<BR>
+      Step lightly! Actors sometimes become the role they play…"</I><BR>
+      <BR>
+      <B>Will you:</B>
+      ]]>
+    </NPCText>
+    <Option text="Play the Hero: Defender against Minax." next="hero_role"/>
+    <Option text="Play the Villain: Agent of Minax." next="villain_role"/>
+    <Option text="Observe as an audience member." next="audience"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Play: Hero Path -->
+  <Dialogue id="hero_role">
+    <NPCText>
+      <![CDATA[
+      Kagemura presses a lacquered fan into your hand.<BR>
+      <I>“You are the <B>Unbroken Blade</B>—champion of Britannia, sworn to oppose Minax. Your first line?”</I><BR><BR>
+      <B>Choose your stance:</B>
+      ]]>
+    </NPCText>
+    <Option text="‘I defend these lands with honor and steel!’" next="hero_respond"/>
+    <Option text="‘The shadows cannot touch a just heart!’" next="hero_respond"/>
+    <Option text="(Bow silently, letting your actions speak.)" next="hero_respond"/>
+  </Dialogue>
+
+  <Dialogue id="hero_respond">
+    <NPCText>
+      <![CDATA[
+      <I>Spotlights shift. Kagemura, now draped in shadow, becomes Minax’s specter.</I><BR>
+      "O brave fool! Did you think courage alone could withstand eternity?<BR>
+      What would you sacrifice to break Minax’s hold?"
+      ]]>
+    </NPCText>
+    <Option text="‘My life, if I must!’" next="revelation"/>
+    <Option text="‘Nothing! Minax will fall by my sword!’" next="revelation"/>
+    <Option text="‘The hearts of my companions—they are my strength.’" next="revelation"/>
+  </Dialogue>
+
+  <!-- Play: Villain Path -->
+  <Dialogue id="villain_role">
+    <NPCText>
+      <![CDATA[
+      <I>Kagemura passes you a crimson sash.</I><BR>
+      “Become the <B>Hand of Minax</B>, tempter in the night. Speak your opening threat!”
+      ]]>
+    </NPCText>
+    <Option text="‘These lands shall kneel before the Mistress of Chaos!’" next="villain_respond"/>
+    <Option text="‘Let darkness fall, and hope wither!’" next="villain_respond"/>
+    <Option text="(Smile wordlessly, plotting in silence.)" next="villain_respond"/>
+  </Dialogue>
+
+  <Dialogue id="villain_respond">
+    <NPCText>
+      <![CDATA[
+      <I>Kagemura, masked anew, stands as the legendary Unbroken Blade.</I><BR>
+      “So speaks Minax’s servant. But tell me: why betray your kin for shadows?”
+      ]]>
+    </NPCText>
+    <Option text="‘Power is all that matters.’" next="revelation"/>
+    <Option text="‘Fear makes loyal subjects.’" next="revelation"/>
+    <Option text="‘The world abandoned us—now it will burn.’" next="revelation"/>
+  </Dialogue>
+
+  <!-- Play: Audience Option -->
+  <Dialogue id="audience">
+    <NPCText>
+      <![CDATA[
+      Kagemura bows.<BR>
+      <I>“Then watch as illusion becomes truth! Every play is a spell, every ending a new beginning. If you wish to take the stage, return to me after.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Kagemura." action="Close"/>
+  </Dialogue>
+
+  <!-- Shared: Play Revelation -->
+  <Dialogue id="revelation">
+    <NPCText>
+      <![CDATA[
+      <I>The lanterns dim, and Kagemura’s voice echoes as if from a dream.</I><BR>
+      “History repeats upon the stage, but only the brave rewrite the script.<BR>
+      In Minax’s fall, what was truly shattered—the Gem, or the souls of mortals?”<BR><BR>
+      <B>Kagemura’s eyes glint behind his fox mask.</B><BR>
+      “Would you seek to learn the true secret of Minax’s rise?”
+      ]]>
+    </NPCText>
+    <Option text="Reveal it to me, spirit." next="secret_lore"/>
+    <Option text="The past is better left undisturbed." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="secret_lore">
+    <NPCText>
+      <![CDATA[
+      <I>Kagemura’s mask seems to shift and ripple. The air shivers with illusion.</I><BR>
+      “Minax was once mortal, like us. Her fury grew from heartbreak and betrayal—when the Gem of Immortality shattered, it was not just worlds that were split, but souls. Some say her vengeance is the echo of a forgotten love, others that she is the shadow every heart hides.”<BR>
+      <BR>
+      “Tell this to none but the worthy. When the moon is full, find me beneath the Lantern Tree, and perhaps the Fox will grant you a mask of your own.”<BR>
+      <BR>
+      <B>[You sense a new quest is available to you.]</B>
+      ]]>
+    </NPCText>
+    <Option text="(Accept the Fox’s secret quest.)" action="GiveItem:FoxSpiritQuestScroll(Hinokami,Kagemura,350)" condition="!HasItem:FoxSpiritQuestScroll" next="quest_accept"/>
+    <Option text="(Bow in silence.)" action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="quest_accept">
+    <NPCText>
+      <![CDATA[
+      <I>Kagemura slips a folded paper fox mask into your palm.</I><BR>
+      “May your steps be silent, and your purpose true. The play never ends.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Shadow Dancer." action="Close"/>
+  </Dialogue>
+
+  <!-- Fox Spirit Lore Path -->
+  <Dialogue id="lore_story">
+    <NPCText>
+      <![CDATA[
+      Kagemura spins his fan, voice deepening.<BR>
+      “Long ago, a fox spirit danced with mortals, teaching them joy, trickery, and sorrow. When the shadow of Minax fell, even spirits wept.<BR>
+      Some say the fox now hides among us—granting wisdom to those who walk between worlds. Will you walk the path of illusions, or the path of steel?”
+      ]]>
+    </NPCText>
+    <Option text="Teach me the path of illusions." next="illusion"/>
+    <Option text="I am a warrior at heart." next="steel"/>
+    <Option text="Thank you for the story." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="illusion">
+    <NPCText>
+      <![CDATA[
+      Kagemura’s tails seem to multiply in the lanternlight.<BR>
+      “Very well. Seek what is hidden, trust not all you see, and remember—truth may be found in a mask as well as a mirror.”<BR>
+      <B>[You feel your senses sharpen. (+10 Stealth for 10m)]</B>
+      ]]>
+    </NPCText>
+    <Option text="(Bow with respect.)" action="AddSkill:Stealth,10,600" />
+  </Dialogue>
+
+  <Dialogue id="steel">
+    <NPCText>
+      <![CDATA[
+      “Then carry the fox spirit in your heart—a trickster’s courage, a warrior’s grace. <BR>
+      Let no shadow find you unready.”<BR>
+      <B>[You feel emboldened. (+10 Swordsmanship for 10m)]</B>
+      ]]>
+    </NPCText>
+    <Option text="(Nod in gratitude.)" action="AddSkill:Swords,10,600" />
+  </Dialogue>
+
+  <!-- Who are you? branch -->
+  <Dialogue id="who">
+    <NPCText>
+      <![CDATA[
+      <I>Kagemura leans closer, voice dropping to a whisper.</I><BR>
+      “Some call me actor, others spirit, a few… deceiver. All are true.<BR>
+      My mask is not just for the stage—beneath it, all truths dance. Perhaps you too wear a mask? What do you seek in Hinokami?”
+      ]]>
+    </NPCText>
+    <Option text="A new beginning." next="who_newstart"/>
+    <Option text="Wisdom and guidance." next="who_guidance"/>
+    <Option text="Glory in battle." next="who_battle"/>
+    <Option text="Only passing through." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="who_newstart">
+    <NPCText>
+      <![CDATA[
+      “Every dawn is a stage’s opening. May your steps find rhythm, and your burdens be light. Return when you seek a part to play.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Kagemura." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="who_guidance">
+    <NPCText>
+      <![CDATA[
+      “Guidance is found in stories, and in silence between words. Listen well—to others and to yourself.”
+      ]]>
+    </NPCText>
+    <Option text="I will." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="who_battle">
+    <NPCText>
+      <![CDATA[
+      “Battle is also a performance—be bold, but do not mistake fury for strength. If you survive the war, return for the afterparty.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll keep that in mind." action="Close"/>
+  </Dialogue>
+
+  <!-- === Kagemura Backstory Tree === -->
+  
+  <Dialogue id="past_intro">
+    <NPCText>
+      <![CDATA[
+      Kagemura’s masked head tilts.<BR>
+      “The past is a thread pulled too tightly—it unravels the soul. But perhaps you’ve earned a glimpse.”<BR><BR>
+      <I>“What part of my tale intrigues you?”</I>
+      ]]>
+    </NPCText>
+    <Option text="Your fox mask... are you truly a kitsune?" next="fox_mask"/>
+    <Option text="Why become a kabuki performer?" next="kabuki"/>
+    <Option text="Were you always in Hinokami?" next="wanderer"/>
+    <Option text="Another time, perhaps." action="Close"/>
+  </Dialogue>
+
+  <!-- === Mask & Kitsune Identity === -->
+  <Dialogue id="fox_mask">
+    <NPCText>
+      <![CDATA[
+      <I>He chuckles faintly—an echo like falling leaves.</I><BR>
+      “The mask is both lie and truth. I was born of mortal blood… but my mother danced with foxfire, and the forest spirits knew her name.”<BR><BR>
+      “Sometimes, I dream with more tails than one. Does that make me kitsune? Or simply cursed?”<BR>
+      <BR>
+      <B>Do you believe him?</B>
+      ]]>
+    </NPCText>
+    <Option text="Yes. Your aura hums with magic." next="fox_belief" condition="SkillAtLeast:Magery,60"/>
+    <Option text="You just enjoy the mystery." next="fox_mystery"/>
+    <Option text="Kitsune or not, your stories have spirit." next="fox_story"/>
+  </Dialogue>
+
+  <Dialogue id="fox_belief">
+    <NPCText>
+      <![CDATA[
+      <I>Kagemura lowers his head in theatrical gratitude.</I><BR>
+      “Then I grant you a truth: I was born under a waning moon, and in my cradle slept a kitsune fang wrapped in silk. I wear it still.”<BR><BR>
+      <B>[You feel a brush of spiritual magic. +10 Karma]</B>
+      ]]>
+    </NPCText>
+    <Option text="Thank you for your honesty." action="Karma:+10"/>
+  </Dialogue>
+
+  <Dialogue id="fox_mystery">
+    <NPCText>
+      <![CDATA[
+      <I>The fox mask glints knowingly.</I><BR>
+      “And if mystery is all I am—does that not still make me magic?”<BR>
+      “Come. Let us both wear masks and call it truth.”
+      ]]>
+    </NPCText>
+    <Option text="That’s fair enough." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="fox_story">
+    <NPCText>
+      <![CDATA[
+      “Spirit is everything. Even in fiction, there is fire.”<BR>
+      <I>He flicks a fan across his mask, as if warding off deeper emotion.</I>
+      ]]>
+    </NPCText>
+    <Option text="I respect that." action="Close"/>
+  </Dialogue>
+
+  <!-- === Kabuki Path === -->
+  <Dialogue id="kabuki">
+    <NPCText>
+      <![CDATA[
+      <I>Kagemura twirls his fan slowly.</I><BR>
+      “When I was young, my voice was stolen by a demon of silence. I could not speak, only gesture. Kabuki taught me to sing again, without words.”<BR><BR>
+      “The mask became my voice. The dance, my blade.”<BR><BR>
+      <B>Would you like to see a gesture from that time?</B>
+      ]]>
+    </NPCText>
+    <Option text="Yes. Show me." next="kabuki_show"/>
+    <Option text="It must be a painful memory." next="kabuki_decline"/>
+  </Dialogue>
+
+  <Dialogue id="kabuki_show">
+    <NPCText>
+      <![CDATA[
+      <I>Kagemura spins, drops to one knee, and raises his fan in absolute silence.<BR>
+      The moment holds a powerful stillness, as if time pauses.</I><BR><BR>
+      “And thus, the vow of silence became the vow of performance.”<BR>
+      <B>[You feel an odd serenity. +10 Fame]</B>
+      ]]>
+    </NPCText>
+    <Option text="Incredible." action="Fame:+10"/>
+  </Dialogue>
+
+  <Dialogue id="kabuki_decline">
+    <NPCText>
+      <![CDATA[
+      “Kindness suits you. Not all memories wish to be danced.”<BR>
+      “But know that from that silence came this shadow.”<BR>
+      <I>He taps his mask gently, as if in thanks.</I>
+      ]]>
+    </NPCText>
+    <Option text="Thank you for sharing." action="Close"/>
+  </Dialogue>
+
+  <!-- === Wanderer Backstory === -->
+  <Dialogue id="wanderer">
+    <NPCText>
+      <![CDATA[
+      “I was not born in Hinokami. I have wandered from Tokuno to Skara, from the ruins of Magincia to the cliffs of Serpent’s Hold.”<BR><BR>
+      “Wherever a soul wept beneath a painted sky, I danced. But it was here, in these woods, that I heard the fox call my name.”<BR>
+      <BR>
+      <B>Will you ask about his journeys?</B>
+      ]]>
+    </NPCText>
+    <Option text="Tell me of Serpent’s Hold." next="wanderer_serpent"/>
+    <Option text="Tell me of Tokuno." next="wanderer_tokuno"/>
+    <Option text="You’ve traveled far. That explains much." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="wanderer_serpent">
+    <NPCText>
+      <![CDATA[
+      “Serpent’s Hold was stone and silence—disciplined, but weary. Their monks feared joy, for joy can be shattered. I performed once within their shrine—no applause, only bowed heads.”<BR>
+      “Yet… that was enough.”<BR>
+      <B>[You feel contemplative. +5 Int for 5m]</B>
+      ]]>
+    </NPCText>
+    <Option text="You move hearts in silence." action="AddStat:Int,5,300"/>
+  </Dialogue>
+
+  <Dialogue id="wanderer_tokuno">
+    <NPCText>
+      <![CDATA[
+      <I>He bows slightly at the name.</I><BR>
+      “Tokuno was breath and blade. My clan practiced the path of smoke—we vanished before swords could draw.”<BR>
+      “But even smoke cannot hide from fate. My clan… was lost when Minax shattered the spirit gate.”<BR>
+      <B>[You feel a heavy sorrow. Karma -10]</B>
+      ]]>
+    </NPCText>
+    <Option text="I’m sorry for your loss." action="Karma:-10"/>
+  </Dialogue>
+
+
+</DialogueFile>

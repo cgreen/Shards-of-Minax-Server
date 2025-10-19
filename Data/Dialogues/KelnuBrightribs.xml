@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="KelnuBrightribs">
+
+  <!-- ================== GREETING ===================== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#2be24d'>
+      Before you kneels a young man in tribal garb, tracing swirling <b>symbols</b> into the dirt with absent-minded focus. His eyes dart with nervous energy, yet there is an earnest hope in his face.<BR><BR>
+      He glances up, and for a moment you sense the weight of visions half-understood.<BR><BR>
+      “Um… are you here to help? The spirits… they've been whispering, but their meaning… slips away like mist.”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="What symbols are you drawing?" next="symbols"/>
+    <Option text="Are you Kelnu Brightribs, the vision-seeker?" next="confirmIdentity"/>
+    <Option text="What troubles you?" next="trouble"/>
+	<Option text="Tell me about yourself, Kelnu." next="aboutKelnu"/>
+    <Option text="Just passing through." next="goodbye"/>
+  </Dialogue>
+
+  <!-- ======= Symbol Discussion ======= -->
+  <Dialogue id="symbols">
+    <NPCText>
+      <![CDATA[
+      Kelnu looks at his hand, startled, then at the marks. “These… I don’t even remember starting them! They’re everywhere now. Shaman Nura says they might be <b>omens</b>—warnings from the roots, the wind, the old bones.<BR><BR>
+      Can you see any pattern? Sometimes, if you look closely, the meaning changes… or do I just wish it did?”<BR>
+      ]]>
+    </NPCText>
+    <Option text="They look like a map." next="map" />
+    <Option text="They remind me of ancient runes." next="runes" />
+    <Option text="Maybe they’re warnings of danger." next="danger" />
+    <Option text="It’s probably just nerves." next="downplay" />
+  </Dialogue>
+
+  <!-- ======= Identity Confirm ======= -->
+  <Dialogue id="confirmIdentity">
+    <NPCText>
+      <![CDATA[
+      “Yes! I’m Kelnu. My mother was Brightribs, my father… well, he walked the spirit path before I could remember his face. I’m meant to watch for visions, and prove myself. But these dreams… I fear what they show.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Tell me about your visions." next="visions" />
+    <Option text="What do you hope to prove?" next="prove" />
+    <Option text="I see. Good luck, Kelnu." next="goodbye" />
+  </Dialogue>
+
+  <!-- ======= Trouble ======= -->
+  <Dialogue id="trouble">
+    <NPCText>
+      <![CDATA[
+      Kelnu’s fingers twitch. “It’s the dreams, and the way I wake with my hands muddy, always scribbling. Nura says some things want to be spoken—others, only written and hidden.<BR>
+      Sometimes, I think something ancient is calling… or warning us about <b>Minax</b>. I’m not brave enough to look alone.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Let me help you interpret the signs." next="symbols" />
+    <Option text="You should see the shaman." next="suggestShaman" />
+    <Option text="You’re right to be careful." next="goodbye" />
+  </Dialogue>
+
+  <!-- ====== Map Interpretation ====== -->
+  <Dialogue id="map">
+    <NPCText>
+      <![CDATA[
+      Kelnu’s eyes widen. “A map? Spirits, yes… see the lines? They bend toward the Old Willow Hollow. I dreamed of roots, of a buried thing… glowing and wrong.<BR>
+      If you follow the marks at night, you might find what I saw. Will you go?”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Yes, I’ll follow the map tonight." action="GiveItem:VerdantVisionQuestScroll(Map)" next="questGiven" condition="!HasItem:VerdantVisionQuestScroll"/>
+    <Option text="Not tonight." next="goodbye"/>
+  </Dialogue>
+
+  <!-- ====== Rune Interpretation ====== -->
+  <Dialogue id="runes">
+    <NPCText>
+      <![CDATA[
+      Kelnu leans close, excited. “Runes! Old as the bones of the hills. Some shapes repeat—like the <b>double spiral</b> for binding, or the <b>eye</b> for seeing danger. My hands make them, but my mind… it’s all fragments.<BR>
+      Maybe if you gather other runes in the wilds, the spirits will show us more?”<BR>
+      ]]>
+    </NPCText>
+    <Option text="How do I find these runes?" next="findRunes"/>
+    <Option text="Maybe another time." next="goodbye"/>
+  </Dialogue>
+
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      “You might be right. My dreams are full of shadows crawling from the trees, and a woman’s voice, cold as stone. She wants the relic buried under the willow. If you find it before she does, maybe our tribe will be safe.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I’ll find the relic first." action="GiveItem:VerdantVisionQuestScroll(Relic)" next="questGiven" condition="!HasItem:VerdantVisionQuestScroll"/>
+    <Option text="I’ll keep watch, but stay cautious." next="goodbye"/>
+  </Dialogue>
+
+  <Dialogue id="downplay">
+    <NPCText>
+      <![CDATA[
+      Kelnu forces a weak smile. “Maybe… But the elders say the last time these marks appeared, the woods burned. Still, I suppose every storm passes, right?”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Storms pass, and so do troubles. Take care." next="goodbye"/>
+    <Option text="I want to help you, if I can." next="symbols"/>
+  </Dialogue>
+
+  <!-- ====== Vision Branches ====== -->
+  <Dialogue id="visions">
+    <NPCText>
+      <![CDATA[
+      Kelnu stares into the middle distance, voice dropping. “Fire in the roots. Bones in a circle. A woman’s laughter echoing through black vines. Each time I close my eyes, it grows sharper.<BR>
+      Nura says these are <b>warnings</b>—of a relic tainted by Minax, waiting under the willow. If you can find it, maybe the visions will stop… for both of us.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="How can I find this relic?" next="questInfo"/>
+    <Option text="Perhaps you should rest." next="goodbye"/>
+  </Dialogue>
+
+  <Dialogue id="prove">
+    <NPCText>
+      <![CDATA[
+      “I want to show the elders I can read the signs—not just see them. If I help save the tribe, maybe I’ll become more than just… the awkward dreamer. Maybe I’ll be worthy of a spirit name.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Let me help you prove yourself." next="symbols"/>
+    <Option text="You’re already brave, Kelnu." next="goodbye"/>
+  </Dialogue>
+
+  <!-- ============ Rune Quest ============= -->
+  <Dialogue id="findRunes">
+    <NPCText>
+      <![CDATA[
+      “Seek hollow trees, mossy stones—places where the spirit-wind lingers. Use this chalk, and you’ll be able to see runes that others can’t. Bring me what you find, and maybe the pattern will reveal itself.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I’ll begin my search." action="GiveItem:SpiritChalk" next="goodbye" condition="!HasItem:SpiritChalk"/>
+    <Option text="Maybe later." next="goodbye"/>
+  </Dialogue>
+
+  <!-- ============ Quest Assignment ============= -->
+  <Dialogue id="questInfo">
+    <NPCText>
+      <![CDATA[
+      “The Old Willow Hollow is east of camp. At night, strange lights float around its roots. Dig there, and you may find a hidden cache.<BR>
+      If you bring me whatever is hidden there, I will share what the spirits show next.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I’ll find the cache beneath the willow." action="GiveItem:VerdantVisionQuestScroll(Relic)" next="questGiven" condition="!HasItem:VerdantVisionQuestScroll"/>
+    <Option text="Another time, perhaps." next="goodbye"/>
+  </Dialogue>
+
+  <!-- ============ Quest Given ============= -->
+  <Dialogue id="questGiven">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#77ee88'>
+      Kelnu presses a palm to yours, passing a bark-wrapped scroll marked in swirling green. “Let the spirits guide you, friend. And… if you hear her voice in the trees, don’t answer. Just keep moving.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I’ll return when I have the relic." action="SendMessage:Find the cache beneath the Willow Hollow and return to Kelnu."/>
+    <Option text="Is there any other warning?" next="finalWarning"/>
+  </Dialogue>
+
+  <!-- ============ Final Warning ============= -->
+  <Dialogue id="finalWarning">
+    <NPCText>
+      <![CDATA[
+      Kelnu’s gaze is haunted. “If you see shadows in the shape of antlers, run. That’s no spirit I’d trust.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Kelnu. I’ll be careful." action="Close"/>
+  </Dialogue>
+
+  <!-- ============ Shaman Suggestion ============= -->
+  <Dialogue id="suggestShaman">
+    <NPCText>
+      <![CDATA[
+      “I see Nura often. She’s patient, but says the spirits have chosen me for a reason. Still, I wish they’d speak plainly, just once…”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Maybe together, we can find meaning." next="symbols"/>
+    <Option text="Take care, Kelnu." next="goodbye"/>
+  </Dialogue>
+
+  <!-- ============ Goodbye ============= -->
+  <Dialogue id="goodbye">
+    <NPCText>
+      <![CDATA[
+      Kelnu nods, his fingers drifting to the next pattern. “May the woods shelter you, and your dreams bring only good.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="aboutKelnu">
+    <NPCText>
+      <![CDATA[
+      Kelnu blinks, surprised. “No one really asks about me. I guess… I’m still figuring that out myself.”<BR><BR>
+      He scratches another glyph into the earth. “I wasn’t born a seer. That started after… after the lightning took my mother.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="What happened to your mother?" next="motherDeath"/>
+    <Option text="Did your visions start after that?" next="visionsStart"/>
+    <Option text="Do you believe the spirits chose you?" next="spiritsChoice"/>
+    <Option text="Have you always lived with the Verdant Tribes?" next="tribeLife"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="motherDeath">
+    <NPCText>
+      <![CDATA[
+      Kelnu's voice lowers. “There was a storm — a spirit storm. The kind that makes the trees whisper and the flames dance backwards.”<BR><BR>
+      “She ran out to gather the tribe’s sacred bark scrolls from the grove… and didn’t return.” He pauses. “They found her the next morning. Her eyes were wide open, glowing faint green. I think… she saw something.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I’m sorry. That must have been hard." next="comfort"/>
+    <Option text="What do you think she saw?" next="motherVision"/>
+    <Option text="Let’s change the subject." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="comfort">
+    <NPCText>
+      <![CDATA[
+      Kelnu nods slowly. “Thanks. Most just say it was ‘her time’ or ‘the spirits needed her.’ But it didn’t feel right. I still dream of her… standing by the old grove, trying to speak, but no sound comes out.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Maybe she’s still guiding you." next="dreamGuide"/>
+    <Option text="You’re not alone in this." action="AddStat:Int,5,300" next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="motherVision">
+    <NPCText>
+      <![CDATA[
+      “I think she saw the same thing I see now — the roots glowing from within, and Minax’s shadow in the branches.”<BR><BR>
+      Kelnu grips his arms. “Whatever it was… it stayed with me.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Perhaps your gift is inherited." next="dreamGuide"/>
+    <Option text="You carry her purpose now." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="dreamGuide">
+    <NPCText>
+      <![CDATA[
+      “Sometimes… when I focus near the sacred trees, I hear humming — like her lullabies. Maybe she walks with the spirits now.”<BR>
+      He smiles faintly. “I don’t want to waste the gift she may have passed on.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="You’re stronger than you think, Kelnu." action="AddSkill:SpiritSpeak,3,300" next="greeting"/>
+    <Option text="The tribe needs seers like you." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="visionsStart">
+    <NPCText>
+      <![CDATA[
+      “Yes. The day after her death, I woke up with my hands full of charcoal and bark scraps… symbols I’d never seen before, drawn while I slept.”<BR><BR>
+      “I still don’t know if I was chosen or cursed. Maybe both.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="What do the symbols mean to you?" next="symbolMeaning"/>
+    <Option text="Do you ever control what you draw?" next="symbolControl"/>
+    <Option text="Let’s return to something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="symbolMeaning">
+    <NPCText>
+      <![CDATA[
+      Kelnu closes his eyes. “They’re like music I can’t hear, but I feel the rhythm. I think they’re <b>warnings</b>. I just don’t speak the language yet.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Maybe together we can translate them." action="AddSkill:Inscription,2,300" next="greeting"/>
+    <Option text="Have the shamans helped?" next="spiritsChoice"/>
+  </Dialogue>
+
+  <Dialogue id="symbolControl">
+    <NPCText>
+      <![CDATA[
+      “Only once — when I tried to draw with my off-hand, the symbols came out clean and curved. Like they weren’t <i>mine</i>.”<BR><BR>
+      “Nura says that may mean a spirit uses me like a conduit. I hope it’s one of the gentle ones.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="That’s rare magic. Be proud." next="greeting"/>
+    <Option text="Sounds dangerous. Be careful." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="spiritsChoice">
+    <NPCText>
+      <![CDATA[
+      “I want to believe they chose me. That there’s purpose. But part of me wonders… what if I was just close when something cracked through the veil?”<BR><BR>
+      He frowns. “Does intent matter, if the result is the same?”<BR>
+      ]]>
+    </NPCText>
+    <Option text="It matters. You chose to honor the gift." next="greeting"/>
+    <Option text="Spirits or not, you’re doing good." next="greeting"/>
+    <Option text="Let’s return to earlier topics." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="tribeLife">
+    <NPCText>
+      <![CDATA[
+      “I was born here, under the canopy of the Verdant groves. I learned to track deer before I could write.”<BR><BR>
+      “I love the silence between birdcalls, the way the wind speaks if you listen. Cities are loud and… wrong.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="You’re truly a child of the forest." action="Karma:+100" next="greeting"/>
+    <Option text="You ever dream of leaving?" next="dreamLeave"/>
+  </Dialogue>
+
+  <Dialogue id="dreamLeave">
+    <NPCText>
+      <![CDATA[
+      “Sometimes. But every time I dream of leaving, something <i>follows</i> me. A shadow with antlers. It waits at the edge of my path. I think… I belong here. For now.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Stay. The forest needs guardians like you." action="Fame:+250" next="greeting"/>
+    <Option text="Antlers again… something’s watching." next="finalWarning"/>
+  </Dialogue>
+
+
+</DialogueFile>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="ZeelaEmberweave">
+
+  <!-- GREETING -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ffad42'>
+      A slender woman in a gown of woven embers tends a sacred fire, her gaze never meeting yours. Her voice is low, distant, like wind through coals.<BR><BR>
+      “Careful, outsider. The Everflame listens even now. Look not into my eyes — I see through fire’s truth, and fire curses the soul that stares back.”<BR><BR>
+      “Why do you disturb the fire’s vigil? Do you seek guidance, or do the spirits whisper trouble at your heels?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I wish to learn what the Everflame sees." next="visions"/>
+    <Option text="You speak of curses and spirits. Are you the tribe’s oracle?" next="oracle"/>
+    <Option text="I bring a warning. Some say a traitor walks among the tribe." next="traitorRumor"/>
+	<Option text="Tell me more about you, Zeela." next="zeelaBackstory"/>
+    <Option text="I was just curious. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Oracle Introduction -->
+  <Dialogue id="oracle">
+    <NPCText>
+      <![CDATA[
+      Zeela keeps her face turned toward the flames.<BR><BR>
+      “Oracle, some say. Fool, others. I am the Fire Keeper — the flames remember, they warn, and sometimes they burn. I speak their warnings, though few heed them.”<BR>
+      “Most would rather risk a traitor than face the truth fire brings. But you… will you listen?”
+      ]]>
+    </NPCText>
+    <Option text="I will listen. What do the flames say?" next="visions"/>
+    <Option text="Why do they call you a fool?" next="whyFool"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Why called a fool -->
+  <Dialogue id="whyFool">
+    <NPCText>
+      <![CDATA[
+      “Because fire shows what others fear to see. The tribe fears the word ‘traitor’ more than betrayal itself. They call me mad so they can sleep at night.”<BR>
+      “But you came to listen. So I will speak — if you dare hear the flame’s secrets.”
+      ]]>
+    </NPCText>
+    <Option text="Let me hear the fire's warning." next="visions"/>
+    <Option text="I should go. This is not my concern." action="Close"/>
+  </Dialogue>
+
+  <!-- Visions of the Fire -->
+  <Dialogue id="visions">
+    <NPCText>
+      <![CDATA[
+      Zeela tosses a fragrant herb into the Everflame, and the smoke twists into faces.<BR><BR>
+      “The fire spirit whispers of shadows hiding within leaves. Someone among us walks with another’s tongue, passing secrets where only the trees listen.”<BR>
+      “Find the one whose hands tremble at dawn, whose eyes never meet their kin. If you bring me proof, the fire may name the traitor.”<BR><BR>
+      <BASEFONT COLOR='#ff5733'>[You have received the quest: Flames of Betrayal]</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="How can I gather proof?" next="proof"/>
+    <Option text="What do you know of this traitor?" next="traitorDetails"/>
+    <Option text="I accept this quest." 
+            action="GiveItem:FactionKillQuestScroll(Flames of Betrayal,ZeelaEmberweave,250)" 
+            condition="!HasItem:FactionKillQuestScroll"
+            next="acceptQuest"/>
+    <Option text="That’s too dangerous for me." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="acceptQuest">
+    <NPCText>
+      <![CDATA[
+      Zeela nods, still not meeting your gaze.<BR>
+      “Bring me what the traitor hides: a torn scrap of cloak stained with ash. It will smell of burnt leaves and false promises. Only then can the fire spirit reveal what must be done.”<BR>
+      “Trust no one in shadows. And do not look into the flames too long, lest you see your own secrets staring back.”
+      ]]>
+    </NPCText>
+    <Option text="I will return with proof." action="Close"/>
+  </Dialogue>
+
+  <!-- Proof guidance -->
+  <Dialogue id="proof">
+    <NPCText>
+      <![CDATA[
+      “Watch the council at dawn — one will avoid the fire’s warmth and speak with a trembling voice. Search their hut, and you may find what is hidden: a cloak torn by thorns, reeking of ash.”<BR>
+      “Bring it here, and the flames will answer.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll investigate the council members." action="SendMessage:You have a clue: watch the council at dawn."/>
+    <Option text="Is the traitor dangerous?" next="traitorDetails"/>
+    <Option text="I will begin at once." action="Close"/>
+  </Dialogue>
+
+  <!-- Traitor Details -->
+  <Dialogue id="traitorDetails">
+    <NPCText>
+      <![CDATA[
+      “A shadow-walker, once of the tribe. They bear a mark burned by Minax’s magic, hidden beneath their sleeve. They act for fear, not hate.”<BR>
+      “They are desperate — cornered prey. Show mercy if you can, but justice must be done.”
+      ]]>
+    </NPCText>
+    <Option text="If I find the cloak, I’ll return to you." action="Close"/>
+    <Option text="Perhaps there’s another way?" next="secondChance"/>
+  </Dialogue>
+
+  <!-- Offer a peaceful solution -->
+  <Dialogue id="secondChance">
+    <NPCText>
+      <![CDATA[
+      “If you believe a soul can be redeemed, bring them to the Everflame at midnight. The fire spirit may judge them worthy of forgiveness — or burn away their lies.”<BR>
+      “But mercy is never free. Be sure before you act.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Zeela. I will decide when the time comes." action="Close"/>
+    <Option text="Better to let the flames decide." action="Close"/>
+  </Dialogue>
+
+  <!-- Traitor Rumor (if player brings up the subject first) -->
+  <Dialogue id="traitorRumor">
+    <NPCText>
+      <![CDATA[
+      Zeela’s hands still as she listens.<BR>
+      “You see what others will not speak. The Everflame has whispered this for nights. If you seek the truth, listen to the fire, not the frightened tongues of mortals.”<BR>
+      “Will you seek proof, or merely spread more fear?”
+      ]]>
+    </NPCText>
+    <Option text="I will find the proof for you." next="visions"/>
+    <Option text="It is not my place to meddle." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Complete: Proof Returned -->
+  <Dialogue id="questComplete">
+    <NPCText>
+      <![CDATA[
+      Zeela takes the torn, ashen cloak you offer. Flames leap higher, casting strange shadows.<BR>
+      “The spirit sees the truth now. You have served the tribe — and the fire — well.”<BR>
+      “Take this charm, woven from the Everflame itself. May it guard you against shadows yet to come.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Zeela. May the Everflame watch over us all." 
+            action="GiveItem:FireCharm"
+            next="rewardGiven"/>
+  </Dialogue>
+
+  <!-- Quest Complete: Redemption Path -->
+  <Dialogue id="redemptionComplete">
+    <NPCText>
+      <![CDATA[
+      You lead the trembling traitor to Zeela at midnight. She chants softly, casting sacred herbs into the fire. The spirit’s voice is heard only in your mind — a sound like distant thunder.<BR>
+      “Mercy given, mercy earned. The tribe is made whole, though scars remain. Take this — a blessing from the Everflame, for wisdom and courage.”<BR>
+      “Guard your heart from shadow, as you did theirs.”
+      ]]>
+    </NPCText>
+    <Option text="I accept this blessing." 
+            action="AddStat:Karma,500,0"
+            next="rewardGiven"/>
+  </Dialogue>
+
+  <!-- Reward Given End -->
+  <Dialogue id="rewardGiven">
+    <NPCText>
+      <![CDATA[
+      Zeela finally looks up, her amber eyes flickering with reflected flame.<BR>
+      “Go, now. The fire is restless — and there are always more secrets waiting to burn.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+<!-- BACKSTORY BRANCH -->
+<Dialogue id="zeelaBackstory">
+  <NPCText>
+    <![CDATA[
+    Zeela shifts slightly, still avoiding your eyes.<BR><BR>
+    “Few ask. Fewer listen.”<BR>
+    “I was born during a forest fire — the trees screamed, the animals fled. The elders said the flames licked my cradle but did not consume it.”<BR>
+    “So I was given to the Everflame — to hear it, to tend it, to serve it.”<BR>
+    “They say I’m fire-touched. Perhaps I am. But it is the fire that saved me — not the tribe.”
+    ]]>
+  </NPCText>
+  <Option text="Were you ever part of the council?" next="council"/>
+  <Option text="Why do you never look anyone in the eye?" next="noEyeContact"/>
+  <Option text="You were chosen by the flame?" next="chosen"/>
+  <Option text="That sounds like a lonely path." next="lonely"/>
+  <Option text="That’s enough for now." action="Close"/>
+</Dialogue>
+
+<!-- Was She on the Council? -->
+<Dialogue id="council">
+  <NPCText>
+    <![CDATA[
+    “They offered me a seat once. I refused.”<BR>
+    “The Everflame has no voice among the council. It whispers what they do not wish to hear. And I will not silence it to sit among them.”<BR><BR>
+    “Besides... if I joined them, I would see their eyes. I would know what each fears most. And they would know I saw it.”
+    ]]>
+  </NPCText>
+  <Option text="So you chose isolation instead." next="lonely"/>
+  <Option text="Your duty is heavier than any council title." next="chosen"/>
+  <Option text="Let's speak of something else." action="Close"/>
+</Dialogue>
+
+<!-- No Eye Contact -->
+<Dialogue id="noEyeContact">
+  <NPCText>
+    <![CDATA[
+    Zeela’s head tilts, and her voice softens.<BR><BR>
+    “The fire gave me sight — not of the world, but of hearts. When I look into someone’s eyes, I see their regrets. Their shame. Their lies.”<BR>
+    “And sometimes... their death.”<BR>
+    “The last time I met a gaze, I saw my sister’s bones before the wolves found her. I warned her not to go. She did not listen.”
+    ]]>
+  </NPCText>
+  <Option text="You’ve carried much alone." next="lonely"/>
+  <Option text="You see the truth in others... and yourself?" next="selfVision"/>
+  <Option text="I'm sorry for your loss." action="AddStat:Karma,100,0"/>
+</Dialogue>
+
+<!-- Chosen by the Flame -->
+<Dialogue id="chosen">
+  <NPCText>
+    <![CDATA[
+    “I was chosen, yes. Not by the tribe, but by the flame.”<BR>
+    “The Everflame speaks in crackle and ember. Its voice is not kind — but it is true. It warned me when the Verdant Grove cracked. It showed me the symbols Minax burned into the trees.”<BR>
+    “And now... it shows me you.”
+    ]]>
+  </NPCText>
+  <Option text="What does it say about me?" next="prophecyReveal" condition="KarmaAtLeast:500"/>
+  <Option text="What does it say about me?" next="prophecyCryptic" condition="KarmaBelow:500"/>
+  <Option text="What if the flame is wrong?" next="doubt"/>
+  <Option text="That’s... unsettling." action="Close"/>
+</Dialogue>
+
+<!-- Prophecy Reveal (High Karma) -->
+<Dialogue id="prophecyReveal">
+  <NPCText>
+    <![CDATA[
+    Zeela’s voice is almost reverent.<BR><BR>
+    “It sees your path forked between sacrifice and salvation.”<BR>
+    “One day you will stand before the tribe, with blood on one hand and light in the other. Whether you are healer or executioner — that choice is yours.”<BR>
+    “But the flame believes you can endure the burden.”
+    ]]>
+  </NPCText>
+  <Option text="I will strive to be worthy of that faith." action="AddStat:Str,5,600"/>
+  <Option text="I don’t know if I can carry that." action="AddStat:Int,5,600"/>
+</Dialogue>
+
+<!-- Prophecy Cryptic (Low Karma) -->
+<Dialogue id="prophecyCryptic">
+  <NPCText>
+    <![CDATA[
+    Zeela frowns slightly.<BR><BR>
+    “The fire does not speak clearly of you. It sees smoke. Obscurity. A blade that might cut inward or out.”<BR>
+    “Some fires cleanse. Some consume. I hope you learn the difference.”
+    ]]>
+  </NPCText>
+  <Option text="I will prove the fire wrong." action="Karma:100"/>
+  <Option text="Then I will be its wildfire." action="Karma:-100"/>
+</Dialogue>
+
+<!-- Doubt -->
+<Dialogue id="doubt">
+  <NPCText>
+    <![CDATA[
+    Zeela’s mouth tightens, just barely.<BR><BR>
+    “The flame is never wrong. But *I* might be.”<BR>
+    “If ever I speak falsely, may the Everflame turn cold.”<BR>
+    She pauses.<BR>
+    “It hasn’t. Yet.”
+    ]]>
+  </NPCText>
+  <Option text="Then I will trust you... and it." action="AddSkill:SpiritSpeak,5,600"/>
+  <Option text="Flame or not, truth must be earned." action="AddStat:Int,5,600"/>
+</Dialogue>
+
+<!-- Lonely Path -->
+<Dialogue id="lonely">
+  <NPCText>
+    <![CDATA[
+    “The fire speaks often. People do not.”<BR>
+    “But silence teaches patience. And truth.”<BR>
+    “Besides... you are speaking now, aren’t you?”
+    ]]>
+  </NPCText>
+  <Option text="Yes. And I will listen more closely from now on." action="Karma:250"/>
+  <Option text="Everyone needs someone to speak to." action="GiveGold:100"/>
+  <Option text="Maybe the Everflame sent me." next="chosen"/>
+</Dialogue>
+
+<!-- Self-Vision -->
+<Dialogue id="selfVision">
+  <NPCText>
+    <![CDATA[
+    “Yes. That is the burden of true sight.”<BR>
+    “I see the cowardice I did not confess. The warning I failed to shout. The choice I didn’t make in time.”<BR>
+    “I live beside the Everflame not because I am brave... but because it reminds me of what I must never become again.”
+    ]]>
+  </NPCText>
+  <Option text="We all carry pain. But you carry it with purpose." action="Karma:100"/>
+  <Option text="Maybe it’s time you forgave yourself." action="AddStat:Int,5,600"/>
+  <Option text="Pain makes strong walls. But poor doors." next="lonely"/>
+</Dialogue>
+
+
+</DialogueFile>

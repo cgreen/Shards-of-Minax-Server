@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="EruSpiritDancer">
+
+  <!-- ========== GREETING ========== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#66ff99'>
+      Before you dances Eru, her feet barely disturbing the soft earth, ribbons and petals fluttering with each motion. She pauses, eyes bright and curious.<BR><BR>
+      "Greetings, friend of the forest. Have you come to listen to the spirits, or perhaps to weave a new story of your own?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I wish to hear a story of the Verdant Tribes." next="stories"/>
+    <Option text="Can you tell me about the Hinokami?" next="hinokami"/>
+    <Option text="Why do you seem troubled, Eru?" next="troubled"/>
+    <Option text="What is a Spirit Dancer?" next="dancer"/>
+	<Option text="Tell me more about yourself, Eru." next="eruBackstoryIntro"/>
+    <Option text="I am just passing through." next="dismiss"/>
+  </Dialogue>
+
+  <!-- ========== VERDANT STORIES ========== -->
+  <Dialogue id="stories">
+    <NPCText>
+      <![CDATA[
+      Eru spins, skirts swirling like falling leaves. "Our stories are as old as the trees, carried by firelight and song. Would you hear of ancient heroes, or of times when spirits walked beside us?"
+      ]]>
+    </NPCText>
+    <Option text="Tell me of the first Spirit Dancer." next="firstdancer"/>
+    <Option text="Tell me about the last war with outsiders." next="warstory"/>
+    <Option text="Another time, perhaps." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="firstdancer">
+    <NPCText>
+      <![CDATA[
+      "Long ago, Eyla the Dawn-Walker danced until dawn beside the Great Tree, drawing the lost spirits of the tribe home. Her steps shaped the morning mists, her song stilled even the crows. It is said her dance ended a great blight, and that her spirit remains to guide those who are lost."
+      ]]>
+    </NPCText>
+    <Option text="Thank you for sharing." next="greeting"/>
+    <Option text="Do you still speak to Eyla’s spirit?" next="spiritcontact"/>
+  </Dialogue>
+
+  <Dialogue id="spiritcontact">
+    <NPCText>
+      <![CDATA[
+      Eru smiles, eyes distant. "Sometimes, in the hush between drumbeats, I feel her presence. Would you try to listen with me? The forest is never truly silent for those who know its voice."
+      ]]>
+    </NPCText>
+    <Option text="Join Eru in a spirit-listening ritual." action="AddStat:Int,5,120" next="ritual"/>
+    <Option text="Another time." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="ritual">
+    <NPCText>
+      <![CDATA[
+      You sit with Eru, focusing on the rustle of leaves and distant bird calls. A sense of calm settles over you. Eru whispers: "The ancestors thank you for honoring their memory. Carry this wisdom with you."
+      ]]>
+    </NPCText>
+    <Option text="I feel at peace. Thank you." action="Karma:100" next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="warstory">
+    <NPCText>
+      <![CDATA[
+      "When the strangers first set foot upon our groves, blood stained the ferns. But even then, there were those who wished for peace. My own great-grandmother hid a wounded Hinokami scout, risking exile for hope of unity. Some say I inherited her boldness—or her foolishness."
+      ]]>
+    </NPCText>
+    <Option text="Is that why you bridge both tribes?" next="bridge"/>
+    <Option text="The wounds between Verdant and Hinokami run deep." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="bridge">
+    <NPCText>
+      <![CDATA[
+      Eru nods, hesitant. "We are all more than the soil beneath our feet. Sometimes, the path to harmony must be danced by those willing to risk old anger. Even now, I try to walk both worlds."
+      ]]>
+    </NPCText>
+    <Option text="Is that dangerous for you?" next="dangerous"/>
+    <Option text="I wish both tribes peace." next="greeting"/>
+  </Dialogue>
+
+  <!-- ========== ASK ABOUT HINOKAMI ========== -->
+  <Dialogue id="hinokami">
+    <NPCText>
+      <![CDATA[
+      Eru lowers her voice. "The Hinokami are disciplined and proud, but they carry burdens of loss, just as we do. I visit their lantern festivals, and their storytellers have taught me many songs. Yet... some here would call me traitor for those friendships."
+      ]]>
+    </NPCText>
+    <Option text="Why do you risk angering your tribe?" next="riskanger"/>
+    <Option text="You believe in unity?" next="believeunity"/>
+    <Option text="Thank you for your honesty." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="riskanger">
+    <NPCText>
+      <![CDATA[
+      She looks away, voice small. "Sometimes I think the only way to heal old wounds is to refuse to choose a side. Yet there are secrets I keep—for the sake of peace."
+      ]]>
+    </NPCText>
+    <Option text="Are you hiding something now, Eru?" next="secret"/>
+    <Option text="I respect your courage." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="believeunity">
+    <NPCText>
+      <![CDATA[
+      "Yes. Division only serves Minax. The world is too broken for more walls. I hope that someday, my people will see wisdom in the songs of both tribes."
+      ]]>
+    </NPCText>
+    <Option text="I hope so too." next="greeting"/>
+  </Dialogue>
+
+  <!-- ========== PROBE FOR TROUBLE ========== -->
+  <Dialogue id="troubled">
+    <NPCText>
+      <![CDATA[
+      Eru sighs, glancing furtively at the path toward Hinokami lands. "You are perceptive. There are times I feel the weight of two worlds on my shoulders. Not all here would forgive me for the company I keep."
+      ]]>
+    </NPCText>
+    <Option text="Who are you worried about?" next="worried"/>
+    <Option text="You can trust me, Eru." next="trust"/>
+    <Option text="Your secret is safe with me." condition="KarmaAtLeast:0" next="safe"/>
+    <Option text="I’ll leave you in peace." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="worried">
+    <NPCText>
+      <![CDATA[
+      She hesitates, choosing her words. "There are those who would see war over love. My heart is... entangled with one from Hinokami—a craftsman named Kaito. If this were known, some would call for my exile or worse."
+      ]]>
+    </NPCText>
+    <Option text="How can I help you, Eru?" next="help"/>
+    <Option text="Why not end the relationship?" next="endit"/>
+    <Option text="Love should not be a crime." next="love"/>
+  </Dialogue>
+
+  <Dialogue id="trust">
+    <NPCText>
+      <![CDATA[
+      Eru studies you, searching your face for signs of deceit. "There are so few I can trust. If I ask for your aid, you must not betray me, nor Kaito. Will you help protect our secret?"
+      ]]>
+    </NPCText>
+    <Option text="I give you my word." next="help"/>
+    <Option text="I cannot promise that." action="Karma:-100" next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="safe">
+    <NPCText>
+      <![CDATA[
+      Her eyes well with relief. "Thank you. I sense the spirits have guided me to a friend. If you ever hear rumors, or if someone questions me, please divert suspicion. Our peace may depend on it."
+      ]]>
+    </NPCText>
+    <Option text="I’ll do what I can, Eru." action="Karma:150" next="greeting"/>
+    <Option text="Your secret is safe." next="greeting"/>
+  </Dialogue>
+
+  <!-- ========== SECRET ROMANCE QUEST ========== -->
+  <Dialogue id="help">
+    <NPCText>
+      <![CDATA[
+      Eru whispers: "Kaito and I meet in the old willow grove at dusk. But lately, I fear we are watched. If you see anyone—tribesfolk or outsiders—lurking there, please warn us, or lead them away. You may also tell Kaelor or Nura a false tale if they begin to suspect."
+      ]]>
+    </NPCText>
+    <Option text="I will watch over you both." action="GiveItem:SecretRomanceQuestScroll(Eru,Kaito)" next="romancehelp"/>
+    <Option text="This is too risky." action="Karma:-50" next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="romancehelp">
+    <NPCText>
+      <![CDATA[
+      Eru gives you a braided bracelet. "Wear this, and Kaito will know you as a friend. If you keep our secret, both tribes may yet find peace. If not, I fear my dance will end in sorrow."
+      ]]>
+    </NPCText>
+    <Option text="You have my trust." action="Karma:150" next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="endit">
+    <NPCText>
+      <![CDATA[
+      "Could you sever your own heart? I will not. I would rather risk all than live a lie. Still, I thank you for your concern."
+      ]]>
+    </NPCText>
+    <Option text="I hope you find happiness." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="love">
+    <NPCText>
+      <![CDATA[
+      "Some say love is the most dangerous magic. Perhaps that is why it frightens them. I hope the spirits watch over us both."
+      ]]>
+    </NPCText>
+    <Option text="May your story have a happy ending." next="greeting"/>
+  </Dialogue>
+
+  <!-- ========== WHAT IS A SPIRIT DANCER? ========== -->
+  <Dialogue id="dancer">
+    <NPCText>
+      <![CDATA[
+      "A Spirit Dancer is the voice of the tribe’s memories—the bridge between this world and the next. Through story and song, I keep the past alive, so that the future does not repeat our old wounds."
+      ]]>
+    </NPCText>
+    <Option text="A noble calling." next="greeting"/>
+    <Option text="Is it a lonely role?" next="lonely"/>
+  </Dialogue>
+
+  <Dialogue id="lonely">
+    <NPCText>
+      <![CDATA[
+      Eru nods softly. "At times, yes. But every story I tell brings us closer to understanding. And every friend—such as you—makes the burden lighter."
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Eru." next="greeting"/>
+  </Dialogue>
+
+  <!-- ========== DISMISS ========== -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Eru bows gracefully. "May your path be gentle, wanderer. If you wish to hear a tale or share a secret, I am always here beneath the old trees."
+      ]]>
+    </NPCText>
+    <Option text="Farewell, Eru." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== SECRET (Conditional Branching) ========== -->
+  <Dialogue id="secret">
+    <NPCText>
+      <![CDATA[
+      Eru hesitates, weighing trust. "Perhaps I can trust you... If you truly mean no harm, swear by the spirits you will protect me and Kaito. Otherwise, let this secret remain unspoken."
+      ]]>
+    </NPCText>
+    <Option text="I swear by the spirits." next="help"/>
+    <Option text="Your trust is misplaced." action="Karma:-100" next="greeting"/>
+  </Dialogue>
+
+<!-- ========= BACKSTORY ROOT ========= -->
+<Dialogue id="eruBackstoryIntro">
+  <NPCText>
+    <![CDATA[
+    Eru tilts her head, thoughtful. "Most only ask me for stories of the tribe, not the dancer who tells them. But you? I sense true curiosity in your eyes."<BR><BR>
+    She gives a soft laugh. "Very well. Ask, and I shall share pieces of the melody that shaped me."
+    ]]>
+  </NPCText>
+  <Option text="How did you become a Spirit Dancer?" next="eruOrigin"/>
+  <Option text="What do you believe in most deeply?" next="eruBeliefs"/>
+  <Option text="What brings you joy, Eru?" next="eruJoy"/>
+  <Option text="You carry sorrow behind your smile..." next="eruLoss"/>
+  <Option text="Thank you, but perhaps another time." next="greeting"/>
+</Dialogue>
+
+<!-- ========= ORIGIN ========= -->
+<Dialogue id="eruOrigin">
+  <NPCText>
+    <![CDATA[
+    "When I was a child, I danced to call the stars to rise. My mother was a Spirit Dancer before me, and her mother before her. But it was not blood that gave me this role—it was the forest."<BR><BR>
+    "During the redleaf season, I wandered too far and was lost for three days. The tribe feared I was gone. But I returned, barefoot and singing in an unknown tongue. The shamans said I had danced with the spirits."<BR><BR>
+    "From then on, I remembered every tale told to me. Every whisper the trees shared. It is not a burden. It is a promise kept."
+    ]]>
+  </NPCText>
+  <Option text="The forest claimed and returned you. Fascinating." next="eruBeliefs"/>
+  <Option text="That explains your deep connection to the land." next="eruJoy"/>
+</Dialogue>
+
+<!-- ========= BELIEFS ========= -->
+<Dialogue id="eruBeliefs">
+  <NPCText>
+    <![CDATA[
+    "I believe all stories are true—*for someone*. The fire warms us, but it also burns. The wind may guide or deceive. Spirits are not good or evil... they are what we ask of them, and how we listen."<BR><BR>
+    "But above all, I believe that silence—true silence—is sacred. Not absence, but stillness. That is where wisdom hides."
+    ]]>
+  </NPCText>
+  <Option text="You sound like a druid." next="eruJoy"/>
+  <Option text="What would the spirits say of me?" condition="KarmaAtLeast:0" next="eruInsight"/>
+  <Option text="What would the spirits say of me?" condition="KarmaBelow:0" next="eruDarkInsight"/>
+</Dialogue>
+
+<Dialogue id="eruInsight">
+  <NPCText>
+    <![CDATA[
+    Eru closes her eyes and listens. "The grove sees you as a branch reaching for light, though your roots still search for fertile ground. Walk with purpose, and the spirits will walk beside you."
+    ]]>
+  </NPCText>
+  <Option text="Thank you for the blessing." action="Karma:50" next="eruJoy"/>
+</Dialogue>
+
+<Dialogue id="eruDarkInsight">
+  <NPCText>
+    <![CDATA[
+    Eru’s voice softens. "You stir the wind in unnatural ways. The spirits do not fear you… but they watch you. Be wary. Even shadows leave echoes."
+    ]]>
+  </NPCText>
+  <Option text="Perhaps I should change that." action="Karma:25" next="eruJoy"/>
+  <Option text="Let them watch. I fear no spirits." next="greeting"/>
+</Dialogue>
+
+<!-- ========= JOY ========= -->
+<Dialogue id="eruJoy">
+  <NPCText>
+    <![CDATA[
+    "Joy? The way moonlight dances on dew. The sound of a child remembering a story you taught them. Dancing barefoot in spring rains until I cannot breathe for laughing."<BR><BR>
+    "Or—" She pauses with a blush. "—letters from someone far away, whose words feel like warm hands over my heart. But that is a story not yet ready to be told."
+    ]]>
+  </NPCText>
+  <Option text="Your heart is still dancing, even when you are still." next="eruLoss"/>
+  <Option text="Tell me more of this 'someone far away'..." next="eruHintRomance"/>
+</Dialogue>
+
+<Dialogue id="eruHintRomance">
+  <NPCText>
+    <![CDATA[
+    Eru’s gaze lingers on the horizon. "Kaito. A Hinokami woodcrafter who carves stories into grain and shape. His silence says more than words ever could."<BR><BR>
+    "But such joy is dangerous. For me. For him. For the fragile peace our tribes pretend to hold. And so... I dance, and I wait."
+    ]]>
+  </NPCText>
+  <Option text="You are not alone in this." action="Karma:100" next="greeting"/>
+</Dialogue>
+
+<!-- ========= LOSS ========= -->
+<Dialogue id="eruLoss">
+  <NPCText>
+    <![CDATA[
+    Her smile fades, if only for a moment. "My mother was taken by a fever spirit when I was still young. We burned her body with wild thyme and moonwood, and I danced the ritual of Return alone, trembling."<BR><BR>
+    "Since then, I have told her stories for others, so she may live through them. When you speak of someone long enough, they return. If only in the minds of those who hear."
+    ]]>
+  </NPCText>
+  <Option text="That is beautiful. I am honored to hear it." action="Karma:75" next="greeting"/>
+  <Option text="Perhaps I will speak of you one day, too." action="Fame:50" next="greeting"/>
+</Dialogue>
+
+
+</DialogueFile>

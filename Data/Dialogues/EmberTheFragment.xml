@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="EmberTheFragment">
+
+  <!-- === root === -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b681e2'>
+      You see a small girl, pale as candlewax, sitting atop a mossy stone. Her eyes are pools of dusk, too old for her smooth face. Shadows seem to linger at her feet.
+      <BR><BR>
+      She does not smile. Instead, she gazes right through you and whispers in a sing-song voice:
+      <BR><BR>
+      “Will you be the one who wakes the ogre in the roots, or the one who closes their eyes first?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Who are you, little one?" next="who"/>
+    <Option text="What do you mean, 'ogre in the roots'?" next="ogreIntro"/>
+    <Option text="You seem... odd. Why do you talk to the shadows?" next="shadows"/>
+    <Option text="Never mind. I’ll go." action="Close"/>
+  </Dialogue>
+
+  <!-- Who is Ember? -->
+  <Dialogue id="who">
+    <NPCText>
+      <![CDATA[
+      She tilts her head.<BR>
+      “I’m Ember. Names are just handles so you don’t slip away. The grown-ups say I’m ‘not right’, but Edda gives me berries, and Mira tells me stories when her father’s not listening. I belong everywhere and nowhere. Like you, sometimes.”
+      <BR><BR>
+      Her gaze is steady and ancient.
+      ]]>
+    </NPCText>
+    <Option text="Are you all alone?" next="alone"/>
+    <Option text="What stories does Mira tell?" next="mira"/>
+    <Option text="What do you know about this ogre?" next="ogreIntro"/>
+    <Option text="I should be going." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="alone">
+    <NPCText>
+      <![CDATA[
+      “No one is alone. The shadows always whisper, and the roots remember all footsteps. Sometimes Aldric watches me from the trees, pretending I’m a lost fox. Priestess Miralda lights candles and hopes I’ll go away, but I like her songs.”
+      <BR><BR>
+      Her smile is slight, unsettling.
+      ]]>
+    </NPCText>
+    <Option text="What do the shadows say to you?" next="shadows"/>
+    <Option text="Tell me about the ogre." next="ogreIntro"/>
+    <Option text="Maybe I should leave." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="mira">
+    <NPCText>
+      <![CDATA[
+      “She tells me about big ships, golden deserts, and cities that float in the sky. She wants to leave, but the marshes don’t like to let go. She gave me this garland so I wouldn’t get lost.”<BR>
+      Ember plucks at the withered flowers in her hair. “But you can still get lost, even when you never move.”
+      ]]>
+    </NPCText>
+    <Option text="Are you lost, Ember?" next="lost"/>
+    <Option text="Let's talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="lost">
+    <NPCText>
+      <![CDATA[
+      “A piece can be lost, but not the whole. I wait for someone to find the missing bits. Maybe you’ll help?”
+      ]]>
+    </NPCText>
+    <Option text="Help with what?" next="ogreIntro"/>
+    <Option text="You’re a strange child." next="strange"/>
+  </Dialogue>
+
+  <Dialogue id="strange">
+    <NPCText>
+      <![CDATA[
+      She giggles, but there’s no joy in it.<BR>
+      “All children are strange. Some just hide it better. Sometimes I dream of being everywhere at once, and then I wake up here, with dirt on my hands and whispers in my ears.”
+      ]]>
+    </NPCText>
+    <Option text="I suppose I was strange once too." next="greeting"/>
+    <Option text="What do you want from me?" next="ogreIntro"/>
+  </Dialogue>
+
+  <!-- Shadows -->
+  <Dialogue id="shadows">
+    <NPCText>
+      <![CDATA[
+      Ember’s voice drops to a hush.<BR>
+      “The shadows say many things. Sometimes they say ‘run’. Sometimes they say ‘listen’. Right now, they say you’re going to die here, but not today. Not if you listen to me.”
+      ]]>
+    </NPCText>
+    <Option text="What should I listen for?" next="listen"/>
+    <Option text="Is this a warning?" next="warning"/>
+    <Option text="Enough riddles. Speak plainly." next="ogreIntro"/>
+  </Dialogue>
+
+  <Dialogue id="listen">
+    <NPCText>
+      <![CDATA[
+      “Roots cracking under heavy feet. Breath like wet stone. A voice that doesn’t fit the mouth it comes from. That’s when you know the ogre is near. The ShadowOgre.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about the ShadowOgre." next="ogreIntro"/>
+    <Option text="Why do you know all this?" next="knows"/>
+  </Dialogue>
+
+  <Dialogue id="warning">
+    <NPCText>
+      <![CDATA[
+      “Warnings are gifts. Some people open them, some leave them to rot.”<BR>
+      She stares at you. “I hope you open yours in time.”
+      ]]>
+    </NPCText>
+    <Option text="What is the warning?" next="ogreIntro"/>
+    <Option text="Why are you helping me?" next="knows"/>
+  </Dialogue>
+
+  <Dialogue id="knows">
+    <NPCText>
+      <![CDATA[
+      Ember’s lips press together.<BR>
+      “The roots carry memories, and sometimes the shadows let me see. Or maybe I’m just making it up. You decide.”
+      ]]>
+    </NPCText>
+    <Option text="Alright, tell me about the ShadowOgre." next="ogreIntro"/>
+    <Option text="I don’t have time for this." action="Close"/>
+  </Dialogue>
+
+  <!-- ShadowOgre Quest Branch -->
+  <Dialogue id="ogreIntro">
+    <NPCText>
+      <![CDATA[
+      Ember hugs her knees and looks at the ground.<BR>
+      “The ShadowOgre isn’t like the others. It remembers too much. It was a man once, or a dream, or a hunger with a name. It comes at twilight, dragging darkness behind it. It takes things people forget—like sheep, or hope.”
+      <BR><BR>
+      “If you follow the old stone wall past the withered tree, you’ll find its den. Or it will find you. Bring me the ogre’s blackened heart, and maybe the shadows will let you rest easy.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll hunt the ShadowOgre for you."
+      action="GiveItem:FactionKillQuestScroll(ShadowOgre,1,Eldermoor,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="questAccept"/>
+    <Option text="Why do you want the ogre’s heart?" next="whyHeart"/>
+    <Option text="Is it working for Minax?" next="minax"/>
+    <Option text="Do you ever fear it will find you?" next="fear"/>
+    <Option text="Not interested in hunting monsters." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="questAccept">
+    <NPCText>
+      <![CDATA[
+      Ember’s eyes flash with impossible color.<BR>
+      “You might come back. Or you might not. But if you do, bring the heart to me, not to Halric. He won’t know what to do with it.”
+      <BR><BR>
+      “Remember: it hates fire, and it’s afraid of its own reflection. Shadows lie, but the moon does not.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll remember. Wish me luck." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="whyHeart">
+    <NPCText>
+      <![CDATA[
+      Ember’s expression is unreadable.<BR>
+      “A heart can be many things: a curse, a promise, or a key. Sometimes it’s just what’s left after all the stories are told. This one is heavy with sorrow. I want to see if it still beats.”
+      ]]>
+    </NPCText>
+    <Option text="You are not what you seem, Ember." next="notSeem"/>
+    <Option text="Very well, I’ll get the heart." 
+      action="GiveItem:FactionKillQuestScroll(ShadowOgre,1,Eldermoor,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="questAccept"/>
+    <Option text="I don’t want any part of this." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="notSeem">
+    <NPCText>
+      <![CDATA[
+      She shrugs.<BR>
+      “Maybe I’m just a lost child. Or maybe I’m the echo of something broken, waiting to be whole. Does it matter, if I can help?”
+      ]]>
+    </NPCText>
+    <Option text="I suppose not. I’ll do it." 
+      action="GiveItem:FactionKillQuestScroll(ShadowOgre,1,Eldermoor,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="questAccept"/>
+    <Option text="I’ll be going." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      “Minax is a name for hunger that forgot its shape. The ogre is not her servant, but it was touched by her shadow. Sometimes I see her face in the river, or in broken glass. She looks back.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll end the ogre’s suffering, then." 
+      action="GiveItem:FactionKillQuestScroll(ShadowOgre,1,Eldermoor,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="questAccept"/>
+    <Option text="You’re unsettling, Ember." next="unsettling"/>
+  </Dialogue>
+
+  <Dialogue id="unsettling">
+    <NPCText>
+      <![CDATA[
+      Ember gives a sad, slow nod.<BR>
+      “Truth is unsettling, even for those who carry it. Sometimes it’s lighter if you share it.”
+      ]]>
+    </NPCText>
+    <Option text="Let’s speak of lighter things." next="greeting"/>
+    <Option text="Farewell, Ember." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="fear">
+    <NPCText>
+      <![CDATA[
+      “All things are found, eventually. Even shadows must rest. If I’m quiet enough, maybe it will pass me by.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll try not to draw its attention to you." next="greeting"/>
+    <Option text="Best of luck, Ember." action="Close"/>
+  </Dialogue>
+</DialogueFile>

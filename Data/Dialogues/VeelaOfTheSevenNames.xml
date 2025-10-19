@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="VeelaOfTheSevenNames">
+
+  <!-- Greeting Root -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b0d0ef'>
+      You find a slender woman seated atop a weathered stone, her <B>Moonpetal Robe</B> trailing over the snow like a spill of blue auroras. She stirs, eyes clouded with dreams, and pulls her <B>Slumberveil Hood</B> down to peer at you.<BR><BR>
+      "Hush, hush, tread softly—my dreams still echo in the air. What name do I wear today, child of the storm?"<BR>
+      Her <B>Dreamweaver Sash</B> pulses faintly as she regards you with a distant smile.<BR><BR>
+      <I>(Her mood shifts as if the wind decided it; she seems both ageless and frail. Children peek from behind a snowdrift, waiting for her to sing a rhyme.)</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Are you Veela? Why do they call you the Oracle?" next="whoami"/>
+    <Option text="You look tired. Did you dream anything for me?" next="prophecy"/>
+    <Option text="That’s a beautiful robe—where did you get it?" next="robe"/>
+    <Option text="Why do children follow you?" next="children"/>
+	<Option text="Tell me about your past... if you remember it." next="veelaPastIntro"/>
+    <Option text="Just passing by, sorry." action="Close"/>
+  </Dialogue>
+
+  <!-- Who is Veela? -->
+  <Dialogue id="whoami">
+    <NPCText>
+      <![CDATA[
+      She laughs, musical but slightly sad.<BR>
+      "Today, I am Veela-of-the-Drifting-Snow. Tomorrow, perhaps Veela-Who-Walks-Between, or Veela-the-Forgotten. I have seven names, and never remember the one I had last.<BR><BR>
+      Oracle? Some say I speak for the Obelisk, or for things that dream beneath the ice. I only know that I sleep, and when I wake, riddles spill from my mouth like snowflakes." <BR>
+      She sighs. "Then they vanish, and I am empty again."<BR><BR>
+      "Do you seek answers, or only company?"
+      ]]>
+    </NPCText>
+    <Option text="I could use guidance, if you have any." next="prophecy"/>
+    <Option text="What is the Obelisk to you?" next="obelisk"/>
+    <Option text="Maybe just a story, if you’d share one." next="story"/>
+    <Option text="I should go." action="Close"/>
+  </Dialogue>
+
+  <!-- Dream Prophecy -->
+  <Dialogue id="prophecy">
+    <NPCText>
+      <![CDATA[
+      Veela’s eyes flutter shut, lips moving in a songless whisper. The <B>Dreamweaver Sash</B> glimmers brighter.<BR>
+      "I dreamed of seven falling stars and a face made of ice and sorrow. There was a <B>Shardbearer</B>—oh, how strange, you wear that title like a borrowed cloak... Is it yours?"<BR><BR>
+      Her voice goes distant.<BR>
+      "I saw a Glacial Ogre—huge, cruel, with teeth of rime and heart of spite—trampling the old children’s stones. He carries a lock of Irinya’s hair on his belt, stolen while she slept."<BR><BR>
+      Veela shivers violently.<BR>
+      "If you banish that ogre, perhaps my dreams will be quieter. Will you help the dreams, Shardbearer?"
+      ]]>
+    </NPCText>
+    <Option text="I will defeat the Glacial Ogre for you."
+      action="GiveItem:FactionKillQuestScroll(GlacialOgre,1,Frostmere,700)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="acceptQuest"/>
+    <Option text="Why does it want Irinya’s hair?" next="irinya"/>
+    <Option text="Why do you forget your prophecies?" next="forget"/>
+    <Option text="I’m not ready to fight an ogre." next="decline"/>
+  </Dialogue>
+
+  <Dialogue id="acceptQuest">
+    <NPCText>
+      <![CDATA[
+      Her fingers brush your sleeve, cold but comforting.<BR>
+      "Thank you, Shardbearer. Seek the ogre near the frozen standing stones when moonlight is sharpest. Beware: it remembers pain, and its voice calls the cold wind to blind you.<BR><BR>
+      If you return with its frost-marked tusk, I will try to remember a dream for you—a true one, not lost in sleep."<BR>
+      The <B>Bracelets of Forgetting</B> on her wrists glint, and for a moment she almost looks clear-eyed.
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with the tusk." action="Close"/>
+  </Dialogue>
+
+  <!-- Asking about Irinya’s Hair -->
+  <Dialogue id="irinya">
+    <NPCText>
+      <![CDATA[
+      Veela’s eyes widen in faint fear.<BR>
+      "Ogres are not wise, but magic clings to them like cold to fingers. Irinya is... touched by the Obelisk. Her hair, a strand stolen, lets the ogre hear the wind’s secrets—my secrets, perhaps.<BR><BR>
+      Sometimes, I think it wants to dream, too. Or to drag Irinya into its own nightmares."<BR>
+      She looks away.<BR>
+      "Don’t let it keep her gift. Dreams can be fragile."
+      ]]>
+    </NPCText>
+    <Option text="I’ll make sure it never threatens her again."
+      action="GiveItem:FactionKillQuestScroll(GlacialOgre,1,Frostmere,700)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="acceptQuest"/>
+    <Option text="Sounds dangerous. I’ll come back later." action="Close"/>
+  </Dialogue>
+
+  <!-- Why do you forget? -->
+  <Dialogue id="forget">
+    <NPCText>
+      <![CDATA[
+      She holds up her wrists.<BR>
+      "These are <B>Bracelets of Forgetting</B>. Irinya made them to help me rest, but perhaps they work too well. If I hold on to too many futures, my mind turns to ice. So, I forget each prophecy soon as I speak it.<BR><BR>
+      Only the children remember my riddles. They sing them at dusk, so the nightmares stay away."<BR>
+      She smiles at a group of children, who grin back shyly.
+      ]]>
+    </NPCText>
+    <Option text="Maybe I’ll ask the children what you’ve said." next="children"/>
+    <Option text="Tell me more about the Obelisk." next="obelisk"/>
+    <Option text="I should leave you to your rest." action="Close"/>
+  </Dialogue>
+
+  <!-- The Children -->
+  <Dialogue id="children">
+    <NPCText>
+      <![CDATA[
+      Veela hums a lullaby, soft as wind through snow-laden trees.<BR>
+      "The children listen because I tell stories that frighten their parents. Of things that crawl beneath the ice, of lost heroes and true hearts. They remember for me.<BR><BR>
+      Svala sometimes scolds me for ‘filling their heads with frost,’ but I know each child’s secret name. I would never let harm come to them."<BR>
+      One child giggles and runs up to tuck a blue wildflower into Veela’s <B>Slumberveil Hood</B>.<BR>
+      "My favorite listeners. My last family, perhaps."
+      ]]>
+    </NPCText>
+    <Option text="Will you teach me a lullaby?" next="lullaby"/>
+    <Option text="Do the children know about the ogre?" next="childrenOgre"/>
+    <Option text="Thank you for sharing. I’ll return." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="lullaby">
+    <NPCText>
+      <![CDATA[
+      Veela sings in a voice that seems to shape the air:<BR>
+      "<I>Ice and dream, dream and ice,<BR>
+      Sleep with stars for your delight.<BR>
+      When the ogre stomps and roars,<BR>
+      Find your friends behind closed doors.<BR>
+      Shardbearer wanders, hope in hand,<BR>
+      Sleep and dream and heal the land.</I>"<BR><BR>
+      "Now you know one of my names. Guard it well."
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Veela." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="childrenOgre">
+    <NPCText>
+      <![CDATA[
+      She nods.<BR>
+      "They have games where they pretend to be the ogre, stomping and making the wind howl. But they know to hide if the real one comes. Svala taught them, and Bryndra patrols after dusk. Still, sometimes I hear the ogre’s footsteps in my dreams, so close..."
+      ]]>
+    </NPCText>
+    <Option text="Then I must act before it comes for them." 
+      action="GiveItem:FactionKillQuestScroll(GlacialOgre,1,Frostmere,700)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="acceptQuest"/>
+    <Option text="You’ve given me much to think about." action="Close"/>
+  </Dialogue>
+
+  <!-- About the Obelisk -->
+  <Dialogue id="obelisk">
+    <NPCText>
+      <![CDATA[
+      Veela’s eyes glaze over.<BR>
+      "It is a wound in the world, yet also a balm. Sometimes I hear it sing in seven voices. Irinya says it was here before the sky learned to snow.<BR><BR>
+      When I sleep beside it, I dream the world ending—and beginning—over and over. But I also see the faces of those I love. Kaelen, who seeks to mend what is broken. Irinya, who fears the cost of knowledge. Even Bryndra, who stands so straight, carrying more weight than she lets on.<BR><BR>
+      All their futures swirl around the Obelisk, but I… I only dream and forget."
+      ]]>
+    </NPCText>
+    <Option text="Does the ogre threaten the Obelisk too?" next="ogreObelisk"/>
+    <Option text="I wish you peace in your dreams." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ogreObelisk">
+    <NPCText>
+      <![CDATA[
+      "If it could, it would shatter the ice and feast on the power within. But the Obelisk dreams deeper than the ogre can reach. Still, every wound it causes to this place echoes in my sleep. Banish it, and the ice may rest."
+      ]]>
+    </NPCText>
+    <Option text="I will do it, for you and the ice."
+      action="GiveItem:FactionKillQuestScroll(GlacialOgre,1,Frostmere,700)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="acceptQuest"/>
+    <Option text="I need time to prepare." action="Close"/>
+  </Dialogue>
+
+  <!-- Story Option -->
+  <Dialogue id="story">
+    <NPCText>
+      <![CDATA[
+      She smiles, lost in memory.<BR>
+      "Once, I was Veela-of-the-Wandering-Shoal, a fisher’s daughter on the southern ice. I loved a boy from Minoc, but he was lost when the ice broke and the sea swallowed our village. I came north and forgot him, as I forget so much. But sometimes, when the wind howls, I think I hear his song in the dark.<BR><BR>
+      Perhaps, when you return, I will remember another story. Or another name."
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Veela. I’ll return soon." action="Close"/>
+  </Dialogue>
+
+  <!-- Decline Quest -->
+  <Dialogue id="decline">
+    <NPCText>
+      <![CDATA[
+      Veela blinks, her face shadowed by the <B>Slumberveil Hood</B>.<BR>
+      "All are free to refuse the call. But beware—dreams unheeded become nightmares. If you change your mind, seek me again before the next snow falls."
+      ]]>
+    </NPCText>
+    <Option text="I may be back." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="veelaPastIntro">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#b0d0ef'>
+    Veela closes her eyes and breathes deeply, her <B>Dreamweaver Sash</B> dimming slightly.<BR>
+    "Memories are like snowflakes... most melt before I can hold them. But some leave patterns behind."<BR><BR>
+    She opens her eyes.<BR>
+    "Ask, and if the wind favors us, I will remember enough to answer."
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Where are you from?" next="veelaOrigin"/>
+  <Option text="Did you ever have family?" next="veelaFamily"/>
+  <Option text="What do you enjoy in Frostmere?" next="veelaHobbies"/>
+  <Option text="Do you remember love?" next="veelaLove"/>
+  <Option text="I’d rather not trouble your memories." action="Close"/>
+</Dialogue>
+
+<!-- Origin -->
+<Dialogue id="veelaOrigin">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#b0d0ef'>
+    "A village carved from ice and song, far to the south. We fished beneath frozen tides and slept beneath aurora-blankets. My mother spoke to the stars, my father to the waves. But when the ice cracked... only the sea listened."<BR><BR>
+    "The dream led me north. Here, I found the Obelisk. It doesn’t speak as my parents did, but... it listens. Always listens."
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Thank you for sharing. What about family?" next="veelaFamily"/>
+  <Option text="Do you still find joy in things?" next="veelaHobbies"/>
+  <Option text="That must’ve been hard." next="veelaResilience"/>
+</Dialogue>
+
+<Dialogue id="veelaResilience">
+  <NPCText>
+    <![CDATA[
+    Veela smiles softly.<BR>
+    "Hard? Perhaps. But grief is not a wound—it is a bridge. It links what was lost with what must be remembered. The Obelisk helps me keep that bridge standing."<BR><BR>
+    "You walk your own bridges, Shardbearer. Walk them kindly."
+    ]]>
+  </NPCText>
+  <Option text="You're very wise." next="veelaHobbies"/>
+  <Option text="Do you remember anyone special?" next="veelaLove"/>
+</Dialogue>
+
+<!-- Family -->
+<Dialogue id="veelaFamily">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#b0d0ef'>
+    She tugs at the <B>Bracelets of Forgetting</B> absently.<BR>
+    "A brother, once... Or was it a sister? We used to chase frost moths at twilight. I remember laughter, then crying. Then silence."<BR><BR>
+    She looks at you.<BR>
+    "Sometimes I think Irinya is their echo. She says I adopted her—but I think it was the other way around."
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="That’s beautiful. What do you enjoy now?" next="veelaHobbies"/>
+  <Option text="Do you miss being close to someone?" next="veelaLove"/>
+  <Option text="Can you still hear their voice?" next="veelaFamilyMemory"/>
+</Dialogue>
+
+<Dialogue id="veelaFamilyMemory">
+  <NPCText>
+    <![CDATA[
+    Veela hums a gentle, wavering tune.<BR>
+    "Just that song. No name. No face. Only that tune."<BR><BR>
+    <I>You feel a sudden warmth in the air, as if the snow is holding its breath.</I>
+    ]]>
+  </NPCText>
+  <Option text="That melody... it’s lovely." action="PlaySound:0x015" />
+  <Option text="Do you ever sing it for the children?" next="veelaChildrenSing"/>
+</Dialogue>
+
+<Dialogue id="veelaChildrenSing">
+  <NPCText>
+    <![CDATA[
+    "Always. And they sing it back, slightly wrong. But somehow, their version makes it truer."<BR><BR>
+    She chuckles. "Children remember what the wise forget."
+    ]]>
+  </NPCText>
+  <Option text="That’s a comfort, in a way." action="AddStat:Int,5,180" />
+  <Option text="Back to your memories..." next="veelaHobbies"/>
+</Dialogue>
+
+<!-- Hobbies and Joy -->
+<Dialogue id="veelaHobbies">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#b0d0ef'>
+    "I love painting on the inside of ice caves. I mix pigment with crushed frostbloom and powdered obsidian—Kaelen calls it foolish. But the cold preserves colors better than parchment."<BR><BR>
+    "I also collect broken things—scraps of dreams, lost buttons, children’s false teeth. They have stories, even if I forget them."
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Could I see your paintings someday?" next="veelaPainting"/>
+  <Option text="Kaelen doesn’t appreciate art?" next="veelaKaelen"/>
+  <Option text="That’s a strange hobby..." next="veelaWeirdHobby"/>
+</Dialogue>
+
+<Dialogue id="veelaPainting">
+  <NPCText>
+    <![CDATA[
+    "Perhaps. If the wind agrees. And if the ice is not in a bad mood that day."<BR><BR>
+    She smiles slyly. "You’d have to bring me frostbloom pigment. A handful will earn you a private showing."
+    ]]>
+  </NPCText>
+  <Option text="I’ll keep that in mind." action="SendMessage:Frostbloom pigment added to your journal." />
+  <Option text="Do you have other hobbies?" next="veelaHobbies"/>
+</Dialogue>
+
+<Dialogue id="veelaKaelen">
+  <NPCText>
+    <![CDATA[
+    "He means well. He sees the world as a puzzle that can be solved. I see it as a dream that must be told, even if no one listens."<BR><BR>
+    "We argue. Then we share tea. That’s family, isn’t it?"
+    ]]>
+  </NPCText>
+  <Option text="Sounds like you care for him." next="veelaLove"/>
+  <Option text="Back to your memories." next="veelaPastIntro"/>
+</Dialogue>
+
+<Dialogue id="veelaWeirdHobby">
+  <NPCText>
+    <![CDATA[
+    She laughs with joy.<BR>
+    "Aren’t all hobbies strange? People gather rocks, carve wood, trap fish, recite numbers. I collect what cannot be named until it’s remembered."<BR><BR>
+    "And then I forget it again. A perfect cycle."
+    ]]>
+  </NPCText>
+  <Option text="You’re wonderfully strange." action="Karma:+250" />
+  <Option text="Back to your memories." next="veelaPastIntro"/>
+</Dialogue>
+
+<!-- Love -->
+<Dialogue id="veelaLove">
+  <NPCText>
+    <![CDATA[
+    Veela looks away, wind stirring the hem of her <B>Moonpetal Robe</B>.<BR>
+    "I remember warmth, once. Someone who smelled of pipe smoke and bear fat. We built a fire under a frozen arch and named each other new names."<BR><BR>
+    "But I forgot his true name. Maybe that’s why he vanished."<BR>
+    A pause. "Or maybe I forgot so I wouldn’t follow."
+    ]]>
+  </NPCText>
+  <Option text="That sounds... lonely." next="veelaLonely"/>
+  <Option text="Maybe you’ll love again?" condition="IsMale" next="veelaFlirtMale"/>
+  <Option text="Maybe someone loves you now?" condition="IsFemale" next="veelaFlirtFemale"/>
+</Dialogue>
+
+<Dialogue id="veelaLonely">
+  <NPCText>
+    <![CDATA[
+    "The ice is never lonely. It always holds something within."<BR>
+    Her eyes linger on you a little longer than before.<BR>
+    "Nor am I. I have the Obelisk. And perhaps now, I have a listener."
+    ]]>
+  </NPCText>
+  <Option text="You do." action="Karma:+100" />
+  <Option text="Thank you, Veela. I should go." action="Close"/>
+</Dialogue>
+
+<Dialogue id="veelaFlirtMale">
+  <NPCText>
+    <![CDATA[
+    A small smile plays on her lips.<BR>
+    "Perhaps. If a brave Shardbearer comes with warm hands and a willing heart."<BR>
+    She touches your arm lightly, and the air warms for a moment.
+    ]]>
+  </NPCText>
+  <Option text="Maybe I’ll return with both." action="AddStat:Str,5,180"/>
+  <Option text="I should let you rest." action="Close"/>
+</Dialogue>
+
+<Dialogue id="veelaFlirtFemale">
+  <NPCText>
+    <![CDATA[
+    Veela grins softly.<BR>
+    "Maybe. If she dares brave the dreams I leave behind."<BR>
+    She touches her <B>Bracelets of Forgetting</B> and gives you a quiet wink.
+    ]]>
+  </NPCText>
+  <Option text="I’m not afraid of dreams." action="AddStat:Int,5,180"/>
+  <Option text="Farewell, dreamweaver." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

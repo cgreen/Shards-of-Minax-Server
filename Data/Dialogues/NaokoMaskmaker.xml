@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="NaokoMaskmaker">
+
+  <!-- ========== GREETING ========== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#c7bcff'>
+      Before you stands a diminutive woman in a flowing, ink-brushed kimono. Her face is hidden behind an exquisitely carved mask: a fox’s smile, with shadows dancing in the eye-slits.<BR><BR>
+      “Welcome, soul of many faces… I am Naoko, artisan of masks. Tell me—do you come to hide your spirit, to reveal it… or to bargain for its secrets?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Tell me about these masks you craft." next="aboutMasks"/>
+    <Option text="I seek a mask—what price do you ask?" next="requestMask"/>
+    <Option text="Why do you always wear a mask?" next="whyMask"/>
+    <Option text="What do you mean, 'spirits of the mask'?" next="spiritLore"/>
+	<Option text="Who were you before you became the Maskmaker?" next="naokoBackstory1"/>
+    <Option text="I must go." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== ABOUT MASKS ========== -->
+  <Dialogue id="aboutMasks">
+    <NPCText>
+      <![CDATA[
+      Naoko gestures to a rack of masks, each unique.<BR><BR>
+      “A mask is more than a face. It is a vessel for memory, courage, sorrow, or joy. I weave old spirits into my work—sometimes they murmur guidance, sometimes riddles. Wear a mask, and you may gain strength… but never without a price.”<BR>
+      She tilts her head. “Would you dare try one on?”
+      ]]>
+    </NPCText>
+    <Option text="What do your masks do?" next="maskBuffs"/>
+    <Option text="Let me see your wares." next="requestMask"/>
+    <Option text="I’m not sure… Spirits?" next="spiritLore"/>
+    <Option text="Thank you for the wisdom." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== MASK BUFFS & QUIRKS ========== -->
+  <Dialogue id="maskBuffs">
+    <NPCText>
+      <![CDATA[
+      “Each mask grants a blessing—some strength, some cunning, some insight. Yet every mask holds memories from a past wearer: a lost samurai, a mourning widow, a cunning thief. Sometimes, you may hear their whispers… If you listen closely, perhaps you will learn.”<BR>
+      She leans in. “But beware: too long beneath a mask, and you may forget which face is truly yours.”
+      ]]>
+    </NPCText>
+    <Option text="Show me what masks you offer." next="requestMask"/>
+    <Option text="Can you make a custom mask?" next="customMask"/>
+    <Option text="Why would someone want such a thing?" next="spiritLore"/>
+    <Option text="I must go." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== REQUEST A MASK (STORE/QUEST) ========== -->
+  <Dialogue id="requestMask">
+    <NPCText>
+      <![CDATA[
+      Naoko’s masked eyes narrow with amusement.<BR>
+      “I can craft for you a mask of power—if you bring me the right materials… and offer a drop of your spirit.”<BR><BR>
+      “Will you provide a <BASEFONT COLOR='#f3d672'>fox pelt</BASEFONT> for cleverness, a <BASEFONT COLOR='#a6e3a1'>crimson feather</BASEFONT> for courage, or a <BASEFONT COLOR='#9bbcff'>moon lotus</BASEFONT> for wisdom? Or, perhaps, you wish to purchase a simple mask—unbound, but free of spirits.”
+      ]]>
+    </NPCText>
+    <Option text="I have a fox pelt for cleverness." 
+            condition="HasItem:FoxPelt" 
+            action="GiveItem:CleverFoxMask"
+            next="cleverMask"/>
+    <Option text="I have a crimson feather for courage." 
+            condition="HasItem:CrimsonFeather" 
+            action="GiveItem:MaskOfCourage"
+            next="courageMask"/>
+    <Option text="I have a moon lotus for wisdom." 
+            condition="HasItem:MoonLotus" 
+            action="GiveItem:LotusWisdomMask"
+            next="wisdomMask"/>
+    <Option text="Show me simple masks for sale." next="simpleMasks"/>
+    <Option text="What about custom masks?" next="customMask"/>
+    <Option text="I’ll return with an offering." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== MASKS FOR SALE (VENDOR) ========== -->
+  <Dialogue id="simpleMasks">
+    <NPCText>
+      <![CDATA[
+      “I have masks for those wary of spirits: fox, oni, tengu, and more. Each crafted with skill—no voices, only a touch of luck. Speak with me again to purchase.”<BR>
+      She lowers her voice, “But remember: true power asks a greater price.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me about spirit-bound masks." next="aboutMasks"/>
+    <Option text="I will return later." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== CUSTOM MASK ========== -->
+  <Dialogue id="customMask">
+    <NPCText>
+      <![CDATA[
+      Naoko’s masked face inclines thoughtfully.<BR>
+      “Describe your wish, and leave a token—perhaps a lock of hair, a cherished trinket, or a fragment of your dream. If your spirit is strong, the mask will take shape in days to come.”<BR>
+      “Do you wish to leave a token now?”
+      ]]>
+    </NPCText>
+    <Option text="I’d like to order a custom mask." 
+            condition="GoldAtLeast:10000"
+            action="SendMessage:Naoko accepts your token and begins her mysterious work."
+            action="GiveItem:CustomOrderScroll"
+            action="GoldAtLeast:-10000"
+            next="customOrder"/>
+    <Option text="Not yet. I’ll return." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="customOrder">
+    <NPCText>
+      <![CDATA[
+      “Return in three days’ time. The mask will call your spirit when it is ready.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Naoko." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== CRAFTED MASK: CLEVER FOX ========== -->
+  <Dialogue id="cleverMask">
+    <NPCText>
+      <![CDATA[
+      Naoko deftly carves a fox-faced mask, painting its eyes with silver ink. As she ties it for you, you feel a brief rush of cleverness—and a faint, sly laugh in your ear.<BR>
+      <BASEFONT COLOR='#b6f7ec'>You gain a burst of <b>Intelligence</b> and <b>Stealth</b> for one hour.<BR>
+      But sometimes, at night, you may hear the mask whisper secrets about your friends...</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Thank you… I think?" action="AddStat:Int,5,3600" action="AddSkill:Stealth,10,3600" action="SendMessage:The mask tingles with secret knowledge." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== CRAFTED MASK: MASK OF COURAGE ========== -->
+  <Dialogue id="courageMask">
+    <NPCText>
+      <![CDATA[
+      She presses the crimson feather into lacquer, shaping a fierce oni visage. The mask warms in your hands—filling you with borrowed courage.<BR>
+      <BASEFONT COLOR='#ffe2b0'>You gain a burst of <b>Strength</b> and <b>Resist Magic</b> for one hour.<BR>
+      Sometimes, you may feel a battle-fury not your own, and strange dreams of ancient wars…</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I accept the mask’s burden." action="AddStat:Str,5,3600" action="AddSkill:Resist,10,3600" action="SendMessage:The mask’s spirit drums in your blood." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== CRAFTED MASK: LOTUS WISDOM ========== -->
+  <Dialogue id="wisdomMask">
+    <NPCText>
+      <![CDATA[
+      She shapes the moon lotus into a tranquil Noh mask, traced with gentle blue lines. A chill serenity settles over you.<BR>
+      <BASEFONT COLOR='#b0e0ff'>You gain a burst of <b>Mana</b> and <b>Magic Insight</b> for one hour.<BR>
+      But you may occasionally speak in riddles, as if another’s wisdom borrows your tongue…</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="May the spirits guide me." action="AddStat:Int,5,3600" action="AddSkill:EvaluateInt,10,3600" action="SendMessage:Your mind tingles with borrowed wisdom." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== MASK SPIRIT LORE ========== -->
+  <Dialogue id="spiritLore">
+    <NPCText>
+      <![CDATA[
+      Naoko lowers her voice.<BR>
+      “Masks remember those who wore them. Sometimes, the brave. Sometimes, the vengeful… The spirit you carry may help you—or haunt you. Beware which voices you heed. The mask gives, but also asks.”
+      ]]>
+    </NPCText>
+    <Option text="Have you ever been haunted, Naoko?" next="haunted"/>
+    <Option text="I would risk it for power." next="requestMask"/>
+    <Option text="I prefer to stay myself." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="haunted">
+    <NPCText>
+      <![CDATA[
+      She is silent a long moment.<BR>
+      “Yes. I once wore a mask too long, and when I removed it, my own voice did not return for many years. So now, I never remove this one. Perhaps, I am safer… or perhaps, I am lost.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you for your honesty." action="Close"/>
+    <Option text="I want to try a mask anyway." next="requestMask"/>
+  </Dialogue>
+
+  <!-- ========== WHY DO YOU WEAR A MASK? ========== -->
+  <Dialogue id="whyMask">
+    <NPCText>
+      <![CDATA[
+      Naoko’s hands tighten on her kimono sleeve.<BR>
+      “Some wear a mask to hide. I wear mine to protect—myself and others. When you live with many spirits, it is wiser not to show your true face… not even to yourself.”
+      ]]>
+    </NPCText>
+    <Option text="Do you regret it?" next="regret"/>
+    <Option text="Perhaps it is wise." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="regret">
+    <NPCText>
+      <![CDATA[
+      She shrugs, softly.<BR>
+      “Regret? Sometimes. But this way, I remember every face I have ever worn. In my work, memory is a gift—and a curse.”
+      ]]>
+    </NPCText>
+    <Option text="Your masks are truly unique." next="aboutMasks"/>
+    <Option text="I must be on my way." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="naokoBackstory1">
+  <NPCText>
+    <![CDATA[
+    Naoko stands still, as if surprised by the question. Her voice, when it comes, is quiet.<BR><BR>
+    “Long ago, I was Naoko of the House of Falling Leaves… an artisan of the Tokuno archipelago. I carved beauty from wood and bone, but never masks. Not until… the fire.”<BR><BR>
+    She turns slightly. “Do you truly wish to know? Few ask. Fewer listen.”
+    ]]>
+  </NPCText>
+  <Option text="Yes. Please tell me." next="naokoBackstory2"/>
+  <Option text="If it pains you, I will not press." next="naokoDismissBackstory"/>
+</Dialogue>
+
+<Dialogue id="naokoDismissBackstory">
+  <NPCText>
+    <![CDATA[
+    She nods. “Respect is a rare gift. Perhaps someday I’ll return it.”
+    ]]>
+  </NPCText>
+  <Option text="I understand." action="Close"/>
+</Dialogue>
+
+<Dialogue id="naokoBackstory2">
+  <NPCText>
+    <![CDATA[
+    “The House of Falling Leaves was noble once—guardians of forest spirits, stewards of shrine magic.”<BR>
+    “Minax shattered it.”<BR><BR>
+    “She sent her agents with fire and steel. We were warned, but we hesitated. We believed our rituals would shield us. I survived… barely.”<BR><BR>
+    “All I could save were my hands, my tools, and one mask—<I>my sister’s.</I> I wear it still.”
+    ]]>
+  </NPCText>
+  <Option text="Was your sister lost in the fire?" next="naokoBackstory3"/>
+  <Option text="Is that the spirit whispering through your mask?" next="naokoBackstory4"/>
+  <Option text="I am sorry you endured such loss." next="naokoBackstory5"/>
+</Dialogue>
+
+<Dialogue id="naokoBackstory3">
+  <NPCText>
+    <![CDATA[
+    Naoko nods once.<BR><BR>
+    “She did not scream. I remember that. She looked at me and said, ‘Remember me without sorrow.’”<BR>
+    “I could not.”<BR><BR>
+    “So I carved her face in sacred cedar… and the spirit found me. She does not speak often. But sometimes, she sings.”<BR>
+    She pauses. “Would you… like to hear her?”
+    ]]>
+  </NPCText>
+  <Option text="Yes. Let me hear her voice." action="PlaySound:0x015" next="naokoSpiritSong"/>
+  <Option text="No. Let her rest." action="Close"/>
+</Dialogue>
+
+<Dialogue id="naokoSpiritSong">
+  <NPCText>
+    <![CDATA[
+    Naoko closes her eyes.<BR>
+    For a moment, there is silence… then a single note, like a whisper over strings, fills your ears. A lullaby in an unknown tongue.<BR><BR>
+    You feel a presence—gentle, watching.<BR>
+    When the sound fades, Naoko speaks.<BR>
+    “She says you walk with kindness. Perhaps she is right.”
+    ]]>
+  </NPCText>
+  <Option text="Thank you for sharing that." action="Karma:+250" next="naokoThankYou"/>
+</Dialogue>
+
+<Dialogue id="naokoBackstory4">
+  <NPCText>
+    <![CDATA[
+    Naoko tilts her head. “You are wise to ask. Yes—this mask is hers. Her spirit guards me. Warns me. Sometimes… argues with me.”<BR><BR>
+    “But there are times her memories rise stronger than mine. I once awoke speaking words I never learned.”<BR>
+    “That is why I warn others. A mask is not clothing. It is a doorway.”
+    ]]>
+  </NPCText>
+  <Option text="How do you live with such voices?" next="naokoBackstory5"/>
+  <Option text="Can I speak to your sister?" next="naokoBackstory6"/>
+</Dialogue>
+
+<Dialogue id="naokoBackstory5">
+  <NPCText>
+    <![CDATA[
+    “I live one carving at a time.”<BR>
+    “When I make a mask, I choose which voice to carry. My sister taught me that. Even silence is a voice.”<BR><BR>
+    She bows her head briefly. “I am grateful for your questions.”
+    ]]>
+  </NPCText>
+  <Option text="You honor her with your work." action="Fame:+150" next="naokoThankYou"/>
+  <Option text="I still want to hear her." next="naokoBackstory6"/>
+</Dialogue>
+
+<Dialogue id="naokoBackstory6">
+  <NPCText>
+    <![CDATA[
+    Naoko’s hand brushes her mask.<BR><BR>
+    “You may try… but be warned. Spirits are not commanded—they <I>consent</I>.”<BR><BR>
+    She places a carved charm in your hand. “Wear this. If she wishes, she will find you in dreams.”
+    ]]>
+  </NPCText>
+  <Option text="I will accept the risk." 
+          action="GiveItem:SistersCharm"
+          action="SendMessage:A strange warmth lingers from the charm..." 
+          next="naokoThankYou"/>
+  <Option text="No, I’ve changed my mind." action="Close"/>
+</Dialogue>
+
+<Dialogue id="naokoThankYou">
+  <NPCText>
+    <![CDATA[
+    “In a world torn by shadow and ambition, it is rare to be <I>heard</I>.”<BR>
+    “May your path be guided not by strength, but by remembrance.”
+    ]]>
+  </NPCText>
+  <Option text="Until we meet again." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

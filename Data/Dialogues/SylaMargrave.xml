@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="SylaMargrave">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ff9100'>
+      You are met with the blistering heat of a magical fire as a striking woman stands before you, her copper hair ablaze in the windless air.<BR>
+      Her boots leave faint scorch-marks on the floating crystal beneath her. Embers dance along her Emberwoven Chemise and the fiery Crown of Searing Insight.<BR><BR>
+      “You tread close to the outer ring, where only those with courage—or the sense to keep clear—walk. I am Syla Margrave, Pyromancer of Aerilon. If you’re here to whine about the warmth, leave. If you’re here to help, speak quickly—my time, like flame, is precious.”<BR>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’m looking for work—do you have need of an agent?" next="joboffer"/>
+    <Option text="Why is it so hot out here?" next="firelore"/>
+    <Option text="What is your role in Aerilon?" next="role"/>
+	<Option text="I want to know more about you." next="backstory_intro"/>
+    <Option text="I’m just passing by." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Syla's job offer -->
+  <Dialogue id="joboffer">
+    <NPCText>
+      <![CDATA[
+      Syla narrows her eyes, flames flickering at her fingertips.<BR>
+      “Aerilon’s outer ring is held in check by my fire conduit array—brilliant, dangerous, and recently... unreliable.<BR>
+      The conduits burn out faster than Salia Moontide can engineer excuses. Sabotage? Leyline rot? Or someone with a grudge against me, which is a longer list than you’d think.<BR>
+      If you want to earn Aerilon’s favor, I have a delivery that requires subtlety, speed, and a taste for danger. Up for it?”
+      ]]>
+    </NPCText>
+    <Option text="Tell me about the task." next="questdesc"/>
+    <Option text="Do you suspect sabotage?" next="sabotage"/>
+    <Option text="Why not handle this yourself?" next="whyoutsider"/>
+    <Option text="What’s the pay?" next="pay"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="firelore">
+    <NPCText>
+      <![CDATA[
+      Syla cracks a wry grin.<BR>
+      “Heat keeps the crystals flowing, the conduits alive, and nosy politicians at bay. Some say I’m too blunt—better that than smothered by the cold obsessions of Salia Moontide and her ilk.<BR>
+      Besides, fire keeps Aerilon afloat—let them grumble. I’d sooner duel a volcano than let these flames die.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about your work." next="role"/>
+    <Option text="Sounds like you and Salia clash often." next="saliarival"/>
+    <Option text="I want to help." next="joboffer"/>
+    <Option text="I should leave you to it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="role">
+    <NPCText>
+      <![CDATA[
+      “Pyromancer of the Outer Ring, guardian of the Flame Array, and, apparently, part-time diplomat to anyone who can’t tell a leyline from a fuse.<BR>
+      I keep the city’s southern conduits from burning out. If Salia Moontide’s crystal engines fail, my fire arrays buy us hours. If mine fail... let’s not dwell on that.<BR>
+      I mentored Lira Veyra, once. She has the heart of a firestorm, but Corvus is steering her toward battle, not balance. Waste of raw talent, in my view.”
+      ]]>
+    </NPCText>
+    <Option text="What’s your opinion of Salia?" next="saliarival"/>
+    <Option text="You know Lira Veyra?" next="liramentor"/>
+    <Option text="I’m interested in this job." next="joboffer"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Syla shrugs, smoke trailing from her shoulders.<BR>
+      “You’ll find no shade nor patience here. If you change your mind, return before the next conduit fails—and bring water.”
+      ]]>
+    </NPCText>
+    <Option text="On second thought, do you have work?" next="joboffer"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Rivalry with Salia -->
+  <Dialogue id="saliarival">
+    <NPCText>
+      <![CDATA[
+      Syla’s tone smolders.<BR>
+      “Salia is brilliant, but her faith in mechanisms is a brittle thing. Fire doesn’t follow blueprints—it’s alive, unpredictable.<BR>
+      We butt heads because she fears what she can’t quantify. Still, when the city’s on the brink, she calls me. Always. Even if she’ll never admit it.”
+      ]]>
+    </NPCText>
+    <Option text="It sounds like you respect her." next="respect"/>
+    <Option text="How does that rivalry help Aerilon?" next="rivalbenefit"/>
+    <Option text="Enough about her. What’s the task?" next="questdesc"/>
+    <Option text="Goodbye for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="respect">
+    <NPCText>
+      <![CDATA[
+      Syla’s eyes soften for a flicker of a second.<BR>
+      “Respect, sure. Friendship? Not likely. But every good fire needs a vessel. Salia tempers my flame, and sometimes, I force her to take risks. Keeps us both sharp.”
+      ]]>
+    </NPCText>
+    <Option text="Let’s talk about this delivery." next="questdesc"/>
+    <Option text="That’s enough gossip." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="rivalbenefit">
+    <NPCText>
+      <![CDATA[
+      “Aerilon thrives on creative tension. If we agreed on everything, the city would be a cinder or a glacier. Our rivalry keeps the conduits running and the Conclave guessing.<BR>
+      Now—about that job…”
+      ]]>
+    </NPCText>
+    <Option text="I’m ready for the job." next="questdesc"/>
+    <Option text="Not today." action="Close"/>
+  </Dialogue>
+
+  <!-- Lira Veyra mentorship -->
+  <Dialogue id="liramentor">
+    <NPCText>
+      <![CDATA[
+      Syla nods, pride flickering in her gaze.<BR>
+      “Lira Veyra—yes, she trained under me before Corvus poached her for his martial nonsense. She understands fire, not just in spellwork, but in spirit.<BR>
+      I just hope she doesn’t lose that spark fighting other people’s wars. Aerilon needs mages who remember why we soared above the world in the first place.”
+      ]]>
+    </NPCText>
+    <Option text="Perhaps you’ll mentor again. What’s the job?" next="questdesc"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Suspicions of sabotage -->
+  <Dialogue id="sabotage">
+    <NPCText>
+      <![CDATA[
+      Syla lowers her voice, gaze narrowing.<BR>
+      “Sabotage? Maybe. We’ve lost three conduits in two weeks. Salia blames leylines. I suspect a more human hand—possibly Minax’s cultists or a rival mage.<BR>
+      Delivering this item could flush out a traitor… or at least get my mind off conspiracies.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about the delivery." next="questdesc"/>
+    <Option text="Sounds dangerous. I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <!-- Why Syla needs an outsider -->
+  <Dialogue id="whyoutsider">
+    <NPCText>
+      <![CDATA[
+      “If I leave the ring, my rivals seize the chance to meddle. Besides, no one expects a stranger to carry something vital for me. It’s subtlety—or as close as I get to subtlety.<BR>
+      Outsiders aren’t bound by Conclave politics. That’s your edge.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll do it." next="questdesc"/>
+    <Option text="No thanks." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="pay">
+    <NPCText>
+      <![CDATA[
+      Syla grins.<BR>
+      “Rep with Aerilon—and a favor from the Outer Ring’s pyromancer. That opens doors you can’t even see yet.<BR>
+      Gold is for merchants and moles. My gratitude is rarer.”
+      ]]>
+    </NPCText>
+    <Option text="Good enough. Tell me what to do." next="questdesc"/>
+    <Option text="I was hoping for coin. Maybe later." action="Close"/>
+  </Dialogue>
+
+  <!-- QUEST DESCRIPTION -->
+  <Dialogue id="questdesc">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ff9100'>
+      Syla produces a **Phoenixfire Ember Core**—a swirling, rune-inscribed ember held in a heatproof vial.<BR>
+      “This is the Ember Core. With it, a Satyr Specialist outside the city can tune our fire conduits, stabilize leylines, and root out any tampering.<BR>
+      But the trait is crucial—Satyrs have a touch for wild magic and won’t be easily fooled by saboteurs.<BR>
+      Deliver the Core, watch your back, and don’t open the vial unless you want a new career as a pile of ash. Do this, and Aerilon—and I—will owe you.”<BR>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Give me the Ember Core. I’ll deliver it." 
+            action="GiveItem:FactionDeliveryQuestScroll(Satyr Specialist,Aerilon,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="What’s a Satyr Specialist?" next="satyrinfo"/>
+    <Option text="Is this connected to Minax?" next="minax"/>
+    <Option text="What’s the risk on this errand?" next="risk"/>
+    <Option text="On second thought, maybe not." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Syla hands you the heatproof vial.<BR>
+      “Take it to the Satyr Specialist. When it’s done, return for your reward—and a story to tell.<BR>
+      If anyone tries to take the Ember Core, burn the ground behind you. Trust no one with goat’s eyes or silver tongues.<BR>
+      Go! I have conduits to repair.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll guard it with my life." action="Close"/>
+  </Dialogue>
+
+  <!-- Satyr Specialist Lore -->
+  <Dialogue id="satyrinfo">
+    <NPCText>
+      <![CDATA[
+      “Satyr Specialists—eccentric, wild, but no one tunes elemental fire like they do. Half-mage, half-musician, they see the world in harmonies and patterns the rest of us miss.<BR>
+      If you find one who’ll speak to you, you’ll know by the way the flames behave around their hands. Only they can fix what’s wrong—and perhaps uncover the traitor’s tricks.”
+      ]]>
+    </NPCText>
+    <Option text="I understand. I’ll do the delivery." 
+            action="GiveItem:FactionDeliveryQuestScroll(Satyr Specialist,Aerilon,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Sounds too strange for me." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax thread -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Syla’s eyes flash with anger.<BR>
+      “Minax’s reach is long—and she hates Aerilon’s flame. Her agents love sowing chaos where the conduits run hottest.<BR>
+      This delivery keeps us one step ahead. Fail, and we may see the city fall—literally.”
+      ]]>
+    </NPCText>
+    <Option text="Then I’ll make sure it gets there." 
+            action="GiveItem:FactionDeliveryQuestScroll(Satyr Specialist,Aerilon,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="That’s too much responsibility." action="Close"/>
+  </Dialogue>
+
+  <!-- Risk explanation -->
+  <Dialogue id="risk">
+    <NPCText>
+      <![CDATA[
+      Syla leans in, her tone low and fierce.<BR>
+      “There’s always risk. The last courier was found with singed eyebrows and a story about a shapechanger with Minax’s mark.<BR>
+      Use your head. If someone tries to intercept you, throw the vial in running water. It’ll vanish and reappear on my workbench, safe but wasted.<BR>
+      But if you succeed—you’ll have my gratitude. That’s rarer than gold in this city.”
+      ]]>
+    </NPCText>
+    <Option text="I accept the risk and the task." 
+            action="GiveItem:FactionDeliveryQuestScroll(Satyr Specialist,Aerilon,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Not for me, thanks." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="backstory_intro">
+  <NPCText>
+    <![CDATA[
+    Syla folds her arms, heat rippling in the air around her.<BR>
+    “Curious, are you? Most just want spells or errands. But fine—if you insist on peeling back the layers, don’t flinch at the burn.<BR>
+    What exactly do you want to know?”
+    ]]>
+  </NPCText>
+  <Option text="Where did you train in the arcane arts?" next="training"/>
+  <Option text="Have you always served Aerilon?" next="service"/>
+  <Option text="What does fire mean to you?" next="philosophy"/>
+  <Option text="Do you have any personal rivals besides Salia?" next="rivals"/>
+  <Option text="Tell me something... unexpected." next="secret"/>
+  <Option text="Never mind. Back to business." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="training">
+  <NPCText>
+    <![CDATA[
+    “Wind. Yes, *that* Wind. I trained there before the Conclave even existed. Back when mages sat in silence and called it wisdom.<BR>
+    I set a classroom on fire—accidentally. They called it recklessness. I called it... foreshadowing.<BR>
+    Archmage Selara offered me exile or elevation. I chose flame.”
+    ]]>
+  </NPCText>
+  <Option text="Selara gave you a second chance?" next="selaratrust"/>
+  <Option text="Sounds like Wind never understood you." next="windproblem"/>
+  <Option text="You’re lucky to be alive." next="humble"/>
+</Dialogue>
+
+<Dialogue id="selaratrust">
+  <NPCText>
+    <![CDATA[
+    “Selara values talent over tradition, and that saved me. She doesn’t *like* me, but she *respects* the fire I bring.<BR>
+    I suppose we share that: we both left Wind behind and built something impossible in the sky.”
+    ]]>
+  </NPCText>
+  <Option text="You and Selara have more in common than you'd admit." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="windproblem">
+  <NPCText>
+    <![CDATA[
+    “Wind sees magic as an equation. I see it as a living storm. Their halls are libraries; mine are forges.<BR>
+    Maybe one day I’ll torch their index cards. Just kidding. Mostly.”
+    ]]>
+  </NPCText>
+  <Option text="That fire still burns in you." next="greeting"/>
+  <Option text="PlaySound:0x015" condition="RandomChance:33" action="SendMessage:You hear Syla chuckle faintly." />
+</Dialogue>
+
+<Dialogue id="humble">
+  <NPCText>
+    <![CDATA[
+    “Luck had nothing to do with it. I earned every spark in my soul—and singed half a dozen robes to prove it.”
+    ]]>
+  </NPCText>
+  <Option text="Fair enough. Let’s move on." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="service">
+  <NPCText>
+    <![CDATA[
+    “Serve? No. I *chose* Aerilon. I helped forge the first flame conduits with my bare hands and unshielded mind.<BR>
+    Most would’ve died. I nearly did. But when the first rings rose into the air, I felt... home.<BR>
+    This place doesn’t just float on crystals—it floats on sacrifice.”
+    ]]>
+  </NPCText>
+  <Option text="You love this city." next="passion"/>
+  <Option text="You’re more than a mage—you’re a founder." next="founder"/>
+</Dialogue>
+
+<Dialogue id="passion">
+  <NPCText>
+    <![CDATA[
+    “Love it? No. I *belong* to it. There’s a difference. Fire doesn’t love; it consumes. And if Aerilon fails, my flame goes with it.”
+    ]]>
+  </NPCText>
+  <Option text="That’s... intense." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="founder">
+  <NPCText>
+    <![CDATA[
+    “I didn’t sign papers or give speeches. But when this city first rose, my blood was in the stone. The conduits still hum with it.”
+    ]]>
+  </NPCText>
+  <Option text="Sounds like your soul is baked into the place." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="philosophy">
+  <NPCText>
+    <![CDATA[
+    “Fire isn’t destruction. It’s *transformation*. Burn a tree, and you release the sunlight trapped in it. Burn an idea, and you test its truth.<BR>
+    I don’t wield fire. I *negotiate* with it. Every day.”
+    ]]>
+  </NPCText>
+  <Option text="That’s unexpectedly poetic." action="AddSkill:Poisoning,1,600" condition="RandomChance:25"/>
+  <Option text="I never thought of fire that way." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="rivals">
+  <NPCText>
+    <![CDATA[
+    “Rivals? I collect them like kindling.<BR>
+    There’s a blood witch in Frostmere who tried to siphon power from our leylines. A satyr illusionist who challenged me to a duel of metaphors. I won. With a haiku.<BR>
+    And Corvus Deyne? He’s not a rival. He’s a warning label with teeth.”
+    ]]>
+  </NPCText>
+  <Option text="Tell me the haiku!" next="haiku"/>
+  <Option text="You’ve lived a wild life." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="haiku">
+  <NPCText>
+    <![CDATA[
+    “Ash floats in the sky<BR>
+    Words like flame must dance or die<BR>
+    Silence burns the lie.”
+    ]]>
+  </NPCText>
+  <Option text="...That was beautiful." action="Karma:+250"/>
+  <Option text="Did it actually win you the duel?" next="haikuwin"/>
+</Dialogue>
+
+<Dialogue id="haikuwin">
+  <NPCText>
+    <![CDATA[
+    “The satyr wept. Said no one had burned him that gently before. Then he gave me his sandals and vanished into fog.<BR>
+    I still wear them to this day—when I want to be unpredictable.”
+    ]]>
+  </NPCText>
+  <Option text="That’s amazing. You’re a legend." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="secret">
+  <NPCText>
+    <![CDATA[
+    Syla leans closer, eyes glittering.<BR>
+    “Here’s something no one in the Conclave knows: I can’t cook. At all. Fire obeys me, but broth? No chance. I once ignited a stew *from inside the ladle*.”<BR>
+    She snorts. “That’s why I trade spellwork for meals with Tolan Drift. He makes a killer sea-stew. Don’t tell him I said that.”
+    ]]>
+  </NPCText>
+  <Option text="Trade you a stew for a spell?" 
+          action="AddStat:Int,5,900" 
+          condition="HasItem:CookedBird"
+          />
+  <Option text="Your secret’s safe with me." action="Karma:+100"/>
+  <Option text="I’ll be sure to tell Tolan." action="SendMessage:You hear a faint grumble of fire behind you..."/>
+</Dialogue>
+
+
+</DialogueFile>

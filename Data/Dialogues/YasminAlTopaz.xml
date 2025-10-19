@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="YasminAlTopaz">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#F9DF7A'>
+      Before you stands a statuesque woman, her eyes as deep and ageless as the shifting dunes. Robes shimmer with mirage-like hues, a topaz sash glowing at her waist. From beneath the translucent <i>Veil of the Dune Ancients</i>, she surveys you with inscrutable calm.<BR><BR>
+      "A child of the wind and sand approaches. I am Yasmin al-Topaz, Mistress of the Sands, last archivist of the Desert Ancients and keeper of secrets that even time itself has forgotten.<BR>
+      Speak: have you come seeking lost knowledge, a place in the histories of Qasaria, or are you merely another suitor for the Council’s tangled favor?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek knowledge—perhaps work for one as learned as you." next="taskIntro"/>
+    <Option text="Who are you, Yasmin al-Topaz?" next="backstory"/>
+    <Option text="Tell me of the Council of Jewels." next="council"/>
+    <Option text="What are these relics of the Desert Ancients?" next="relics"/>
+	<Option text="Tell me something... personal. Who is Yasmin al-Topaz, really?" next="pastIntro"/>
+    <Option text="I'm just a traveler passing through." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Backstory -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      Yasmin’s gaze flickers, old memories stirring.<BR><BR>
+      "Long before the merchant-princes squabbled over Qasaria, I wandered the trackless sands in the company of mystics and outcasts. I have walked with living pharaohs and witnessed the fall of empires whose very names now blow on the wind.<BR>
+      My longevity is no mere accident: I have sipped forbidden draughts, bartered my shadow to the Obelisk, and seen friends fade while I endure. To some I am an oracle, to others—a relic myself.<BR><BR>
+      Karim al-Emerald, my closest confidante, says I am both blessing and curse to this city. But knowledge is weighty, and the past clings as stubbornly as sand in the wind."
+      ]]>
+    </NPCText>
+    <Option text="Karim al-Emerald? Tell me of him." next="karim"/>
+    <Option text="Do you regret your immortality?" next="immortality"/>
+    <Option text="How does your history help Qasaria now?" next="purpose"/>
+    <Option text="Let us speak of the present. Have you work for me?" next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="karim">
+    <NPCText>
+      <![CDATA[
+      Yasmin allows a rare, soft laugh.<BR><BR>
+      "Karim al-Emerald: diplomat, spy, and more subtle than the shifting dunes. For all his shadows, his loyalty to Qasaria is unwavering. Together, we share secrets, and sometimes even trust.<BR>
+      He and I have kept this city from ruin more than once, though each time we dance a little closer to the fire. Beware his honeyed words—no serpent bites without first coiling."
+      ]]>
+    </NPCText>
+    <Option text="What of the other councilors?" next="council"/>
+    <Option text="You seem close. Is that ever a danger?" next="karimDanger"/>
+    <Option text="Let us speak of your work." next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="karimDanger">
+    <NPCText>
+      <![CDATA[
+      Yasmin’s eyes narrow, the smile vanishing.<BR><BR>
+      "To be close to a master of secrets is to be in constant peril. Our alliance is forged in necessity, not romance. Should the wind shift, I would mourn—but I would endure.<BR>
+      Enough. You are not here to pry at old wounds."
+      ]]>
+    </NPCText>
+    <Option text="I meant no offense. Let us speak of your work." next="taskIntro"/>
+    <Option text="Tell me of the Council of Jewels." next="council"/>
+  </Dialogue>
+
+  <Dialogue id="immortality">
+    <NPCText>
+      <![CDATA[
+      "Regret? Sometimes. But regret is a luxury of those with short lives. I have outlived loves, enemies, and even my own ambitions. Now, only Qasaria and its secrets remain."<BR>
+      Yasmin’s hand unconsciously touches her <i>Grips of the Forgotten Pharaohs</i>.
+      ]]>
+    </NPCText>
+    <Option text="How does your history help Qasaria now?" next="purpose"/>
+    <Option text="Let us move to matters of the present." next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="purpose">
+    <NPCText>
+      <![CDATA[
+      "Knowledge is power—and power is survival. I guard what should not be known and reveal what must be shared. Even now, Minax’s shadows creep across the dunes; only ancient wisdom can blunt her advance."
+      ]]>
+    </NPCText>
+    <Option text="Is Minax truly so dangerous?" next="minax"/>
+    <Option text="Do you have a task for me?" next="taskIntro"/>
+  </Dialogue>
+
+  <!-- Council -->
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      "The Council of Jewels: five crowns, each vying for supremacy. Sultan Rafiq al-Ruby wields armies, but his heart is as fragile as the glass towers. Safiya al-Sapphire counts coin and whispers with pirates—her loyalty is ever for sale.<BR>
+      Omar al-Onyx rules the arena, and through chaos, seeks order. As for myself and Karim… we keep the secrets, and sometimes each other.<BR>
+      Our unity is an illusion. Yet in crisis, we remain the world’s last city of wonders."
+      ]]>
+    </NPCText>
+    <Option text="Why so much rivalry?" next="rivalry"/>
+    <Option text="Tell me of the ancient relics you study." next="relics"/>
+    <Option text="Let us speak of work." next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="rivalry">
+    <NPCText>
+      <![CDATA[
+      Yasmin’s gaze hardens.<BR><BR>
+      "Power is a mirage: always in sight, never in hand. Each jewel of the Council seeks to outshine the others. Yet should Minax shatter the world, all our rivalries will turn to dust.<BR>
+      That is why I seek new hands—perhaps yours—to act where the Council cannot."
+      ]]>
+    </NPCText>
+    <Option text="What task do you offer?" next="taskIntro"/>
+    <Option text="What is Minax’s true aim in Qasaria?" next="minax"/>
+  </Dialogue>
+
+  <!-- Relics -->
+  <Dialogue id="relics">
+    <NPCText>
+      <![CDATA[
+      Yasmin’s eyes glint with secret pride.<BR><BR>
+      "The Desert Ancients shaped this land before even Lord British’s first dream. Their relics lie buried, whispering power: the <i>Heart of the Dunes</i>, the <i>Obelisk of Eternity</i>, shards of the very Gem of Immortality.<BR>
+      Some councilors would sell these wonders for a seat at Minax’s table. I will see them guarded or used, never squandered.<BR>
+      If you seek fortune and peril, perhaps you will aid me in securing one such relic."
+      ]]>
+    </NPCText>
+    <Option text="I would help you recover a relic." next="taskIntro"/>
+    <Option text="Tell me more of the Heart of the Dunes." next="heart"/>
+    <Option text="What is the Obelisk of Eternity?" next="obelisk"/>
+  </Dialogue>
+
+  <Dialogue id="heart">
+    <NPCText>
+      <![CDATA[
+      "The Heart of the Dunes is no mere trinket—it pulses with the essence of the ancient sands. Some believe it can restore or destroy, depending on whose hand wields it.<BR>
+      Even Minax herself covets it. Which is why it must not fall into the wrong hands."
+      ]]>
+    </NPCText>
+    <Option text="How can I aid you?" next="taskIntro"/>
+    <Option text="Tell me of other relics." next="relics"/>
+  </Dialogue>
+
+  <Dialogue id="obelisk">
+    <NPCText>
+      <![CDATA[
+      "The Obelisk of Eternity is the last standing monument of the Ancients, set in the Sun Temple. Its power is a mystery even to me, though the High Priestess believes it can reveal the fate of Lord British—or perhaps open a path to another world."
+      ]]>
+    </NPCText>
+    <Option text="Let us speak of your work." next="taskIntro"/>
+    <Option text="Tell me of the Heart of the Dunes." next="heart"/>
+  </Dialogue>
+
+  <!-- Dismissal -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Yasmin’s voice grows distant.<BR><BR>
+      "Then tread lightly. Qasaria is a city of masks—wear yours well, traveler."
+      ]]>
+    </NPCText>
+    <Option text="On second thought, I would serve you." next="taskIntro"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Introduction -->
+  <Dialogue id="taskIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#F9DF7A'>
+      Yasmin leans close, her voice dropping to a conspiratorial whisper.<BR><BR>
+      "A fragment of the Heart of the Dunes has been uncovered beneath the city. Minax’s agents and even my fellow councilors would claim it. I trust only those who owe no allegiance to any jewel.<BR><BR>
+      I require an agent to deliver a sealed relic coffer—warded against scrying and theft—to a trusted Mystic in Frostmere. The journey will be perilous; spies and spirits both will seek you.<BR>
+      Will you bear this burden and earn the favor of the Mistress of the Sands?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will deliver the coffer to Frostmere."
+            action="GiveItem:FactionDeliveryQuestScroll(Mystic,Frostmere,400)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Why must it go to Frostmere?" next="whyFrostmere"/>
+    <Option text="What dangers await on this road?" next="danger"/>
+    <Option text="How will I know the Mystic?" next="mystic"/>
+    <Option text="This seems too risky for me." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Yasmin produces a box of ancient gold and glass, covered in glyphs that shimmer with a faint light.<BR><BR>
+      "Take this, and guard it as you would your own soul. Deliver it to Sorin the Pale in Frostmere—he will recognize you by this token: a single topaz crystal bound with a thread of my sash.<BR><BR>
+      Return with proof of delivery, and you shall know gratitude rare in Qasaria. Fail, and the desert itself may deny you refuge."
+      ]]>
+    </NPCText>
+    <Option text="I will not fail you, Mistress of the Sands." action="Close"/>
+  </Dialogue>
+
+  <!-- Frostmere Explanation -->
+  <Dialogue id="whyFrostmere">
+    <NPCText>
+      <![CDATA[
+      "Frostmere is untouched by Qasaria’s rivalries, its obelisk warded against Minax. There, our relic will be safe, and Sorin the Pale will study it without the council’s meddling.<BR>
+      Besides, I trust the chill of the north more than the heat of southern ambition."
+      ]]>
+    </NPCText>
+    <Option text="I accept your quest." 
+            action="GiveItem:FactionDeliveryQuestScroll(Mystic,Frostmere,400)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I must decline." action="Close"/>
+  </Dialogue>
+
+  <!-- Dangers -->
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      "You will be hunted. Minax’s cultists prowl the desert roads, and even the council’s spies may test your resolve. Should peril find you, the glyphs on the coffer can unleash a blinding sandstorm—use it only in direst need."
+      ]]>
+    </NPCText>
+    <Option text="I accept the danger." 
+            action="GiveItem:FactionDeliveryQuestScroll(Mystic,Frostmere,400)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I will not risk it." action="Close"/>
+  </Dialogue>
+
+  <!-- Mystic Identity -->
+  <Dialogue id="mystic">
+    <NPCText>
+      <![CDATA[
+      "Sorin the Pale is as unmistakable as a snowflake on the dunes—tall, white-haired, and wrapped in furs that never melt. Show him this token, and he will trust you. Speak the words: <i>‘The sands remember the snow.’</i>"
+      ]]>
+    </NPCText>
+    <Option text="I will seek out Sorin and deliver the coffer."
+            action="GiveItem:FactionDeliveryQuestScroll(Mystic,Frostmere,400)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Thank you for the knowledge. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax Lore -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Yasmin’s voice becomes a warning.<BR><BR>
+      "Minax’s reach is long and her patience infinite. She twists desire into weakness, sets friend against friend. More than one councilor has bartered with her, thinking themselves clever.<BR>
+      Trust little, question all. If you serve Qasaria, serve it with open eyes."
+      ]]>
+    </NPCText>
+    <Option text="I will heed your warning." next="taskIntro"/>
+    <Option text="How have the councilors dealt with her?" next="council"/>
+  </Dialogue>
+
+  <Dialogue id="pastIntro">
+    <NPCText>
+      <![CDATA[
+      Yasmin tilts her head, a flicker of curiosity—or caution—in her gaze.<BR><BR>
+      "Few ask the question directly. Fewer still are prepared for the answer. My story is long, and not all of it is kind.<BR>
+      What truth do you seek, wanderer?"
+      ]]>
+    </NPCText>
+    <Option text="Tell me how you survived so long." next="pastImmortality"/>
+    <Option text="What was Qasaria before the Council of Jewels?" next="pastCity"/>
+    <Option text="What do you truly love, beneath the robes and power?" next="pastLove"/>
+    <Option text="What price did you pay to become what you are?" next="pastPrice"/>
+    <Option text="I... wasn't ready for all this." action="Close"/>
+  </Dialogue>
+
+  <!-- Immortality -->
+  <Dialogue id="pastImmortality">
+    <NPCText>
+      <![CDATA[
+      "My youth ended in fire. I was barely more than an acolyte when the Ancients’ temples collapsed. To preserve what remained, I cast a ritual of suspension... but the sands had their own ideas.<BR><BR>
+      I emerged decades later—alive, unaged. The ritual didn’t just stop time… it fed on it. Now I drink slow waters and avoid mirrors. Every moment I live is borrowed from a future I will never see."
+      ]]>
+    </NPCText>
+    <Option text="Did the spell change your soul?" next="pastSoul"/>
+    <Option text="What happened to the others?" next="pastOthers"/>
+    <Option text="That is... terrifying. Let's talk of something else." next="pastIntro"/>
+  </Dialogue>
+
+  <Dialogue id="pastSoul">
+    <NPCText>
+      <![CDATA[
+      "I dream in foreign memories. Sometimes I speak languages no one recalls. Perhaps I am no longer Yasmin—only a vessel for what she once was.<BR>
+      But I remember music from before cities. I remember the smell of rain before it was rare. That is worth the cost."
+      ]]>
+    </NPCText>
+    <Option text="You've truly lived many lives." action="Fame:+200"/>
+    <Option text="That’s… haunting and beautiful." next="pastIntro"/>
+  </Dialogue>
+
+  <Dialogue id="pastOthers">
+    <NPCText>
+      <![CDATA[
+      "They crumbled. The ritual was never meant for more than one. When I emerged, all that remained of my circle were statues of salt and wind-scoured bones. I named the dunes after them, and never spoke their names again... until now."
+      ]]>
+    </NPCText>
+    <Option text="I will remember them, if you name them." 
+            action="SendMessage:You feel the weight of a forgotten name echo in your mind."/>
+    <Option text="Let's speak of Qasaria’s past instead." next="pastCity"/>
+    <Option text="You deserve peace, Yasmin." action="Karma:+200"/>
+  </Dialogue>
+
+  <!-- Founding of Qasaria -->
+  <Dialogue id="pastCity">
+    <NPCText>
+      <![CDATA[
+      "Before the towers, Qasaria was a ruin—scattered tents around broken ziggurats. I arrived with scrolls, fire, and a vision. I taught the desert to bloom and the stars to align over this place.<BR><BR>
+      The first Jewel wasn’t gold—it was knowledge. But others came, with swords, with spice, with silver tongues. Thus was the Council born: from my sanctuary… to a throne-room of thieves."
+      ]]>
+    </NPCText>
+    <Option text="And you stayed?" next="pastStay"/>
+    <Option text="Was it worth it?" next="pastWorth"/>
+  </Dialogue>
+
+  <Dialogue id="pastStay">
+    <NPCText>
+      <![CDATA[
+      "I stayed because I had to. The world forgets its past unless someone carves it into stone. The relics beneath Qasaria must be guarded—and I am the last who remembers how."<BR>
+      She touches her robes gently, fingers brushing runes older than the Council.
+      ]]>
+    </NPCText>
+    <Option text="What relics lie beneath this city?" next="relics"/>
+  </Dialogue>
+
+  <Dialogue id="pastWorth">
+    <NPCText>
+      <![CDATA[
+      "Every age has its price. I mourn what I lost… but this city stands. That is all that matters. When I am dust, it will still rise from the sand."<BR>
+      Her voice carries a quiet certainty—perhaps a hope, or a spell.
+      ]]>
+    </NPCText>
+    <Option text="You've given everything to this city." action="Karma:+250"/>
+    <Option text="May your legacy never fade." next="pastIntro"/>
+  </Dialogue>
+
+  <!-- What She Loves -->
+  <Dialogue id="pastLove">
+    <NPCText>
+      <![CDATA[
+      Yasmin blinks in surprise. Then—rare and warm—she smiles.<BR><BR>
+      "A question no assassin ever asks. I love the smell of cinnamon incense in morning light. I love the feel of worn scrolls, and the sound of wind chimes on an empty rooftop. I love… truth, even when it cuts."<BR>
+      She meets your eyes, suddenly vulnerable.<BR><BR>
+      "Why ask that, traveler?"
+      ]]>
+    </NPCText>
+    <Option text="Because you seem lonely." action="Karma:+150"/>
+    <Option text="Because knowing someone’s joys tells more than their titles." action="Fame:+100"/>
+    <Option text="No reason. Curiosity, perhaps." next="pastIntro"/>
+  </Dialogue>
+
+  <!-- Price of Power -->
+  <Dialogue id="pastPrice">
+    <NPCText>
+      <![CDATA[
+      Yasmin’s smile fades, replaced by stone.<BR><BR>
+      "The price? My family’s names erased. My mortal years—traded. My heart, once warm, now divided between duty and memory.<BR>
+      I know every word of the ancient tongue, yet no lullaby of my childhood."<BR><BR>
+      She turns away for a moment, cloaked in silence.
+      ]]>
+    </NPCText>
+    <Option text="You carry it with grace." action="SendMessage:She says nothing, but her posture softens slightly."/>
+    <Option text="That is a heavy burden. You shouldn't carry it alone." action="Karma:+100"/>
+    <Option text="Thank you for sharing your truth." next="pastIntro"/>
+  </Dialogue>
+
+
+</DialogueFile>

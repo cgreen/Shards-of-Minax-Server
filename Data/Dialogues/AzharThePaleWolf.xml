@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="AzharThePaleWolf">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#D7D7D7'>
+      A tall, gaunt man sits in the shadows of a half-ruined colonnade, the pallor of his skin almost spectral beneath the desert sun. His face is masked in wolfbone, his cloak tattered and dust-stained. You sense battle scars—on both flesh and soul.<BR><BR>
+      His eyes fix on you, wary yet desperate.<BR>
+      “Another hunter? Or simply another vulture come to circle Qasaria’s bones? I am Azhar—called Pale Wolf by those who once rode at my side. Speak quickly. Trust is scarce in these sands.”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I mean you no harm. Who are you?" next="backstory"/>
+    <Option text="You look hunted. Why hide here?" next="hide"/>
+    <Option text="Is it true you led the Ash Serpents?" next="ashserpents"/>
+	<Option text="I want to understand you, Azhar. Tell me your story." next="deepPast"/>
+    <Option text="I’m just passing through." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Backstory & Lore -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      Azhar’s gloved hands tremble as he speaks.<BR>
+      “I was once war-leader of the Ash Serpents—raiders and reavers. In the deep dunes, I wore the wolfbone mask and my word meant life or death. We pillaged Qasaria’s caravans, took tribute from merchants, and lived for the next storm.<BR><BR>
+      But Minax came—a shadow in the night. My brother drank her power, his eyes turned black, his laughter broke the silence of the sands. The things we did… I fled. I could not watch my kin twisted into monsters.”<BR><BR>
+      He looks away, ashamed.<BR>
+      “Now I run. Qasaria’s council would see me hanged. But Yasmin al-Topaz—her mystics whisper of redemption… if the spirits can be cleansed.”
+      ]]>
+    </NPCText>
+    <Option text="What would you have me do?" next="questIntro"/>
+    <Option text="Tell me more about Minax’s corruption." next="minax"/>
+    <Option text="Who in Qasaria aids you?" next="contacts"/>
+    <Option text="You sound haunted. I will return later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="hide">
+    <NPCText>
+      <![CDATA[
+      He gives a hollow laugh.<BR>
+      “Qasaria’s gold buys sharp blades, but I trust none save the old priestess Samira. Karim al-Emerald’s spies watch every shadow. The Ash Serpents hunt me for betrayal, Minax for vengeance.<BR>
+      I have nothing but memories and the wolf mask—yet the blood curse still gnaws at me. Unless the altar is broken, I remain their tethered wolf.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Tell me of this altar." next="questIntro"/>
+    <Option text="Why not run further?" next="run"/>
+    <Option text="Do you trust no one in Qasaria?" next="contacts"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ashserpents">
+    <NPCText>
+      <![CDATA[
+      Azhar’s eyes narrow behind the bone mask.<BR>
+      “We were the Ash Serpents—bandits on sand wolves, sworn to none but the desert and ourselves. But Minax changed us. Those who swore the bone oath were ‘blessed’ by her. Some turned to sand, others to ash, all lost their souls.<BR>
+      I was second only to the Shai’dan, my brother Rachid. Now, he is her beast—and I am an outcast.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="How did Minax change your brother?" next="minax"/>
+    <Option text="What is the bone oath?" next="boneoath"/>
+    <Option text="What must be done to break this curse?" next="questIntro"/>
+    <Option text="You have my pity, Pale Wolf." action="Close"/>
+  </Dialogue>
+
+  <!-- Branch: Explain Minax's corruption -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      He shudders, voice dropping to a whisper.<BR>
+      “She appeared as a prophetess. Promised the end of old empires—glory, power. Her gift came in a cup of black water. My brother drank first. His flesh withered, then grew strong. He slew six men that night—laughing, even as his wounds spat ash instead of blood.<BR>
+      Now the Ash Serpents worship her, and her blood flows through those who took the oath. I fled before I became her puppet.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Can you be freed of her magic?" next="questIntro"/>
+    <Option text="Do others seek to resist?" next="contacts"/>
+    <Option text="Your story is grim. I will go." action="Close"/>
+  </Dialogue>
+
+  <!-- Branch: Bone Oath lore -->
+  <Dialogue id="boneoath">
+    <NPCText>
+      <![CDATA[
+      He taps the wolfbone mask.<BR>
+      “We swore on a bone altar—old as the dunes, carved by hands that knew neither mercy nor death. The ritual bound our blood to Minax’s shadow. Now, the altar still calls to those who remain. If you break it, perhaps I may be free. Perhaps not.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="How can I destroy the altar?" next="questIntro"/>
+    <Option text="Why not break it yourself?" next="run"/>
+    <Option text="I will think on this." action="Close"/>
+  </Dialogue>
+
+  <!-- Branch: Why not run -->
+  <Dialogue id="run">
+    <NPCText>
+      <![CDATA[
+      He shrugs, cloak shifting.<BR>
+      “The curse runs deeper than blood. If I stray too far from Qasaria, the pain drives me mad—the altar’s call is a chain I cannot break alone. Only by shattering it may I be free to wander or die on my own terms.”
+      ]]>
+    </NPCText>
+    <Option text="How do I find this altar?" next="questIntro"/>
+    <Option text="You are truly trapped, Azhar." action="Close"/>
+  </Dialogue>
+
+  <!-- Branch: Allies/contacts -->
+  <Dialogue id="contacts">
+    <NPCText>
+      <![CDATA[
+      He lowers his voice.<BR>
+      “High Priestess Samira in the Sun Temple knows much of curses. Yasmin al-Topaz’s mystics have studied the bone relics, though she trusts few. Karim al-Emerald’s spies follow my every move—I owe him a life-debt, though he would use my secrets to strengthen his own grip.<BR>
+      If you seek help, approach the temple at dawn—Samira’s rites are strongest then. But be wary: some in Qasaria would pay dearly for my head.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me what I must do to help you." next="questIntro"/>
+    <Option text="Who else wants you dead?" next="danger"/>
+    <Option text="I will return later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      “The Ash Serpents hunt traitors without rest. The Council of Jewels would see me silenced to keep the city stable. Even Zahid, the Shadowmaster of the Undermarket, put a price on my mask. Only Samira shows mercy. Even that mercy may run out.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I will help you break the bone altar." next="questIntro"/>
+    <Option text="You should find a new mask." action="Close"/>
+  </Dialogue>
+
+  <!-- Branch: Quest Intro -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      Azhar leans in, his voice harsh with urgency.<BR>
+      “The altar lies in the Ash Serpents’ old haunt—deep within the <b>Ruins of Ulun-Kal</b>, east of Qasaria’s trade road. It is guarded by my former kin, now little more than ash-eyed husks. Break the altar with fire or sacred water; only then may I be free.<BR><BR>
+      But know this: Minax’s touch still lingers in my veins. When the altar shatters, her corruption may lash out. You must decide—will you save me, or end me before I become her beast?”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I will destroy the bone altar and return." 
+            action="GiveItem:FactionDeliveryQuestScroll(Bone Altar,Qasaria,350)" 
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="questGiven"/>
+    <Option text="How do I destroy the altar?" next="how"/>
+    <Option text="Can you be cured if I succeed?" next="cure"/>
+    <Option text="I must prepare before attempting this." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="how">
+    <NPCText>
+      <![CDATA[
+      “Fire cleanses, but water from the Sun Temple’s sacred font purifies more deeply. Take a vial from Samira, or use oil and flame. The altar will fight you—old spirits awaken when disturbed. Only courage and resolve will see you through.”
+      ]]>
+    </NPCText>
+    <Option text="I will do this for you, Pale Wolf." 
+            action="GiveItem:FactionDeliveryQuestScroll(Bone Altar,Qasaria,350)" 
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="questGiven"/>
+    <Option text="I will think on this." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="cure">
+    <NPCText>
+      <![CDATA[
+      Azhar’s eyes flicker with hope.<BR>
+      “Samira says the blood can be drawn out with sacred rites. Yasmin’s alchemists devised a potion—but its success is not certain. If the curse is too strong, you may need to end me. I trust you to choose mercy or justice, as the desert sees fit.”
+      ]]>
+    </NPCText>
+    <Option text="I will do what must be done." 
+            action="GiveItem:FactionDeliveryQuestScroll(Bone Altar,Qasaria,350)" 
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="questGiven"/>
+    <Option text="I will decide when the time comes." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="questGiven">
+    <NPCText>
+      <![CDATA[
+      He places a trembling hand on your shoulder.<BR>
+      “Return with proof the altar is destroyed—a piece of cursed bone, or ashes for Samira’s rites. If you see my brother Rachid, spare him if you can. But above all, do not let Minax reclaim what was once ours.<BR>
+      Go, and may the desert keep you.”
+      ]]>
+    </NPCText>
+    <Option text="I will return, one way or another." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismiss / Out -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      He lowers his gaze.<BR>
+      “Then move on. Qasaria’s shadows swallow the idle, and the Ash Serpents take the slow. If you change your mind, seek the pale wolf beneath the broken columns.”
+      ]]>
+    </NPCText>
+    <Option text="On second thought, tell me your story." next="backstory"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Deep Backstory Branch -->
+  <Dialogue id="deepPast">
+    <NPCText>
+      <![CDATA[
+      Azhar exhales slowly.<BR>
+      “You want more than a sword-arm or a mercenary tale. Very well.”<BR><BR>
+      He leans forward, voice lower now, words thick with old sand and pain.<BR>
+      “I was born in the shadows of the Serpent’s Spine, in a tribe that fed on carrion and prophecy. My mother claimed she dreamed of wolves with white fur—ghosts of the desert. She named me Azhar, and called me her Pale Wolf.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="What was your tribe like?" next="tribe"/>
+    <Option text="Tell me of your brother." next="brother"/>
+    <Option text="What did you believe in?" next="beliefs"/>
+    <Option text="That’s enough for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="tribe">
+    <NPCText>
+      <![CDATA[
+      “We were nomads. We followed the stars and the wind and little else. Men died for water, women fought for tents, and every child was taught to kill or be killed.<BR><BR>
+      When Qasaria was strong, we raided its outposts. When it was weak, we traded pelts and secrets. That was before the Ash Serpents. Before Minax.”<BR>
+      He stares past you, lost briefly.<BR>
+      “Now that tribe is dust and curse.”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Is that where the Ash Serpents came from?" next="originSerpents"/>
+    <Option text="How did Minax find your people?" next="minaxArrival"/>
+    <Option text="Let’s speak of something else." next="deepPast"/>
+  </Dialogue>
+
+  <Dialogue id="originSerpents">
+    <NPCText>
+      <![CDATA[
+      “The Ash Serpents were not born, they were made. When the storms came, when the trade routes burned, my brother Rachid led those who could still fight. We became the coil in the sand, the fang beneath the cloak.<BR><BR>
+      But even then, something darker stirred. Minax found us desperate… and desperation is her throne.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="And Rachid took her offer?" next="brother"/>
+    <Option text="So you followed him?" next="followed"/>
+    <Option text="Let’s change the subject." next="deepPast"/>
+  </Dialogue>
+
+  <Dialogue id="minaxArrival">
+    <NPCText>
+      <![CDATA[
+      “She came not in glory, but in whispers. Her first emissaries were women in black veils, promising fire to the cold and gold to the hungry. She knew what to offer each man.”<BR><BR>
+      “When Rachid took the black water… I felt my soul recoil. I refused it. Some called me coward. Some said I had no vision. But when their bones began to burn from within, they called me Pale Wolf—and spat only when I passed.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="You were brave to resist." action="Karma:+100" next="deepPast"/>
+    <Option text="Sounds more like cowardice." action="Karma:-50" next="deepPast"/>
+    <Option text="The truth is murky in war." action="Karma:+25" next="deepPast"/>
+  </Dialogue>
+
+  <Dialogue id="brother">
+    <NPCText>
+      <![CDATA[
+      Azhar stiffens.<BR>
+      “Rachid was strength. Charisma. He could tame dune wolves and command silence with a glance. I followed him from boyhood… until he followed her.”<BR><BR>
+      “Now he is something else. Still speaks my name in the night, they say. Still laughs in the wind. I have heard him at the edges of firelight.”<BR>
+      He pauses, and you see a tear slip beneath the wolf mask.<BR>
+      “He was my brother.”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Could he be saved?" next="rachidSave"/>
+    <Option text="Will you kill him if needed?" next="rachidKill"/>
+    <Option text="Let’s move on." next="deepPast"/>
+  </Dialogue>
+
+  <Dialogue id="rachidSave">
+    <NPCText>
+      <![CDATA[
+      “Perhaps. If the altar breaks, perhaps what’s left of him could crawl free. But if he strikes, I will defend myself.”<BR>
+      He lowers his voice.<BR>
+      “But I will not strike first. I’ve killed enough family for one lifetime.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="You honor him even in pain." action="Fame:+50" next="deepPast"/>
+    <Option text="That may be your downfall." action="Fame:-50" next="deepPast"/>
+    <Option text="Only time will tell." next="deepPast"/>
+  </Dialogue>
+
+  <Dialogue id="rachidKill">
+    <NPCText>
+      <![CDATA[
+      “If it comes to that… then I hope the gods forgive me.”<BR>
+      A pause.<BR>
+      “But don’t mistake vengeance for justice. I do not want revenge. I want peace. If his death buys it… then I will pay.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="We do what we must." action="Fame:+25" next="deepPast"/>
+    <Option text="You’re colder than the dunes at night." action="Karma:-50" next="deepPast"/>
+  </Dialogue>
+
+  <Dialogue id="followed">
+    <NPCText>
+      <![CDATA[
+      “I followed him, yes. Even when the fire rained down and caravans screamed. Even when the masks no longer fit human faces.”<BR>
+      “But when the first child’s bones were fed to the altar… I fled. I would rather die a traitor than live a beast.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="You still carry that shame." next="beliefs"/>
+    <Option text="You made the right choice." action="Karma:+50" next="beliefs"/>
+    <Option text="You should’ve stopped them sooner." action="Karma:-50" next="beliefs"/>
+  </Dialogue>
+
+  <Dialogue id="beliefs">
+    <NPCText>
+      <![CDATA[
+      Azhar’s tone shifts—softer now.<BR>
+      “I believed in survival. In kinship. In the idea that freedom was more than just killing the stronger man.”<BR><BR>
+      “Now I believe in quiet. In firelight stories. In a day without screams.”<BR><BR>
+      “Do you believe in anything, wanderer?”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I believe in justice." action="Karma:+100" next="beliefsReply"/>
+    <Option text="I believe in power." action="Karma:-100" next="beliefsReply"/>
+    <Option text="I believe in freedom." action="Fame:+50" next="beliefsReply"/>
+    <Option text="I believe in gold." action="GiveGold:10" next="beliefsReply"/>
+  </Dialogue>
+
+  <Dialogue id="beliefsReply">
+    <NPCText>
+      <![CDATA[
+      Azhar gives a faint smile.<BR>
+      “Then perhaps the desert has not claimed your soul just yet. Hold to that belief. It may save you when swords fail.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you for sharing, Pale Wolf." action="PlaySound:0x015" next="deepPast"/>
+    <Option text="I’ve heard enough stories for now." action="Close"/>
+  </Dialogue>
+
+
+</DialogueFile>

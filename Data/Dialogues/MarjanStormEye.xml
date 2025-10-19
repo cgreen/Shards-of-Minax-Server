@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="MarjanStormEye">
+
+  <!-- ========================================= -->
+  <!-- Main Greeting -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#c4b98b'>
+      You see a broad-shouldered man polishing tankards behind the battered bar of the Broken Mast. His weathered face bears an old scar and a steely gaze beneath a battered tricorne. <BR><BR>
+      "You looking for a drink, or for trouble? Name's Marjan. If it's coin or stories you’ve got, I might listen. If it's trouble—well, you'll find the door on your own."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Just here for a drink." next="drink"/>
+    <Option text="Are you Marjan Storm-Eye, the corsair?" next="who"/>
+    <Option text="What’s the news in Sunreach?" next="news"/>
+    <Option text="I’m seeking work. Anything need doing?" next="questIntro"/>
+	<Option text="Tell me about yourself, Marjan." next="pastIntro"/>
+    <Option text="Never mind." action="Close"/>
+  </Dialogue>
+
+  <!-- Drink option -->
+  <Dialogue id="drink">
+    <NPCText>
+      <![CDATA[
+      Marjan grunts and slides a chipped mug across the bar. "Drink up. First one's on the house if you keep your mouth shut and your eyes open."
+      ]]>
+    </NPCText>
+    <Option text="Thanks, old salt." action="Close"/>
+  </Dialogue>
+
+  <!-- Who are you? -->
+  <Dialogue id="who">
+    <NPCText>
+      <![CDATA[
+      "Aye, I sailed for gold and glory. Seen every storm the Noxian Sea could hurl. These days I serve ale instead of iron, but old habits die hard. In Sunreach, past deeds are best left at sea—unless you’re keen to pay for a tale, or a secret."
+      ]]>
+    </NPCText>
+    <Option text="You know Lady Seraphine Ashveil?" next="seraphine"/>
+    <Option text="Why run a tavern instead of a ship?" next="whyTavern"/>
+    <Option text="Any work for a willing hand?" next="questIntro"/>
+    <Option text="I’ll leave you to your mugs." action="Close"/>
+  </Dialogue>
+
+  <!-- Lady Seraphine branch -->
+  <Dialogue id="seraphine">
+    <NPCText>
+      <![CDATA[
+      A rare smile flickers across Marjan’s lips, then fades. "Seraphine and I, we carved our names into more hulls than I can count. She chose power—I chose peace. Don’t mention my name to her crew unless you fancy a swim."
+      ]]>
+    </NPCText>
+    <Option text="She’s after your daughter, isn’t she?" next="daughter"/>
+    <Option text="I can keep secrets." next="who"/>
+    <Option text="Any work for a willing hand?" next="questIntro"/>
+    <Option text="I’ll be on my way." action="Close"/>
+  </Dialogue>
+
+  <!-- Why tavern? -->
+  <Dialogue id="whyTavern">
+    <NPCText>
+      <![CDATA[
+      Marjan snorts. "When the sea’s done with you, all that’s left is dry land and old regrets. Here, I hear every whisper from the council to the gutter. Sometimes secrets pay better than gold, and a quiet corner keeps more folk safe than any cutlass."
+      ]]>
+    </NPCText>
+    <Option text="You protect people here?" next="protect"/>
+    <Option text="What’s the news in Sunreach?" next="news"/>
+    <Option text="Any work for a willing hand?" next="questIntro"/>
+    <Option text="Enough questions for now." action="Close"/>
+  </Dialogue>
+
+  <!-- News in Sunreach -->
+  <Dialogue id="news">
+    <NPCText>
+      <![CDATA[
+      Marjan leans in, lowering his voice. "Gold’s flowing and knives are out. The council’s got eyes everywhere, but so do the Corsairs—and now Minax’s lot whisper in the shadows. Stay sharp, friend. And keep your purse closer."
+      ]]>
+    </NPCText>
+    <Option text="Who does the council fear most?" next="council"/>
+    <Option text="Any word from the docks?" next="docks"/>
+    <Option text="Any work for a willing hand?" next="questIntro"/>
+    <Option text="I’ll be careful." action="Close"/>
+  </Dialogue>
+
+  <!-- Council fears -->
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      "The council fears only what they can’t buy or bribe. That, and Lady Seraphine—she’s got a grip on these waters. But there’s new trouble now. Minax’s cultists are moving crates through the sewers, and I’d bet my last bottle they aren’t shipping rum."
+      ]]>
+    </NPCText>
+    <Option text="Thanks for the warning." action="Close"/>
+    <Option text="Anything I can do about it?" next="questIntro"/>
+  </Dialogue>
+
+  <!-- Docks rumor -->
+  <Dialogue id="docks">
+    <NPCText>
+      <![CDATA[
+      "Rhogar Blackwake’s clashing with some new blood from Buccaneer’s Den. Ships come and go at odd hours, and a few faces in the market haven’t paid their dues to the Ashveils. Something’s brewing, but I keep to the tavern—mostly."
+      ]]>
+    </NPCText>
+    <Option text="Good to know." action="Close"/>
+    <Option text="Any work for a willing hand?" next="questIntro"/>
+  </Dialogue>
+
+  <!-- Protect people? -->
+  <Dialogue id="protect">
+    <NPCText>
+      <![CDATA[
+      "I watch out for my own. Some folks come here for shelter from Darius’s men, others from worse. But there’s only so much one barkeep can do."
+      ]]>
+    </NPCText>
+    <Option text="Someone after your daughter?" next="daughter"/>
+    <Option text="You need help?" next="questIntro"/>
+    <Option text="I’ll let you be." action="Close"/>
+  </Dialogue>
+
+  <!-- Daughter branch -->
+  <Dialogue id="daughter">
+    <NPCText>
+      <![CDATA[
+      Marjan’s voice drops to a growl. "Aye, my adopted girl, Mira. She’s smart—too smart. Seraphine wants her for the Corsairs, thinks she’s got her mother’s fire. But I won’t let her be swallowed by that life. I need someone to watch over her, maybe talk some sense, or dig up dirt on whoever’s trying to press-gang her into Seraphine’s ranks."
+      ]]>
+    </NPCText>
+    <Option text="I can help protect Mira." next="questOffer"/>
+    <Option text="What makes Mira so special?" next="mira"/>
+    <Option text="I’m not the right one for this." action="Close"/>
+  </Dialogue>
+
+  <!-- About Mira -->
+  <Dialogue id="mira">
+    <NPCText>
+      <![CDATA[
+      "She’s quick with a blade and quicker with her tongue. Grew up among thieves and sailors, but she’s got more heart than any of ’em. I’d see her make her own way, not be a pawn for Seraphine’s schemes."
+      ]]>
+    </NPCText>
+    <Option text="I’ll do what I can for her." next="questOffer"/>
+    <Option text="That’s a hard thing, Marjan." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Offer -->
+  <Dialogue id="questOffer">
+    <NPCText>
+      <![CDATA[
+      Marjan leans in, urgency in his gaze.<BR><BR>
+      "Mira’s being courted by a slick-talking Corsair—goes by Renzo Blackfin. He’s been seen near the old shipyard and at the Fishmonger’s Market. Find out what he’s offering her, and if you can, persuade Mira to steer clear of the Ashveil life. If things go bad… keep her safe. Quiet work, you understand? No blood unless there’s no other way."
+      ]]>
+    </NPCText>
+    <Option text="I’ll speak with Mira and watch for Renzo." 
+            action="GiveItem:FactionQuestScroll(Mira,Sunreach,300)" 
+            condition="!HasItem:FactionQuestScroll"
+            next="questAccept"/>
+    <Option text="What does Renzo want with her?" next="renzo"/>
+    <Option text="On second thought, I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="questAccept">
+    <NPCText>
+      <![CDATA[
+      Marjan nods grimly.<BR><BR>
+      "Good. Mira won’t trust just anyone—tell her Marjan sent you, and watch your step around Renzo. Bring me news, or proof she’s safe, and there’ll be gold in it—and a friend behind the bar whenever you need one."
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with word of Mira." action="Close"/>
+  </Dialogue>
+
+  <!-- Renzo details -->
+  <Dialogue id="renzo">
+    <NPCText>
+      <![CDATA[
+      "Renzo Blackfin’s Seraphine’s new errand-boy. Silver tongue, shark’s grin. He’s offering Mira a cut of something big—maybe a job on Seraphine’s flagship. But Renzo’s loyalty is only to gold and whoever’s got the sharpest knife."
+      ]]>
+    </NPCText>
+    <Option text="I’ll keep my eyes open." next="questOffer"/>
+    <Option text="Thanks, Marjan." action="Close"/>
+  </Dialogue>
+
+  <!-- Backstory Root -->
+  <Dialogue id="pastIntro">
+    <NPCText>
+      <![CDATA[
+      Marjan narrows his eyes and leans on the bar.<BR><BR>
+      "You sure you want to hear a washed-up sailor’s tale? Folk usually want coin or gossip, not a history lesson from a ghost with a rum habit."
+      ]]>
+    </NPCText>
+    <Option text="You've lived through storms most only dream of." condition="FameAtLeast:2500" next="respect"/>
+    <Option text="Everyone's got a story worth hearing." next="respect"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Respectful Entry -->
+  <Dialogue id="respect">
+    <NPCText>
+      <![CDATA[
+      A rough chuckle escapes him. "Aye, I suppose I have. Fine then. Let’s pour some truth into the glass and see who drowns." He leans closer, eyes flicking across the room.<BR><BR>
+      "I wasn’t always a barkeep. I captained the *Revenant Gale*, fastest brig on this coast. Ran spice, silk, and silver from Buccaneer’s Den to the Isles of Mist. That life… it cost me more than gold ever paid me back."
+      ]]>
+    </NPCText>
+    <Option text="What made you leave the sea?" next="leftSea"/>
+    <Option text="Tell me about the Revenant Gale." next="ship"/>
+    <Option text="You worked with Seraphine, didn’t you?" next="seraphineDeep"/>
+  </Dialogue>
+
+  <!-- Why he left the sea -->
+  <Dialogue id="leftSea">
+    <NPCText>
+      <![CDATA[
+      "Saw too many good men go overboard chasing bad promises. One night, we ran aground evading a Trinsic patrol—storm hit, and I lost half my crew. That’s when I knew: the sea had taken its due. Mira was the only light left, crying in the arms of her dying mother." <BR><BR>
+      His voice roughens. "She wasn’t mine, but I made a vow right then. No more blood. No more debts. Just a roof, a fire, and a safe place for her to grow."
+      ]]>
+    </NPCText>
+    <Option text="You've kept that vow, haven't you?" next="honor"/>
+    <Option text="And yet danger still finds her..." next="daughter"/>
+    <Option text="That’s a hard past to carry." action="Karma:+100"/>
+  </Dialogue>
+
+  <!-- Ship Details -->
+  <Dialogue id="ship">
+    <NPCText>
+      <![CDATA[
+      "The *Revenant Gale*—she was more than wood and sail. Built her myself with timber from Yew and bronze from Vesper. She could outrun any customs ship and had teeth sharper than Rhogar’s lies. Still miss her. If you ever find her wreck, there’s something in the captain’s locker I’d pay gold to see again." 
+      ]]>
+    </NPCText>
+    <Option text="What would I be looking for?" next="locker"/>
+    <Option text="That sounds like a lost treasure." action="Fame:+250"/>
+  </Dialogue>
+
+  <!-- Captain's Locker Quest Tease -->
+  <Dialogue id="locker">
+    <NPCText>
+      <![CDATA[
+      "An old spyglass. Nothing fancy, but the lens is etched with runes from Wind—gift from someone I loved once. If you find it, it’s yours to keep… unless your heart’s as battered as mine. Then you’ll know it belongs here." 
+      ]]>
+    </NPCText>
+    <Option text="I’ll keep an eye out." action="SendMessage:You feel a personal quest has just begun..."/>
+    <Option text="I’ll return if I find it." action="Close"/>
+  </Dialogue>
+
+  <!-- Seraphine Deep -->
+  <Dialogue id="seraphineDeep">
+    <NPCText>
+      <![CDATA[
+      "Seraphine…" Marjan's voice softens, then hardens like cooling iron.<BR><BR>
+      "We were fire and storm. She led the Ashveil Corsairs then like she does now. Ruthless. Brilliant. I loved her—and feared her." He pauses. "We made war on merchants and nobles, took vengeance where courts failed. But power… it twisted her. Or maybe revealed her true shape."
+      ]]>
+    </NPCText>
+    <Option text="Do you still love her?" next="love"/>
+    <Option text="Sounds like she hasn't let go of the past either." next="daughter"/>
+    <Option text="That explains your scars." condition="IsFemale" action="SendMessage:Marjan gives you a half-smile, old and sad."/>
+    <Option text="You made your peace with her?" next="peace"/>
+  </Dialogue>
+
+  <!-- Love branch -->
+  <Dialogue id="love">
+    <NPCText>
+      <![CDATA[
+      "Love? Maybe once. Now… I dream of her blade more than her kiss. She’s the storm I once sailed into—now I just watch it from the shore, hoping Mira never walks into it blind."
+      ]]>
+    </NPCText>
+    <Option text="You still protect them both, in your own way." action="Karma:+150"/>
+    <Option text="I’ll do what I can to help Mira." next="questOffer"/>
+  </Dialogue>
+
+  <!-- Peace -->
+  <Dialogue id="peace">
+    <NPCText>
+      <![CDATA[
+      "Peace is a lie told over a quiet drink. Seraphine’s never done with me. Not truly. That’s why I stay in Sunreach—why I built the Broken Mast. If she ever comes for Mira, she’ll have to sail through me first." 
+      ]]>
+    </NPCText>
+    <Option text="She won’t get that chance." next="questOffer"/>
+    <Option text="You’re braver than most captains still at sea." action="Fame:+500"/>
+  </Dialogue>
+
+  <!-- Honor branch -->
+  <Dialogue id="honor">
+    <NPCText>
+      <![CDATA[
+      "Aye. For the most part. Every drink I serve keeps some thug from stabbing a sailor in the alley. Every whisper I sell buys silence for someone who needs it more. This tavern ain’t clean—but it’s safer than the sea." 
+      ]]>
+    </NPCText>
+    <Option text="You’ve made your own kind of sanctuary." action="Karma:+200"/>
+    <Option text="And earned more honor than the council ever will." next="news"/>
+  </Dialogue>
+
+
+</DialogueFile>

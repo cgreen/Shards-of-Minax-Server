@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="CaptainUrvenSlate">
+
+  <!-- === root ================================================= -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#9be6f6'>
+      The man before you is clad in battered finery: a <b>Frostbite Silk Undershirt</b> (glimmering pale blue), salt-scarred apron, and an extravagant <b>Tricorne Hat</b> rimed with frost and perched at a rakish angle. His boots bear the stains of brine and snow. An invisible weight rides his shoulder—then you notice, now and then, a faint shimmer as a <i>ghostly monkey</i> chitters and vanishes.
+      <br><br>
+      "Aye, I see you’re admirin’ the hat. Only the best for Captain Urven Slate—ice-runner, smuggler, and, as of last frost, respectable merchant. Or so I tell the good folk at Lira’s inn. 
+      <br>
+      Come for a tale, a deal, or just a little trouble? My monkey picks pockets, but I don’t bite—unless you’re Minaxian. Speak up, before the wind steals your tongue."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You must be the infamous Captain Slate. What brings you to Frostmere?" next="intro"/>
+    <Option text="Is that... an invisible monkey?" next="monkey"/>
+    <Option text="Lira sent me; she said you have work for someone handy." next="lira"/>
+    <Option text="You look like trouble. Why should anyone trust you?" next="trust"/>
+    <Option text="I’m looking for honest work—anything legal or... otherwise?" next="work"/>
+	<Option text="Tell me about your past. You’ve seen some things." next="pastIntro"/>
+    <Option text="Just passing through, Captain." next="passing"/>
+  </Dialogue>
+
+  <Dialogue id="intro">
+    <NPCText>
+      <![CDATA[
+      "Ha! Infamous, eh? Guilty as charged. I ran sunrunner sleds down from Sunreach, dodgin’ pirates, monsters, and the sort of cold that’d turn yer spit to daggers. After a falling out with certain... ex-associates (and a bit too much attention from Minax’s mutts), I set up shop here.
+      <br>
+      Garrik’ll tell you I’m no saint, but I’d sooner lose a hand than turn a friend to Minax. Lira trusts me with her best whisky, Svala trusts me with nothing—so, you’re safe in my company, or at least in good hands if it all goes sideways."
+      ]]>
+    </NPCText>
+    <Option text="Have any work that pays coin?" next="work"/>
+    <Option text="Tell me about this falling out. You tangled with Minax?" next="minax"/>
+    <Option text="Who’s your monkey friend?" next="monkey"/>
+    <Option text="Maybe I’ll be on my way." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="monkey">
+    <NPCText>
+      <![CDATA[
+      "Ah! You’ve the sharpest eyes in Frostmere. That’s Dibs—the best thief on this coast, and nigh impossible to catch unless you carry a sack of candied figs. Found him years ago in a Sunreach bazaar. Old sorcerer said he was cursed to fade in and out of sight, which makes him both a boon and a menace.
+      <br>
+      Dibs mostly nabs trinkets, never anything vital. Well—almost never. If anything of yours goes missing, ask at the White Boar. Lira’s gotten used to finding oddments in her bread bin."
+      ]]>
+    </NPCText>
+    <Option text="Dibs sounds clever. Now, about that work..." next="work"/>
+    <Option text="Has Dibs ever stolen anything important?" next="dibsImportant"/>
+    <Option text="Maybe I’ll be off." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dibsImportant">
+    <NPCText>
+      <![CDATA[
+      "Clever? He’s a right terror. Once snatched Garrik’s favorite hammer and hid it in a snowdrift for three days. Garrik’s temper nearly melted the tundra.
+      <br>
+      Dibs only steals what he fancies. Jewelry, bright buttons, shiny coins. Never a map, though. He knows my secrets are off limits—or he’ll end up the world’s first ghost monkey popsicle."
+      ]]>
+    </NPCText>
+    <Option text="Let’s talk business, then." next="work"/>
+    <Option text="No thanks, Captain." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="lira">
+    <NPCText>
+      <![CDATA[
+      "Ha! Lira’s always sending me hopeful sorts with empty mugs and quicker wits. She’s a gem. Treat her with respect and she’ll warm your bones; cross her and you’ll freeze twice before dawn.
+      <br>
+      Now, if you’ve got steel in your spine, I’ve a little trouble needs clearing. Pays in coin and a bit of Sunreach contraband, if you fancy something stronger than icewater."
+      ]]>
+    </NPCText>
+    <Option text="What’s the trouble?" next="questIntro"/>
+    <Option text="Contraband? Tempting, but I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="trust">
+    <NPCText>
+      <![CDATA[
+      "Why trust me? That’s a fair question. Truth is, I’ve earned my share of suspicion. Used to run with rough folk, sailed under a black flag or two—until Minax’s filth ruined the trade. I lost more than coin in that deal. These days, I run sleds for honest work (and a bit of not-so-honest when the need is dire). Garrik’ll vouch for me, and Lira too—if you buy her a drink first."
+      ]]>
+    </NPCText>
+    <Option text="Maybe I’ll trust you. Got any work?" next="work"/>
+    <Option text="Not my style. Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="passing">
+    <NPCText>
+      <![CDATA[
+      "Well then, enjoy the cold. Should you change your mind, I’ll be here—unless the monkey steals my boots again."
+      ]]>
+    </NPCText>
+    <Option text="Actually, maybe I am interested..." next="work"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Work/Quest Offer Main Node -->
+  <Dialogue id="work">
+    <NPCText>
+      <![CDATA[
+      "There’s always work in Frostmere, if you’re nimble or bold. But today, I need someone with both brains and muscle. Something nasty’s crawled up from the glacial rifts—a <b>Glacial Ooze</b>, bigger than a rowboat, and twice as slimy. It's been freezing my sled tracks, spooking the dogs, and Dibs won’t even go near it. <br>
+      I’d handle it myself, but last time I tried, my cutlass got half-digested. Svala says it’s the Obelisk’s fault—she always blames the magic. Garrik says it’s my luck. Either way, it needs dealing. Up for the job?"
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about the Glacial Ooze." next="oozeInfo"/>
+    <Option text="Why not ask Svala or Garrik for help?" next="helpWhyNot"/>
+    <Option text="Sounds like a fair challenge. I’ll do it."
+      action="GiveItem:FactionKillQuestScroll(GlacialOoze,1,Frostmere,650)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="I don’t do slime. Find someone else." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="oozeInfo">
+    <NPCText>
+      <![CDATA[
+      "Oh, this isn’t your average puddle of muck. Glacial Oozes are living chunks of ice, corrupted by something deep in the old glacier. They’re nearly invisible against snow, and their touch will freeze your boots solid. 
+      <br>
+      One got into the dogsled yard last night—turned two harnesses into icicles. The thing’s too tough for arrows, and if you hit it wrong, it just splits and comes back angrier. But it leaves behind a frozen core—bring me that, and you’ll get paid in coin, plus something from my personal stash. Maybe a Sunreach spice loaf, or a vial of rum older than Lira’s patience."
+      ]]>
+    </NPCText>
+    <Option text="Alright, I’ll handle the Glacial Ooze."
+      action="GiveItem:FactionKillQuestScroll(GlacialOoze,1,Frostmere,650)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="That sounds risky. Why not pay the militia?" next="militia"/>
+    <Option text="I’ll pass on this one." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Urven grins, revealing a gold tooth.<br><br>
+      "That’s the spirit! The Glacial Ooze slithers near the sled yard at dusk, or sometimes by the old shipwreck where the ice cracks deepest. Dibs won’t go near it, so you’re on your own. Smash its core and bring it here. If you find any relics by the shipwreck, let me know—there’s more treasure in those depths than most folk imagine.
+      <br>
+      Oh, and watch your step—if you see anything small and shiny run past, it's probably Dibs, not a frost sprite."
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with the Ooze’s frozen core." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="helpWhyNot">
+    <NPCText>
+      <![CDATA[
+      "Ha! Svala’s too busy stalking ice elk, and Garrik’s wrists ache in the cold. Besides, last time Garrik fought a slime, he spent a week scraping ooze out of his beard. No, this job needs a new face and a steady hand. <br>
+      Or maybe you’d like to ask the monkey, but he’s afraid of his own reflection in the ice."
+      ]]>
+    </NPCText>
+    <Option text="Point taken. I’ll deal with the ooze."
+      action="GiveItem:FactionKillQuestScroll(GlacialOoze,1,Frostmere,650)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Maybe I’ll just leave you to it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="militia">
+    <NPCText>
+      <![CDATA[
+      "Bryndra’s lot are fine fighters, but she’d rather line the fences than chase slimes. Besides, she thinks I’m a ‘security risk’—too many late nights at Lira’s and too many secrets under my cloak. Best if we keep this between us. Fewer questions, quicker pay."
+      ]]>
+    </NPCText>
+    <Option text="Alright, I’ll take the job."
+      action="GiveItem:FactionKillQuestScroll(GlacialOoze,1,Frostmere,650)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Maybe next time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Urven’s face darkens, shadows flickering under the brim of his hat.<br><br>
+      "Aye, I crossed Minax’s path. Once. Thought I could outsmart her—smuggle artifacts out of Sunreach before her cult could get their claws in. Lost my ship, half my crew, and nearly Dibs too. 
+      <br>
+      I’ll not speak more of it, but know this: Minax’s influence is cold, deeper than the permafrost. If you see anything marked with her sign on your hunt, burn it, or bring it straight to Irinya. Some wounds won’t heal, even with a bottle of rum."
+      ]]>
+    </NPCText>
+    <Option text="If I find anything suspicious, I’ll report to Irinya." next="work"/>
+    <Option text="That sounds dangerous. Maybe I’m not cut out for this." action="Close"/>
+  </Dialogue>
+
+  <!-- === BACKSTORY BRANCH ================================================= -->
+
+  <Dialogue id="pastIntro">
+    <NPCText>
+      <![CDATA[
+      Urven chuckles, the sound rough and hollow like oars against ice.<br><br>
+      "You’re not the first to ask. But most folk who dig into my past end up knee-deep in someone else's secrets, too. Still... you're either nosy or bold. And I like both."
+      ]]>
+    </NPCText>
+    <Option text="Start from the beginning. Where did it all begin?" next="pastSunreach"/>
+    <Option text="Tell me about your crew. Who did you lose?" next="crewLost"/>
+    <Option text="Do you regret it? Running freight, smuggling, fleeing Minax?" next="regret"/>
+    <Option text="Ever think of settling down?" next="settle"/>
+    <Option text="On second thought, forget it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="pastSunreach">
+    <NPCText>
+      <![CDATA[
+      "Sunreach, back before it was crawling with spice barons and back-alley witches. I was a deckhand on the <i>Frozen Violet</i>—a trim little ship with a sail like a snow hawk's wing. We ran icewine and spirit sap down the Silver Coast. 
+      <br><br>
+      Then came the shadow—Minax’s dogs in cloaks with black fire in their hands. They weren’t just looking to raid—they wanted things buried under the dunes. I saw them sink a ship with a whisper."
+      ]]>
+    </NPCText>
+    <Option text="You saw Minax’s agents up close?" next="minaxAgents"/>
+    <Option text="Did you fight back?" next="fightBack"/>
+    <Option text="What did they want under the dunes?" next="duneSecrets"/>
+  </Dialogue>
+
+  <Dialogue id="minaxAgents">
+    <NPCText>
+      <![CDATA[
+      "Aye. Pale-faced men who didn’t blink. Women with no shadows. They weren’t human—not really. We tried to outrun them. But they <i>folded</i> the sea. Bent the air like parchment. That’s when I knew Sunreach was lost."
+      ]]>
+    </NPCText>
+    <Option text="What did you do then?" next="crewLost"/>
+  </Dialogue>
+
+  <Dialogue id="fightBack">
+    <NPCText>
+      <![CDATA[
+      "We tried. Set fire to our own docks, blasted supply ships in the bay. But when a thing can rot steel from a mile off, courage don’t mean much. I lost good men—Tharn, Melynna, Soft-Eye Pekk. All burned or vanished."
+      ]]>
+    </NPCText>
+    <Option text="Sorry to hear that. What happened to your crew?" next="crewLost"/>
+  </Dialogue>
+
+  <Dialogue id="duneSecrets">
+    <NPCText>
+      <![CDATA[
+      "Artifacts, I think. Something buried from the old days. Magic from the Gem War, maybe even fragments of Mondain’s madness. Whatever it was, they found it. And that’s when I ran. Took Dibs, took what coin I could, and never looked back."
+      ]]>
+    </NPCText>
+    <Option text="So now you’re just a sled captain with a ghost monkey?" next="regret"/>
+  </Dialogue>
+
+  <Dialogue id="crewLost">
+    <NPCText>
+      <![CDATA[
+      "Some say the sea claims what the sky forgets. My crew—they were the best. No kings, no crowns, just salt and sail and sharp wit. We called ourselves the <b>Ice-Kissed Knaves</b>. Dumb name, but it stuck. Garrik was our smith. Lira sold our hooch. Frostmere’s the last echo of that life."
+      ]]>
+    </NPCText>
+    <Option text="That’s a fine name. You miss them?" next="regret"/>
+    <Option text="I’ve heard of them. (If you have high Fame)"
+            condition="FameAtLeast:5000"
+            action="SendMessage:Urven eyes you with respect."
+            next="legendTalk"/>
+  </Dialogue>
+
+  <Dialogue id="legendTalk">
+    <NPCText>
+      <![CDATA[
+      "Aye? Then you’ve walked some long roads to know of us. Maybe you’ve got a story of your own worth listening to. Careful though—Dibs judges folk by their eyebrows."
+      ]]>
+    </NPCText>
+    <Option text="So what keeps you going?" next="regret"/>
+  </Dialogue>
+
+  <Dialogue id="regret">
+    <NPCText>
+      <![CDATA[
+      Urven shrugs, the gesture heavy with memory.<br><br>
+      "Regret’s for folk who had better options. I made my calls. Saved some, lost more. But I’ve still got my breath, my monkey, and the best boots in Frostmere. You learn to laugh or freeze. I chose laughter."
+      ]]>
+    </NPCText>
+    <Option text="Anything you wish you’d done different?" next="settle"/>
+    <Option text="Ever think of starting a new crew?" next="newCrew"/>
+  </Dialogue>
+
+  <Dialogue id="settle">
+    <NPCText>
+      <![CDATA[
+      "Settle? I tried once. Opened a tavern in Nujel’m. Dibs drank all the rum, a sandwyrm stole my accountant, and the tax office burned down. So no, I think the road suits me fine."
+      ]]>
+    </NPCText>
+    <Option text="Dibs sounds like he’d make a fine mayor." action="SendMessage:The monkey chitters proudly."/>
+    <Option text="Fair enough. Got any cooking skills?"
+            condition="SkillAtLeast:Cooking,50"
+            action="GiveItem:CookedBird"
+            next="cookSkill"/>
+    <Option text="Just curious. Thanks for sharing." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="cookSkill">
+    <NPCText>
+      <![CDATA[
+      "Ah, you cook? So did Melynna. She made a sea-lobster pie that’d win wars. Here—this isn’t much, but Dibs swiped it from Lira's pantry and I don’t eat poultry."
+      ]]>
+    </NPCText>
+    <Option text="Appreciate it, Captain." action="Karma:10"/>
+    <Option text="What’s Dibs’s favorite food?" next="dibsFood"/>
+  </Dialogue>
+
+  <Dialogue id="dibsFood">
+    <NPCText>
+      <![CDATA[
+      "Candied figs. The purple ones from Qasaria. He once stole forty from a merchant prince and stuffed them in Garrik’s forge. We didn’t have heat for a week, but Dibs slept like royalty."
+      ]]>
+    </NPCText>
+    <Option text="This was a good chat, Captain. You’ve got stories." action="Fame:50"/>
+    <Option text="I’ll be off. See you around." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="newCrew">
+    <NPCText>
+      <![CDATA[
+      "Start a new crew? Maybe. If I find the right blades. Someone brave, clever, with enough backbone to stare down frost witches and drunk pirates. Someone like..."
+      ]]>
+    </NPCText>
+    <Option text="Me?" action="SendMessage:Urven gives you a measuring look."/>
+    <Option text="...Dibs?" action="SendMessage:The monkey chitters smugly."/>
+    <Option text="I’ll think about it." action="Close"/>
+  </Dialogue>
+
+
+</DialogueFile>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="GarrikBlacksmith">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#bdd2ee'>
+      You approach a burly, bearded man hammering at a frost-rimed anvil. His <b>Frost-Hardened Doublet</b> gleams with cold iron threads, and sparks dance across the scorched leather of his <b>Volcanic Forgemaster's Apron</b>. He barely glances up, but there’s a sly warmth in his gravelly voice.<br><br>
+      "Hmph. Thought I heard new boots crunching snow. Welcome to my forge, stranger—where steel’s strong as tundra ice and gossip’s hotter than the coals. Name’s Garrik, Minoc-born. If you’re after honest work or something sharper, speak up. If you’re just after Svala’s stew, you’ll have to wrestle her bear first."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You’re Garrik? Heard you’re the best smith north of Yew." next="praise"/>
+    <Option text="Looking for work. Anything need doing?" next="questIntro"/>
+    <Option text="What’s with the bandana? Too cold for sweat." next="bandana"/>
+    <Option text="You and Svala—rivals or sweethearts?" next="svala"/>
+    <Option text="Tell me more about yourself, Garrik." next="backstoryIntro"/>	
+    <Option text="Just browsing, thanks." next="browse"/>
+  </Dialogue>
+
+  <Dialogue id="praise">
+    <NPCText>
+      <![CDATA[
+      Garrik snorts, a reluctant grin breaking through his beard.<br><br>
+      "Flattery, eh? Careful, or I’ll charge you double for the next axe. I learned in Minoc—real smiths can shape steel with one hand and break noses with the other. Up here, it’s mostly hammering dents out of militia shields... and dodging Svala’s barbed wit."
+      ]]>
+    </NPCText>
+    <Option text="So you’re friends with Bryndra’s militia?" next="bryndra"/>
+    <Option text="What keeps you busy lately?" next="questIntro"/>
+    <Option text="You and Svala—rivals or sweethearts?" next="svala"/>
+  </Dialogue>
+
+  <Dialogue id="bandana">
+    <NPCText>
+      <![CDATA[
+      He taps his soot-streaked bandana.<br><br>
+      "Coal dust. Beats freezing my ears off, and keeps my hair from catching when the forge flares up. Besides, Svala says I look less ugly with it on—she’s wrong, of course, but don’t tell her."
+      ]]>
+    </NPCText>
+    <Option text="Tell me about Svala." next="svala"/>
+    <Option text="Got any work for a willing hand?" next="questIntro"/>
+  </Dialogue>
+
+  <Dialogue id="svala">
+    <NPCText>
+      <![CDATA[
+      Garrik shakes his head, but there’s a spark in his eyes.<br><br>
+      "Rivals, sweethearts, hunting partners—depends on which way the wind’s howling. She brings me pelts, I trade her arrows for stories. Last week she beat me at arm wrestling—claims that makes her the better blacksmith. Bah! But don’t let her fool you; if the orcs attack, Svala’s first to the wall, and I’m right beside her."
+      ]]>
+    </NPCText>
+    <Option text="Sounds like you two make a good team." next="bryndra"/>
+    <Option text="You mentioned orcs. Trouble lately?" next="questIntro"/>
+  </Dialogue>
+
+  <Dialogue id="bryndra">
+    <NPCText>
+      <![CDATA[
+      Garrik’s smile fades into a hard, proud expression.<br><br>
+      "Bryndra and I built Frostmere’s first steel gate together, back when we had more wolves than neighbors. She runs the militia; I keep their blades from shattering. She trusts me enough to share her secrets—though don’t ask what’s in her flask."
+      ]]>
+    </NPCText>
+    <Option text="Is there work to be done around here?" next="questIntro"/>
+    <Option text="You two ever disagree?" next="bryndra2"/>
+  </Dialogue>
+
+  <Dialogue id="bryndra2">
+    <NPCText>
+      <![CDATA[
+      "Bryndra would chain every mage and melt the Obelisk if she thought it’d save us. I say we need a little magic to keep the cold at bay. She says my hammer’s too soft. I say she’s too stubborn. In the end, we both bleed Frostmere blue."
+      ]]>
+    </NPCText>
+    <Option text="Speaking of magic, heard of any trouble brewing?" next="questIntro"/>
+  </Dialogue>
+
+  <Dialogue id="browse">
+    <NPCText>
+      <![CDATA[
+      "Look all you want, but mind the molten slag. It’s a long walk to Irinya’s hut for burns. If you change your mind, or your sword bends, you know where to find me."
+      ]]>
+    </NPCText>
+    <Option text="On second thought, need a job." next="questIntro"/>
+    <Option text="See you around." action="Close"/>
+  </Dialogue>
+
+  <!-- QUEST OFFER MAIN NODE -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      Garrik hefts his <b>Frosthammer</b>, the head shimmering with rime and runes.<br><br>
+      "You want work? Got a job for someone not scared of blood or blizzard. There’s an orc out in the deep drift—calls itself ‘FrostAxe’, and it’s been raiding my ore wagons and scattering the miners. Broke poor Brinna’s arm, snapped a half-ton sled in two, and left its mark burned into the snow—a sigil I’ve seen before, back in the Minoc wars. This beast is smarter than it looks, and its axe is colder than the Obelisk’s shadow."<br><br>
+      "Captain Bryndra wants to hunt it herself, but I can’t risk losing her. Svala says the orc tracks by scent, so you’ll need to be careful not to stink of the forge. Bring me FrostAxe’s head—or better, its enchanted axe—and I’ll teach you a secret recipe for ice-tempered steel. You up for it?"
+      ]]>
+    </NPCText>
+    <Option text="I’ll bring you that orc’s head, Garrik."
+            action="GiveItem:FactionKillQuestScroll(FrostAxeOrc,1,Frostmere,500)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="accept"/>
+    <Option text="Why is this orc so dangerous?" next="orcLore"/>
+    <Option text="Why not send Svala or Bryndra after it?" next="whyNotThem"/>
+    <Option text="What’s this about a Minoc war?" next="minocWar"/>
+    <Option text="Not interested. Maybe next time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Garrik grips your arm in a blacksmith’s handshake.<br><br>
+      "Good. You’ll find the beast’s lair past the old silver mine, where the snow glows blue at dusk. Mind the ice wolves—FrostAxe sometimes rides one. Bring me proof, and I’ll share secrets no city forge ever knew. Oh—and if you see Svala out hunting, tell her I still owe her that dinner."
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with FrostAxe’s head." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="orcLore">
+    <NPCText>
+      <![CDATA[
+      Garrik lowers his voice.<br><br>
+      "Not your average club-waver, this one. FrostAxe was chieftain down south before Minax’s filth twisted his clan. Carries a blade cold enough to crack granite, and I swear it whispers in the wind. Some say he’s cursed, bound to serve whoever owns that axe. Kill him quick, or he’ll call his pack—and they eat more than just meat."
+      ]]>
+    </NPCText>
+    <Option text="I’m ready to hunt this monster."
+            action="GiveItem:FactionKillQuestScroll(FrostAxeOrc,1,Frostmere,500)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="accept"/>
+    <Option text="Sounds like Svala would enjoy the challenge." next="whyNotThem"/>
+    <Option text="Maybe this job’s not for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="whyNotThem">
+    <NPCText>
+      <![CDATA[
+      "Svala’s the best hunter I know, but she’s tracking a dire elk in the high pass—and she’d never forgive me if the orc gutted me while she was gone. Bryndra? She’s militia through and through, but I need her on the wall, not chasing shadows in the snow. This job needs a fresh face—and if you pull it off, maybe I’ll finally get a night’s sleep."
+      ]]>
+    </NPCText>
+    <Option text="All right, I’ll take on FrostAxe."
+            action="GiveItem:FactionKillQuestScroll(FrostAxeOrc,1,Frostmere,500)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="accept"/>
+    <Option text="Best leave it to the experts." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="minocWar">
+    <NPCText>
+      <![CDATA[
+      Garrik’s eyes darken.<br><br>
+      "Minoc’s seen more blood than most towns ever will. Orcs raided our mines for years—learned to hate us, and we learned to fight smart. I lost my father to a warlord with a frost-marked axe, just like this one. If FrostAxe is kin to that beast, I’ll see him broken before he curses another town. Help me, and you’ll have a friend for life."
+      ]]>
+    </NPCText>
+    <Option text="You have my word. I’ll return victorious."
+            action="GiveItem:FactionKillQuestScroll(FrostAxeOrc,1,Frostmere,500)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="accept"/>
+    <Option text="This sounds personal. Maybe I should pass." action="Close"/>
+  </Dialogue>
+
+<!-- === BACKSTORY TREE START === -->
+
+<Dialogue id="backstoryIntro">
+  <NPCText>
+    <![CDATA[
+    Garrik leans on his hammer, eyeing you thoughtfully.<br><br>
+    "Not many ask that. Most folks want steel and war stories, not the man behind the anvil. But you’re still here... maybe you’re not like most."<br><br>
+    He gestures to the forge’s glowing embers.<br>
+    "So, what is it you want to know? You want the old scars, the lost loves, or the songs I hum when I work?"
+    ]]>
+  </NPCText>
+  <Option text="Tell me about your past in Minoc." next="minocStory"/>
+  <Option text="Lost loves, huh? That sounds interesting." next="lostLove"/>
+  <Option text="What kind of music do you forge to?" next="music"/>
+  <Option text="Nothing really, just curious." next="backstoryExit"/>
+</Dialogue>
+
+<Dialogue id="minocStory">
+  <NPCText>
+    <![CDATA[
+    Garrik exhales deeply, heat rising from his forge.<br><br>
+    "Minoc was everything once. Smoke in the sky, sparks on stone, the clang of hammers like heartbeat. I apprenticed under old Durnan—I thought he was just a drunk until I saw him quench a blade in a fire elemental’s ashes. That was real smithing."<br><br>
+    He pauses.<br>
+    "Then came the orcs. Then came Minax. And then came the silence. My forge burned. My brother died with a pickaxe in hand. I wandered north after that, carrying ashes and shame."
+    ]]>
+  </NPCText>
+  <Option text="Sounds like you lost a lot." next="minocLoss"/>
+  <Option text="That’s a hell of a journey. No wonder you’re respected here." next="minocPride"/>
+</Dialogue>
+
+<Dialogue id="minocLoss">
+  <NPCText>
+    <![CDATA[
+    He nods slowly.<br><br>
+    "Aye. But the trick is to lose things without losing yourself. I still shape blades the way Durnan taught me. That’s how we honor the dead. That’s why Frostmere matters—because we don’t forget."<br><br>
+    He straightens, a glimmer of pride in his eyes.
+    ]]>
+  </NPCText>
+  <Option text="Thanks for sharing that." next="backstoryIntro"/>
+</Dialogue>
+
+<Dialogue id="minocPride">
+  <NPCText>
+    <![CDATA[
+    Garrik laughs—a deep, resonant chuckle.<br><br>
+    "Don’t say that too loud. Bryndra thinks I’m just a grumpy old fool with good aim. But... aye. I build. I protect. I out-stubborn the snow. That’s how you survive in a place like this."
+    ]]>
+  </NPCText>
+  <Option text="Let’s talk about something else." next="backstoryIntro"/>
+</Dialogue>
+
+<Dialogue id="lostLove">
+  <NPCText>
+    <![CDATA[
+    Garrik scratches the back of his neck, awkwardly.<br><br>
+    "Hah! You’re bolder than most. There was a bard once—Averra. Voice like riverwind and a temper to match. She passed through Minoc before the war. Taught me to dance... badly."<br><br>
+    His voice softens.<br>
+    "She left before the fires came. I still don’t know if she lived. Sometimes when I hammer, I hum her songs, and the forge burns sweeter for it."
+    ]]>
+  </NPCText>
+  <Option text="You ever try to find her?" next="lostLoveSearch"/>
+  <Option text="Maybe she’ll hear your song one day." next="hopeBuff"/>
+</Dialogue>
+
+<Dialogue id="lostLoveSearch">
+  <NPCText>
+    <![CDATA[
+    He shrugs.<br><br>
+    "Averra was a wanderer. I wouldn’t know where to start. Besides, she was sunlight—I’m more smoke and soot. But if you ever hear a bard singing ‘The Blacksmith’s Waltz’, that’s mine. Tell her Garrik still hums it."
+    ]]>
+  </NPCText>
+  <Option text="I’ll remember that." next="backstoryIntro"/>
+</Dialogue>
+
+<Dialogue id="hopeBuff">
+  <NPCText>
+    <![CDATA[
+    Garrik smiles wistfully.<br><br>
+    "You’ve got a warm heart, stranger. That’s rarer than mithril these days."<br><br>
+    <BASEFONT COLOR='#67b36d'><b>You feel strangely uplifted by his gratitude.</b></BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="(You feel a surge of resolve!)" action="AddStat:Str,5,300" next="backstoryIntro"/>
+</Dialogue>
+
+<Dialogue id="music">
+  <NPCText>
+    <![CDATA[
+    "Funny you ask," Garrik says, chuckling.<br><br>
+    "Used to be drum beats, back in Minoc. These days? Irinya says I hum in rhythm with the Obelisk winds. Creepy, huh? Maybe it’s magic… or madness. Either way, it keeps my hands steady."<br><br>
+    He taps his hammer to the anvil. <i>Ping. Pause. Ping.</i><br>
+    "You ever forge to music yourself?"
+    ]]>
+  </NPCText>
+  <Option text="Actually, I play a bit." condition="SkillAtLeast:Musicianship,50" next="musician"/>
+  <Option text="No, but I love to listen." next="musicListen"/>
+  <Option text="Never really cared for music." next="musicDismiss"/>
+</Dialogue>
+
+<Dialogue id="musician">
+  <NPCText>
+    <![CDATA[
+    Garrik raises an eyebrow, impressed.<br><br>
+    "Well, well. If you’re ever short of coin, play outside the forge and I’ll give you free sharpening. Or better—match my hammer beat and we’ll see if we can forge a song-blade. They say music and steel shape each other."
+    ]]>
+  </NPCText>
+  <Option text="That could be fun!" action="AddSkill:Blacksmith,2,180" next="backstoryIntro"/>
+</Dialogue>
+
+<Dialogue id="musicListen">
+  <NPCText>
+    <![CDATA[
+    "That’s the trick, isn’t it? Not everyone can sing, but everyone can feel the beat. Music's like steel—it binds people. Maybe one day I’ll hammer out a tune even the wind hums back."
+    ]]>
+  </NPCText>
+  <Option text="You’ve got a poet’s heart, Garrik." next="backstoryIntro"/>
+</Dialogue>
+
+<Dialogue id="musicDismiss">
+  <NPCText>
+    <![CDATA[
+    Garrik smirks.<br><br>
+    "Bah! Spoken like a warrior. Or a tax collector. Still, even cold stone remembers a rhythm. You just haven’t heard the right song yet."
+    ]]>
+  </NPCText>
+  <Option text="Maybe. Let’s change topic." next="backstoryIntro"/>
+</Dialogue>
+
+<Dialogue id="backstoryExit">
+  <NPCText>
+    <![CDATA[
+    Garrik shrugs, but his voice is softer.<br><br>
+    "Curiosity’s a good start. It keeps us alive out here. Thanks for listening, stranger. Now—did you come to work steel, or spill more stories?"
+    ]]>
+  </NPCText>
+  <Option text="Actually, I need a job." next="questIntro"/>
+  <Option text="Another time, Garrik." action="Close"/>
+</Dialogue>
+
+<!-- === BACKSTORY TREE END === -->
+
+
+</DialogueFile>

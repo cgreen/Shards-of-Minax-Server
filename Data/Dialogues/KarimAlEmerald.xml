@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="KarimAlEmerald">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#42e07b'>
+      Before you stands a tall, impeccably dressed man, his robe of living green silk shifting like desert grass in a breeze that does not touch you. Eyes the color of cold jade assess you with unsettling calm.<BR><BR>
+      "Greetings, traveler. I am Karim al-Emerald, Vizier of the Council of Jewels—purveyor of secrets, orchestrator of shadows. In Qasaria, trust is rarer than water and far more costly. Speak, if you must—every word here is a wager." 
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I wish to serve the Emerald Court." next="taskIntro"/>
+    <Option text="Tell me of yourself, Vizier." next="backstory"/>
+    <Option text="What do you know of the Council of Jewels?" next="council"/>
+    <Option text="Are you truly as cunning as they say?" next="rumors"/>
+	<Option text="Tell me more of your past, Vizier." next="karimOrigin"/>
+    <Option text="I'm only passing through." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Backstory branch -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      Karim gives a thin smile.<BR><BR>
+      "I was once nothing but a shadow in the alleys of Qasaria, learning the value of silence and the cost of truth. The desert rewards patience—and remembers every slight. Through subtlety, I earned the Emerald seat, whispering between the merchants and the warlords, the priests and the poisoners.<BR><BR>
+      My closest ally is Yasmin al-Topaz, for we both know that knowledge, not coin, rules this city. Yet, even she keeps secrets from me—as is wise."
+      ]]>
+    </NPCText>
+    <Option text="What of your rivals among the council?" next="council"/>
+    <Option text="You trust Yasmin above the others?" next="yasmin"/>
+    <Option text="How did you come to power?" next="rise"/>
+    <Option text="I seek work." next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="yasmin">
+    <NPCText>
+      <![CDATA[
+      Karim inclines his head.<BR><BR>
+      "Yasmin al-Topaz is a woman out of time, older than she appears. Her mastery of relic lore rivals my skill in secrets. We trade favors—sometimes truths, sometimes lies. She seeks the 'Heart of the Dunes,' an artifact even I dare not covet outright."<BR><BR>
+      He lowers his voice.<BR>
+      "If you would earn her favor, bring her news of Minax's agents among the Ash Serpents. She trusts precious few."
+      ]]>
+    </NPCText>
+    <Option text="Is she not also your rival?" next="council"/>
+    <Option text="Tell me of the Heart of the Dunes." next="relic"/>
+    <Option text="I am here for a task, not gossip." next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="relic">
+    <NPCText>
+      <![CDATA[
+      Karim’s gaze flickers.<BR><BR>
+      "The Heart of the Dunes is said to be a fragment of the ancient Gem of Immortality—its magic able to anchor or shatter an entire city. Such power attracts dangerous ambition, even among the council. Some would sell Qasaria to Minax for a chance to wield it. Others, myself included, prefer it hidden... or in the right hands."
+      ]]>
+    </NPCText>
+    <Option text="Would you trust me with such a relic?" next="trust"/>
+    <Option text="Let us speak of something else." next="council"/>
+    <Option text="Do you have a task for me?" next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="trust">
+    <NPCText>
+      <![CDATA[
+      Karim gives nothing away.<BR><BR>
+      "Trust is a luxury I rarely afford. But opportunity, now—that I grant freely. Prove your subtlety and discretion, and perhaps Qasaria’s deeper vaults will open to you."
+      ]]>
+    </NPCText>
+    <Option text="I will prove myself worthy." next="taskIntro"/>
+    <Option text="I'm not sure I want your trust." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="rise">
+    <NPCText>
+      <![CDATA[
+      He spreads his hands.<BR><BR>
+      "Power in Qasaria does not come to the loud or the strong. I listened. I remembered. I learned who whispered to Minax’s cult, who paid off the Ash Serpents, who feared the Undermarket. My dagger is lighter than a jewel, but sharper by far."
+      ]]>
+    </NPCText>
+    <Option text="The Undermarket—tell me more." next="undermarket"/>
+    <Option text="You speak in riddles. Do you have work for me?" next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="undermarket">
+    <NPCText>
+      <![CDATA[
+      Karim leans closer.<BR><BR>
+      "The Undermarket is a city beneath the city. Shadowmaster Zahid and his knives know every unguarded purse and whispered threat. Safiya al-Sapphire detests him—yet all her caravans move at his whim. Bring me a secret from Zahid’s den, and you will know what true favor buys."
+      ]]>
+    </NPCText>
+    <Option text="What sort of secret?" next="questDetails"/>
+    <Option text="That sounds dangerous." next="danger"/>
+    <Option text="Let’s discuss something else." next="council"/>
+  </Dialogue>
+
+  <!-- Council lore/gossip -->
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      Karim’s lips curl, amused.<BR><BR>
+      "The Council of Jewels is an uneasy truce at best. Sultan Rafiq al-Ruby wants unity, but the city’s walls are only as strong as our secrets. Safiya al-Sapphire counts her coin but not her spies. Omar al-Onyx craves chaos—fortunately, I supply both the coin and the cause."<BR><BR>
+      "Among us, only Yasmin al-Topaz understands the cost of peace. We circle each other, waiting for one to fall. Minax watches and laughs."
+      ]]>
+    </NPCText>
+    <Option text="How do you keep the peace?" next="methods"/>
+    <Option text="What of Minax?" next="minax"/>
+    <Option text="Do you have a job for me?" next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="methods">
+    <NPCText>
+      <![CDATA[
+      "Espionage, diplomacy, blackmail—choose your weapon, but wield it with grace. I employ assassins and poets in equal measure. In Qasaria, sometimes a well-placed rumor is sharper than a blade."
+      ]]>
+    </NPCText>
+    <Option text="Let’s speak of Minax." next="minax"/>
+    <Option text="How may I serve?" next="taskIntro"/>
+  </Dialogue>
+
+  <!-- Rumors/gossip -->
+  <Dialogue id="rumors">
+    <NPCText>
+      <![CDATA[
+      He gives a rare, wry smile.<BR><BR>
+      "If I were as cunning as rumor claims, I would already sit upon every throne from here to Britain. Instead, I am content to rule in the shadows. My rivals see only what I allow—my enemies, even less."
+      ]]>
+    </NPCText>
+    <Option text="So what do you see in me?" next="recruit"/>
+    <Option text="What task could use my skills?" next="taskIntro"/>
+    <Option text="Perhaps another time." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="recruit">
+    <NPCText>
+      <![CDATA[
+      Karim studies you in silence.<BR><BR>
+      "Potential. Or perhaps a useful distraction. Time will tell. For now, I have a job for those who value subtlety over steel."
+      ]]>
+    </NPCText>
+    <Option text="Tell me the details." next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Karim inclines his head, the barest hint of amusement in his eyes.<BR><BR>
+      "In Qasaria, even the dust listens. Should you desire something more than sand in your boots, return with an open mind—and a closed mouth."
+      ]]>
+    </NPCText>
+    <Option text="On second thought, have you work for me?" next="taskIntro"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- QUEST INTRO -->
+  <Dialogue id="taskIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#42e07b'>
+      Karim lowers his voice, glancing about.<BR><BR>
+      "Listen carefully. There is a caravan entering Qasaria tonight, bearing 'silks and spices'—but hidden within is a coded missive for Shadowmaster Zahid of the Undermarket. The message must reach Zahid, but not unopened, and not without my mark. This is a test of subtlety, not violence."<BR><BR>
+      "Intercept the courier before he reaches the bazaar, plant my sigil upon the message, and let Zahid receive it none the wiser. There are spies of Minax, and even Safiya's hirelings, who would see this fail."<BR><BR>
+      "Return to me when the deed is done, and the Emerald Court shall remember you. Will you accept this delicate errand?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I accept—give me your sigil and the message." 
+            action="GiveItem:FactionDeliveryQuestScroll(Shadowmaster Zahid,Qasaria,350)" 
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Who is this courier?" next="courier"/>
+    <Option text="How will I find Zahid?" next="findZahid"/>
+    <Option text="What danger do I face?" next="danger"/>
+    <Option text="This seems risky. I must decline." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Karim produces a slim obsidian box and a sealed scroll with an emerald-green ribbon.<BR><BR>
+      "Take this. You must find the courier—he wears a crimson sash and lingers by the spice merchants near the South Gate. Do not draw attention; deliver the box to Zahid in the Undermarket, and none must suspect your hand in this. Return with Zahid's token as proof."<BR><BR>
+      "Trust no one. Not even me."
+      ]]>
+    </NPCText>
+    <Option text="I will see it done, Vizier." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Details Branches -->
+  <Dialogue id="courier">
+    <NPCText>
+      <![CDATA[
+      Karim’s eyes narrow.<BR><BR>
+      "A Qasarian youth named Imad, a messenger for Zahid. He wears a crimson sash and pretends ignorance, but he is clever. Offer him the phrase 'The desert remembers every secret'—he will know to trust you, but be quick: Safiya's spies are watching."
+      ]]>
+    </NPCText>
+    <Option text="And Zahid—where is he found?" next="findZahid"/>
+    <Option text="What dangers must I expect?" next="danger"/>
+    <Option text="Give me the missive and your sigil." 
+            action="GiveItem:FactionDeliveryQuestScroll(Shadowmaster Zahid,Qasaria,350)" 
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="No thanks." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="findZahid">
+    <NPCText>
+      <![CDATA[
+      "Descend beneath the Grand Bazaar, through the archway behind Halim the Storyteller’s tent. Whisper 'Emerald shadows' to the beggar at the stair—he will show the way. Zahid trusts only those who know the code."
+      ]]>
+    </NPCText>
+    <Option text="What danger awaits me?" next="danger"/>
+    <Option text="I am ready for your task." 
+            action="GiveItem:FactionDeliveryQuestScroll(Shadowmaster Zahid,Qasaria,350)" 
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I will return another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      Karim’s voice grows colder.<BR><BR>
+      "Safiya’s agents wish to intercept this message for profit, Minax’s followers for chaos. If discovered, you will be disavowed—remember that. Use the alleyways, trust only the signs I have given, and deliver the box unseen. If you succeed, there may be further work—for now, be swift and silent."
+      ]]>
+    </NPCText>
+    <Option text="I accept—give me the box." 
+            action="GiveItem:FactionDeliveryQuestScroll(Shadowmaster Zahid,Qasaria,350)" 
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I need more time to prepare." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="questDetails">
+    <NPCText>
+      <![CDATA[
+      "There are many kinds of secrets: a codebook, a rival's ledger, a whispered password. Any will do, if obtained quietly. But tonight, it is the missive I desire delivered—intercept it, mark it, and return with Zahid's token."
+      ]]>
+    </NPCText>
+    <Option text="Understood. Give me the details." next="taskIntro"/>
+    <Option text="I have no taste for subterfuge." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="karimOrigin">
+    <NPCText>
+      <![CDATA[
+      Karim folds his arms, eyes glittering like cut emeralds.<BR><BR>
+      "Curiosity is dangerous in Qasaria—but I respect it. Very well, traveler... I was born beneath this city’s opulence, in the silken shadows of the Bazaar. My mother sold spices, my father disappeared into the desert winds. I learned early: to be seen is to be vulnerable."<BR><BR>
+      "Every beggar teaches, every whisper is a coin, and every kindness has a cost. Would you like to hear more?"
+      ]]>
+    </NPCText>
+    <Option text="Tell me of your childhood in the bazaar." next="karimBazaar"/>
+    <Option text="How did you join the Council of Jewels?" next="karimCouncil"/>
+    <Option text="What do you truly desire, Karim?" next="karimDesire"/>
+    <Option text="You sound... lonely." condition="IsFemale" next="karimLonely"/>
+    <Option text="I should go." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="karimBazaar">
+    <NPCText>
+      <![CDATA[
+      Karim’s voice softens, as if speaking to a younger self.<BR><BR>
+      "I was quick with my feet, quicker with my tongue. I begged beneath the awnings of silk sellers, listened to drunks in perfume stalls, and watched lovers whisper more valuable truths than merchants would ever trade."<BR>
+      "I once bartered a single truth for three days of bread. That was the day I realized: secrets have weight—and value."<BR><BR>
+      <I>(You feel his words carry more than memory. Something darker lingers.)</I>
+      ]]>
+    </NPCText>
+    <Option text="Did someone betray you back then?" next="karimBetrayal"/>
+    <Option text="That must have been hard." next="karimSympathy"/>
+    <Option text="So the streets raised you?" next="karimStreetwise"/>
+  </Dialogue>
+
+  <Dialogue id="karimBetrayal">
+    <NPCText>
+      <![CDATA[
+      "All power begins in betrayal. The sooner you learn that, the fewer knives you will find in your back."<BR><BR>
+      He gestures toward the skyline.<BR>
+      "Those minarets were built on broken trusts and buried truths. I intend to be the last betrayer Qasaria ever needs."
+      ]]>
+    </NPCText>
+    <Option text="That's a dangerous philosophy." next="karimDangerous"/>
+    <Option text="And yet, you're still standing." action="Fame:+100" next="karimRespect"/>
+  </Dialogue>
+
+  <Dialogue id="karimSympathy">
+    <NPCText>
+      <![CDATA[
+      Karim smiles thinly.<BR><BR>
+      "Do not pity me, outsider. I have become far more than any palace-born noble. I crafted my destiny in shadows, not sunlight."
+      ]]>
+    </NPCText>
+    <Option text="Spoken like a true survivor." action="Karma:+250" next="karimRespect"/>
+    <Option text="My apologies, Vizier." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="karimStreetwise">
+    <NPCText>
+      <![CDATA[
+      "The streets of Qasaria have sharper teeth than any lion. And they bite in silence. But they teach—gods, how they teach."<BR><BR>
+      Karim raises a brow.<BR>
+      "Do you know the value of silence, traveler?"
+      ]]>
+    </NPCText>
+    <Option text="Yes. Silence is power." action="Karma:+100" next="karimRespect"/>
+    <Option text="No. I prefer truth, even when it cuts." action="Karma:-100" next="karimJudged"/>
+  </Dialogue>
+
+  <Dialogue id="karimJudged">
+    <NPCText>
+      <![CDATA[
+      "Truth is a blade. Unsharpened, it’s harmless. Sharpened, it cuts indiscriminately."<BR>
+      Karim’s voice cools.<BR>
+      "Learn to sheath your truth when needed, or others will sheath their knives in you."
+      ]]>
+    </NPCText>
+    <Option text="Lesson taken." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="karimRespect">
+    <NPCText>
+      <![CDATA[
+      Karim gives a rare nod.<BR><BR>
+      "Few understand the dance we play beneath these domes. You may survive this city yet."
+      ]]>
+    </NPCText>
+    <Option text="What else can you tell me?" next="karimDesire"/>
+    <Option text="Thank you for your time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="karimDangerous">
+    <NPCText>
+      <![CDATA[
+      "Of course it is. That’s what makes it effective."<BR><BR>
+      Karim leans in.<BR>
+      "If I told you how many of my rivals trusted me before they vanished, you might sleep less soundly. Fortunately, I like you… for now."
+      ]]>
+    </NPCText>
+    <Option text="Is that a threat or a compliment?" next="karimCompliment"/>
+    <Option text="Let’s speak of something else." next="karimDesire"/>
+  </Dialogue>
+
+  <Dialogue id="karimCompliment">
+    <NPCText>
+      <![CDATA[
+      Karim’s grin is genuine—and chilling.<BR><BR>
+      "Why not both?"
+      ]]>
+    </NPCText>
+    <Option text="...Fair enough." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="karimCouncil">
+    <NPCText>
+      <![CDATA[
+      "It took two assassins, one ledger, and a scandal involving imported scorpion venom to open my path to the Emerald seat."<BR>
+      "Do not ask how I became Vizier. Ask why the others let me remain."
+      ]]>
+    </NPCText>
+    <Option text="Why *do* they let you remain?" next="karimFear"/>
+  </Dialogue>
+
+  <Dialogue id="karimFear">
+    <NPCText>
+      <![CDATA[
+      Karim’s eyes twinkle like poisoned jewels.<BR><BR>
+      "Because they fear what I know—and what I might yet learn."
+      ]]>
+    </NPCText>
+    <Option text="I see. That’s power." action="Fame:+50" next="karimRespect"/>
+    <Option text="Still sounds exhausting." action="Karma:-50" next="karimJudged"/>
+  </Dialogue>
+
+  <Dialogue id="karimDesire">
+    <NPCText>
+      <![CDATA[
+      Karim pauses long, then responds in a low voice.<BR><BR>
+      "I desire… continuity. For Qasaria to rise, not fall as Britain did. I want the city to be unbreakable—even if that means breaking a few lives along the way."
+      ]]>
+    </NPCText>
+    <Option text="You would be its hidden emperor." next="karimEmperor"/>
+    <Option text="I admire your vision." condition="RandomChance:30" action="GiveGold:1000" next="karimRespect"/>
+    <Option text="You sound like Minax." next="karimInsult"/>
+  </Dialogue>
+
+  <Dialogue id="karimEmperor">
+    <NPCText>
+      <![CDATA[
+      Karim chuckles.<BR><BR>
+      "I don’t need a throne. I already sit behind every one."
+      ]]>
+    </NPCText>
+    <Option text="I’ll remember that." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="karimInsult">
+    <NPCText>
+      <![CDATA[
+      Karim stiffens slightly.<BR><BR>
+      "Minax seeks dominion through fear. I seek stability through knowledge. Be careful who you compare me to, outsider."
+      ]]>
+    </NPCText>
+    <Option text="Understood." action="Karma:-250" next="karimJudged"/>
+  </Dialogue>
+
+  <Dialogue id="karimLonely">
+    <NPCText>
+      <![CDATA[
+      He studies you more closely than before.<BR><BR>
+      "Lonely? No. Alone, often. But I am never without purpose."<BR><BR>
+      He adds softly, "<I>Still, few ask that question. Fewer still mean it.</I>"
+      ]]>
+    </NPCText>
+    <Option text="I meant it." action="AddStat:Int,5,300" next="karimRespect"/>
+    <Option text="Forget I said anything." action="Close"/>
+  </Dialogue>
+
+
+</DialogueFile>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="EdrinAshvine">
+
+  <!-- Greeting -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#d4f4ff'>
+      A wiry man is half-buried beneath the hull of a strange, half-built vessel. Smoke curls from wild silver hair; his apron bristles with tools and broken crystal shards. He bolts upright at your approach, eyes gleaming.<BR><BR>
+      "You! Are you here to rob me, ridicule me, or rescue me? Bah—never mind! Unless you’re with those blasted thugs, step lively, there’s work to be done and wonders to be made."<BR><BR>
+      Edrin Ashvine, famed shipwright and untamed inventor, grins and gestures you closer.
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I heard you needed help. What's troubling you?" next="trouble"/>
+    <Option text="You’re Edrin Ashvine, the airship inventor?" next="backstory"/>
+    <Option text="What are you building here?" next="project"/>
+	<Option text="Tell me your story, Ashvine. What makes you tick?" next="deepLore"/>
+    <Option text="Just looking around." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Trouble / Quest Hook -->
+  <Dialogue id="trouble">
+    <NPCText>
+      <![CDATA[
+      Edrin waves a wrench angrily.<BR>
+      "Trouble? Try sabotage! Rival merchants send ruffians to wreck my workshop, steal my plans, break my prototypes! I’m this close to flying the first *Crystalwind Galleon* over Sunreach, but I need materials, muscle, and a smidge of coin."<BR><BR>
+      "Will you help an old dreamer outsmart these groundbound jackals?"
+      ]]>
+    </NPCText>
+    <Option text="What do you need done?" next="questIntro"/>
+    <Option text="Who is sabotaging you?" next="sabotage"/>
+    <Option text="I’d rather not get involved." action="Close"/>
+  </Dialogue>
+
+  <!-- Backstory -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      He puffs his chest.<BR>
+      "Edrin Ashvine—formerly of Jhelom’s shipyards, now Sunreach’s only certified Airshipwright. I tamed sails and storms, then partnered with Captain Rhogar—before he went all piratey, the daft lout. Now? I build wonders with Aria Silverhand—she brings me Aerilon’s floating crystals, I give her secrets of hull and timber. Together, we might just keep Sunreach above water… and above betrayal."<BR><BR>
+      He winks. "Got questions? Or ready to get your hands dirty?"
+      ]]>
+    </NPCText>
+    <Option text="Who is Aria Silverhand?" next="aboutAria"/>
+    <Option text="Tell me about Rhogar." next="aboutRhogar"/>
+    <Option text="What are you working on?" next="project"/>
+    <Option text="How can I help?" next="questIntro"/>
+    <Option text="I’ll be going." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="aboutAria">
+    <NPCText>
+      <![CDATA[
+      "Brilliant, secretive, and far too brave for her own good. Aria knows more about Aerilon’s magic than most mages, and more about Sunreach’s underbelly than most cutthroats. She brings me blue crystals and maps to forgotten ruins. If you run into her, tell her the stabilizers are nearly finished… and to watch her back."
+      ]]>
+    </NPCText>
+    <Option text="Tell me about Captain Rhogar." next="aboutRhogar"/>
+    <Option text="How can I help?" next="questIntro"/>
+    <Option text="Back to your story..." next="backstory"/>
+  </Dialogue>
+
+  <Dialogue id="aboutRhogar">
+    <NPCText>
+      <![CDATA[
+      Edrin sighs.<BR>
+      "Rhogar and I built ships together, once. He was a genius with a rudder, better with a broadsword. After the pirates came, he picked their side—said the council was rotten. Can’t blame him, not entirely, but I miss the days when our arguments were over wind angles, not blood money."<BR>
+      "He’d still help me if I asked. Maybe you can convince him."
+      ]]>
+    </NPCText>
+    <Option text="What are you working on?" next="project"/>
+    <Option text="How can I help?" next="questIntro"/>
+    <Option text="I’ll leave you to your work." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="project">
+    <NPCText>
+      <![CDATA[
+      He drags you to a half-finished airship.<BR>
+      "Behold! The *Crystalwind Galleon*. With Aerilon’s floating crystal tech and Sunreach’s finest hulls, she’ll fly over sea and sand alike! Or she would, if rival houses didn’t keep sending brutes to smash the crystals or swipe my schematics."<BR><BR>
+      "Help me finish her, and Sunreach might just out-soar Minax herself."
+      ]]>
+    </NPCText>
+    <Option text="I want to help." next="questIntro"/>
+    <Option text="Who sabotages your work?" next="sabotage"/>
+    <Option text="This is all above my pay grade." action="Close"/>
+  </Dialogue>
+
+  <!-- Rival Merchant Sabotage -->
+  <Dialogue id="sabotage">
+    <NPCText>
+      <![CDATA[
+      Edrin spits.<BR>
+      "The Ashveil Corsairs, House Veynar’s cronies, maybe even Qasarian spies—everyone wants my secrets or to see me fail. I trust only Aria and a handful of honest laborers. If you see anyone skulking near my workshop, give them a whack for me."<BR>
+      "But best way to stop the sabotage? Get the last stabilizer crystal from Aria before they do. That, and a little muscle to guard my shop tonight."
+      ]]>
+    </NPCText>
+    <Option text="What do you need from me, exactly?" next="questIntro"/>
+    <Option text="I’m not the muscle you need." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Introduction -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      Edrin’s eyes light up with hope.<BR>
+      "Three tasks, if you’re willing!<BR>
+      <UL>
+        <LI>Fetch the last stabilizer crystal from Aria Silverhand—she’s hiding near the old amphitheater.</LI>
+        <LI>Guard my workshop tonight against saboteurs. Expect thugs—armed, desperate, and possibly on Minax’s payroll.</LI>
+        <LI>IF you’ve got deep pockets, a little funding never hurts. I need <BASEFONT COLOR='#ffd700'>2,500 gold</BASEFONT> to finish the galleon’s core rigging."
+      </UL>
+      "Do one, two, or all three—I’ll reward you as only a true inventor can!"
+      ]]>
+    </NPCText>
+    <Option text="I’ll find Aria and bring you the crystal." 
+            action="GiveItem:FactionFetchQuestScroll(Aria Silverhand,Stabilizer Crystal,Sunreach,1)"
+            condition="!HasItem:FactionFetchQuestScroll"
+            next="crystalFetch"/>
+    <Option text="I’ll guard the workshop tonight." 
+            action="GiveItem:FactionDefenseQuestScroll(Edrin Ashvine,Workshop Defense,Sunreach,1)"
+            condition="!HasItem:FactionDefenseQuestScroll"
+            next="defense"/>
+    <Option text="Here is 2,500 gold to fund your work."
+            condition="GoldAtLeast:2500"
+            action="GiveGold:-2500|GiveItem:ExperimentalAirshipCog"
+            next="funded"/>
+    <Option text="Can you pay me in advance?" next="advance"/>
+    <Option text="That’s too much for me right now." action="Close"/>
+  </Dialogue>
+
+  <!-- Crystal Fetch Quest Accepted -->
+  <Dialogue id="crystalFetch">
+    <NPCText>
+      <![CDATA[
+      "Bring me the stabilizer crystal and don’t let anyone see you with it—Minax’s spies watch everywhere!<BR>
+      When you return, I’ll show you something even Aerilon’s archmages haven’t seen."
+      ]]>
+    </NPCText>
+    <Option text="On my way." action="Close"/>
+  </Dialogue>
+
+  <!-- Workshop Defense Accepted -->
+  <Dialogue id="defense">
+    <NPCText>
+      <![CDATA[
+      "Meet me at the workshop after sundown. I’ll have a cudgel and a cask of my strongest brew waiting—nothing like a good brawl to keep the mind sharp!"
+      ]]>
+    </NPCText>
+    <Option text="I’ll be there." action="Close"/>
+  </Dialogue>
+
+  <!-- Gold Donated -->
+  <Dialogue id="funded">
+    <NPCText>
+      <![CDATA[
+      Edrin’s eyes widen at the pouch.<BR>
+      "Bless the winds! This’ll buy enough quicksilver and gears to finish the core. Take this—an experimental airship cog, finely balanced. If you ever get your hands on an airship hull, you’ll want this."
+      ]]>
+    </NPCText>
+    <Option text="Happy to help." action="Close"/>
+  </Dialogue>
+
+  <!-- Player asks for advance payment -->
+  <Dialogue id="advance">
+    <NPCText>
+      <![CDATA[
+      Edrin cackles.<BR>
+      "Advance? The first rule of invention—never trust a stranger with your coin! But do well, and you’ll get a reward fit for a sky-captain."
+      ]]>
+    </NPCText>
+    <Option text="Fair enough. I’ll get to work." next="questIntro"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismiss -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Edrin shrugs and dives back under his airship hull, muttering about fools, pirates, and lost dreams.
+      ]]>
+    </NPCText>
+    <Option text="Wait, I changed my mind. Do you need help?" next="trouble"/>
+    <Option text="I’ll leave you to your work." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="deepLore">
+  <NPCText>
+    <![CDATA[
+    Edrin taps his temple, then slaps the hull of his airship like an old friend.<BR><BR>
+    “Ahhh, the inner workings! Of the man *and* the machine. You’ve got curiosity—I like that. Let's play a game. Ask a question, any question. I’ll answer—truthfully, mostly—and maybe toss in a gift for a keen listener.”<BR><BR>
+    He leans in with a grin. “But beware, some answers come with *side effects*...”
+    ]]>
+  </NPCText>
+  <Option text="What drives you to build airships?" next="whyAirships"/>
+  <Option text="Why leave Jhelom’s shipyards?" next="leftJhelom"/>
+  <Option text="Have you ever met Minax?" next="minaxRumors"/>
+  <Option text="Do you miss Captain Rhogar?" next="rhogarMemories"/>
+  <Option text="Just messing around." action="PlaySound:0x015" next="dismissLore"/>
+</Dialogue>
+
+<Dialogue id="whyAirships">
+  <NPCText>
+    <![CDATA[
+    “Because the sea betrayed me,” he says with a shrug. “My first ship—*The Brine Vow*—was swallowed in a typhoon shaped like a woman’s eye. I washed up in Aerilon with a cracked rib and a crazed idea: *if water kills dreams, put ‘em in the sky.*”<BR><BR>
+    “And I tell you—clouds never lie. Storms kill, yes, but they don’t lie.”<BR><BR>
+    He hands you something.<BR>“For asking the right question.”
+    ]]>
+  </NPCText>
+  <Option text="Thank you." action="GiveItem:GearLauncher" next="deepLore"/>
+</Dialogue>
+
+<Dialogue id="leftJhelom">
+  <NPCText>
+    <![CDATA[
+    “Because muscle outweighed mind. Jhelom’s council never understood invention—just warships, bigger cannons, louder warcries. They laughed at my gyroscopic sail rigs, called them ‘spinny death fans’. Hah!”<BR><BR>
+    He raises an eyebrow.<BR>
+    “They weren’t wrong… at first. But now I’ve got fans that hover, pivot, *slice* if needed.”<BR><BR>
+    <BASEFONT COLOR='#00ffcc'>You feel slightly smarter for hearing him explain it.</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="You truly are a genius." action="AddSkill:Tinkering,2,300" next="deepLore"/>
+</Dialogue>
+
+<Dialogue id="minaxRumors">
+  <NPCText>
+    <![CDATA[
+    Edrin’s eyes lose focus.<BR>
+    “There was a woman once, dressed like dusk and smelling like ozone. She asked about floating cores and offered a ‘dream engine’ in return.”<BR>
+    He shivers. “I woke up a week later with no memory, my beard braided into propellers.”<BR><BR>
+    “If that was Minax, she’s not just evil—she’s inventive. And I hate that I admire that.”<BR><BR>
+    He passes you a strange part.<BR>“Found this wedged in my ribs after. Maybe you’ll have better luck.”
+    ]]>
+  </NPCText>
+  <Option text="That's... unsettling." action="GiveItem:ArtificerWand" next="deepLore"/>
+</Dialogue>
+
+<Dialogue id="rhogarMemories">
+  <NPCText>
+    <![CDATA[
+    Edrin chuckles, then grows still.<BR>
+    “I miss the idiot, aye. He once built a raft out of shark carcasses and *sailed it into a hurricane to impress a barmaid.* He came back with treasure and three broken ribs.”<BR><BR>
+    He lowers his voice.<BR>
+    “Last I heard, he’s in a power struggle with that she-devil Seraphine. If you ever see him… tell him I still have the sky anchor we built.”<BR><BR>
+    <BASEFONT COLOR='#ffd700'>You feel a strange nostalgia…</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="I’ll remember that." action="Fame:150" next="deepLore"/>
+</Dialogue>
+
+<Dialogue id="dismissLore">
+  <NPCText>
+    <![CDATA[
+    Edrin smirks and salutes you with a wrench.<BR>
+    “Fine taste in small talk. I’ll be here—hammering dreams into rivets and whispering secrets into sails.”
+    ]]>
+  </NPCText>
+  <Option text="Farewell, sky-dreamer." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

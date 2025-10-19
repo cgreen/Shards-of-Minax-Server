@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="BrukTheSilent">
+
+  <!-- GREETING: Bruk greets silently, relying on gesture and expression -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#B1FFB1'>
+      A tall monk stands in the dappled forest shade, head bowed, hands resting atop a worn quarterstaff.<BR><BR>
+      Bruk the Silent meets your gaze. He makes no sound—only a solemn nod, his eyes both wary and kind. A thin scar bisects his lips. You sense a quiet strength and deep sorrow.<BR><BR>
+      He gestures for you to approach, palm raised in greeting.
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Bow respectfully." next="bow"/>
+    <Option text="Remain silent, observing him." next="observe"/>
+    <Option text="Speak: 'Do you have words for me, monk?'" next="askSpeech"/>
+	<Option text="Try to understand his silence..." next="reflectSilent"/>
+    <Option text="Step back quietly." action="Close"/>
+  </Dialogue>
+
+  <!-- Branch: Bow Respectfully -->
+  <Dialogue id="bow">
+    <NPCText>
+      <![CDATA[
+      Bruk inclines his head in return, then touches his heart and points to the grove behind him.<BR>
+      He draws a spiral in the earth with his staff—an ancient Verdant symbol for “trial” or “path.”<BR><BR>
+      He gestures: Will you accept his silent challenge?
+      ]]>
+    </NPCText>
+    <Option text="Nod in acceptance." next="acceptTrial"/>
+    <Option text="Shake your head and decline." next="declineTrial"/>
+  </Dialogue>
+
+  <!-- Branch: Observe (Bruk initiates silent communication) -->
+  <Dialogue id="observe">
+    <NPCText>
+      <![CDATA[
+      Bruk studies you thoughtfully. After a moment, he kneels and arranges three smooth stones before you:<BR>
+      • One stone is engraved with a leaf.<BR>
+      • One is marked with a droplet.<BR>
+      • The third bears a small flame.<BR><BR>
+      He waits, watching to see which you choose.
+      ]]>
+    </NPCText>
+    <Option text="Choose the leaf stone." action="AddStat:Dex,5,600" next="leafChoice"/>
+    <Option text="Choose the droplet stone." action="AddStat:Int,5,600" next="waterChoice"/>
+    <Option text="Choose the flame stone." action="AddStat:Str,5,600" next="fireChoice"/>
+    <Option text="Leave the stones untouched." next="noChoice"/>
+  </Dialogue>
+
+  <!-- Branch: Direct Question (testing player sensitivity) -->
+  <Dialogue id="askSpeech">
+    <NPCText>
+      <![CDATA[
+      Bruk shakes his head slowly and closes his eyes, as if in pain.<BR>
+      He traces a single line across his lips, then points to his chest—an unspoken apology.<BR>
+      He offers you his staff, inviting you to grasp it if you wish to understand his path.
+      ]]>
+    </NPCText>
+    <Option text="Grip his staff and focus quietly." next="visionTrial"/>
+    <Option text="Apologize and step away." action="Close"/>
+  </Dialogue>
+
+  <!-- Decline the Trial -->
+  <Dialogue id="declineTrial">
+    <NPCText>
+      <![CDATA[
+      Bruk bows his head in understanding, then returns to his silent vigil. Perhaps you will return when ready.
+      ]]>
+    </NPCText>
+    <Option text="Leave Bruk to his meditation." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept the Trial -->
+  <Dialogue id="acceptTrial">
+    <NPCText>
+      <![CDATA[
+      Bruk leads you to a small clearing.<BR>
+      Without words, he sets out a line of pebbles in three patterns:<BR>
+      <B>Pattern 1:</B> A perfect circle.<BR>
+      <B>Pattern 2:</B> A broken spiral.<BR>
+      <B>Pattern 3:</B> Three parallel lines.<BR><BR>
+      He points to you—choose the pattern that best reflects your spirit.
+      ]]>
+    </NPCText>
+    <Option text="Circle (Unity and Wholeness)" action="AddKarma:250" next="unityResult"/>
+    <Option text="Spiral (Growth through Pain)" action="AddStat:Str,3,600" next="growthResult"/>
+    <Option text="Three Lines (Duty and Service)" action="AddFame:250" next="serviceResult"/>
+    <Option text="Refuse to choose." next="refusePattern"/>
+  </Dialogue>
+
+  <!-- Pattern Results -->
+  <Dialogue id="unityResult">
+    <NPCText>
+      <![CDATA[
+      Bruk smiles faintly, recognizing your peaceful intent.<BR>
+      He places his hand on your shoulder in silent blessing. A sense of unity fills you.<BR>
+      (You have gained Karma and Bruk’s quiet respect.)
+      ]]>
+    </NPCText>
+    <Option text="Return to the grove." next="greeting"/>
+    <Option text="Thank Bruk silently and depart." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="growthResult">
+    <NPCText>
+      <![CDATA[
+      Bruk nods gravely, understanding your acceptance of hardship.<BR>
+      He draws a spiral on your palm—a Verdant mark of endurance.<BR>
+      (You feel a surge of strength.)
+      ]]>
+    </NPCText>
+    <Option text="Return to the grove." next="greeting"/>
+    <Option text="Bow in gratitude and leave." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="serviceResult">
+    <NPCText>
+      <![CDATA[
+      Bruk bows deeply in recognition of your sense of duty.<BR>
+      He hands you a twig tied with grass—a token of Verdant service.<BR>
+      (You have gained Fame among the Verdant Tribes.)
+      ]]>
+    </NPCText>
+    <Option text="Return to the grove." next="greeting"/>
+    <Option text="Slip away quietly." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="refusePattern">
+    <NPCText>
+      <![CDATA[
+      Bruk studies you, patient and unjudging.<BR>
+      He re-gathers the stones and returns to meditation. Some paths are not chosen in haste.
+      ]]>
+    </NPCText>
+    <Option text="Reflect, then leave." action="Close"/>
+  </Dialogue>
+
+  <!-- Observe Branch: Stone Choice Outcomes -->
+  <Dialogue id="leafChoice">
+    <NPCText>
+      <![CDATA[
+      Bruk nods approvingly, recognizing your harmony with nature.<BR>
+      He offers you a carved leaf talisman—its touch is cool and invigorating.
+      ]]>
+    </NPCText>
+    <Option text="Return to the grove." next="greeting"/>
+    <Option text="Slip away quietly." action="Close"/>
+  </Dialogue>
+  <Dialogue id="waterChoice">
+    <NPCText>
+      <![CDATA[
+      Bruk’s eyes brighten. He draws a gentle swirl in the earth, blessing your insight.<BR>
+      The air feels lighter, thoughts clearer. Intellect and calm guide you.
+      ]]>
+    </NPCText>
+    <Option text="Return to the grove." next="greeting"/>
+    <Option text="Slip away quietly." action="Close"/>
+  </Dialogue>
+  <Dialogue id="fireChoice">
+    <NPCText>
+      <![CDATA[
+      Bruk grips your forearm in approval. The mark of the flame burns bright within you—strength to face the storm ahead.
+      ]]>
+    </NPCText>
+    <Option text="Return to the grove." next="greeting"/>
+    <Option text="Slip away quietly." action="Close"/>
+  </Dialogue>
+  <Dialogue id="noChoice">
+    <NPCText>
+      <![CDATA[
+      Bruk shrugs, understanding not all choices must be made. He gathers the stones and continues his vigil.
+      ]]>
+    </NPCText>
+    <Option text="Leave Bruk to his meditation." action="Close"/>
+  </Dialogue>
+
+  <!-- Vision Trial: If player grasps staff -->
+  <Dialogue id="visionTrial">
+    <NPCText>
+      <![CDATA[
+      Closing your eyes, you see a memory through Bruk’s own mind:<BR>
+      A duel gone wrong. His brother falls. Silence, then endless remorse.<BR>
+      You awaken, feeling the monk’s vow as a heavy weight, but also his drive to protect.<BR>
+      Bruk offers you a silent nod—a bond forged in shared understanding.
+      ]]>
+    </NPCText>
+    <Option text="Place a hand over your heart in solidarity." action="AddKarma:150" next="becomeGuard"/>
+    <Option text="Thank Bruk and step away." action="Close"/>
+  </Dialogue>
+
+  <!-- Final Branch: Offer Bodyguard Services -->
+  <Dialogue id="becomeGuard">
+    <NPCText>
+      <![CDATA[
+      Bruk gestures to his own chest, then to yours—a pact between warrior and ally.<BR>
+      If you seek his aid as a bodyguard, return here and invoke the Verdant vow.<BR>
+      (You have unlocked Bruk as a hireable companion for future travels!)
+      ]]>
+    </NPCText>
+    <Option text="Bow deeply and return to the village." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="reflectSilent">
+  <NPCText>
+    <![CDATA[
+    Bruk looks at you for a long moment.<BR>
+    He kneels and draws a <B>line of ash</B> on the ground, then presses two fingers to his lips.<BR><BR>
+    Slowly, he arranges items before you:<BR>
+    • A <B>bone medallion</B><BR>
+    • A <B>withered feather</B><BR>
+    • A <B>fractured wooden mask</B><BR><BR>
+    He invites you to touch one, each a symbol of memory.
+    ]]>
+  </NPCText>
+  <Option text="Touch the bone medallion." next="memoryBrother"/>
+  <Option text="Touch the withered feather." next="memoryTrial"/>
+  <Option text="Touch the fractured wooden mask." next="memoryShame"/>
+  <Option text="Refuse to pry into his past." next="memoryRespect"/>
+</Dialogue>
+
+<Dialogue id="memoryBrother">
+  <NPCText>
+    <![CDATA[
+    Bruk inhales sharply.<BR>
+    He traces a second spiral near the medallion, then spreads ash in the shape of two mirrored figures… one crumbling.<BR><BR>
+    You feel a jolt—his brother, once a warrior beside him, was lost in a sparring accident that shattered Bruk’s will to speak.<BR>
+    You hear no words, but his grief is <I>loud.</I>
+    ]]>
+  </NPCText>
+  <Option text="Offer a silent prayer." action="Karma:+100" next="memoryContinue"/>
+  <Option text="Place your hand on the crumbling figure." action="AddStat:Str,2,600" next="memoryContinue"/>
+</Dialogue>
+
+<Dialogue id="memoryTrial">
+  <NPCText>
+    <![CDATA[
+    Bruk nods slowly.<BR>
+    He lifts the feather and lets it fall, then points to a scar on his chest.<BR><BR>
+    In a vision, you glimpse Bruk during the Verdant “Night of Thorns”—defending the sacred groves alone against a corrupted forest beast.<BR>
+    He survived, but was marked forever.<BR>
+    ]]>
+  </NPCText>
+  <Option text="Lower your head in respect." action="Fame:+100" next="memoryContinue"/>
+  <Option text="Clench your fists—he is stronger for it." action="AddStat:Dex,2,600" next="memoryContinue"/>
+</Dialogue>
+
+<Dialogue id="memoryShame">
+  <NPCText>
+    <![CDATA[
+    Bruk tenses. The mask once covered his face during his time of exile.<BR><BR>
+    He sets the broken mask into the firepit beside him and watches the flames consume it.<BR>
+    His silence, his scars, his vow—all penance for something never fully shared.<BR><BR>
+    But as the mask burns, he finally looks you in the eye.
+    ]]>
+  </NPCText>
+  <Option text="Hold his gaze, unflinching." action="Karma:+150" next="memoryContinue"/>
+  <Option text="Look away, granting privacy." action="Close"/>
+</Dialogue>
+
+<Dialogue id="memoryRespect">
+  <NPCText>
+    <![CDATA[
+    Bruk seems relieved. Not all truths must be unburied.<BR><BR>
+    He places his hand on his chest, acknowledging your restraint.<BR>
+    In silence, trust is sometimes louder than questions.
+    ]]>
+  </NPCText>
+  <Option text="Bow and return to the grove." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="memoryContinue">
+  <NPCText>
+    <![CDATA[
+    Bruk takes a small pendant of bark and wraps it in leather twine.<BR>
+    He hands it to you: a token of trust, and of shared memory.<BR><BR>
+    <I>You feel more attuned to the Verdant’s silent strength.</I>
+    ]]>
+  </NPCText>
+  <Option text="Accept the pendant." action="GiveItem:BruksPendant" />
+  <Option text="Return to the grove." next="greeting"/>
+</Dialogue>
+
+
+</DialogueFile>

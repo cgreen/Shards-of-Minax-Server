@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="BrotherLoric">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#e2dba1'>
+      A gentle-eyed man in a plain monk's robe stands by a small shrine, tending a battered candle.<BR><BR>
+      “Welcome, traveler. I am Brother Loric, humble servant of Yew and keeper of this shrine. In these troubled days, all souls in Sunreach are in need of solace.”<BR><BR>
+      He nods kindly. “Is it peace, purpose, or merely a listening ear that brings you here?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="What is this place?" next="shrine"/>
+    <Option text="You look troubled. Is something wrong?" next="problem"/>
+    <Option text="Do you need assistance?" next="offerhelp"/>
+	<Option text="Tell me about yourself, Brother Loric." next="loricIntro"/>
+    <Option text="I seek blessings from Yew." next="blessing"/>
+    <Option text="Just passing by." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="shrine">
+    <NPCText>
+      <![CDATA[
+      Loric gently wipes the shrine’s stone altar.<BR><BR>
+      “This is the Shrine of Mercy, open to all exiles and refugees who seek safety. Once, shrines like these stood proudly in Yew’s forests—now, we must carry their light wherever hope survives.”<BR>
+      “Here, none are turned away. Even those who have lost faith may find comfort—if only for a little while.” 
+      ]]>
+    </NPCText>
+    <Option text="You seem burdened. Is there danger?" next="problem"/>
+    <Option text="I wish to help this place." next="offerhelp"/>
+    <Option text="Thank you. I will be on my way." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="problem">
+    <NPCText>
+      <![CDATA[
+      Loric sighs, his voice lowering.<BR><BR>
+      “Last night, those loyal to Minax defiled the shrine. They shattered the sacred icon and daubed dark sigils across our altar. Some whisper they seek to drive all faith from Sunreach.”<BR>
+      “I have cleansed what I could, but the spirit of the place is wounded. I fear the cultists will return, and the refugees are afraid.”
+      ]]>
+    </NPCText>
+    <Option text="Can I help restore the shrine?" next="offerhelp"/>
+    <Option text="Who supports you in Sunreach?" next="connections"/>
+    <Option text="Minax's evil reaches even here?" next="minax"/>
+    <Option text="I hope you find help." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="offerhelp">
+    <NPCText>
+      <![CDATA[
+      Loric’s eyes brighten with hope.<BR><BR>
+      “Bless you, friend. If you have the courage, I would ask this: Seek out the Minax cultists who defiled the shrine. Their lair is said to be hidden among the old cisterns beneath Sunreach.”<BR><BR>
+      “Recover the <B>Icon of Justice</B> they stole. With it, I can fully sanctify this ground again. But beware—they are dangerous, and the elite of Sunreach would prefer not to acknowledge such darkness within their city.”<BR>
+      “Will you undertake this task for the sake of the weary and the lost?”
+      ]]>
+    </NPCText>
+    <Option text="I will find the cultists and reclaim the Icon." 
+            action="GiveItem:FactionKillQuestScroll(Minax Cultist,Brother Loric,250)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="acceptquest"/>
+    <Option text="Why do the Sunreach elite ignore this?" next="connections"/>
+    <Option text="Tell me more of Minax’s cultists." next="minax"/>
+    <Option text="I must decline for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptquest">
+    <NPCText>
+      <![CDATA[
+      Loric bows his head in gratitude.<BR><BR>
+      “Go with the virtues. The cultists are clever, but I have faith you will prevail. Return the Icon of Justice to me, and the shrine shall be whole once more.”<BR><BR>
+      <I>(Seek out Minax cultists in the Sunreach undercity, defeat them, and retrieve the Icon. Return here for your reward.)</I>
+      ]]>
+    </NPCText>
+    <Option text="I will return soon, Brother Loric." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="blessing">
+    <NPCText>
+      <![CDATA[
+      Loric smiles and raises his staff.<BR><BR>
+      “May the Virtues guide you: Justice in your dealings, Compassion in your actions, and Valor in your heart. Even in the shadows, a single candle can light the way.”<BR><BR>
+      You feel a warmth in your chest.
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Brother Loric." action="AddStat:Karma,250,3600"/>
+    <Option text="Is there a way I can aid you?" next="offerhelp"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="connections">
+    <NPCText>
+      <![CDATA[
+      “Few in Sunreach care for the poor,” Loric admits quietly. “But I am grateful to Hassan Al-Kadir, a scholar who aids us with food and coin, though it earns him little favor with the merchant princes.”<BR>
+      “Others view this shrine with suspicion, fearing it stirs unrest. Yet, even in a city of trade and shadows, there are those who recall the old virtues.”
+      ]]>
+    </NPCText>
+    <Option text="What of the Council? Do they not protect you?" next="council"/>
+    <Option text="Hassan Al-Kadir sounds honorable." next="hassan"/>
+    <Option text="How do Minax’s followers thrive here?" next="minax"/>
+    <Option text="Let me help you, regardless." next="offerhelp"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      “The Council of Five Houses is preoccupied with profit and politics. To them, the suffering of exiles is little more than a passing inconvenience.”<BR>
+      “They would rather see shrines vanish than risk angering their more… dangerous patrons. I must rely on the kindness of individuals, not institutions.”
+      ]]>
+    </NPCText>
+    <Option text="That is unjust. I wish to help." next="offerhelp"/>
+    <Option text="I see. I’ll take my leave." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="hassan">
+    <NPCText>
+      <![CDATA[
+      “Hassan is a man of conscience. While others seek wealth, he seeks knowledge and peace. Were it not for him, many here would starve.”<BR>
+      “Still, his generosity earns him enemies in the council, and I fear he may soon face dangers of his own.”
+      ]]>
+    </NPCText>
+    <Option text="I will seek him out as well." action="Close"/>
+    <Option text="Let us focus on the cultists." next="offerhelp"/>
+  </Dialogue>
+
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Loric’s expression grows grim.<BR><BR>
+      “Minax’s reach is long. Her followers promise power to the desperate and vengeance to the bitter. In Sunreach, they fester in shadows, corrupting both the poor and the powerful.”<BR>
+      “But faith and virtue are not so easily extinguished. Every act of defiance rekindles hope.”
+      ]]>
+    </NPCText>
+    <Option text="Then I will defy them and reclaim your Icon." next="offerhelp"/>
+    <Option text="Tell me more about the cult’s methods." next="minax2"/>
+    <Option text="I must be cautious. Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="minax2">
+    <NPCText>
+      <![CDATA[
+      “Their rites involve defiling symbols of hope, spreading fear among the weak. Sometimes they steal children for indoctrination, or bribe city guards to look the other way.”<BR>
+      “Trust little and walk carefully. Even in Sunreach’s brightest plazas, Minax’s shadow falls long.”
+      ]]>
+    </NPCText>
+    <Option text="I am ready to face them." next="offerhelp"/>
+    <Option text="That is unsettling. I need to prepare." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Loric bows his head.<BR><BR>
+      “May the gods guide you, wherever your path leads. The shrine will always welcome a friend.”
+      ]]>
+    </NPCText>
+    <Option text="Perhaps I can help after all." next="offerhelp"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="loricIntro">
+  <NPCText>
+    <![CDATA[
+    Brother Loric pauses, surprised by your interest.<BR><BR>
+    “My story is unremarkable, truly. I was once a monk of Yew’s Empath Abbey, tending orchards and copying scrolls. But when the shrines began to fall, I could not remain cloistered while the world bled.”<BR>
+    “I came here to bring light to the lost... even if it meant leaving the safety of home.”
+    ]]>
+  </NPCText>
+  <Option text="Why leave Yew?" next="loricYew"/>
+  <Option text="You are braver than you admit." next="loricCourage"/>
+  <Option text="That sounds like a lonely path." next="loricLonely"/>
+  <Option text="I respect your dedication." action="Karma:150" next="loricBlessing"/>
+</Dialogue>
+
+<Dialogue id="loricYew">
+  <NPCText>
+    <![CDATA[
+    “Yew remains sacred—but distant. Its abbots argued endlessly about doctrine while Minax’s forces defiled shrines and abducted children.”<BR><BR>
+    Loric’s eyes harden. “So I chose exile. I wear no title now, only intention. Better to be a shepherd in the dark than a scholar in the light.”
+    ]]>
+  </NPCText>
+  <Option text="You defied your order?" next="loricExile"/>
+  <Option text="So you chose action over tradition?" next="loricChoice"/>
+</Dialogue>
+
+<Dialogue id="loricCourage">
+  <NPCText>
+    <![CDATA[
+    Loric smiles gently. “Bravery is not in the blade, but in standing for what is right—especially when the world says you’re wrong.”<BR>
+    “I am no hero. But I am not afraid of shadows.”
+    ]]>
+  </NPCText>
+  <Option text="You inspire more than you know." action="Karma:100" next="loricBlessing"/>
+  <Option text="You’ve faced danger, haven’t you?" next="loricDanger"/>
+</Dialogue>
+
+<Dialogue id="loricLonely">
+  <NPCText>
+    <![CDATA[
+    “Yes… it is a lonely path,” he admits quietly.<BR>
+    “But each soul that prays here, each child that finds sleep without fear—that is company enough.”<BR>
+    “And in truth, the Virtues themselves are companions… if one learns to listen.”
+    ]]>
+  </NPCText>
+  <Option text="You must miss your old life." next="loricMemory"/>
+  <Option text="You are never truly alone." action="SendMessage:Brother Loric smiles quietly at you." next="loricBlessing"/>
+</Dialogue>
+
+<Dialogue id="loricExile">
+  <NPCText>
+    <![CDATA[
+    “Not exile in name… but in spirit. I walked out of Yew’s north gate and did not look back.”<BR>
+    “Some there still pray for me. Others call me apostate. I forgive both.”<BR>
+    “Sunreach may scorn the shrines, but here, faith still has work to do.”
+    ]]>
+  </NPCText>
+  <Option text="That’s a heavy burden to carry." next="loricCourage"/>
+</Dialogue>
+
+<Dialogue id="loricChoice">
+  <NPCText>
+    <![CDATA[
+    “Indeed. Virtue without action is like a scroll never read. What use is wisdom if it does not heal the world?”<BR>
+    “I chose to serve—not to wait.”
+    ]]>
+  </NPCText>
+  <Option text="And I choose to stand with you." action="Karma:200" next="loricBlessing"/>
+  <Option text="This city needs more like you." next="loricBlessing"/>
+</Dialogue>
+
+<Dialogue id="loricDanger">
+  <NPCText>
+    <![CDATA[
+    “There was a night when I stood between a child and a blade,” Loric says quietly.<BR>
+    “I had no weapon, no armor—only words and the will to die before yielding.”<BR>
+    “Sometimes, that is enough. The bandit left. The child still visits this shrine.”<BR><BR>
+    <I>(You feel a surge of quiet admiration.)</I>
+    ]]>
+  </NPCText>
+  <Option text="That was true courage." action="Karma:250" next="loricBlessing"/>
+  <Option text="You wield a different kind of strength." next="loricBlessing"/>
+</Dialogue>
+
+<Dialogue id="loricMemory">
+  <NPCText>
+    <![CDATA[
+    “I miss the songbirds in the Abbey’s gardens… the smell of parchment, the taste of baked figs.”<BR>
+    “But memories are seeds. If I tend them with love, perhaps they’ll bloom again here—even in Sunreach.”
+    ]]>
+  </NPCText>
+  <Option text="You carry Yew with you, wherever you go." next="loricBlessing"/>
+  <Option text="One day, you’ll return there in peace." next="loricBlessing"/>
+</Dialogue>
+
+<Dialogue id="loricBlessing">
+  <NPCText>
+    <![CDATA[
+    Brother Loric places his hand gently on your shoulder.<BR>
+    “May the Virtues guard your steps. In this city of masks and merchants, it is rare to find a soul who asks not for gold, but for truth.”<BR><BR>
+    <I>(You feel your spirit strengthened.)</I>
+    ]]>
+  </NPCText>
+  <Option text="Thank you, Brother Loric." action="PlaySound:0x015" />
+  <Option text="I’m glad I asked. Farewell." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

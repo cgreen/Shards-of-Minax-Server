@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="DornMakel">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#cd853f'>
+      The smith before you is thickset, his skin mottled by old burns and fresh scars. His hammer hand flexes restlessly, and his steely gaze flickers with suspicion.<BR><BR>
+      “What brings you to my forge? Looking to have something mended, or hoping I’ll hand out miracles to strangers? Speak up. The city’s full of cowards and spies these days—best you prove you’re not one of them.”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I heard you forge weapons like no other." next="pride"/>
+    <Option text="Who are you, really?" next="identity"/>
+    <Option text="I was told you have a job for those worthy." next="test"/>
+	<Option text="You seem like you've seen your share of war..." next="story_intro"/>
+    <Option text="I’m only passing through." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="pride">
+    <NPCText>
+      <![CDATA[
+      Dorn snorts, spitting into the ashes.<BR>
+      “If you’re after fancy baubles, find a Conclave pet. I don’t make trinkets for parade mages. I make steel that bites and armor that remembers every scar. Once, I was Warden of the Outer Rim. Held the north quarter when Minax first sent her devils on winged things—lost most of my lads, and nearly the city itself.<BR>
+      Now I shape iron for those I judge worthy. Prove yourself, and you might earn more than the city’s empty praise.”
+      ]]>
+    </NPCText>
+    <Option text="How could I prove myself to you?" next="test"/>
+    <Option text="Why do you hate the Conclave so much?" next="conclave"/>
+    <Option text="Tell me more about Minax’s attack." next="minax"/>
+    <Option text="I’ll be going, then." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="identity">
+    <NPCText>
+      <![CDATA[
+      “Dorn Makel. Ex-warden, former captain, now Aerilon’s half-tamed ghost. Most of the Conclave would rather I disappear. Selara? Hides behind her spells. Corvus Deyne—wants the city bristling like a hedgehog. The rest, they mutter about the ‘old guard.’<BR>
+      I answer to no one now, and I owe no favors. Unless you’re here to prove otherwise.”
+      ]]>
+    </NPCText>
+    <Option text="What happened during the Outer Rim siege?" next="minax"/>
+    <Option text="Why are you so distrustful?" next="trust"/>
+    <Option text="Do you have any work for someone persistent?" next="test"/>
+    <Option text="I’ll leave you to your forge." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="test">
+    <NPCText>
+      <![CDATA[
+      Dorn looks you over, eyes narrowed.<BR>
+      “Work, is it? You want a weapon worthy of tearing through Minax’s rifts, you’ll have to do more than fetch coals. I don’t trust mages, and I trust this city’s politics even less. But sometimes... even an old blade needs a steady hand behind it.<BR><BR>
+      There’s a supplier outside the city—goes by ‘the Rotworm Enthusiast.’ Strange sort, obsessed with the big burrowers. He handles a fungus used for my hardening acid, but lately, even he’s spooked by Minax’s shadows. I need a shipment delivered—quiet, careful, no Conclave spies trailing you.<BR><BR>
+      Do this right, and maybe I’ll see the measure of you. You up for it?”
+      ]]>
+    </NPCText>
+    <Option text="I’ll do it. Give me the package for the Rotworm Enthusiast."
+            action="GiveItem:FactionDeliveryQuestScroll(Rotworm Enthusiast,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Who is this Rotworm Enthusiast?" next="rotworm"/>
+    <Option text="Why such secrecy? What’s so dangerous about fungus?" next="fungus"/>
+    <Option text="What makes you distrust the Conclave so much?" next="conclave"/>
+    <Option text="Maybe I’m not suited to this." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Dorn hands you a sturdy, oilskin-wrapped bundle. The scent of earth and iron clings to it.<BR><BR>
+      “Deliver that to the Rotworm Enthusiast outside the city. He’ll know what to do. Don’t let any bright-robed Conclave whelp catch you; this is between smiths and survivors. When it’s done, come back, and maybe I’ll trust you with a real commission. Earn Aerilon’s respect, and maybe—just maybe—you’ll have mine.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll return when the job is done." action="Close"/>
+  </Dialogue>
+
+  <!-- Rotworm Enthusiast Lore -->
+  <Dialogue id="rotworm">
+    <NPCText>
+      <![CDATA[
+      Dorn actually cracks a crooked smile.<BR>
+      “You won’t mistake him. Man’s got more fungus in his beard than I’ve got scars. Obsessed with rotworms—keeps one as a pet, or so he claims. Knows more about the guts of the earth than half the miners in Minoc. Don’t ask him about his ‘children’ unless you’ve got half a day to waste.<BR>
+      Still, he’s never failed me. If you need to know more, ask him yourself.”
+      ]]>
+    </NPCText>
+    <Option text="Right, I’ll deliver the package." 
+            action="GiveItem:FactionDeliveryQuestScroll(Rotworm Enthusiast,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I’m having second thoughts." action="Close"/>
+  </Dialogue>
+
+  <!-- Fungus Lore -->
+  <Dialogue id="fungus">
+    <NPCText>
+      <![CDATA[
+      “You ever try forging steel in a city made of floating rock? The levitation crystals leak strange energies—normal flux eats right through plate in a year. The Rotworm Enthusiast’s fungus, ground just so, makes an acid that tempers metal against the city’s magic. Without it, even my best blades would warp and shatter the first time a Conclave apprentice swings them.<BR>
+      The Conclave claims to protect us, but they don’t understand the grit needed to keep this city from falling apart. Some of us trust what’s grown in dirt and blood, not in fancy spellbooks.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll deliver the package as you asked." 
+            action="GiveItem:FactionDeliveryQuestScroll(Rotworm Enthusiast,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Sounds risky. Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Conclave Distrust -->
+  <Dialogue id="conclave">
+    <NPCText>
+      <![CDATA[
+      Dorn’s voice is low, almost a growl.<BR>
+      “You ever watch the Conclave argue about how many spells to cast while your squad dies screaming? They’re powerful, sure, but they don’t bleed for this city. I lost friends holding the Outer Rim, and all the archmages did was count casualties and close another gate.<BR>
+      If they want my steel, they can come earn it. You—well, you’ve got a chance to show you’re not like them.”
+      ]]>
+    </NPCText>
+    <Option text="Let me prove myself on this errand." 
+            action="GiveItem:FactionDeliveryQuestScroll(Rotworm Enthusiast,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax Lore -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Dorn stares into the forge, lost in memory.<BR>
+      “Minax’s skybeasts tore the Outer Rim apart—never seen so much blood in the clouds. Most of my men gone in minutes. Conclave tried, but magic fizzled in the storm. After that, I traded the warden’s helm for a smith’s hammer. I forge for the defenders now—the real ones.<BR>
+      If Minax comes again, I aim to be ready. You want to help? Start by delivering that package. No glory, just work.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll do it. Hand over the package." 
+            action="GiveItem:FactionDeliveryQuestScroll(Rotworm Enthusiast,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="That’s not a fight I want any part of." action="Close"/>
+  </Dialogue>
+
+  <!-- Trust Issues -->
+  <Dialogue id="trust">
+    <NPCText>
+      <![CDATA[
+      “Trust is earned on the anvil, not in a handshake. I’ve seen too many traitors—some wore Conclave robes, some wore my own badge. Deliver this for me, clean and quiet, and we’ll talk trust. Otherwise, you’re just another name in a city that’s already forgotten too many.”
+      ]]>
+    </NPCText>
+    <Option text="Give me the package. I’ll deliver it." 
+            action="GiveItem:FactionDeliveryQuestScroll(Rotworm Enthusiast,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Trust goes both ways, smith. Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Dorn shrugs, turning back to his work.<BR>
+      “Suit yourself. But don’t come asking for favors until you’ve proven you’re worth a damn. Aerilon’s got enough talkers—what it needs are doers.”
+      ]]>
+    </NPCText>
+    <Option text="Maybe I’ll return when I’m ready to prove myself." action="Close"/>
+    <Option text="Goodbye." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="story_intro">
+  <NPCText>
+    <![CDATA[
+    Dorn exhales through his nose, the sound more sigh than breath.<BR>
+    “That obvious, eh? These burns don’t come from cooking stew. I’ve seen skyships fall in flames. I’ve heard the screams of men twisted by Minax’s rift spawn. And I’ve buried more comrades than names I care to remember.<BR><BR>
+    Still… you're not the first to ask. Maybe you're worth a story or two.”
+    ]]>
+  </NPCText>
+  <Option text="Tell me about the Outer Rim and what happened there." next="outer_rim"/>
+  <Option text="What drives you now, Dorn?" next="drive"/>
+  <Option text="Do you miss being a Warden?" next="warden"/>
+  <Option text="You seem to hold onto memories. Any you care to share?" next="comrades"/>
+  <Option text="Never mind. I didn’t mean to pry." action="Close"/>
+</Dialogue>
+
+<Dialogue id="outer_rim">
+  <NPCText>
+    <![CDATA[
+    Dorn’s eyes cloud over.<BR>
+    “The Rim was where Aerilon touched the edge of the world. First line of defense. When Minax’s skyspawn hit us, we weren’t ready. The bastards didn’t fly straight. They *twisted* space. One moment the walls were there, the next they weren’t.<BR><BR>
+    My hammer arm hasn't been the same since that night. Not from the fight—*from dragging bodies out of burning crystal bunkers.*”
+    ]]>
+  </NPCText>
+  <Option text="That sounds like a heavy burden." next="burden"/>
+  <Option text="And the Conclave did nothing?" next="blame"/>
+  <Option text="What kind of enemies did Minax send?" next="spawn"/>
+</Dialogue>
+
+<Dialogue id="burden">
+  <NPCText>
+    <![CDATA[
+    “Burden? Nah. It's duty. The weight only crushes you when you forget why you carry it.”<BR><BR>
+    Dorn reaches into a pouch and tosses you a sliver of blackened metal.
+    ]]>
+  </NPCText>
+  <Option text="Thank you. I’ll remember this." 
+          action="GiveItem:BlackPearl"
+          next="continue_story"/>
+</Dialogue>
+
+<Dialogue id="blame">
+  <NPCText>
+    <![CDATA[
+    Dorn grits his teeth.<BR>
+    “Selara did what she could. Corvus... he just watched. Said it was a 'test of readiness.' I stopped following orders that day. The Conclave's too busy measuring arcane pulses to see when men are dying on the ground.”
+    ]]>
+  </NPCText>
+  <Option text="That explains your distrust." next="continue_story"/>
+</Dialogue>
+
+<Dialogue id="spawn">
+  <NPCText>
+    <![CDATA[
+    “We called them 'Riftborn'. They weren't natural. They moved like fish in water—but through air, stone, even thoughts. Some of my men started screaming about their mothers being alive in the sky. Others just melted. Minax doesn't invade like a general—she *rewrites the battlefield* itself.”
+    ]]>
+  </NPCText>
+  <Option text="And you survived all that?" next="continue_story"/>
+</Dialogue>
+
+<Dialogue id="continue_story">
+  <NPCText>
+    <![CDATA[
+    Dorn hammers down on a glowing bar of metal with sudden force.<BR>
+    “Still breathing, aren’t I? I’ve got a forge, scars, and a few regrets. That’s more than most. And now I make weapons for those who might write a better ending than I got.”<BR><BR>
+    He glances at you sideways.<BR>“You keep asking questions like these, I might start thinking you actually give a damn.”
+    ]]>
+  </NPCText>
+  <Option text="What drives you now?" next="drive"/>
+  <Option text="What do you miss about being a Warden?" next="warden"/>
+  <Option text="Tell me about those you lost." next="comrades"/>
+  <Option text="I’d like to earn your respect." next="test"/>
+  <Option text="You’ve given me much to think on." action="Close"/>
+</Dialogue>
+
+<Dialogue id="drive">
+  <NPCText>
+    <![CDATA[
+    “What drives me? Making sure my blades outlive my bones. That someone holds them who won’t flinch when the skies rip open again.<BR><BR>
+    I’ve got nightmares, sure—but nightmares sharpen better steel than daydreams ever will.”
+    ]]>
+  </NPCText>
+  <Option text="That’s damn poetic." next="poetic"/>
+  <Option text="So you still believe Aerilon can be defended?" next="defense"/>
+</Dialogue>
+
+<Dialogue id="poetic">
+  <NPCText>
+    <![CDATA[
+    Dorn grunts.<BR>“Don’t go spreading that around. I’ve got a reputation for grumbling, not reciting bard tales.”
+    ]]>
+  </NPCText>
+  <Option text="Your secret’s safe. For now." action="Close"/>
+  <Option text="Let’s talk about something else." next="story_intro"/>
+</Dialogue>
+
+<Dialogue id="defense">
+  <NPCText>
+    <![CDATA[
+    “With the right people, maybe. But not if it stays ruled by backroom schemers. That’s why I test who I work for. You want my steel? Earn my trust. Simple as that.”
+    ]]>
+  </NPCText>
+  <Option text="Then I’ll do that. I want to prove myself." next="test"/>
+  <Option text="Trust is earned both ways, Dorn." action="SendMessage:You feel Dorn watching you more closely now."/>
+</Dialogue>
+
+<Dialogue id="warden">
+  <NPCText>
+    <![CDATA[
+    Dorn looks away, silent for a long beat.<BR>
+    “I miss my men. I miss knowing the guard rotation without glancing at a damn clock. I miss knowing *who* I was.<BR><BR>
+    But we don’t get to keep the old world when the sky shatters, do we?”
+    ]]>
+  </NPCText>
+  <Option text="What would you do if you could go back?" next="back_again"/>
+</Dialogue>
+
+<Dialogue id="back_again">
+  <NPCText>
+    <![CDATA[
+    “I’d still take the forge, in the end. But I’d make sure every recruit had armor fit to hold *against Minax*, not just pretty plating for parade day.”
+    ]]>
+  </NPCText>
+  <Option text="You still protect people, Dorn. Just differently." 
+          action="AddStat:Str,5,180" 
+          next="buff_response"/>
+</Dialogue>
+
+<Dialogue id="buff_response">
+  <NPCText>
+    <![CDATA[
+    Dorn nods, just once.<BR>“Hah. Maybe you’re not just another idle wanderer.”
+    ]]>
+  </NPCText>
+  <Option text="I’ll take that as a compliment." action="Close"/>
+</Dialogue>
+
+<Dialogue id="comrades">
+  <NPCText>
+    <![CDATA[
+    Dorn walks over to a small wooden box tucked near the forge.<BR>
+    “I keep their insignias. Each one a reason I keep hammering steel. Maybe someday, they’ll be remembered for more than the street names.”<BR><BR>
+    He opens the box and holds out a small, charred insignia pin.
+    ]]>
+  </NPCText>
+  <Option text="May I keep it?" 
+          condition="KarmaAtLeast:0" 
+          action="GiveItem:Gold,50"
+          next="give_insignia"/>
+  <Option text="Let them rest. I won’t disturb that memory." next="respectful"/>
+</Dialogue>
+
+<Dialogue id="give_insignia">
+  <NPCText>
+    <![CDATA[
+    “You’ve got the heart. Take it. But wear it proud—or not at all.”
+    ]]>
+  </NPCText>
+  <Option text="Thank you, Dorn. I won’t forget them." action="Close"/>
+</Dialogue>
+
+<Dialogue id="respectful">
+  <NPCText>
+    <![CDATA[
+    Dorn nods, slowly.<BR>
+    “That’s the answer I was hoping for.”
+    ]]>
+  </NPCText>
+  <Option text="Farewell, Warden." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

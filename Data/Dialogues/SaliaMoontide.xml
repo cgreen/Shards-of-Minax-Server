@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="SaliaMoontide">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#48A6C6'>
+      You approach a woman swathed in shimmering aetherweave, her eyes bright with fatigue and resolve. Crystal dust flecks her gloves and a faint arcane hum radiates from her sash. She glances up from a swirling schematic of azure crystals, lips pressed in a worried line.
+      <BR><BR>
+      "If you're here for a skyship ride, I'm afraid you'll have to wait your turn. If you're here to *help* keep Aerilon aloft, well—perhaps we can make each other's day less precarious."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You look exhausted. Is something wrong with the crystals?" next="crystalTrouble"/>
+    <Option text="Is it always this frantic here?" next="frantic"/>
+    <Option text="You’re Salia Moontide, aren’t you? I heard your name from Tolan Drift." next="tolan"/>
+	<Option text="You seem like someone who carries more than tools. What’s your story?" next="saliaStoryIntro"/>
+    <Option text="I’m just passing by." next="passing"/>
+  </Dialogue>
+
+  <!-- Main Trouble -->
+  <Dialogue id="crystalTrouble">
+    <NPCText>
+      <![CDATA[
+      She wipes her brow, the gesture leaving a streak of luminous dust.
+      <BR><BR>
+      "Wrong is an understatement. The levitation crystals are—well, ‘anxious’ is the word I’d use, if you’ll believe it. Arcane turbulence, energy flux, hairline fractures in the resonance array… If I don’t recalibrate every few hours, we risk a catastrophic descent. No pressure, of course."
+      <BR>
+      "But what truly gnaws at me isn’t the crystals themselves. It’s what—or *who*—might be tampering with them."
+      ]]>
+    </NPCText>
+    <Option text="Who would sabotage Aerilon’s lifeblood?" next="sabotage"/>
+    <Option text="Could it be Minax’s agents?" next="minax"/>
+    <Option text="I’m handy with odd jobs. Anything you need?" next="offerHelp"/>
+    <Option text="That sounds above my pay grade." action="Close"/>
+  </Dialogue>
+
+  <!-- Frantic here -->
+  <Dialogue id="frantic">
+    <NPCText>
+      <![CDATA[
+      She gives a dry laugh.<BR>
+      "Frantic? That’s putting it politely. The Azure Conclave expects perfection, the Market wants new lightstones yesterday, and the airfleet complains every time I divert energy from the docks to keep the city floating."
+      <BR><BR>
+      "If not for Tolan Drift bringing in rare minerals and the occasional bottle of elven plum, I might have leapt from the platform long ago. But we endure. Someone has to keep the world from falling—literally."
+      ]]>
+    </NPCText>
+    <Option text="You and Tolan Drift must be close." next="tolan"/>
+    <Option text="You ever think of leaving Aerilon?" next="leaving"/>
+    <Option text="How can I help?" next="offerHelp"/>
+    <Option text="Good luck with your work." action="Close"/>
+  </Dialogue>
+
+  <!-- Tolan branch -->
+  <Dialogue id="tolan">
+    <NPCText>
+      <![CDATA[
+      Salia smiles, a rare softness in her expression.
+      <BR>
+      "Tolan? Hah! There are days I think he’s the only reason Aerilon hasn’t toppled into the sea. He brings skyborn iron and stormglass from the lower realms—sometimes even sings while he works. We share a friendship forged in far too many crises and midnight repairs."
+      <BR><BR>
+      "But, enough sentiment. Are you here to gossip, or do you want to keep Aerilon in the air?"
+      ]]>
+    </NPCText>
+    <Option text="I’m here to help. Do you have a task?" next="offerHelp"/>
+    <Option text="He said you’re being pressured by the Conclave. Is that true?" next="conclave"/>
+    <Option text="Just passing through." action="Close"/>
+  </Dialogue>
+
+  <!-- Offer Help / Main Quest Offer -->
+  <Dialogue id="offerHelp">
+    <NPCText>
+      <![CDATA[
+      Her eyes search yours, keen and suspicious, but also hopeful.
+      <BR>
+      "If you’re offering help, I hope you’re not another apprentice hoping to impress the Conclave. I need someone…*unaffiliated.* There’s a shipment of phase capacitors—a rare component—meant for an engineer with the Serpent Savant trait in Serpent’s Hold."
+      <BR>
+      "I can't trust the official couriers; too many ears and eyes report to Corvus Deyne or his shadowy friends. And if word leaks, I’ll be blamed for ‘collusion’ or worse. But you—you look like someone who can move quietly."
+      ]]>
+    </NPCText>
+    <Option text="I’ll deliver the capacitors. Who exactly should I find?" next="serpentContact"/>
+    <Option text="Why are you worried about Corvus Deyne?" next="corvus"/>
+    <Option text="What makes the Serpent Savant so important?" next="serpentLore"/>
+    <Option text="What’s in it for me?" next="reward"/>
+    <Option text="I’m not your courier." action="Close"/>
+  </Dialogue>
+
+  <!-- Serpent Savant explanation -->
+  <Dialogue id="serpentContact">
+    <NPCText>
+      <![CDATA[
+      "You’re looking for Serdan, the Savant—wears the silver serpent circlet, usually in the lower sanctum. He’ll know what to do with the phase capacitors, and more importantly, he’s no friend to Minax or the Conclave’s darker ambitions."
+      <BR>
+      "Tell him Salia sent you. And if you’re asked by guards—say you’re delivering spare runic fuses for ‘old clockwork doors.’ It’s half true."
+      <BR><BR>
+      "Bring me word when the delivery’s done. Aerilon rewards those who keep it aloft."
+      ]]>
+    </NPCText>
+    <Option text="I’ll handle it personally."
+            action="GiveItem:FactionDeliveryQuestScroll(SerpentSavant,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Are there dangers on the road?" next="road"/>
+    <Option text="Can I trust Serdan?" next="serdan"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      She presses a crystalline satchel into your hands.
+      <BR>
+      "Careful, the phase capacitors are sensitive to jostling and anti-magic fields. Avoid teleporting if you can, and whatever you do—*don’t* open the satchel. Trust me."
+      <BR>
+      "And…thank you. Aerilon needs more friends, and I need more sleep."
+      ]]>
+    </NPCText>
+    <Option text="I’ll be back soon." action="Close"/>
+  </Dialogue>
+
+  <!-- Asking about dangers -->
+  <Dialogue id="road">
+    <NPCText>
+      <![CDATA[
+      "Serpent’s Hold is distant, and these days, even the skies have ears. Minax’s cultists have grown bold—watch for veiled agents, especially if they offer ‘shortcuts.’"
+      <BR>
+      "You’re safer avoiding major roads. Tolan Drift sometimes knows secret currents in the clouds, but on foot, keep low and travel fast."
+      ]]>
+    </NPCText>
+    <Option text="Good advice. I’ll go carefully." next="accept"/>
+    <Option text="What if I run into trouble?" next="trouble"/>
+  </Dialogue>
+
+  <Dialogue id="trouble">
+    <NPCText>
+      <![CDATA[
+      "If things go awry, destroy the satchel rather than let it fall to Minax. The capacitors have arcane fuses—twist the blue dial, and the contents will unravel safely. Aerilon can craft more; we can’t afford traitors empowered by our inventions."
+      ]]>
+    </NPCText>
+    <Option text="Understood. I’ll be cautious." next="accept"/>
+  </Dialogue>
+
+  <!-- Asking about Serdan -->
+  <Dialogue id="serdan">
+    <NPCText>
+      <![CDATA[
+      "Serdan is eccentric but loyal to Britannia—he studies the old serpent runes and despises Minax’s meddling. He owes me a favor, though he’ll deny it. Just show him the satchel and mention my name. He’ll trust you."
+      ]]>
+    </NPCText>
+    <Option text="I’ll find him." next="accept"/>
+  </Dialogue>
+
+  <!-- Reward branch -->
+  <Dialogue id="reward">
+    <NPCText>
+      <![CDATA[
+      "Besides Aerilon’s gratitude? You’ll earn standing with the Azure Conclave—more than most outsiders ever do. That means access to special markets, rare reagents, maybe even a flight aboard Tolan Drift’s flagship."
+      <BR>
+      "But between you and me, I’ll owe you a favor. Sometimes, that’s worth more than gold here."
+      ]]>
+    </NPCText>
+    <Option text="Fair enough. Give me the satchel." next="serpentContact"/>
+    <Option text="I was hoping for gold…" next="gold"/>
+  </Dialogue>
+
+  <Dialogue id="gold">
+    <NPCText>
+      <![CDATA[
+      Salia sighs, but produces a pouch.
+      <BR>
+      "You’re persistent. Here—enough to buy a week’s bread in the Azure Market. But if you survive, the real rewards are above your head."
+      ]]>
+    </NPCText>
+    <Option text="I’ll take the satchel." next="serpentContact"/>
+    <Option text="No thanks." action="Close"/>
+  </Dialogue>
+
+  <!-- Corvus Deyne -->
+  <Dialogue id="corvus">
+    <NPCText>
+      <![CDATA[
+      Salia’s gaze sharpens, her voice lowered.
+      <BR>
+      "Corvus Deyne is…trouble. He covets the city’s power, and those who refuse his ‘suggestions’ often disappear. I’m not in his good graces, nor do I want to be. But for now, I do as I must—and keep my own secrets. If this task goes well, perhaps we can do more to counter his schemes."
+      ]]>
+    </NPCText>
+    <Option text="I’ll be careful. Let’s talk about the delivery." next="serpentContact"/>
+    <Option text="Sounds dangerous. I’ll reconsider." action="Close"/>
+  </Dialogue>
+
+  <!-- Lore about the Serpent Savant -->
+  <Dialogue id="serpentLore">
+    <NPCText>
+      <![CDATA[
+      "The Serpent Savant is a title as old as Serpent’s Hold itself—those who bear it keep ancient knowledge of the Silver Serpent’s mysteries. Some say the Savant can channel echoes of old Sosaria’s magic—useful, when Minax twists the ley lines."
+      <BR>
+      "This delivery may help Serdan shield Serpent’s Hold from Minax’s corruption. Or so I hope."
+      ]]>
+    </NPCText>
+    <Option text="That’s reason enough for me." next="serpentContact"/>
+    <Option text="Sounds too mystical for my taste." action="Close"/>
+  </Dialogue>
+
+  <!-- Conclave Pressure -->
+  <Dialogue id="conclave">
+    <NPCText>
+      <![CDATA[
+      Salia looks away, voice hushed.
+      <BR>
+      "The Conclave wants results, and Corvus wants control. I’m just trying to keep the city from falling. If you ever need an ally in high places—or under the platforms—you know where to find me."
+      ]]>
+    </NPCText>
+    <Option text="Let’s talk about your task." next="offerHelp"/>
+    <Option text="Stay safe, Salia." action="Close"/>
+  </Dialogue>
+
+  <!-- Leaving Aerilon -->
+  <Dialogue id="leaving">
+    <NPCText>
+      <![CDATA[
+      "Sometimes, yes. But Aerilon is home, and its fate is tied to mine. If the crystals fail, the city falls, and with it… everyone I care about. Tolan, Eryndil, even the stubborn Conclave. I stay because someone must."
+      ]]>
+    </NPCText>
+    <Option text="I see. Anything I can do?" next="offerHelp"/>
+    <Option text="Best of luck." action="Close"/>
+  </Dialogue>
+
+  <!-- Passing by -->
+  <Dialogue id="passing">
+    <NPCText>
+      <![CDATA[
+      Salia nods, distracted.
+      <BR>
+      "Mind the walkways. If you hear humming or see a blue glow, step carefully. Gravity is less forgiving than I am."
+      ]]>
+    </NPCText>
+    <Option text="On second thought, do you need help?" next="crystalTrouble"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Sabotage suspects -->
+  <Dialogue id="sabotage">
+    <NPCText>
+      <![CDATA[
+      "Aerilon is a city of secrets—some well-kept, some poorly hidden. Corvus Deyne has eyes everywhere, and there are rumors of Minax’s cult infiltrating even the Scholar’s District. But sometimes, even a jealous apprentice or a desperate merchant can become a saboteur."
+      <BR>
+      "Trust is precious currency here—almost as rare as stable crystals."
+      ]]>
+    </NPCText>
+    <Option text="Understood. Can I help?" next="offerHelp"/>
+    <Option text="I hope you find your saboteur." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax suspicion -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      "Minax’s shadow reaches further every day. Arcane resonance fluctuates where it shouldn’t, and sometimes, I find runes scorched beneath the crystals—runes I never inscribed. If Minax learns how Aerilon stays afloat… none of us will have a sky to stand on."
+      ]]>
+    </NPCText>
+    <Option text="All the more reason to keep your secrets safe." next="offerHelp"/>
+    <Option text="That sounds dangerous. Good luck." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="saliaStoryIntro">
+  <NPCText>
+    <![CDATA[
+    Salia chuckles softly, tucking a glowing schematic into a satchel.
+    <BR>
+    "Well, that’s a first. Most folk only ask what broke, not what’s broken *me.* But since you asked..."
+    <BR><BR>
+    "I was born in Wind—yes, that Wind. Daughter of geomancers. My mother shaped caverns from obsidian with a whisper. My father drew leylines across maps the way painters draw dreams. I was supposed to follow in their footsteps."
+    ]]>
+  </NPCText>
+  <Option text="You left Wind willingly?" next="saliaWhyLeave"/>
+  <Option text="That’s impressive—do you still speak with your family?" next="saliaFamily"/>
+  <Option text="What made you take up crystal engineering?" next="saliaWhyEngineer"/>
+</Dialogue>
+
+<Dialogue id="saliaWhyLeave">
+  <NPCText>
+    <![CDATA[
+    "Not willingly, no. Wind is… beautiful, but brittle. Strict doctrine. Rigid hierarchy. I asked too many questions, and dabbled in a few forbidden arrays. Not dangerous—just curious. But curiosity’s a crime when your masters fear change."
+    <BR><BR>
+    "They exiled me when I was nineteen. Aerilon offered something better: progress, and the freedom to shape the sky itself. Even if the sky trembles beneath us now."
+    ]]>
+  </NPCText>
+  <Option text="You seem more philosopher than engineer." next="saliaPhilosophy"/>
+  <Option text="What’s been your greatest creation here?" next="saliaProudestWork"/>
+</Dialogue>
+
+<Dialogue id="saliaFamily">
+  <NPCText>
+    <![CDATA[
+    She sighs, brushing a loose strand of hair from her eyes.
+    <BR>
+    "I write to them. Sometimes I even get letters back—short, cautious things. They still live beneath Wind’s stone spires, and that life doesn’t make room for exiles."
+    <BR><BR>
+    "I think they still love me, in their way. But love isn’t always enough when fear stands between it and forgiveness."
+    ]]>
+  </NPCText>
+  <Option text="That must be hard. You’ve built a home here though." next="saliaPhilosophy"/>
+  <Option text="Do you ever dream of going back?" next="saliaReturn"/>
+</Dialogue>
+
+<Dialogue id="saliaReturn">
+  <NPCText>
+    <![CDATA[
+    "Every week, for a time. Now? Not as much."
+    <BR>
+    "Wind is behind me. But the mistakes I made there taught me *how* to make this place thrive. Sometimes, exile is a forge—painful, but it tempers you."
+    ]]>
+  </NPCText>
+  <Option text="Tell me more about what drives you now." next="saliaPhilosophy"/>
+  <Option text="Let’s change the subject." next="offerHelp"/>
+</Dialogue>
+
+<Dialogue id="saliaWhyEngineer">
+  <NPCText>
+    <![CDATA[
+    "The short answer? Crystals don’t lie. They hum when they're happy, crackle when they're afraid. They're honest—more than most mages."
+    <BR><BR>
+    "I studied beneath a half-mad artificer named Vaelen Kael who said, 'A crystal is a question in solid form. Your task is to listen until it becomes an answer.' I’ve been listening ever since."
+    ]]>
+  </NPCText>
+  <Option text="That’s poetic. You sound like a bard!" next="saliaPoetry"/>
+  <Option text="Sounds like you’ve lived a life of contradictions." next="saliaPhilosophy"/>
+</Dialogue>
+
+<Dialogue id="saliaPoetry">
+  <NPCText>
+    <![CDATA[
+    "I dabble in verse, if you must know. And once a week, I play an old zither I traded off a sky sailor."
+    <BR>
+    "Don’t tell Corvus. He’d accuse me of harboring 'unproductive sentimentality.' And he might be right."
+    ]]>
+  </NPCText>
+  <Option text="Can you play something now?" condition="SkillAtLeast:Musicianship,60" next="saliaPlayMusic"/>
+  <Option text="A zither? That I’d like to hear someday." next="saliaSecretMusic"/>
+</Dialogue>
+
+<Dialogue id="saliaPlayMusic">
+  <NPCText>
+    <![CDATA[
+    She smiles, surprised. <BR>
+    "You’re a musician too? Well then..."
+    <BR><BR>
+    She reaches beneath her workbench and pulls out a delicate, iridescent zither. A soft melody spills into the air—haunting, hopeful, and oddly fragile.
+    <BR><BR>
+    <BASEFONT COLOR='#AADDEE'>
+     *You hear the resonance of wind and crystal—notes echoing like falling snow in a moonlit tower.* 
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="That was beautiful." action="PlaySound:0x015" next="saliaThanks"/>
+</Dialogue>
+
+<Dialogue id="saliaSecretMusic">
+  <NPCText>
+    <![CDATA[
+    "Maybe someday you will. Music’s like magic—it opens doors where none existed. I think the crystals listen when I play."
+    <BR>
+    "But if you breathe a word of this to the Conclave, I’ll swear you were hexed by a bad harmonics field."
+    ]]>
+  </NPCText>
+  <Option text="My lips are sealed." next="saliaThanks"/>
+</Dialogue>
+
+<Dialogue id="saliaThanks">
+  <NPCText>
+    <![CDATA[
+    "Thank you. Most don’t bother to see the person behind the crystals. Just the tools and the numbers."
+    <BR>
+    "But maybe you’re different. Maybe that’s why I trust you with delicate things—and dangerous ones."
+    ]]>
+  </NPCText>
+  <Option text="You can count on me." next="offerHelp"/>
+  <Option text="Let’s get back to business." next="offerHelp"/>
+</Dialogue>
+
+<Dialogue id="saliaPhilosophy">
+  <NPCText>
+    <![CDATA[
+    "Contradictions? Maybe. But I think contradictions are just the soul trying to be more than one thing at once."
+    <BR>
+    "I’m a builder who studies ruins. A rebel who defends tradition. A dreamer surrounded by practical schematics. And somehow… that makes me the perfect engineer for a floating city on the brink."
+    ]]>
+  </NPCText>
+  <Option text="I’m glad I asked. Let’s get to work." next="offerHelp"/>
+  <Option text="Thank you for sharing." next="saliaThanks"/>
+</Dialogue>
+
+
+</DialogueFile>

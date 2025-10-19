@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="PriestessMiralda">
+  <!-- Root Greeting -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#e0baff'>
+      The air around the shrine is fragrant with crushed herbs and incense. Standing within a mosaic of wildflowers, you find a serene woman clad in rose-gold vestments and a garland of fresh blooms. Her eyes are kind, yet rimmed with sleepless worry.<BR><BR>
+      "Ah, traveler... the wind whispered your arrival. I am Miralda, keeper of Compassion’s flame in these troubled fields. If you seek comfort, wisdom, or purpose, my door is open—though I fear the world offers too little of any, these days."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You look weary, Miralda. What burdens you?" next="burden"/>
+    <Option text="Is this the shrine of Compassion?" next="compassion"/>
+    <Option text="Heard there’s trouble near the village. Can I help?" next="questIntro"/>
+    <Option text="I’m just passing through, thank you." next="passing"/>
+  </Dialogue>
+
+  <!-- Inquire about her burden -->
+  <Dialogue id="burden">
+    <NPCText>
+      <![CDATA[
+      Miralda’s lips curve in a sad smile.<BR>
+      "All of Eldermoor carries burdens. I mend more spirits than wounds, though lately the wounds are deep indeed. Mayor Halric believes we must wall ourselves off, but Compassion is not a fortress. I pray for guidance each dawn—and for the courage to act, should the time come."<BR><BR>
+      She glances towards the east, where morning fog veils the marshes.<BR>
+      "Yet there is one burden I cannot lift alone..."
+      ]]>
+    </NPCText>
+    <Option text="Tell me what troubles you most." next="questIntro"/>
+    <Option text="Is it Mayor Halric who troubles you?" next="halric"/>
+    <Option text="What happened to Eldermoor? You weren’t always at odds with the world, were you?" next="backstory"/>
+    <Option text="Thank you for sharing. I’ll be on my way." action="Close"/>
+  </Dialogue>
+
+  <!-- The Compassion Shrine -->
+  <Dialogue id="compassion">
+    <NPCText>
+      <![CDATA[
+      "You stand in the last sanctuary of old Compassion, where kindness is more precious than gold. Many come for hope, others for healing. Edda the herbalist is my confidant—her skill with roots and remedies is a blessing. But now even the land groans beneath strange magic..."<BR><BR>
+      She lowers her voice.<BR>
+      "You sense it, do you not? The uneasy silence, the restless earth. Eldermoor is beset not only by hunger, but by something darker. Will you help us keep the flame alight?"
+      ]]>
+    </NPCText>
+    <Option text="I want to help." next="questIntro"/>
+    <Option text="I wish you strength, Miralda. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Passing through -->
+  <Dialogue id="passing">
+    <NPCText>
+      <![CDATA[
+      Miralda inclines her head with gentle grace.<BR>
+      "Every soul is welcome beneath these eaves, even if only for a moment’s peace. Should you find your journey heavy, return. Compassion waits—for all of us."
+      ]]>
+    </NPCText>
+    <Option text="On second thought, can I help?" next="questIntro"/>
+    <Option text="Safe travels, priestess." action="Close"/>
+  </Dialogue>
+
+  <!-- Mayor Halric relationship -->
+  <Dialogue id="halric">
+    <NPCText>
+      <![CDATA[
+      Miralda’s gaze softens, tinged with sorrow.<BR>
+      "Halric is strong, yet his heart is battered by loss. He fears that opening our gates means betrayal or ruin. I cannot blame him. Yet if we let fear rule us, what hope is left? The Virtues bind us together, or not at all."<BR><BR>
+      She takes your hand briefly.<BR>
+      "Help me prove to him that Compassion is strength—not weakness."
+      ]]>
+    </NPCText>
+    <Option text="How can I prove that?" next="questIntro"/>
+    <Option text="Do you and Edda ever disagree on how to help the village?" next="edda"/>
+    <Option text="Let’s talk of something else." next="greeting"/>
+  </Dialogue>
+
+  <!-- Edda relationship -->
+  <Dialogue id="edda">
+    <NPCText>
+      <![CDATA[
+      Miralda laughs, a hint of real warmth returning.<BR>
+      "Edda and I see the world in different lights, but share the same hopes. She trusts in earth and herb; I trust in prayer and the Virtues. Sometimes she brings me wildflowers with thorns still clinging, saying the world is both beautiful and cruel. I think she is right."<BR><BR>
+      "In truth, I owe her my life—twice over. And if you wish to help this village, you would do well to know her wisdom."
+      ]]>
+    </NPCText>
+    <Option text="I’ll seek her advice. But what can I do for you?" next="questIntro"/>
+    <Option text="Thank you. I’ll be on my way." action="Close"/>
+  </Dialogue>
+
+  <!-- Her backstory -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      She sighs, memories flickering behind her eyes.<BR>
+      "Once, I wandered farther than these fields—studied with the monks in Yew, learned wisdom in Moonglow’s libraries. I even held hope that Lord British’s kingdom would unite all people. Now, with Minax unbound and the world torn by suspicion, I tend only this small flame. But every flame matters, even a candle against the night."<BR><BR>
+      "My past is but one path among many. What of you—will you walk a path of compassion, or leave Eldermoor to its fate?"
+      ]]>
+    </NPCText>
+    <Option text="I will walk your path for now." next="questIntro"/>
+    <Option text="Perhaps another day. Goodbye." action="Close"/>
+  </Dialogue>
+
+  <!-- The actual quest offer -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#e0baff'>
+      Miralda looks to you with hopeful urgency.<BR>
+      "There is a monstrous presence in the north copse—a Cerebral Ettin, half-mad and touched by foul magic. It comes from the marsh at dusk, shattering fences, frightening children, and—I fear—tainting the very dreams of our people."<BR><BR>
+      "Aldric the hunter saw it chanting to stones by moonlight, and Edda’s sleeping draughts no longer bring peace. This creature is not merely flesh—it is a wound in the spirit of Eldermoor. If you can drive it away—or better, bring me the pale amulet it wears as proof—I shall be in your debt, and so shall all who love this place."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Tell me more of the Cerebral Ettin’s magic." next="ettinLore"/>
+    <Option text="Why do you not ask Thalen or Aldric to face the beast?" next="whyNotThem"/>
+    <Option text="Is this somehow Minax’s doing?" next="minaxLore"/>
+    <Option text="I will confront the Ettin and bring you its amulet."
+      action="GiveItem:FactionKillQuestScroll(CerebralEttin,1,Eldermoor,750)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="I need time to consider." action="Close"/>
+  </Dialogue>
+
+  <!-- Lore about the Ettin -->
+  <Dialogue id="ettinLore">
+    <NPCText>
+      <![CDATA[
+      Miralda’s brow furrows.<BR>
+      "Edda claims the beast’s mind is torn by two voices—one ancient, one new. It howls at the moon, but sometimes it murmurs words from lost tongues. The pale amulet at its throat glows when it rages. Some nights, I sense its gaze upon me in my dreams—seeking, pleading, cursing."<BR><BR>
+      "If you can bring me that amulet, I will attempt to cleanse it, though I fear what secrets may remain inside."
+      ]]>
+    </NPCText>
+    <Option text="I will hunt the Ettin and bring the amulet."
+      action="GiveItem:FactionKillQuestScroll(CerebralEttin,1,Eldermoor,750)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="This sounds dangerous. Shouldn’t the village send a group?" next="whyNotThem"/>
+    <Option text="Perhaps this is beyond me." action="Close"/>
+  </Dialogue>
+
+  <!-- Why not Aldric or Thalen? -->
+  <Dialogue id="whyNotThem">
+    <NPCText>
+      <![CDATA[
+      She shakes her head.<BR>
+      "Thalen would run headlong at the beast, but his heart is too wild for such subtle evil. Aldric’s body is mending after last season’s wounds—though he’d gladly limp to his death for Eldermoor. I will not risk their lives for this. Compassion sometimes means choosing who must face the darkness."<BR><BR>
+      "But if you are willing—if you believe in the Virtues as I do—your courage may redeem us all."
+      ]]>
+    </NPCText>
+    <Option text="I’ll do it. Compassion demands action."
+      action="GiveItem:FactionKillQuestScroll(CerebralEttin,1,Eldermoor,750)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="I must decline for now." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax Lore Connection -->
+  <Dialogue id="minaxLore">
+    <NPCText>
+      <![CDATA[
+      Miralda’s voice drops to a whisper.<BR>
+      "Minax’s shadow stretches even here, though the marsh feels far from any throne. I studied briefly in Moonglow—there are spells which twist the mind, and worse. If this Ettin is marked by her hand, I must know. Bring me any tokens you find besides the amulet—claws, runes, or shards. I will seek guidance from old allies in Moonglow’s circles, though it risks their wrath."<BR><BR>
+      "If you trust me, bring what you find. Eldermoor cannot stand alone forever."
+      ]]>
+    </NPCText>
+    <Option text="I’ll bring you whatever I find on the Ettin."
+      action="GiveItem:FactionKillQuestScroll(CerebralEttin,1,Eldermoor,750)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="I need to think." action="Close"/>
+  </Dialogue>
+
+  <!-- Accepts the quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#e0baff'>
+      Miralda clasps your hand between both of hers—her touch is warm, trembling.<BR>
+      "May the light of Compassion go with you. The Ettin haunts the northern copse when mist thickens—seek it at nightfall, where marsh meets stone. If you return, all Eldermoor will remember your courage."<BR><BR>
+      "And... if the amulet proves cursed or too strong for me, I may ask your aid again. Some burdens cannot be borne alone."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will return with the amulet." action="Close"/>
+  </Dialogue>
+
+</DialogueFile>

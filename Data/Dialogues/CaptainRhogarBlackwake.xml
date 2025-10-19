@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="CaptainRhogarBlackwake">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#E0C184'>
+      A towering man with a weathered face and a battered tricorne leans on a crate, surveying the bustling docks with a predator’s patience. His eyes glint with both warning and welcome.<BR><BR>
+      “Well, look what the tide’s dragged in. I’m Captain Rhogar Blackwake, master of Sunreach Harbor by day, and—well, you don’t need t’know what else I command by night.<BR>
+      You got business here, or just hoping to breathe long enough to see the next tide?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’m looking for honest work, Captain." next="honestWork"/>
+    <Option text="I heard you deal in more than shipping manifests..." next="shadyWork"/>
+    <Option text="Who truly runs Sunreach, you or the council?" next="politics"/>
+	<Option text="You’ve got the look of someone with stories, Captain..." next="backstory"/>
+    <Option text="Just passing through." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Honest Work Branch -->
+  <Dialogue id="honestWork">
+    <NPCText>
+      <![CDATA[
+      Rhogar snorts, a wry grin tugging at his beard.<BR><BR>
+      “Honest? In Sunreach? You’ll be lucky to find clean water, let alone clean coin. But I do need someone to deliver a *legitimate* crate of trade seals to the council hall.<BR>
+      Course, honest pay means honest risk—rumor is, Lady Seraphine’s spies want those seals to fix a vote.<BR>
+      You want the job, or would you rather something that pays better…and asks fewer questions?”
+      ]]>
+    </NPCText>
+    <Option text="I’ll deliver the trade seals for you." 
+            action="GiveItem:HarborDeliveryQuestScroll(TradeSeals,Sunreach,200)" 
+            condition="!HasItem:HarborDeliveryQuestScroll"
+            next="acceptHonest"/>
+    <Option text="I’ll hear about that less honest job." next="shadyWork"/>
+    <Option text="Neither, I’m not interested." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptHonest">
+    <NPCText>
+      <![CDATA[
+      Rhogar slaps a stamped crate into your hands.<BR><BR>
+      “Get those to the council clerk at the Sunreach Hall, and don’t let anyone—*anyone*—see you dally. If Seraphine’s corsairs catch you, you’re on your own.<BR>
+      Bring me proof of delivery, and I’ll see to your coin and a favor or two down the line.”
+      ]]>
+    </NPCText>
+    <Option text="Understood, Captain." action="Close"/>
+  </Dialogue>
+
+  <!-- Shady Work Branch -->
+  <Dialogue id="shadyWork">
+    <NPCText>
+      <![CDATA[
+      The captain’s eyes narrow, measuring your worth.<BR><BR>
+      “You don’t look green, so I’ll not mince words. There’s a certain shipment from Qasaria—‘exotic spices’—that the council don’t need to know about. Problem is, Myra ‘Red-Eye’ Fenrow’s rats are sniffing around the docks.<BR>
+      I need that crate delivered to Lady Seraphine’s warehouse. Quiet, mind you—guards’ll arrest you if they catch you, and Myra’s pirates will slit your throat if you look weak.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll run your smuggled goods." 
+            action="GiveItem:PirateSmugglingQuestScroll(QasarianSpices,Sunreach,300)" 
+            condition="!HasItem:PirateSmugglingQuestScroll"
+            next="acceptShady"/>
+    <Option text="What happens if I’m caught?" next="risk"/>
+    <Option text="On second thought, maybe not." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptShady">
+    <NPCText>
+      <![CDATA[
+      Rhogar presses a burlap-wrapped crate into your arms, eyes flicking over your shoulder.<BR><BR>
+      “Slip it into Seraphine’s warehouse down the southern pier. Keep your head down, and trust no one with red bandanas.<BR>
+      Succeed, and there’ll be coin in it for you—plus, Lady Seraphine remembers those who prove useful.”
+      ]]>
+    </NPCText>
+    <Option text="I won’t let you down." action="Close"/>
+  </Dialogue>
+
+  <!-- Harbor Politics Branch -->
+  <Dialogue id="politics">
+    <NPCText>
+      <![CDATA[
+      Rhogar grins, showing gold teeth.<BR><BR>
+      “Council of Five, sure—but they don’t control the tide, and they don’t know every shadow in their own harbor. As long as Blackwake’s in charge of the docks, no ship comes or goes without my say-so.<BR>
+      Still, it pays to keep the council happy… or at least guessing. Folk like Darius Veynar pay well for loyalty, but coin from Lady Seraphine spends just as sweet.”
+      ]]>
+    </NPCText>
+    <Option text="Do you ever work with Hassan Al-Kadir?" next="hassan"/>
+    <Option text="Where do your loyalties lie, truly?" next="loyalties"/>
+    <Option text="Enough talk, got any jobs?" next="honestWork"/>
+    <Option text="I’ll leave you to your business." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="hassan">
+    <NPCText>
+      <![CDATA[
+      Rhogar shrugs, then lowers his voice.<BR><BR>
+      “Hassan’s a decent sort. Bookish, sure, but sharper than he lets on. We trade favors now and then—he keeps my hands off the cursed relics, I keep his scholars safe from Seraphine’s cutthroats.<BR>
+      In times like these, you need friends with secrets…and maybe a sword arm or two.”
+      ]]>
+    </NPCText>
+    <Option text="Let’s get back to business." next="honestWork"/>
+    <Option text="I prefer the less honest coin." next="shadyWork"/>
+    <Option text="That’s all I needed." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="loyalties">
+    <NPCText>
+      <![CDATA[
+      Rhogar fixes you with a steady look.<BR><BR>
+      “I serve Sunreach—or what’s left of her. The city’s full of vultures, but so long as the folk here can make a living, I’ll keep the council and the pirates from tearing it apart.<BR>
+      Course, if Minax’s cultists get their way, there won’t be a harbor left to squabble over. So mind where you place your trust, friend.”
+      ]]>
+    </NPCText>
+    <Option text="Got any work for someone willing to get their hands dirty?" next="shadyWork"/>
+    <Option text="I’ll take the honest job, then." next="honestWork"/>
+    <Option text="That’s all for now." action="Close"/>
+  </Dialogue>
+
+  <!-- Risk Explanation -->
+  <Dialogue id="risk">
+    <NPCText>
+      <![CDATA[
+      Rhogar snorts.<BR><BR>
+      “If the council’s guards catch you, you’ll be fined or thrown in the stocks. If Myra’s lot gets you first… well, best hope you can swim with a knife in your ribs.<BR>
+      If you’re not ready to risk a bit of blood for coin, the docks might not be for you.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll take the risk for the right reward." next="acceptShady"/>
+    <Option text="On second thought, I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismiss/Goodbye -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Rhogar waves a gloved hand dismissively.<BR><BR>
+      “No law against wandering the docks—just watch your purse, and don’t fall in with the wrong crew. If you change your mind, come find me—harbor never sleeps.”
+      ]]>
+    </NPCText>
+    <Option text="I might be back for work." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="backstory">
+  <NPCText>
+    <![CDATA[
+    Rhogar grins, revealing a gold tooth.<BR><BR>
+    “Stories, eh? Most folk just want work, not old salt-drenched tales. But you? You’ve got the look of someone who listens—and maybe remembers.”<BR>
+    He leans closer, his voice dropping.<BR>
+    “So ask, and I’ll see what scraps I’ve left floatin’ in memory’s tidepool.”
+    ]]>
+  </NPCText>
+  <Option text="Where did you sail before Sunreach?" next="origins"/>
+  <Option text="What turned you into a pirate?" next="turningPoint"/>
+  <Option text="Do you still serve Lady Seraphine willingly?" next="seraphineTension"/>
+  <Option text="Ever cross paths with Minax’s forces?" next="minaxPast"/>
+  <Option text="You seem like you respect Hassan Al-Kadir..." next="hassanRespect"/>
+  <Option text="That’s enough story for now." action="Close"/>
+</Dialogue>
+
+<Dialogue id="origins">
+  <NPCText>
+    <![CDATA[
+    Rhogar gazes out over the sea.<BR><BR>
+    “Used to be navy—Royal Navy, if you can believe it. Flag under Lord British himself. Sailed the Deep North, watched Ice Serpents breach like whales. Lost half my crew to fog demons off Nujel’m.”<BR>
+    He taps his chest.<BR>
+    “Honor died when the crown vanished. After that, I followed coin... and my own code.”
+    ]]>
+  </NPCText>
+  <Option text="You still have a code, then?" next="pirateCode"/>
+  <Option text="Sounds like the crown lost more than a sailor." next="sympathy"/>
+</Dialogue>
+
+<Dialogue id="pirateCode">
+  <NPCText>
+    <![CDATA[
+    “I don’t kill unless paid. I don’t betray crew. And I don’t take bribes from demons—or worse, politicians.”<BR><BR>
+    Rhogar cracks his knuckles.<BR>
+    “'Course, rules bend. But break ‘em? That’s how you end up fish food with a knife in your back.”
+    ]]>
+  </NPCText>
+  <Option text="A pirate with principles. I’ll remember that." action="Fame:+100"/>
+  <Option text="That’s a code I can respect." action="SendMessage:Rhogar nods slightly in respect."/>
+  <Option text="You’re still a criminal, code or no." next="dismiss"/>
+</Dialogue>
+
+<Dialogue id="sympathy">
+  <NPCText>
+    <![CDATA[
+    Rhogar’s expression hardens briefly, then softens.<BR><BR>
+    “Lost more than a rank. Lost brothers. Ship. Purpose. But the sea don’t mourn—it just rolls on. So I rolled with it.”<BR>
+    He lifts his flask.<BR>
+    “To what was. And to what’s next.”
+    ]]>
+  </NPCText>
+  <Option text="To what’s next, indeed." action="Fame:+50"/>
+  <Option text="You’re more than you let on, Captain." action="Karma:+250"/>
+</Dialogue>
+
+<Dialogue id="turningPoint">
+  <NPCText>
+    <![CDATA[
+    “You want the truth?” Rhogar growls. “I became a pirate the day I refused to watch nobles profit off war while sailors died empty.”<BR>
+    He narrows his eyes.<BR>
+    “They called it desertion. I called it survival. Took my crew, stole a galleon, and made our own flag.”<BR>
+    “Been outrunning their justice ever since.”
+    ]]>
+  </NPCText>
+  <Option text="They feared your freedom." action="Karma:+100"/>
+  <Option text="That takes guts." condition="StatAtLeast:Str,90" action="SendMessage:Rhogar sizes you up with new respect."/>
+  <Option text="And you’ve never looked back?" next="neverLookedBack"/>
+</Dialogue>
+
+<Dialogue id="neverLookedBack">
+  <NPCText>
+    <![CDATA[
+    “Not once.”<BR><BR>
+    Rhogar’s voice is iron.<BR>
+    “But I dream of the flag sometimes. The one I burned. Still smells like shame and gunpowder.”
+    ]]>
+  </NPCText>
+  <Option text="Even pirates have ghosts." action="SendMessage:Rhogar exhales slowly."/>
+</Dialogue>
+
+<Dialogue id="seraphineTension">
+  <NPCText>
+    <![CDATA[
+    Rhogar’s eyes darken.<BR><BR>
+    “Lady Seraphine? She's dangerous. Smarter than she lets on, and crueler than most suspect. We’ve danced blades and beds, but trust? That’s been ash for years.”<BR>
+    “I serve her 'cause it keeps my harbor alive. But the second she turns on Sunreach... I’ll gut her with the same knife she gave me.”
+    ]]>
+  </NPCText>
+  <Option text="You’d really turn on her?" next="yesTurn"/>
+  <Option text="Sounds like a lover’s quarrel turned cold war." next="coldWar"/>
+</Dialogue>
+
+<Dialogue id="yesTurn">
+  <NPCText>
+    <![CDATA[
+    Rhogar grins without humor.<BR><BR>
+    “Aye. No woman—no pirate—should mistake survival for loyalty. If she sells Sunreach to Minax? I’ll be waiting in the shadows.”
+    ]]>
+  </NPCText>
+  <Option text="Good to know." action="Fame:+75"/>
+</Dialogue>
+
+<Dialogue id="coldWar">
+  <NPCText>
+    <![CDATA[
+    “That’s one name for it.”<BR><BR>
+    Rhogar laughs bitterly.<BR>
+    “The sea changes people. Turns passion into salt and silk into chains. I sleep with one eye open, and keep a second blade under the bed.”
+    ]]>
+  </NPCText>
+  <Option text="Sounds lonely." action="SendMessage:Rhogar shrugs, looking distant."/>
+</Dialogue>
+
+<Dialogue id="minaxPast">
+  <NPCText>
+    <![CDATA[
+    Rhogar lowers his voice.<BR><BR>
+    “Saw her magic once. Black tide rolled in near Eldermoor. Ships sank. Sky turned red. Whole crew went mad singing her name.”<BR>
+    “I shot my own first mate that day. He started chanting with blood on his hands.”<BR>
+    “Minax ain’t just a villain. She’s a storm wearing a smile.”
+    ]]>
+  </NPCText>
+  <Option text="That’s... horrifying." action="Karma:-200"/>
+  <Option text="You survived her once. Could you again?" condition="SkillAtLeast:Parry,80" action="SendMessage:Rhogar nods grimly."/>
+  <Option text="She won’t get Sunreach while I stand." action="Fame:+100"/>
+</Dialogue>
+
+<Dialogue id="hassanRespect">
+  <NPCText>
+    <![CDATA[
+    “Hassan’s a bookworm, but he’s one of the few honest men left in this city. He speaks like a philosopher, but his hands are dirty enough for the work.”<BR>
+    Rhogar leans closer.<BR>
+    “Between you and me, I think he’s hidin' something. Something ancient. He’s got guards under his library that don’t blink.”<BR>
+    “I keep his name clean with the council, and in return… he gives me whispers. The kind that buy time—or save lives.”
+    ]]>
+  </NPCText>
+  <Option text="What kind of secrets does he share?" condition="RandomChance:25" next="secretDrop"/>
+  <Option text="He sounds like a good ally to have." action="Karma:+150"/>
+</Dialogue>
+
+<Dialogue id="secretDrop">
+  <NPCText>
+    <![CDATA[
+    Rhogar scans the area, then whispers:<BR><BR>
+    “Word is, Hassan found a shard fragment of the Gem. Locked it beneath Sunreach, sealed by runes even Seraphine can’t break.”<BR>
+    “If that’s true, then this whole city sits on a bomb—or a throne.”
+    ]]>
+  </NPCText>
+  <Option text="That’s... valuable knowledge." action="SendMessage:A cold wind seems to pass behind you."/>
+  <Option text="You shouldn’t tell me such things." action="Karma:-50"/>
+</Dialogue>
+
+
+</DialogueFile>

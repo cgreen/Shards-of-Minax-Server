@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="OmarAlOnyx">
+
+  <!-- ===================== GREETING ========================= -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#d9a300'>
+      Before you stands a towering figure clad in blackened steel, a crimson-dusted sash across his chest and a cloak swirling with the dust of the arena.<BR><BR>
+      “You stand in the presence of Omar al-Onyx, Warlord of Qasaria and master of the <B>Sands of Blood Arena</B>. Here, we measure worth not in coin or clever words, but in <B>strength</B>, <B>courage</B>, and the stain of victory.<BR><BR>
+      If you seek glory, coin, or the right to be called champion, then speak! But do not waste my time with weakness or excuses. Every hour wasted here is a chance for Minax’s filth to slither further into our city’s veins.”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Tell me about the Sands of Blood Arena." next="arena"/>
+    <Option text="What is your role on the Council of Jewels?" next="council"/>
+    <Option text="Have you fought Minax's agents yourself?" next="minax"/>
+    <Option text="I seek a challenge worthy of your arena." next="challenge"/>
+    <Option text="Do you have work for a mercenary?" next="mercQuest"/>
+    <Option text="Who do you trust among the other councilors?" next="councilors"/>
+	<Option text="Tell me of your past, Warlord." next="backstoryIntro"/>
+    <Option text="I just wanted to see the arena. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- =============== ARENA LORE ================ -->
+  <Dialogue id="arena">
+    <NPCText>
+      <![CDATA[
+      Omar grins, showing perfect white teeth amidst his dark beard.<BR><BR>
+      “The <B>Sands of Blood Arena</B>—my pride and Qasaria’s shame, some would say. Every day, warriors come to test their mettle. Every night, the sand drinks deeper, and the crowd hungers for spectacle.<BR>
+      Some fight for freedom, some for coin, and others for causes I care little about. Only <B>champions</B> endure. Weaklings die. Those who win earn my favor—and, sometimes, a place among my personal guard.”
+      ]]>
+    </NPCText>
+    <Option text="Let me fight. I crave blood and glory." next="challenge"/>
+    <Option text="Do you ever enter the arena yourself?" next="selfFight"/>
+    <Option text="What does the arena mean to Qasaria?" next="arenaMeaning"/>
+    <Option text="I have other questions." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="selfFight">
+    <NPCText>
+      <![CDATA[
+      He thumps his chestplate.<BR><BR>
+      “Ha! I have stood upon those sands more times than most dare imagine. But the city needs my strength outside the pit these days—especially with Rafiq al-Ruby’s ‘honor guards’ sulking about, and Safiya al-Sapphire’s coin buying every blade that doesn’t flee.<BR>
+      Still, if a worthy enough challenger appears, perhaps Qasaria will see blood spilled that truly matters.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll prove my worth, Warlord." next="challenge"/>
+    <Option text="Tell me of the other councilors." next="councilors"/>
+    <Option text="I have other questions." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="arenaMeaning">
+    <NPCText>
+      <![CDATA[
+      “The arena is more than blood sport. It is a crucible for strength. My mercenaries watch, recruit, and weed out the weak. Even the Council of Jewels places wagers, hoping to gain advantage.<BR>
+      In these troubled times, a true champion can turn the fate of a city. That is why I watch every bout—no matter what Safiya whispers about 'barbarism.'”
+      ]]>
+    </NPCText>
+    <Option text="Do you have work for a fighter?" next="mercQuest"/>
+    <Option text="Who do you trust on the council?" next="councilors"/>
+    <Option text="Enough talk. Let's fight." next="challenge"/>
+    <Option text="I have other questions." next="greeting"/>
+  </Dialogue>
+
+  <!-- =============== COUNCIL DYNAMICS ================ -->
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      “My 'role'? Hah! Rafiq would have me stand in parade armor, saluting his 'noble guards.' Safiya expects me to turn my blades for coin. Karim prefers shadow games. Yasmin... well, only a fool underestimates a sorceress.<BR>
+      I keep Qasaria’s streets clean, and its enemies wary. Without the strength of my arena-born, this city would be overrun by Minax’s wretches and Sunreach’s jackals alike.”
+      ]]>
+    </NPCText>
+    <Option text="You distrust your fellow councilors?" next="councilors"/>
+    <Option text="How does Minax threaten Qasaria?" next="minax"/>
+    <Option text="I’d rather fight than talk politics." next="challenge"/>
+    <Option text="Back to other matters." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="councilors">
+    <NPCText>
+      <![CDATA[
+      Omar’s eyes narrow.<BR><BR>
+      “Trust? In this city? Only a fool trusts the Council.<BR>
+      Rafiq al-Ruby clings to honor and family tradition, but his eyes stray too often to the Undermarket.<BR>
+      Safiya al-Sapphire is loyal to her coin purse—and maybe to Nujel’m more than Qasaria.<BR>
+      Karim al-Emerald whispers poison in every ear, his daggers as sharp as his tongue.<BR>
+      Yasmin al-Topaz—now there’s a mystery wrapped in silk and secrets. She understands power. I respect that.<BR>
+      As for me? I trust the roar of the crowd and the edge of my axe. Both are honest, and neither lies.”
+      ]]>
+    </NPCText>
+    <Option text="You respect Yasmin al-Topaz?" next="yasmin"/>
+    <Option text="What of the Undermarket?" next="undermarket"/>
+    <Option text="Tell me more about Safiya." next="safiya"/>
+    <Option text="I wish to serve your cause, Warlord." next="mercQuest"/>
+    <Option text="Let’s speak of the arena." next="arena"/>
+    <Option text="Back to other matters." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="yasmin">
+    <NPCText>
+      <![CDATA[
+      “She’s older than she looks, and colder than desert night. But Yasmin never wastes time on weakness. Her relic hunters keep the city safe in ways Rafiq's soldiers never could. Some say she bargains with spirits or worse. I say, let her.<BR>
+      In Qasaria, the bold survive. The wise thrive.”
+      ]]>
+    </NPCText>
+    <Option text="Let’s speak of the arena." next="arena"/>
+    <Option text="What of the Undermarket?" next="undermarket"/>
+    <Option text="Do you need a champion?" next="mercQuest"/>
+    <Option text="Back to other matters." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="safiya">
+    <NPCText>
+      <![CDATA[
+      Omar snorts.<BR>
+      “Safiya buys her loyalty, and she’ll sell Qasaria for the right price. Her ships bring fortune, but her ‘pirates’ bring trouble. Don’t cross her unless you have the coin—or the courage—to survive the aftermath.”
+      ]]>
+    </NPCText>
+    <Option text="Do you ever work with her?" next="undermarket"/>
+    <Option text="Let’s speak of the arena." next="arena"/>
+    <Option text="Do you need a champion?" next="mercQuest"/>
+    <Option text="Back to other matters." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="undermarket">
+    <NPCText>
+      <![CDATA[
+      He lowers his voice.<BR>
+      “Qasaria’s shadow is as wide as its sunlit streets. The Undermarket sells secrets, blades, and poisons. Some of my fighters got their start down there—some never left.<BR>
+      They say Shadowmaster Zahid funds half the chaos in Qasaria. If you want work with dirty hands, look beneath the bazaar. But don’t return to me if you find yourself with a knife in your back.”
+      ]]>
+    </NPCText>
+    <Option text="Understood. I’ll stick to the arena." next="arena"/>
+    <Option text="I’m not afraid of shadows. Any work?" next="mercQuest"/>
+    <Option text="Back to other matters." next="greeting"/>
+  </Dialogue>
+
+  <!-- =============== MINAX ================ -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Omar’s face hardens.<BR>
+      “Minax poisons everything she touches—merchants, soldiers, even councilors. Her cultists whisper in alleyways, and her monsters test our walls at night.<BR>
+      I’ve slain her agents in the arena and in the streets. But she always finds new pawns. I don’t fear her—I only regret that I cannot bury her with my own hands.”
+      ]]>
+    </NPCText>
+    <Option text="I wish to fight Minax’s minions." next="mercQuest"/>
+    <Option text="Let’s speak of the arena." next="arena"/>
+    <Option text="Back to other matters." next="greeting"/>
+  </Dialogue>
+
+  <!-- =============== CHALLENGE / ARENA QUEST ================ -->
+  <Dialogue id="challenge">
+    <NPCText>
+      <![CDATA[
+      Omar’s eyes light up with fierce pleasure.<BR>
+      “At last, a warrior with fire! The <B>Sands of Blood Arena</B> is open to all—slave, citizen, or foreigner. Survive three rounds, and you’ll earn gold, my respect, and maybe something more…<BR><BR>
+      But beware—some fight for coin, others for their souls. Some are not even alive.<BR><BR>
+      Do you have the courage to face my arena’s challenges?”
+      ]]>
+    </NPCText>
+    <Option text="I accept. Send me to the arena!" 
+            action="GiveItem:FactionDeliveryQuestScroll(Arena, Qasaria, 400)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="arenaAccepted"/>
+    <Option text="What should I expect in the arena?" next="arenaDetails"/>
+    <Option text="Maybe I’ll come back when I’m ready." action="Close"/>
+    <Option text="I have other questions." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="arenaDetails">
+    <NPCText>
+      <![CDATA[
+      “Three rounds. Each harder than the last. First, the rabble—desperate mercenaries and escaped slaves. Second, the beasts—creatures from Qasaria’s darkest pits. Last, my personal champion—human or otherwise.<BR>
+      Survive, and you’ll have proven yourself. Die, and… well, try not to disappoint the crowd.”
+      ]]>
+    </NPCText>
+    <Option text="I accept your challenge." 
+            action="GiveItem:FactionDeliveryQuestScroll(Arena, Qasaria, 400)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="arenaAccepted"/>
+    <Option text="I’m not ready yet." action="Close"/>
+    <Option text="I have other questions." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="arenaAccepted">
+    <NPCText>
+      <![CDATA[
+      He hands you a scroll bearing his sigil—crossed axes over black onyx.<BR>
+      “Take this scroll to the arena master at the Sands of Blood. They’ll admit you to the trials. Survive, and return to me for your reward.<BR>
+      If you fall, perhaps your story will entertain the crowd. Now go—let Qasaria see what you’re made of.”
+      ]]>
+    </NPCText>
+    <Option text="I will return as your champion." action="Close"/>
+  </Dialogue>
+
+  <!-- =============== MERC QUEST: UNDERMARKET / SABOTAGE ================ -->
+  <Dialogue id="mercQuest">
+    <NPCText>
+      <![CDATA[
+      “You want coin, blood, and glory? Good. I have use for such souls.<BR><BR>
+      The Council grows restless. The Undermarket stirs. I need someone willing to deliver a message—a threat, really—to a troublemaker among the Undermarket.<BR><BR>
+      Are you willing to get your hands dirty for the right price?”
+      ]]>
+    </NPCText>
+    <Option text="Give me the message. I’ll deliver it." 
+            action="GiveItem:FactionDeliveryQuestScroll(UndermarketEnforcer,Qasaria,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="mercAccepted"/>
+    <Option text="Who is the target?" next="mercTarget"/>
+    <Option text="This sounds risky. What’s the pay?" next="mercPay"/>
+    <Option text="I need to think it over." action="Close"/>
+    <Option text="Let’s talk of something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="mercTarget">
+    <NPCText>
+      <![CDATA[
+      “A wretch called <B>Nadia the Dagger</B>—she thinks herself untouchable under Shadowmaster Zahid’s protection. Deliver my ‘greeting’ to her in the Undermarket. Make sure she remembers who truly runs Qasaria’s blood trade.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll deliver your message." 
+            action="GiveItem:FactionDeliveryQuestScroll(UndermarketEnforcer,Qasaria,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="mercAccepted"/>
+    <Option text="What’s the reward?" next="mercPay"/>
+    <Option text="On second thought, maybe not." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="mercPay">
+    <NPCText>
+      <![CDATA[
+      Omar sneers.<BR>
+      “You’ll earn <B>250 gold</B> and my goodwill—a treasure more valuable than coin, in Qasaria. And if you do well, I may have further work for you. Fail, and you’d best stay out of the shadows.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll do it for the gold." 
+            action="GiveItem:FactionDeliveryQuestScroll(UndermarketEnforcer,Qasaria,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="mercAccepted"/>
+    <Option text="No deal." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="mercAccepted">
+    <NPCText>
+      <![CDATA[
+      He gives you a sealed scroll stamped with a black onyx sigil.<BR>
+      “Take this to Nadia the Dagger in the Undermarket. Return when you have proof the message was delivered. Don’t let Zahid’s shadows trouble you; any who threaten you answer to me.”
+      ]]>
+    </NPCText>
+    <Option text="It will be done." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="backstoryIntro">
+    <NPCText>
+      <![CDATA[
+      Omar’s expression shifts, the fire in his eyes dimming just slightly.<BR><BR>
+      “You want to know how a slave pit brawler became the Warlord of Qasaria? Very well. Listen closely, and don’t flinch.”<BR><BR>
+      He folds his arms, voice lowering.<BR>
+      “I was born in the shadow of the arena, not above it. A gutter orphan. My first blade was a broken bottle. My first ‘fight’ was with three other starving boys for half a date fruit. Only one of us walked away.”<BR><BR>
+      “You still listening, or is your stomach turning already?”
+      ]]>
+    </NPCText>
+    <Option text="I’ve seen worse. Keep talking." next="backstorySlave"/>
+    <Option text="How did you survive that world?" next="backstoryTraining"/>
+    <Option text="Your strength came from hardship." next="backstoryStrength"/>
+    <Option text="I’m not sure I want to hear more..." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="backstorySlave">
+    <NPCText>
+      <![CDATA[
+      “When I was ten, I was sold to the arena masters of Sunreach as pit meat. Not a gladiator—meat. Fodder. But I watched. I learned. While others wept or screamed, I studied every technique, every mistake, every deathblow.”<BR><BR>
+      “On my sixteenth fight, I killed a champion. Not because I was stronger—but because I was smarter. That was the first time the crowd cheered for me. I didn’t care. I just wanted to live.”<BR><BR>
+      Omar pauses, then chuckles.<BR>
+      “Now they call me Warlord. Titles are earned by blood, not birth.”
+      ]]>
+    </NPCText>
+    <Option text="That’s a grim path to power." next="backstoryPhilosophy"/>
+    <Option text="Your story is... inspiring, in its own way." next="gainRespect"/>
+    <Option text="Let’s speak of other matters." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="backstoryTraining">
+    <NPCText>
+      <![CDATA[
+      “I trained with chains on my wrists. Learned to fight from drunks, monsters, and madmen. Every cut taught me something. Pain is a teacher—one that never lies.”<BR><BR>
+      He narrows his gaze.<BR>
+      “Tell me, outsider—have you known pain? Have you fought to survive? Or do you just carry a blade for show?”
+      ]]>
+    </NPCText>
+    <Option text="My scars say more than I ever could." condition="StatAtLeast:Str,90" next="gainRespect"/>
+    <Option text="I’ve had my share of battles." condition="StatAtLeast:Dex,80" next="gainRespect"/>
+    <Option text="No. But I seek to prove myself." next="backstoryChallenge"/>
+    <Option text="I’m just an observer." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="backstoryStrength">
+    <NPCText>
+      <![CDATA[
+      “Strength forged in luxury is brittle. Only those who have bled, begged, and broken can wield true power.”<BR><BR>
+      “That’s why I despise Karim’s whispering spies and Safiya’s golden smugglers. They think strength lies in secrets and coin. But in Qasaria, true power still kneels to the blade.”<BR><BR>
+      “Would you learn what I’ve learned… or just nod and leave?”
+      ]]>
+    </NPCText>
+    <Option text="I want to earn your trust and learn from you." next="gainRespect"/>
+    <Option text="Perhaps coin and cunning have their place too." next="loseRespect"/>
+    <Option text="Let’s return to other topics." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="backstoryChallenge">
+    <NPCText>
+      <![CDATA[
+      Omar smirks.<BR>
+      “Then perhaps you’re worth more than the sand beneath my boots. Go to the arena. Spill blood. Return with victory, and I’ll consider you more than just another soft-lunged wanderer.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I’ll return victorious." 
+            action="GiveItem:FactionDeliveryQuestScroll(Arena,Qasaria,300)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="arenaAccepted"/>
+    <Option text="Maybe later..." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="backstoryPhilosophy">
+    <NPCText>
+      <![CDATA[
+      “Power isn’t inherited. It’s taken. And it’s kept through vigilance, pain, and resolve.”<BR>
+      “You want to know my philosophy? It's simple: <B>Respect is earned through combat. Loyalty is bought in blood. And betrayal is buried.</B>”<BR><BR>
+      “Now... if you agree with that, we may yet get along.”
+      ]]>
+    </NPCText>
+    <Option text="I respect that creed." next="gainRespect"/>
+    <Option text="You sound bitter and alone." next="loseRespect"/>
+    <Option text="Back to other matters." next="greeting"/>
+  </Dialogue>
+
+  <!-- === CONDITIONAL OUTCOMES === -->
+  <Dialogue id="gainRespect">
+    <NPCText>
+      <![CDATA[
+      Omar’s expression softens—just slightly.<BR><BR>
+      “You’ve got the spine to speak truth, even in the face of blood and fire. I can respect that.”<BR>
+      “Remember this moment. It may be why I spare your life later.”<BR><BR>
+      You feel stronger, as if his recognition grants you new determination.
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Warlord." 
+            action="AddStat:Str,5,300" />
+    <Option text="Back to other questions." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="loseRespect">
+    <NPCText>
+      <![CDATA[
+      Omar’s smile vanishes.<BR><BR>
+      “Then we have little more to say. Return when you’ve seen the world beyond coin and cowardice.”<BR>
+      You feel the weight of his disappointment press like desert heat.
+      ]]>
+    </NPCText>
+    <Option text="As you say." 
+            action="AddStat:Str,-3,120" />
+    <Option text="Let’s talk of something else." next="greeting"/>
+  </Dialogue>
+
+
+</DialogueFile>

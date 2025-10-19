@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="HiroshiLanternMonk">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ffe5a7'>
+      A gentle-faced monk in a garland and orange robe is tending a glowing lantern atop a carved wooden pole.<BR><BR>
+      Hiroshi bows, never letting his eyes stray from the light.<BR><BR>
+      “Welcome, traveler, to Hinokami. I am Hiroshi, keeper of lanterns. Each night I light the sacred flames, for in every shadow, Minax’s corruption seeks to creep.<BR><BR>
+      Tell me, friend—do you carry hope, or does shadow follow you?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I wish to help keep the lanterns burning." next="helpLanterns"/>
+    <Option text="Why do you fear the shadows, Hiroshi?" next="shadowLore"/>
+    <Option text="Who taught you this ritual?" next="monkOrigin"/>
+	<Option text="Who were you before Hinokami?" next="hiroshiPast"/>
+    <Option text="Just passing by, monk." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Help with lantern quest -->
+  <Dialogue id="helpLanterns">
+    <NPCText>
+      <![CDATA[
+      Hiroshi smiles, relief brightening his face.<BR><BR>
+      “Even the longest night is no match for many hands. Each lantern you light weakens Minax’s grasp.<BR>
+      Will you help me tonight, and bear the flame to the lantern posts around Hinokami?”
+      ]]>
+    </NPCText>
+    <Option text="Give me a lantern. I will light the posts."
+            action="GiveItem:LanternLightingScroll"
+            condition="!HasItem:LanternLightingScroll"
+            next="acceptLantern"/>
+    <Option text="What happens if the lanterns go out?" next="failConsequence"/>
+    <Option text="I’m not ready right now." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept lantern quest -->
+  <Dialogue id="acceptLantern">
+    <NPCText>
+      <![CDATA[
+      Hiroshi hands you a brass lantern, the flame inside impossibly steady.<BR>
+      “Light the five sacred posts before night’s end. If even one remains dark, the spirits grow bold—and Minax’s shadow deepens.<BR>
+      Return when you are finished, and I shall reward your devotion.”
+      ]]>
+    </NPCText>
+    <Option text="I will return with all lanterns burning." action="Close"/>
+  </Dialogue>
+
+  <!-- Player asks why shadows matter -->
+  <Dialogue id="shadowLore">
+    <NPCText>
+      <![CDATA[
+      Hiroshi’s voice lowers, gaze distant.<BR>
+      “It is not mere darkness I fear. I have seen what crawls where the lantern’s light does not reach. Minax’s servants move as whispers in shadow—sometimes with claws, sometimes as envy in the heart.<BR>
+      Here in Hinokami, every flame is a promise against despair.” 
+      ]]>
+    </NPCText>
+    <Option text="I will help you light the lanterns." next="helpLanterns"/>
+    <Option text="Do you never rest?" next="neverRest"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Origin of the ritual -->
+  <Dialogue id="monkOrigin">
+    <NPCText>
+      <![CDATA[
+      Hiroshi bows, hand over heart.<BR>
+      “My teacher was an elder from Tokuno, who wandered far and brought the wisdom of the sun goddess Amateru. He showed me that true courage is found in tending small flames—again and again, even when none see.”<BR>
+      Hiroshi glances at the lanterns with quiet pride.<BR>
+      “So I light these, and with each dawn, hope endures.”
+      ]]>
+    </NPCText>
+    <Option text="I will honor your tradition." next="helpLanterns"/>
+    <Option text="I respect your devotion, monk." action="Karma:+100" next="blessing"/>
+    <Option text="Your rituals are quaint, but I must go." action="Close"/>
+  </Dialogue>
+
+  <!-- Blessing if player is respectful -->
+  <Dialogue id="blessing">
+    <NPCText>
+      <![CDATA[
+      Hiroshi inclines his head, whispering a brief blessing.<BR>
+      “May your path be lit, and may no shadow find you unguarded.” 
+      ]]>
+    </NPCText>
+    <Option text="Thank you." action="Close"/>
+  </Dialogue>
+
+  <!-- Consequence lore for failing ritual -->
+  <Dialogue id="failConsequence">
+    <NPCText>
+      <![CDATA[
+      The monk’s face darkens.<BR>
+      “In the weeks when the lanterns failed, misfortune crept into the streets—bad dreams, withered fields, even children speaking in voices not their own.<BR>
+      Perhaps these are only tales, but is it worth the risk?”
+      ]]>
+    </NPCText>
+    <Option text="I will help you, Hiroshi." next="helpLanterns"/>
+    <Option text="That is a heavy burden. I must decline." action="Close"/>
+  </Dialogue>
+
+  <!-- Never rests -->
+  <Dialogue id="neverRest">
+    <NPCText>
+      <![CDATA[
+      Hiroshi laughs softly.<BR>
+      “Lanterns must burn all night, every night. Minax’s servants are patient, but so am I. The cost of rest is too dear if darkness wins even once.”
+      ]]>
+    </NPCText>
+    <Option text="I will take a shift for you." next="helpLanterns"/>
+    <Option text="I hope you find peace, monk." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismiss/Exit -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      The monk nods, barely looking up from the lantern.<BR>
+      “The path is yours to walk. Should you wish to serve the light, return before the night grows too deep.”
+      ]]>
+    </NPCText>
+    <Option text="I changed my mind. How can I help?" next="helpLanterns"/>
+    <Option text="Goodbye." action="Close"/>
+  </Dialogue>
+
+  <!-- Return after quest (example branch; hook to event completion) -->
+  <Dialogue id="lanternsLit">
+    <NPCText>
+      <![CDATA[
+      Hiroshi beams, eyes shining with gratitude.<BR>
+      “You have done a great thing. As long as the lanterns burn, so too does hope in Hinokami. Accept this—my thanks, and a blessing from Amateru.” 
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Hiroshi." action="GiveGold:500" />
+    <Option text="Is there more I can do?" next="advancedQuest"/>
+  </Dialogue>
+
+  <!-- Example advanced quest hook -->
+  <Dialogue id="advancedQuest">
+    <NPCText>
+      <![CDATA[
+      “There is always more to do. Sometimes, the shadows learn and adapt. If you ever find lanterns extinguished, seek out their cause—it may be more than mere wind.<BR>
+      But for tonight, rest easy.”
+      ]]>
+    </NPCText>
+    <Option text="I will keep watch." action="Close"/>
+  </Dialogue>
+
+  <!-- Branch from greeting: "Who were you before Hinokami?" -->
+  <Dialogue id="hiroshiPast">
+    <NPCText>
+      <![CDATA[
+      Hiroshi gently adjusts the lantern wick before answering.<BR><BR>
+      “Before Hinokami, I was a younger man with louder footsteps and a quieter heart.<BR>
+      I was once called Hiroshi the Bladesong… a sword-for-hire in the service of Qasaria’s merchant-princes.”<BR><BR>
+      He pauses, voice lowering.<BR>
+      “But I lit no lanterns then—only fires.”
+      ]]>
+    </NPCText>
+    <Option text="What made you leave that life behind?" next="pastReason"/>
+    <Option text="Bladesong? That sounds legendary." next="bladesong"/>
+    <Option text="That path must still call to you." next="temptation"/>
+    <Option text="Thank you for sharing, Hiroshi." action="Karma:+100" next="blessingPast"/>
+  </Dialogue>
+
+  <Dialogue id="pastReason">
+    <NPCText>
+      <![CDATA[
+      Hiroshi’s smile fades into a tight line.<BR>
+      “One night, I was hired to protect a Qasarian vault. When the raiders came, I slew them all. When it was over, I realized the vault held relics stolen from a temple to Amateru—sacred objects I had unknowingly defended.”<BR><BR>
+      “I left my blades in the sand that night. I have lit lanterns ever since.” 
+      ]]>
+    </NPCText>
+    <Option text="A powerful story. You found peace." next="blessingPast"/>
+    <Option text="Some would call that redemption." next="redeemed"/>
+    <Option text="Do you regret giving up the sword?" next="regret"/>
+  </Dialogue>
+
+  <Dialogue id="bladesong">
+    <NPCText>
+      <![CDATA[
+      “I earned the name ‘Bladesong’ not for poetry, but because I moved like a song on the battlefield. My strikes were fluid, my silences—fatal.”<BR><BR>
+      He chuckles softly.<BR>
+      “Now I walk slower, speak gentler. Some still ask me to train them, but I only teach how to tend a lantern.”
+      ]]>
+    </NPCText>
+    <Option text="Will you train me?" condition="StatAtLeast:Dex,70" action="AddSkill:Swords,5,600" next="trainBlessing"/>
+    <Option text="I see why the path you chose matters." next="blessingPast"/>
+    <Option text="I think you should take up arms again." next="temptation"/>
+  </Dialogue>
+
+  <Dialogue id="trainBlessing">
+    <NPCText>
+      <![CDATA[
+      Hiroshi narrows his eyes in appraisal.<BR>
+      “You have the grace. But listen: every swing must be for balance, not glory. Meet me at dawn at the cliff’s edge. Bring patience.”<BR><BR>
+      <BASEFONT COLOR='#e6db74'>[You feel your form sharpen. Hiroshi’s teachings echo within you.]</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will be there, sensei." action="Karma:+250" />
+    <Option text="Thank you, Hiroshi." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="redeemed">
+    <NPCText>
+      <![CDATA[
+      “Redemption is a path, not a place. I walk it still, one lantern at a time.”<BR>
+      He offers a warm glance.<BR>
+      “And every soul I meet who chooses light… walks it with me.”
+      ]]>
+    </NPCText>
+    <Option text="Then let us keep walking." action="Karma:+50" />
+    <Option text="I hope you find peace at the end." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="regret">
+    <NPCText>
+      <![CDATA[
+      Hiroshi sighs.<BR>
+      “Sometimes. When I see Hinokami threatened, when the wind carries distant cries, I wonder if the blade was truly done with me.”<BR><BR>
+      “But I believe we can become more than what we were. That is why I light the lanterns.”
+      ]]>
+    </NPCText>
+    <Option text="You carry peace like a weapon." next="blessingPast"/>
+    <Option text="Let me help you light the night." next="helpLanterns"/>
+  </Dialogue>
+
+  <Dialogue id="temptation">
+    <NPCText>
+      <![CDATA[
+      “Temptation is clever—it wears the face of duty and the voice of vengeance.”<BR>
+      Hiroshi stares into the flame.<BR>
+      “But I have chosen to illuminate, not incinerate. If you ever see me draw steel again… know that the world has gone truly dark.”
+      ]]>
+    </NPCText>
+    <Option text="Let’s hope that day never comes." next="blessingPast"/>
+    <Option text="If it does, you won’t be alone." action="Karma:+150"/>
+  </Dialogue>
+
+  <Dialogue id="blessingPast">
+    <NPCText>
+      <![CDATA[
+      Hiroshi bows solemnly.<BR>
+      “Thank you for listening. The stories of old warriors grow lighter with each telling—and with friends to carry them.”
+      ]]>
+    </NPCText>
+    <Option text="I will honor your story, monk." action="Karma:+50" />
+    <Option text="Back to the lanterns, then?" next="helpLanterns"/>
+    <Option text="Farewell for now." action="Close"/>
+  </Dialogue>
+
+
+</DialogueFile>

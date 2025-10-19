@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="ElderAelric">
+  <!-- =================== GREETING =================== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR="#80d0ff">
+      Before you stands Elder Aelric, wrapped in a luminous Frostseer’s Robe and crowned with an Icicle Circlet. His ancient Gnarled Staff of Veyra glows faintly as he appraises you with eyes as cold and deep as the glaciers beyond Frostmere.
+      <BR><BR>
+      "Ah… a traveler dares the tundra’s breath to find old Aelric. Have you come seeking warmth, wisdom, or the foolishness of my apprentice, Kaelen? Speak your truth—this village has little patience for deceit."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I heard you are the leader here. What troubles you most?" next="mainTrouble"/>
+    <Option text="Kaelen sent me. He says you have tasks worthy of an outsider." next="kaelenTask"/>
+    <Option text="You must have seen much. What is the true heart of Frostmere?" next="villageLore"/>
+    <Option text="That is quite a staff… does it have a story?" next="staffStory"/>
+    <Option text="Just passing through, Elder." next="passing"/>
+  </Dialogue>
+
+  <!-- ====== Passing Through ====== -->
+  <Dialogue id="passing">
+    <NPCText>
+      <![CDATA[
+      Elder Aelric inclines his head, crystalline circlet gleaming.<BR><BR>
+      "Safe travels. The north is ever hungry for souls it finds wanting."
+      ]]>
+    </NPCText>
+    <Option text="On second thought, is there anything I can help with?" next="mainTrouble"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Village Lore ====== -->
+  <Dialogue id="villageLore">
+    <NPCText>
+      <![CDATA[
+      Aelric traces a rune in the frost with his staff.<BR><BR>
+      "Frostmere was born of exile and desperation—magi cast out for our art, survivors from Minoc fleeing iron and fire, warriors with nothing but regret. We bound ourselves here, beneath the shadow of the Obelisk of Veyra."
+      <BR><BR>
+      "We endure because we choose to stand together, even when our hearts quarrel. Ask Svala why she trusts no one, or Captain Bryndra why she sharpens her blade each night. This is a land of secrets. Some, even I fear to name."
+      ]]>
+    </NPCText>
+    <Option text="What secret do you fear most?" next="secretFear"/>
+    <Option text="Do you need help with any dangers?" next="mainTrouble"/>
+    <Option text="You sound burdened. I hope Frostmere endures." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="secretFear">
+    <NPCText>
+      <![CDATA[
+      Aelric’s voice drops, cold as midnight.<BR><BR>
+      "The Obelisk holds memories older than Britannia’s map. I have glimpsed shapes in the ice—names and powers even Minax would covet. But I digress. There is more immediate peril, if you have courage for it."
+      ]]>
+    </NPCText>
+    <Option text="Tell me of this peril." next="mainTrouble"/>
+    <Option text="Perhaps another day." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Staff Story ====== -->
+  <Dialogue id="staffStory">
+    <NPCText>
+      <![CDATA[
+      Elder Aelric smiles, eyes misty.<BR><BR>
+      "This is the Gnarled Staff of Veyra, carved when Moonglow’s towers still stood and the world was young. A gift from my old master before exile. It sings with the wind’s memory—and sometimes, I fear, with warnings of what is yet to come."
+      <BR><BR>
+      "But such tales are for another night. I sense your spirit seeks more than stories."
+      ]]>
+    </NPCText>
+    <Option text="Is there trouble in Frostmere?" next="mainTrouble"/>
+    <Option text="Thank you for sharing." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Kaelen Task ====== -->
+  <Dialogue id="kaelenTask">
+    <NPCText>
+      <![CDATA[
+      Aelric sighs, a hint of pride and exasperation.<BR><BR>
+      "Kaelen is talented, but reckless—too quick to chase shadows in the ice. Still, his heart is true, and this time his concern is shared."
+      <BR><BR>
+      "Frostmere faces a threat I would entrust only to one with courage and discretion. Will you hear it?"
+      ]]>
+    </NPCText>
+    <Option text="I will listen." next="mainTrouble"/>
+    <Option text="Maybe later." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Main Trouble & Quest Offer ====== -->
+  <Dialogue id="mainTrouble">
+    <NPCText>
+      <![CDATA[
+      Elder Aelric’s face darkens, shadows flickering over his Galeweave Cloak.<BR><BR>
+      "Something stirs beyond the edge of our lantern light—a Chillfire Elemental, spawned from a rift torn by Minax’s corruption. It haunts the frozen hollow east of the Obelisk, leaving trails of hoarfrost and burning azure flame. Already, it has slain two scouts and driven the frost elk mad."
+      <BR><BR>
+      "Captain Bryndra would see it met with steel, but her methods are… unsubtle. Kaelen believes the elemental’s core could stabilize the Obelisk—if harvested with care."
+      <BR><BR>
+      "I seek one who can defeat this creature and return with its frozen heart, so both our safety and our secrets might endure."
+      ]]>
+    </NPCText>
+    <Option text="Tell me more of this Chillfire Elemental." next="elementalInfo"/>
+    <Option text="Why not send Bryndra or Kaelen to do this?" next="whyNotOthers"/>
+    <Option text="This task sounds worthy. I accept."
+            action="GiveItem:FactionKillQuestScroll(ChillfireElemental,1,Frostmere,750)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="acceptQuest"/>
+    <Option text="This is beyond my skill. I must decline." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Accept Quest ====== -->
+  <Dialogue id="acceptQuest">
+    <NPCText>
+      <![CDATA[
+      Aelric inclines his head solemnly.<BR><BR>
+      "You have my gratitude—and that of Frostmere, though it is seldom spoken aloud. Seek the Chillfire Elemental in the Frosthollow beyond the old wind-stunted pines. Its flame can freeze flesh to bone; keep a potion of warmth close, or Lira Snowbrew can brew one for you."
+      <BR><BR>
+      "Return with the Chillfire Heart, and the village will remember your deed. And—should you find any shards of tainted ice, bring them to me, not to Bryndra. Some knowledge is best kept in careful hands."
+      ]]>
+    </NPCText>
+    <Option text="I will return with the Heart." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Elemental Info ====== -->
+  <Dialogue id="elementalInfo">
+    <NPCText>
+      <![CDATA[
+      Aelric gestures with his staff, frost mist swirling.<BR><BR>
+      "The Chillfire Elemental is no mere spirit. It is an amalgam of elemental frost and arcane flame—its touch burns and freezes in the same moment. I believe Minax’s cultists awoke it by shattering a slumbering ice-wraith and casting unclean spells in the hollow."
+      <BR><BR>
+      "Its core is said to be a paradox—ice that burns, flame that numbs. Return with this heart and you will have done what few could."
+      ]]>
+    </NPCText>
+    <Option text="I will accept this task."
+            action="GiveItem:FactionKillQuestScroll(ChillfireElemental,1,Frostmere,750)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="acceptQuest"/>
+    <Option text="Sounds too perilous for me." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Why Not Bryndra or Kaelen? ====== -->
+  <Dialogue id="whyNotOthers">
+    <NPCText>
+      <![CDATA[
+      Aelric’s eyes glint with sorrow and calculation.<BR><BR>
+      "Bryndra is fierce, but she would destroy the elemental outright—and I fear she’d carry its curse back with her. Kaelen, for all his promise, lacks restraint. His last experiment nearly melted half the north gate!"
+      <BR><BR>
+      "No, this calls for someone who can balance strength with wisdom. Will you take up this charge?"
+      ]]>
+    </NPCText>
+    <Option text="Very well, I will accept."
+            action="GiveItem:FactionKillQuestScroll(ChillfireElemental,1,Frostmere,750)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="acceptQuest"/>
+    <Option text="I must decline." action="Close"/>
+  </Dialogue>
+</DialogueFile>

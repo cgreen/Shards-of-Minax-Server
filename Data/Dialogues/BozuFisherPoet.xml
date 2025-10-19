@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="BozuFisherPoet">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#86b9d7'>
+      By the misty lake, a thin man in a broad straw hat sits beside a wooden bucket, humming and scratching brush on paper. He looks up, lines creasing into a gentle smile.<BR><BR>
+      "Ah, a wanderer beside still waters. I am Bozu, fisherman by hand, poet by heart. Each catch is a verse, each loss a lesson. <BR>
+      What stirs your spirit today? The rod, the pen… or perhaps something hidden beneath the waves?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="What are you writing?" next="writing"/>
+    <Option text="Do you have work for an adventurer?" next="work"/>
+    <Option text="Can you teach me to meditate like a true fisher?" next="meditate"/>
+    <Option text="I heard there are caves beneath the lake…" next="caves"/>
+    <Option text="Show me your wares." action="OpenVendor"/>
+	<Option text="Tell me about yourself, Bozu." next="backstory_intro"/>
+    <Option text="Just passing by." action="Close"/>
+  </Dialogue>
+
+  <!-- Writing branch -->
+  <Dialogue id="writing">
+    <NPCText>
+      <![CDATA[
+      Bozu holds up a water-stained scroll.<BR>
+      "I write <I>ishi no uta</I>—death poems for fish. To honor the spirit of every catch, so that nothing is lost without song."<BR><BR>
+      He recites, almost solemnly:<BR>
+      <I>'Silver flash in dawn,<BR>
+      Ripple’s last dance, then silence.<BR>
+      May the lake remember.'</I>
+      ]]>
+    </NPCText>
+    <Option text="That’s beautiful. Why write poems for fish?" next="whyPoems"/>
+    <Option text="What else have you seen on these waters?" next="lakeLore"/>
+    <Option text="Thank you. Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="whyPoems">
+    <NPCText>
+      <![CDATA[
+      Bozu smiles softly.<BR>
+      "Every life taken deserves memory. The old monks say this world is but a great sea, every ripple felt across lifetimes. A poem is a ripple, too—lasting longer than a fish’s breath."<BR>
+      "You seem thoughtful. If you bring me a rare fish, I will compose a verse for it—and for you."
+      ]]>
+    </NPCText>
+    <Option text="What rare fish do you seek?" next="rareFish"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="rareFish">
+    <NPCText>
+      <![CDATA[
+      "In these waters, legends swirl of the <I>Moon-Scaled Koi</I>. Only by night, when the moon is high, do they surface. Bring me such a koi, and I shall write a poem for both your names."<BR>
+      <BASEFONT COLOR='#f5e883'>[Quest Started: Moon-Scaled Koi]</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll search for a Moon-Scaled Koi." 
+            action="GiveItem:FisherQuestScroll(Moon-Scaled Koi,Hinokami,150)"
+            condition="!HasItem:FisherQuestScroll"
+            next="acceptKoi"/>
+    <Option text="Another time, perhaps." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptKoi">
+    <NPCText>
+      <![CDATA[
+      "I will await your return beneath the moon’s gaze. Fish with patience and poetry in your heart."
+      ]]>
+    </NPCText>
+    <Option text="Until then, Bozu." action="Close"/>
+  </Dialogue>
+
+  <!-- Lake Lore -->
+  <Dialogue id="lakeLore">
+    <NPCText>
+      <![CDATA[
+      Bozu gazes out at the shimmering surface.<BR>
+      "Some nights, lanterns drift where the water runs deepest. Some say spirits dance there. Others whisper of a <I>sunken cave</I>, its door sealed by riddle and current."<BR>
+      "Fisherfolk vanish, and return speaking only in riddles. The lake keeps its secrets well."
+      ]]>
+    </NPCText>
+    <Option text="Do you know the riddle?" next="riddle"/>
+    <Option text="I will keep an eye open. Thank you." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="riddle">
+    <NPCText>
+      <![CDATA[
+      "Aye. The old cave opens for those who bring an <I>offering</I> of <B>river pearls</B>—gathered at dawn, when the mist is thickest. Place them on the stone altar, and the waters part."<BR>
+      <BASEFONT COLOR='#f5e883'>[Clue: Find river pearls at dawn, offer at lake cave altar]</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll remember. Anything else?" next="caves"/>
+    <Option text="Thank you for the wisdom." action="Close"/>
+  </Dialogue>
+
+  <!-- Underwater Caves Hook -->
+  <Dialogue id="caves">
+    <NPCText>
+      <![CDATA[
+      Bozu’s eyes glint.<BR>
+      "The lakebed is riddled with tunnels, some say reaching all the way to the sea. Beware: spirits dwell in the dark, and not all crave poetry."<BR>
+      "But… within those caves, I once glimpsed a <B>stone lantern</B> that was older than Hinokami itself. If you are brave and quiet, perhaps you will see it too."
+      ]]>
+    </NPCText>
+    <Option text="How do I survive the spirits?" next="spiritAdvice"/>
+    <Option text="I will brave the darkness." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="spiritAdvice">
+    <NPCText>
+      <![CDATA[
+      Bozu bows his head.<BR>
+      "Carry a bell of bronze and a poem in your heart. Spirits respect music and memory. And should you lose your way, listen for the song of frogs—follow it home."
+      ]]>
+    </NPCText>
+    <Option text="I’ll remember your words." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest / Job Offer -->
+  <Dialogue id="work">
+    <NPCText>
+      <![CDATA[
+      Bozu taps his bucket.<BR>
+      "Fish are cleverer than bandits. I could use a steady hand to mend nets, gather bait, or—if you have courage—explore the <I>sunken cave</I> for lost trinkets. Are you willing?"
+      ]]>
+    </NPCText>
+    <Option text="I will mend nets and gather bait." action="GiveItem:FisherQuestScroll(Mend Nets,Hinokami,25)" condition="!HasItem:FisherQuestScroll" next="acceptWork"/>
+    <Option text="Tell me more about the sunken cave." next="caves"/>
+    <Option text="Not today." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptWork">
+    <NPCText>
+      <![CDATA[
+      "Take this spool and basket. Return when the nets are mended, and I will share a poem for your patience. Sometimes, patience itself is its own reward."
+      ]]>
+    </NPCText>
+    <Option text="I’ll return soon." action="Close"/>
+  </Dialogue>
+
+  <!-- Meditation Training -->
+  <Dialogue id="meditate">
+    <NPCText>
+      <![CDATA[
+      Bozu motions you to sit by the water.<BR>
+      "True fishing is not about the catch. It is the stillness within the self. Sit, breathe, and let the world pass through you like water through reeds."<BR>
+      "Would you like to learn the art of lakeside meditation?"
+      ]]>
+    </NPCText>
+    <Option text="Yes, teach me." 
+            action="AddSkill:Meditation,5,600" 
+            next="taughtMeditation"/>
+    <Option text="I already know how to meditate." condition="SkillAtLeast:Meditation,50" next="alreadyKnow"/>
+    <Option text="Not today." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="taughtMeditation">
+    <NPCText>
+      <![CDATA[
+      "Close your eyes. Inhale… exhale… Let your thoughts drift like leaves upon water."<BR>
+      <BASEFONT COLOR='#f5e883'>[You feel calmer. Your Meditation has increased!]</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Bozu." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="alreadyKnow">
+    <NPCText>
+      <![CDATA[
+      Bozu bows with respect.<BR>
+      "Then you already walk the fisher’s path. May your heart be as calm as the deepest pool."
+      ]]>
+    </NPCText>
+    <Option text="Thank you." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="backstory_intro">
+  <NPCText>
+    <![CDATA[
+    Bozu adjusts his straw hat, eyes fixed on the lake.<BR><BR>
+    "You honor an old man by asking. My story is simple, yet tangled like old netting. I came to Hinokami with nothing but a rod and the grief of war."<BR>
+    "Would you hear more of my past, or of the things I have come to love?"
+    ]]>
+  </NPCText>
+  <Option text="Tell me why you left Tokuno." next="tokuno"/>
+  <Option text="What do you love most about fishing?" next="fishing_philosophy"/>
+  <Option text="What’s your connection to poetry?" next="poetry"/>
+  <Option text="Have you ever fought in battle?" next="battle"/>
+  <Option text="I think that’s enough for now." action="Close"/>
+</Dialogue>
+
+<Dialogue id="tokuno">
+  <NPCText>
+    <![CDATA[
+    "Tokuno was once calm, like a summer tide. But Minax's horrors came like a storm. My village fell. I lost my brothers and my son to her blood-maddened creatures."<BR><BR>
+    "I left not from cowardice—but because I would not teach the next generation to hate. I chose fish and poems instead of vengeance."<BR>
+    "Do you think that was weakness?"
+    ]]>
+  </NPCText>
+  <Option text="No. Walking away takes greater strength." next="tokuno_affirm"/>
+  <Option text="Perhaps… I would have fought." next="tokuno_doubt"/>
+  <Option text="I understand why you did it." next="tokuno_affirm"/>
+</Dialogue>
+
+<Dialogue id="tokuno_affirm">
+  <NPCText>
+    <![CDATA[
+    Bozu nods slowly, smiling just a little.<BR>
+    "Then I am not alone in this world. Thank you."<BR>
+    "If you ever find yourself filled with anger, sit by still waters and remember this moment."
+    ]]>
+  </NPCText>
+  <Option text="I will, old friend." action="Karma:100"/>
+</Dialogue>
+
+<Dialogue id="tokuno_doubt">
+  <NPCText>
+    <![CDATA[
+    Bozu lowers his gaze.<BR>
+    "A sharp blade cuts the enemy… but it also dulls the soul. Still, I do not judge. War has its place. So too does the quiet afterward."
+    ]]>
+  </NPCText>
+  <Option text="Perhaps we both chose what we needed." action="Karma:25"/>
+</Dialogue>
+
+<Dialogue id="fishing_philosophy">
+  <NPCText>
+    <![CDATA[
+    Bozu casts a pebble into the lake.<BR>
+    "Fishing is not about the fish. It is about listening. Waiting. Feeling the thread of the world tug ever so slightly."<BR>
+    "It teaches humility, patience, and gratitude. That is why I offer fish a poem—not because they are prey, but because they are teachers."<BR>
+    "Would you like a line of your own to carry?"
+    ]]>
+  </NPCText>
+  <Option text="Yes. Please, compose something for me." next="gift_poem"/>
+  <Option text="Maybe later." action="Close"/>
+</Dialogue>
+
+<Dialogue id="gift_poem">
+  <NPCText>
+    <![CDATA[
+    Bozu draws brush to paper and murmurs:<BR><BR>
+    <I>'Drifting with purpose,<BR>
+    silent walker beside reeds—<BR>
+    destiny in stillness.'</I><BR><BR>
+    <BASEFONT COLOR='#f5e883'>[You feel strangely calm.]</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Thank you, Bozu." action="AddStat:Int,5,300"/>
+</Dialogue>
+
+<Dialogue id="poetry">
+  <NPCText>
+    <![CDATA[
+    "My father was a rice farmer. He spoke little. But when the rains came, he’d carve short poems into bamboo. That was his way of praying."<BR>
+    "When the storms took him, I found those verses. Since then, I have written… so I do not forget."<BR>
+    "Even silence, written well, can outlive steel."
+    ]]>
+  </NPCText>
+  <Option text="May I see one of your poems?" next="read_poem"/>
+  <Option text="That’s beautiful. Thank you for sharing." action="Karma:50"/>
+</Dialogue>
+
+<Dialogue id="read_poem">
+  <NPCText>
+    <![CDATA[
+    Bozu offers a scroll sealed with lakewater ink.<BR><BR>
+    <I>'A blade left to rust,<BR>
+    now reflects the morning light.<BR>
+    Peace sharpens anew.'</I><BR><BR>
+    "Take it. Copy it if you wish. Just don’t sell it to a trader in Nujel’m, eh?"
+    ]]>
+  </NPCText>
+  <Option text="I'll cherish it." 
+          action="GiveItem:BozuPoemScroll"
+          condition="!HasItem:BozuPoemScroll"/>
+  <Option text="I already have a copy." condition="HasItem:BozuPoemScroll"/>
+  <Option text="Farewell, Bozu." action="Close"/>
+</Dialogue>
+
+<Dialogue id="battle">
+  <NPCText>
+    <![CDATA[
+    "I was once a spearman. Not a good one. I shook too much, and my arms hated killing."<BR>
+    "But one day, I stood between a monster and a mother carrying her child. I did not shake then."<BR><BR>
+    "Since then, I’ve never claimed to be a warrior—but I know courage. You seem to have your own battles. Do you?"
+    ]]>
+  </NPCText>
+  <Option text="I fight because someone must." next="battle_fight"/>
+  <Option text="I avoid battle when I can." next="battle_peace"/>
+</Dialogue>
+
+<Dialogue id="battle_fight">
+  <NPCText>
+    <![CDATA[
+    "Then may your blade be swift, and your conscience steady. Remember: fight monsters… but don’t become one."<BR>
+    "Should you ever need a quiet place to remember yourself, my pier is yours."
+    ]]>
+  </NPCText>
+  <Option text="Thank you. That means more than you know." action="Karma:50"/>
+</Dialogue>
+
+<Dialogue id="battle_peace">
+  <NPCText>
+    <![CDATA[
+    Bozu smiles deeply.<BR>
+    "Even one warrior laying down their blade ripples through the world. You bring balance in ways few ever see. Peacekeeper or soldier, walk your path with grace."
+    ]]>
+  </NPCText>
+  <Option text="You’re wiser than you look." action="AddStat:Wis,5,300"/>
+</Dialogue>
+
+
+</DialogueFile>

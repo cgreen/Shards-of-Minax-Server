@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="MossTanner">
+
+  <!-- === Greeting / Root Node === -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#8ab78f'>
+      A wiry man fidgets nearby, his Patchwork Leather Cap askew and fingers stained with soot. Strange brass tools clatter from his apron as he mutters to himself, occasionally glancing at a pocketwatch that ticks… backward.
+      <BR><BR>
+      "Ah! You, um, you’re not from the last time… are you? Never mind. Sorry. I’m Moss Tanner, trapwright. Tinkerer. Sometimes... chronomancer? Depends on the day. Don’t mind the boots, they smoke sometimes after lunch. So, uh… do you feel any odd déjà vu, or is that just me again?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ve never met you before. Are you well?" next="selfDoubt"/>
+    <Option text="You seem... distracted. What’s that ticking?" next="gadgetIntro"/>
+    <Option text="Is something wrong with time in Eldermoor?" next="timeIntro"/>
+    <Option text="I’m just here for traps and gadgets." next="shop"/>
+    <Option text="Actually, never mind." action="Close"/>
+  </Dialogue>
+
+  <!-- === Self-Doubt/Personal Branch === -->
+  <Dialogue id="selfDoubt">
+    <NPCText>
+      <![CDATA[
+      Moss blinks, running a trembling hand through wild hair.<BR><BR>
+      "Yes, yes, of course, never met! Except… I feel like I’ve met everyone twice since Minax’s shadow crossed us. They say déjà vu is just the mind playing tricks. Or—sometimes—it’s *time* playing tricks on the mind! Heh. Sorry, nerves. Building traps makes you jumpy. Working for Halric is a fine way to grow grey before your time, too."
+      ]]>
+    </NPCText>
+    <Option text="What’s it like working for Halric?" next="halric"/>
+    <Option text="Tell me about your traps." next="trapTalk"/>
+    <Option text="About that ticking..." next="gadgetIntro"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <!-- Halric Branch -->
+  <Dialogue id="halric">
+    <NPCText>
+      <![CDATA[
+      Moss leans in conspiratorially.<BR><BR>
+      "Halric is all stone and storms. Good man, deep down—heart’s as scarred as his boots. He trusts me with the palisade traps because, well, Thalen keeps melting the steel hinges, and Edda says my traps ‘keep the spirits entertained’—which I think is a compliment? Anyway, Halric’s got his hands full. If I can keep beasts out, maybe he’ll smile once before the world ends."
+      ]]>
+    </NPCText>
+    <Option text="What about Thalen and Edda?" next="npcGossip"/>
+    <Option text="Your traps ever misfire?" next="trapFail"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="npcGossip">
+    <NPCText>
+      <![CDATA[
+      Moss grins, showing a chipped tooth.<BR><BR>
+      "Thalen? That lad’s all fire and sparks—he’d forge a horseshoe in a thunderstorm if you let him. He *says* my gadgets are too clever by half, but he always borrows my tools. Edda’s different—she knows things about roots and time and what grows when it shouldn’t. She gives me tea for my ‘shakes’ and tells me to trust my instincts, even when the world skips a beat. They’re the best kind of trouble."
+      ]]>
+    </NPCText>
+    <Option text="You ever work with Edda’s herbs in your traps?" next="herbTraps"/>
+    <Option text="Ever wish you could leave Eldermoor?" next="leave"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="herbTraps">
+    <NPCText>
+      <![CDATA[
+      "Oh, Edda’s herbs are a trapwright’s secret weapon! She grows this ‘flashbark’ fungus—one whiff, and even ogres stagger. Sometimes I wonder if she’s part dryad; her garden’s always got a new surprise. Of course, some days my traps catch more rabbits than monsters. Mira says she’ll charge me double if I set off another one by the inn."
+      ]]>
+    </NPCText>
+    <Option text="Do you make traps for other villages too?" next="export"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="trapFail">
+    <NPCText>
+      <![CDATA[
+      Moss groans, shoulders slumping.<BR><BR>
+      "Let’s just say… the north fence still smells like burnt ogre hair, and Mira banned me from the kitchen after last spring’s ‘incident’ with the spring-loaded pie tin. I try to keep it quiet, but, well, not every experiment works. The important thing is—nobody’s lost a finger in a week! That’s progress, right?"
+      ]]>
+    </NPCText>
+    <Option text="You sound like you need an assistant." next="assistant"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="assistant">
+    <NPCText>
+      <![CDATA[
+      "Ha! If you know anyone who can set a rune-plate *without* reversing their eyebrows, send them my way. Sometimes I dream of teaching Mira the trade—she’s clever, but Halric would have my hide. Suppose I’m stuck with my own mistakes, until I figure out this… <i>temporal resonance issue</i>."
+      ]]>
+    </NPCText>
+    <Option text="Temporal resonance? That sounds dangerous." next="timeIntro"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="leave">
+    <NPCText>
+      <![CDATA[
+      Moss hesitates, staring out at the horizon.<BR><BR>
+      "Once, maybe. When I was young, I thought I’d see the floating cities, even walk the ice at Frostmere. But with Minax twisting the world and the woods alive with strange echoes, I think Eldermoor needs a few more stubborn fools who’ll set a snare and wait for dawn. Besides… if I ever left, who would keep track of all these loops?"
+      ]]>
+    </NPCText>
+    <Option text="Loops? You mean time is repeating here?" next="timeIntro"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <!-- Traps and Gadgets -->
+  <Dialogue id="trapTalk">
+    <NPCText>
+      <![CDATA[
+      "Traps are puzzles—problems you solve with springs, gears, and a little faith in physics. My favorite? The ‘Screeching Ratapult’—launches a decoy rat that squeals so loud, it distracts goblins for minutes. I keep meaning to patent it. If you need something more serious, well, I’m always tinkering. Got a new gadget right here…"
+      ]]>
+    </NPCText>
+    <Option text="Tell me about your new gadget." next="gadgetIntro"/>
+    <Option text="Any traps for sale?" next="shop"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="export">
+    <NPCText>
+      <![CDATA[
+      "Trinsic once tried to hire me for city defenses, but their Paladins don’t like surprises. Britain’s too ‘proper’ for traps—they want walls, not whirligigs. Buccaneer’s Den paid in gold, but their idea of a ‘humane snare’ is a pit full of spikes. Here, at least, folk appreciate a good bear trap. Even Aldric, though he calls me a ‘nervous squirrel’."
+      ]]>
+    </NPCText>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <!-- Gadget / Quest Offer -->
+  <Dialogue id="gadgetIntro">
+    <NPCText>
+      <![CDATA[
+      Moss rummages through his apron, producing a brass orb inlaid with flickering runes.<BR><BR>
+      "This—this is my Temporal Anomaly Detector. It, um, hums when there’s magic out of place. Been getting stronger since Minax started ‘tinkering with time’—just ask Edda, or, actually, don’t, she’ll just make you drink root tea. Problem is, last time I tested it, the rooster crowed backwards and Mira swore she saw three dawns in one morning."
+      ]]>
+    </NPCText>
+    <Option text="Why not test it again?" next="testOffer"/>
+    <Option text="Sounds dangerous. Has anyone been hurt?" next="danger"/>
+    <Option text="What if it finds something this time?" next="outcome"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="testOffer">
+    <NPCText>
+      <![CDATA[
+      Moss offers you the orb, eyes pleading.<BR><BR>
+      "I need someone brave—or foolish enough—to help me calibrate it near the north woods. There’s something out there… something big. The device points right to the FlamebringerOgre’s den. If you can clear out the ogre *and* bring back a sample from the anomaly, I might finally fix this loop… or, at least, stop the chickens from speaking in riddles."
+      ]]>
+    </NPCText>
+    <Option text="I’ll take the gadget and hunt the ogre."
+      action="GiveItem:FactionKillQuestScroll(FlamebringerOgre,1,Eldermoor,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="What does this ogre want with your device?" next="ogre"/>
+    <Option text="I’m not interested in time anomalies." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      Moss looks sheepish.<BR><BR>
+      "Not really, unless you count Mira’s headache, Halric’s missing hour of sleep, or the day Aldric hunted the same deer twice and claimed it was fate. It’s mostly harmless, I think. But if you help me, maybe we can set things right before Minax does something worse."
+      ]]>
+    </NPCText>
+    <Option text="I’ll try it out for you." next="testOffer"/>
+    <Option text="On second thought, I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="outcome">
+    <NPCText>
+      <![CDATA[
+      "Then I’ll owe you—maybe the whole town will. Or, well, if time unravels and we all turn into newts, I’ll apologize after. Joking! I hope."
+      ]]>
+    </NPCText>
+    <Option text="Alright, give me the device." next="testOffer"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="ogre">
+    <NPCText>
+      <![CDATA[
+      Moss winces.<BR><BR>
+      "That ogre, Flamebringer, it’s not like the others. Glows with a burning light, shouts in tongues I don’t know—sometimes it moves like it’s skipping through moments. Edda says Minax ‘twisted its fate.’ I think the anomaly has trapped it in a loop—dangerous, yes, but also a chance to learn! Or… just a reason to run."
+      ]]>
+    </NPCText>
+    <Option text="I’ll handle the ogre and test your device." next="testOffer"/>
+    <Option text="I think I’ll pass on this adventure." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Moss hands you the humming device, his hands shaking slightly.<BR><BR>
+      "Take it near the ogre’s lair, just past the old willow. If the runes turn violet and hum, it’s working! Bring me back anything… odd. And, please, if time starts repeating or you see two moons, just, um, run back here. Good luck, friend. Oh, and—don’t let the ogre get the device! It might make things even stranger."
+      ]]>
+    </NPCText>
+    <Option text="Wish me luck, Moss." action="Close"/>
+  </Dialogue>
+
+  <!-- Shop -->
+  <Dialogue id="shop">
+    <NPCText>
+      <![CDATA[
+      Moss gestures to a battered chest of gadgets.<BR><BR>
+      "I’ve got snares, caltrops, and a couple of those ‘Ratapults’ if you’re keen. Be warned, no refunds if you catch yourself instead of the beast. Eldermoor’s survival is built on sharp edges and quick wits—if you’ve got coin, I’ve got tools."
+      ]]>
+    </NPCText>
+    <Option text="Let’s see your wares." action="OpenShop"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+</DialogueFile>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="ThendrilQuillforge">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aaffee'>
+      You nearly trip over a trail of scorched feathers, splattered crystal vials, and smoldering alchemical reagents before a frenetic, wild-eyed man spins to greet you.<BR><BR>
+      His <b>Transmuter’s Philtered Hat</b> bristles with glass tubes. A <b>Robe of Sublime Distillation</b> sizzles faintly at the hem, and <b>Gloves of Mercurial Peril</b> are mottled with burns. This can only be Thendril Quillforge, Aerilon’s notorious experimental alchemist.<BR><BR>
+      “Oho! Visitor! Mind the puddles, some still bite. Thendril Quillforge, at your service—assuming my next experiment doesn’t turn me into an eel before tea. What’s your business in my workshop of wonders?”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Are you Thendril Quillforge, the alchemical visionary?" next="intro"/>
+    <Option text="What exactly are you working on?" next="work"/>
+    <Option text="You seem... dangerous. Should I worry?" next="danger"/>
+    <Option text="I’ve heard you supply Salia Moontide and Tolan Drift." next="suppliers"/>
+    <Option text="Do you have work for me?" next="taskIntro"/>
+	<Option text="You’re... clearly eccentric. What made you like this?" next="originIntro"/>
+    <Option text="Just looking around." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="intro">
+    <NPCText>
+      <![CDATA[
+      Thendril beams, nearly splashing a vial.<BR><BR>
+      “Visionary? Yes! Some say madman, but I find the terms interchangeable.<BR>
+      I extract crystalline quintessence, bind it to alchemical reagents, and—BOOM!—sometimes invent new colors or burn holes through realities. Salia Moontide calls me ‘a liability with an apron,’ but who else can transmute etheric sludge into cloudsteel?”<BR>
+      He taps his <b>Apron of Stubborn Stains</b> proudly.
+      ]]>
+    </NPCText>
+    <Option text="What are you making for Salia and Tolan?" next="suppliers"/>
+    <Option text="Do you need help with your work?" next="taskIntro"/>
+    <Option text="Isn’t that dangerous for Aerilon?" next="danger"/>
+    <Option text="Good luck with the stains." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="work">
+    <NPCText>
+      <![CDATA[
+      “Currently? Crystal-dust infusions for Salia’s engines, sky-tinctures for Tolan’s airships, and... well, a little something for myself. Side effects include enlightenment, hallucinations, and the odd tendency to sing to clouds. Would you care to test a new batch? No? Sensible.”<BR>
+      He peers at you with both curiosity and disappointment.
+      ]]>
+    </NPCText>
+    <Option text="Do Salia and Tolan trust your work?" next="suppliers"/>
+    <Option text="Do you ever assist the Conclave directly?" next="conclave"/>
+    <Option text="Do you need a courier?" next="taskIntro"/>
+    <Option text="I should leave before I start singing." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      Thendril cackles, holding up a finger that sparkles with lingering mana.<BR><BR>
+      “Of course you should worry! But no more than usual in Aerilon. The Azure Conclave keeps a close eye—especially Selara, after ‘the Quillforge Incident.’ But progress demands peril! Besides, my <b>Boots of Crystalline Resonance</b> are nearly explosion-proof... mostly.”<BR>
+      He grins, unrepentant.
+      ]]>
+    </NPCText>
+    <Option text="What happened in the Quillforge Incident?" next="incident"/>
+    <Option text="Does Corvus Deyne use your reagents?" next="corvus"/>
+    <Option text="Sounds exciting! Do you have a job for me?" next="taskIntro"/>
+    <Option text="Best of luck... or protection." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="incident">
+    <NPCText>
+      <![CDATA[
+      Thendril grows uncharacteristically somber.<BR>
+      “Let’s just say, Aerilon no longer allows feral potions in the baths. Salia nearly resigned. I apologized—eventually. But that’s the alchemical way: progress, penance, and perseverance!”<BR>
+      He perks up again, clearly having moved on.
+      ]]>
+    </NPCText>
+    <Option text="So Salia keeps you in check?" next="suppliers"/>
+    <Option text="Do you ever help Corvus Deyne?" next="corvus"/>
+    <Option text="Do you need help with deliveries?" next="taskIntro"/>
+    <Option text="Enough about potions." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="suppliers">
+    <NPCText>
+      <![CDATA[
+      “Salia Moontide? Pragmatic, brilliant, terrified of crystal resonance collapse—which is fair! She says my tinctures make her hair stand on end.<BR>
+      Tolan Drift is less cautious. He smuggles me rare dusts in exchange for ‘performance enhancers’ for his fleet. Between you and me, his skyships wouldn’t fly half so high without a little Quillforge alchemy.”<BR>
+      Thendril gives a theatrical wink.
+      ]]>
+    </NPCText>
+    <Option text="Do you also work for Corvus Deyne?" next="corvus"/>
+    <Option text="Do you need a courier for Salia or Tolan?" next="taskIntro"/>
+    <Option text="That’s... impressive." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="corvus">
+    <NPCText>
+      <![CDATA[
+      Thendril’s grin flickers, a note of caution entering his tone.<BR>
+      “Corvus Deyne? Dangerous man, that one. Too interested in my darker concoctions—stability be damned, as long as they explode. I supply what’s requested, but only what I can trust him not to use on Aerilon itself. Of course, he always wants more.”<BR>
+      He shrugs. “Some say I’m reckless. Corvus? He’s careful—but only about power.”
+      ]]>
+    </NPCText>
+    <Option text="Would you work for him against Selara?" next="conclave"/>
+    <Option text="Do you need help with deliveries?" next="taskIntro"/>
+    <Option text="I’ll stay clear of Conclave politics." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="conclave">
+    <NPCText>
+      <![CDATA[
+      “Selara Vael is the mind that keeps this city aloft, but Corvus wants to make it a fortress. Me? I want Aerilon to sing—literally, if I can get the crystals right.<BR>
+      I serve the Conclave as best I can, even if they don’t always appreciate my methods. But today, it’s not the council that needs you. It’s me, Thendril Quillforge, and my next impossible errand.”
+      ]]>
+    </NPCText>
+    <Option text="What’s this errand?" next="taskIntro"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="taskIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aaffee'>
+      Thendril scurries to a bubbling cauldron and retrieves a sealed, swirling vial. Blue mist coils inside, and the glass is etched with intricate runes.<BR><BR>
+      “I need this delivered to a most... peculiar scholar outside Aerilon—a ‘Shade Scholar,’ so the rumors say. Only those who study shadow can stabilize my newest infusion.<BR>
+      The <b>Vial of Refracted Dusk</b> is essential: if it works, Salia can stabilize the levitation engines for another decade. If not—well, let’s not dwell on that.<BR>
+      I can’t leave the city, and Salia is much too careful. Will you brave the risks, shadows, and rival interests to deliver this safely? I’ll see to it you’re remembered among Aerilon’s friends.”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will deliver the Vial of Refracted Dusk for you."
+            action="GiveItem:FactionDeliveryQuestScroll(Shade Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Why does it require a Shade Scholar?" next="whyShade"/>
+    <Option text="Who else might want this vial?" next="dangerousInterest"/>
+    <Option text="Are you sure it’s safe to carry?" next="sideEffects"/>
+    <Option text="This sounds risky. I need to think." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Thendril presses the shimmering vial into your hand, careful not to spill a single mote.<BR>
+      “Remember: Only a true Shade Scholar can accept and complete this delivery—anyone else, and the infusion might unweave itself or summon… well, don’t ask. Seek out the Scholar, deliver the vial, and Aerilon will owe you a debt.<BR>
+      I’ll be waiting (hopefully in the same number of limbs). Good luck!”
+      ]]>
+    </NPCText>
+    <Option text="You can count on me, Thendril." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="whyShade">
+    <NPCText>
+      <![CDATA[
+      Thendril’s eyes gleam with mad conviction.<BR>
+      “Ah! The Vial’s infusion must be exposed to darkness both literal and learned. Only those who’ve gazed into the Abyss of Dusk—the so-called ‘Shade Scholars’—possess the knowledge and subtlety to keep it from collapsing or going, as Salia says, ‘spectacularly awry.’<BR>
+      In the wrong hands? Clouds of nightmares. In the right? Stabilized flight for all Aerilon.”
+      ]]>
+    </NPCText>
+    <Option text="Then I must find a true Shade Scholar." 
+            action="GiveItem:FactionDeliveryQuestScroll(Shade Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Too dangerous for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dangerousInterest">
+    <NPCText>
+      <![CDATA[
+      Thendril glances over his shoulder, lowering his voice.<BR>
+      “Corvus Deyne would pay handsomely for a sample—don’t let him tempt you. Minax’s agents want any edge to drop us from the sky, and even Wind’s magi covet my formulas.<BR>
+      But only the Shade Scholars truly understand shadow’s stabilizing paradox. Trust no one else! If intercepted, hurl the vial into moonlight and run.”<BR>
+      He grins. “Or fly, if you’re lucky.”
+      ]]>
+    </NPCText>
+    <Option text="Understood. I’ll deliver it with care." 
+            action="GiveItem:FactionDeliveryQuestScroll(Shade Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Perhaps another errand, someday." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="sideEffects">
+    <NPCText>
+      <![CDATA[
+      Thendril looks thoughtful.<BR>
+      “Safe? Hah! Let’s say the Vial of Refracted Dusk is—ah—‘predictable’ if kept in shadow, sealed, and away from excessive humming. If you notice your reflection lagging behind, don’t worry; it’ll catch up eventually.<BR>
+      I’ll grant you a small sigil for protection—press it if things grow weird.”
+      ]]>
+    </NPCText>
+    <Option text="Alright, I’ll take the vial (and the sigil!)." 
+            action="GiveItem:FactionDeliveryQuestScroll(Shade Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="This is too strange for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Thendril shrugs, splashing another reagent into a bubbling flask.<BR>
+      “No shame in caution! If you change your mind, look for smoke signals or the scent of burnt ozone. That’ll be me. Aerilon always needs new friends—and I always need new test subjects!”
+      ]]>
+    </NPCText>
+    <Option text="Perhaps another time." action="Close"/>
+    <Option text="On second thought, I’d like to help." next="taskIntro"/>
+  </Dialogue>
+
+<Dialogue id="originIntro">
+  <NPCText>
+    <![CDATA[
+    Thendril blinks, then bursts into laughter. “Oh, where to begin? Childhood, trauma, or the day I invented the smell of fear?”<BR><BR>
+    He leans in conspiratorially.<BR>
+    “I wasn’t always this way. Once, I was an apprentice in Wind. Dutiful. Clean. Boring. But then... <i>it happened</i>.”<BR>
+    “Would you like to hear the tale of my first alchemical awakening? Or the time I almost invented a new element—on accident?”
+    ]]>
+  </NPCText>
+  <Option text="Tell me about your first explosion." next="firstExplosion"/>
+  <Option text="What happened with your mentors in Wind?" next="windMentor"/>
+  <Option text="Have you always been obsessed with shadow and crystals?" next="obsessionLoop"/>
+  <Option text="Actually, no thanks." action="Close"/>
+</Dialogue>
+
+<Dialogue id="firstExplosion">
+  <NPCText>
+    <![CDATA[
+    “Ah yes… the ‘Kettle Cataclysm’.”<BR><BR>
+    “I was ten. I thought—just for fun—that my mother’s teapot might distill mushroom spores more evenly. Long story short: I leveled our greenhouse, turned our cat into a musical instrument, and invented an entirely new cheese—<i>by accident</i>.”<BR><BR>
+    “It was… glorious.”<BR><BR>
+    <BASEFONT COLOR='#ccffcc'>You feel a strange tingle of inspiration just hearing the story.</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="That explains so much..." action="AddSkill:Alchemy,5,600"/>
+  <Option text="...you turned the cat into what now?" next="catStory"/>
+</Dialogue>
+
+<Dialogue id="catStory">
+  <NPCText>
+    <![CDATA[
+    “A lute. A sentient one. It sang in E minor and screamed when plucked improperly. We called it Whiskersong. The council confiscated it.”<BR><BR>
+    <BASEFONT COLOR='#ffaaee'>You’re not sure if he's joking.</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="I... need a drink." action="PlaySound:0x015"/>
+  <Option text="You’re utterly insane. Tell me more." next="obsessionLoop"/>
+</Dialogue>
+
+<Dialogue id="windMentor">
+  <NPCText>
+    <![CDATA[
+    Thendril’s grin tightens.<BR>
+    “Wind doesn’t appreciate creativity. My mentor—Archchemist Diren Ghaast—preferred ‘precise replication over spontaneous revelation.’ He said I was unstable.”<BR><BR>
+    “I said he lacked imagination. So I proved him wrong with a self-writing scroll that insulted him in 17 dialects. I was exiled the next morning.”<BR>
+    “Best thing that ever happened to me.”
+    ]]>
+  </NPCText>
+  <Option text="I’d have exiled you too. Impressive scroll though." next="obsessionLoop"/>
+  <Option text="I’ve heard Wind punishes creativity." condition="SkillAtLeast:Magery,70" next="windInsider"/>
+  <Option text="What drove your obsession with crystals and shadow?" next="obsessionLoop"/>
+</Dialogue>
+
+<Dialogue id="windInsider">
+  <NPCText>
+    <![CDATA[
+    Thendril narrows his eyes.<BR>
+    “A mage of experience, I see. Then you understand—Wind may have knowledge, but they fear transcendence. Fear what magic becomes when you let go of control.”<BR><BR>
+    “I prefer chaos as a teacher. Brutal, unpredictable, but honest.”
+    ]]>
+  </NPCText>
+  <Option text="Chaos is... honest? I’ll remember that." action="AddStat:Int,5,600"/>
+  <Option text="So tell me about this obsession you have." next="obsessionLoop"/>
+</Dialogue>
+
+<Dialogue id="obsessionLoop">
+  <NPCText>
+    <![CDATA[
+    Thendril leans close, voice low.<BR>
+    “Have you ever stared into raw Azure Crystal under moonlight? Watched it pulse? It hums in colors we don’t have names for. I once saw a hue that <i>unwound time</i> in my peripheral vision.”<BR><BR>
+    “I’ve been trying to recreate that moment ever since. Every concoction, every failure—it’s a breadcrumb back to that impossible color.”<BR><BR>
+    He sighs dreamily.<BR>
+    “One day, I’ll bottle it. Or implode trying.”
+    ]]>
+  </NPCText>
+  <Option text="That’s beautiful. Dangerous, but beautiful." action="SendMessage:You feel inspired by Thendril’s madness."/>
+  <Option text="You should probably never be left unsupervised." action="SendMessage:You begin backing away slowly..."/>
+  <Option text="Do you have any samples to test?" next="giveSample"/>
+</Dialogue>
+
+<Dialogue id="giveSample">
+  <NPCText>
+    <![CDATA[
+    Thendril’s eyes widen. “You? Brave enough to test ‘Vial #42-Aleph’? I like you already.”<BR>
+    He slaps a small, warm vial into your hand.<BR>
+    “It might boost your insight. Or cause your hair to levitate. Probably both. Good luck!”<BR><BR>
+    <BASEFONT COLOR='#ddeecc'>You feel... oddly sharper. And lighter.</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Thanks... I think?" 
+          action="AddSkill:Alchemy,3,900"/>
+  <Option text="My eyebrows feel funny..." action="PlaySound:0x01A"/>
+  <Option text="Let’s get back to serious work." next="taskIntro"/>
+</Dialogue>
+
+
+</DialogueFile>

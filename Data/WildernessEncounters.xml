@@ -1,0 +1,6488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  WildernessEncounters.xml  -->
+<Encounters>
+  <Encounter name="WanderingHealer" weight="1">
+    <SpawnObject text="Healer" count="20" />
+  </Encounter>
+  
+  <Encounter name="AbysmalHorror" weight="1">
+    <SpawnObject text="AbysmalHorror" count="20" />
+  </Encounter>
+
+  <Encounter name="AbyssalAbomination" weight="1">
+    <SpawnObject text="AbyssalAbomination" count="20" />
+  </Encounter>
+
+  <Encounter name="AcidElemental" weight="1">
+    <SpawnObject text="AcidElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="AcidPopper" weight="1">
+    <SpawnObject text="AcidPopper" count="20" />
+  </Encounter>
+
+  <Encounter name="AcidSlug" weight="1">
+    <SpawnObject text="AcidSlug" count="20" />
+  </Encounter>
+
+  <Encounter name="AgapiteElemental" weight="1">
+    <SpawnObject text="AgapiteElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="AirElemental" weight="1">
+    <SpawnObject text="AirElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="Alligator" weight="1">
+    <SpawnObject text="Alligator" count="20" />
+  </Encounter>
+
+  <Encounter name="AncientLich" weight="1">
+    <SpawnObject text="AncientLich" count="20" />
+  </Encounter>
+
+  <Encounter name="AncientWyrm" weight="1">
+    <SpawnObject text="AncientWyrm" count="20" />
+  </Encounter>
+
+  <Encounter name="AntLion" weight="1">
+    <SpawnObject text="AntLion" count="20" />
+  </Encounter>
+
+  <Encounter name="ArcaneDaemon" weight="1">
+    <SpawnObject text="ArcaneDaemon" count="20" />
+  </Encounter>
+
+  <Encounter name="ArchDaemon" weight="1">
+    <SpawnObject text="ArchDaemon" count="20" />
+  </Encounter>
+
+  <Encounter name="ArcticOgreLord" weight="1">
+    <SpawnObject text="ArcticOgreLord" count="20" />
+  </Encounter>
+
+  <Encounter name="BakeKitsune" weight="1">
+    <SpawnObject text="BakeKitsune" count="20" />
+  </Encounter>
+
+  <Encounter name="Balron" weight="1">
+    <SpawnObject text="Balron" count="20" />
+  </Encounter>
+
+  <Encounter name="BattleChickenLizard" weight="1">
+    <SpawnObject text="BattleChickenLizard" count="20" />
+  </Encounter>
+
+  <Encounter name="Beetle" weight="1">
+    <SpawnObject text="Beetle" count="20" />
+  </Encounter>
+
+  <Encounter name="Betrayer" weight="1">
+    <SpawnObject text="Betrayer" count="20" />
+  </Encounter>
+
+  <Encounter name="Bird" weight="1">
+    <SpawnObject text="Bird" count="20" />
+  </Encounter>
+
+  <Encounter name="BlackBear" weight="1">
+    <SpawnObject text="BlackBear" count="20" />
+  </Encounter>
+
+  <Encounter name="BlackSolenInfiltratorQueen" weight="1">
+    <SpawnObject text="BlackSolenInfiltratorQueen" count="20" />
+  </Encounter>
+
+  <Encounter name="BlackSolenInfiltratorWarrior" weight="1">
+    <SpawnObject text="BlackSolenInfiltratorWarrior" count="20" />
+  </Encounter>
+
+  <Encounter name="BlackSolenQueen" weight="1">
+    <SpawnObject text="BlackSolenQueen" count="20" />
+  </Encounter>
+
+  <Encounter name="BlackSolenWarrior" weight="1">
+    <SpawnObject text="BlackSolenWarrior" count="20" />
+  </Encounter>
+
+  <Encounter name="BlackSolenWorker" weight="1">
+    <SpawnObject text="BlackSolenWorker" count="20" />
+  </Encounter>
+
+  <Encounter name="BloodElemental" weight="1">
+    <SpawnObject text="BloodElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="BloodFox" weight="1">
+    <SpawnObject text="BloodFox" count="20" />
+  </Encounter>
+
+  <Encounter name="BloodWorm" weight="1">
+    <SpawnObject text="BloodWorm" count="20" />
+  </Encounter>
+
+  <Encounter name="Boar" weight="1">
+    <SpawnObject text="Boar" count="20" />
+  </Encounter>
+
+  <Encounter name="Bogle" weight="1">
+    <SpawnObject text="Bogle" count="20" />
+  </Encounter>
+
+  <Encounter name="Bogling" weight="1">
+    <SpawnObject text="Bogling" count="20" />
+  </Encounter>
+
+  <Encounter name="BogThing" weight="1">
+    <SpawnObject text="BogThing" count="20" />
+  </Encounter>
+
+  <Encounter name="BoneDemon" weight="1">
+    <SpawnObject text="BoneDemon" count="20" />
+  </Encounter>
+
+  <Encounter name="BoneKnight" weight="1">
+    <SpawnObject text="BoneKnight" count="20" />
+  </Encounter>
+
+  <Encounter name="BoneMagi" weight="1">
+    <SpawnObject text="BoneMagi" count="20" />
+  </Encounter>
+
+  <Encounter name="Brigand" weight="1">
+    <SpawnObject text="Brigand" count="20" />
+  </Encounter>
+
+  <Encounter name="BronzeElemental" weight="1">
+    <SpawnObject text="BronzeElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="BrownBear" weight="1">
+    <SpawnObject text="BrownBear" count="20" />
+  </Encounter>
+
+  <Encounter name="BulbousPutrification" weight="1">
+    <SpawnObject text="BulbousPutrification" count="20" />
+  </Encounter>
+
+  <Encounter name="Bull" weight="1">
+    <SpawnObject text="Bull" count="20" />
+  </Encounter>
+
+  <Encounter name="BullFrog" weight="1">
+    <SpawnObject text="BullFrog" count="20" />
+  </Encounter>
+
+  <Encounter name="Cat" weight="1">
+    <SpawnObject text="Cat" count="20" />
+  </Encounter>
+
+  <Encounter name="Centaur" weight="1">
+    <SpawnObject text="Centaur" count="20" />
+  </Encounter>
+
+  <Encounter name="Changeling" weight="1">
+    <SpawnObject text="Changeling" count="20" />
+  </Encounter>
+
+  <Encounter name="ChaosDaemon" weight="1">
+    <SpawnObject text="ChaosDaemon" count="20" />
+  </Encounter>
+
+  <Encounter name="ChaosDragoon" weight="1">
+    <SpawnObject text="ChaosDragoon" count="20" />
+  </Encounter>
+
+  <Encounter name="ChaosDragoonElite" weight="1">
+    <SpawnObject text="ChaosDragoonElite" count="20" />
+  </Encounter>
+
+  <Encounter name="Chicken" weight="1">
+    <SpawnObject text="Chicken" count="20" />
+  </Encounter>
+
+  <Encounter name="ChickenLizard" weight="1">
+    <SpawnObject text="ChickenLizard" count="20" />
+  </Encounter>
+
+  <Encounter name="ClockworkScorpion" weight="1">
+    <SpawnObject text="ClockworkScorpion" count="20" />
+  </Encounter>
+
+  <Encounter name="CoconutCrab" weight="1">
+    <SpawnObject text="CoconutCrab" count="20" />
+  </Encounter>
+
+  <Encounter name="ColdDrake" weight="1">
+    <SpawnObject text="ColdDrake" count="20" />
+  </Encounter>
+
+  <Encounter name="CopperElemental" weight="1">
+    <SpawnObject text="CopperElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="CoralSnake" weight="1">
+    <SpawnObject text="CoralSnake" count="20" />
+  </Encounter>
+
+  <Encounter name="CorporealBrume" weight="1">
+    <SpawnObject text="CorporealBrume" count="20" />
+  </Encounter>
+
+  <Encounter name="Corpser" weight="1">
+    <SpawnObject text="Corpser" count="20" />
+  </Encounter>
+
+  <Encounter name="CorrosiveSlime" weight="1">
+    <SpawnObject text="CorrosiveSlime" count="20" />
+  </Encounter>
+
+  <Encounter name="CorruptedSoul" weight="1">
+    <SpawnObject text="CorruptedSoul" count="20" />
+  </Encounter>
+
+  <Encounter name="Cougar" weight="1">
+    <SpawnObject text="Cougar" count="20" />
+  </Encounter>
+
+  <Encounter name="Cow" weight="1">
+    <SpawnObject text="Cow" count="20" />
+  </Encounter>
+
+  <Encounter name="Crane" weight="1">
+    <SpawnObject text="Crane" count="20" />
+  </Encounter>
+
+  <Encounter name="CrimsonDrake" weight="1">
+    <SpawnObject text="CrimsonDrake" count="20" />
+  </Encounter>
+
+  <Encounter name="CrystalDaemon" weight="1">
+    <SpawnObject text="CrystalDaemon" count="20" />
+  </Encounter>
+
+  <Encounter name="CrystalElemental" weight="1">
+    <SpawnObject text="CrystalElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="CrystalHydra" weight="1">
+    <SpawnObject text="CrystalHydra" count="20" />
+  </Encounter>
+
+  <Encounter name="CrystalLatticeSeeker" weight="1">
+    <SpawnObject text="CrystalLatticeSeeker" count="20" />
+  </Encounter>
+
+  <Encounter name="CrystalSeaSerpent" weight="1">
+    <SpawnObject text="CrystalSeaSerpent" count="20" />
+  </Encounter>
+
+  <Encounter name="CrystalVortex" weight="1">
+    <SpawnObject text="CrystalVortex" count="20" />
+  </Encounter>
+
+  <Encounter name="CrystalWisp" weight="1">
+    <SpawnObject text="CrystalWisp" count="20" />
+  </Encounter>
+
+  <Encounter name="Cursed" weight="1">
+    <SpawnObject text="Cursed" count="20" />
+  </Encounter>
+
+  <Encounter name="CursedSoul" weight="1">
+    <SpawnObject text="CursedSoul" count="20" />
+  </Encounter>
+
+  <Encounter name="CuSidhe" weight="1">
+    <SpawnObject text="CuSidhe" count="20" />
+  </Encounter>
+
+  <Encounter name="Cyclops" weight="1">
+    <SpawnObject text="Cyclops" count="20" />
+  </Encounter>
+
+  <Encounter name="Daemon" weight="1">
+    <SpawnObject text="Daemon" count="20" />
+  </Encounter>
+
+  <Encounter name="DarkGuardian" weight="1">
+    <SpawnObject text="DarkGuardian" count="20" />
+  </Encounter>
+
+  <Encounter name="DarknightCreeper" weight="1">
+    <SpawnObject text="DarknightCreeper" count="20" />
+  </Encounter>
+
+  <Encounter name="DarkWisp" weight="1">
+    <SpawnObject text="DarkWisp" count="20" />
+  </Encounter>
+
+  <Encounter name="DeadlyImp" weight="1">
+    <SpawnObject text="DeadlyImp" count="20" />
+  </Encounter>
+
+  <Encounter name="DeathWatchBeetle" weight="1">
+    <SpawnObject text="DeathWatchBeetle" count="20" />
+  </Encounter>
+
+  <Encounter name="DeathWatchBeetleHatchling" weight="1">
+    <SpawnObject text="DeathWatchBeetleHatchling" count="20" />
+  </Encounter>
+
+  <Encounter name="DeepSeaSerpent" weight="1">
+    <SpawnObject text="DeepSeaSerpent" count="20" />
+  </Encounter>
+
+  <Encounter name="DemonKnight" weight="1">
+    <SpawnObject text="DemonKnight" count="20" />
+  </Encounter>
+
+  <Encounter name="DesertOstard" weight="1">
+    <SpawnObject text="DesertOstard" count="20" />
+  </Encounter>
+
+  <Encounter name="Devourer" weight="1">
+    <SpawnObject text="Devourer" count="20" />
+  </Encounter>
+
+  <Encounter name="DireWolf" weight="1">
+    <SpawnObject text="DireWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="Dog" weight="1">
+    <SpawnObject text="Dog" count="20" />
+  </Encounter>
+
+  <Encounter name="Dolphin" weight="1">
+    <SpawnObject text="Dolphin" count="20" />
+  </Encounter>
+
+  <Encounter name="Doppleganger" weight="1">
+    <SpawnObject text="Doppleganger" count="20" />
+  </Encounter>
+
+  <Encounter name="Dragon" weight="1">
+    <SpawnObject text="Dragon" count="20" />
+  </Encounter>
+
+  <Encounter name="DragonsFlameGrandMage" weight="1">
+    <SpawnObject text="DragonsFlameGrandMage" count="20" />
+  </Encounter>
+
+  <Encounter name="DragonsFlameMage" weight="1">
+    <SpawnObject text="DragonsFlameMage" count="20" />
+  </Encounter>
+
+  <Encounter name="DragonWolf" weight="1">
+    <SpawnObject text="DragonWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="Drake" weight="1">
+    <SpawnObject text="Drake" count="20" />
+  </Encounter>
+
+  <Encounter name="DreadSpider" weight="1">
+    <SpawnObject text="DreadSpider" count="20" />
+  </Encounter>
+
+  <Encounter name="DreadWarhorse" weight="1">
+    <SpawnObject text="DreadWarhorse" count="20" />
+  </Encounter>
+
+  <Encounter name="DreamWraith" weight="1">
+    <SpawnObject text="DreamWraith" count="20" />
+  </Encounter>
+
+  <Encounter name="DullCopperElemental" weight="1">
+    <SpawnObject text="DullCopperElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="Eagle" weight="1">
+    <SpawnObject text="Eagle" count="20" />
+  </Encounter>
+
+  <Encounter name="EarthElemental" weight="1">
+    <SpawnObject text="EarthElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="EffetePutridGargoyle" weight="1">
+    <SpawnObject text="EffetePutridGargoyle" count="20" />
+  </Encounter>
+
+  <Encounter name="EffeteUndeadGargoyle" weight="1">
+    <SpawnObject text="EffeteUndeadGargoyle" count="20" />
+  </Encounter>
+
+  <Encounter name="Efreet" weight="1">
+    <SpawnObject text="Efreet" count="20" />
+  </Encounter>
+
+  <Encounter name="ElderGazer" weight="1">
+    <SpawnObject text="ElderGazer" count="20" />
+  </Encounter>
+
+  <Encounter name="ElfBrigand" weight="1">
+    <SpawnObject text="ElfBrigand" count="20" />
+  </Encounter>
+
+  <Encounter name="EliteNinja" weight="1">
+    <SpawnObject text="EliteNinja" count="20" />
+  </Encounter>
+
+  <Encounter name="EtherealWarrior" weight="1">
+    <SpawnObject text="EtherealWarrior" count="20" />
+  </Encounter>
+
+  <Encounter name="Ettin" weight="1">
+    <SpawnObject text="Ettin" count="20" />
+  </Encounter>
+
+  <Encounter name="EvilMage" weight="1">
+    <SpawnObject text="EvilMage" count="20" />
+  </Encounter>
+
+  <Encounter name="EvilMageLord" weight="1">
+    <SpawnObject text="EvilMageLord" count="20" />
+  </Encounter>
+
+  <Encounter name="Executioner" weight="1">
+    <SpawnObject text="Executioner" count="20" />
+  </Encounter>
+
+  <Encounter name="ExodusMinion" weight="1">
+    <SpawnObject text="ExodusMinion" count="20" />
+  </Encounter>
+
+  <Encounter name="ExodusOverseer" weight="1">
+    <SpawnObject text="ExodusOverseer" count="20" />
+  </Encounter>
+
+  <Encounter name="FairyDragon" weight="1">
+    <SpawnObject text="FairyDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="FanDancer" weight="1">
+    <SpawnObject text="FanDancer" count="20" />
+  </Encounter>
+
+  <Encounter name="FeralTreefellow" weight="1">
+    <SpawnObject text="FeralTreefellow" count="20" />
+  </Encounter>
+
+  <Encounter name="Ferret" weight="1">
+    <SpawnObject text="Ferret" count="20" />
+  </Encounter>
+
+  <Encounter name="FetidEssence" weight="1">
+    <SpawnObject text="FetidEssence" count="20" />
+  </Encounter>
+
+  <Encounter name="FierceDragon" weight="1">
+    <SpawnObject text="FierceDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="FireAnt" weight="1">
+    <SpawnObject text="FireAnt" count="20" />
+  </Encounter>
+
+  <Encounter name="FireBeetle" weight="1">
+    <SpawnObject text="FireBeetle" count="20" />
+  </Encounter>
+
+  <Encounter name="FireDaemon" weight="1">
+    <SpawnObject text="FireDaemon" count="20" />
+  </Encounter>
+
+  <Encounter name="FireElemental" weight="1">
+    <SpawnObject text="FireElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="FireGargoyle" weight="1">
+    <SpawnObject text="FireGargoyle" count="20" />
+  </Encounter>
+
+  <Encounter name="FireRabbit" weight="1">
+    <SpawnObject text="FireRabbit" count="20" />
+  </Encounter>
+
+  <Encounter name="FireSteed" weight="1">
+    <SpawnObject text="FireSteed" count="20" />
+  </Encounter>
+
+  <Encounter name="FleshGolem" weight="1">
+    <SpawnObject text="FleshGolem" count="20" />
+  </Encounter>
+
+  <Encounter name="FleshRenderer" weight="1">
+    <SpawnObject text="FleshRenderer" count="20" />
+  </Encounter>
+
+  <Encounter name="ForestOstard" weight="1">
+    <SpawnObject text="ForestOstard" count="20" />
+  </Encounter>
+
+  <Encounter name="ForgottenServant" weight="1">
+    <SpawnObject text="ForgottenServant" count="20" />
+  </Encounter>
+
+  <Encounter name="FrenziedOstard" weight="1">
+    <SpawnObject text="FrenziedOstard" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostDragon" weight="1">
+    <SpawnObject text="FrostDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostDrake" weight="1">
+    <SpawnObject text="FrostDrake" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostMite" weight="1">
+    <SpawnObject text="FrostMite" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostOoze" weight="1">
+    <SpawnObject text="FrostOoze" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostSpider" weight="1">
+    <SpawnObject text="FrostSpider" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostTroll" weight="1">
+    <SpawnObject text="FrostTroll" count="20" />
+  </Encounter>
+
+  <Encounter name="Gaman" weight="1">
+    <SpawnObject text="Gaman" count="20" />
+  </Encounter>
+
+  <Encounter name="GargishOutcast" weight="1">
+    <SpawnObject text="GargishOutcast" count="20" />
+  </Encounter>
+
+  <Encounter name="GargishRouser" weight="1">
+    <SpawnObject text="GargishRouser" count="20" />
+  </Encounter>
+
+  <Encounter name="Gargoyle" weight="1">
+    <SpawnObject text="Gargoyle" count="20" />
+  </Encounter>
+
+  <Encounter name="GargoyleDestroyer" weight="1">
+    <SpawnObject text="GargoyleDestroyer" count="20" />
+  </Encounter>
+
+  <Encounter name="GargoyleEnforcer" weight="1">
+    <SpawnObject text="GargoyleEnforcer" count="20" />
+  </Encounter>
+
+  <Encounter name="GargoyleGuardian" weight="1">
+    <SpawnObject text="GargoyleGuardian" count="20" />
+  </Encounter>
+
+  <Encounter name="GargoyleShade" weight="1">
+    <SpawnObject text="GargoyleShade" count="20" />
+  </Encounter>
+
+  <Encounter name="Gazer" weight="1">
+    <SpawnObject text="Gazer" count="20" />
+  </Encounter>
+
+  <Encounter name="GazerLarva" weight="1">
+    <SpawnObject text="GazerLarva" count="20" />
+  </Encounter>
+
+  <Encounter name="Ghoul" weight="1">
+    <SpawnObject text="Ghoul" count="20" />
+  </Encounter>
+
+  <Encounter name="GiantBlackWidow" weight="1">
+    <SpawnObject text="GiantBlackWidow" count="20" />
+  </Encounter>
+
+  <Encounter name="GiantIceWorm" weight="1">
+    <SpawnObject text="GiantIceWorm" count="20" />
+  </Encounter>
+
+  <Encounter name="GiantRat" weight="1">
+    <SpawnObject text="GiantRat" count="20" />
+  </Encounter>
+
+  <Encounter name="GiantSerpent" weight="1">
+    <SpawnObject text="GiantSerpent" count="20" />
+  </Encounter>
+
+  <Encounter name="GiantSpider" weight="1">
+    <SpawnObject text="GiantSpider" count="20" />
+  </Encounter>
+
+  <Encounter name="GiantToad" weight="1">
+    <SpawnObject text="GiantToad" count="20" />
+  </Encounter>
+
+  <Encounter name="GiantTurkey" weight="1">
+    <SpawnObject text="GiantTurkey" count="20" />
+  </Encounter>
+
+  <Encounter name="Gibberling" weight="1">
+    <SpawnObject text="Gibberling" count="20" />
+  </Encounter>
+
+  <Encounter name="Goat" weight="1">
+    <SpawnObject text="Goat" count="20" />
+  </Encounter>
+
+  <Encounter name="GoldenElemental" weight="1">
+    <SpawnObject text="GoldenElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="Golem" weight="1">
+    <SpawnObject text="Golem" count="20" />
+  </Encounter>
+
+  <Encounter name="GolemController" weight="1">
+    <SpawnObject text="GolemController" count="20" />
+  </Encounter>
+
+  <Encounter name="GoreFiend" weight="1">
+    <SpawnObject text="GoreFiend" count="20" />
+  </Encounter>
+
+  <Encounter name="Gorilla" weight="1">
+    <SpawnObject text="Gorilla" count="20" />
+  </Encounter>
+
+  <Encounter name="GrayGoblin" weight="1">
+    <SpawnObject text="GrayGoblin" count="20" />
+  </Encounter>
+
+  <Encounter name="GrayGoblinKeeper" weight="1">
+    <SpawnObject text="GrayGoblinKeeper" count="20" />
+  </Encounter>
+
+  <Encounter name="GrayGoblinMage" weight="1">
+    <SpawnObject text="GrayGoblinMage" count="20" />
+  </Encounter>
+
+  <Encounter name="GreaterDragon" weight="1">
+    <SpawnObject text="GreaterDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="GreaterMongbat" weight="1">
+    <SpawnObject text="GreaterMongbat" count="20" />
+  </Encounter>
+
+  <Encounter name="GreaterPoisonElemental" weight="1">
+    <SpawnObject text="GreaterPoisonElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="GreatHart" weight="1">
+    <SpawnObject text="GreatHart" count="20" />
+  </Encounter>
+
+  <Encounter name="GreenGoblin" weight="1">
+    <SpawnObject text="GreenGoblin" count="20" />
+  </Encounter>
+
+  <Encounter name="GreenGoblinAlchemist" weight="1">
+    <SpawnObject text="GreenGoblinAlchemist" count="20" />
+  </Encounter>
+
+  <Encounter name="GreenGoblinScout" weight="1">
+    <SpawnObject text="GreenGoblinScout" count="20" />
+  </Encounter>
+
+  <Encounter name="Gregorio" weight="1">
+    <SpawnObject text="Gregorio" count="20" />
+  </Encounter>
+
+  <Encounter name="Gremlin" weight="1">
+    <SpawnObject text="Gremlin" count="20" />
+  </Encounter>
+
+  <Encounter name="GreyWolf" weight="1">
+    <SpawnObject text="GreyWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="GrizzlyBear" weight="1">
+    <SpawnObject text="GrizzlyBear" count="20" />
+  </Encounter>
+
+  <Encounter name="Grubber" weight="1">
+    <SpawnObject text="Grubber" count="20" />
+  </Encounter>
+
+  <Encounter name="Guardian" weight="1">
+    <SpawnObject text="Guardian" count="20" />
+  </Encounter>
+
+  <Encounter name="Harpy" weight="1">
+    <SpawnObject text="Harpy" count="20" />
+  </Encounter>
+
+  <Encounter name="HeadlessOne" weight="1">
+    <SpawnObject text="HeadlessOne" count="20" />
+  </Encounter>
+
+  <Encounter name="HellCat" weight="1">
+    <SpawnObject text="HellCat" count="20" />
+  </Encounter>
+
+  <Encounter name="HellHound" weight="1">
+    <SpawnObject text="HellHound" count="20" />
+  </Encounter>
+
+  <Encounter name="HellSteed" weight="1">
+    <SpawnObject text="HellSteed" count="20" />
+  </Encounter>
+
+  <Encounter name="HighPlainsBoura" weight="1">
+    <SpawnObject text="HighPlainsBoura" count="20" />
+  </Encounter>
+
+  <Encounter name="Hind" weight="1">
+    <SpawnObject text="Hind" count="20" />
+  </Encounter>
+
+  <Encounter name="Hiryu" weight="1">
+    <SpawnObject text="Hiryu" count="20" />
+  </Encounter>
+
+  <Encounter name="HordeMinion" weight="1">
+    <SpawnObject text="HordeMinion" count="20" />
+  </Encounter>
+
+  <Encounter name="Horse" weight="1">
+    <SpawnObject text="Horse" count="20" />
+  </Encounter>
+
+  <Encounter name="HumanBrigand" weight="1">
+    <SpawnObject text="HumanBrigand" count="20" />
+  </Encounter>
+
+  <Encounter name="HungryCoconutCrab" weight="1">
+    <SpawnObject text="HungryCoconutCrab" count="20" />
+  </Encounter>
+
+  <Encounter name="Hydra" weight="1">
+    <SpawnObject text="Hydra" count="20" />
+  </Encounter>
+
+  <Encounter name="IceElemental" weight="1">
+    <SpawnObject text="IceElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="IceFiend" weight="1">
+    <SpawnObject text="IceFiend" count="20" />
+  </Encounter>
+
+  <Encounter name="Icehound" weight="1">
+    <SpawnObject text="Icehound" count="20" />
+  </Encounter>
+
+  <Encounter name="IceSerpent" weight="1">
+    <SpawnObject text="IceSerpent" count="20" />
+  </Encounter>
+
+  <Encounter name="IceSnake" weight="1">
+    <SpawnObject text="IceSnake" count="20" />
+  </Encounter>
+
+  <Encounter name="Imp" weight="1">
+    <SpawnObject text="Imp" count="20" />
+  </Encounter>
+
+  <Encounter name="Impaler" weight="1">
+    <SpawnObject text="Impaler" count="20" />
+  </Encounter>
+
+  <Encounter name="InjuredWolf" weight="1">
+    <SpawnObject text="InjuredWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="InsaneDryad" weight="1">
+    <SpawnObject text="InsaneDryad" count="20" />
+  </Encounter>
+
+  <Encounter name="InterredGrizzle" weight="1">
+    <SpawnObject text="InterredGrizzle" count="20" />
+  </Encounter>
+
+  <Encounter name="IronBeetle" weight="1">
+    <SpawnObject text="IronBeetle" count="20" />
+  </Encounter>
+
+  <Encounter name="JackRabbit" weight="1">
+    <SpawnObject text="JackRabbit" count="20" />
+  </Encounter>
+
+  <Encounter name="Juggernaut" weight="1">
+    <SpawnObject text="Juggernaut" count="20" />
+  </Encounter>
+
+  <Encounter name="JukaLord" weight="1">
+    <SpawnObject text="JukaLord" count="20" />
+  </Encounter>
+
+  <Encounter name="JukaMage" weight="1">
+    <SpawnObject text="JukaMage" count="20" />
+  </Encounter>
+
+  <Encounter name="JukaWarrior" weight="1">
+    <SpawnObject text="JukaWarrior" count="20" />
+  </Encounter>
+
+  <Encounter name="Jwilson" weight="1">
+    <SpawnObject text="Jwilson" count="20" />
+  </Encounter>
+
+  <Encounter name="Kappa" weight="1">
+    <SpawnObject text="Kappa" count="20" />
+  </Encounter>
+
+  <Encounter name="KazeKemono" weight="1">
+    <SpawnObject text="KazeKemono" count="20" />
+  </Encounter>
+
+  <Encounter name="Kepetch" weight="1">
+    <SpawnObject text="Kepetch" count="20" />
+  </Encounter>
+
+  <Encounter name="KepetchAmbusher" weight="1">
+    <SpawnObject text="KepetchAmbusher" count="20" />
+  </Encounter>
+
+  <Encounter name="KhaldunRevenant" weight="1">
+    <SpawnObject text="KhaldunRevenant" count="20" />
+  </Encounter>
+
+  <Encounter name="KhaldunSummoner" weight="1">
+    <SpawnObject text="KhaldunSummoner" count="20" />
+  </Encounter>
+
+  <Encounter name="KhaldunZealot" weight="1">
+    <SpawnObject text="KhaldunZealot" count="20" />
+  </Encounter>
+
+  <Encounter name="Kirin" weight="1">
+    <SpawnObject text="Kirin" count="20" />
+  </Encounter>
+
+  <Encounter name="Kraken" weight="1">
+    <SpawnObject text="Kraken" count="20" />
+  </Encounter>
+
+  <Encounter name="LadyOfTheSnow" weight="1">
+    <SpawnObject text="LadyOfTheSnow" count="20" />
+  </Encounter>
+
+  <Encounter name="Lasher" weight="1">
+    <SpawnObject text="Lasher" count="20" />
+  </Encounter>
+
+  <Encounter name="LavaElemental" weight="1">
+    <SpawnObject text="LavaElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="LavaLizard" weight="1">
+    <SpawnObject text="LavaLizard" count="20" />
+  </Encounter>
+
+  <Encounter name="LavaSerpent" weight="1">
+    <SpawnObject text="LavaSerpent" count="20" />
+  </Encounter>
+
+  <Encounter name="LavaSnake" weight="1">
+    <SpawnObject text="LavaSnake" count="20" />
+  </Encounter>
+
+  <Encounter name="LeatherWolf" weight="1">
+    <SpawnObject text="LeatherWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="LesserHiryu" weight="1">
+    <SpawnObject text="LesserHiryu" count="20" />
+  </Encounter>
+
+  <Encounter name="Leviathan" weight="1">
+    <SpawnObject text="Leviathan" count="20" />
+  </Encounter>
+
+  <Encounter name="Lich" weight="1">
+    <SpawnObject text="Lich" count="20" />
+  </Encounter>
+
+  <Encounter name="LichLord" weight="1">
+    <SpawnObject text="LichLord" count="20" />
+  </Encounter>
+
+  <Encounter name="Lifestealer" weight="1">
+    <SpawnObject text="Lifestealer" count="20" />
+  </Encounter>
+
+  <Encounter name="Lion" weight="1">
+    <SpawnObject text="Lion" count="20" />
+  </Encounter>
+
+  <Encounter name="Lizardman" weight="1">
+    <SpawnObject text="Lizardman" count="20" />
+  </Encounter>
+
+  <Encounter name="Llama" weight="1">
+    <SpawnObject text="Llama" count="20" />
+  </Encounter>
+
+  <Encounter name="LowlandBoura" weight="1">
+    <SpawnObject text="LowlandBoura" count="20" />
+  </Encounter>
+
+  <Encounter name="Macaw" weight="1">
+    <SpawnObject text="Macaw" count="20" />
+  </Encounter>
+
+  <Encounter name="MaddeningHorror" weight="1">
+    <SpawnObject text="MaddeningHorror" count="20" />
+  </Encounter>
+
+  <Encounter name="MantraEffervescence" weight="1">
+    <SpawnObject text="MantraEffervescence" count="20" />
+  </Encounter>
+
+  <Encounter name="MeerCaptain" weight="1">
+    <SpawnObject text="MeerCaptain" count="20" />
+  </Encounter>
+
+  <Encounter name="MeerEternal" weight="1">
+    <SpawnObject text="MeerEternal" count="20" />
+  </Encounter>
+
+  <Encounter name="MeerMage" weight="1">
+    <SpawnObject text="MeerMage" count="20" />
+  </Encounter>
+
+  <Encounter name="MeerWarrior" weight="1">
+    <SpawnObject text="MeerWarrior" count="20" />
+  </Encounter>
+
+  <Encounter name="MilitiaFighter" weight="1">
+    <SpawnObject text="MilitiaFighter" count="20" />
+  </Encounter>
+
+  <Encounter name="Mimic" weight="1">
+    <SpawnObject text="Mimic" count="20" />
+  </Encounter>
+
+  <Encounter name="MinionOfScelestus" weight="1">
+    <SpawnObject text="MinionOfScelestus" count="20" />
+  </Encounter>
+
+  <Encounter name="Minotaur" weight="1">
+    <SpawnObject text="Minotaur" count="20" />
+  </Encounter>
+
+  <Encounter name="MinotaurCaptain" weight="1">
+    <SpawnObject text="MinotaurCaptain" count="20" />
+  </Encounter>
+
+  <Encounter name="MinotaurGeneral" weight="1">
+    <SpawnObject text="MinotaurGeneral" count="20" />
+  </Encounter>
+
+  <Encounter name="MinotaurScout" weight="1">
+    <SpawnObject text="MinotaurScout" count="20" />
+  </Encounter>
+
+  <Encounter name="Moloch" weight="1">
+    <SpawnObject text="Moloch" count="20" />
+  </Encounter>
+
+  <Encounter name="Mongbat" weight="1">
+    <SpawnObject text="Mongbat" count="20" />
+  </Encounter>
+
+  <Encounter name="MoundOfMaggots" weight="1">
+    <SpawnObject text="MoundOfMaggots" count="20" />
+  </Encounter>
+
+  <Encounter name="MountainGoat" weight="1">
+    <SpawnObject text="MountainGoat" count="20" />
+  </Encounter>
+
+  <Encounter name="Mummy" weight="1">
+    <SpawnObject text="Mummy" count="20" />
+  </Encounter>
+
+  <Encounter name="Nightmare" weight="1">
+    <SpawnObject text="Nightmare" count="20" />
+  </Encounter>
+
+  <Encounter name="Niporailem" weight="1">
+    <SpawnObject text="Niporailem" count="20" />
+  </Encounter>
+
+  <Encounter name="Ogre" weight="1">
+    <SpawnObject text="Ogre" count="20" />
+  </Encounter>
+
+  <Encounter name="OgreLord" weight="1">
+    <SpawnObject text="OgreLord" count="20" />
+  </Encounter>
+
+  <Encounter name="Oni" weight="1">
+    <SpawnObject text="Oni" count="20" />
+  </Encounter>
+
+  <Encounter name="OphidianArchmage" weight="1">
+    <SpawnObject text="OphidianArchmage" count="20" />
+  </Encounter>
+
+  <Encounter name="OphidianKnight" weight="1">
+    <SpawnObject text="OphidianKnight" count="20" />
+  </Encounter>
+
+  <Encounter name="OphidianMage" weight="1">
+    <SpawnObject text="OphidianMage" count="20" />
+  </Encounter>
+
+  <Encounter name="OphidianMatriarch" weight="1">
+    <SpawnObject text="OphidianMatriarch" count="20" />
+  </Encounter>
+
+  <Encounter name="OphidianWarrior" weight="1">
+    <SpawnObject text="OphidianWarrior" count="20" />
+  </Encounter>
+
+  <Encounter name="Orc" weight="1">
+    <SpawnObject text="Orc" count="20" />
+  </Encounter>
+
+  <Encounter name="OrcBomber" weight="1">
+    <SpawnObject text="OrcBomber" count="20" />
+  </Encounter>
+
+  <Encounter name="OrcBrute" weight="1">
+    <SpawnObject text="OrcBrute" count="20" />
+  </Encounter>
+
+  <Encounter name="OrcCaptain" weight="1">
+    <SpawnObject text="OrcCaptain" count="20" />
+  </Encounter>
+
+  <Encounter name="OrcChopper" weight="1">
+    <SpawnObject text="OrcChopper" count="20" />
+  </Encounter>
+
+  <Encounter name="OrcishLord" weight="1">
+    <SpawnObject text="OrcishLord" count="20" />
+  </Encounter>
+
+  <Encounter name="OrcishMage" weight="1">
+    <SpawnObject text="OrcishMage" count="20" />
+  </Encounter>
+
+  <Encounter name="OrcScout" weight="1">
+    <SpawnObject text="OrcScout" count="20" />
+  </Encounter>
+
+  <Encounter name="Ortanord" weight="1">
+    <SpawnObject text="Ortanord" count="20" />
+  </Encounter>
+
+  <Encounter name="OsseinRam" weight="1">
+    <SpawnObject text="OsseinRam" count="20" />
+  </Encounter>
+
+  <Encounter name="PackHorse" weight="1">
+    <SpawnObject text="PackHorse" count="20" />
+  </Encounter>
+
+  <Encounter name="PackLlama" weight="1">
+    <SpawnObject text="PackLlama" count="20" />
+  </Encounter>
+
+  <Encounter name="PalaminoHorse" weight="1">
+    <SpawnObject text="PalaminoHorse" count="20" />
+  </Encounter>
+
+  <Encounter name="Panther" weight="1">
+    <SpawnObject text="Panther" count="20" />
+  </Encounter>
+
+  <Encounter name="ParoxysmusSwampDragon" weight="1">
+    <SpawnObject text="ParoxysmusSwampDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="PatchworkSkeleton" weight="1">
+    <SpawnObject text="PatchworkSkeleton" count="20" />
+  </Encounter>
+
+  <Encounter name="PestilentBandage" weight="1">
+    <SpawnObject text="PestilentBandage" count="20" />
+  </Encounter>
+
+  <Encounter name="Phoenix" weight="1">
+    <SpawnObject text="Phoenix" count="20" />
+  </Encounter>
+
+  <Encounter name="Pig" weight="1">
+    <SpawnObject text="Pig" count="20" />
+  </Encounter>
+
+  <Encounter name="PitFiend" weight="1">
+    <SpawnObject text="PitFiend" count="20" />
+  </Encounter>
+
+  <Encounter name="Pixie" weight="1">
+    <SpawnObject text="Pixie" count="20" />
+  </Encounter>
+
+  <Encounter name="PlagueBeast" weight="1">
+    <SpawnObject text="PlagueBeast" count="20" />
+  </Encounter>
+
+  <Encounter name="PlagueBeastLord" weight="1">
+    <SpawnObject text="PlagueBeastLord" count="20" />
+  </Encounter>
+
+  <Encounter name="PlagueRat" weight="1">
+    <SpawnObject text="PlagueRat" count="20" />
+  </Encounter>
+
+  <Encounter name="PlagueSpawn" weight="1">
+    <SpawnObject text="PlagueSpawn" count="20" />
+  </Encounter>
+
+  <Encounter name="PlatinumDrake" weight="1">
+    <SpawnObject text="PlatinumDrake" count="20" />
+  </Encounter>
+
+  <Encounter name="PoisonElemental" weight="1">
+    <SpawnObject text="PoisonElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="PolarBear" weight="1">
+    <SpawnObject text="PolarBear" count="20" />
+  </Encounter>
+
+  <Encounter name="PredatorHellCat" weight="1">
+    <SpawnObject text="PredatorHellCat" count="20" />
+  </Encounter>
+
+  <Encounter name="Protector" weight="1">
+    <SpawnObject text="Protector" count="20" />
+  </Encounter>
+
+  <Encounter name="PutridUndeadGargoyle" weight="1">
+    <SpawnObject text="PutridUndeadGargoyle" count="20" />
+  </Encounter>
+
+  <Encounter name="PutridUndeadGuardian" weight="1">
+    <SpawnObject text="PutridUndeadGuardian" count="20" />
+  </Encounter>
+
+  <Encounter name="Quagmire" weight="1">
+    <SpawnObject text="Quagmire" count="20" />
+  </Encounter>
+
+  <Encounter name="Rabbit" weight="1">
+    <SpawnObject text="Rabbit" count="20" />
+  </Encounter>
+
+  <Encounter name="RagingGrizzlyBear" weight="1">
+    <SpawnObject text="RagingGrizzlyBear" count="20" />
+  </Encounter>
+
+  <Encounter name="RaiJu" weight="1">
+    <SpawnObject text="RaiJu" count="20" />
+  </Encounter>
+
+  <Encounter name="Raptor" weight="1">
+    <SpawnObject text="Raptor" count="20" />
+  </Encounter>
+
+  <Encounter name="Rat" weight="1">
+    <SpawnObject text="Rat" count="20" />
+  </Encounter>
+
+  <Encounter name="Ratman" weight="1">
+    <SpawnObject text="Ratman" count="20" />
+  </Encounter>
+
+  <Encounter name="RatmanArcher" weight="1">
+    <SpawnObject text="RatmanArcher" count="20" />
+  </Encounter>
+
+  <Encounter name="RatmanMage" weight="1">
+    <SpawnObject text="RatmanMage" count="20" />
+  </Encounter>
+
+  <Encounter name="Ravager" weight="1">
+    <SpawnObject text="Ravager" count="20" />
+  </Encounter>
+
+  <Encounter name="Reaper" weight="1">
+    <SpawnObject text="Reaper" count="20" />
+  </Encounter>
+
+  <Encounter name="RedSolenInfiltratorQueen" weight="1">
+    <SpawnObject text="RedSolenInfiltratorQueen" count="20" />
+  </Encounter>
+
+  <Encounter name="RedSolenInfiltratorWarrior" weight="1">
+    <SpawnObject text="RedSolenInfiltratorWarrior" count="20" />
+  </Encounter>
+
+  <Encounter name="RedSolenQueen" weight="1">
+    <SpawnObject text="RedSolenQueen" count="20" />
+  </Encounter>
+
+  <Encounter name="RedSolenWarrior" weight="1">
+    <SpawnObject text="RedSolenWarrior" count="20" />
+  </Encounter>
+
+  <Encounter name="RedSolenWorker" weight="1">
+    <SpawnObject text="RedSolenWorker" count="20" />
+  </Encounter>
+
+  <Encounter name="RenegadeChangeling" weight="1">
+    <SpawnObject text="RenegadeChangeling" count="20" />
+  </Encounter>
+
+  <Encounter name="Reptalon" weight="1">
+    <SpawnObject text="Reptalon" count="20" />
+  </Encounter>
+
+  <Encounter name="RestlessSoul" weight="1">
+    <SpawnObject text="RestlessSoul" count="20" />
+  </Encounter>
+
+  <Encounter name="Revenant" weight="1">
+    <SpawnObject text="Revenant" count="20" />
+  </Encounter>
+
+  <Encounter name="RevenantLion" weight="1">
+    <SpawnObject text="RevenantLion" count="20" />
+  </Encounter>
+
+  <Encounter name="RidableLlama" weight="1">
+    <SpawnObject text="RidableLlama" count="20" />
+  </Encounter>
+
+  <Encounter name="Ridgeback" weight="1">
+    <SpawnObject text="Ridgeback" count="20" />
+  </Encounter>
+
+  <Encounter name="Ronin" weight="1">
+    <SpawnObject text="Ronin" count="20" />
+  </Encounter>
+
+  <Encounter name="RottingCorpse" weight="1">
+    <SpawnObject text="RottingCorpse" count="20" />
+  </Encounter>
+
+  <Encounter name="Rotworm" weight="1">
+    <SpawnObject text="Rotworm" count="20" />
+  </Encounter>
+
+  <Encounter name="RuddyBoura" weight="1">
+    <SpawnObject text="RuddyBoura" count="20" />
+  </Encounter>
+
+  <Encounter name="RuneBeetle" weight="1">
+    <SpawnObject text="RuneBeetle" count="20" />
+  </Encounter>
+
+  <Encounter name="SabertoothedTiger" weight="1">
+    <SpawnObject text="SabertoothedTiger" count="20" />
+  </Encounter>
+
+  <Encounter name="SandVortex" weight="1">
+    <SpawnObject text="SandVortex" count="20" />
+  </Encounter>
+
+  <Encounter name="SAPixie" weight="1">
+    <SpawnObject text="SAPixie" count="20" />
+  </Encounter>
+
+  <Encounter name="Satyr" weight="1">
+    <SpawnObject text="Satyr" count="20" />
+  </Encounter>
+
+  <Encounter name="Savage" weight="1">
+    <SpawnObject text="Savage" count="20" />
+  </Encounter>
+
+  <Encounter name="SavageRider" weight="1">
+    <SpawnObject text="SavageRider" count="20" />
+  </Encounter>
+
+  <Encounter name="SavageRidgeback" weight="1">
+    <SpawnObject text="SavageRidgeback" count="20" />
+  </Encounter>
+
+  <Encounter name="SavageShaman" weight="1">
+    <SpawnObject text="SavageShaman" count="20" />
+  </Encounter>
+
+  <Encounter name="ScaledSwampDragon" weight="1">
+    <SpawnObject text="ScaledSwampDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="Scorpion" weight="1">
+    <SpawnObject text="Scorpion" count="20" />
+  </Encounter>
+
+  <Encounter name="SeaHorse" weight="1">
+    <SpawnObject text="SeaHorse" count="20" />
+  </Encounter>
+
+  <Encounter name="SeaSerpent" weight="1">
+    <SpawnObject text="SeaSerpent" count="20" />
+  </Encounter>
+
+  <Encounter name="SentinelSpider" weight="1">
+    <SpawnObject text="SentinelSpider" count="20" />
+  </Encounter>
+
+  <Encounter name="SerpentineDragon" weight="1">
+    <SpawnObject text="SerpentineDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="SerpentsFangAssassin" weight="1">
+    <SpawnObject text="SerpentsFangAssassin" count="20" />
+  </Encounter>
+
+  <Encounter name="SerpentsFangHighExecutioner" weight="1">
+    <SpawnObject text="SerpentsFangHighExecutioner" count="20" />
+  </Encounter>
+
+  <Encounter name="SewerRat" weight="1">
+    <SpawnObject text="SewerRat" count="20" />
+  </Encounter>
+
+  <Encounter name="Shade" weight="1">
+    <SpawnObject text="Shade" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowDweller" weight="1">
+    <SpawnObject text="ShadowDweller" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowIronElemental" weight="1">
+    <SpawnObject text="ShadowIronElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowWisp" weight="1">
+    <SpawnObject text="ShadowWisp" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowWyrm" weight="1">
+    <SpawnObject text="ShadowWyrm" count="20" />
+  </Encounter>
+
+  <Encounter name="Sheep" weight="1">
+    <SpawnObject text="Sheep" count="20" />
+  </Encounter>
+
+  <Encounter name="SilverSerpent" weight="1">
+    <SpawnObject text="SilverSerpent" count="20" />
+  </Encounter>
+
+  <Encounter name="SilverSteed" weight="1">
+    <SpawnObject text="SilverSteed" count="20" />
+  </Encounter>
+
+  <Encounter name="SkeletalCat" weight="1">
+    <SpawnObject text="SkeletalCat" count="20" />
+  </Encounter>
+
+  <Encounter name="SkeletalDragon" weight="1">
+    <SpawnObject text="SkeletalDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="SkeletalDrake" weight="1">
+    <SpawnObject text="SkeletalDrake" count="20" />
+  </Encounter>
+
+  <Encounter name="SkeletalKnight" weight="1">
+    <SpawnObject text="SkeletalKnight" count="20" />
+  </Encounter>
+
+  <Encounter name="SkeletalLich" weight="1">
+    <SpawnObject text="SkeletalLich" count="20" />
+  </Encounter>
+
+  <Encounter name="SkeletalMage" weight="1">
+    <SpawnObject text="SkeletalMage" count="20" />
+  </Encounter>
+
+  <Encounter name="SkeletalMount" weight="1">
+    <SpawnObject text="SkeletalMount" count="20" />
+  </Encounter>
+
+  <Encounter name="Skeleton" weight="1">
+    <SpawnObject text="Skeleton" count="20" />
+  </Encounter>
+
+  <Encounter name="SkitteringHopper" weight="1">
+    <SpawnObject text="SkitteringHopper" count="20" />
+  </Encounter>
+
+  <Encounter name="Skree" weight="1">
+    <SpawnObject text="Skree" count="20" />
+  </Encounter>
+
+  <Encounter name="Slime" weight="1">
+    <SpawnObject text="Slime" count="20" />
+  </Encounter>
+
+  <Encounter name="Slith" weight="1">
+    <SpawnObject text="Slith" count="20" />
+  </Encounter>
+
+  <Encounter name="Snake" weight="1">
+    <SpawnObject text="Snake" count="20" />
+  </Encounter>
+
+  <Encounter name="SnowElemental" weight="1">
+    <SpawnObject text="SnowElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="SnowLeopard" weight="1">
+    <SpawnObject text="SnowLeopard" count="20" />
+  </Encounter>
+
+  <Encounter name="SolenHelper" weight="1">
+    <SpawnObject text="SolenHelper" count="20" />
+  </Encounter>
+
+  <Encounter name="SpeckledScorpion" weight="1">
+    <SpawnObject text="SpeckledScorpion" count="20" />
+  </Encounter>
+
+  <Encounter name="SpectralArmour" weight="1">
+    <SpawnObject text="SpectralArmour" count="20" />
+  </Encounter>
+
+  <Encounter name="Spectre" weight="1">
+    <SpawnObject text="Spectre" count="20" />
+  </Encounter>
+
+  <Encounter name="Spellbinder" weight="1">
+    <SpawnObject text="Spellbinder" count="20" />
+  </Encounter>
+
+  <Encounter name="Squirrel" weight="1">
+    <SpawnObject text="Squirrel" count="20" />
+  </Encounter>
+
+  <Encounter name="StoneGargoyle" weight="1">
+    <SpawnObject text="StoneGargoyle" count="20" />
+  </Encounter>
+
+  <Encounter name="StoneHarpy" weight="1">
+    <SpawnObject text="StoneHarpy" count="20" />
+  </Encounter>
+
+  <Encounter name="StoneMonster" weight="1">
+    <SpawnObject text="StoneMonster" count="20" />
+  </Encounter>
+
+  <Encounter name="StoneSlith" weight="1">
+    <SpawnObject text="StoneSlith" count="20" />
+  </Encounter>
+
+  <Encounter name="StrongMongbat" weight="1">
+    <SpawnObject text="StrongMongbat" count="20" />
+  </Encounter>
+
+  <Encounter name="StygianDrake" weight="1">
+    <SpawnObject text="StygianDrake" count="20" />
+  </Encounter>
+
+  <Encounter name="Succubus" weight="1">
+    <SpawnObject text="Succubus" count="20" />
+  </Encounter>
+
+  <Encounter name="SwampDragon" weight="1">
+    <SpawnObject text="SwampDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="SwampTentacle" weight="1">
+    <SpawnObject text="SwampTentacle" count="20" />
+  </Encounter>
+
+  <Encounter name="TanglingRoots" weight="1">
+    <SpawnObject text="TanglingRoots" count="20" />
+  </Encounter>
+
+  <Encounter name="TerathanAvenger" weight="1">
+    <SpawnObject text="TerathanAvenger" count="20" />
+  </Encounter>
+
+  <Encounter name="TerathanDrone" weight="1">
+    <SpawnObject text="TerathanDrone" count="20" />
+  </Encounter>
+
+  <Encounter name="TerathanMatriarch" weight="1">
+    <SpawnObject text="TerathanMatriarch" count="20" />
+  </Encounter>
+
+  <Encounter name="TerathanWarrior" weight="1">
+    <SpawnObject text="TerathanWarrior" count="20" />
+  </Encounter>
+
+  <Encounter name="TheButcher" weight="1">
+    <SpawnObject text="TheButcher" count="20" />
+  </Encounter>
+
+  <Encounter name="ThirdDawnParrot" weight="1">
+    <SpawnObject text="ThirdDawnParrot" count="20" />
+  </Encounter>
+
+  <Encounter name="TigersClawMaster" weight="1">
+    <SpawnObject text="TigersClawMaster" count="20" />
+  </Encounter>
+
+  <Encounter name="TigersClawThief" weight="1">
+    <SpawnObject text="TigersClawThief" count="20" />
+  </Encounter>
+
+  <Encounter name="TimberWolf" weight="1">
+    <SpawnObject text="TimberWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="Titan" weight="1">
+    <SpawnObject text="Titan" count="20" />
+  </Encounter>
+
+  <Encounter name="Tormented Minotaur" weight="1">
+    <SpawnObject text="Tormented Minotaur" count="20" />
+  </Encounter>
+
+  <Encounter name="ToxicElemental" weight="1">
+    <SpawnObject text="ToxicElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="ToxicSlith" weight="1">
+    <SpawnObject text="ToxicSlith" count="20" />
+  </Encounter>
+
+  <Encounter name="TrapdoorSpider" weight="1">
+    <SpawnObject text="TrapdoorSpider" count="20" />
+  </Encounter>
+
+  <Encounter name="Treefellow" weight="1">
+    <SpawnObject text="Treefellow" count="20" />
+  </Encounter>
+
+  <Encounter name="TreefellowGuardian" weight="1">
+    <SpawnObject text="TreefellowGuardian" count="20" />
+  </Encounter>
+
+  <Encounter name="Triceratops" weight="1">
+    <SpawnObject text="Triceratops" count="20" />
+  </Encounter>
+
+  <Encounter name="Triton" weight="1">
+    <SpawnObject text="Triton" count="20" />
+  </Encounter>
+
+  <Encounter name="Troglodyte" weight="1">
+    <SpawnObject text="Troglodyte" count="20" />
+  </Encounter>
+
+  <Encounter name="Troll" weight="1">
+    <SpawnObject text="Troll" count="20" />
+  </Encounter>
+
+  <Encounter name="TsukiWolf" weight="1">
+    <SpawnObject text="TsukiWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="Turkey" weight="1">
+    <SpawnObject text="Turkey" count="20" />
+  </Encounter>
+
+  <Encounter name="UndeadGargoyle" weight="1">
+    <SpawnObject text="UndeadGargoyle" count="20" />
+  </Encounter>
+
+  <Encounter name="UndeadGuardian" weight="1">
+    <SpawnObject text="UndeadGuardian" count="20" />
+  </Encounter>
+
+  <Encounter name="UnfrozenMummy" weight="1">
+    <SpawnObject text="UnfrozenMummy" count="20" />
+  </Encounter>
+
+  <Encounter name="Unicorn" weight="1">
+    <SpawnObject text="Unicorn" count="20" />
+  </Encounter>
+
+  <Encounter name="ValoriteElemental" weight="1">
+    <SpawnObject text="ValoriteElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="VampireBat" weight="1">
+    <SpawnObject text="VampireBat" count="20" />
+  </Encounter>
+
+  <Encounter name="VeriteElemental" weight="1">
+    <SpawnObject text="VeriteElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="Virulent" weight="1">
+    <SpawnObject text="Virulent" count="20" />
+  </Encounter>
+
+  <Encounter name="Viscera" weight="1">
+    <SpawnObject text="Viscera" count="20" />
+  </Encounter>
+
+  <Encounter name="VoidManesfistation" weight="1">
+    <SpawnObject text="VoidManesfistation" count="20" />
+  </Encounter>
+
+  <Encounter name="VorpalBunny" weight="1">
+    <SpawnObject text="VorpalBunny" count="20" />
+  </Encounter>
+
+  <Encounter name="WailingBanshee" weight="1">
+    <SpawnObject text="WailingBanshee" count="20" />
+  </Encounter>
+
+  <Encounter name="Walrus" weight="1">
+    <SpawnObject text="Walrus" count="20" />
+  </Encounter>
+
+  <Encounter name="WandererOfTheVoid" weight="1">
+    <SpawnObject text="WandererOfTheVoid" count="20" />
+  </Encounter>
+
+  <Encounter name="WaterElemental" weight="1">
+    <SpawnObject text="WaterElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="WhippingVine" weight="1">
+    <SpawnObject text="WhippingVine" count="20" />
+  </Encounter>
+
+  <Encounter name="WhiteWolf" weight="1">
+    <SpawnObject text="WhiteWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="WhiteWyrm" weight="1">
+    <SpawnObject text="WhiteWyrm" count="20" />
+  </Encounter>
+
+  <Encounter name="Wight" weight="1">
+    <SpawnObject text="Wight" count="20" />
+  </Encounter>
+
+  <Encounter name="WildTiger" weight="1">
+    <SpawnObject text="WildTiger" count="20" />
+  </Encounter>
+
+  <Encounter name="Windrunner" weight="1">
+    <SpawnObject text="Windrunner" count="20" />
+  </Encounter>
+
+  <Encounter name="Wisp" weight="1">
+    <SpawnObject text="Wisp" count="20" />
+  </Encounter>
+
+  <Encounter name="WolfSpider" weight="1">
+    <SpawnObject text="WolfSpider" count="20" />
+  </Encounter>
+
+  <Encounter name="Wraith" weight="1">
+    <SpawnObject text="Wraith" count="20" />
+  </Encounter>
+
+  <Encounter name="Wyvern" weight="1">
+    <SpawnObject text="Wyvern" count="20" />
+  </Encounter>
+
+  <Encounter name="Yamandon" weight="1">
+    <SpawnObject text="Yamandon" count="20" />
+  </Encounter>
+
+  <Encounter name="YomotsuElder" weight="1">
+    <SpawnObject text="YomotsuElder" count="20" />
+  </Encounter>
+
+  <Encounter name="YomotsuPriest" weight="1">
+    <SpawnObject text="YomotsuPriest" count="20" />
+  </Encounter>
+
+  <Encounter name="YomotsuWarrior" weight="1">
+    <SpawnObject text="YomotsuWarrior" count="20" />
+  </Encounter>
+
+  <Encounter name="YoungNinja" weight="1">
+    <SpawnObject text="YoungNinja" count="20" />
+  </Encounter>
+
+  <Encounter name="YoungRonin" weight="1">
+    <SpawnObject text="YoungRonin" count="20" />
+  </Encounter>
+
+  <Encounter name="Zombie" weight="1">
+    <SpawnObject text="Zombie" count="20" />
+  </Encounter>
+
+  <Encounter name="BreezePhantom" weight="1">
+    <SpawnObject text="BreezePhantom" count="20" />
+  </Encounter>
+
+  <Encounter name="CycloneDemon" weight="1">
+    <SpawnObject text="CycloneDemon" count="20" />
+  </Encounter>
+
+  <Encounter name="GaleWisp" weight="1">
+    <SpawnObject text="GaleWisp" count="20" />
+  </Encounter>
+
+  <Encounter name="MysticWisp" weight="1">
+    <SpawnObject text="MysticWisp" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowDrifter" weight="1">
+    <SpawnObject text="ShadowDrifter" count="20" />
+  </Encounter>
+
+  <Encounter name="SkySeraph" weight="1">
+    <SpawnObject text="SkySeraph" count="20" />
+  </Encounter>
+
+  <Encounter name="StormHerald" weight="1">
+    <SpawnObject text="StormHerald" count="20" />
+  </Encounter>
+
+  <Encounter name="TempestSpirit" weight="1">
+    <SpawnObject text="TempestSpirit" count="20" />
+  </Encounter>
+
+  <Encounter name="TempestWyrm" weight="1">
+    <SpawnObject text="TempestWyrm" count="20" />
+  </Encounter>
+
+  <Encounter name="VortexGuardian" weight="1">
+    <SpawnObject text="VortexGuardian" count="20" />
+  </Encounter>
+
+  <Encounter name="WhirlwindFiend" weight="1">
+    <SpawnObject text="WhirlwindFiend" count="20" />
+  </Encounter>
+
+  <Encounter name="ZephyrWarden" weight="1">
+    <SpawnObject text="ZephyrWarden" count="20" />
+  </Encounter>
+
+  <Encounter name="AcidicAlligator" weight="1">
+    <SpawnObject text="AcidicAlligator" count="20" />
+  </Encounter>
+
+  <Encounter name="AncientAlligator" weight="1">
+    <SpawnObject text="AncientAlligator" count="20" />
+  </Encounter>
+
+  <Encounter name="FirebreathAlligator" weight="1">
+    <SpawnObject text="FirebreathAlligator" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostbiteAlligator" weight="1">
+    <SpawnObject text="FrostbiteAlligator" count="20" />
+  </Encounter>
+
+  <Encounter name="IllusionaryAlligator" weight="1">
+    <SpawnObject text="IllusionaryAlligator" count="20" />
+  </Encounter>
+
+  <Encounter name="RagingAlligator" weight="1">
+    <SpawnObject text="RagingAlligator" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowAlligator" weight="1">
+    <SpawnObject text="ShadowAlligator" count="20" />
+  </Encounter>
+
+  <Encounter name="StormAlligator" weight="1">
+    <SpawnObject text="StormAlligator" count="20" />
+  </Encounter>
+
+  <Encounter name="ToxicAlligator" weight="1">
+    <SpawnObject text="ToxicAlligator" count="20" />
+  </Encounter>
+
+  <Encounter name="VenomousAlligator" weight="1">
+    <SpawnObject text="VenomousAlligator" count="20" />
+  </Encounter>
+
+  <Encounter name="FlameBear" weight="1">
+    <SpawnObject text="FlameBear" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostBear" weight="1">
+    <SpawnObject text="FrostBear" count="20" />
+  </Encounter>
+
+  <Encounter name="LeafBear" weight="1">
+    <SpawnObject text="LeafBear" count="20" />
+  </Encounter>
+
+  <Encounter name="LightBear" weight="1">
+    <SpawnObject text="LightBear" count="20" />
+  </Encounter>
+
+  <Encounter name="RockBear" weight="1">
+    <SpawnObject text="RockBear" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowBear" weight="1">
+    <SpawnObject text="ShadowBear" count="20" />
+  </Encounter>
+
+  <Encounter name="SteelBear" weight="1">
+    <SpawnObject text="SteelBear" count="20" />
+  </Encounter>
+
+  <Encounter name="ThunderBear" weight="1">
+    <SpawnObject text="ThunderBear" count="20" />
+  </Encounter>
+
+  <Encounter name="VenomBear" weight="1">
+    <SpawnObject text="VenomBear" count="20" />
+  </Encounter>
+
+  <Encounter name="WindBear" weight="1">
+    <SpawnObject text="WindBear" count="20" />
+  </Encounter>
+
+  <Encounter name="AngusBerserker" weight="1">
+    <SpawnObject text="AngusBerserker" count="20" />
+  </Encounter>
+
+  <Encounter name="BisonBrute" weight="1">
+    <SpawnObject text="BisonBrute" count="20" />
+  </Encounter>
+
+  <Encounter name="DairyWraith" weight="1">
+    <SpawnObject text="DairyWraith" count="20" />
+  </Encounter>
+
+  <Encounter name="GuernseyGuardian" weight="1">
+    <SpawnObject text="GuernseyGuardian" count="20" />
+  </Encounter>
+
+  <Encounter name="HerefordWarlock" weight="1">
+    <SpawnObject text="HerefordWarlock" count="20" />
+  </Encounter>
+
+  <Encounter name="HighlandBull" weight="1">
+    <SpawnObject text="HighlandBull" count="20" />
+  </Encounter>
+
+  <Encounter name="JerseyEnchantress" weight="1">
+    <SpawnObject text="JerseyEnchantress" count="20" />
+  </Encounter>
+
+  <Encounter name="MilkingDemon" weight="1">
+    <SpawnObject text="MilkingDemon" count="20" />
+  </Encounter>
+
+  <Encounter name="SahiwalShaman" weight="1">
+    <SpawnObject text="SahiwalShaman" count="20" />
+  </Encounter>
+
+  <Encounter name="ZebuZealot" weight="1">
+    <SpawnObject text="ZebuZealot" count="20" />
+  </Encounter>
+
+  <Encounter name="AbyssinianTracker" weight="1">
+    <SpawnObject text="AbyssinianTracker" count="20" />
+  </Encounter>
+
+  <Encounter name="BengalStorm" weight="1">
+    <SpawnObject text="BengalStorm" count="20" />
+  </Encounter>
+
+  <Encounter name="MaineCoonTitan" weight="1">
+    <SpawnObject text="MaineCoonTitan" count="20" />
+  </Encounter>
+
+  <Encounter name="PersianShade" weight="1">
+    <SpawnObject text="PersianShade" count="20" />
+  </Encounter>
+
+  <Encounter name="RagdollGuardian" weight="1">
+    <SpawnObject text="RagdollGuardian" count="20" />
+  </Encounter>
+
+  <Encounter name="ScottishFoldSentinel" weight="1">
+    <SpawnObject text="ScottishFoldSentinel" count="20" />
+  </Encounter>
+
+  <Encounter name="SiameseIllusionist" weight="1">
+    <SpawnObject text="SiameseIllusionist" count="20" />
+  </Encounter>
+
+  <Encounter name="SiberianFrostclaw" weight="1">
+    <SpawnObject text="SiberianFrostclaw" count="20" />
+  </Encounter>
+
+  <Encounter name="SphinxCat" weight="1">
+    <SpawnObject text="SphinxCat" count="20" />
+  </Encounter>
+
+  <Encounter name="TurkishAngoraEnchanter" weight="1">
+    <SpawnObject text="TurkishAngoraEnchanter" count="20" />
+  </Encounter>
+
+  <Encounter name="FireRooster" weight="1">
+    <SpawnObject text="FireRooster" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostHen" weight="1">
+    <SpawnObject text="FrostHen" count="20" />
+  </Encounter>
+
+  <Encounter name="IllusionHen" weight="1">
+    <SpawnObject text="IllusionHen" count="20" />
+  </Encounter>
+
+  <Encounter name="MysticFowl" weight="1">
+    <SpawnObject text="MysticFowl" count="20" />
+  </Encounter>
+
+  <Encounter name="NecroRooster" weight="1">
+    <SpawnObject text="NecroRooster" count="20" />
+  </Encounter>
+
+  <Encounter name="PoisonPullet" weight="1">
+    <SpawnObject text="PoisonPullet" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowChick" weight="1">
+    <SpawnObject text="ShadowChick" count="20" />
+  </Encounter>
+
+  <Encounter name="StoneRooster" weight="1">
+    <SpawnObject text="StoneRooster" count="20" />
+  </Encounter>
+
+  <Encounter name="Thunderbird" weight="1">
+    <SpawnObject text="Thunderbird" count="20" />
+  </Encounter>
+
+  <Encounter name="WindChicken" weight="1">
+    <SpawnObject text="WindChicken" count="20" />
+  </Encounter>
+
+  <Encounter name="BloodthirstyVines" weight="1">
+    <SpawnObject text="BloodthirstyVines" count="20" />
+  </Encounter>
+
+  <Encounter name="CorruptingCreeper" weight="1">
+    <SpawnObject text="CorruptingCreeper" count="20" />
+  </Encounter>
+
+  <Encounter name="DreadedCreeper" weight="1">
+    <SpawnObject text="DreadedCreeper" count="20" />
+  </Encounter>
+
+  <Encounter name="ElderTendril" weight="1">
+    <SpawnObject text="ElderTendril" count="20" />
+  </Encounter>
+
+  <Encounter name="NightshadeBramble" weight="1">
+    <SpawnObject text="NightshadeBramble" count="20" />
+  </Encounter>
+
+  <Encounter name="PhantomVines" weight="1">
+    <SpawnObject text="PhantomVines" count="20" />
+  </Encounter>
+
+  <Encounter name="SinisterRoot" weight="1">
+    <SpawnObject text="SinisterRoot" count="20" />
+  </Encounter>
+
+  <Encounter name="ThornedHorror" weight="1">
+    <SpawnObject text="ThornedHorror" count="20" />
+  </Encounter>
+
+  <Encounter name="VenomousIvy" weight="1">
+    <SpawnObject text="VenomousIvy" count="20" />
+  </Encounter>
+
+  <Encounter name="VileBlossom" weight="1">
+    <SpawnObject text="VileBlossom" count="20" />
+  </Encounter>
+
+  <Encounter name="BansheeCrab" weight="1">
+    <SpawnObject text="BansheeCrab" count="20" />
+  </Encounter>
+
+  <Encounter name="EtherealCrab" weight="1">
+    <SpawnObject text="EtherealCrab" count="20" />
+  </Encounter>
+
+  <Encounter name="IceCrab" weight="1">
+    <SpawnObject text="IceCrab" count="20" />
+  </Encounter>
+
+  <Encounter name="LavaCrab" weight="1">
+    <SpawnObject text="LavaCrab" count="20" />
+  </Encounter>
+
+  <Encounter name="MagneticCrab" weight="1">
+    <SpawnObject text="MagneticCrab" count="20" />
+  </Encounter>
+
+  <Encounter name="PoisonousCrab" weight="1">
+    <SpawnObject text="PoisonousCrab" count="20" />
+  </Encounter>
+
+  <Encounter name="RiptideCrab" weight="1">
+    <SpawnObject text="RiptideCrab" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowCrab" weight="1">
+    <SpawnObject text="ShadowCrab" count="20" />
+  </Encounter>
+
+  <Encounter name="StormCrab" weight="1">
+    <SpawnObject text="StormCrab" count="20" />
+  </Encounter>
+
+  <Encounter name="VortexCrab" weight="1">
+    <SpawnObject text="VortexCrab" count="20" />
+  </Encounter>
+
+  <Encounter name="AbyssalWarden" weight="1">
+    <SpawnObject text="AbyssalWarden" count="20" />
+  </Encounter>
+
+  <Encounter name="BlightDemon" weight="1">
+    <SpawnObject text="BlightDemon" count="20" />
+  </Encounter>
+
+  <Encounter name="CursedHarbinger" weight="1">
+    <SpawnObject text="CursedHarbinger" count="20" />
+  </Encounter>
+
+  <Encounter name="Deadlord" weight="1">
+    <SpawnObject text="Deadlord" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostboundBehemoth" weight="1">
+    <SpawnObject text="FrostboundBehemoth" count="20" />
+  </Encounter>
+
+  <Encounter name="HellfireJuggernaut" weight="1">
+    <SpawnObject text="HellfireJuggernaut" count="20" />
+  </Encounter>
+
+  <Encounter name="InfernalIncinerator" weight="1">
+    <SpawnObject text="InfernalIncinerator" count="20" />
+  </Encounter>
+
+  <Encounter name="StormDeamon" weight="1">
+    <SpawnObject text="StormDeamon" count="20" />
+  </Encounter>
+
+  <Encounter name="ToxicReaver" weight="1">
+    <SpawnObject text="ToxicReaver" count="20" />
+  </Encounter>
+
+  <Encounter name="VoidStalker" weight="1">
+    <SpawnObject text="VoidStalker" count="20" />
+  </Encounter>
+
+  <Encounter name="AncientDragon" weight="1">
+    <SpawnObject text="AncientDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="BloodDragon" weight="1">
+    <SpawnObject text="BloodDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="CelestialDragon" weight="1">
+    <SpawnObject text="CelestialDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="CrystalDragon" weight="1">
+    <SpawnObject text="CrystalDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="EtherealDragon" weight="1">
+    <SpawnObject text="EtherealDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostDrakon" weight="1">
+    <SpawnObject text="FrostDrakon" count="20" />
+  </Encounter>
+
+  <Encounter name="InfernoDrakon" weight="1">
+    <SpawnObject text="InfernoDrakon" count="20" />
+  </Encounter>
+
+  <Encounter name="NatureDragon" weight="1">
+    <SpawnObject text="NatureDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowDragon" weight="1">
+    <SpawnObject text="ShadowDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="StormDragon" weight="1">
+    <SpawnObject text="StormDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="VenomousDragon" weight="1">
+    <SpawnObject text="VenomousDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="CrystalWarden" weight="1">
+    <SpawnObject text="CrystalWarden" count="20" />
+  </Encounter>
+
+  <Encounter name="FossilElemental" weight="1">
+    <SpawnObject text="FossilElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="GraniteColossus" weight="1">
+    <SpawnObject text="GraniteColossus" count="20" />
+  </Encounter>
+
+  <Encounter name="LavaFiend" weight="1">
+    <SpawnObject text="LavaFiend" count="20" />
+  </Encounter>
+
+  <Encounter name="MagmaGolem" weight="1">
+    <SpawnObject text="MagmaGolem" count="20" />
+  </Encounter>
+
+  <Encounter name="MudGolem" weight="1">
+    <SpawnObject text="MudGolem" count="20" />
+  </Encounter>
+
+  <Encounter name="QuakeBringer" weight="1">
+    <SpawnObject text="QuakeBringer" count="20" />
+  </Encounter>
+
+  <Encounter name="SandstormElemental" weight="1">
+    <SpawnObject text="SandstormElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="StoneGuardian" weight="1">
+    <SpawnObject text="StoneGuardian" count="20" />
+  </Encounter>
+
+  <Encounter name="TerraWisp" weight="1">
+    <SpawnObject text="TerraWisp" count="20" />
+  </Encounter>
+
+  <Encounter name="CerebralEttin" weight="1">
+    <SpawnObject text="CerebralEttin" count="20" />
+  </Encounter>
+
+  <Encounter name="EarthquakeEttin" weight="1">
+    <SpawnObject text="EarthquakeEttin" count="20" />
+  </Encounter>
+
+  <Encounter name="FlameWardenEttin" weight="1">
+    <SpawnObject text="FlameWardenEttin" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostWardenEttin" weight="1">
+    <SpawnObject text="FrostWardenEttin" count="20" />
+  </Encounter>
+
+  <Encounter name="IllusionistEttin" weight="1">
+    <SpawnObject text="IllusionistEttin" count="20" />
+  </Encounter>
+
+  <Encounter name="NecroEttin" weight="1">
+    <SpawnObject text="NecroEttin" count="20" />
+  </Encounter>
+
+  <Encounter name="StormcallerEttin" weight="1">
+    <SpawnObject text="StormcallerEttin" count="20" />
+  </Encounter>
+
+  <Encounter name="TidalEttin" weight="1">
+    <SpawnObject text="TidalEttin" count="20" />
+  </Encounter>
+
+  <Encounter name="TwinTerrorEttin" weight="1">
+    <SpawnObject text="TwinTerrorEttin" count="20" />
+  </Encounter>
+
+  <Encounter name="VenomousEttin" weight="1">
+    <SpawnObject text="VenomousEttin" count="20" />
+  </Encounter>
+
+  <Encounter name="BubbleFerret" weight="1">
+    <SpawnObject text="BubbleFerret" count="20" />
+  </Encounter>
+
+  <Encounter name="DreamyFerret" weight="1">
+    <SpawnObject text="DreamyFerret" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostyFerret" weight="1">
+    <SpawnObject text="FrostyFerret" count="20" />
+  </Encounter>
+
+  <Encounter name="GlimmeringFerret" weight="1">
+    <SpawnObject text="GlimmeringFerret" count="20" />
+  </Encounter>
+
+  <Encounter name="HarmonyFerret" weight="1">
+    <SpawnObject text="HarmonyFerret" count="20" />
+  </Encounter>
+
+  <Encounter name="MysticFerret" weight="1">
+    <SpawnObject text="MysticFerret" count="20" />
+  </Encounter>
+
+  <Encounter name="PuffyFerret" weight="1">
+    <SpawnObject text="PuffyFerret" count="20" />
+  </Encounter>
+
+  <Encounter name="SparkFerret" weight="1">
+    <SpawnObject text="SparkFerret" count="20" />
+  </Encounter>
+
+  <Encounter name="StarryFerret" weight="1">
+    <SpawnObject text="StarryFerret" count="20" />
+  </Encounter>
+
+  <Encounter name="SunbeamFerret" weight="1">
+    <SpawnObject text="SunbeamFerret" count="20" />
+  </Encounter>
+
+  <Encounter name="Banshee" weight="1">
+    <SpawnObject text="Banshee" count="20" />
+  </Encounter>
+
+  <Encounter name="Chaneque" weight="1">
+    <SpawnObject text="Chaneque" count="20" />
+  </Encounter>
+
+  <Encounter name="Dryad" weight="1">
+    <SpawnObject text="Dryad" count="20" />
+  </Encounter>
+
+  <Encounter name="Fairy" weight="1">
+    <SpawnObject text="Fairy" count="20" />
+  </Encounter>
+
+  <Encounter name="Leprechaun" weight="1">
+    <SpawnObject text="Leprechaun" count="20" />
+  </Encounter>
+
+  <Encounter name="Nymph" weight="1">
+    <SpawnObject text="Nymph" count="20" />
+  </Encounter>
+
+  <Encounter name="Puck" weight="1">
+    <SpawnObject text="Puck" count="20" />
+  </Encounter>
+
+  <Encounter name="Selkie" weight="1">
+    <SpawnObject text="Selkie" count="20" />
+  </Encounter>
+
+  <Encounter name="Sidhe" weight="1">
+    <SpawnObject text="Sidhe" count="20" />
+  </Encounter>
+
+  <Encounter name="WillOTheWisp" weight="1">
+    <SpawnObject text="WillOTheWisp" count="20" />
+  </Encounter>
+
+  <Encounter name="CinderWraith" weight="1">
+    <SpawnObject text="CinderWraith" count="20" />
+  </Encounter>
+
+  <Encounter name="EmberSerpent" weight="1">
+    <SpawnObject text="EmberSerpent" count="20" />
+  </Encounter>
+
+  <Encounter name="EmberSpirit" weight="1">
+    <SpawnObject text="EmberSpirit" count="20" />
+  </Encounter>
+
+  <Encounter name="FlareImp" weight="1">
+    <SpawnObject text="FlareImp" count="20" />
+  </Encounter>
+
+  <Encounter name="InfernalDuke" weight="1">
+    <SpawnObject text="InfernalDuke" count="20" />
+  </Encounter>
+
+  <Encounter name="InfernoWarden" weight="1">
+    <SpawnObject text="InfernoWarden" count="20" />
+  </Encounter>
+
+  <Encounter name="MoltenGolem" weight="1">
+    <SpawnObject text="MoltenGolem" count="20" />
+  </Encounter>
+
+  <Encounter name="PyroclasticGolem" weight="1">
+    <SpawnObject text="PyroclasticGolem" count="20" />
+  </Encounter>
+
+  <Encounter name="SolarElemental" weight="1">
+    <SpawnObject text="SolarElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="VolcanicTitan" weight="1">
+    <SpawnObject text="VolcanicTitan" count="20" />
+  </Encounter>
+
+  <Encounter name="AbbadonTheAbyssal" weight="1">
+    <SpawnObject text="AbbadonTheAbyssal" count="20" />
+  </Encounter>
+
+  <Encounter name="Chimereon" weight="1">
+    <SpawnObject text="Chimereon" count="20" />
+  </Encounter>
+
+  <Encounter name="Drolatic" weight="1">
+    <SpawnObject text="Drolatic" count="20" />
+  </Encounter>
+
+  <Encounter name="Grimorie" weight="1">
+    <SpawnObject text="Grimorie" count="20" />
+  </Encounter>
+
+  <Encounter name="GrotesqueOfRouen" weight="1">
+    <SpawnObject text="GrotesqueOfRouen" count="20" />
+  </Encounter>
+
+  <Encounter name="GrymalkinTheWatcher" weight="1">
+    <SpawnObject text="GrymalkinTheWatcher" count="20" />
+  </Encounter>
+
+  <Encounter name="Mordrake" weight="1">
+    <SpawnObject text="Mordrake" count="20" />
+  </Encounter>
+
+  <Encounter name="Strix" weight="1">
+    <SpawnObject text="Strix" count="20" />
+  </Encounter>
+
+  <Encounter name="Vespa" weight="1">
+    <SpawnObject text="Vespa" count="20" />
+  </Encounter>
+
+  <Encounter name="VitrailTheMosaic" weight="1">
+    <SpawnObject text="VitrailTheMosaic" count="20" />
+  </Encounter>
+
+  <Encounter name="IshKarTheForgotten" weight="1">
+    <SpawnObject text="IshKarTheForgotten" count="20" />
+  </Encounter>
+
+  <Encounter name="NyxRith" weight="1">
+    <SpawnObject text="NyxRith" count="20" />
+  </Encounter>
+
+  <Encounter name="QuorZael" weight="1">
+    <SpawnObject text="QuorZael" count="20" />
+  </Encounter>
+
+  <Encounter name="RathZorTheShattered" weight="1">
+    <SpawnObject text="RathZorTheShattered" count="20" />
+  </Encounter>
+
+  <Encounter name="ThulGorTheForsaken" weight="1">
+    <SpawnObject text="ThulGorTheForsaken" count="20" />
+  </Encounter>
+
+  <Encounter name="UruKoth" weight="1">
+    <SpawnObject text="UruKoth" count="20" />
+  </Encounter>
+
+  <Encounter name="Vorgath" weight="1">
+    <SpawnObject text="Vorgath" count="20" />
+  </Encounter>
+
+  <Encounter name="XalRath" weight="1">
+    <SpawnObject text="XalRath" count="20" />
+  </Encounter>
+
+  <Encounter name="ZelVrak" weight="1">
+    <SpawnObject text="ZelVrak" count="20" />
+  </Encounter>
+
+  <Encounter name="ZorThul" weight="1">
+    <SpawnObject text="ZorThul" count="20" />
+  </Encounter>
+
+  <Encounter name="BloodSerpent" weight="1">
+    <SpawnObject text="BloodSerpent" count="20" />
+  </Encounter>
+
+  <Encounter name="CelestialPython" weight="1">
+    <SpawnObject text="CelestialPython" count="20" />
+  </Encounter>
+
+  <Encounter name="EmperorCobra" weight="1">
+    <SpawnObject text="EmperorCobra" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostSerpent" weight="1">
+    <SpawnObject text="FrostSerpent" count="20" />
+  </Encounter>
+
+  <Encounter name="GorgonViper" weight="1">
+    <SpawnObject text="GorgonViper" count="20" />
+  </Encounter>
+
+  <Encounter name="InfernoPython" weight="1">
+    <SpawnObject text="InfernoPython" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowAnaconda" weight="1">
+    <SpawnObject text="ShadowAnaconda" count="20" />
+  </Encounter>
+
+  <Encounter name="ThunderSerpent" weight="1">
+    <SpawnObject text="ThunderSerpent" count="20" />
+  </Encounter>
+
+  <Encounter name="TitanBoa" weight="1">
+    <SpawnObject text="TitanBoa" count="20" />
+  </Encounter>
+
+  <Encounter name="VengefulPitViper" weight="1">
+    <SpawnObject text="VengefulPitViper" count="20" />
+  </Encounter>
+
+  <Encounter name="BlackWidowQueen" weight="1">
+    <SpawnObject text="BlackWidowQueen" count="20" />
+  </Encounter>
+
+  <Encounter name="GiantTrapdoorSpider" weight="1">
+    <SpawnObject text="GiantTrapdoorSpider" count="20" />
+  </Encounter>
+
+  <Encounter name="GiantWolfSpider" weight="1">
+    <SpawnObject text="GiantWolfSpider" count="20" />
+  </Encounter>
+
+  <Encounter name="GoldenOrbWeaver" weight="1">
+    <SpawnObject text="GoldenOrbWeaver" count="20" />
+  </Encounter>
+
+  <Encounter name="GoliathBirdeater" weight="1">
+    <SpawnObject text="GoliathBirdeater" count="20" />
+  </Encounter>
+
+  <Encounter name="HuntsmanSpider" weight="1">
+    <SpawnObject text="HuntsmanSpider" count="20" />
+  </Encounter>
+
+  <Encounter name="PurseSpider" weight="1">
+    <SpawnObject text="PurseSpider" count="20" />
+  </Encounter>
+
+  <Encounter name="ScorpionSpider" weight="1">
+    <SpawnObject text="ScorpionSpider" count="20" />
+  </Encounter>
+
+  <Encounter name="SpiderlingBroodmother" weight="1">
+    <SpawnObject text="SpiderlingBroodmother" count="20" />
+  </Encounter>
+
+  <Encounter name="TarantulaWarrior" weight="1">
+    <SpawnObject text="TarantulaWarrior" count="20" />
+  </Encounter>
+
+  <Encounter name="BeardedGoat" weight="1">
+    <SpawnObject text="BeardedGoat" count="20" />
+  </Encounter>
+
+  <Encounter name="Chamois" weight="1">
+    <SpawnObject text="Chamois" count="20" />
+  </Encounter>
+
+  <Encounter name="CliffGoat" weight="1">
+    <SpawnObject text="CliffGoat" count="20" />
+  </Encounter>
+
+  <Encounter name="DallSheep" weight="1">
+    <SpawnObject text="DallSheep" count="20" />
+  </Encounter>
+
+  <Encounter name="FaintingGoat" weight="1">
+    <SpawnObject text="FaintingGoat" count="20" />
+  </Encounter>
+
+  <Encounter name="Goral" weight="1">
+    <SpawnObject text="Goral" count="20" />
+  </Encounter>
+
+  <Encounter name="Ibex" weight="1">
+    <SpawnObject text="Ibex" count="20" />
+  </Encounter>
+
+  <Encounter name="Markhor" weight="1">
+    <SpawnObject text="Markhor" count="20" />
+  </Encounter>
+
+  <Encounter name="SableAntelope" weight="1">
+    <SpawnObject text="SableAntelope" count="20" />
+  </Encounter>
+
+  <Encounter name="Tahr" weight="1">
+    <SpawnObject text="Tahr" count="20" />
+  </Encounter>
+
+  <Encounter name="BoneGolem" weight="1">
+    <SpawnObject text="BoneGolem" count="20" />
+  </Encounter>
+
+  <Encounter name="CheeseGolem" weight="1">
+    <SpawnObject text="CheeseGolem" count="20" />
+  </Encounter>
+
+  <Encounter name="CrystalGolem" weight="1">
+    <SpawnObject text="CrystalGolem" count="20" />
+  </Encounter>
+
+  <Encounter name="IronGolem" weight="1">
+    <SpawnObject text="IronGolem" count="20" />
+  </Encounter>
+
+  <Encounter name="MeatGolem" weight="1">
+    <SpawnObject text="MeatGolem" count="20" />
+  </Encounter>
+
+  <Encounter name="MuckGolem" weight="1">
+    <SpawnObject text="MuckGolem" count="20" />
+  </Encounter>
+
+  <Encounter name="SandGolem" weight="1">
+    <SpawnObject text="SandGolem" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowGolem" weight="1">
+    <SpawnObject text="ShadowGolem" count="20" />
+  </Encounter>
+
+  <Encounter name="StoneGolem" weight="1">
+    <SpawnObject text="StoneGolem" count="20" />
+  </Encounter>
+
+  <Encounter name="WoodGolem" weight="1">
+    <SpawnObject text="WoodGolem" count="20" />
+  </Encounter>
+
+  <Encounter name="BaboonsAlpha" weight="1">
+    <SpawnObject text="BaboonsAlpha" count="20" />
+  </Encounter>
+
+  <Encounter name="CapuchinTrickster" weight="1">
+    <SpawnObject text="CapuchinTrickster" count="20" />
+  </Encounter>
+
+  <Encounter name="ChimpanzeeBerserker" weight="1">
+    <SpawnObject text="ChimpanzeeBerserker" count="20" />
+  </Encounter>
+
+  <Encounter name="GibbonMystic" weight="1">
+    <SpawnObject text="GibbonMystic" count="20" />
+  </Encounter>
+
+  <Encounter name="HowlerMonkey" weight="1">
+    <SpawnObject text="HowlerMonkey" count="20" />
+  </Encounter>
+
+  <Encounter name="MandrillShaman" weight="1">
+    <SpawnObject text="MandrillShaman" count="20" />
+  </Encounter>
+
+  <Encounter name="MountainGorilla" weight="1">
+    <SpawnObject text="MountainGorilla" count="20" />
+  </Encounter>
+
+  <Encounter name="OrangutanSage" weight="1">
+    <SpawnObject text="OrangutanSage" count="20" />
+  </Encounter>
+
+  <Encounter name="SifakaWarrior" weight="1">
+    <SpawnObject text="SifakaWarrior" count="20" />
+  </Encounter>
+
+  <Encounter name="SpiderMonkey" weight="1">
+    <SpawnObject text="SpiderMonkey" count="20" />
+  </Encounter>
+
+  <Encounter name="AzureMoose" weight="1">
+    <SpawnObject text="AzureMoose" count="20" />
+  </Encounter>
+
+  <Encounter name="CrimsonMule" weight="1">
+    <SpawnObject text="CrimsonMule" count="20" />
+  </Encounter>
+
+  <Encounter name="CursedWhiteTail" weight="1">
+    <SpawnObject text="CursedWhiteTail" count="20" />
+  </Encounter>
+
+  <Encounter name="EclipseReindeer" weight="1">
+    <SpawnObject text="EclipseReindeer" count="20" />
+  </Encounter>
+
+  <Encounter name="EmberAxis" weight="1">
+    <SpawnObject text="EmberAxis" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostWapiti" weight="1">
+    <SpawnObject text="FrostWapiti" count="20" />
+  </Encounter>
+
+  <Encounter name="MysticFallow" weight="1">
+    <SpawnObject text="MysticFallow" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowMuntjac" weight="1">
+    <SpawnObject text="ShadowMuntjac" count="20" />
+  </Encounter>
+
+  <Encounter name="StormSika" weight="1">
+    <SpawnObject text="StormSika" count="20" />
+  </Encounter>
+
+<!--   <Encounter name="VenomousRoe" weight="1">
+    <SpawnObject text="VenomousRoe" count="20" />
+  </Encounter>
+
+  <Encounter name="AriesRamBear" weight="1">
+    <SpawnObject text="AriesRamBear" count="20" />
+  </Encounter>
+
+  <Encounter name="CancerShellBear" weight="1">
+    <SpawnObject text="CancerShellBear" count="20" />
+  </Encounter>
+
+  <Encounter name="CapricornMountainBear" weight="1">
+    <SpawnObject text="CapricornMountainBear" count="20" />
+  </Encounter>
+
+  <Encounter name="GeminiTwinBear" weight="1">
+    <SpawnObject text="GeminiTwinBear" count="20" />
+  </Encounter>
+
+  <Encounter name="LeoSunBear" weight="1">
+    <SpawnObject text="LeoSunBear" count="20" />
+  </Encounter>
+
+  <Encounter name="LibraBalanceBear" weight="1">
+    <SpawnObject text="LibraBalanceBear" count="20" />
+  </Encounter>
+
+  <Encounter name="SagittariusArcherBear" weight="1">
+    <SpawnObject text="SagittariusArcherBear" count="20" />
+  </Encounter>
+
+  <Encounter name="ScorpioVenomBear" weight="1">
+    <SpawnObject text="ScorpioVenomBear" count="20" />
+  </Encounter>
+
+  <Encounter name="TaurusEarthBear" weight="1">
+    <SpawnObject text="TaurusEarthBear" count="20" />
+  </Encounter>
+
+  <Encounter name="VirgoPurityBear" weight="1">
+    <SpawnObject text="VirgoPurityBear" count="20" />
+  </Encounter>
+
+  <Encounter name="AriesHarpy" weight="1">
+    <SpawnObject text="AriesHarpy" count="20" />
+  </Encounter>
+
+  <Encounter name="CancerHarpy" weight="1">
+    <SpawnObject text="CancerHarpy" count="20" />
+  </Encounter>
+
+  <Encounter name="CapricornHarpy" weight="1">
+    <SpawnObject text="CapricornHarpy" count="20" />
+  </Encounter>
+
+  <Encounter name="GeminiHarpy" weight="1">
+    <SpawnObject text="GeminiHarpy" count="20" />
+  </Encounter>
+
+  <Encounter name="LeoHarpy" weight="1">
+    <SpawnObject text="LeoHarpy" count="20" />
+  </Encounter>
+
+  <Encounter name="LibraHarpy" weight="1">
+    <SpawnObject text="LibraHarpy" count="20" />
+  </Encounter>
+
+  <Encounter name="SagittariusHarpy" weight="1">
+    <SpawnObject text="SagittariusHarpy" count="20" />
+  </Encounter>
+
+  <Encounter name="ScorpioHarpy" weight="1">
+    <SpawnObject text="ScorpioHarpy" count="20" />
+  </Encounter>
+
+  <Encounter name="TaurusHarpy" weight="1">
+    <SpawnObject text="TaurusHarpy" count="20" />
+  </Encounter>
+
+  <Encounter name="VirgoHarpy" weight="1">
+    <SpawnObject text="VirgoHarpy" count="20" />
+  </Encounter>
+
+  <Encounter name="InfernoStallion" weight="1">
+    <SpawnObject text="InfernoStallion" count="20" />
+  </Encounter>
+
+  <Encounter name="IronSteed" weight="1">
+    <SpawnObject text="IronSteed" count="20" />
+  </Encounter>
+
+  <Encounter name="MetallicWindsteed" weight="1">
+    <SpawnObject text="MetallicWindsteed" count="20" />
+  </Encounter>
+
+  <Encounter name="StoneSteed" weight="1">
+    <SpawnObject text="StoneSteed" count="20" />
+  </Encounter>
+
+  <Encounter name="TidalMare" weight="1">
+    <SpawnObject text="TidalMare" count="20" />
+  </Encounter>
+
+  <Encounter name="VolcanicCharger" weight="1">
+    <SpawnObject text="VolcanicCharger" count="20" />
+  </Encounter>
+
+  <Encounter name="WoodlandCharger" weight="1">
+    <SpawnObject text="WoodlandCharger" count="20" />
+  </Encounter>
+
+  <Encounter name="WoodlandSpiritHorse" weight="1">
+    <SpawnObject text="WoodlandSpiritHorse" count="20" />
+  </Encounter>
+
+  <Encounter name="YangStallion" weight="1">
+    <SpawnObject text="YangStallion" count="20" />
+  </Encounter>
+
+  <Encounter name="YinSteed" weight="1">
+    <SpawnObject text="YinSteed" count="20" />
+  </Encounter>
+
+  <Encounter name="Acererak" weight="1">
+    <SpawnObject text="Acererak" count="20" />
+  </Encounter>
+
+  <Encounter name="AzalinRex" weight="1">
+    <SpawnObject text="AzalinRex" count="20" />
+  </Encounter>
+
+  <Encounter name="KasTheBloodyHanded" weight="1">
+    <SpawnObject text="KasTheBloodyHanded" count="20" />
+  </Encounter>
+
+  <Encounter name="KelThuzad" weight="1">
+    <SpawnObject text="KelThuzad" count="20" />
+  </Encounter>
+
+  <Encounter name="LarlochTheShadowKing" weight="1">
+    <SpawnObject text="LarlochTheShadowKing" count="20" />
+  </Encounter>
+
+  <Encounter name="Nagash" weight="1">
+    <SpawnObject text="Nagash" count="20" />
+  </Encounter>
+
+  <Encounter name="RaistlinMajere" weight="1">
+    <SpawnObject text="RaistlinMajere" count="20" />
+  </Encounter>
+
+  <Encounter name="SothTheDeathKnight" weight="1">
+    <SpawnObject text="SothTheDeathKnight" count="20" />
+  </Encounter>
+
+  <Encounter name="SzassTam" weight="1">
+    <SpawnObject text="SzassTam" count="20" />
+  </Encounter>
+
+  <Encounter name="Vecna" weight="1">
+    <SpawnObject text="Vecna" count="20" />
+  </Encounter>
+
+  <Encounter name="BloodLich" weight="1">
+    <SpawnObject text="BloodLich" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostLich" weight="1">
+    <SpawnObject text="FrostLich" count="20" />
+  </Encounter>
+
+  <Encounter name="InfernalLich" weight="1">
+    <SpawnObject text="InfernalLich" count="20" />
+  </Encounter>
+
+  <Encounter name="NecroticLich" weight="1">
+    <SpawnObject text="NecroticLich" count="20" />
+  </Encounter>
+
+  <Encounter name="PlagueLich" weight="1">
+    <SpawnObject text="PlagueLich" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowLich" weight="1">
+    <SpawnObject text="ShadowLich" count="20" />
+  </Encounter>
+
+  <Encounter name="SoulEaterLich" weight="1">
+    <SpawnObject text="SoulEaterLich" count="20" />
+  </Encounter>
+
+  <Encounter name="StormLich" weight="1">
+    <SpawnObject text="StormLich" count="20" />
+  </Encounter>
+
+  <Encounter name="ToxicLich" weight="1">
+    <SpawnObject text="ToxicLich" count="20" />
+  </Encounter>
+
+  <Encounter name="WraithLich" weight="1">
+    <SpawnObject text="WraithLich" count="20" />
+  </Encounter>
+
+  <Encounter name="CactusLlama" weight="1">
+    <SpawnObject text="CactusLlama" count="20" />
+  </Encounter>
+
+  <Encounter name="CharroLlama" weight="1">
+    <SpawnObject text="CharroLlama" count="20" />
+  </Encounter>
+
+  <Encounter name="DiaDeLosMuertosLlama" weight="1">
+    <SpawnObject text="DiaDeLosMuertosLlama" count="20" />
+  </Encounter>
+
+  <Encounter name="ElMariachiLlama" weight="1">
+    <SpawnObject text="ElMariachiLlama" count="20" />
+  </Encounter>
+
+  <Encounter name="FiestaLlama" weight="1">
+    <SpawnObject text="FiestaLlama" count="20" />
+  </Encounter>
+
+  <Encounter name="LuchadorLlama" weight="1">
+    <SpawnObject text="LuchadorLlama" count="20" />
+  </Encounter>
+
+  <Encounter name="SombreroDeSolLlama" weight="1">
+    <SpawnObject text="SombreroDeSolLlama" count="20" />
+  </Encounter>
+
+  <Encounter name="SombreroLlama" weight="1">
+    <SpawnObject text="SombreroLlama" count="20" />
+  </Encounter>
+
+  <Encounter name="TacoLlama" weight="1">
+    <SpawnObject text="TacoLlama" count="20" />
+  </Encounter>
+
+  <Encounter name="TequilaLlama" weight="1">
+    <SpawnObject text="TequilaLlama" count="20" />
+  </Encounter>
+
+  <Encounter name="AkhenatenTheHeretic" weight="1">
+    <SpawnObject text="AkhenatenTheHeretic" count="20" />
+  </Encounter>
+
+  <Encounter name="CleopatraTheEnigmatic" weight="1">
+    <SpawnObject text="CleopatraTheEnigmatic" count="20" />
+  </Encounter>
+
+  <Encounter name="HatshepsutTheQueen" weight="1">
+    <SpawnObject text="HatshepsutTheQueen" count="20" />
+  </Encounter>
+
+  <Encounter name="KhufuTheGreatBuilder" weight="1">
+    <SpawnObject text="KhufuTheGreatBuilder" count="20" />
+  </Encounter>
+
+  <Encounter name="MentuhotepTheWise" weight="1">
+    <SpawnObject text="MentuhotepTheWise" count="20" />
+  </Encounter>
+
+  <Encounter name="Nefertiti" weight="1">
+    <SpawnObject text="Nefertiti" count="20" />
+  </Encounter>
+
+  <Encounter name="RamsesTheImmortal" weight="1">
+    <SpawnObject text="RamsesTheImmortal" count="20" />
+  </Encounter>
+
+  <Encounter name="SetiTheAvenger" weight="1">
+    <SpawnObject text="SetiTheAvenger" count="20" />
+  </Encounter>
+
+  <Encounter name="ThutmoseTheConqueror" weight="1">
+    <SpawnObject text="ThutmoseTheConqueror" count="20" />
+  </Encounter>
+
+  <Encounter name="TutankhamunTheCursed" weight="1">
+    <SpawnObject text="TutankhamunTheCursed" count="20" />
+  </Encounter>
+
+  <Encounter name="BonecrusherOgre" weight="1">
+    <SpawnObject text="BonecrusherOgre" count="20" />
+  </Encounter>
+
+  <Encounter name="ChromaticOgre" weight="1">
+    <SpawnObject text="ChromaticOgre" count="20" />
+  </Encounter>
+
+  <Encounter name="FlamebringerOgre" weight="1">
+    <SpawnObject text="FlamebringerOgre" count="20" />
+  </Encounter>
+
+  <Encounter name="FleshEaterOgre" weight="1">
+    <SpawnObject text="FleshEaterOgre" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostOgre" weight="1">
+    <SpawnObject text="FrostOgre" count="20" />
+  </Encounter>
+
+  <Encounter name="GloomOgre" weight="1">
+    <SpawnObject text="GloomOgre" count="20" />
+  </Encounter>
+
+  <Encounter name="IroncladOgre" weight="1">
+    <SpawnObject text="IroncladOgre" count="20" />
+  </Encounter>
+
+  <Encounter name="NecroticOgre" weight="1">
+    <SpawnObject text="NecroticOgre" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowOgre" weight="1">
+    <SpawnObject text="ShadowOgre" count="20" />
+  </Encounter>
+
+  <Encounter name="StormOgre" weight="1">
+    <SpawnObject text="StormOgre" count="20" />
+  </Encounter>
+
+  <Encounter name="ToxicOgre" weight="1">
+    <SpawnObject text="ToxicOgre" count="20" />
+  </Encounter>
+
+  <Encounter name="AbyssalPanther" weight="1">
+    <SpawnObject text="AbyssalPanther" count="20" />
+  </Encounter>
+
+  <Encounter name="CelestialHorror" weight="1">
+    <SpawnObject text="CelestialHorror" count="20" />
+  </Encounter>
+
+  <Encounter name="CosmicStalker" weight="1">
+    <SpawnObject text="CosmicStalker" count="20" />
+  </Encounter>
+
+  <Encounter name="EtherealPanthra" weight="1">
+    <SpawnObject text="EtherealPanthra" count="20" />
+  </Encounter>
+
+  <Encounter name="NebulaCat" weight="1">
+    <SpawnObject text="NebulaCat" count="20" />
+  </Encounter>
+
+  <Encounter name="NightmarePanther" weight="1">
+    <SpawnObject text="NightmarePanther" count="20" />
+  </Encounter>
+
+  <Encounter name="PhantomPanther" weight="1">
+    <SpawnObject text="PhantomPanther" count="20" />
+  </Encounter>
+
+  <Encounter name="StarbornPredator" weight="1">
+    <SpawnObject text="StarbornPredator" count="20" />
+  </Encounter>
+
+  <Encounter name="VoidCat" weight="1">
+    <SpawnObject text="VoidCat" count="20" />
+  </Encounter>
+
+  <Encounter name="BabirusaBeast" weight="1">
+    <SpawnObject text="BabirusaBeast" count="20" />
+  </Encounter>
+
+  <Encounter name="BorneoPig" weight="1">
+    <SpawnObject text="BorneoPig" count="20" />
+  </Encounter>
+
+  <Encounter name="BushPig" weight="1">
+    <SpawnObject text="BushPig" count="20" />
+  </Encounter>
+
+  <Encounter name="DomesticSwine" weight="1">
+    <SpawnObject text="DomesticSwine" count="20" />
+  </Encounter>
+
+  <Encounter name="GiantForestHog" weight="1">
+    <SpawnObject text="GiantForestHog" count="20" />
+  </Encounter>
+
+  <Encounter name="HogWild" weight="1">
+    <SpawnObject text="HogWild" count="20" />
+  </Encounter>
+
+  <Encounter name="JavelinaJinx" weight="1">
+    <SpawnObject text="JavelinaJinx" count="20" />
+  </Encounter>
+
+  <Encounter name="PeccaryProtector" weight="1">
+    <SpawnObject text="PeccaryProtector" count="20" />
+  </Encounter>
+
+  <Encounter name="VietnamesePig" weight="1">
+    <SpawnObject text="VietnamesePig" count="20" />
+  </Encounter>
+
+  <Encounter name="WarthogWarrior" weight="1">
+    <SpawnObject text="WarthogWarrior" count="20" />
+  </Encounter>
+
+  <Encounter name="AbyssalBouncer" weight="1">
+    <SpawnObject text="AbyssalBouncer" count="20" />
+  </Encounter>
+
+  <Encounter name="ChaosHare" weight="1">
+    <SpawnObject text="ChaosHare" count="20" />
+  </Encounter>
+
+  <Encounter name="CosmicBouncer" weight="1">
+    <SpawnObject text="CosmicBouncer" count="20" />
+  </Encounter>
+
+  <Encounter name="EldritchHarbinger" weight="1">
+    <SpawnObject text="EldritchHarbinger" count="20" />
+  </Encounter>
+
+  <Encounter name="EldritchHare" weight="1">
+    <SpawnObject text="EldritchHare" count="20" />
+  </Encounter>
+
+  <Encounter name="EnigmaticSkipper" weight="1">
+    <SpawnObject text="EnigmaticSkipper" count="20" />
+  </Encounter>
+
+  <Encounter name="ForgottenWarden" weight="1">
+    <SpawnObject text="ForgottenWarden" count="20" />
+  </Encounter>
+
+  <Encounter name="InfinitePouncer" weight="1">
+    <SpawnObject text="InfinitePouncer" count="20" />
+  </Encounter>
+
+  <Encounter name="NightmareLeaper" weight="1">
+    <SpawnObject text="NightmareLeaper" count="20" />
+  </Encounter>
+
+  <Encounter name="WhisperingPooka" weight="1">
+    <SpawnObject text="WhisperingPooka" count="20" />
+  </Encounter>
+
+  <Encounter name="AnthraxRat" weight="1">
+    <SpawnObject text="AnthraxRat" count="20" />
+  </Encounter>
+
+  <Encounter name="BlackDeathRat" weight="1">
+    <SpawnObject text="BlackDeathRat" count="20" />
+  </Encounter>
+
+  <Encounter name="CholeraRat" weight="1">
+    <SpawnObject text="CholeraRat" count="20" />
+  </Encounter>
+
+  <Encounter name="DeathRat" weight="1">
+    <SpawnObject text="DeathRat" count="20" />
+  </Encounter>
+
+  <Encounter name="FeverRat" weight="1">
+    <SpawnObject text="FeverRat" count="20" />
+  </Encounter>
+
+  <Encounter name="LeprosyRat" weight="1">
+    <SpawnObject text="LeprosyRat" count="20" />
+  </Encounter>
+
+  <Encounter name="MalariaRat" weight="1">
+    <SpawnObject text="MalariaRat" count="20" />
+  </Encounter>
+
+  <Encounter name="RabidRat" weight="1">
+    <SpawnObject text="RabidRat" count="20" />
+  </Encounter>
+
+  <Encounter name="SmallpoxRat" weight="1">
+    <SpawnObject text="SmallpoxRat" count="20" />
+  </Encounter>
+
+  <Encounter name="TyphusRat" weight="1">
+    <SpawnObject text="TyphusRat" count="20" />
+  </Encounter>
+
+  <Encounter name="AegisConstruct" weight="1">
+    <SpawnObject text="AegisConstruct" count="20" />
+  </Encounter>
+
+  <Encounter name="ArbiterDrone" weight="1">
+    <SpawnObject text="ArbiterDrone" count="20" />
+  </Encounter>
+
+  <Encounter name="Mimicron" weight="1">
+    <SpawnObject text="Mimicron" count="20" />
+  </Encounter>
+
+  <Encounter name="NemesisUnit" weight="1">
+    <SpawnObject text="NemesisUnit" count="20" />
+  </Encounter>
+
+  <Encounter name="OmegaSentinel" weight="1">
+    <SpawnObject text="OmegaSentinel" count="20" />
+  </Encounter>
+
+  <Encounter name="OverlordMkII" weight="1">
+    <SpawnObject text="OverlordMkII" count="20" />
+  </Encounter>
+
+  <Encounter name="PhantomAutomaton" weight="1">
+    <SpawnObject text="PhantomAutomaton" count="20" />
+  </Encounter>
+
+  <Encounter name="QuantumGuardian" weight="1">
+    <SpawnObject text="QuantumGuardian" count="20" />
+  </Encounter>
+
+  <Encounter name="SynthroidPrime" weight="1">
+    <SpawnObject text="SynthroidPrime" count="20" />
+  </Encounter>
+
+  <Encounter name="TalonMachine" weight="1">
+    <SpawnObject text="TalonMachine" count="20" />
+  </Encounter>
+
+  <Encounter name="Dreadnaught" weight="1">
+    <SpawnObject text="Dreadnaught" count="20" />
+  </Encounter>
+
+  <Encounter name="ElectroWraith" weight="1">
+    <SpawnObject text="ElectroWraith" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostDroid" weight="1">
+    <SpawnObject text="FrostDroid" count="20" />
+  </Encounter>
+
+  <Encounter name="GrapplerDrone" weight="1">
+    <SpawnObject text="GrapplerDrone" count="20" />
+  </Encounter>
+
+  <Encounter name="InfernoSentinel" weight="1">
+    <SpawnObject text="InfernoSentinel" count="20" />
+  </Encounter>
+
+  <Encounter name="NanoSwarm" weight="1">
+    <SpawnObject text="NanoSwarm" count="20" />
+  </Encounter>
+
+  <Encounter name="PlasmaJuggernaut" weight="1">
+    <SpawnObject text="PlasmaJuggernaut" count="20" />
+  </Encounter>
+
+  <Encounter name="SpectralAutomaton" weight="1">
+    <SpawnObject text="SpectralAutomaton" count="20" />
+  </Encounter>
+
+  <Encounter name="TacticalEnforcer" weight="1">
+    <SpawnObject text="TacticalEnforcer" count="20" />
+  </Encounter>
+
+  <Encounter name="VortexConstruct" weight="1">
+    <SpawnObject text="VortexConstruct" count="20" />
+  </Encounter>
+
+  <Encounter name="ArcaneSatyr" weight="1">
+    <SpawnObject text="ArcaneSatyr" count="20" />
+  </Encounter>
+
+  <Encounter name="CelestialSatyr" weight="1">
+    <SpawnObject text="CelestialSatyr" count="20" />
+  </Encounter>
+
+  <Encounter name="EnigmaticSatyr" weight="1">
+    <SpawnObject text="EnigmaticSatyr" count="20" />
+  </Encounter>
+
+  <Encounter name="FrenziedSatyr" weight="1">
+    <SpawnObject text="FrenziedSatyr" count="20" />
+  </Encounter>
+
+  <Encounter name="GentleSatyr" weight="1">
+    <SpawnObject text="GentleSatyr" count="20" />
+  </Encounter>
+
+  <Encounter name="MelodicSatyr" weight="1">
+    <SpawnObject text="MelodicSatyr" count="20" />
+  </Encounter>
+
+  <Encounter name="MysticSatyr" weight="1">
+    <SpawnObject text="MysticSatyr" count="20" />
+  </Encounter>
+
+  <Encounter name="RhythmicSatyr" weight="1">
+    <SpawnObject text="RhythmicSatyr" count="20" />
+  </Encounter>
+
+  <Encounter name="TempestSatyr" weight="1">
+    <SpawnObject text="TempestSatyr" count="20" />
+  </Encounter>
+
+  <Encounter name="WickedSatyr" weight="1">
+    <SpawnObject text="WickedSatyr" count="20" />
+  </Encounter>
+
+  <Encounter name="BubblegumBlaster" weight="1">
+    <SpawnObject text="BubblegumBlaster" count="20" />
+  </Encounter>
+
+  <Encounter name="CandyCornCreep" weight="1">
+    <SpawnObject text="CandyCornCreep" count="20" />
+  </Encounter>
+
+  <Encounter name="CaramelConjurer" weight="1">
+    <SpawnObject text="CaramelConjurer" count="20" />
+  </Encounter>
+
+  <Encounter name="ChocolateTruffle" weight="1">
+    <SpawnObject text="ChocolateTruffle" count="20" />
+  </Encounter>
+
+  <Encounter name="GummySheep" weight="1">
+    <SpawnObject text="GummySheep" count="20" />
+  </Encounter>
+
+  <Encounter name="JellybeanJester" weight="1">
+    <SpawnObject text="JellybeanJester" count="20" />
+  </Encounter>
+
+  <Encounter name="LicoriceSheep" weight="1">
+    <SpawnObject text="LicoriceSheep" count="20" />
+  </Encounter>
+
+  <Encounter name="LollipopLord" weight="1">
+    <SpawnObject text="LollipopLord" count="20" />
+  </Encounter>
+
+  <Encounter name="PeppermintPuff" weight="1">
+    <SpawnObject text="PeppermintPuff" count="20" />
+  </Encounter>
+
+  <Encounter name="TaffyTitan" weight="1">
+    <SpawnObject text="TaffyTitan" count="20" />
+  </Encounter>
+
+  <Encounter name="ArcaneSentinel" weight="1">
+    <SpawnObject text="ArcaneSentinel" count="20" />
+  </Encounter>
+
+  <Encounter name="FlameborneKnight" weight="1">
+    <SpawnObject text="FlameborneKnight" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostboundChampion" weight="1">
+    <SpawnObject text="FrostboundChampion" count="20" />
+  </Encounter>
+
+  <Encounter name="GraveKnight" weight="1">
+    <SpawnObject text="GraveKnight" count="20" />
+  </Encounter>
+
+  <Encounter name="IroncladDefender" weight="1">
+    <SpawnObject text="IroncladDefender" count="20" />
+  </Encounter>
+
+  <Encounter name="NecroticGeneral" weight="1">
+    <SpawnObject text="NecroticGeneral" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowbladeAssassin" weight="1">
+    <SpawnObject text="ShadowbladeAssassin" count="20" />
+  </Encounter>
+
+  <Encounter name="SpectralWarden" weight="1">
+    <SpawnObject text="SpectralWarden" count="20" />
+  </Encounter>
+
+  <Encounter name="StormBone" weight="1">
+    <SpawnObject text="StormBone" count="20" />
+  </Encounter>
+
+  <Encounter name="VampiricBlade" weight="1">
+    <SpawnObject text="VampiricBlade" count="20" />
+  </Encounter>
+
+  <Encounter name="AcidicSlime" weight="1">
+    <SpawnObject text="AcidicSlime" count="20" />
+  </Encounter>
+
+  <Encounter name="CrystalOoze" weight="1">
+    <SpawnObject text="CrystalOoze" count="20" />
+  </Encounter>
+
+  <Encounter name="ElectricSlime" weight="1">
+    <SpawnObject text="ElectricSlime" count="20" />
+  </Encounter>
+
+  <Encounter name="FrozenOoze" weight="1">
+    <SpawnObject text="FrozenOoze" count="20" />
+  </Encounter>
+
+  <Encounter name="GlisteningOoze" weight="1">
+    <SpawnObject text="GlisteningOoze" count="20" />
+  </Encounter>
+
+  <Encounter name="MoltenSlime" weight="1">
+    <SpawnObject text="MoltenSlime" count="20" />
+  </Encounter>
+
+  <Encounter name="RadiantSlime" weight="1">
+    <SpawnObject text="RadiantSlime" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowSludge" weight="1">
+    <SpawnObject text="ShadowSludge" count="20" />
+  </Encounter>
+
+  <Encounter name="ToxicSludge" weight="1">
+    <SpawnObject text="ToxicSludge" count="20" />
+  </Encounter>
+
+  <Encounter name="VoidSlime" weight="1">
+    <SpawnObject text="VoidSlime" count="20" />
+  </Encounter>
+
+  <Encounter name="AlbertsSquirrel" weight="1">
+    <SpawnObject text="AlbertsSquirrel" count="20" />
+  </Encounter>
+
+  <Encounter name="BeldingsGroundSquirrel" weight="1">
+    <SpawnObject text="BeldingsGroundSquirrel" count="20" />
+  </Encounter>
+
+  <Encounter name="DouglasSquirrel" weight="1">
+    <SpawnObject text="DouglasSquirrel" count="20" />
+  </Encounter>
+
+  <Encounter name="EasternGraySquirrel" weight="1">
+    <SpawnObject text="EasternGraySquirrel" count="20" />
+  </Encounter>
+
+  <Encounter name="FlyingSquirrel" weight="1">
+    <SpawnObject text="FlyingSquirrel" count="20" />
+  </Encounter>
+
+  <Encounter name="FoxSquirrel" weight="1">
+    <SpawnObject text="FoxSquirrel" count="20" />
+  </Encounter>
+
+  <Encounter name="IndianPalmSquirrel" weight="1">
+    <SpawnObject text="IndianPalmSquirrel" count="20" />
+  </Encounter>
+
+  <Encounter name="RedSquirrel" weight="1">
+    <SpawnObject text="RedSquirrel" count="20" />
+  </Encounter>
+
+  <Encounter name="RedTailedSquirrel" weight="1">
+    <SpawnObject text="RedTailedSquirrel" count="20" />
+  </Encounter>
+
+  <Encounter name="RockSquirrel" weight="1">
+    <SpawnObject text="RockSquirrel" count="20" />
+  </Encounter>
+
+  <Encounter name="BlightedToad" weight="1">
+    <SpawnObject text="BlightedToad" count="20" />
+  </Encounter>
+
+  <Encounter name="CorrosiveToad" weight="1">
+    <SpawnObject text="CorrosiveToad" count="20" />
+  </Encounter>
+
+  <Encounter name="CursedToad" weight="1">
+    <SpawnObject text="CursedToad" count="20" />
+  </Encounter>
+
+  <Encounter name="EldritchToad" weight="1">
+    <SpawnObject text="EldritchToad" count="20" />
+  </Encounter>
+
+  <Encounter name="FungalToad" weight="1">
+    <SpawnObject text="FungalToad" count="20" />
+  </Encounter>
+
+  <Encounter name="InfernalToad" weight="1">
+    <SpawnObject text="InfernalToad" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowToad" weight="1">
+    <SpawnObject text="ShadowToad" count="20" />
+  </Encounter>
+
+  <Encounter name="SpectralToad" weight="1">
+    <SpawnObject text="SpectralToad" count="20" />
+  </Encounter>
+
+  <Encounter name="VenomousToad" weight="1">
+    <SpawnObject text="VenomousToad" count="20" />
+  </Encounter>
+
+  <Encounter name="VileToad" weight="1">
+    <SpawnObject text="VileToad" count="20" />
+  </Encounter>
+
+  <Encounter name="AbyssalTide" weight="1">
+    <SpawnObject text="AbyssalTide" count="20" />
+  </Encounter>
+
+  <Encounter name="AzureMirage" weight="1">
+    <SpawnObject text="AzureMirage" count="20" />
+  </Encounter>
+
+  <Encounter name="CoralSentinel" weight="1">
+    <SpawnObject text="CoralSentinel" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostWarden" weight="1">
+    <SpawnObject text="FrostWarden" count="20" />
+  </Encounter>
+
+  <Encounter name="HydrokineticWarden" weight="1">
+    <SpawnObject text="HydrokineticWarden" count="20" />
+  </Encounter>
+
+  <Encounter name="MireSpawner" weight="1">
+    <SpawnObject text="MireSpawner" count="20" />
+  </Encounter>
+
+  <Encounter name="SteamLeviathan" weight="1">
+    <SpawnObject text="SteamLeviathan" count="20" />
+  </Encounter>
+
+  <Encounter name="Stormcaller" weight="1">
+    <SpawnObject text="Stormcaller" count="20" />
+  </Encounter>
+
+  <Encounter name="TsunamiTitan" weight="1">
+    <SpawnObject text="TsunamiTitan" count="20" />
+  </Encounter>
+
+  <Encounter name="VortexWraith" weight="1">
+    <SpawnObject text="VortexWraith" count="20" />
+  </Encounter>
+
+  <Encounter name="AncientWolf" weight="1">
+    <SpawnObject text="AncientWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="CelestialWolf" weight="1">
+    <SpawnObject text="CelestialWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="CursedWolf" weight="1">
+    <SpawnObject text="CursedWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="EarthquakeWolf" weight="1">
+    <SpawnObject text="EarthquakeWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="EmberWolf" weight="1">
+    <SpawnObject text="EmberWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostbiteWolf" weight="1">
+    <SpawnObject text="FrostbiteWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="GloomWolf" weight="1">
+    <SpawnObject text="GloomWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowProwler" weight="1">
+    <SpawnObject text="ShadowProwler" count="20" />
+  </Encounter>
+
+  <Encounter name="StormWolf" weight="1">
+    <SpawnObject text="StormWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="VenomousWolf" weight="1">
+    <SpawnObject text="VenomousWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="AnvilHurler" weight="1">
+    <SpawnObject text="AnvilHurler" count="20" />
+  </Encounter>
+
+  <Encounter name="AquaticTamer" weight="1">
+    <SpawnObject text="AquaticTamer" count="20" />
+  </Encounter>
+
+  <Encounter name="ArcaneScribe" weight="1">
+    <SpawnObject text="ArcaneScribe" count="20" />
+  </Encounter>
+
+  <Encounter name="ArcticNaturalist" weight="1">
+    <SpawnObject text="ArcticNaturalist" count="20" />
+  </Encounter>
+
+  <Encounter name="ArmorCurer" weight="1">
+    <SpawnObject text="ArmorCurer" count="20" />
+  </Encounter>
+
+  <Encounter name="ArrowFletcher" weight="1">
+    <SpawnObject text="ArrowFletcher" count="20" />
+  </Encounter>
+
+  <Encounter name="AsceticHermit" weight="1">
+    <SpawnObject text="AsceticHermit" count="20" />
+  </Encounter>
+
+  <Encounter name="Astrologer" weight="1">
+    <SpawnObject text="Astrologer" count="20" />
+  </Encounter>
+
+  <Encounter name="Banneret" weight="1">
+    <SpawnObject text="Banneret" count="20" />
+  </Encounter>
+
+  <Encounter name="BattleDressmaker" weight="1">
+    <SpawnObject text="BattleDressmaker" count="20" />
+  </Encounter>
+
+  <Encounter name="BattlefieldHealer" weight="1">
+    <SpawnObject text="BattlefieldHealer" count="20" />
+  </Encounter>
+
+  <Encounter name="BattleWeaver" weight="1">
+    <SpawnObject text="BattleWeaver" count="20" />
+  </Encounter>
+
+  <Encounter name="Beastmaster" weight="1">
+    <SpawnObject text="Beastmaster" count="20" />
+  </Encounter>
+
+  <Encounter name="BigCatTamer" weight="1">
+    <SpawnObject text="BigCatTamer" count="20" />
+  </Encounter>
+
+  <Encounter name="Biologist" weight="1">
+    <SpawnObject text="Biologist" count="20" />
+  </Encounter>
+
+  <Encounter name="BirdTrainer" weight="1">
+    <SpawnObject text="BirdTrainer" count="20" />
+  </Encounter>
+
+  <Encounter name="BoneShielder" weight="1">
+    <SpawnObject text="BoneShielder" count="20" />
+  </Encounter>
+
+  <Encounter name="BoomerangThrower" weight="1">
+    <SpawnObject text="BoomerangThrower" count="20" />
+  </Encounter>
+
+  <Encounter name="CabinetMaker" weight="1">
+    <SpawnObject text="CabinetMaker" count="20" />
+  </Encounter>
+
+  <Encounter name="Carver" weight="1">
+    <SpawnObject text="Carver" count="20" />
+  </Encounter>
+
+  <Encounter name="Chemist" weight="1">
+    <SpawnObject text="Chemist" count="20" />
+  </Encounter>
+
+  <Encounter name="ChoirSinger" weight="1">
+    <SpawnObject text="ChoirSinger" count="20" />
+  </Encounter>
+
+  <Encounter name="ClockworkEngineer" weight="1">
+    <SpawnObject text="ClockworkEngineer" count="20" />
+  </Encounter>
+
+  <Encounter name="ClueSeeker" weight="1">
+    <SpawnObject text="ClueSeeker" count="20" />
+  </Encounter>
+
+  <Encounter name="CombatMedic" weight="1">
+    <SpawnObject text="CombatMedic" count="20" />
+  </Encounter>
+
+  <Encounter name="CombatNurse" weight="1">
+    <SpawnObject text="CombatNurse" count="20" />
+  </Encounter>
+
+  <Encounter name="ConArtist" weight="1">
+    <SpawnObject text="ConArtist" count="20" />
+  </Encounter>
+
+  <Encounter name="Contortionist" weight="1">
+    <SpawnObject text="Contortionist" count="20" />
+  </Encounter>
+
+  <Encounter name="CrimeSceneTech" weight="1">
+    <SpawnObject text="CrimeSceneTech" count="20" />
+  </Encounter>
+
+  <Encounter name="CrossbowMarksman" weight="1">
+    <SpawnObject text="CrossbowMarksman" count="20" />
+  </Encounter>
+
+  <Encounter name="CryingOrphan" weight="1">
+    <SpawnObject text="CryingOrphan" count="20" />
+  </Encounter>
+
+  <Encounter name="Cryptologist" weight="1">
+    <SpawnObject text="Cryptologist" count="20" />
+  </Encounter>
+
+  <Encounter name="DarkSorcerer" weight="1">
+    <SpawnObject text="DarkSorcerer" count="20" />
+  </Encounter>
+
+  <Encounter name="DeathCultist" weight="1">
+    <SpawnObject text="DeathCultist" count="20" />
+  </Encounter>
+
+  <Encounter name="DecoyDeployer" weight="1">
+    <SpawnObject text="DecoyDeployer" count="20" />
+  </Encounter>
+
+  <Encounter name="DeepMiner" weight="1">
+    <SpawnObject text="DeepMiner" count="20" />
+  </Encounter>
+
+  <Encounter name="DemolitionExpert" weight="1">
+    <SpawnObject text="DemolitionExpert" count="20" />
+  </Encounter>
+
+  <Encounter name="DesertNaturalist" weight="1">
+    <SpawnObject text="DesertNaturalist" count="20" />
+  </Encounter>
+
+  <Encounter name="DesertTracker" weight="1">
+    <SpawnObject text="DesertTracker" count="20" />
+  </Encounter>
+
+  <Encounter name="Diplomat" weight="1">
+    <SpawnObject text="Diplomat" count="20" />
+  </Encounter>
+
+  <Encounter name="DisguiseMaster" weight="1">
+    <SpawnObject text="DisguiseMaster" count="20" />
+  </Encounter>
+
+  <Encounter name="Diviner" weight="1">
+    <SpawnObject text="Diviner" count="20" />
+  </Encounter>
+
+  <Encounter name="DroneMaster" weight="1">
+    <SpawnObject text="DroneMaster" count="20" />
+  </Encounter>
+
+  <Encounter name="DrumBoy" weight="1">
+    <SpawnObject text="DrumBoy" count="20" />
+  </Encounter>
+
+  <Encounter name="Drummer" weight="1">
+    <SpawnObject text="Drummer" count="20" />
+  </Encounter>
+
+  <Encounter name="DualWielder" weight="1">
+    <SpawnObject text="DualWielder" count="20" />
+  </Encounter>
+
+  <Encounter name="EarthAlchemist" weight="1">
+    <SpawnObject text="EarthAlchemist" count="20" />
+  </Encounter>
+
+  <Encounter name="Electrician" weight="1">
+    <SpawnObject text="Electrician" count="20" />
+  </Encounter>
+
+  <Encounter name="ElementalWizard" weight="1">
+    <SpawnObject text="ElementalWizard" count="20" />
+  </Encounter>
+
+  <Encounter name="Enchanter" weight="1">
+    <SpawnObject text="Enchanter" count="20" />
+  </Encounter>
+
+  <Encounter name="EpeeSpecialist" weight="1">
+    <SpawnObject text="EpeeSpecialist" count="20" />
+  </Encounter>
+
+  <Encounter name="EscapeArtist" weight="1">
+    <SpawnObject text="EscapeArtist" count="20" />
+  </Encounter>
+
+  <Encounter name="EvidenceAnalyst" weight="1">
+    <SpawnObject text="EvidenceAnalyst" count="20" />
+  </Encounter>
+
+  <Encounter name="Explorer" weight="1">
+    <SpawnObject text="Explorer" count="20" />
+  </Encounter>
+
+  <Encounter name="ExplosiveDemolitionist" weight="1">
+    <SpawnObject text="ExplosiveDemolitionist" count="20" />
+  </Encounter>
+
+  <Encounter name="FeastMaster" weight="1">
+    <SpawnObject text="FeastMaster" count="20" />
+  </Encounter>
+
+  <Encounter name="FencingMaster" weight="1">
+    <SpawnObject text="FencingMaster" count="20" />
+  </Encounter>
+
+  <Encounter name="FieldCommander" weight="1">
+    <SpawnObject text="FieldCommander" count="20" />
+  </Encounter>
+
+  <Encounter name="FieldMedic" weight="1">
+    <SpawnObject text="FieldMedic" count="20" />
+  </Encounter>
+
+  <Encounter name="FireAlchemist" weight="1">
+    <SpawnObject text="FireAlchemist" count="20" />
+  </Encounter>
+
+  <Encounter name="FireMage" weight="1">
+    <SpawnObject text="FireMage" count="20" />
+  </Encounter>
+
+  <Encounter name="Firestarter" weight="1">
+    <SpawnObject text="Firestarter" count="20" />
+  </Encounter>
+
+  <Encounter name="FlameWelder" weight="1">
+    <SpawnObject text="FlameWelder" count="20" />
+  </Encounter>
+
+  <Encounter name="Flutist" weight="1">
+    <SpawnObject text="Flutist" count="20" />
+  </Encounter>
+
+  <Encounter name="Forager" weight="1">
+    <SpawnObject text="Forager" count="20" />
+  </Encounter>
+
+  <Encounter name="ForensicAnalyst" weight="1">
+    <SpawnObject text="ForensicAnalyst" count="20" />
+  </Encounter>
+
+  <Encounter name="ForestMinstrel" weight="1">
+    <SpawnObject text="ForestMinstrel" count="20" />
+  </Encounter>
+
+  <Encounter name="ForestScout" weight="1">
+    <SpawnObject text="ForestScout" count="20" />
+  </Encounter>
+
+  <Encounter name="ForestTracker" weight="1">
+    <SpawnObject text="ForestTracker" count="20" />
+  </Encounter>
+
+  <Encounter name="GemCutter" weight="1">
+    <SpawnObject text="GemCutter" count="20" />
+  </Encounter>
+
+  <Encounter name="GhostScout" weight="1">
+    <SpawnObject text="GhostScout" count="20" />
+  </Encounter>
+
+  <Encounter name="GhostWarrior" weight="1">
+    <SpawnObject text="GhostWarrior" count="20" />
+  </Encounter>
+
+  <Encounter name="GourmetChef" weight="1">
+    <SpawnObject text="GourmetChef" count="20" />
+  </Encounter>
+
+  <Encounter name="GraveDigger" weight="1">
+    <SpawnObject text="GraveDigger" count="20" />
+  </Encounter>
+
+  <Encounter name="GrecoRomanWrestler" weight="1">
+    <SpawnObject text="GrecoRomanWrestler" count="20" />
+  </Encounter>
+
+  <Encounter name="GrillMaster" weight="1">
+    <SpawnObject text="GrillMaster" count="20" />
+  </Encounter>
+
+  <Encounter name="HammerGuard" weight="1">
+    <SpawnObject text="HammerGuard" count="20" />
+  </Encounter>
+
+  <Encounter name="Harpist" weight="1">
+    <SpawnObject text="Harpist" count="20" />
+  </Encounter>
+
+  <Encounter name="Herbalist" weight="1">
+    <SpawnObject text="Herbalist" count="20" />
+  </Encounter>
+
+  <Encounter name="HerbalistPoisoner" weight="1">
+    <SpawnObject text="HerbalistPoisoner" count="20" />
+  </Encounter>
+
+  <Encounter name="IceSorcerer" weight="1">
+    <SpawnObject text="IceSorcerer" count="20" />
+  </Encounter>
+
+  <Encounter name="Illusionist" weight="1">
+    <SpawnObject text="Illusionist" count="20" />
+  </Encounter>
+
+  <Encounter name="Infiltrator" weight="1">
+    <SpawnObject text="Infiltrator" count="20" />
+  </Encounter>
+
+  <Encounter name="InvisibleSaboteur" weight="1">
+    <SpawnObject text="InvisibleSaboteur" count="20" />
+  </Encounter>
+
+  <Encounter name="IronSmith" weight="1">
+    <SpawnObject text="IronSmith" count="20" />
+  </Encounter>
+
+  <Encounter name="JavelinAthlete" weight="1">
+    <SpawnObject text="JavelinAthlete" count="20" />
+  </Encounter>
+
+  <Encounter name="Joiner" weight="1">
+    <SpawnObject text="Joiner" count="20" />
+  </Encounter>
+
+  <Encounter name="JungleNaturalist" weight="1">
+    <SpawnObject text="JungleNaturalist" count="20" />
+  </Encounter>
+
+  <Encounter name="KarateExpert" weight="1">
+    <SpawnObject text="KarateExpert" count="20" />
+  </Encounter>
+
+  <Encounter name="KatanaDuelist" weight="1">
+    <SpawnObject text="KatanaDuelist" count="20" />
+  </Encounter>
+
+  <Encounter name="KnifeThrower" weight="1">
+    <SpawnObject text="KnifeThrower" count="20" />
+  </Encounter>
+
+  <Encounter name="KnightOfJustice" weight="1">
+    <SpawnObject text="KnightOfJustice" count="20" />
+  </Encounter>
+
+  <Encounter name="KnightOfMercy" weight="1">
+    <SpawnObject text="KnightOfMercy" count="20" />
+  </Encounter>
+
+  <Encounter name="KnightOfValor" weight="1">
+    <SpawnObject text="KnightOfValor" count="20" />
+  </Encounter>
+
+  <Encounter name="Kunoichi" weight="1">
+    <SpawnObject text="Kunoichi" count="20" />
+  </Encounter>
+
+  <Encounter name="LibrarianCustodian" weight="1">
+    <SpawnObject text="LibrarianCustodian" count="20" />
+  </Encounter>
+
+  <Encounter name="LightningBearer" weight="1">
+    <SpawnObject text="LightningBearer" count="20" />
+  </Encounter>
+
+  <Encounter name="Locksmith" weight="1">
+    <SpawnObject text="Locksmith" count="20" />
+  </Encounter>
+
+  <Encounter name="Logician" weight="1">
+    <SpawnObject text="Logician" count="20" />
+  </Encounter>
+
+  <Encounter name="LongbowSniper" weight="1">
+    <SpawnObject text="LongbowSniper" count="20" />
+  </Encounter>
+
+  <Encounter name="Luchador" weight="1">
+    <SpawnObject text="Luchador" count="20" />
+  </Encounter>
+
+  <Encounter name="Magician" weight="1">
+    <SpawnObject text="Magician" count="20" />
+  </Encounter>
+
+  <Encounter name="MapMaker" weight="1">
+    <SpawnObject text="MapMaker" count="20" />
+  </Encounter>
+
+  <Encounter name="MartialMonk" weight="1">
+    <SpawnObject text="MartialMonk" count="20" />
+  </Encounter>
+
+  <Encounter name="MasterPickpocket" weight="1">
+    <SpawnObject text="MasterPickpocket" count="20" />
+  </Encounter>
+
+  <Encounter name="MuscleBrute" weight="1">
+    <SpawnObject text="MuscleBrute" count="20" />
+  </Encounter>
+
+  <Encounter name="NecroSummoner" weight="1">
+    <SpawnObject text="NecroSummoner" count="20" />
+  </Encounter>
+
+  <Encounter name="NerveAgent" weight="1">
+    <SpawnObject text="NerveAgent" count="20" />
+  </Encounter>
+
+  <Encounter name="NetCaster" weight="1">
+    <SpawnObject text="NetCaster" count="20" />
+  </Encounter>
+
+  <Encounter name="NymphSinger" weight="1">
+    <SpawnObject text="NymphSinger" count="20" />
+  </Encounter>
+
+  <Encounter name="Oracle" weight="1">
+    <SpawnObject text="Oracle" count="20" />
+  </Encounter>
+
+  <Encounter name="PastryChef" weight="1">
+    <SpawnObject text="PastryChef" count="20" />
+  </Encounter>
+
+  <Encounter name="PatchworkMonster" weight="1">
+    <SpawnObject text="PatchworkMonster" count="20" />
+  </Encounter>
+
+  <Encounter name="Pathologist" weight="1">
+    <SpawnObject text="Pathologist" count="20" />
+  </Encounter>
+
+  <Encounter name="PhantomAssassin" weight="1">
+    <SpawnObject text="PhantomAssassin" count="20" />
+  </Encounter>
+
+  <Encounter name="Pickpocket" weight="1">
+    <SpawnObject text="Pickpocket" count="20" />
+  </Encounter>
+
+  <Encounter name="PocketPicker" weight="1">
+    <SpawnObject text="PocketPicker" count="20" />
+  </Encounter>
+
+  <Encounter name="Protester" weight="1">
+    <SpawnObject text="Protester" count="20" />
+  </Encounter>
+
+  <Encounter name="QiGongHealer" weight="1">
+    <SpawnObject text="QiGongHealer" count="20" />
+  </Encounter>
+
+  <Encounter name="QuantumPhysicist" weight="1">
+    <SpawnObject text="QuantumPhysicist" count="20" />
+  </Encounter>
+
+  <Encounter name="RamRider" weight="1">
+    <SpawnObject text="RamRider" count="20" />
+  </Encounter>
+
+  <Encounter name="RapierDuelist" weight="1">
+    <SpawnObject text="RapierDuelist" count="20" />
+  </Encounter>
+
+  <Encounter name="Relativist" weight="1">
+    <SpawnObject text="Relativist" count="20" />
+  </Encounter>
+
+  <Encounter name="RelicHunter" weight="1">
+    <SpawnObject text="RelicHunter" count="20" />
+  </Encounter>
+
+  <Encounter name="RuneCaster" weight="1">
+    <SpawnObject text="RuneCaster" count="20" />
+  </Encounter>
+
+  <Encounter name="RuneKeeper" weight="1">
+    <SpawnObject text="RuneKeeper" count="20" />
+  </Encounter>
+
+  <Encounter name="Saboteur" weight="1">
+    <SpawnObject text="Saboteur" count="20" />
+  </Encounter>
+
+  <Encounter name="SabreFighter" weight="1">
+    <SpawnObject text="SabreFighter" count="20" />
+  </Encounter>
+
+  <Encounter name="SafeCracker" weight="1">
+    <SpawnObject text="SafeCracker" count="20" />
+  </Encounter>
+
+  <Encounter name="Samurai" weight="1">
+    <SpawnObject text="Samurai" count="20" />
+  </Encounter>
+
+  <Encounter name="SatyrPiper" weight="1">
+    <SpawnObject text="SatyrPiper" count="20" />
+  </Encounter>
+
+  <Encounter name="SawmillWorker" weight="1">
+    <SpawnObject text="SawmillWorker" count="20" />
+  </Encounter>
+
+  <Encounter name="ScoutArcher" weight="1">
+    <SpawnObject text="ScoutArcher" count="20" />
+  </Encounter>
+
+  <Encounter name="ScoutLeader" weight="1">
+    <SpawnObject text="ScoutLeader" count="20" />
+  </Encounter>
+
+  <Encounter name="ScoutNinja" weight="1">
+    <SpawnObject text="ScoutNinja" count="20" />
+  </Encounter>
+
+  <Encounter name="ScrollMage" weight="1">
+    <SpawnObject text="ScrollMage" count="20" />
+  </Encounter>
+
+  <Encounter name="SerpentHandler" weight="1">
+    <SpawnObject text="SerpentHandler" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowLurker" weight="1">
+    <SpawnObject text="ShadowLurker" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowPriest" weight="1">
+    <SpawnObject text="ShadowPriest" count="20" />
+  </Encounter>
+
+  <Encounter name="SheepdogHandler" weight="1">
+    <SpawnObject text="SheepdogHandler" count="20" />
+  </Encounter>
+
+  <Encounter name="ShieldBearer" weight="1">
+    <SpawnObject text="ShieldBearer" count="20" />
+  </Encounter>
+
+  <Encounter name="ShieldMaiden" weight="1">
+    <SpawnObject text="ShieldMaiden" count="20" />
+  </Encounter>
+
+  <Encounter name="SlyStoryteller" weight="1">
+    <SpawnObject text="SlyStoryteller" count="20" />
+  </Encounter>
+
+  <Encounter name="SousChef" weight="1">
+    <SpawnObject text="SousChef" count="20" />
+  </Encounter>
+
+  <Encounter name="SpearFisher" weight="1">
+    <SpawnObject text="SpearFisher" count="20" />
+  </Encounter>
+
+  <Encounter name="SpearSentry" weight="1">
+    <SpawnObject text="SpearSentry" count="20" />
+  </Encounter>
+
+  <Encounter name="Spellbreaker" weight="1">
+    <SpawnObject text="Spellbreaker" count="20" />
+  </Encounter>
+
+  <Encounter name="SpiritMedium" weight="1">
+    <SpawnObject text="SpiritMedium" count="20" />
+  </Encounter>
+
+  <Encounter name="Spy" weight="1">
+    <SpawnObject text="Spy" count="20" />
+  </Encounter>
+
+  <Encounter name="StarReader" weight="1">
+    <SpawnObject text="StarReader" count="20" />
+  </Encounter>
+
+  <Encounter name="StormCaller" weight="1">
+    <SpawnObject text="StormCaller" count="20" />
+  </Encounter>
+
+  <Encounter name="StormConjurer" weight="1">
+    <SpawnObject text="StormConjurer" count="20" />
+  </Encounter>
+
+  <Encounter name="Strategist" weight="1">
+    <SpawnObject text="Strategist" count="20" />
+  </Encounter>
+
+  <Encounter name="SumoWrestler" weight="1">
+    <SpawnObject text="SumoWrestler" count="20" />
+  </Encounter>
+
+  <Encounter name="SwordDefender" weight="1">
+    <SpawnObject text="SwordDefender" count="20" />
+  </Encounter>
+
+  <Encounter name="TaekwondoMaster" weight="1">
+    <SpawnObject text="TaekwondoMaster" count="20" />
+  </Encounter>
+
+  <Encounter name="TerrainScout" weight="1">
+    <SpawnObject text="TerrainScout" count="20" />
+  </Encounter>
+
+  <Encounter name="ToxicologistChef" weight="1">
+    <SpawnObject text="ToxicologistChef" count="20" />
+  </Encounter>
+
+  <Encounter name="TrapEngineer" weight="1">
+    <SpawnObject text="TrapEngineer" count="20" />
+  </Encounter>
+
+  <Encounter name="TrapMaker" weight="1">
+    <SpawnObject text="TrapMaker" count="20" />
+  </Encounter>
+
+  <Encounter name="TrapSetter" weight="1">
+    <SpawnObject text="TrapSetter" count="20" />
+  </Encounter>
+
+  <Encounter name="TreeFeller" weight="1">
+    <SpawnObject text="TreeFeller" count="20" />
+  </Encounter>
+
+  <Encounter name="TrickShotArtist" weight="1">
+    <SpawnObject text="TrickShotArtist" count="20" />
+  </Encounter>
+
+  <Encounter name="UrbanTracker" weight="1">
+    <SpawnObject text="UrbanTracker" count="20" />
+  </Encounter>
+
+  <Encounter name="VenomousAssassin" weight="1">
+    <SpawnObject text="VenomousAssassin" count="20" />
+  </Encounter>
+
+  <Encounter name="Violinist" weight="1">
+    <SpawnObject text="Violinist" count="20" />
+  </Encounter>
+
+  <Encounter name="WardCaster" weight="1">
+    <SpawnObject text="WardCaster" count="20" />
+  </Encounter>
+
+  <Encounter name="WaterAlchemist" weight="1">
+    <SpawnObject text="WaterAlchemist" count="20" />
+  </Encounter>
+
+  <Encounter name="WeaponEnchanter" weight="1">
+    <SpawnObject text="WeaponEnchanter" count="20" />
+  </Encounter>
+
+  <Encounter name="WoolWeaver" weight="1">
+    <SpawnObject text="WoolWeaver" count="20" />
+  </Encounter>
+
+  <Encounter name="ZenMonk" weight="1">
+    <SpawnObject text="ZenMonk" count="20" />
+  </Encounter>
+
+  <Encounter name="AirClanNinja" weight="1">
+    <SpawnObject text="AirClanNinja" count="20" />
+  </Encounter>
+
+  <Encounter name="AirClanSamurai" weight="1">
+    <SpawnObject text="AirClanSamurai" count="20" />
+  </Encounter>
+
+  <Encounter name="AlienWarrior" weight="1">
+    <SpawnObject text="AlienWarrior" count="20" />
+  </Encounter>
+
+  <Encounter name="AppleElemental" weight="1">
+    <SpawnObject text="AppleElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="Assassin" weight="1">
+    <SpawnObject text="Assassin" count="20" />
+  </Encounter>
+
+  <Encounter name="AstralTraveler" weight="1">
+    <SpawnObject text="AstralTraveler" count="20" />
+  </Encounter>
+
+  <Encounter name="AvatarOfElements" weight="1">
+    <SpawnObject text="AvatarOfElements" count="20" />
+  </Encounter>
+
+  <Encounter name="BaroqueBarbarian" weight="1">
+    <SpawnObject text="BaroqueBarbarian" count="20" />
+  </Encounter>
+
+  <Encounter name="BeetleJuiceSummoner" weight="1">
+    <SpawnObject text="BeetleJuiceSummoner" count="20" />
+  </Encounter>
+
+  <Encounter name="Biomancer" weight="1">
+    <SpawnObject text="Biomancer" count="20" />
+  </Encounter>
+
+  <Encounter name="BluesSingingGorgon" weight="1">
+    <SpawnObject text="BluesSingingGorgon" count="20" />
+  </Encounter>
+
+  <Encounter name="BmovieBeastmaster" weight="1">
+    <SpawnObject text="BmovieBeastmaster" count="20" />
+  </Encounter>
+
+  <Encounter name="BountyHunter" weight="1">
+    <SpawnObject text="BountyHunter" count="20" />
+  </Encounter>
+
+  <Encounter name="CabaretKrakenGirl" weight="1">
+    <SpawnObject text="CabaretKrakenGirl" count="20" />
+  </Encounter>
+
+  <Encounter name="Cannibal" weight="1">
+    <SpawnObject text="Cannibal" count="20" />
+  </Encounter>
+
+  <Encounter name="CavemanScientist" weight="1">
+    <SpawnObject text="CavemanScientist" count="20" />
+  </Encounter>
+
+  <Encounter name="CelestialSamurai" weight="1">
+    <SpawnObject text="CelestialSamurai" count="20" />
+  </Encounter>
+
+  <Encounter name="ChrisRoberts" weight="1">
+    <SpawnObject text="ChrisRoberts" count="20" />
+  </Encounter>
+
+  <Encounter name="CorporateExecutive" weight="1">
+    <SpawnObject text="CorporateExecutive" count="20" />
+  </Encounter>
+
+  <Encounter name="CountryCowgirlCyclops" weight="1">
+    <SpawnObject text="CountryCowgirlCyclops" count="20" />
+  </Encounter>
+
+  <Encounter name="Cowboy" weight="1">
+    <SpawnObject text="Cowboy" count="20" />
+  </Encounter>
+
+  <Encounter name="CyberpunkSorcerer" weight="1">
+    <SpawnObject text="CyberpunkSorcerer" count="20" />
+  </Encounter>
+
+  <Encounter name="DancingFarmerB" weight="1">
+    <SpawnObject text="DancingFarmerB" count="20" />
+  </Encounter>
+
+  <Encounter name="DancingFarmerC" weight="1">
+    <SpawnObject text="DancingFarmerC" count="20" />
+  </Encounter>
+
+  <Encounter name="DarkElf" weight="1">
+    <SpawnObject text="DarkElf" count="20" />
+  </Encounter>
+
+  <Encounter name="DarkLord" weight="1">
+    <SpawnObject text="DarkLord" count="20" />
+  </Encounter>
+
+  <Encounter name="DinoRider" weight="1">
+    <SpawnObject text="DinoRider" count="20" />
+  </Encounter>
+
+  <Encounter name="DiscoDruid" weight="1">
+    <SpawnObject text="DiscoDruid" count="20" />
+  </Encounter>
+
+  <Encounter name="DogtheBountyHunter" weight="1">
+    <SpawnObject text="DogtheBountyHunter" count="20" />
+  </Encounter>
+
+  <Encounter name="DuelistPoet" weight="1">
+    <SpawnObject text="DuelistPoet" count="20" />
+  </Encounter>
+
+  <Encounter name="EarthClanNinja" weight="1">
+    <SpawnObject text="EarthClanNinja" count="20" />
+  </Encounter>
+
+  <Encounter name="EarthClanSamurai" weight="1">
+    <SpawnObject text="EarthClanSamurai" count="20" />
+  </Encounter>
+
+  <Encounter name="EvilAlchemist" weight="1">
+    <SpawnObject text="EvilAlchemist" count="20" />
+  </Encounter>
+
+  <Encounter name="EvilClown" weight="1">
+    <SpawnObject text="EvilClown" count="20" />
+  </Encounter>
+
+  <Encounter name="FairyQueen" weight="1">
+    <SpawnObject text="FairyQueen" count="20" />
+  </Encounter>
+
+  <Encounter name="FastExplorer" weight="1">
+    <SpawnObject text="FastExplorer" count="20" />
+  </Encounter>
+
+  <Encounter name="FireClanNinja" weight="1">
+    <SpawnObject text="FireClanNinja" count="20" />
+  </Encounter>
+
+  <Encounter name="FireClanSamurai" weight="1">
+    <SpawnObject text="FireClanSamurai" count="20" />
+  </Encounter>
+
+  <Encounter name="FlapperElementalist" weight="1">
+    <SpawnObject text="FlapperElementalist" count="20" />
+  </Encounter>
+
+  <Encounter name="FloridaMan" weight="1">
+    <SpawnObject text="FloridaMan" count="20" />
+  </Encounter>
+
+  <Encounter name="ForestRanger" weight="1">
+    <SpawnObject text="ForestRanger" count="20" />
+  </Encounter>
+
+  <Encounter name="FunkFungiFamiliar" weight="1">
+    <SpawnObject text="FunkFungiFamiliar" count="20" />
+  </Encounter>
+
+  <Encounter name="GangLeader" weight="1">
+    <SpawnObject text="GangLeader" count="20" />
+  </Encounter>
+
+  <Encounter name="GlamRockMage" weight="1">
+    <SpawnObject text="GlamRockMage" count="20" />
+  </Encounter>
+
+  <Encounter name="GothicNovelist" weight="1">
+    <SpawnObject text="GothicNovelist" count="20" />
+  </Encounter>
+
+  <Encounter name="GraffitiGargoyle" weight="1">
+    <SpawnObject text="GraffitiGargoyle" count="20" />
+  </Encounter>
+
+  <Encounter name="GreaserGryphonRider" weight="1">
+    <SpawnObject text="GreaserGryphonRider" count="20" />
+  </Encounter>
+
+  <Encounter name="GreenHag" weight="1">
+    <SpawnObject text="GreenHag" count="20" />
+  </Encounter>
+
+  <Encounter name="GreenNinja" weight="1">
+    <SpawnObject text="GreenNinja" count="20" />
+  </Encounter>
+
+  <Encounter name="HippieHoplite" weight="1">
+    <SpawnObject text="HippieHoplite" count="20" />
+  </Encounter>
+
+  <Encounter name="HolyKnight" weight="1">
+    <SpawnObject text="HolyKnight" count="20" />
+  </Encounter>
+
+  <Encounter name="HostileDruid" weight="1">
+    <SpawnObject text="HostileDruid" count="20" />
+  </Encounter>
+
+  <Encounter name="HostilePrincess" weight="1">
+    <SpawnObject text="HostilePrincess" count="20" />
+  </Encounter>
+
+  <Encounter name="IceKing" weight="1">
+    <SpawnObject text="IceKing" count="20" />
+  </Encounter>
+
+  <Encounter name="InfernoDragon" weight="1">
+    <SpawnObject text="InfernoDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="InsaneRoboticist" weight="1">
+    <SpawnObject text="InsaneRoboticist" count="20" />
+  </Encounter>
+
+  <Encounter name="JazzAgeJuggernaut" weight="1">
+    <SpawnObject text="JazzAgeJuggernaut" count="20" />
+  </Encounter>
+
+  <Encounter name="Jester" weight="1">
+    <SpawnObject text="Jester" count="20" />
+  </Encounter>
+
+  <Encounter name="Lawyer" weight="1">
+    <SpawnObject text="Lawyer" count="20" />
+  </Encounter>
+
+  <Encounter name="LineDragon" weight="1">
+    <SpawnObject text="LineDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="LordBlackthorn" weight="1">
+    <SpawnObject text="LordBlackthorn" count="20" />
+  </Encounter>
+
+  <Encounter name="LordBritishSummoner" weight="1">
+    <SpawnObject text="LordBritishSummoner" count="20" />
+  </Encounter>
+
+  <Encounter name="MagmaElemental" weight="1">
+    <SpawnObject text="MagmaElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="MedievalMeteorologist" weight="1">
+    <SpawnObject text="MedievalMeteorologist" count="20" />
+  </Encounter>
+
+  <Encounter name="MegaDragon" weight="1">
+    <SpawnObject text="MegaDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="MinaxSorceress" weight="1">
+    <SpawnObject text="MinaxSorceress" count="20" />
+  </Encounter>
+
+  <Encounter name="MischievousWitch" weight="1">
+    <SpawnObject text="MischievousWitch" count="20" />
+  </Encounter>
+
+  <Encounter name="MotownMermaid" weight="1">
+    <SpawnObject text="MotownMermaid" count="20" />
+  </Encounter>
+
+  <Encounter name="MushroomWitch" weight="1">
+    <SpawnObject text="MushroomWitch" count="20" />
+  </Encounter>
+
+  <Encounter name="Musketeer" weight="1">
+    <SpawnObject text="Musketeer" count="20" />
+  </Encounter>
+
+  <Encounter name="NeoVictorianVampire" weight="1">
+    <SpawnObject text="NeoVictorianVampire" count="20" />
+  </Encounter>
+
+  <Encounter name="NinjaLibrarian" weight="1">
+    <SpawnObject text="NinjaLibrarian" count="20" />
+  </Encounter>
+
+  <Encounter name="NoirDetective" weight="1">
+    <SpawnObject text="NoirDetective" count="20" />
+  </Encounter>
+
+  <Encounter name="OgreMaster" weight="1">
+    <SpawnObject text="OgreMaster" count="20" />
+  </Encounter>
+
+  <Encounter name="PhoenixStyleMaster" weight="1">
+    <SpawnObject text="PhoenixStyleMaster" count="20" />
+  </Encounter>
+
+  <Encounter name="PigFarmer" weight="1">
+    <SpawnObject text="PigFarmer" count="20" />
+  </Encounter>
+
+  <Encounter name="PinupPandemonium" weight="1">
+    <SpawnObject text="PinupPandemonium" count="20" />
+  </Encounter>
+
+  <Encounter name="pirate" weight="1">
+    <SpawnObject text="pirate" count="20" />
+  </Encounter>
+
+  <Encounter name="PirateOfTheStars" weight="1">
+    <SpawnObject text="PirateOfTheStars" count="20" />
+  </Encounter>
+
+  <Encounter name="PKMurderer" weight="1">
+    <SpawnObject text="PKMurderer" count="20" />
+  </Encounter>
+
+  <Encounter name="PKMurdererLord" weight="1">
+    <SpawnObject text="PKMurdererLord" count="20" />
+  </Encounter>
+
+  <Encounter name="PoisonAppleTree" weight="1">
+    <SpawnObject text="PoisonAppleTree" count="20" />
+  </Encounter>
+
+  <Encounter name="PsychedelicShaman" weight="1">
+    <SpawnObject text="PsychedelicShaman" count="20" />
+  </Encounter>
+
+  <Encounter name="PulpyPotionPurveyor" weight="1">
+    <SpawnObject text="PulpyPotionPurveyor" count="20" />
+  </Encounter>
+
+  <Encounter name="PunkRockPaladin" weight="1">
+    <SpawnObject text="PunkRockPaladin" count="20" />
+  </Encounter>
+
+  <Encounter name="RaKing" weight="1">
+    <SpawnObject text="RaKing" count="20" />
+  </Encounter>
+
+  <Encounter name="RanchMaster" weight="1">
+    <SpawnObject text="RanchMaster" count="20" />
+  </Encounter>
+
+  <Encounter name="RapRanger" weight="1">
+    <SpawnObject text="RapRanger" count="20" />
+  </Encounter>
+
+  <Encounter name="RaveRogue" weight="1">
+    <SpawnObject text="RaveRogue" count="20" />
+  </Encounter>
+
+  <Encounter name="RedQueen" weight="1">
+    <SpawnObject text="RedQueen" count="20" />
+  </Encounter>
+
+  <Encounter name="ReggaeRunesmith" weight="1">
+    <SpawnObject text="ReggaeRunesmith" count="20" />
+  </Encounter>
+
+  <Encounter name="RenaissanceMechanic" weight="1">
+    <SpawnObject text="RenaissanceMechanic" count="20" />
+  </Encounter>
+
+  <Encounter name="RetroAndroid" weight="1">
+    <SpawnObject text="RetroAndroid" count="20" />
+  </Encounter>
+
+  <Encounter name="RetroFuturist" weight="1">
+    <SpawnObject text="RetroFuturist" count="20" />
+  </Encounter>
+
+  <Encounter name="RetroRobotRomancer" weight="1">
+    <SpawnObject text="RetroRobotRomancer" count="20" />
+  </Encounter>
+
+  <Encounter name="Ringmaster" weight="1">
+    <SpawnObject text="Ringmaster" count="20" />
+  </Encounter>
+
+  <Encounter name="RockabillyRevenant" weight="1">
+    <SpawnObject text="RockabillyRevenant" count="20" />
+  </Encounter>
+
+  <Encounter name="scorpomancer" weight="1">
+    <SpawnObject text="scorpomancer" count="20" />
+  </Encounter>
+
+  <Encounter name="SilentMovieMonk" weight="1">
+    <SpawnObject text="SilentMovieMonk" count="20" />
+  </Encounter>
+
+  <Encounter name="SilverSlime" weight="1">
+    <SpawnObject text="SilverSlime" count="20" />
+  </Encounter>
+
+  <Encounter name="Sith" weight="1">
+    <SpawnObject text="Sith" count="20" />
+  </Encounter>
+
+  <Encounter name="SkaSkald" weight="1">
+    <SpawnObject text="SkaSkald" count="20" />
+  </Encounter>
+
+  <Encounter name="SkeletonLord" weight="1">
+    <SpawnObject text="SkeletonLord" count="20" />
+  </Encounter>
+
+  <Encounter name="SlimeMage" weight="1">
+    <SpawnObject text="SlimeMage" count="20" />
+  </Encounter>
+
+  <Encounter name="SneakyNinja" weight="1">
+    <SpawnObject text="SneakyNinja" count="20" />
+  </Encounter>
+
+  <Encounter name="StarCitizen" weight="1">
+    <SpawnObject text="StarCitizen" count="20" />
+  </Encounter>
+
+  <Encounter name="StarfleetCaptain" weight="1">
+    <SpawnObject text="StarfleetCaptain" count="20" />
+  </Encounter>
+
+  <Encounter name="StarfleetOfficer" weight="1">
+    <SpawnObject text="StarfleetOfficer" count="20" />
+  </Encounter>
+
+  <Encounter name="SteampunkSamurai" weight="1">
+    <SpawnObject text="SteampunkSamurai" count="20" />
+  </Encounter>
+
+  <Encounter name="Stormtrooper2" weight="1">
+    <SpawnObject text="Stormtrooper2" count="20" />
+  </Encounter>
+
+  <Encounter name="SurferSummoner" weight="1">
+    <SpawnObject text="SurferSummoner" count="20" />
+  </Encounter>
+
+  <Encounter name="SwampThing" weight="1">
+    <SpawnObject text="SwampThing" count="20" />
+  </Encounter>
+
+  <Encounter name="SwinginSorceress" weight="1">
+    <SpawnObject text="SwinginSorceress" count="20" />
+  </Encounter>
+
+  <Encounter name="TexanRancher" weight="1">
+    <SpawnObject text="TexanRancher" count="20" />
+  </Encounter>
+
+  <Encounter name="TwistedCultist" weight="1">
+    <SpawnObject text="TwistedCultist" count="20" />
+  </Encounter>
+
+  <Encounter name="VaudevilleValkyrie" weight="1">
+    <SpawnObject text="VaudevilleValkyrie" count="20" />
+  </Encounter>
+
+  <Encounter name="WastelandBiker" weight="1">
+    <SpawnObject text="WastelandBiker" count="20" />
+  </Encounter>
+
+  <Encounter name="WaterClanNinja" weight="1">
+    <SpawnObject text="WaterClanNinja" count="20" />
+  </Encounter>
+
+  <Encounter name="WaterClanSamurai" weight="1">
+    <SpawnObject text="WaterClanSamurai" count="20" />
+  </Encounter>
+
+  <Encounter name="WildWestWizard" weight="1">
+    <SpawnObject text="WildWestWizard" count="20" />
+  </Encounter>
+
+  <Encounter name="AncientHellhound" weight="1">
+    <SpawnObject text="AncientHellhound" count="20" />
+  </Encounter>
+
+  <Encounter name="Boura" weight="1">
+    <SpawnObject text="Boura" count="20" />
+  </Encounter>
+
+  <Encounter name="MagicalPig" weight="1">
+    <SpawnObject text="MagicalPig" count="20" />
+  </Encounter>
+
+  <Encounter name="RidablePolarBear" weight="1">
+    <SpawnObject text="RidablePolarBear" count="20" />
+  </Encounter>
+
+  <Encounter name="RidableSerpentineDragon" weight="1">
+    <SpawnObject text="RidableSerpentineDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="RidableTarantula" weight="1">
+    <SpawnObject text="RidableTarantula" count="20" />
+  </Encounter>
+
+  <Encounter name="SkeletonHorse" weight="1">
+    <SpawnObject text="SkeletonHorse" count="20" />
+  </Encounter>
+
+  <Encounter name="BioluminescentFungus" weight="1">
+    <SpawnObject text="BioluminescentFungus" count="20" />
+  </Encounter>
+
+  <Encounter name="BlightedEfreet" weight="1">
+    <SpawnObject text="BlightedEfreet" count="20" />
+  </Encounter>
+
+  <Encounter name="BlightedShadow" weight="1">
+    <SpawnObject text="BlightedShadow" count="20" />
+  </Encounter>
+
+  <Encounter name="ColossalBlackWidow" weight="1">
+    <SpawnObject text="ColossalBlackWidow" count="20" />
+  </Encounter>
+
+  <Encounter name="CorrodedArmour" weight="1">
+    <SpawnObject text="CorrodedArmour" count="20" />
+  </Encounter>
+
+  <Encounter name="CorruptedMinotaurCaptain" weight="1">
+    <SpawnObject text="CorruptedMinotaurCaptain" count="20" />
+  </Encounter>
+
+  <Encounter name="DeathlyWatchBeetle" weight="1">
+    <SpawnObject text="DeathlyWatchBeetle" count="20" />
+  </Encounter>
+
+  <Encounter name="DecayboundOrcishMage" weight="1">
+    <SpawnObject text="DecayboundOrcishMage" count="20" />
+  </Encounter>
+
+  <Encounter name="DecayedMage" weight="1">
+    <SpawnObject text="DecayedMage" count="20" />
+  </Encounter>
+
+  <Encounter name="DecayingBalron" weight="1">
+    <SpawnObject text="DecayingBalron" count="20" />
+  </Encounter>
+
+  <Encounter name="DecayingLizard" weight="1">
+    <SpawnObject text="DecayingLizard" count="20" />
+  </Encounter>
+
+  <Encounter name="DecayingWalrus" weight="1">
+    <SpawnObject text="DecayingWalrus" count="20" />
+  </Encounter>
+
+  <Encounter name="EerieDoppleganger" weight="1">
+    <SpawnObject text="EerieDoppleganger" count="20" />
+  </Encounter>
+
+  <Encounter name="FungalBeast" weight="1">
+    <SpawnObject text="FungalBeast" count="20" />
+  </Encounter>
+
+  <Encounter name="IcyFrostTroll" weight="1">
+    <SpawnObject text="IcyFrostTroll" count="20" />
+  </Encounter>
+
+  <Encounter name="PestilentBoneMagi" weight="1">
+    <SpawnObject text="PestilentBoneMagi" count="20" />
+  </Encounter>
+
+  <Encounter name="PestilentHind" weight="1">
+    <SpawnObject text="PestilentHind" count="20" />
+  </Encounter>
+
+  <Encounter name="PlagueImp" weight="1">
+    <SpawnObject text="PlagueImp" count="20" />
+  </Encounter>
+
+  <Encounter name="PlagueRider" weight="1">
+    <SpawnObject text="PlagueRider" count="20" />
+  </Encounter>
+
+  <Encounter name="PutridBoneGargoyle" weight="1">
+    <SpawnObject text="PutridBoneGargoyle" count="20" />
+  </Encounter>
+
+  <Encounter name="PutridBoura" weight="1">
+    <SpawnObject text="PutridBoura" count="20" />
+  </Encounter>
+
+  <Encounter name="PutridGorefiend" weight="1">
+    <SpawnObject text="PutridGorefiend" count="20" />
+  </Encounter>
+
+  <Encounter name="PutridMinotaur" weight="1">
+    <SpawnObject text="PutridMinotaur" count="20" />
+  </Encounter>
+
+  <Encounter name="PutridRidgeback" weight="1">
+    <SpawnObject text="PutridRidgeback" count="20" />
+  </Encounter>
+
+  <Encounter name="PutridSolenQueen" weight="1">
+    <SpawnObject text="PutridSolenQueen" count="20" />
+  </Encounter>
+
+  <Encounter name="PutridTentacle" weight="1">
+    <SpawnObject text="PutridTentacle" count="20" />
+  </Encounter>
+
+  <Encounter name="PutridWyvern" weight="1">
+    <SpawnObject text="PutridWyvern" count="20" />
+  </Encounter>
+
+  <Encounter name="ReaperOfRot" weight="1">
+    <SpawnObject text="ReaperOfRot" count="20" />
+  </Encounter>
+
+  <Encounter name="RottingKappa" weight="1">
+    <SpawnObject text="RottingKappa" count="20" />
+  </Encounter>
+
+  <Encounter name="RottingSwine" weight="1">
+    <SpawnObject text="RottingSwine" count="20" />
+  </Encounter>
+
+  <Encounter name="RuinedOverseer" weight="1">
+    <SpawnObject text="RuinedOverseer" count="20" />
+  </Encounter>
+
+  <Encounter name="TaintedChaosDragoon" weight="1">
+    <SpawnObject text="TaintedChaosDragoon" count="20" />
+  </Encounter>
+
+  <Encounter name="ToxicFireRabbit" weight="1">
+    <SpawnObject text="ToxicFireRabbit" count="20" />
+  </Encounter>
+
+  <Encounter name="ToxicGargoyle" weight="1">
+    <SpawnObject text="ToxicGargoyle" count="20" />
+  </Encounter>
+
+  <Encounter name="VenomousOni" weight="1">
+    <SpawnObject text="VenomousOni" count="20" />
+  </Encounter>
+
+  <Encounter name="VileAcidPopper" weight="1">
+    <SpawnObject text="VileAcidPopper" count="20" />
+  </Encounter>
+
+  <Encounter name="BlackDragon" weight="1">
+    <SpawnObject text="BlackDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="BlondeDragon" weight="1">
+    <SpawnObject text="BlondeDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="BlueDragon" weight="1">
+    <SpawnObject text="BlueDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="CopperDragon" weight="1">
+    <SpawnObject text="CopperDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="DraconianCrab" weight="1">
+    <SpawnObject text="DraconianCrab" count="20" />
+  </Encounter>
+
+  <Encounter name="DraconianDreadspinner" weight="1">
+    <SpawnObject text="DraconianDreadspinner" count="20" />
+  </Encounter>
+
+  <Encounter name="DraconianParrot" weight="1">
+    <SpawnObject text="DraconianParrot" count="20" />
+  </Encounter>
+
+  <Encounter name="DraconicMongbat" weight="1">
+    <SpawnObject text="DraconicMongbat" count="20" />
+  </Encounter>
+
+  <Encounter name="DraconicTurkey" weight="1">
+    <SpawnObject text="DraconicTurkey" count="20" />
+  </Encounter>
+
+  <Encounter name="DragonboundOverseer" weight="1">
+    <SpawnObject text="DragonboundOverseer" count="20" />
+  </Encounter>
+
+  <Encounter name="DrakeWarrior" weight="1">
+    <SpawnObject text="DrakeWarrior" count="20" />
+  </Encounter>
+
+  <Encounter name="DrakkonHeir" weight="1">
+    <SpawnObject text="DrakkonHeir" count="20" />
+  </Encounter>
+
+  <Encounter name="DrakkonHeirJr" weight="1">
+    <SpawnObject text="DrakkonHeirJr" count="20" />
+  </Encounter>
+
+  <Encounter name="DrakonBeetle" weight="1">
+    <SpawnObject text="DrakonBeetle" count="20" />
+  </Encounter>
+
+  <Encounter name="DrakonBoar" weight="1">
+    <SpawnObject text="DrakonBoar" count="20" />
+  </Encounter>
+
+  <Encounter name="DrakonGoat" weight="1">
+    <SpawnObject text="DrakonGoat" count="20" />
+  </Encounter>
+
+  <Encounter name="DrakonicDevourer" weight="1">
+    <SpawnObject text="DrakonicDevourer" count="20" />
+  </Encounter>
+
+  <Encounter name="DrakonsGargoyle" weight="1">
+    <SpawnObject text="DrakonsGargoyle" count="20" />
+  </Encounter>
+
+  <Encounter name="DrakonsOstard" weight="1">
+    <SpawnObject text="DrakonsOstard" count="20" />
+  </Encounter>
+
+  <Encounter name="DrakonsTiger" weight="1">
+    <SpawnObject text="DrakonsTiger" count="20" />
+  </Encounter>
+
+  <Encounter name="DreadBullFrog" weight="1">
+    <SpawnObject text="DreadBullFrog" count="20" />
+  </Encounter>
+
+  <Encounter name="EmeraldDragon" weight="1">
+    <SpawnObject text="EmeraldDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="GoldDragon" weight="1">
+    <SpawnObject text="GoldDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="GreenDragon" weight="1">
+    <SpawnObject text="GreenDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="InfernoAnt" weight="1">
+    <SpawnObject text="InfernoAnt" count="20" />
+  </Encounter>
+
+  <Encounter name="LuckDragon" weight="1">
+    <SpawnObject text="LuckDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="OneEyedServant" weight="1">
+    <SpawnObject text="OneEyedServant" count="20" />
+  </Encounter>
+
+  <Encounter name="PlutoniumDragon" weight="1">
+    <SpawnObject text="PlutoniumDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="PrismDragon" weight="1">
+    <SpawnObject text="PrismDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="RedDragon" weight="1">
+    <SpawnObject text="RedDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="RubyDragon" weight="1">
+    <SpawnObject text="RubyDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="SapphireDragon" weight="1">
+    <SpawnObject text="SapphireDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="SilverDragon" weight="1">
+    <SpawnObject text="SilverDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="WhiteDragon" weight="1">
+    <SpawnObject text="WhiteDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="YellowDragon" weight="1">
+    <SpawnObject text="YellowDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="AbyssalHorse" weight="1">
+    <SpawnObject text="AbyssalHorse" count="20" />
+  </Encounter>
+
+  <Encounter name="BlackWolf" weight="1">
+    <SpawnObject text="BlackWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="BlightedBeastLord" weight="1">
+    <SpawnObject text="BlightedBeastLord" count="20" />
+  </Encounter>
+
+  <Encounter name="BloodbaneFox" weight="1">
+    <SpawnObject text="BloodbaneFox" count="20" />
+  </Encounter>
+
+  <Encounter name="CorpseOfDoom" weight="1">
+    <SpawnObject text="CorpseOfDoom" count="20" />
+  </Encounter>
+
+  <Encounter name="CultBrigand" weight="1">
+    <SpawnObject text="CultBrigand" count="20" />
+  </Encounter>
+
+  <Encounter name="CultChicken" weight="1">
+    <SpawnObject text="CultChicken" count="20" />
+  </Encounter>
+
+  <Encounter name="CultDrake" weight="1">
+    <SpawnObject text="CultDrake" count="20" />
+  </Encounter>
+
+  <Encounter name="CultGargoyle" weight="1">
+    <SpawnObject text="CultGargoyle" count="20" />
+  </Encounter>
+
+  <Encounter name="CultLibrarian" weight="1">
+    <SpawnObject text="CultLibrarian" count="20" />
+  </Encounter>
+
+  <Encounter name="CultMatriarch" weight="1">
+    <SpawnObject text="CultMatriarch" count="20" />
+  </Encounter>
+
+  <Encounter name="CultMonster" weight="1">
+    <SpawnObject text="CultMonster" count="20" />
+  </Encounter>
+
+  <Encounter name="CultVoicebearer" weight="1">
+    <SpawnObject text="CultVoicebearer" count="20" />
+  </Encounter>
+
+  <Encounter name="CursedSolenWarrior" weight="1">
+    <SpawnObject text="CursedSolenWarrior" count="20" />
+  </Encounter>
+
+  <Encounter name="DaemonicFerret" weight="1">
+    <SpawnObject text="DaemonicFerret" count="20" />
+  </Encounter>
+
+  <Encounter name="DemonicGrizzly" weight="1">
+    <SpawnObject text="DemonicGrizzly" count="20" />
+  </Encounter>
+
+  <Encounter name="DoomedGrizzle" weight="1">
+    <SpawnObject text="DoomedGrizzle" count="20" />
+  </Encounter>
+
+  <Encounter name="DoomedSkree" weight="1">
+    <SpawnObject text="DoomedSkree" count="20" />
+  </Encounter>
+
+  <Encounter name="DoomGuardian" weight="1">
+    <SpawnObject text="DoomGuardian" count="20" />
+  </Encounter>
+
+  <Encounter name="DoomriddenPackhorse" weight="1">
+    <SpawnObject text="DoomriddenPackhorse" count="20" />
+  </Encounter>
+
+  <Encounter name="DoomscaleAlligator" weight="1">
+    <SpawnObject text="DoomscaleAlligator" count="20" />
+  </Encounter>
+
+  <Encounter name="DoomsCaptain" weight="1">
+    <SpawnObject text="DoomsCaptain" count="20" />
+  </Encounter>
+
+  <Encounter name="Doomwood" weight="1">
+    <SpawnObject text="Doomwood" count="20" />
+  </Encounter>
+
+  <Encounter name="EntropyElemental" weight="1">
+    <SpawnObject text="EntropyElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="GoblinCultist" weight="1">
+    <SpawnObject text="GoblinCultist" count="20" />
+  </Encounter>
+
+  <Encounter name="MatriarchOfDespair" weight="1">
+    <SpawnObject text="MatriarchOfDespair" count="20" />
+  </Encounter>
+
+  <Encounter name="NightmareMongbat" weight="1">
+    <SpawnObject text="NightmareMongbat" count="20" />
+  </Encounter>
+
+  <Encounter name="OblivionServant" weight="1">
+    <SpawnObject text="OblivionServant" count="20" />
+  </Encounter>
+
+  <Encounter name="PhantomCat" weight="1">
+    <SpawnObject text="PhantomCat" count="20" />
+  </Encounter>
+
+  <Encounter name="PutrescentBulb" weight="1">
+    <SpawnObject text="PutrescentBulb" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowWolf" weight="1">
+    <SpawnObject text="ShadowWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="VoidEowmu" weight="1">
+    <SpawnObject text="VoidEowmu" count="20" />
+  </Encounter>
+
+  <Encounter name="VoidPriest" weight="1">
+    <SpawnObject text="VoidPriest" count="20" />
+  </Encounter>
+
+  <Encounter name="VoidRabbit" weight="1">
+    <SpawnObject text="VoidRabbit" count="20" />
+  </Encounter>
+
+  <Encounter name="VoidWebspinner" weight="1">
+    <SpawnObject text="VoidWebspinner" count="20" />
+  </Encounter>
+
+  <Encounter name="AbyssalManefall" weight="1">
+    <SpawnObject text="AbyssalManefall" count="20" />
+  </Encounter>
+
+  <Encounter name="AgedAlloyWraith" weight="1">
+    <SpawnObject text="AgedAlloyWraith" count="20" />
+  </Encounter>
+
+  <Encounter name="BoneboundMarksman" weight="1">
+    <SpawnObject text="BoneboundMarksman" count="20" />
+  </Encounter>
+
+  <Encounter name="CadaverousWarlord" weight="1">
+    <SpawnObject text="CadaverousWarlord" count="20" />
+  </Encounter>
+
+  <Encounter name="CinderedShade" weight="1">
+    <SpawnObject text="CinderedShade" count="20" />
+  </Encounter>
+
+  <Encounter name="DecaybruteTroll" weight="1">
+    <SpawnObject text="DecaybruteTroll" count="20" />
+  </Encounter>
+
+  <Encounter name="DesolateOoze" weight="1">
+    <SpawnObject text="DesolateOoze" count="20" />
+  </Encounter>
+
+  <Encounter name="DireRevenant" weight="1">
+    <SpawnObject text="DireRevenant" count="20" />
+  </Encounter>
+
+  <Encounter name="DoomedDrake" weight="1">
+    <SpawnObject text="DoomedDrake" count="20" />
+  </Encounter>
+
+  <Encounter name="DuskwroughtStalker" weight="1">
+    <SpawnObject text="DuskwroughtStalker" count="20" />
+  </Encounter>
+
+  <Encounter name="DustboundArcanist" weight="1">
+    <SpawnObject text="DustboundArcanist" count="20" />
+  </Encounter>
+
+  <Encounter name="EternalWatcher" weight="1">
+    <SpawnObject text="EternalWatcher" count="20" />
+  </Encounter>
+
+  <Encounter name="EternalWoe" weight="1">
+    <SpawnObject text="EternalWoe" count="20" />
+  </Encounter>
+
+  <Encounter name="FallenKnightOfExodus" weight="1">
+    <SpawnObject text="FallenKnightOfExodus" count="20" />
+  </Encounter>
+
+  <Encounter name="FlickeringRemnant" weight="1">
+    <SpawnObject text="FlickeringRemnant" count="20" />
+  </Encounter>
+
+  <Encounter name="ForsakenDominion" weight="1">
+    <SpawnObject text="ForsakenDominion" count="20" />
+  </Encounter>
+
+  <Encounter name="FrozenFenrir" weight="1">
+    <SpawnObject text="FrozenFenrir" count="20" />
+  </Encounter>
+
+  <Encounter name="GhoststripeLeopard" weight="1">
+    <SpawnObject text="GhoststripeLeopard" count="20" />
+  </Encounter>
+
+  <Encounter name="GraveclawUrsus" weight="1">
+    <SpawnObject text="GraveclawUrsus" count="20" />
+  </Encounter>
+
+  <Encounter name="GraveWhispers" weight="1">
+    <SpawnObject text="GraveWhispers" count="20" />
+  </Encounter>
+
+  <Encounter name="MournfulVapors" weight="1">
+    <SpawnObject text="MournfulVapors" count="20" />
+  </Encounter>
+
+  <Encounter name="NecroticWyrm" weight="1">
+    <SpawnObject text="NecroticWyrm" count="20" />
+  </Encounter>
+
+  <Encounter name="PhantomTrickster" weight="1">
+    <SpawnObject text="PhantomTrickster" count="20" />
+  </Encounter>
+
+  <Encounter name="PlagueboundFeline" weight="1">
+    <SpawnObject text="PlagueboundFeline" count="20" />
+  </Encounter>
+
+  <Encounter name="RaggedRemains" weight="1">
+    <SpawnObject text="RaggedRemains" count="20" />
+  </Encounter>
+
+  <Encounter name="RestlessSpirit" weight="1">
+    <SpawnObject text="RestlessSpirit" count="20" />
+  </Encounter>
+
+  <Encounter name="RotfangGoblin" weight="1">
+    <SpawnObject text="RotfangGoblin" count="20" />
+  </Encounter>
+
+  <Encounter name="SepulchralArchmage" weight="1">
+    <SpawnObject text="SepulchralArchmage" count="20" />
+  </Encounter>
+
+  <Encounter name="ShadowclawBandit" weight="1">
+    <SpawnObject text="ShadowclawBandit" count="20" />
+  </Encounter>
+
+  <Encounter name="ShatteredMajesty" weight="1">
+    <SpawnObject text="ShatteredMajesty" count="20" />
+  </Encounter>
+
+  <Encounter name="ShiveringSpecter" weight="1">
+    <SpawnObject text="ShiveringSpecter" count="20" />
+  </Encounter>
+
+  <Encounter name="SkullfangReaper" weight="1">
+    <SpawnObject text="SkullfangReaper" count="20" />
+  </Encounter>
+
+  <Encounter name="SpectralCharger" weight="1">
+    <SpawnObject text="SpectralCharger" count="20" />
+  </Encounter>
+
+  <Encounter name="SpectralSentry" weight="1">
+    <SpawnObject text="SpectralSentry" count="20" />
+  </Encounter>
+
+  <Encounter name="SpectralUrsus" weight="1">
+    <SpawnObject text="SpectralUrsus" count="20" />
+  </Encounter>
+
+  <Encounter name="StygianHellhound" weight="1">
+    <SpawnObject text="StygianHellhound" count="20" />
+  </Encounter>
+
+  <Encounter name="SunkenAurumWraith" weight="1">
+    <SpawnObject text="SunkenAurumWraith" count="20" />
+  </Encounter>
+
+  <Encounter name="WailingSprite" weight="1">
+    <SpawnObject text="WailingSprite" count="20" />
+  </Encounter>
+
+  <Encounter name="AshWraith" weight="1">
+    <SpawnObject text="AshWraith" count="20" />
+  </Encounter>
+
+  <Encounter name="BlazingBones" weight="1">
+    <SpawnObject text="BlazingBones" count="20" />
+  </Encounter>
+
+  <Encounter name="BlazingBoura" weight="1">
+    <SpawnObject text="BlazingBoura" count="20" />
+  </Encounter>
+
+  <Encounter name="BlazingLlama" weight="1">
+    <SpawnObject text="BlazingLlama" count="20" />
+  </Encounter>
+
+  <Encounter name="BlazingShade" weight="1">
+    <SpawnObject text="BlazingShade" count="20" />
+  </Encounter>
+
+  <Encounter name="BlazingTitan" weight="1">
+    <SpawnObject text="BlazingTitan" count="20" />
+  </Encounter>
+
+  <Encounter name="BurningCorpse" weight="1">
+    <SpawnObject text="BurningCorpse" count="20" />
+  </Encounter>
+
+  <Encounter name="BurningGargoyle" weight="1">
+    <SpawnObject text="BurningGargoyle" count="20" />
+  </Encounter>
+
+  <Encounter name="BurningRavager" weight="1">
+    <SpawnObject text="BurningRavager" count="20" />
+  </Encounter>
+
+  <Encounter name="EmberKitsune" weight="1">
+    <SpawnObject text="EmberKitsune" count="20" />
+  </Encounter>
+
+  <Encounter name="FireScorchedSkeleton" weight="1">
+    <SpawnObject text="FireScorchedSkeleton" count="20" />
+  </Encounter>
+
+  <Encounter name="FirestoneElemental" weight="1">
+    <SpawnObject text="FirestoneElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="FlameBird" weight="1">
+    <SpawnObject text="FlameBird" count="20" />
+  </Encounter>
+
+  <Encounter name="Flamebot" weight="1">
+    <SpawnObject text="Flamebot" count="20" />
+  </Encounter>
+
+  <Encounter name="FlameController" weight="1">
+    <SpawnObject text="FlameController" count="20" />
+  </Encounter>
+
+  <Encounter name="GoblinArsonist" weight="1">
+    <SpawnObject text="GoblinArsonist" count="20" />
+  </Encounter>
+
+  <Encounter name="HellDragon" weight="1">
+    <SpawnObject text="HellDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="HellfireProtector" weight="1">
+    <SpawnObject text="HellfireProtector" count="20" />
+  </Encounter>
+
+  <Encounter name="HellScorpion" weight="1">
+    <SpawnObject text="HellScorpion" count="20" />
+  </Encounter>
+
+  <Encounter name="InfernalBanshee" weight="1">
+    <SpawnObject text="InfernalBanshee" count="20" />
+  </Encounter>
+
+  <Encounter name="InfernalMinotaur" weight="1">
+    <SpawnObject text="InfernalMinotaur" count="20" />
+  </Encounter>
+
+  <Encounter name="InfernalOrc" weight="1">
+    <SpawnObject text="InfernalOrc" count="20" />
+  </Encounter>
+
+  <Encounter name="InfernalSavage" weight="1">
+    <SpawnObject text="InfernalSavage" count="20" />
+  </Encounter>
+
+  <Encounter name="InfernoDevil" weight="1">
+    <SpawnObject text="InfernoDevil" count="20" />
+  </Encounter>
+
+  <Encounter name="InfernoElemental" weight="1">
+    <SpawnObject text="InfernoElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="LavaDolphin" weight="1">
+    <SpawnObject text="LavaDolphin" count="20" />
+  </Encounter>
+
+  <Encounter name="LivingLava" weight="1">
+    <SpawnObject text="LivingLava" count="20" />
+  </Encounter>
+
+  <Encounter name="ScaldingElemental" weight="1">
+    <SpawnObject text="ScaldingElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="ScaldingSnake" weight="1">
+    <SpawnObject text="ScaldingSnake" count="20" />
+  </Encounter>
+
+  <Encounter name="ScaldingWraith" weight="1">
+    <SpawnObject text="ScaldingWraith" count="20" />
+  </Encounter>
+
+  <Encounter name="ScorchedLich" weight="1">
+    <SpawnObject text="ScorchedLich" count="20" />
+  </Encounter>
+
+  <Encounter name="ScorchingLlama" weight="1">
+    <SpawnObject text="ScorchingLlama" count="20" />
+  </Encounter>
+
+  <Encounter name="ScorchingOgre" weight="1">
+    <SpawnObject text="ScorchingOgre" count="20" />
+  </Encounter>
+
+  <Encounter name="ScorchingWebspinner" weight="1">
+    <SpawnObject text="ScorchingWebspinner" count="20" />
+  </Encounter>
+
+  <Encounter name="SearingImp" weight="1">
+    <SpawnObject text="SearingImp" count="20" />
+  </Encounter>
+
+  <Encounter name="ChillfireElemental" weight="1">
+    <SpawnObject text="ChillfireElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="ChillSatyr" weight="1">
+    <SpawnObject text="ChillSatyr" count="20" />
+  </Encounter>
+
+  <Encounter name="ColdscaleLizardman" weight="1">
+    <SpawnObject text="ColdscaleLizardman" count="20" />
+  </Encounter>
+
+  <Encounter name="CrystalChangeling" weight="1">
+    <SpawnObject text="CrystalChangeling" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostAxeOrc" weight="1">
+    <SpawnObject text="FrostAxeOrc" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostbiteHound" weight="1">
+    <SpawnObject text="FrostbiteHound" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostbittenSteed" weight="1">
+    <SpawnObject text="FrostbittenSteed" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostboundBandage" weight="1">
+    <SpawnObject text="FrostboundBandage" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostboundKnight" weight="1">
+    <SpawnObject text="FrostboundKnight" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostboundSovereign" weight="1">
+    <SpawnObject text="FrostboundSovereign" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostbrandWarrior" weight="1">
+    <SpawnObject text="FrostbrandWarrior" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostedSeductress" weight="1">
+    <SpawnObject text="FrostedSeductress" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostedWidowSpider" weight="1">
+    <SpawnObject text="FrostedWidowSpider" count="20" />
+  </Encounter>
+
+  <Encounter name="FrostwovenMage" weight="1">
+    <SpawnObject text="FrostwovenMage" count="20" />
+  </Encounter>
+
+  <Encounter name="FrozenBonefiend" weight="1">
+    <SpawnObject text="FrozenBonefiend" count="20" />
+  </Encounter>
+
+  <Encounter name="GlacialAbomination" weight="1">
+    <SpawnObject text="GlacialAbomination" count="20" />
+  </Encounter>
+
+  <Encounter name="GlacialConstruct" weight="1">
+    <SpawnObject text="GlacialConstruct" count="20" />
+  </Encounter>
+
+  <Encounter name="GlacialEagle" weight="1">
+    <SpawnObject text="GlacialEagle" count="20" />
+  </Encounter>
+
+  <Encounter name="GlacialExecutioner" weight="1">
+    <SpawnObject text="GlacialExecutioner" count="20" />
+  </Encounter>
+
+  <Encounter name="GlacialOgre" weight="1">
+    <SpawnObject text="GlacialOgre" count="20" />
+  </Encounter>
+
+  <Encounter name="GlacialOoze" weight="1">
+    <SpawnObject text="GlacialOoze" count="20" />
+  </Encounter>
+
+  <Encounter name="GlacialTimberwolf" weight="1">
+    <SpawnObject text="GlacialTimberwolf" count="20" />
+  </Encounter>
+
+  <Encounter name="GlacialWraith" weight="1">
+    <SpawnObject text="GlacialWraith" count="20" />
+  </Encounter>
+
+  <Encounter name="IceboundLarva" weight="1">
+    <SpawnObject text="IceboundLarva" count="20" />
+  </Encounter>
+
+  <Encounter name="IceclawPredator" weight="1">
+    <SpawnObject text="IceclawPredator" count="20" />
+  </Encounter>
+
+  <Encounter name="IcelightWisp" weight="1">
+    <SpawnObject text="IcelightWisp" count="20" />
+  </Encounter>
+
+  <Encounter name="IceWraithMatriarch" weight="1">
+    <SpawnObject text="IceWraithMatriarch" count="20" />
+  </Encounter>
+
+  <Encounter name="IcyAlchemistGoblin" weight="1">
+    <SpawnObject text="IcyAlchemistGoblin" count="20" />
+  </Encounter>
+
+  <Encounter name="IcyBunny" weight="1">
+    <SpawnObject text="IcyBunny" count="20" />
+  </Encounter>
+
+  <Encounter name="IcyDominionQueen" weight="1">
+    <SpawnObject text="IcyDominionQueen" count="20" />
+  </Encounter>
+
+  <Encounter name="IcyExecutioner" weight="1">
+    <SpawnObject text="IcyExecutioner" count="20" />
+  </Encounter>
+
+  <Encounter name="IcyLion" weight="1">
+    <SpawnObject text="IcyLion" count="20" />
+  </Encounter>
+
+  <Encounter name="IcyMinion" weight="1">
+    <SpawnObject text="IcyMinion" count="20" />
+  </Encounter>
+
+  <Encounter name="IcySolenServant" weight="1">
+    <SpawnObject text="IcySolenServant" count="20" />
+  </Encounter>
+
+  <Encounter name="MoonfrostWolf" weight="1">
+    <SpawnObject text="MoonfrostWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="SerpentOfTheGlaciers" weight="1">
+    <SpawnObject text="SerpentOfTheGlaciers" count="20" />
+  </Encounter>
+
+  <Encounter name="ShatteredCorpse" weight="1">
+    <SpawnObject text="ShatteredCorpse" count="20" />
+  </Encounter>
+
+  <Encounter name="Shiverlash" weight="1">
+    <SpawnObject text="Shiverlash" count="20" />
+  </Encounter>
+
+  <Encounter name="ArcaneAntlion" weight="1">
+    <SpawnObject text="ArcaneAntlion" count="20" />
+  </Encounter>
+
+  <Encounter name="ArcaneAssassin" weight="1">
+    <SpawnObject text="ArcaneAssassin" count="20" />
+  </Encounter>
+
+  <Encounter name="ArcaneSlug" weight="1">
+    <SpawnObject text="ArcaneSlug" count="20" />
+  </Encounter>
+
+  <Encounter name="ArcaneSwine" weight="1">
+    <SpawnObject text="ArcaneSwine" count="20" />
+  </Encounter>
+
+  <Encounter name="BoundKirin" weight="1">
+    <SpawnObject text="BoundKirin" count="20" />
+  </Encounter>
+
+  <Encounter name="CursedMalidorWarrior" weight="1">
+    <SpawnObject text="CursedMalidorWarrior" count="20" />
+  </Encounter>
+
+  <Encounter name="CursedRat" weight="1">
+    <SpawnObject text="CursedRat" count="20" />
+  </Encounter>
+
+  <Encounter name="DeanOfMalidor" weight="1">
+    <SpawnObject text="DeanOfMalidor" count="20" />
+  </Encounter>
+
+  <Encounter name="DisplacementBeast" weight="1">
+    <SpawnObject text="DisplacementBeast" count="20" />
+  </Encounter>
+
+  <Encounter name="Dracolich" weight="1">
+    <SpawnObject text="Dracolich" count="20" />
+  </Encounter>
+
+  <Encounter name="EnchantedMinion" weight="1">
+    <SpawnObject text="EnchantedMinion" count="20" />
+  </Encounter>
+
+  <Encounter name="EnchantmentDragon" weight="1">
+    <SpawnObject text="EnchantmentDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="EnchantmentSlooth" weight="1">
+    <SpawnObject text="EnchantmentSlooth" count="20" />
+  </Encounter>
+
+  <Encounter name="Hexling" weight="1">
+    <SpawnObject text="Hexling" count="20" />
+  </Encounter>
+
+  <Encounter name="Hexlord" weight="1">
+    <SpawnObject text="Hexlord" count="20" />
+  </Encounter>
+
+  <Encounter name="LabRat" weight="1">
+    <SpawnObject text="LabRat" count="20" />
+  </Encounter>
+
+  <Encounter name="MacroVirus" weight="1">
+    <SpawnObject text="MacroVirus" count="20" />
+  </Encounter>
+
+  <Encounter name="MagicFiend" weight="1">
+    <SpawnObject text="MagicFiend" count="20" />
+  </Encounter>
+
+  <Encounter name="MalidorWarhorse" weight="1">
+    <SpawnObject text="MalidorWarhorse" count="20" />
+  </Encounter>
+
+  <Encounter name="Morlock" weight="1">
+    <SpawnObject text="Morlock" count="20" />
+  </Encounter>
+
+  <Encounter name="MysticDragon" weight="1">
+    <SpawnObject text="MysticDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="OrcishAlchemist" weight="1">
+    <SpawnObject text="OrcishAlchemist" count="20" />
+  </Encounter>
+
+  <Encounter name="PixieSonglord" weight="1">
+    <SpawnObject text="PixieSonglord" count="20" />
+  </Encounter>
+
+  <Encounter name="RomeroZombie" weight="1">
+    <SpawnObject text="RomeroZombie" count="20" />
+  </Encounter>
+
+  <Encounter name="SpellClaw" weight="1">
+    <SpawnObject text="SpellClaw" count="20" />
+  </Encounter>
+
+  <Encounter name="SpellDrake" weight="1">
+    <SpawnObject text="SpellDrake" count="20" />
+  </Encounter>
+
+  <Encounter name="SpellElemental" weight="1">
+    <SpawnObject text="SpellElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="ToxinElemental" weight="1">
+    <SpawnObject text="ToxinElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="TwinHead" weight="1">
+    <SpawnObject text="TwinHead" count="20" />
+  </Encounter>
+
+  <Encounter name="WanderingSoul" weight="1">
+    <SpawnObject text="WanderingSoul" count="20" />
+  </Encounter>
+
+  <Encounter name="Werewolf" weight="1">
+    <SpawnObject text="Werewolf" count="20" />
+  </Encounter>
+
+  <Encounter name="WitchboundGargoyle" weight="1">
+    <SpawnObject text="WitchboundGargoyle" count="20" />
+  </Encounter>
+
+  <Encounter name="WitchboundMummy" weight="1">
+    <SpawnObject text="WitchboundMummy" count="20" />
+  </Encounter>
+
+  <Encounter name="WitchesFamiliar" weight="1">
+    <SpawnObject text="WitchesFamiliar" count="20" />
+  </Encounter>
+
+  <Encounter name="WitchsEnforcer" weight="1">
+    <SpawnObject text="WitchsEnforcer" count="20" />
+  </Encounter>
+
+  <Encounter name="WitchsMongbat" weight="1">
+    <SpawnObject text="WitchsMongbat" count="20" />
+  </Encounter>
+
+  <Encounter name="YamishDemon" weight="1">
+    <SpawnObject text="YamishDemon" count="20" />
+  </Encounter>
+
+  <Encounter name="BronzeOfTheDeep" weight="1">
+    <SpawnObject text="BronzeOfTheDeep" count="20" />
+  </Encounter>
+
+  <Encounter name="BuriedCow" weight="1">
+    <SpawnObject text="BuriedCow" count="20" />
+  </Encounter>
+
+  <Encounter name="BurrowerKeppto" weight="1">
+    <SpawnObject text="BurrowerKeppto" count="20" />
+  </Encounter>
+
+  <Encounter name="CaveAvenger" weight="1">
+    <SpawnObject text="CaveAvenger" count="20" />
+  </Encounter>
+
+  <Encounter name="CavernGoblin" weight="1">
+    <SpawnObject text="CavernGoblin" count="20" />
+  </Encounter>
+
+  <Encounter name="CoalWisp" weight="1">
+    <SpawnObject text="CoalWisp" count="20" />
+  </Encounter>
+
+  <Encounter name="CorrodedRedSolen" weight="1">
+    <SpawnObject text="CorrodedRedSolen" count="20" />
+  </Encounter>
+
+  <Encounter name="CorrodedSlith" weight="1">
+    <SpawnObject text="CorrodedSlith" count="20" />
+  </Encounter>
+
+  <Encounter name="CorrodedSolenWorker" weight="1">
+    <SpawnObject text="CorrodedSolenWorker" count="20" />
+  </Encounter>
+
+  <Encounter name="DeepOrtanord" weight="1">
+    <SpawnObject text="DeepOrtanord" count="20" />
+  </Encounter>
+
+  <Encounter name="ElfMiner" weight="1">
+    <SpawnObject text="ElfMiner" count="20" />
+  </Encounter>
+
+  <Encounter name="EntombedMummy" weight="1">
+    <SpawnObject text="EntombedMummy" count="20" />
+  </Encounter>
+
+  <Encounter name="GhoulMiner" weight="1">
+    <SpawnObject text="GhoulMiner" count="20" />
+  </Encounter>
+
+  <Encounter name="GloomKnight" weight="1">
+    <SpawnObject text="GloomKnight" count="20" />
+  </Encounter>
+
+  <Encounter name="GrittyPixie" weight="1">
+    <SpawnObject text="GrittyPixie" count="20" />
+  </Encounter>
+
+  <Encounter name="InsaneOphidianKnight" weight="1">
+    <SpawnObject text="InsaneOphidianKnight" count="20" />
+  </Encounter>
+
+  <Encounter name="LostMiner" weight="1">
+    <SpawnObject text="LostMiner" count="20" />
+  </Encounter>
+
+  <Encounter name="MinecraftGargolye" weight="1">
+    <SpawnObject text="MinecraftGargolye" count="20" />
+  </Encounter>
+
+  <Encounter name="MineDancer" weight="1">
+    <SpawnObject text="MineDancer" count="20" />
+  </Encounter>
+
+  <Encounter name="MineHorror" weight="1">
+    <SpawnObject text="MineHorror" count="20" />
+  </Encounter>
+
+  <Encounter name="MineralWaterElemental" weight="1">
+    <SpawnObject text="MineralWaterElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="MinersFleshGolem" weight="1">
+    <SpawnObject text="MinersFleshGolem" count="20" />
+  </Encounter>
+
+  <Encounter name="MineWolf" weight="1">
+    <SpawnObject text="MineWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="MiningSkeleton" weight="1">
+    <SpawnObject text="MiningSkeleton" count="20" />
+  </Encounter>
+
+  <Encounter name="Orebinder" weight="1">
+    <SpawnObject text="Orebinder" count="20" />
+  </Encounter>
+
+  <Encounter name="OreBird" weight="1">
+    <SpawnObject text="OreBird" count="20" />
+  </Encounter>
+
+  <Encounter name="OreboundElemental" weight="1">
+    <SpawnObject text="OreboundElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="OreBrigand" weight="1">
+    <SpawnObject text="OreBrigand" count="20" />
+  </Encounter>
+
+  <Encounter name="Oremire" weight="1">
+    <SpawnObject text="Oremire" count="20" />
+  </Encounter>
+
+  <Encounter name="OreMule" weight="1">
+    <SpawnObject text="OreMule" count="20" />
+  </Encounter>
+
+  <Encounter name="OreScaledDragon" weight="1">
+    <SpawnObject text="OreScaledDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="RockyLlama" weight="1">
+    <SpawnObject text="RockyLlama" count="20" />
+  </Encounter>
+
+  <Encounter name="SilverMage" weight="1">
+    <SpawnObject text="SilverMage" count="20" />
+  </Encounter>
+
+  <Encounter name="SulfuricSnake" weight="1">
+    <SpawnObject text="SulfuricSnake" count="20" />
+  </Encounter>
+
+  <Encounter name="TunnelMinotaur" weight="1">
+    <SpawnObject text="TunnelMinotaur" count="20" />
+  </Encounter>
+
+  <Encounter name="TunnelRat" weight="1">
+    <SpawnObject text="TunnelRat" count="20" />
+  </Encounter>
+
+  <Encounter name="YomotsuMinelord" weight="1">
+    <SpawnObject text="YomotsuMinelord" count="20" />
+  </Encounter>
+
+  <Encounter name="AncientDrakon" weight="1">
+    <SpawnObject text="AncientDrakon" count="20" />
+  </Encounter>
+
+  <Encounter name="AncientHiryu" weight="1">
+    <SpawnObject text="AncientHiryu" count="20" />
+  </Encounter>
+
+  <Encounter name="AncientYamandon" weight="1">
+    <SpawnObject text="AncientYamandon" count="20" />
+  </Encounter>
+
+  <Encounter name="BoneSteed" weight="1">
+    <SpawnObject text="BoneSteed" count="20" />
+  </Encounter>
+
+  <Encounter name="CarvedBird" weight="1">
+    <SpawnObject text="CarvedBird" count="20" />
+  </Encounter>
+
+  <Encounter name="CragFiddler" weight="1">
+    <SpawnObject text="CragFiddler" count="20" />
+  </Encounter>
+
+  <Encounter name="CragSerpent" weight="1">
+    <SpawnObject text="CragSerpent" count="20" />
+  </Encounter>
+
+  <Encounter name="CragSlug" weight="1">
+    <SpawnObject text="CragSlug" count="20" />
+  </Encounter>
+
+  <Encounter name="GraniteEye" weight="1">
+    <SpawnObject text="GraniteEye" count="20" />
+  </Encounter>
+
+  <Encounter name="GraniteGuardian" weight="1">
+    <SpawnObject text="GraniteGuardian" count="20" />
+  </Encounter>
+
+  <Encounter name="GraniteKemo" weight="1">
+    <SpawnObject text="GraniteKemo" count="20" />
+  </Encounter>
+
+  <Encounter name="GraniteWarrior" weight="1">
+    <SpawnObject text="GraniteWarrior" count="20" />
+  </Encounter>
+
+  <Encounter name="IronboundElemental" weight="1">
+    <SpawnObject text="IronboundElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="MountainBrigand" weight="1">
+    <SpawnObject text="MountainBrigand" count="20" />
+  </Encounter>
+
+  <Encounter name="MountainElite" weight="1">
+    <SpawnObject text="MountainElite" count="20" />
+  </Encounter>
+
+  <Encounter name="MountainMinotaur" weight="1">
+    <SpawnObject text="MountainMinotaur" count="20" />
+  </Encounter>
+
+  <Encounter name="MountainRonin" weight="1">
+    <SpawnObject text="MountainRonin" count="20" />
+  </Encounter>
+
+  <Encounter name="MountainSteed" weight="1">
+    <SpawnObject text="MountainSteed" count="20" />
+  </Encounter>
+
+  <Encounter name="MountainWanderer" weight="1">
+    <SpawnObject text="MountainWanderer" count="20" />
+  </Encounter>
+
+  <Encounter name="NexusWeaver" weight="1">
+    <SpawnObject text="NexusWeaver" count="20" />
+  </Encounter>
+
+  <Encounter name="ObsidianDragon" weight="1">
+    <SpawnObject text="ObsidianDragon" count="20" />
+  </Encounter>
+
+  <Encounter name="ObsidianSerpent" weight="1">
+    <SpawnObject text="ObsidianSerpent" count="20" />
+  </Encounter>
+
+  <Encounter name="ObsidianWorm" weight="1">
+    <SpawnObject text="ObsidianWorm" count="20" />
+  </Encounter>
+
+  <Encounter name="PlutoniumElemental" weight="1">
+    <SpawnObject text="PlutoniumElemental" count="20" />
+  </Encounter>
+
+  <Encounter name="RockboundSpectral" weight="1">
+    <SpawnObject text="RockboundSpectral" count="20" />
+  </Encounter>
+
+  <Encounter name="RockFiend" weight="1">
+    <SpawnObject text="RockFiend" count="20" />
+  </Encounter>
+
+  <Encounter name="RockGuardian" weight="1">
+    <SpawnObject text="RockGuardian" count="20" />
+  </Encounter>
+
+  <Encounter name="RockOrc" weight="1">
+    <SpawnObject text="RockOrc" count="20" />
+  </Encounter>
+
+  <Encounter name="RockridgeSavage" weight="1">
+    <SpawnObject text="RockridgeSavage" count="20" />
+  </Encounter>
+
+  <Encounter name="RuneguardPowerGolem" weight="1">
+    <SpawnObject text="RuneguardPowerGolem" count="20" />
+  </Encounter>
+
+  <Encounter name="RunestoneGolem" weight="1">
+    <SpawnObject text="RunestoneGolem" count="20" />
+  </Encounter>
+
+  <Encounter name="ShardMaster" weight="1">
+    <SpawnObject text="ShardMaster" count="20" />
+  </Encounter>
+
+  <Encounter name="StoneboundRoots" weight="1">
+    <SpawnObject text="StoneboundRoots" count="20" />
+  </Encounter>
+
+  <Encounter name="StonefangCougar" weight="1">
+    <SpawnObject text="StonefangCougar" count="20" />
+  </Encounter>
+
+  <Encounter name="StoneGorilla" weight="1">
+    <SpawnObject text="StoneGorilla" count="20" />
+  </Encounter>
+
+  <Encounter name="StoneRipper" weight="1">
+    <SpawnObject text="StoneRipper" count="20" />
+  </Encounter>
+
+  <Encounter name="StonewebWarlock" weight="1">
+    <SpawnObject text="StonewebWarlock" count="20" />
+  </Encounter>
+
+  <Encounter name="StonyGolath" weight="1">
+    <SpawnObject text="StonyGolath" count="20" />
+  </Encounter>
+
+  <Encounter name="Anachronaut" weight="1">
+    <SpawnObject text="Anachronaut" count="20" />
+  </Encounter>
+
+  <Encounter name="AtomicRaptor" weight="1">
+    <SpawnObject text="AtomicRaptor" count="20" />
+  </Encounter>
+
+  <Encounter name="ChoirWraith" weight="1">
+    <SpawnObject text="ChoirWraith" count="20" />
+  </Encounter>
+
+  <Encounter name="ChronoColossus" weight="1">
+    <SpawnObject text="ChronoColossus" count="20" />
+  </Encounter>
+
+  <Encounter name="ContainmentSpill" weight="1">
+    <SpawnObject text="ContainmentSpill" count="20" />
+  </Encounter>
+
+  <Encounter name="Continuant" weight="1">
+    <SpawnObject text="Continuant" count="20" />
+  </Encounter>
+
+  <Encounter name="Cosplayer" weight="1">
+    <SpawnObject text="Cosplayer" count="20" />
+  </Encounter>
+
+  <Encounter name="CryoToad" weight="1">
+    <SpawnObject text="CryoToad" count="20" />
+  </Encounter>
+
+  <Encounter name="CuPatternVatbeast" weight="1">
+    <SpawnObject text="CuPatternVatbeast" count="20" />
+  </Encounter>
+
+  <Encounter name="DigitalPhantom" weight="1">
+    <SpawnObject text="DigitalPhantom" count="20" />
+  </Encounter>
+
+  <Encounter name="EchoWielder" weight="1">
+    <SpawnObject text="EchoWielder" count="20" />
+  </Encounter>
+
+  <Encounter name="EtheralCitizen" weight="1">
+    <SpawnObject text="EtheralCitizen" count="20" />
+  </Encounter>
+
+  <Encounter name="FurnaceDrakeMK1" weight="1">
+    <SpawnObject text="FurnaceDrakeMK1" count="20" />
+  </Encounter>
+
+  <Encounter name="HemoglintStryga" weight="1">
+    <SpawnObject text="HemoglintStryga" count="20" />
+  </Encounter>
+
+  <Encounter name="Hemovulpine" weight="1">
+    <SpawnObject text="Hemovulpine" count="20" />
+  </Encounter>
+
+  <Encounter name="HexaSeraph" weight="1">
+    <SpawnObject text="HexaSeraph" count="20" />
+  </Encounter>
+
+  <Encounter name="ImperiumSteed" weight="1">
+    <SpawnObject text="ImperiumSteed" count="20" />
+  </Encounter>
+
+  <Encounter name="ImperiumWatcher" weight="1">
+    <SpawnObject text="ImperiumWatcher" count="20" />
+  </Encounter>
+
+  <Encounter name="Meatformer" weight="1">
+    <SpawnObject text="Meatformer" count="20" />
+  </Encounter>
+
+  <Encounter name="MemoryRot" weight="1">
+    <SpawnObject text="MemoryRot" count="20" />
+  </Encounter>
+
+  <Encounter name="MiasmaResiduum" weight="1">
+    <SpawnObject text="MiasmaResiduum" count="20" />
+  </Encounter>
+
+  <Encounter name="Phasebeak" weight="1">
+    <SpawnObject text="Phasebeak" count="20" />
+  </Encounter>
+
+  <Encounter name="ProtocolDragonX" weight="1">
+    <SpawnObject text="ProtocolDragonX" count="20" />
+  </Encounter>
+
+  <Encounter name="RoosterUnitC7Warcluck" weight="1">
+    <SpawnObject text="RoosterUnitC7Warcluck" count="20" />
+  </Encounter>
+
+  <Encounter name="SigilCrawler" weight="1">
+    <SpawnObject text="SigilCrawler" count="20" />
+  </Encounter>
+
+  <Encounter name="SolenDroneBeta" weight="1">
+    <SpawnObject text="SolenDroneBeta" count="20" />
+  </Encounter>
+
+  <Encounter name="StingerClassSentinel" weight="1">
+    <SpawnObject text="StingerClassSentinel" count="20" />
+  </Encounter>
+
+  <Encounter name="SupplyBeastV44" weight="1">
+    <SpawnObject text="SupplyBeastV44" count="20" />
+  </Encounter>
+
+  <Encounter name="SyntheticOphidian" weight="1">
+    <SpawnObject text="SyntheticOphidian" count="20" />
+  </Encounter>
+
+  <Encounter name="TauEngine" weight="1">
+    <SpawnObject text="TauEngine" count="20" />
+  </Encounter>
+
+  <Encounter name="TheArchivist" weight="1">
+    <SpawnObject text="TheArchivist" count="20" />
+  </Encounter>
+
+  <Encounter name="Unit12" weight="1">
+    <SpawnObject text="Unit12" count="20" />
+  </Encounter>
+
+  <Encounter name="VaultCeratops3" weight="1">
+    <SpawnObject text="VaultCeratops3" count="20" />
+  </Encounter>
+
+  <Encounter name="VaultDrone" weight="1">
+    <SpawnObject text="VaultDrone" count="20" />
+  </Encounter>
+
+  <Encounter name="VaultKitty" weight="1">
+    <SpawnObject text="VaultKitty" count="20" />
+  </Encounter>
+
+  <Encounter name="VaultSentinelX8" weight="1">
+    <SpawnObject text="VaultSentinelX8" count="20" />
+  </Encounter>
+
+  <Encounter name="AnointedBonePriest" weight="1">
+    <SpawnObject text="AnointedBonePriest" count="20" />
+  </Encounter>
+
+  <Encounter name="BloodOfThePharaoh" weight="1">
+    <SpawnObject text="BloodOfThePharaoh" count="20" />
+  </Encounter>
+
+  <Encounter name="CamelSpider" weight="1">
+    <SpawnObject text="CamelSpider" count="20" />
+  </Encounter>
+
+  <Encounter name="CursedAir" weight="1">
+    <SpawnObject text="CursedAir" count="20" />
+  </Encounter>
+
+  <Encounter name="CursedCorpse" weight="1">
+    <SpawnObject text="CursedCorpse" count="20" />
+  </Encounter>
+
+  <Encounter name="CursedMolar" weight="1">
+    <SpawnObject text="CursedMolar" count="20" />
+  </Encounter>
+
+  <Encounter name="CursedTree" weight="1">
+    <SpawnObject text="CursedTree" count="20" />
+  </Encounter>
+
+  <Encounter name="CursedVine" weight="1">
+    <SpawnObject text="CursedVine" count="20" />
+  </Encounter>
+
+  <Encounter name="DesertBear" weight="1">
+    <SpawnObject text="DesertBear" count="20" />
+  </Encounter>
+
+  <Encounter name="DesertGrizzly" weight="1">
+    <SpawnObject text="DesertGrizzly" count="20" />
+  </Encounter>
+
+  <Encounter name="DesertHopper" weight="1">
+    <SpawnObject text="DesertHopper" count="20" />
+  </Encounter>
+
+  <Encounter name="DryadOfTheDunes" weight="1">
+    <SpawnObject text="DryadOfTheDunes" count="20" />
+  </Encounter>
+
+  <Encounter name="DuneWolf" weight="1">
+    <SpawnObject text="DuneWolf" count="20" />
+  </Encounter>
+
+  <Encounter name="EliteMummy" weight="1">
+    <SpawnObject text="EliteMummy" count="20" />
+  </Encounter>
+
+  <Encounter name="FlameOfTheNile" weight="1">
+    <SpawnObject text="FlameOfTheNile" count="20" />
+  </Encounter>
+
+  <Encounter name="HieroglyphMage" weight="1">
+    <SpawnObject text="HieroglyphMage" count="20" />
+  </Encounter>
+
+  <Encounter name="MummifiedBeast" weight="1">
+    <SpawnObject text="MummifiedBeast" count="20" />
+  </Encounter>
+
+  <Encounter name="MummifiedOstard" weight="1">
+    <SpawnObject text="MummifiedOstard" count="20" />
+  </Encounter>
+
+  <Encounter name="MummifiedYomotsu" weight="1">
+    <SpawnObject text="MummifiedYomotsu" count="20" />
+  </Encounter>
+
+  <Encounter name="MummyRam" weight="1">
+    <SpawnObject text="MummyRam" count="20" />
+  </Encounter>
+
+  <Encounter name="MummyRender" weight="1">
+    <SpawnObject text="MummyRender" count="20" />
+  </Encounter>
+
+  <Encounter name="MysticEffervescence" weight="1">
+    <SpawnObject text="MysticEffervescence" count="20" />
+  </Encounter>
+
+  <Encounter name="NileRiverSerpent" weight="1">
+    <SpawnObject text="NileRiverSerpent" count="20" />
+  </Encounter>
+
+  <Encounter name="NileSerpent" weight="1">
+    <SpawnObject text="NileSerpent" count="20" />
+  </Encounter>
+
+  <Encounter name="PharaohsSteed" weight="1">
+    <SpawnObject text="PharaohsSteed" count="20" />
+  </Encounter>
+
+  <Encounter name="PharaohsUnicorn" weight="1">
+    <SpawnObject text="PharaohsUnicorn" count="20" />
+  </Encounter>
+
+  <Encounter name="PyramidCrane" weight="1">
+    <SpawnObject text="PyramidCrane" count="20" />
+  </Encounter>
+
+  <Encounter name="PyramidRouser" weight="1">
+    <SpawnObject text="PyramidRouser" count="20" />
+  </Encounter>
+
+  <Encounter name="QueenOfTheScarabs" weight="1">
+    <SpawnObject text="QueenOfTheScarabs" count="20" />
+  </Encounter>
+
+  <Encounter name="RoyalGuard" weight="1">
+    <SpawnObject text="RoyalGuard" count="20" />
+  </Encounter>
+
+  <Encounter name="SacredHart" weight="1">
+    <SpawnObject text="SacredHart" count="20" />
+  </Encounter>
+
+  <Encounter name="SandSquirrel" weight="1">
+    <SpawnObject text="SandSquirrel" count="20" />
+  </Encounter>
+
+  <Encounter name="Sandwurm" weight="1">
+    <SpawnObject text="Sandwurm" count="20" />
+  </Encounter>
+
+  <Encounter name="ScarabSpider" weight="1">
+    <SpawnObject text="ScarabSpider" count="20" />
+  </Encounter>
+
+  <Encounter name="SphinxLizard" weight="1">
+    <SpawnObject text="SphinxLizard" count="20" />
+  </Encounter>
+
+  <Encounter name="TombAmbusher" weight="1">
+    <SpawnObject text="TombAmbusher" count="20" />
+  </Encounter>
+
+  <Encounter name="TombRobber" weight="1">
+    <SpawnObject text="TombRobber" count="20" />
+  </Encounter>
+
+  <Encounter name="Aurefrost" weight="1">
+    <SpawnObject text="Aurefrost" count="20" />
+  </Encounter>
+
+  <Encounter name="Blightrun" weight="1">
+    <SpawnObject text="Blightrun" count="20" />
+  </Encounter>
+
+  <Encounter name="Cryvyn" weight="1">
+    <SpawnObject text="Cryvyn" count="20" />
+  </Encounter>
+
+  <Encounter name="Duskwyr" weight="1">
+    <SpawnObject text="Duskwyr" count="20" />
+  </Encounter>
+
+  <Encounter name="Echofern" weight="1">
+    <SpawnObject text="Echofern" count="20" />
+  </Encounter>
+
+  <Encounter name="Faelgrim" weight="1">
+    <SpawnObject text="Faelgrim" count="20" />
+  </Encounter>
+
+  <Encounter name="Fencreep" weight="1">
+    <SpawnObject text="Fencreep" count="20" />
+  </Encounter>
+
+  <Encounter name="Glazeborn" weight="1">
+    <SpawnObject text="Glazeborn" count="20" />
+  </Encounter>
+
+  <Encounter name="Glimmerjack" weight="1">
+    <SpawnObject text="Glimmerjack" count="20" />
+  </Encounter>
+
+  <Encounter name="Gnarrox" weight="1">
+    <SpawnObject text="Gnarrox" count="20" />
+  </Encounter>
+
+  <Encounter name="Graventh" weight="1">
+    <SpawnObject text="Graventh" count="20" />
+  </Encounter>
+
+  <Encounter name="Grothuuk" weight="1">
+    <SpawnObject text="Grothuuk" count="20" />
+  </Encounter>
+
+  <Encounter name="Marnstag" weight="1">
+    <SpawnObject text="Marnstag" count="20" />
+  </Encounter>
+
+  <Encounter name="Marrowth" weight="1">
+    <SpawnObject text="Marrowth" count="20" />
+  </Encounter>
+
+  <Encounter name="Nachtbram" weight="1">
+    <SpawnObject text="Nachtbram" count="20" />
+  </Encounter>
+
+  <Encounter name="Nimogwai" weight="1">
+    <SpawnObject text="Nimogwai" count="20" />
+  </Encounter>
+
+  <Encounter name="Nullshade" weight="1">
+    <SpawnObject text="Nullshade" count="20" />
+  </Encounter>
+
+  <Encounter name="Nyxra" weight="1">
+    <SpawnObject text="Nyxra" count="20" />
+  </Encounter>
+
+  <Encounter name="Onyxith" weight="1">
+    <SpawnObject text="Onyxith" count="20" />
+  </Encounter>
+
+  <Encounter name="Pyrrfelis" weight="1">
+    <SpawnObject text="Pyrrfelis" count="20" />
+  </Encounter>
+
+  <Encounter name="Sangsleet" weight="1">
+    <SpawnObject text="Sangsleet" count="20" />
+  </Encounter>
+
+  <Encounter name="Shaktarro" weight="1">
+    <SpawnObject text="Shaktarro" count="20" />
+  </Encounter>
+
+  <Encounter name="Shavarak" weight="1">
+    <SpawnObject text="Shavarak" count="20" />
+  </Encounter>
+
+  <Encounter name="Skarnvex" weight="1">
+    <SpawnObject text="Skarnvex" count="20" />
+  </Encounter>
+
+  <Encounter name="Skretchkin" weight="1">
+    <SpawnObject text="Skretchkin" count="20" />
+  </Encounter>
+
+  <Encounter name="Somnira" weight="1">
+    <SpawnObject text="Somnira" count="20" />
+  </Encounter>
+
+  <Encounter name="SongOfTheWild" weight="1">
+    <SpawnObject text="SongOfTheWild" count="20" />
+  </Encounter>
+
+  <Encounter name="Thessil" weight="1">
+    <SpawnObject text="Thessil" count="20" />
+  </Encounter>
+
+  <Encounter name="Thornlash" weight="1">
+    <SpawnObject text="Thornlash" count="20" />
+  </Encounter>
+
+  <Encounter name="Toxinex" weight="1">
+    <SpawnObject text="Toxinex" count="20" />
+  </Encounter>
+
+  <Encounter name="Umbrakyn" weight="1">
+    <SpawnObject text="Umbrakyn" count="20" />
+  </Encounter>
+
+  <Encounter name="Velmara" weight="1">
+    <SpawnObject text="Velmara" count="20" />
+  </Encounter>
+
+  <Encounter name="Veradrix" weight="1">
+    <SpawnObject text="Veradrix" count="20" />
+  </Encounter>
+
+  <Encounter name="Volgarith" weight="1">
+    <SpawnObject text="Volgarith" count="20" />
+  </Encounter>
+
+  <Encounter name="Whispent" weight="1">
+    <SpawnObject text="Whispent" count="20" />
+  </Encounter>  --> 
+  <!-- Add more wilderness encounters! -->
+</Encounters>

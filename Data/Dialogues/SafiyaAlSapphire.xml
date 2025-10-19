@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="SafiyaAlSapphire">
+
+  <!-- ========== GREETING ========== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#39B6FF'>
+      The merchant before you stands resplendent in azure silk, jewels flashing with each subtle movement. Her voice, sweet as honey and sharp as a scimitar, drifts on the perfumed air.<BR><BR>
+      “Welcome, traveler, to Qasaria—the jewel of the sands. I am <B>Safiya al-Sapphire</B>, Merchant-Queen, mistress of ports, and the richest woman between the dunes and the distant sea.<BR><BR>
+      Tell me, do you bring coin, curiosity… or perhaps the willingness to tip the scales of fate?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek lucrative work, Merchant-Queen." next="offerwork"/>
+    <Option text="Who truly rules Qasaria?" next="council"/>
+    <Option text="Tell me about yourself." next="aboutSafiya"/>
+    <Option text="What makes Qasaria different from Britain or Vesper?" next="aboutQasaria"/>
+	<Option text="Tell me more about your past... and your ambitions." next="safiyaDeepDive"/>
+    <Option text="I'm just browsing the markets." next="dismiss"/>
+  </Dialogue>
+
+  <!-- ========== ABOUT COUNCIL ========== -->
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      Safiya’s smile cools. “We are five, each named for a gem, but trust me—glass is less fragile. Sultan Rafiq holds the title of ruler and commands the cavalry, but his debts run deeper than the wells. Karim al-Emerald, our shadow in the alleys, moves unseen, while Yasmin al-Topaz buries herself in relics and mystic dust. As for Omar al-Onyx, he rules the arena and the coin-fed swords, but not the markets that truly matter.<BR><BR>
+      It is I who weave trade between the city’s pillars and the world. When gold whispers, even the council listens.”
+      ]]>
+    </NPCText>
+    <Option text="What is your relationship with Rafiq?" next="aboutRafiq"/>
+    <Option text="How do you handle Karim al-Emerald?" next="aboutKarim"/>
+    <Option text="Who truly profits from the Sands of Blood?" next="aboutOmar"/>
+    <Option text="Enough council politics. Is there work for me?" next="offerwork"/>
+    <Option text="I'd like to hear more about you." next="aboutSafiya"/>
+    <Option text="Farewell for now." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== ABOUT SAFIYA ========== -->
+  <Dialogue id="aboutSafiya">
+    <NPCText>
+      <![CDATA[
+      She gestures gracefully, the <B>Sapphire Chain of Coin and Fate</B> at her waist glittering.<BR><BR>
+      “Daughter of the Sapphire Guild, I was raised counting ledgers while other girls played at court. My father taught me: fortune favors the clever, and to trade with rivals is safer than to trust a single friend.<BR>
+      Some say I would sell my own shadow for profit—perhaps they are right. But I have kept Qasaria’s coffers full through war and plague, and my fleets reach farther than the banners of Britain.<BR>
+      My alliances shift as the desert winds: uneasy with Karim al-Emerald—who thinks himself subtler than gold—and competitive with Vesper, Nujel’m, even Sunreach.<BR>
+      If you wish to thrive in Qasaria, remember: loyalty is for those who cannot afford options.”
+      ]]>
+    </NPCText>
+    <Option text="Do you finance piracy in Sunreach, as some claim?" next="aboutPiracy"/>
+    <Option text="What do you want from an outsider like me?" next="offerwork"/>
+    <Option text="Tell me about Qasaria’s rivalries." next="aboutQasaria"/>
+    <Option text="I’ll return when I have more coin." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== ABOUT RAFIQ ========== -->
+  <Dialogue id="aboutRafiq">
+    <NPCText>
+      <![CDATA[
+      Her eyes glint. “Rafiq al-Ruby, poor soul, thinks Qasaria’s walls will stand on steel alone. He forgets that a soldier must eat, and every army’s purse strings are tied to my docks. We quarrel, yes, but our rivalry keeps the city nimble.<BR>
+      His honor binds him—mine, only my contracts.”
+      ]]>
+    </NPCText>
+    <Option text="You are not friends, then?" next="aboutKarim"/>
+    <Option text="Let's talk business instead." next="offerwork"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== ABOUT KARIM ========== -->
+  <Dialogue id="aboutKarim">
+    <NPCText>
+      <![CDATA[
+      “Karim and I share a… professional understanding. His spies protect my caravans, and in return, he enjoys a share of certain 'specialty wares.' I trust him only as far as I can watch his shadow, but our arrangement keeps the Ash Serpents and Minax’s jackals at bay.<BR>
+      Beware if he offers you ‘easy work’—there is always a cost.”
+      ]]>
+    </NPCText>
+    <Option text="Do you suspect Karim works with Minax?" next="minaxRumor"/>
+    <Option text="I would rather work for you." next="offerwork"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== ABOUT OMAR ========== -->
+  <Dialogue id="aboutOmar">
+    <NPCText>
+      <![CDATA[
+      “Omar al-Onyx controls muscle, but muscle answers to coin. He boasts that the arena belongs to him, but who sponsors the games? Who sells salt and water to the gladiators, and who profits from the wagers? Qasaria’s arena is my theater, though Omar refuses to admit it.”
+      ]]>
+    </NPCText>
+    <Option text="Arena games are dangerous. Your business seems safer." next="offerwork"/>
+    <Option text="Let’s change topics." next="aboutSafiya"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== PIRACY IN SUNREACH ========== -->
+  <Dialogue id="aboutPiracy">
+    <NPCText>
+      <![CDATA[
+      She laughs, a sound both musical and cutting. “Pirates? Merchants? In Sunreach, the line blurs. Some of my rivals pay for ‘protection’—I pay for information, and sometimes a ship changes flag under moonlight. Call it ‘liquid assets.’<BR>
+      But those who cross me find the desert less forgiving than the sea.”
+      ]]>
+    </NPCText>
+    <Option text="I prefer land to sea. What work do you offer?" next="offerwork"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== ABOUT QASARIA ========== -->
+  <Dialogue id="aboutQasaria">
+    <NPCText>
+      <![CDATA[
+      She sweeps a hand, her <B>Azure Whisper-Gown of the Dunes</B> catching the sunlight.<BR><BR>
+      “Qasaria is not Britain’s puppet, nor Vesper’s shadow. Our city grew from ruin and sand, powered by ancient secrets and the will to profit. Here, merchants rule as surely as kings—every trade shapes our fate.<BR>
+      Even Minax, for all her power, must barter with Qasaria before she claims the world. And should Britain rise again, they will find our coffers too deep to conquer.”
+      ]]>
+    </NPCText>
+    <Option text="Is Minax a threat to your trade?" next="minaxRumor"/>
+    <Option text="How do outsiders succeed here?" next="offerwork"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== MINAX RUMOR ========== -->
+  <Dialogue id="minaxRumor">
+    <NPCText>
+      <![CDATA[
+      Her tone darkens.<BR>
+      “Minax is no mere bandit queen. Her influence seeps into every market, every shadow. I have made deals with devils before, but her price is always higher than gold.<BR>
+      Some on the council—perhaps even Karim—think to use her chaos for their own gain. Fools. If you encounter Minax’s agents, bring me word. Qasaria pays for secrets as well as silver.”
+      ]]>
+    </NPCText>
+    <Option text="Do you have work for one who keeps secrets?" next="offerwork"/>
+    <Option text="I prefer gold to secrets." next="offerwork"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== QUEST OFFER ========== -->
+  <Dialogue id="offerwork">
+    <NPCText>
+      <![CDATA[
+      Safiya leans in, her voice dropping.<BR>
+      “There is a matter requiring a discreet hand. A shipment bound for Aerilon vanished—along with a ledger I would prefer remained unread by the Sapphire Guard. I suspect sabotage, possibly by Sunreach’s corsairs or a rival merchant.<BR>
+      Retrieve the ledger for me, and you will be paid in coin and favor. Should you choose, you may deliver a message of warning to my rivals in Aerilon—or keep the contents for your own advantage.<BR><BR>
+      Are you prepared to act as my courier and, if the chance arises, my voice?”
+      ]]>
+    </NPCText>
+    <Option text="I accept. Give me the Sapphire Ledger." 
+            action="GiveItem:FactionDeliveryQuestScroll(Sapphire Ledger,Aerilon,500)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="What dangers should I expect?" next="questRisks"/>
+    <Option text="Who might want this ledger?" next="ledgerRivals"/>
+    <Option text="How will you reward my discretion?" next="questReward"/>
+    <Option text="I must decline—for now." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== ACCEPT QUEST ========== -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Safiya produces a <B>Sapphire Ledger</B> bound in silver filigree, her Tradebinder’s Gloves ensuring not a speck of dust mars its pages.<BR>
+      “Guard this ledger, and do not let prying eyes linger on its script. You may find its secrets valuable to others, but remember—crossing the Merchant-Queen rarely ends profitably.<BR>
+      Deliver it to my agent in Aerilon, and your share will be more than gold. Or… if you are clever, see what rival offers you more. The choice, as always, is the traveler’s.”
+      ]]>
+    </NPCText>
+    <Option text="I will serve your interests, Merchant-Queen." action="Close"/>
+    <Option text="If a better offer comes, I may reconsider." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== QUEST RISKS ========== -->
+  <Dialogue id="questRisks">
+    <NPCText>
+      <![CDATA[
+      “Qasaria’s enemies are not all obvious. Sunreach’s pirates want to embarrass me; Aerilon’s mages, especially Selara Vael, would love a glimpse into my ledgers. Even Minax’s agents might covet the shipment for their own twisted aims.<BR>
+      Should you be intercepted, tell no one whose name is inked within. Some secrets cut deeper than a dagger.”
+      ]]>
+    </NPCText>
+    <Option text="I am not afraid. Give me the Sapphire Ledger."
+            action="GiveItem:FactionDeliveryQuestScroll(Sapphire Ledger,Aerilon,500)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="On second thought, I decline." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== LEDGER RIVALS ========== -->
+  <Dialogue id="ledgerRivals">
+    <NPCText>
+      <![CDATA[
+      “Sunreach would use it to blackmail my agents. Aerilon’s Conclave might expose my trade routes to force new alliances. Even within the council, Karim or Yasmin might pay handsomely to see what I would rather hide.<BR>
+      Deliver the ledger to my agent and you will have my gratitude. Sell it to a rival, and you may profit—if you survive the consequences.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll take my chances for profit." 
+            action="GiveItem:FactionDeliveryQuestScroll(Sapphire Ledger,Aerilon,500)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Best to stay loyal to Qasaria." 
+            action="GiveItem:FactionDeliveryQuestScroll(Sapphire Ledger,Aerilon,500)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="This is too risky for me." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== QUEST REWARD ========== -->
+  <Dialogue id="questReward">
+    <NPCText>
+      <![CDATA[
+      Safiya’s eyes sparkle behind her <B>Diadem of Sapphire Accord</B>.<BR>
+      “Discretion brings more than gold: gain my trust, and you may find doors open in every city touched by my fleets. Fail, and you may find doors closing in all of them.<BR>
+      Choose well, traveler. In Qasaria, fortune is always for sale—but loyalty is priceless.”
+      ]]>
+    </NPCText>
+    <Option text="I accept your terms." 
+            action="GiveItem:FactionDeliveryQuestScroll(Sapphire Ledger,Aerilon,500)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I need to think on this." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== DISMISS / BROWSING ========== -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Safiya shrugs, her <B>Merchant’s Ledger Sash</B> jingling with tiny silver coins.<BR>
+      “Qasaria’s markets never sleep, nor does my ambition. Should you wish to earn, return and ask. The desert rewards the swift, and forgets the idle.”
+      ]]>
+    </NPCText>
+    <Option text="On second thought, I seek business." next="offerwork"/>
+    <Option text="Farewell, Merchant-Queen." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="safiyaDeepDive">
+  <NPCText>
+    <![CDATA[
+    Safiya’s gaze lingers on you, thoughtful.<BR>
+    “Curiosity is a trait I value. Most come to me seeking gold... You? You seek stories. Very well. But know this: my truths are like spices—rare, costly, and sometimes hard to swallow.”
+    ]]>
+  </NPCText>
+  <Option text="Where were you born?" next="safiyaBorn"/>
+  <Option text="Why do you call yourself the Merchant-Queen?" next="safiyaTitle"/>
+  <Option text="What is your ambition beyond Qasaria?" next="safiyaDreams"/>
+  <Option text="I am impressed. You carry yourself like royalty." next="flatter"
+          condition="IsMale"
+          action="Fame:+50"/>
+  <Option text="You seem ruthless... but sharp. I respect that." next="respect"
+          condition="IsFemale"
+          action="Karma:+100"/>
+  <Option text="This is more than I expected. Thank you." next="exitBackstory"/>
+</Dialogue>
+
+<Dialogue id="safiyaBorn">
+  <NPCText>
+    <![CDATA[
+    “Born on the tide, suckled on spice crates and ledgers. My mother died young—pirates—and my father made gold from grief. He raised me in the bazaars of Vesper and Nujel’m before founding the Sapphire Guild here in Qasaria.<BR><BR>
+    I bartered my childhood for a name worth fearing. I’ve no regrets... only interest.”
+    ]]>
+  </NPCText>
+  <Option text="You’ve seen much. What do you want now?" next="safiyaDreams"/>
+  <Option text="What made you take the title ‘Merchant-Queen’?" next="safiyaTitle"/>
+  <Option text="I’ve learned what I needed. Farewell." action="Close"/>
+</Dialogue>
+
+<Dialogue id="safiyaTitle">
+  <NPCText>
+    <![CDATA[
+    Safiya raises an elegant brow.<BR>
+    “Because ‘Queen’ opens doors. Because it unsettles men like Omar al-Onyx. Because no crown weighs heavier than the one you forge in markets and blood.<BR>
+    Titles are currency—use them, and be used by them.”
+    ]]>
+  </NPCText>
+  <Option text="And yet you wear it well." next="safiyaDreams"
+          condition="FameAtLeast:200"/>
+  <Option text="It sounds lonely." next="safiyaDreams"
+          condition="FameBelow:200"/>
+  <Option text="I see. Tell me of your goals, then." next="safiyaDreams"/>
+</Dialogue>
+
+<Dialogue id="safiyaDreams">
+  <NPCText>
+    <![CDATA[
+    She folds her hands with a distant smile.<BR>
+    “To rule... not by sword, nor by spell—but by influence. I do not need to conquer Britannia. I only need it to trade through Qasaria. That is the future: ports, not palaces.<BR>
+    And perhaps... to rewrite the rules of power. Gold can buy almost anything. Even immortality, if the rumors of the Gem are true.”
+    ]]>
+  </NPCText>
+  <Option text="Would you ally with Minax to reach that goal?" next="safiyaMinax"/>
+  <Option text="And if Lord British returns?" next="safiyaBritish"/>
+  <Option text="I may be able to help you shape that future." next="ambitionReward"/>
+</Dialogue>
+
+<Dialogue id="safiyaMinax">
+  <NPCText>
+    <![CDATA[
+    Her voice cools.<BR>
+    “Minax is a hurricane in a gilded bottle. Open it, and she destroys everything—including her allies. But I would buy from her, if the price was right.<BR>
+    Would I ever kneel? Never.”
+    ]]>
+  </NPCText>
+  <Option text="That’s a dangerous dance, Safiya." next="exitBackstory"
+          action="Karma:-50"/>
+  <Option text="Clever… if one survives." next="exitBackstory"
+          action="Fame:+50"/>
+</Dialogue>
+
+<Dialogue id="safiyaBritish">
+  <NPCText>
+    <![CDATA[
+    “The King in hiding? A symbol, nothing more. If he returns, I will offer him tribute and terms. But he will not find Qasaria kneeling. This is not the old world he lost.”
+    ]]>
+  </NPCText>
+  <Option text="What if he challenges your power?" next="exitBackstory"/>
+  <Option text="Then you will both have much to discuss." next="exitBackstory"/>
+</Dialogue>
+
+<Dialogue id="ambitionReward">
+  <NPCText>
+    <![CDATA[
+    Safiya studies you anew.<BR>
+    “Bold words. I reward boldness.” She flicks a sapphire token into your palm.<BR>
+    “Present this to any of my dockmasters, and they’ll remember your name.”
+    ]]>
+  </NPCText>
+  <Option text="Thank you, Merchant-Queen." 
+          action="GiveItem:Gold,1000"
+          condition="GoldAtLeast:1000"
+          next="exitBackstory"/>
+  <Option text="I’ll spend this wisely." 
+          action="GiveItem:Gold,2000"
+          condition="GoldAtLeast:5000"
+          next="exitBackstory"/>
+  <Option text="We will speak again." action="Close"/>
+</Dialogue>
+
+<Dialogue id="flatter">
+  <NPCText>
+    <![CDATA[
+    “Charm will take you far... and sometimes cost less than coin. You may return, traveler, with more than compliments next time.”
+    ]]>
+  </NPCText>
+  <Option text="Until then, Merchant-Queen." action="Close"/>
+</Dialogue>
+
+<Dialogue id="respect">
+  <NPCText>
+    <![CDATA[
+    She nods slightly. “It is refreshing to meet a woman who sees the edge beneath the silk. The world needs more of us.”
+    ]]>
+  </NPCText>
+  <Option text="We will shape it together, perhaps." next="ambitionReward"/>
+</Dialogue>
+
+<Dialogue id="exitBackstory">
+  <NPCText>
+    <![CDATA[
+    Safiya waves you off with a graceful flick of her hand.<BR>
+    “You’ve heard enough of history. Now, make some of your own. Qasaria watches... and remembers.”
+    ]]>
+  </NPCText>
+  <Option text="Farewell, Merchant-Queen." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

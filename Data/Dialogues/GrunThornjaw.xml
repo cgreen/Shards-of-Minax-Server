@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="GrunThornjaw">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#c1b68e'>
+      Before you stands a hulking man, brow furrowed, jaw set like stone. Bone fragments decorate his leather armor, and his hands bear the scars of both the forge and battle.<BR><BR>
+      He sits cross-legged, eyes closed, murmuring a chant. As you approach, he exhales, opens his eyes, and gives you a cautious nod.<BR><BR>
+      "You walk the groves with purpose, stranger. I am Grun Thornjaw, once berserker, now smith. If you seek blades or wisdom, speak. But be wary—my forge holds old anger I’ve yet to quench."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Are you truly a berserker turned blacksmith?" next="backstory"/>
+    <Option text="What weapons do you craft?" next="crafts"/>
+    <Option text="You seem troubled. Is something wrong?" next="anger"/>
+    <Option text="Do you need help, Grun?" next="questIntro"/>
+	<Option text="Tell me more about your past, Grun." next="originStory"/>
+    <Option text="I’ll return later." action="Close"/>
+  </Dialogue>
+
+  <!-- Backstory Branch -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      Grun’s gaze turns inward.<BR><BR>
+      "I was rage given flesh, once. Led warbands. Broke men and monsters with my fists. But anger eats more than enemies—it devours kin, soul, and sleep.<BR>
+      The shamans taught me to shape rage into steel. Now, each blade is a vow: for defense, never vengeance."
+      ]]>
+    </NPCText>
+    <Option text="Do you struggle with your rage still?" next="anger"/>
+    <Option text="What do you make at your forge?" next="crafts"/>
+    <Option text="Do you need help, Grun?" next="questIntro"/>
+    <Option text="That’s all I wished to know." action="Close"/>
+  </Dialogue>
+
+  <!-- Crafting Info -->
+  <Dialogue id="crafts">
+    <NPCText>
+      <![CDATA[
+      He grins slightly, revealing a broken tooth.<BR><BR>
+      "Bone-blades, ash-hafted axes, shields of bark and spirit. I use what the wilds provide—never metal torn from Minax’s lands. My best work? Quiet. Light. But strong enough to turn away the shadows."<BR>
+      He pauses.<BR>
+      "I barter only for need. You want gear, bring gifts of bone, hide, or iron from the frost lands."
+      ]]>
+    </NPCText>
+    <Option text="What do you need from Frostmere?" next="questIntro"/>
+    <Option text="I may have materials to trade." action="OpenTrade"/>
+    <Option text="Tell me of your battle with rage." next="anger"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Rage and Inner Conflict -->
+  <Dialogue id="anger">
+    <NPCText>
+      <![CDATA[
+      Grun’s fists clench, then relax.<BR><BR>
+      "Each night I chant, hoping the spirits take the fury. But the old curse lingers. The forge—once my peace—now stirs it. Some say a relic I unearthed taints the flames. Others claim it is just my shame."<BR>
+      His eyes plead, just for a moment.<BR>
+      "If you can help cleanse the forge, perhaps I can shape something worthy again."
+      ]]>
+    </NPCText>
+    <Option text="How could I help you break the curse?" next="questIntro"/>
+    <Option text="Does the shaman know of this?" next="shaman"/>
+    <Option text="You fight hard battles within. I’ll return later." action="Close"/>
+  </Dialogue>
+
+  <!-- Consult the Shaman -->
+  <Dialogue id="shaman">
+    <NPCText>
+      <![CDATA[
+      Grun nods.<BR><BR>
+      "Shaman Nura brings herbs and chants, but even her rites falter at the anvil’s edge. She thinks a spirit binds itself to the relic—one of Minax’s making, perhaps."<BR>
+      He sighs.<BR>
+      "If you would speak to her, go. If not, my burden remains."
+      ]]>
+    </NPCText>
+    <Option text="I will seek Shaman Nura’s counsel." action="SendMessage:Seek Nura in the sacred grove." next="questIntro"/>
+    <Option text="Let’s talk more about the relic." next="questIntro"/>
+    <Option text="That’s all for now." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest: Cleansing the Forge -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      Grun lowers his voice.<BR><BR>
+      "A black stone, veined in crimson, lies within my anvil. Since I forged atop it, rage claws at my mind. Folk say such stones are shards of a greater evil—Minax’s taint."<BR>
+      "I’ve tried rituals, herbs, even bloodletting. Naught works. But a legend lingers: minerals from Frostmere—icy, pure—may bind or break such curses."
+      ]]>
+    </NPCText>
+    <Option text="I will travel to Frostmere and find these minerals."
+            action="GiveItem:FrostmereMineralQuestScroll(GrunThornjaw,VerdantTribes,300)"
+            condition="!HasItem:FrostmereMineralQuestScroll"
+            next="acceptQuest"/>
+    <Option text="What must I look for in Frostmere?" next="frostmereLore"/>
+    <Option text="Could the relic be destroyed?" next="destroyRelic"/>
+    <Option text="I’m not ready to help yet." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="acceptQuest">
+    <NPCText>
+      <![CDATA[
+      Grun hands you a pouch of bone tokens.<BR><BR>
+      "Bring me frost-crystal or ‘Veinice’ from beneath the glacier caves. Trade with Frostmere’s miners, or hunt deep. Return, and I may forge a talisman to guard us all."<BR>
+      His eyes meet yours, briefly—hope flickers within.
+      ]]>
+    </NPCText>
+    <Option text="I will return with the mineral." action="Close"/>
+  </Dialogue>
+
+  <!-- Frostmere Lore -->
+  <Dialogue id="frostmereLore">
+    <NPCText>
+      <![CDATA[
+      "Frostmere is a land of cold truth. Its caves bear blue crystals and ‘Veinice’—ice that sings when struck. They say those stones repel evil, but draw spirits hungry for warmth. Take care in those tunnels."
+      ]]>
+    </NPCText>
+    <Option text="I will be careful. Farewell." action="Close"/>
+    <Option text="How will I know Veinice?" next="veinice"/>
+  </Dialogue>
+
+  <!-- How to Identify Veinice -->
+  <Dialogue id="veinice">
+    <NPCText>
+      <![CDATA[
+      Grun grins.<BR><BR>
+      "Hold Veinice to your ear; you’ll hear the faintest sound—like ice cracking or a whisper of wind. It chills the skin, but leaves the spirit calm. Only the real thing soothes the heart."
+      ]]>
+    </NPCText>
+    <Option text="I will find it. Thank you." action="Close"/>
+  </Dialogue>
+
+  <!-- Destroying the Relic -->
+  <Dialogue id="destroyRelic">
+    <NPCText>
+      <![CDATA[
+      He shakes his head.<BR><BR>
+      "I tried fire, hammer, even the shaman’s blade. The stone endures. If Frostmere’s gift cannot break the curse, perhaps only Minax’s own undoing can."
+      ]]>
+    </NPCText>
+    <Option text="Then I will try the mineral." next="questIntro"/>
+    <Option text="I will seek another way." action="Close"/>
+  </Dialogue>
+
+  <!-- Completion Branch (to be triggered by quest completion system) -->
+  <Dialogue id="questComplete">
+    <NPCText>
+      <![CDATA[
+      Grun’s eyes shine with relief as he holds the mineral.<BR><BR>
+      "You have done what none in the tribe could. Already, I feel the fury abate. For this, I gift you a talisman—crafted in peace, not anger. Wear it, and let the spirits see your worth."
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Grun." action="GiveItem:GrunsPeaceTalisman" />
+    <Option text="May your forge burn bright." action="Close"/>
+  </Dialogue>
+
+  <!-- Fail branch (optional, for failed quest or negative choice) -->
+  <Dialogue id="questFail">
+    <NPCText>
+      <![CDATA[
+      Grun’s face falls.<BR><BR>
+      "So the curse endures. I thank you for trying, friend, but some wounds never close."
+      ]]>
+    </NPCText>
+    <Option text="I am sorry, Grun." action="Karma:-100" />
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="originStory">
+  <NPCText>
+    <![CDATA[
+    Grun shifts his weight, staring into the distance.<BR><BR>
+    “Most don’t ask. Or don’t want to know. But if you’ve come seeking truth, I’ll speak it."<BR><BR>
+    "I was born beneath blood moons. The shaman marked me 'ember-souled’—one destined for fury and fire. I led raids before I had a beard. Slaughtered... too many."<BR>
+    He pauses, then adds, "Even kin."
+    ]]>
+  </NPCText>
+  <Option text="Why did you kill your kin?" next="regret"/>
+  <Option text="That’s behind you now. You’ve changed." next="empathy"/>
+  <Option text="Sounds like weakness, not destiny." condition="KarmaBelow:0" next="confrontation"/>
+  <Option text="So the rage was a curse, not a choice?" next="curse"/>
+</Dialogue>
+
+<Dialogue id="regret">
+  <NPCText>
+    <![CDATA[
+    His voice cracks slightly.<BR><BR>
+    “It was a blood-feud. A rival tribe poisoned our wolves. My cousin urged peace. I… called him coward. Drew steel before the elders. My axe struck before reason did."<BR>
+    He lowers his head.<BR>
+    “I buried him myself. That's when the rage turned inward.”
+    ]]>
+  </NPCText>
+  <Option text="You carry that wound still." next="curse"/>
+  <Option text="Violence always finds a way to destroy." next="curse"/>
+</Dialogue>
+
+<Dialogue id="empathy">
+  <NPCText>
+    <![CDATA[
+    Grun looks up, eyes sharp with gratitude.<BR><BR>
+    “You say that… and I almost believe it. Each day I rise to be different. Each blade I forge is a promise not to fall again."<BR>
+    He nods slowly. "I don’t expect forgiveness. But maybe I can still serve."
+    ]]>
+  </NPCText>
+  <Option text="Tell me how you found peace in the forge." next="forgeRedemption"/>
+  <Option text="You’re stronger for it, Grun." action="Karma:50" />
+</Dialogue>
+
+<Dialogue id="confrontation">
+  <NPCText>
+    <![CDATA[
+    His eyes narrow. “Easy to judge a man’s past when yours isn’t written in blood.”<BR><BR>
+    Grun clenches a fist, then releases it.<BR>
+    “But no… I won’t bite. Not anymore. Say what you like—I am no longer ruled by rage. And if that disappoints you, walk away now.”
+    ]]>
+  </NPCText>
+  <Option text="Fair enough. Tell me how you changed." next="forgeRedemption"/>
+  <Option text="I spoke harshly. Perhaps I misjudged you." action="Karma:25" next="empathy"/>
+  <Option text="You’re weak. I’ll be going." action="Close"/>
+</Dialogue>
+
+<Dialogue id="curse">
+  <NPCText>
+    <![CDATA[
+    “A curse… or a nature sharpened too young,” he murmurs.<BR><BR>
+    “I don’t know. But the forge gave it shape. The heat… the hammer… they teach rhythm. Breath. Restraint.”<BR>
+    He smiles faintly. “Every sword quenched is a scream I didn’t give voice to.”
+    ]]>
+  </NPCText>
+  <Option text="So the forge healed you?" next="forgeRedemption"/>
+  <Option text="And yet the cursed relic still tempts you." next="questIntro"/>
+</Dialogue>
+
+<Dialogue id="forgeRedemption">
+  <NPCText>
+    <![CDATA[
+    Grun places a hand on his anvil, reverently.<BR><BR>
+    “This is my shrine. The metal sings back when I’m calm. When I stray… it rings hollow.”<BR>
+    “The relic below the anvil—its hum twists that song. Makes me forget the vow.”<BR><BR>
+    He studies you carefully.<BR>
+    “You asked of my past. Now tell me—should I destroy the forge, or cleanse it?”
+    ]]>
+  </NPCText>
+  <Option text="Destroy it. Cut the cord to your rage." next="suggestDestroy"/>
+  <Option text="Cleanse it. Redemption means transformation." next="suggestCleanse"/>
+  <Option text="Only you can answer that, Grun." next="introspect"/>
+</Dialogue>
+
+<Dialogue id="suggestDestroy">
+  <NPCText>
+    <![CDATA[
+    Grun breathes heavily.<BR><BR>
+    “I’ve thought of it. Flames drowned. Anvil shattered. But… it feels like running."<BR>
+    He nods slowly. "Still… if cleansing fails, I’ll end it. For the tribe. For myself.”
+    ]]>
+  </NPCText>
+  <Option text="Then let’s try cleansing first." next="questIntro"/>
+  <Option text="I believe in your strength, Grun." action="AddStat:Str,5,180" />
+</Dialogue>
+
+<Dialogue id="suggestCleanse">
+  <NPCText>
+    <![CDATA[
+    “Aye. Steel that bends and endures is stronger than stone that shatters. I will trust your wisdom.”<BR><BR>
+    He smiles—just a flicker.<BR>
+    “Let’s purge the relic together. The spirits may yet bless my work again.”
+    ]]>
+  </NPCText>
+  <Option text="Then I’ll find what you need from Frostmere." next="questIntro"/>
+</Dialogue>
+
+<Dialogue id="introspect">
+  <NPCText>
+    <![CDATA[
+    He nods thoughtfully.<BR><BR>
+    “Spoken like a true sage—or a careful coward,” he chuckles. “But your words ring true."<BR>
+    “I’ll keep forging. And I’ll watch the signs. Maybe the flame speaks yet.”
+    ]]>
+  </NPCText>
+  <Option text="I hope the spirits guide you, Grun." action="Karma:25" />
+  <Option text="Farewell for now." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="TomaDewhands">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#7cff7c'>
+      A gentle woman in a gown of leaves tends to a group of children beneath an ancient tree. She hums softly, but her eyes dart to the sky at the sound of every bird.<BR><BR>
+      She notices you and smiles, though her hands tremble as a sparrow chirps in the branches.<BR><BR>
+      “Welcome, traveler. These little ones have seen much sorrow... and lately, something else. Their dreams have grown dark, haunted by a lady of shifting shadows. Will you help us bring them peace?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about these dreams." next="dreams"/>
+    <Option text="Who are you, Toma?" next="who"/>
+    <Option text="Are you alright? You seem uneasy." next="birds"/>
+	<Option text="Tell me about your life before the Verdant Tribes." next="tomaPast"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="who">
+    <NPCText>
+      <![CDATA[
+      Toma gives a soft laugh, her voice weary.<BR><BR>
+      “I am no shaman nor warrior, only a caretaker of those left behind. I teach their stories, bind their wounds, and chase away fears as best I can.<BR>
+      Once, I dreamed of wings and sunlight, but now... I dream only of keeping these children safe. That is enough.”
+      ]]>
+    </NPCText>
+    <Option text="How can I help the children?" next="dreams"/>
+    <Option text="Why do birds trouble you?" next="birds"/>
+    <Option text="Thank you for sharing." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="birds">
+    <NPCText>
+      <![CDATA[
+      Toma’s eyes flicker with anxiety.<BR><BR>
+      “When I was but a girl, a great shadow swept through my dreams—a woman with wings black as night. Since then, even the gentlest bird unsettles me. The children’s dreams now echo my own old terror. I fear this is no simple nightmare.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me about these dreams." next="dreams"/>
+    <Option text="Is the shadow lady Minax?" next="minax"/>
+    <Option text="Can the tribe’s shamans help?" next="shaman"/>
+    <Option text="I’ll be careful not to frighten you with birds." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="dreams">
+    <NPCText>
+      <![CDATA[
+      Toma gestures to a circle of children, some shivering, others lost in silent play.<BR><BR>
+      “Night after night, they dream the same dream—a clearing lit by moonlight, a ‘Shadow Lady’ calling them by name. She offers comfort, but all who answer her grow cold, distant, afraid of even the dawn.<BR>
+      The shamans sense foul magic. If only someone brave could enter their dreams and break her hold...”
+      ]]>
+    </NPCText>
+    <Option text="How could I enter their dreams?" next="ritual"/>
+    <Option text="Could this truly be Minax?" next="minax"/>
+    <Option text="Why does she call to the children?" next="whyChildren"/>
+    <Option text="I will return later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Toma’s voice drops to a fearful whisper.<BR><BR>
+      “Some here dare not speak her name. But I remember the old tales: Minax, mistress of shadows, who walks between worlds and snatches the innocent from their beds.<BR>
+      If she is reaching through the dream-realm... we are all in grave danger.”
+      ]]>
+    </NPCText>
+    <Option text="I will help free the children." next="ritual"/>
+    <Option text="Has anyone ever faced her in a dream before?" next="shaman"/>
+    <Option text="I need time to think." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="whyChildren">
+    <NPCText>
+      <![CDATA[
+      Toma frowns, her hands tightening on a child’s shoulder.<BR><BR>
+      “The children of the Verdant Tribes hold much spirit and innocence. Such purity is coveted by dark powers—they make tempting prey for a being like Minax. Perhaps she seeks to twist their dreams, and thus our future.”
+      ]]>
+    </NPCText>
+    <Option text="I will break her hold if I can." next="ritual"/>
+    <Option text="Is there no other way?" next="shaman"/>
+    <Option text="I am not ready for this." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="shaman">
+    <NPCText>
+      <![CDATA[
+      “Our shamans have tried to ward the children’s dreams, but the Shadow Lady’s magic slips past all charms. Only one who dares walk the spirit roads, unburdened by fear, might break through.<BR>
+      I believe you are strong enough. If you wish, I can prepare the ritual.”
+      ]]>
+    </NPCText>
+    <Option text="I am ready. Prepare the ritual." next="ritual"
+            condition="!HasItem:DreamRitualHerb"/>
+    <Option text="What will the ritual require?" next="ritualReq"/>
+    <Option text="I must prepare myself first." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ritualReq">
+    <NPCText>
+      <![CDATA[
+      Toma produces a small bundle of herbs and a pale blue charm.<BR><BR>
+      “You must carry Dream Willow and Spirit Sage. Burn them at midnight beside the sacred pool. This charm will guide your soul into the children’s dream-realm.<BR>
+      When you are ready, I will give you the bundle.”
+      ]]>
+    </NPCText>
+    <Option text="Give me the ritual herbs and charm." next="ritual" 
+            action="GiveItem:DreamRitualHerb"
+            condition="!HasItem:DreamRitualHerb"/>
+    <Option text="Let me find what I need first." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ritual">
+    <NPCText>
+      <![CDATA[
+      Toma lays a gentle hand on your arm, pressing the bundle of Dream Willow and Spirit Sage into your palm. A faint shimmer runs along the blue charm.<BR><BR>
+      “Take these. Burn them at the sacred pool when the moon is highest. You will be drawn into the dream—beware the Shadow Lady’s whispers. Rescue the children within, and our tribe will owe you much.”<BR>
+      <BASEFONT COLOR='#aaf7ff'><B>Quest Started: The Dreaming Children</B></BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will do all I can." action="Close"/>
+    <Option text="Can you tell me more about the dream-realm?" next="dreamRealm"/>
+    <Option text="If I return, how will I know the children are safe?" next="successCheck"/>
+  </Dialogue>
+
+  <Dialogue id="dreamRealm">
+    <NPCText>
+      <![CDATA[
+      “The dream-realm is a place of memory and shadow—nothing there can truly kill you, but the wounds to your spirit may linger. Beware: the Shadow Lady may appear as friend or foe, and her words may wound more deeply than any blade.<BR>
+      Trust only those you knew in life, and seek the moonlit clearing. There, the children wait to be found.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I will be careful." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="successCheck">
+    <NPCText>
+      <![CDATA[
+      Toma smiles, hope flickering in her tired eyes.<BR><BR>
+      “If you succeed, the children will wake at dawn, free of fear. I will know by their laughter—and by the sunlight that no longer seems cold.”<BR>
+      She squeezes your hand. “May the ancestors walk with you, dreamer.”
+      ]]>
+    </NPCText>
+    <Option text="I will not fail them." action="Close"/>
+  </Dialogue>
+
+  <!-- After Quest Completion (For Scripting, e.g. AttachXml:DreamQuestComplete) -->
+  <Dialogue id="afterQuest">
+    <NPCText>
+      <![CDATA[
+      Toma runs to embrace the children as they laugh and play, joy restored.<BR><BR>
+      “You have done what our greatest shamans could not. The children sleep peacefully now, and our tribe’s hope is renewed.<BR>
+      Please, accept this blessing as a token of our deepest gratitude.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Toma. The tribe is stronger together."
+            action="AddStat:Spirit,5,3600;Karma:+1000;GiveGold:750"/>
+    <Option text="It was my honor to help." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="tomaPast">
+  <NPCText>
+    <![CDATA[
+    Toma’s expression softens, her eyes distant with memory.<BR><BR>
+    “I was not always of the Verdant. I was born in Nujel’m, where silk and laughter covered deep loneliness. My father bartered spices; my mother danced in taverns. They loved fiercely—but died early.<BR>
+    I was... sold, once. Rescued by a wandering druid named Kaelor—yes, *our* Chieftain Kaelor. He said the forest had claimed me, and I chose to listen.”
+    ]]>
+  </NPCText>
+  <Option text="You were sold? That’s awful..." next="soldTrauma"/>
+  <Option text="You and Kaelor have history, then?" next="kaelorBond"/>
+  <Option text="Tell me more about Nujel’m." next="nujelmLife"/>
+  <Option text="How did you become a caretaker?" next="caretakerPath"/>
+  <Option text="That’s a lot to carry. Thank you for sharing." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="soldTrauma">
+  <NPCText>
+    <![CDATA[
+    Toma gives a slow nod.<BR><BR>
+    “Slavery still thrives where coin outweighs conscience. The man who bought me wanted an obedient apprentice. I gave him none. I fled into the wilds, half-dead—until Kaelor found me.”<BR>
+    Her eyes flash. “I do not pity my younger self. I *learned*—how to protect the small and silent. That is why I stay.”
+    ]]>
+  </NPCText>
+  <Option text="Your strength humbles me." action="Karma:+250"/>
+  <Option text="Kaelor truly saved you then." next="kaelorBond"/>
+  <Option text="And now you teach children safety..." next="caretakerPath"/>
+</Dialogue>
+
+<Dialogue id="kaelorBond">
+  <NPCText>
+    <![CDATA[
+    “He was younger then. Quieter. But even in silence, his presence was like an oath.”<BR><BR>
+    She looks away, wistful. “There was a time I wondered if... no. We were not meant for romance, only purpose. Kaelor guards the forest. I guard its future.”<BR>
+    She gives a sad smile. “We still speak without words.”
+    ]]>
+  </NPCText>
+  <Option text="There is beauty in that kind of bond." action="AddStat:Int,2,600"/>
+  <Option text="Thank you for your honesty." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="nujelmLife">
+  <NPCText>
+    <![CDATA[
+    “Nujel’m is beautiful, but beneath the perfume lies poison. Masks worn for pleasure, smiles sharpened for profit.”<BR><BR>
+    She sighs. “I remember gold-threaded curtains and jasmine oil, but none of it ever felt real. The forest was the first place that breathed back.”
+    ]]>
+  </NPCText>
+  <Option text="It sounds like you found your true home." next="caretakerPath"/>
+  <Option text="Did you miss it at first?" next="nujelmRegret"/>
+</Dialogue>
+
+<Dialogue id="nujelmRegret">
+  <NPCText>
+    <![CDATA[
+    “I missed stories at night... the warmth of a fire in colored glass. But here, the stories *live*—in bark and spirit, not just books.”<BR><BR>
+    She chuckles. “Now, I get perfume from crushed herbs, not merchants. A fair trade.”
+    ]]>
+  </NPCText>
+  <Option text="A fair trade indeed." action="SendMessage:You feel a deeper respect for Toma."/>
+  <Option text="Thank you for this glimpse of your past." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="caretakerPath">
+  <NPCText>
+    <![CDATA[
+    “After my rescue, I healed in silence. One day, a child asked me to tell a story... and I did. Another brought me a beetle with a broken leg—I made a splint from a reed.”<BR><BR>
+    She smiles. “It was never a decision. The children chose me. And now, I choose them.”
+    ]]>
+  </NPCText>
+  <Option text="You are a gift to this tribe." action="Fame:+1000;Karma:+500"/>
+  <Option text="May your stories protect them as much as your care." next="greeting"/>
+</Dialogue>
+
+
+</DialogueFile>

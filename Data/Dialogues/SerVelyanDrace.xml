@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="SerVelyanDrace">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aee0ff'>
+      Before you stands a striking knight clad in gilded azure plate, his <b>Drace’s Azure Crest</b> helm sweeping back like stylized wings. A cloak of shifting blue and silver ripples behind him, marking him as Aerilon’s Skyguard.<BR><BR>
+      He meets your gaze, equal parts chivalry and pride.<BR><BR>
+      “Stand tall, traveler. You address <b>Ser Velyan Drace</b>, Gilded Knight of the Skyguard—sworn shield of Aerilon, commander of our flying legion, and, though my blood hails from Wind, my loyalty is cast here among the clouds.<BR><BR>
+      To what purpose do you ascend to the Spires this day? Adventure? Duty? Or the hope of Aerilon’s favor?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek purpose worthy of the Skyguard." next="purpose"/>
+    <Option text="Tell me your story, Ser Velyan." next="backstory"/>
+    <Option text="Who leads Aerilon’s defenders?" next="skyguard"/>
+    <Option text="What dangers do you face here?" next="dangers"/>
+	<Option text="I would hear more of your past, Ser Drace." next="deepBackstory"/>
+    <Option text="I was only admiring your armor." next="outfit"/>
+    <Option text="I’m just passing by." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      Velyan smiles faintly, gaze distant.<BR><BR>
+      “I was born second son to House Drace of Wind—a family of mages who believed steel was beneath them. Yet I found beauty not in spellbooks, but in the flight of the griffon, the ring of steel, and the honor of the oath.<BR><BR>
+      I came to Aerilon to forge the Skyguard: knights who soar as high as the mages dream. Here, I serve Lady Selara Vael—though she clings to isolation, and I would see Aerilon rise as a beacon against Minax.<BR>
+      My brother remains in Wind. He thinks me a traitor. Yet I am bound to this city—heart, soul, and sky.” 
+      ]]>
+    </NPCText>
+    <Option text="Why serve Aerilon over your family?" next="family"/>
+    <Option text="What of Selara Vael?" next="selara"/>
+    <Option text="What is the Skyguard’s purpose?" next="skyguard"/>
+    <Option text="Let us speak of more urgent matters." next="purpose"/>
+  </Dialogue>
+
+  <Dialogue id="family">
+    <NPCText>
+      <![CDATA[
+      “Duty is the truest lineage. Wind’s nobles hoard secrets in their mountain halls, content to watch the world burn below. Aerilon—at least in my vision—soars above petty divides. Here, I forged brotherhood in battle, and I would rather die as Skyguard than rule as a Wind-born shade.” 
+      ]]>
+    </NPCText>
+    <Option text="You speak with conviction. How may I help?" next="purpose"/>
+    <Option text="What of your brother?" next="brother"/>
+  </Dialogue>
+
+  <Dialogue id="brother">
+    <NPCText>
+      <![CDATA[
+      “My elder brother, Lord Malchior Drace, is a councilor in Wind—ambitious, clever, but bitter as winter. We have not spoken in years, and I fear Wind’s isolation may soon give way to darkness, or to Minax’s corruption. Still, blood binds, even across the sky.”
+      ]]>
+    </NPCText>
+    <Option text="Let us discuss Aerilon’s needs." next="purpose"/>
+    <Option text="Is Malchior an enemy to Aerilon?" next="malchior"/>
+  </Dialogue>
+
+  <Dialogue id="malchior">
+    <NPCText>
+      <![CDATA[
+      Velyan’s jaw tightens.<BR>
+      “He would say no. Yet he schemes, as all Wind’s nobles do. If you ever find yourself in Wind, walk carefully. And if you meet a Drace, mention my name only if you wish to test their patience.” 
+      ]]>
+    </NPCText>
+    <Option text="Thank you for the warning. Back to business…" next="purpose"/>
+  </Dialogue>
+
+  <Dialogue id="selara">
+    <NPCText>
+      <![CDATA[
+      “Lady Selara Vael is Aerilon’s mind and shield, and I am her sword. She is visionary, but clings to solitude. I press her for alliances—Trinsic, even Britain itself—but she sees only the threats below. Still, without her, this city would be little more than another Wind, adrift and dreaming.” 
+      ]]>
+    </NPCText>
+    <Option text="Let us turn to your purpose, commander." next="purpose"/>
+  </Dialogue>
+
+  <Dialogue id="skyguard">
+    <NPCText>
+      <![CDATA[
+      “The Skyguard are knights and riders who defend Aerilon not from towers, but from the backs of Reptalons, gryphons, and even summoned wind serpents. Our order is young—fewer than fifty sworn, but each knows the sky as others know the ground.<BR>
+      Our greatest need is steeds and those who understand them. The threat from Minax grows, and her beasts blacken the clouds. To stand a chance, we must bond new Reptalons—creatures only true scholars can tame.” 
+      ]]>
+    </NPCText>
+    <Option text="What does this mean for me?" next="purpose"/>
+    <Option text="Tell me more about these flying mounts." next="mounts"/>
+  </Dialogue>
+
+  <Dialogue id="mounts">
+    <NPCText>
+      <![CDATA[
+      “Reptalons are rare—half-dragon, half-bird, born of cloud and spellcraft. Most are wild, but a handful of scholars on the surface can communicate with them. Only with their aid can we breed and train a new flight.<BR>
+      I have fashioned a Skyward Phylactery—an arcane vessel needed by these scholars. But I cannot leave Aerilon, nor trust the city’s spies. I would see it delivered by a blade untainted by courtly schemes.” 
+      ]]>
+    </NPCText>
+    <Option text="I’ll deliver your Skyward Phylactery." 
+            action="GiveItem:FactionDeliveryQuestScroll(Reptalon Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="What is a Skyward Phylactery?" next="phylactery"/>
+    <Option text="Who are these scholars?" next="scholars"/>
+    <Option text="I’m not interested in such work." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="phylactery">
+    <NPCText>
+      <![CDATA[
+      “A Skyward Phylactery is a crystal reliquary, infused with the essence of cloud and wing. It allows a Reptalon Scholar to establish a bond with a new hatchling—ensuring loyalty and harnessing their innate magic. Without it, our mounts would run wild, or worse, fall prey to Minax’s taming spells.” 
+      ]]>
+    </NPCText>
+    <Option text="I see. I’ll accept the delivery." 
+            action="GiveItem:FactionDeliveryQuestScroll(Reptalon Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="This sounds too perilous for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="scholars">
+    <NPCText>
+      <![CDATA[
+      “Most are reclusive, found in remote eyries—never cities. Seek one known as a ‘Reptalon Scholar’; only they have earned a Reptalon’s trust. You’ll find them outside Aerilon’s reach, often hidden in the wilds or deep in druidic circles. They will recognize the seal of my house and the azure hue of the phylactery.” 
+      ]]>
+    </NPCText>
+    <Option text="Very well. I’ll deliver the Skyward Phylactery."
+            action="GiveItem:FactionDeliveryQuestScroll(Reptalon Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I don’t wish to get involved with Reptalons." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="purpose">
+    <NPCText>
+      <![CDATA[
+      Ser Velyan leans close, lowering his voice.<BR>
+      “Aerilon needs more than mages—we need riders, and those who walk between worlds. I have crafted the Skyward Phylactery, a relic required by the Reptalon Scholars outside our city. Deliver this to one such scholar—none but a true Reptalon Scholar may accept it.<BR><BR>
+      If you succeed, you’ll win not only Aerilon’s favor, but the respect of the Skyguard. But beware—Minax covets any artifact that might sway the skies to her cause, and even Wind’s spies might try to claim it. Will you fly this errand for Aerilon?”
+      ]]>
+    </NPCText>
+    <Option text="I will deliver the Phylactery."
+            action="GiveItem:FactionDeliveryQuestScroll(Reptalon Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Tell me more about the risks." next="risk"/>
+    <Option text="Why not send a Skyguard knight?" next="whyNotSkyguard"/>
+    <Option text="This is not my path." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="risk">
+    <NPCText>
+      <![CDATA[
+      “Danger soars with every wind. Minax’s harpies stalk the routes below; Wind’s agents seek any leverage against Aerilon. If you’re pursued, trust in your wits, not your blade—there are runes within the phylactery’s case to shield it once, but only once.<BR>
+      Succeed, and you may one day ride beside us. Fail, and even the clouds may mourn.” 
+      ]]>
+    </NPCText>
+    <Option text="I accept. Give me the Phylactery." 
+            action="GiveItem:FactionDeliveryQuestScroll(Reptalon Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="On second thought, I must decline." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="whyNotSkyguard">
+    <NPCText>
+      <![CDATA[
+      “If I could, I would. But Skyguard knights are known to every hawk and whisperer in the sky. You, outsider, are an unknown. That is your greatest strength—use it well.” 
+      ]]>
+    </NPCText>
+    <Option text="You have my word. I will deliver it."
+            action="GiveItem:FactionDeliveryQuestScroll(Reptalon Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="This task is not for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Ser Velyan produces a gleaming azure reliquary, etched with the twin crests of Aerilon and House Drace.<BR>
+      “Take this Skyward Phylactery. Seek a Reptalon Scholar beyond Aerilon’s bounds. Deliver it only to one worthy of the name—and none other. Return with news of your success, and the Skyguard will remember your courage.” 
+      ]]>
+    </NPCText>
+    <Option text="I will not fail you, Ser Drace." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dangers">
+    <NPCText>
+      <![CDATA[
+      “The skies are no longer safe. Minax’s wyverns grow bold, and Wind’s conjurers probe our borders. We Skyguard ride every dusk and dawn, but the horizon darkens. Aerilon’s peace is fragile as glass—help us keep it unbroken.” 
+      ]]>
+    </NPCText>
+    <Option text="If I can aid you, say the word." next="purpose"/>
+    <Option text="I should take my leave." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="outfit">
+    <NPCText>
+      <![CDATA[
+      He laughs—deep, genuine.<BR>
+      “This armor? Every piece is a tale. The <b>Drace’s Azure Crest</b> helm is a family relic, once worn by a Wind warlord who slew a dragon above the clouds. The <b>Skyward Bastion</b> plate was forged by Salia Moontide herself—she claims the metal sings in a storm.<BR>
+      These <b>Stormforged Vambraces</b> were a gift from the first Reptalon I rode. Each part is both shield and memory. Should you ever earn Skyguard steel, wear it with pride.” 
+      ]]>
+    </NPCText>
+    <Option text="Perhaps one day I will." next="purpose"/>
+    <Option text="Farewell, Ser Drace." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      “Then may the skies bear you lightly, traveler. Should you seek cause, the Skyguard’s banner flies high above the Azure Market.” 
+      ]]>
+    </NPCText>
+    <Option text="On second thought, I wish to serve Aerilon." next="purpose"/>
+    <Option text="I’ll be going now." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="deepBackstory">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#aee0ff'>
+    Ser Velyan nods solemnly.<BR><BR>
+    “You honor me with your curiosity. Not many care to ask about a knight’s *before*. They see the armor, not the forging.”<BR><BR>
+    “Very well. Ask what you will—memories weigh less when shared.”
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="What was your childhood in Wind like?" next="velyanChildhood"/>
+  <Option text="Tell me of your first Reptalon." next="velyanReptalon"/>
+  <Option text="Have you ever loved another?" next="velyanLove" condition="IsFemale"/>
+  <Option text="How do you spend your time off the battlefield?" next="velyanHobbies"/>
+  <Option text="I’d rather return to more pressing matters." next="purpose"/>
+</Dialogue>
+
+<Dialogue id="velyanChildhood">
+  <NPCText>
+    <![CDATA[
+    “My father was a noble, cold and brilliant. My brother followed his path: tomes, debates, arrogance. I did not. I once skipped an exam to watch the city hawks train above the cliffs. When I was caught, my punishment was to scribe five hundred lines on ‘discipline’. I copied them with a broken quill—deliberately.<BR><BR>
+    That was the day I learned defiance is a blade all its own.”
+    ]]>
+  </NPCText>
+  <Option text="A fitting lesson for a Skyguard." next="deepBackstory"/>
+  <Option text="You have always walked a different path." next="deepBackstory"/>
+</Dialogue>
+
+<Dialogue id="velyanReptalon">
+  <NPCText>
+    <![CDATA[
+    Velyan’s eyes soften.<BR><BR>
+    “Her name was <b>Aelthir</b>. Wild, proud, and clever. She burned three saddles before she let me ride her. I trained in secret—Reptalon bonding was banned for my caste. When we finally soared together, I wept. Wind’s towers fell away, and the horizon stretched like a promise.”<BR><BR>
+    “She died defending Aerilon during its third storm siege. I wear her scale over my heart.”<BR><BR>
+    <BASEFONT COLOR='#40dfff'>You notice a faint shimmer beneath his breastplate. A soft blue scale, faintly glowing.</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="A worthy bond. I hope to ride one someday." next="deepBackstory"/>
+  <Option text="She would be proud of what you’ve built." next="deepBackstory"/>
+</Dialogue>
+
+<Dialogue id="velyanLove">
+  <NPCText>
+    <![CDATA[
+    Velyan chuckles softly, voice lowering.<BR><BR>
+    “A bold question. I’ve known comradeship, yes. Shared campfires, battlefields, and fleeting moments stolen beneath moonlight. But duty… duty always reclaims me.”<BR><BR>
+    He looks at you, lingering for a moment.<BR>
+    <BASEFONT COLOR='#ffd0d0'>“Perhaps in another life—or if this war ever ends.”</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Perhaps that life isn’t so far away." action="Karma:100" condition="RandomChance:20"/>
+  <Option text="A soldier’s heart beats loud, but not always free." next="deepBackstory"/>
+</Dialogue>
+
+<Dialogue id="velyanHobbies">
+  <NPCText>
+    <![CDATA[
+    “Hobbies? Hah. I read old ballads—especially the tragic ones. I also carve small wooden Reptalon tokens; calming, in a way. Sometimes I teach cadets to recite Skyguard Oaths blindfolded. Builds memory and humility.”<BR><BR>
+    He grins, eyes twinkling.<BR>
+    “If you ever want a hand-carved Reptalon, bring me a sky maple branch and time.”
+    ]]>
+  </NPCText>
+  <Option text="I’ll keep my eyes open for sky maple." action="SendMessage:Ser Velyan may now accept sky maple branches."/>
+  <Option text="That’s… oddly charming for a battle commander." next="deepBackstory"/>
+</Dialogue>
+
+
+</DialogueFile>

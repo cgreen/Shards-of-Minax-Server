@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="EjanStonehowl">
+
+  <!-- ======================================== -->
+  <!-- Ejan Stonehowl: Beast-Caller Priest      -->
+  <!-- ======================================== -->
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6fbe53'>
+      Ejan stands by the sacred fire, his body painted with swirling ochre and white. He lifts his head to the sky and howls—a deep, mournful sound that stirs the air and sends birds scattering.<BR><BR>
+      He lowers his mask and fixes you with amber eyes.<BR>
+      “Awooo... You walk in the shadow of the groves, outsider. The spirits are restless. <I>Will you listen to their warnings, or wander lost in the darkness?”</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will listen. What troubles the spirits?" next="spiritsTroubled"/>
+    <Option text="Who are you to speak for spirits?" next="whoAreYou"/>
+    <Option text="That was some howl! Teach me your ways?" next="howlLesson"/>
+	<Option text="Tell me more about yourself, Stonehowl." next="ejanBackstoryIntro"/>
+    <Option text="I mean no harm. Just passing through." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Main Branch: Quest Introduction -->
+  <Dialogue id="spiritsTroubled">
+    <NPCText>
+      <![CDATA[
+      Ejan’s eyes narrow as he grips his wildstaff.<BR>
+      “Awooo... Last moon, I called for the White Hart. But the veil was thin—something foul answered instead. <B>A shadow in the form of a beast stalks our woods, its hunger unnatural. It spreads Minax’s corruption to the animals who drink from the moonlit pool.</B><BR><BR>
+      Will you aid the Verdant, and cleanse what I have summoned by mistake?”
+      ]]>
+    </NPCText>
+    <Option text="Tell me what must be done." next="questInstructions"/>
+    <Option text="What sort of beast is it?" next="beastDetails"/>
+    <Option text="What happens if we do nothing?" next="doNothing"/>
+    <Option text="This sounds dangerous. I must decline." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="questInstructions">
+    <NPCText>
+      <![CDATA[
+      “Good. Awooo... You must find the tainted pool north of our groves. There you’ll face the Shadow-Beast. Burn its essence with this <B>Spiritfire Totem</B> and bring me its Blackened Fang.<BR><BR>
+      <I>But beware—only those strong in Spirit or Nature magics can withstand its howl. If you are neither, find an ally or accept the forest’s trial.”</I>
+      ]]>
+    </NPCText>
+    <Option text="I am ready. Give me the Spiritfire Totem."
+            action="GiveItem:SpiritfireTotem"
+            condition="!HasItem:SpiritfireTotem"
+            next="totemGiven"/>
+    <Option text="I already have the totem." condition="HasItem:SpiritfireTotem" next="alreadyHaveTotem"/>
+    <Option text="Is there another way to defeat it?" next="alternateWays"/>
+    <Option text="What if I fall to its howl?" next="beastHowl"/>
+    <Option text="I will return when I am prepared." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="totemGiven">
+    <NPCText>
+      <![CDATA[
+      Ejan hands you a totem wreathed in living vines and faintly glowing embers.<BR>
+      “The Spiritfire Totem burns with the breath of the ancestors. Use it at the pool to weaken the beast’s corruption, then strike swiftly.<BR><BR>
+      Return with its Blackened Fang as proof—and the spirits may forgive my folly.”
+      ]]>
+    </NPCText>
+    <Option text="I will do this. Farewell." action="Close"/>
+    <Option text="One more question..." next="questInstructions"/>
+  </Dialogue>
+
+  <Dialogue id="alreadyHaveTotem">
+    <NPCText>
+      <![CDATA[
+      Ejan inclines his head.<BR>
+      “You still carry the Spiritfire Totem. Find the shadow-beast and burn its corruption, then bring me its fang.”
+      ]]>
+    </NPCText>
+    <Option text="Understood. I go now." action="Close"/>
+    <Option text="Remind me—what should I do again?" next="questInstructions"/>
+  </Dialogue>
+
+  <Dialogue id="alternateWays">
+    <NPCText>
+      <![CDATA[
+      “Awooo... If you lack spirit or druidic power, perhaps the elders of the Verdant or the monks of Hinokami may help. Some brew potions against fear, others bind courage in song. But alone, you must trust your strength—or be wise enough to seek allies.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I will seek help if needed." next="questInstructions"/>
+  </Dialogue>
+
+  <Dialogue id="beastHowl">
+    <NPCText>
+      <![CDATA[
+      “The beast’s howl can freeze the blood of the bravest. If you fall, the spirits will guide your soul back—once. After that, not even I can call you from the darkness.<BR>
+      Be prepared, or bring friends you trust.”
+      ]]>
+    </NPCText>
+    <Option text="I will not fail." action="Close"/>
+    <Option text="Let me prepare further." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="beastDetails">
+    <NPCText>
+      <![CDATA[
+      “The shadow-beast wears many forms—a wolf, a stag, sometimes a twisted bear. Its eyes burn violet, and it leaks black mist. It feasts on fear and corrupts all it wounds. Even our bravest hunters will not track it now.<BR>
+      Only fire and courage may unmake it.”
+      ]]>
+    </NPCText>
+    <Option text="How do I fight it?" next="questInstructions"/>
+    <Option text="Thank you for the warning." next="questInstructions"/>
+  </Dialogue>
+
+  <Dialogue id="doNothing">
+    <NPCText>
+      <![CDATA[
+      “If nothing is done, the beast’s curse will spread. Wolves, birds, even the trees will turn mad, and the Verdant Tribes will be forced to abandon the groves.<BR>
+      This is the work of Minax—a shadow on all living things. We must not let it take root.”
+      ]]>
+    </NPCText>
+    <Option text="I understand. I will help." next="questInstructions"/>
+    <Option text="I still refuse. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Who are you branch -->
+  <Dialogue id="whoAreYou">
+    <NPCText>
+      <![CDATA[
+      “Awooo... I am Ejan, called Stonehowl—beast-caller, priest of the Verdant, keeper of the sacred howl.<BR>
+      My ancestors were wolves and trees before they were men. I serve the council, the spirits, and the wild—sometimes well, sometimes not, it seems.”
+      ]]>
+    </NPCText>
+    <Option text="The spirits trouble you?" next="spiritsTroubled"/>
+    <Option text="What is the howl’s secret?" next="howlLesson"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Howl training / lore -->
+  <Dialogue id="howlLesson">
+    <NPCText>
+      <![CDATA[
+      “Awooo! The howl is more than sound—it is prayer, challenge, memory. We howl to call the ancestors, to warn of danger, to mourn, and to rejoice.<BR>
+      Perhaps you would learn? First, stand tall. Let your breath reach the roots of your belly. Feel the pulse of the earth, then send your voice into the sky!”<BR><BR>
+      Ejan demonstrates, and even the trees seem to listen.<BR>
+      “When you are ready, howl with me at the next moonrise. If the spirits smile, you may earn their blessing.”</BR>
+      ]]>
+    </NPCText>
+    <Option text="I will return at moonrise." action="AddStat:Str,2,3600" next="howlBlessing"/>
+    <Option text="Not today, perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="howlBlessing">
+    <NPCText>
+      <![CDATA[
+      Ejan nods, approvingly.<BR>
+      “You carry the howl of the wild now—walk with strength. May the spirits watch your steps.”<BR>
+      (You feel invigorated.)
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Stonehowl." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismissal branch -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Ejan closes his eyes, listening to the forest.<BR>
+      “Then walk softly. Even in peace, the spirits watch and weigh all trespass.”
+      ]]>
+    </NPCText>
+    <Option text="Understood. Farewell." action="Close"/>
+    <Option text="Wait, I have questions for you." next="greeting"/>
+  </Dialogue>
+
+  <!-- Quest Turn-in: Blackened Fang -->
+  <Dialogue id="questTurnIn">
+    <NPCText>
+      <![CDATA[
+      Ejan’s face lights with relief as he takes the Blackened Fang.<BR>
+      “Awooo... You have done what I could not. The spirits sing your name tonight, outsider.<BR>
+      Accept this boon—a gift of the wild, and the Verdant’s thanks.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Ejan."
+            action="GiveItem:TotemOfTheGreenWolf"
+            action="Karma:500"
+            action="Fame:400"
+            next="rewardGiven"/>
+  </Dialogue>
+
+  <Dialogue id="rewardGiven">
+    <NPCText>
+      <![CDATA[
+      “The groves are safer, for now. If you ever wish to join the Verdant in ritual or in hunt, you will be welcomed. Awooo!”
+      ]]>
+    </NPCText>
+    <Option text="Farewell, Stonehowl." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ejanBackstoryIntro">
+    <NPCText>
+      <![CDATA[
+      Ejan breathes deeply, lowering his staff.<BR><BR>
+      “Awooo... The spirits teach us not to dwell in the past, but you have asked, and the wind carries no falsehood. I was born beneath the Shadowroot Tree, third son of Vaka the Hollow-Voiced. I did not cry at birth. They feared I had no soul.”<BR><BR>
+      “But in dreams, I howled—and the wolves answered.”
+      ]]>
+    </NPCText>
+    <Option text="Why do you howl like that?" next="ejanHowlReason"/>
+    <Option text="What was your childhood like?" next="ejanChildhood"/>
+    <Option text="Do you believe the spirits truly guide us?" next="ejanFaith"/>
+    <Option text="Why serve the Verdant Tribes?" next="ejanLoyalty"/>
+    <Option text="I’ve heard whispers you were once exiled..." next="ejanExile" condition="FameAtLeast:2000"/>
+    <Option text="That’s enough about the past." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="ejanHowlReason">
+    <NPCText>
+      <![CDATA[
+      “Awooo! The howl is not just noise—it is *resonance*. It aligns the body with spirit, tree, wind, and beast. Even Minax fears what the wild remembers. I howl to call my ancestors, to soothe wounded roots, to remind myself who I was... and who I am still.”<BR><BR>
+      “Try it sometime. A deep howl can shake your bones loose of sorrow.”
+      ]]>
+    </NPCText>
+    <Option text="Could you teach me to howl?" next="howlLesson"/>
+    <Option text="Tell me more of your past." next="ejanBackstoryIntro"/>
+  </Dialogue>
+
+  <Dialogue id="ejanChildhood">
+    <NPCText>
+      <![CDATA[
+      “I ran with foxes before I walked upright. My brothers were hunters; I was the odd one who fed moths and stared at bark. My tribe feared I would speak to stones before I ever spoke to men.”<BR><BR>
+      “One day, I vanished into the woods for a fortnight. When I returned, my voice was no longer my own—it was theirs.”<BR>
+      (He taps his chest, then the air.)
+      ]]>
+    </NPCText>
+    <Option text="The spirits claimed you?" next="ejanFaith"/>
+    <Option text="That must have been lonely." next="ejanLoneliness"/>
+    <Option text="And your family?" next="ejanFamily"/>
+  </Dialogue>
+
+  <Dialogue id="ejanFamily">
+    <NPCText>
+      <![CDATA[
+      “My mother wept with pride... and fear. My brothers did not understand. One tried to silence my voice with his fists.”<BR>
+      (Ejan gestures to a scar on his brow.)<BR><BR>
+      “I do not blame him. The howl calls both harmony and madness. Those who walk with spirits must be ready to walk alone.”
+      ]]>
+    </NPCText>
+    <Option text="Is that why you became a priest?" next="ejanLoyalty"/>
+    <Option text="You are not alone now." action="Karma:100" next="ejanCompassion"/>
+  </Dialogue>
+
+  <Dialogue id="ejanCompassion">
+    <NPCText>
+      <![CDATA[
+      (Ejan lowers his head, voice quieter.)<BR>
+      “Thank you. Few speak with such warmth in these times. Awooo... May your kindness echo through the glades.”<BR>
+      (You feel a subtle warmth surround you.)
+      ]]>
+    </NPCText>
+    <Option text="Let’s speak of something else." next="ejanBackstoryIntro"/>
+    <Option text="Farewell, Stonehowl." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ejanLoneliness">
+    <NPCText>
+      <![CDATA[
+      “Loneliness? No. I was among birds, roots, ancestors. Loneliness only returns when I enter crowds and hear no songs.”<BR>
+      “I would rather dine with wolves than men who lie with silver tongues.”
+      ]]>
+    </NPCText>
+    <Option text="You truly are of the wild." next="ejanBackstoryIntro"/>
+    <Option text="Even wolves seek packs. Don’t you?" next="ejanFaith"/>
+  </Dialogue>
+
+  <Dialogue id="ejanFaith">
+    <NPCText>
+      <![CDATA[
+      “The spirits speak, if one listens. They are in the wind’s curve, the crack of old wood, the blood-music of a fresh kill. They do not demand temples, only reverence.”<BR><BR>
+      “Minax’s blight tries to drown them in silence. That’s why we howl louder.”
+      ]]>
+    </NPCText>
+    <Option text="Have you ever heard them directly?" next="ejanVision"/>
+    <Option text="That’s beautifully said." action="Karma:50" next="ejanGratitude"/>
+  </Dialogue>
+
+  <Dialogue id="ejanGratitude">
+    <NPCText>
+      <![CDATA[
+      “You listen with more than your ears. That is rare.”<BR>
+      (Ejan draws a sigil in the air—leaves momentarily gather around you.)
+      ]]>
+    </NPCText>
+    <Option text="I want to hear more of your visions." next="ejanVision"/>
+    <Option text="Let’s speak of something else." next="ejanBackstoryIntro"/>
+  </Dialogue>
+
+  <Dialogue id="ejanVision">
+    <NPCText>
+      <![CDATA[
+      “In the last full moon, I dreamed of a tree with roots in fire and branches in stars. At its base, Minax clawed at the bark while wolves stood in silence, watching me.”<BR><BR>
+      “The tree whispered: *‘Call the worthy, and feed the howl.’* I do not know what it means—yet.”
+      ]]>
+    </NPCText>
+    <Option text="That must be a prophecy." next="ejanBackstoryIntro"/>
+    <Option text="I will help you understand it." action="Karma:100" next="ejanCompassion"/>
+  </Dialogue>
+
+  <Dialogue id="ejanLoyalty">
+    <NPCText>
+      <![CDATA[
+      “I serve the Verdant not by command, but by root and oath. We are not an empire, not a nation. We are *balance*. Without us, the trees would scream and the spirits would wander lost.”<BR><BR>
+      “I do not command the wild. I keep it from devouring itself.”
+      ]]>
+    </NPCText>
+    <Option text="That’s a heavy burden." next="ejanBurden"/>
+    <Option text="You are respected by many." next="ejanGratitude"/>
+  </Dialogue>
+
+  <Dialogue id="ejanBurden">
+    <NPCText>
+      <![CDATA[
+      “Some burdens make us bow, others shape our backs into mountains. I have become both.”<BR><BR>
+      “But sometimes I envy the fox—no duty but to hunt, to play, to curl into the wind and vanish.”
+      ]]>
+    </NPCText>
+    <Option text="You carry your burden well." next="ejanBackstoryIntro"/>
+  </Dialogue>
+
+  <Dialogue id="ejanExile">
+    <NPCText>
+      <![CDATA[
+      (Ejan’s expression hardens.)<BR>
+      “I howled when I was forbidden. I called a rain when drought was sacred. The council feared my power... or what I might awaken.”<BR><BR>
+      “So yes, I was cast out. But the wild never turned me away. And now? The same council begs me to protect them from the shadows.”<BR>
+      (He smiles bitterly.)
+      ]]>
+    </NPCText>
+    <Option text="Do you still trust them?" next="ejanTrust"/>
+    <Option text="You’ve returned stronger than ever." action="Fame:200" next="ejanGratitude"/>
+  </Dialogue>
+
+  <Dialogue id="ejanTrust">
+    <NPCText>
+      <![CDATA[
+      “Trust is a rare flower—beautiful, but brittle. I trust the spirits. I trust the howl. As for the council?”<BR>
+      “Let their roots prove their worth, not their words.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you for your honesty." next="ejanBackstoryIntro"/>
+  </Dialogue>
+
+
+</DialogueFile>

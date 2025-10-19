@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="OlfricWhispercloak">
+  <!-- === root ================================================= -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aacdd1'>
+      The figure before you is draped in a swirling mantle of dusk—a <b>Cowl of Vanished Voices</b> drawn low, hiding sharp eyes and a lipless, silent mouth.<br>
+      His presence feels wrong, as if the air itself forgets your words.<br><br>
+      Olfric inclines his head in mute greeting, gestures invitingly with a gloved hand.<br><br>
+      <i>(He cannot speak aloud, but his eyes search yours with an intensity that demands understanding.)</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Sign: 'Who are you?'" next="identity"/>
+    <Option text="Show your weapon, nod respectfully." next="acknowledge"/>
+    <Option text="Attempt to break the silence by speaking." next="silence"/>
+	<Option text="Gesture: 'Tell me about your past.'" next="backstoryIntro"/>
+    <Option text="Leave him in peace." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="identity">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aacdd1'>
+      Olfric touches the edge of his hood, then gestures to his throat, miming the act of plucking music from the air and casting it away.<br>
+      He produces a tiny, rune-carved harp, its strings broken. A gesture—a memory of song lost.<br><br>
+      <i>He unrolls a piece of parchment, written in a precise hand:</i><br>
+      <blockquote>
+      "Once, I sang for warmth in the firelight—bard to warlord, lover, and liar. Now, my voice is a stolen thing. They call me Whispercloak.<br>
+      Aerilon sends me secrets. Buccaneer's Den hunts my shadow. Here, I walk in silence."
+      </blockquote>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Gesture: 'Why Frostmere?'" next="whyFrostmere"/>
+    <Option text="Sign: 'Danger in town?'" next="danger"/>
+    <Option text="Ask about his cloak and odd garments." next="outfit"/>
+    <Option text="Move to leave." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acknowledge">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aacdd1'>
+      Olfric’s eyes flicker with approval. He withdraws a thin, dagger-like blade—<b>Murderer’s Soliloquy</b>—and holds it flat in his palm, before vanishing it beneath his <b>Muffling Jacket</b>.<br>
+      <i>He studies your posture, weighing your intentions.</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Sign: 'Is there work for a skilled hand?'" next="questOffer"/>
+    <Option text="Question his silence." next="silence"/>
+    <Option text="Breathe in the quiet, wait for him to move first." next="wait"/>
+    <Option text="Leave quietly." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="silence">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aacdd1'>
+      You try to speak, but your words seem swallowed by the air. Olfric gestures apologetically, tracing a rune in the air—a sign of his curse.<br>
+      A shimmer runs across his <b>Echo-Drinker Cloak</b>, and you hear the faintest echo of your own voice—muffled, hollow, gone.<br>
+      <i>You sense this is not malicious, but a burden he cannot shake.</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Sign: 'I can help. What troubles you?'" next="questOffer"/>
+    <Option text="Step away from the unnatural silence." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="whyFrostmere">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aacdd1'>
+      Olfric shrugs, then taps a symbol on his cloak—the glyph of the Obelisk of Veyra.<br>
+      He sketches a rough map on the ground, showing lines (routes) from Aerilon, Buccaneer’s Den, and Wind all converging here.<br>
+      He holds up one finger, then points to you, then to the icy heart of town.<br>
+      <i>He is here to watch, to warn, perhaps to find someone who listens.</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Sign: 'Warn me of what?'" next="danger"/>
+    <Option text="Sign: 'Do you trust anyone here?'" next="trust"/>
+    <Option text="Gesture for him to continue." next="questOffer"/>
+    <Option text="Thank him, leave." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aacdd1'>
+      Olfric’s gaze grows grave. He produces a scrap of parchment, scrawled with icy runes:<br>
+      <blockquote>
+      "Minax whispers in every shadow. Not all enemies wear her mark. <b>One among your elders is already lost.</b> The Executioner stalks at her call."
+      </blockquote>
+      He gives a sidelong glance towards the Obelisk’s direction, then places a gloved finger over his lips, urging secrecy.
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Ask: 'Which elder is corrupted?'" next="notReveal"/>
+    <Option text="Vow to hunt the Executioner." next="questOffer"/>
+    <Option text="Step back, uncertain." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="notReveal">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aacdd1'>
+      Olfric shakes his head sharply. He tears the parchment, scatters it to the wind.<br>
+      With his <b>Whisperthief’s Gloves</b>, he draws a symbol in the snow—a circle with a single break.<br>
+      <i>Trust is broken. He will not reveal the traitor… not yet.</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Press for more information." next="rebuff"/>
+    <Option text="Let it go, offer your aid instead." next="questOffer"/>
+    <Option text="Leave him." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="rebuff">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aacdd1'>
+      His expression darkens. He makes the sign for “wait,” then turns away for a moment, composing himself.<br>
+      <i>Olfric is not ready to share this secret. Trust must be earned through action.</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Offer to prove yourself." next="questOffer"/>
+    <Option text="Move along." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="trust">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aacdd1'>
+      He draws a quick set of marks in the snow: a blade (Bryndra), a bottle (Lira), an eye (Irinya), and a burning candle (Kaelen).<br>
+      Olfric places his hand over the “eye”—trusts Irinya most.<br>
+      Then a question mark beside the blade—unsure of Bryndra.<br>
+      <i>He trusts few, and always with caution.</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Offer to earn his trust." next="questOffer"/>
+    <Option text="Thank him, depart." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="outfit">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aacdd1'>
+      Olfric lets you study his garments:<br>
+      <b>Cowl of Vanished Voices</b> (a shroud said to silence any who wear it).<br>
+      <b>Muffling Jacket</b> (leather, stitched with Aerilon runes for quiet movement).<br>
+      <b>Sable Hakama</b> (breeze-cold, seems to leave no tracks in snow).<br>
+      <b>Whisperthief’s Gloves</b> (fingers etched for lockpicking, never squeak).<br>
+      <b>Silent Step Tabi</b> (soles padded with cloudfox fur, nearly invisible in frost).<br>
+      <b>Echo-Drinker Cloak</b> (absorbs sound, shimmers with lost voices).<br>
+      <b>Murderer’s Soliloquy</b> (a thin, rune-carved spike with a musical motif).<br>
+      <i>Each piece is a tool—earned, stolen, or traded in silence.</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Compliment his craftsmanship." next="appreciate"/>
+    <Option text="Offer your skills." next="questOffer"/>
+    <Option text="Step away." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="appreciate">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aacdd1'>
+      He bows his head, pleased, and offers you a small woven token—a silent blessing.<br>
+      <i>Perhaps this is how he rewards respect.</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Accept token, offer help in return." next="questOffer"/>
+    <Option text="Thank him and leave." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="wait">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aacdd1'>
+      Olfric is content to let the silence linger. After a long pause, he gestures toward the north gates, then points at you, then at his heart—signaling that only action earns words.
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Sign: 'Give me a task.'" next="questOffer"/>
+    <Option text="Slip away quietly." action="Close"/>
+  </Dialogue>
+
+  <!-- ===== Quest Offer: Glacial Executioner ========== -->
+  <Dialogue id="questOffer">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aacdd1'>
+      Olfric produces a scrap of parchment, hastily sketched:<br>
+      <blockquote>
+      "Glacial Executioner—a spirit of ice and hate, stalking the outskirts. Once a hunter, now a butcher. Marked by the Obelisk's corruption. <br>
+      Killed two of Svala's kin. Feeds on voices, grows stronger by night.<br>
+      Hunt it. Bring its frost-bitten helm as proof.<br>
+      I will reward silence with secrets."
+      </blockquote>
+      He holds your gaze, and you sense his urgency.<br>
+      <i>Frostmere will not rest while the Executioner walks the wilds.</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will hunt the Glacial Executioner for you."
+      action="GiveItem:FactionKillQuestScroll(GlacialExecutioner,1,Frostmere,850)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="questAccept"/>
+    <Option text="Why does it steal voices?" next="voiceSteal"/>
+    <Option text="What reward do you offer?" next="reward"/>
+    <Option text="How did you lose your own voice?" next="curse"/>
+    <Option text="This is too dangerous for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="questAccept">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aacdd1'>
+      Olfric’s eyes shine with a glimmer of hope. He sketches a map—Executioner lairs in the glacier chasm northeast, near the ruined shrines. Beware its icy howl.<br>
+      <i>He presses a cold, rune-marked token into your palm—perhaps it will protect you from the worst of the spirit’s curse.</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will return with proof of its end." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="voiceSteal">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aacdd1'>
+      Olfric makes a cutting motion across his throat, then covers his mouth.<br>
+      He writes:<br>
+      "Victims left mute. Some never wake. It grows stronger each voice it takes. The Obelisk twists fate, and so do those who serve it."</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I'll silence it." 
+      action="GiveItem:FactionKillQuestScroll(GlacialExecutioner,1,Frostmere,850)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="questAccept"/>
+    <Option text="This is unsettling... but I'll try." next="questAccept"/>
+    <Option text="No, thank you." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="reward">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aacdd1'>
+      Olfric opens a pouch and shows rare items—crystals that dampen sound, a ring that repels chill, and a scrap of forbidden sheet music.<br>
+      He writes:<br>
+      "Your reward is choice—protection, knowledge, or a song from the past. You will choose when you return."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="That's worth the risk. I'm in."
+      action="GiveItem:FactionKillQuestScroll(GlacialExecutioner,1,Frostmere,850)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="questAccept"/>
+    <Option text="Let me consider." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="curse">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aacdd1'>
+      He closes his eyes, touching the <b>Cowl of Vanished Voices</b>.<br>
+      He writes:<br>
+      "Cursed for slaying the wrong man. Warlord's dying breath stole my song—left me to live in silence. Now I silence only the guilty."<br>
+      A shadow of regret passes over his face.
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I understand. I'll help you." next="questOffer"/>
+    <Option text="May you find peace." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="backstoryIntro">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#aacdd1'>
+    Olfric raises a brow, surprised by your interest. He slowly lowers his hood, revealing hollow cheekbones and an old scar that curves beneath his jaw.<br>
+    He pulls a parchment from within his jacket, scrawled in sharp calligraphy:<br><br>
+    <blockquote>
+    "Once, I was a bard in Britain’s twilight. My songs stirred hearts and silenced blades. I loved a woman of Wind, betrayed a lord of Buccaneer's Den, and paid the price with silence."<br>
+    "Would you still hear more?"
+    </blockquote>
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="Yes. Tell me about the woman from Wind." next="pastLove"/>
+  <Option text="Tell me about your bard days." next="bardLife"/>
+  <Option text="You betrayed someone dangerous?" next="betrayal"/>
+  <Option text="That’s enough for now." action="Close"/>
+</Dialogue>
+
+<Dialogue id="pastLove">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#aacdd1'>
+    Olfric’s expression softens. He sketches a rune in the snow—a spiraling glyph known in Wind as the symbol for “binding.”<br><br>
+    He writes:<br>
+    <blockquote>
+    "Her name was Elayne. A chronomancer who sang with time as I sang with lute. We made music no court could bear. She vanished the day the rift opened, chasing Minax's shadow into another shard."<br>
+    "I seek her still."
+    </blockquote>
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="I'll look for signs of her, if I can." 
+          action="SendMessage:Olfric nods with solemn gratitude." 
+          next="bardLife"/>
+  <Option text="She’s likely gone. You should let go." 
+          action="Karma:-200" 
+          next="chastise"/>
+  <Option text="That’s tragic. What of your songs?" next="bardLife"/>
+</Dialogue>
+
+<Dialogue id="chastise">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#aacdd1'>
+    Olfric’s eyes narrow. He draws a slash through the glyph and turns away momentarily.<br>
+    <i>He is silent for longer than usual. Perhaps your words struck too deep.</i>
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="Apologies. I meant no harm." next="bardLife"/>
+  <Option text="You loved her. I see that now." 
+          action="Karma:+150" 
+          next="bardLife"/>
+</Dialogue>
+
+<Dialogue id="bardLife">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#aacdd1'>
+    He gently removes a shard of wood from his cloak—it’s all that remains of a lute.<br>
+    A strange hush falls over the air.<br>
+    He writes:<br>
+    <blockquote>
+    "I was court bard to Lord Wyrthe in Magincia. Songs of rebellion. Songs of secrets. I played to sway kings and disarm killers. My greatest song made a murderer weep."<br>
+    "But it was also what painted the mark on me. Aerilon found value in silence."
+    </blockquote>
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="Play a song again, even silently." 
+          action="PlaySound:0x015" 
+          next="invisibleSong"/>
+  <Option text="What happened with Aerilon?" next="betrayal"/>
+</Dialogue>
+
+<Dialogue id="invisibleSong">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#aacdd1'>
+    Olfric plucks invisible strings. Though no sound is heard, a strange echo trembles in your chest—like memory, or sorrow.<br>
+    You feel... lighter somehow.<br>
+    <i>(You gain a momentary sense of calm.)</i>
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="That was... something. Tell me about Aerilon." 
+          action="AddStat:Int,5,60" 
+          next="betrayal"/>
+  <Option text="That was beautiful. Thank you." 
+          action="Fame:+150" 
+          next="endBackstory"/>
+</Dialogue>
+
+<Dialogue id="betrayal">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#aacdd1'>
+    He unsheathes <b>Murderer’s Soliloquy</b>, showing a single glyph on its edge: the sigil of the High Warlord of Buccaneer’s Den.<br>
+    Then he writes:<br>
+    <blockquote>
+    "I sang the warlord’s secrets to his enemies. He died that night, as planned. But his final curse clung to me."<br>
+    "Now, Aerilon sends me where words must die."
+    </blockquote>
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="You’re an assassin now?" next="reflect"/>
+  <Option text="Aerilon uses you like a tool." next="tool"/>
+  <Option text="I’ve done things I regret too." 
+          action="Karma:-50" 
+          next="endBackstory"/>
+</Dialogue>
+
+<Dialogue id="reflect">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#aacdd1'>
+    Olfric bows his head.<br>
+    He writes:<br>
+    <blockquote>
+    "Assassin. Watcher. Mute shadow. I carry death, yes—but I also carry warning."<br>
+    "If Minax wins, none of us will have voices left to sing."
+    </blockquote>
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="You still have purpose. I believe in that." 
+          action="Fame:+100" 
+          next="endBackstory"/>
+  <Option text="Better than rotting in chains, I suppose." next="endBackstory"/>
+</Dialogue>
+
+<Dialogue id="tool">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#aacdd1'>
+    Olfric gives a subtle shrug.<br>
+    He writes:<br>
+    <blockquote>
+    "I am a scalpel, yes. But I choose my incisions."<br>
+    "And one day, I may carve Aerilon from the sky."
+    </blockquote>
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="Let me help you one day." 
+          action="Karma:+100" 
+          next="endBackstory"/>
+  <Option text="You sound dangerous." next="endBackstory"/>
+</Dialogue>
+
+<Dialogue id="endBackstory">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#aacdd1'>
+    Olfric nods once, pulling his cowl back over his face.<br>
+    He leaves you with one final note, placed gently into your palm:<br>
+    <blockquote>
+    "Truth weighs nothing, but burdens all. If you still wish to walk beside it, return with silence, not questions."
+    </blockquote>
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="I understand. I’ll return soon." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

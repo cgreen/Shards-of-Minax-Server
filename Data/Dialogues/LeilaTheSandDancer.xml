@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="LeilaTheSandDancer">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#e5c06b'>
+      A radiant young woman swirls in a whirl of golden silk and flower petals, music drifting from her bangled wrists and the sands beneath her crimson sandals.<BR><BR>
+      She pauses, catching your gaze with a sly, knowing smile.<BR><BR>
+      "Welcome, traveler, to the Shimmering Sands! I am Leila, called the Sand Dancer. My family's caravan brings silk and spice to Qasaria, and my dances are said to sway even the hardest merchant's heart.<BR><BR>
+      Do you seek a story, a secret... or something only a wanderer can offer?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Tell me of your caravan and your life, Leila." next="about"/>
+    <Option text="I've heard you know the city's secrets." next="secrets"/>
+    <Option text="Are you connected to the Council of Jewels?" next="council"/>
+    <Option text="Is it true the sand dances hold hidden messages?" next="dancelore"/>
+    <Option text="Do you need any help?" next="help"/>
+	<Option text="You seem different from the other performers here…" next="deepdive"/>
+    <Option text="Just watching the dance for now." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Leila's Story -->
+  <Dialogue id="about">
+    <NPCText>
+      <![CDATA[
+      Leila flourishes her shimmering sash.<BR><BR>
+      "My people are caravan-born—spice traders, silk weavers, wanderers. My mother, Yasira, oversees our routes; my father, Rashid, tends the camels and keeps the ledgers. We journey from Sunreach to Vesper, but Qasaria has always been our jewel.<BR><BR>
+      The city is a tapestry of splendor and shadow. Sometimes I feel more at home under desert stars than within these golden walls. But every coin, every step, every story shapes the market's fate.<BR><BR>
+      My dance is more than art—it's survival, and sometimes, it is warning."
+      ]]>
+    </NPCText>
+    <Option text="A warning of what, exactly?" next="warn"/>
+    <Option text="Do you trust Qasaria's rulers?" next="council"/>
+    <Option text="You mentioned Sunreach and Vesper. How do they treat outsiders?" next="trade"/>
+    <Option text="How do you stay safe on the roads?" next="caravan"/>
+    <Option text="Can I help your family?" next="help"/>
+    <Option text="Thank you for sharing." next="greeting"/>
+  </Dialogue>
+
+  <!-- Caravan Warnings -->
+  <Dialogue id="warn">
+    <NPCText>
+      <![CDATA[
+      Leila glances around, lowering her voice.<BR><BR>
+      "Strange eyes watch the bazaar of late. Some bear the scarlet rings of Minax; others, the sapphire sigils of the Council. Shadows drift after our wagons at night. Sometimes, I find trinkets or torn scrolls in the sand—messages meant for others.<BR><BR>
+      I trust my mother’s wisdom, but I sometimes fear what we carry may be worth more than all our silks."
+      ]]>
+    </NPCText>
+    <Option text="What is it you carry that is so valuable?" next="relicintro"/>
+    <Option text="Tell me more of these shadows and spies." next="spies"/>
+    <Option text="If you are in danger, let me help." next="help"/>
+    <Option text="I should go." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="spies">
+    <NPCText>
+      <![CDATA[
+      "There are whispers that Yasmin al-Topaz and the Emerald Vizier send agents to follow the caravans. And some say Minax's minions now slip coins into the hands of desperate merchants. Secrets change hands faster than gold.<BR><BR>
+      Even the Shadowmaster of the Undermarket smiles too easily at our stalls."
+      ]]>
+    </NPCText>
+    <Option text="Tell me about Yasmin al-Topaz." next="yasmin"/>
+    <Option text="The Emerald Vizier is involved?" next="karim"/>
+    <Option text="Minax has agents in the city?" next="minaxlore"/>
+    <Option text="Let us speak of something lighter." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="relicintro">
+    <NPCText>
+      <![CDATA[
+      Leila laughs, a note of worry in her eyes.<BR><BR>
+      "Relics and maps, stories and curses—every caravan has its tales. Sometimes I dance to distract, sometimes to remember. But… there is a slip of parchment hidden in my sash, drawn by my grandmother, said to point to a forgotten tomb.<BR><BR>
+      My father claims it is a superstition, but strangers have offered gold—and threats—for a glimpse."
+      ]]>
+    </NPCText>
+    <Option text="May I see this map?" next="map"/>
+    <Option text="Who seeks this relic?" next="seekers"/>
+    <Option text="You must be careful—such things draw danger." next="warn"/>
+    <Option text="I could keep it safe for you." next="trust"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="map">
+    <NPCText>
+      <![CDATA[
+      Leila hesitates, then slips a rolled parchment from her Sash of Shimmering Mirage, letting you glimpse a fragment.<BR><BR>
+      "It shows a place called the 'Heart of the Dunes.' Only a few words are legible: '...beneath the mirrored moon, where the sand weeps amber tears.'<BR><BR>
+      If you seek it, beware—the desert does not forgive the greedy, nor those who walk with Minax’s shadow."
+      ]]>
+    </NPCText>
+    <Option text="Let me protect the map, and seek this relic for you." next="offerquest"/>
+    <Option text="Do you wish to sell or destroy it?" next="sell"/>
+    <Option text="Does the Council know you possess this?" next="council"/>
+    <Option text="I will remember your warning." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="offerquest">
+    <NPCText>
+      <![CDATA[
+      Leila’s eyes search yours, uncertain.<BR><BR>
+      "If you are truly willing, perhaps you can help my family—and Qasaria. Take this map. Seek out Yasmin al-Topaz at the Celestial Library, or deliver it to Karim al-Emerald’s agents if you trust them more.<BR><BR>
+      I only ask: return with news, or the relic itself. Perhaps then, the shadows will leave us."
+      ]]>
+    </NPCText>
+    <Option text="I will deliver this to Yasmin al-Topaz."
+            action="GiveItem:FactionDeliveryQuestScroll(Yasmin al-Topaz,Qasaria,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="yasminquest"/>
+    <Option text="I would rather trust the Emerald Vizier."
+            action="GiveItem:FactionDeliveryQuestScroll(Karim al-Emerald,Qasaria,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="karimquest"/>
+    <Option text="It may be safer destroyed." next="destroy"/>
+    <Option text="I must think about this." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="yasminquest">
+    <NPCText>
+      <![CDATA[
+      Leila places the map in your hand, her fingers trembling.<BR><BR>
+      "Yasmin is wise, but beware her ambition. If you return safely, my family will owe you more than gold. May the desert winds shield you, friend."
+      ]]>
+    </NPCText>
+    <Option text="I accept this task. Farewell, Leila." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="karimquest">
+    <NPCText>
+      <![CDATA[
+      Leila nods hesitantly.<BR><BR>
+      "If the Emerald Vizier can keep my family safe, so be it. But he is not a man to cross. Return swiftly, and may fortune favor your shadow."
+      ]]>
+    </NPCText>
+    <Option text="I accept the task. Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="destroy">
+    <NPCText>
+      <![CDATA[
+      Leila’s eyes widen, but she nods solemnly.<BR><BR>
+      "If it must be done, burn it where the sands meet the river—let no one find it, nor the doom it may bring. Promise me you will tell no one what you have seen."
+      ]]>
+    </NPCText>
+    <Option text="I promise. The secret dies with me." action="Close"/>
+    <Option text="On second thought, perhaps I will deliver it instead." next="offerquest"/>
+  </Dialogue>
+
+  <!-- Selling the Map -->
+  <Dialogue id="sell">
+    <NPCText>
+      <![CDATA[
+      "Some things are too dangerous to sell, friend. Gold cannot buy peace when Minax’s shadows stalk your dreams. Still, there are some in the Undermarket who would pay handsomely, if you have the stomach for it."
+      ]]>
+    </NPCText>
+    <Option text="Who in the Undermarket would buy it?" next="zahid"/>
+    <Option text="I will not risk your safety." next="warn"/>
+    <Option text="Let’s speak of lighter things." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="zahid">
+    <NPCText>
+      <![CDATA[
+      "Zahid the Shadowmaster, beneath the Qasaria bazaar, trades in secrets and stolen things. He frightens me, but he is always listening. If you bargain with him, trust no one—not even yourself."
+      ]]>
+    </NPCText>
+    <Option text="Thank you for the warning." next="greeting"/>
+    <Option text="Maybe I should deliver it to Yasmin or Karim instead." next="offerquest"/>
+  </Dialogue>
+
+  <!-- Dancelore -->
+  <Dialogue id="dancelore">
+    <NPCText>
+      <![CDATA[
+      Leila spins, a shimmer of amber and silk.<BR><BR>
+      "In Qasaria, every movement means something: a hand raised to the sun asks for blessing; a twist of the sash warns of thieves; a red sandal touches the earth—betrayal is near.<BR><BR>
+      I have danced warnings to the Council, messages to lovers, even signals to my family’s guards. Watch closely, and you may read the truth between the steps."
+      ]]>
+    </NPCText>
+    <Option text="Could you teach me such a dance?" next="teachdance"/>
+    <Option text="Who do you warn most often?" next="warn"/>
+    <Option text="I’ll keep my eyes open." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="teachdance">
+    <NPCText>
+      <![CDATA[
+      Leila laughs softly.<BR><BR>
+      "Perhaps, if you have nimble feet and a nimble mind! But beware—some dances draw eyes you do not wish to meet. When the music swells, step lightly, and never forget: in Qasaria, every shadow has an ear."
+      ]]>
+    </NPCText>
+    <Option text="I will remember." next="greeting"/>
+  </Dialogue>
+
+  <!-- Council & NPC Lore -->
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      "The Council of Jewels rules Qasaria, but their unity is a mask. Ruby and Sapphire quarrel openly; the Emerald Vizier moves quietly; Yasmin al-Topaz knows things none should know; Omar al-Onyx prefers the sword to the tongue.<BR><BR>
+      My family owes some loyalty to Safiya al-Sapphire, who favors the caravans, but we fear becoming pawns in her schemes. I avoid the council when I can—unless my dance is required at their feasts."
+      ]]>
+    </NPCText>
+    <Option text="Safiya al-Sapphire supports you?" next="safiya"/>
+    <Option text="Tell me about Yasmin al-Topaz." next="yasmin"/>
+    <Option text="Is Karim al-Emerald truly so dangerous?" next="karim"/>
+    <Option text="Thank you. I’d like to help you instead." next="help"/>
+    <Option text="Let’s speak of something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="safiya">
+    <NPCText>
+      <![CDATA[
+      "Safiya is generous with her gifts and words, but every favor has its price. She once paid for my mother's debts, but expects our loyalty in every trade. I dance for her galas, but do not share her ambition."
+      ]]>
+    </NPCText>
+    <Option text="Let’s speak of Yasmin al-Topaz." next="yasmin"/>
+    <Option text="Thank you, Leila." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="yasmin">
+    <NPCText>
+      <![CDATA[
+      "Yasmin is a mystery wrapped in silk and prophecy. Some say she has lived a hundred years, sustained by relics she has found. She sometimes watches me dance from her tower, and has sent gifts—books, amulets, riddles. I sense she knows more of my family’s burden than she lets on."
+      ]]>
+    </NPCText>
+    <Option text="Could she protect your family?" next="offerquest"/>
+    <Option text="Do you trust her?" next="trustyasmin"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="trustyasmin">
+    <NPCText>
+      <![CDATA[
+      Leila’s eyes dart away.<BR><BR>
+      "I trust her to do what is best for Qasaria. Whether that is best for me, I do not know. But she is the only councilor who listens to prophecy and dreams."
+      ]]>
+    </NPCText>
+    <Option text="Let’s talk about the map again." next="relicintro"/>
+    <Option text="Thank you, Leila." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="karim">
+    <NPCText>
+      <![CDATA[
+      "Karim al-Emerald never sleeps, I think. His spies flit from shadow to shadow. I once caught one watching my dance—he bowed and vanished. He protects Qasaria, but at a cost."
+      ]]>
+    </NPCText>
+    <Option text="Would he keep your family safe?" next="offerquest"/>
+    <Option text="Let’s talk about the map." next="relicintro"/>
+    <Option text="Thank you." next="greeting"/>
+  </Dialogue>
+
+  <!-- Minax Lore -->
+  <Dialogue id="minaxlore">
+    <NPCText>
+      <![CDATA[
+      Leila shivers, glancing at the shifting sands.<BR><BR>
+      "Some say Minax’s shadow stretches even here. The Ash Serpents, desert raiders, claim her favor. But I have seen men and women in the bazaar whose eyes glitter with darkness—they seek relics and rumors.<BR>
+      My family does not traffic with her agents, but sometimes a coin carries curses we cannot see."
+      ]]>
+    </NPCText>
+    <Option text="If I meet one, I will be cautious." next="greeting"/>
+    <Option text="I would protect you from them." next="help"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <!-- Quest Offer -->
+  <Dialogue id="help">
+    <NPCText>
+      <![CDATA[
+      Leila meets your gaze, hope flickering in her eyes.<BR><BR>
+      "There is one thing... If you are trustworthy, I ask your help with the map. Deliver it to one who will use it for good—Yasmin al-Topaz, or the Emerald Vizier. Or keep it safe from Minax’s spies.<BR><BR>
+      Will you aid me in this, and perhaps bring peace to my family?"
+      ]]>
+    </NPCText>
+    <Option text="I will do it. Let me deliver the map." next="offerquest"/>
+    <Option text="I cannot help now." action="Close"/>
+  </Dialogue>
+
+  <!-- Player declines or ends -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Leila curtsies, gold and crimson swirling.<BR>
+      "The bazaar is always open, friend. Should you seek fortune or a story, you will find me beneath the lanterns."
+      ]]>
+    </NPCText>
+    <Option text="Perhaps later, Leila." action="Close"/>
+    <Option text="Let’s talk more, actually." next="greeting"/>
+  </Dialogue>
+
+<Dialogue id="deepdive">
+  <NPCText>
+    <![CDATA[
+    Leila pauses mid-sway, her expression softening.<BR><BR>
+    "Different? Mmm... perhaps. I was not always a dancer. As a child, I studied calligraphy beneath the stars, inscribing spells into sand with a whisper. I dreamed of being a mystic—until the roads called louder."<BR><BR>
+    She spins once, the bells on her ankle chiming a soft lament.<BR>
+    "My uncle taught me to read fate in the fire. My aunt taught me to lie with a smile. And Qasaria? Qasaria taught me that truth is not always welcome."<BR><BR>
+    She leans in, amused. "Do you still want to know more, wanderer?"
+    ]]>
+  </NPCText>
+  <Option text="Yes. Tell me about your dreams." next="dreams"/>
+  <Option text="Your past sounds beautiful and tragic." next="family"/>
+  <Option text="Truth is always welcome, Leila." next="truth"/>
+  <Option text="Maybe I should go..." action="Close"/>
+</Dialogue>
+
+<Dialogue id="dreams">
+  <NPCText>
+    <![CDATA[
+    "I dreamed of a hidden oasis where words carved into stone could bring back voices long lost. Of becoming a bard whose songs could shift the desert wind. But dreams fade with sandstorms."<BR><BR>
+    She traces a rune in the air.<BR>
+    "Still... I keep dreaming. Would you like to see what I once drew in the stars?"
+    ]]>
+  </NPCText>
+  <Option text="Yes. Show me your star-words." next="starglyph" action="Effect:0x3709,0x48F,1"/>
+</Dialogue>
+
+<Dialogue id="starglyph">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR="#ccf5ff">
+    She raises her hand and a faint pattern of constellations shimmers around you—visible only for a heartbeat.<BR><BR>
+    "I called it the Dance of Destiny. When I perform beneath that sky, I feel... whole."<BR><BR>
+    You feel something stir within you.
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="That was beautiful." action="Fame:+250" next="emotion"/>
+  <Option text="I felt something... powerful." action="AddStat:Int,5,300" next="emotion"/>
+</Dialogue>
+
+<Dialogue id="emotion">
+  <NPCText>
+    <![CDATA[
+    Leila looks at you with rare vulnerability.<BR><BR>
+    "Thank you. Most just see silks and sandals. You saw a spark beneath."<BR><BR>
+    Her smile returns, wry and warm. "Few do."
+    ]]>
+  </NPCText>
+  <Option text="What do you see in me?" next="seeplayer"/>
+  <Option text="Let’s talk more of your family." next="family"/>
+  <Option text="I’ll leave you to your dreams." action="Close"/>
+</Dialogue>
+
+<Dialogue id="seeplayer">
+  <NPCText>
+    <![CDATA[
+    <CONDITION IsMale>
+    <![CDATA[
+    Leila tilts her head and eyes you, half-challenging, half-curious.<BR><BR>
+    "You wear your armor like a mask. But there’s honor in your gaze... and sorrow. Perhaps you're not just a sword in search of a cause."
+    ]]>
+    </CONDITION>
+    <CONDITION IsFemale>
+    <![CDATA[
+    Leila smiles more gently.<BR><BR>
+    "Your steps carry strength, but I see the kindness in your stance. The desert respects those who walk its edges with grace. You are no stranger to hardship… nor to wonder."
+    ]]>
+    </CONDITION>
+    ]]>
+  </NPCText>
+  <Option text="That means more than you know." next="mystery"/>
+  <Option text="You see too much..." action="Karma:+100" next="mystery"/>
+</Dialogue>
+
+<Dialogue id="mystery">
+  <NPCText>
+    <![CDATA[
+    Leila lowers her gaze just a little.<BR><BR>
+    "Perhaps one day, I’ll show you the resting place of the Dancer’s Pearl. Or the song that made a sultan weep. But not yet."<BR><BR>
+    She spins again, veil fluttering like flame.<BR>
+    "For now, let the wind carry our secrets."
+    ]]>
+  </NPCText>
+  <Option text="One day, then." action="SendMessage:You feel something quietly change between you."/>
+  <Option text="I look forward to it." action="Close"/>
+</Dialogue>
+
+<Dialogue id="family">
+  <NPCText>
+    <![CDATA[
+    "My family are the knots in my sash—always near, always tangled. My mother taught me to balance two ledgers: trade and trust. My father once walked through a sandstorm with nothing but a lute and a lion cub."<BR><BR>
+    She laughs softly.<BR>
+    "My brother... he vanished three years ago chasing a map. Perhaps the same one I carry now."
+    ]]>
+  </NPCText>
+  <Option text="Do you think he still lives?" next="brother"/>
+  <Option text="Is that why you guard the map so closely?" next="relicintro"/>
+  <Option text="Your family sounds remarkable." next="emotion"/>
+</Dialogue>
+
+<Dialogue id="brother">
+  <NPCText>
+    <![CDATA[
+    "I feel him sometimes—in the wind, in the stars. He left behind a talisman of tiger bone and brass. When I dance, it grows warm."<BR><BR>
+    She places it briefly in your hand.<BR>
+    "Perhaps one day, if you prove brave... you could help me find him. Or bring him peace."
+    ]]>
+  </NPCText>
+  <Option text="Let me carry this memory with me." 
+          action="GiveItem:TalismanOfTheWanderingStar"
+          condition="!HasItem:TalismanOfTheWanderingStar"/>
+  <Option text="I’ll help you search, Leila." action="Fame:+250"/>
+  <Option text="That’s a tale worth dancing for." next="emotion"/>
+</Dialogue>
+
+<Dialogue id="truth">
+  <NPCText>
+    <![CDATA[
+    Leila arches a brow.<BR><BR>
+    "Is it? The truth is a burden here. A merchant lies to win gold. A prince lies to win peace. Even a dancer lies... to feel safe."<BR><BR>
+    She lifts her veil just an inch.<BR>
+    "But perhaps you deserve one truth. Just one."<BR><BR>
+    She whispers something only you can hear.
+    ]]>
+  </NPCText>
+  <Option text="Whisper it to me." action="SendMessage:Leila whispers, 'The map isn’t the only thing that’s cursed… I am.'" />
+  <Option text="No need to say it. I already know." action="Karma:+100"/>
+  <Option text="I’ll carry your secret." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

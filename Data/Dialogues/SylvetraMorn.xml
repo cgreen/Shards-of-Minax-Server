@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="SylvetraMorn">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#e3bbe6'>
+      In the dim light of her herb-strewn stall, a gentle-eyed woman in a midnight shroud gazes at you. The air shimmers faintly with perfume and a darker, bitter trace.<BR><BR>
+      “Welcome, traveler... I am Sylvetra Morn. Are you here for healing, a potion—or something more hidden?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek your skill with potions." next="potions"/>
+    <Option text="You seem haunted. What burdens you?" next="burden"/>
+    <Option text="What do you do here in Sunreach?" next="role"/>
+    <Option text="I’ve heard you help both pirates and the watch..." next="gray"/>
+	<Option text="Tell me about yourself, Sylvetra." next="backstoryIntro"/>
+    <Option text="Just browsing, thank you." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="role">
+    <NPCText>
+      <![CDATA[
+      “I mend wounds, brew hope, and sometimes... ease regrets. Pirates, guards, merchants—they all bleed the same, and all come to me in the end. Sunreach is a city of masks. I have worn a few too many.”
+      ]]>
+    </NPCText>
+    <Option text="Is there work for someone discreet?" next="questIntro"/>
+    <Option text="Why help both sides?" next="gray"/>
+    <Option text="You seem troubled—can I help?" next="burden"/>
+    <Option text="I’ll be going." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="potions">
+    <NPCText>
+      <![CDATA[
+      “What ails you? I have tonics for pain, salves for poison, even brews to silence nightmares... but tonight, my thoughts are occupied with a more dangerous cure.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me about this dangerous cure." next="questIntro"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="gray">
+    <NPCText>
+      <![CDATA[
+      A shadow passes across Sylvetra’s face.<BR>
+      “Not all wounds are visible. Some cannot be judged by uniform or coin. Pirates, guards—desperation is their truest allegiance. And perhaps mine as well, once.”
+      ]]>
+    </NPCText>
+    <Option text="It sounds as if you have a story." next="burden"/>
+    <Option text="I’d like to help, if I can." next="questIntro"/>
+    <Option text="I’ll be going." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="burden">
+    <NPCText>
+      <![CDATA[
+      She hesitates, then glances away.<BR><BR>
+      “There was someone I once loved. Minax’s shadow twisted him—now he wanders the sands, a shell, not a man. I have studied every lore I know to break her grip, but I need an ingredient most rare. If you are truly willing to aid a stranger’s regret, I will not turn you away.”
+      ]]>
+    </NPCText>
+    <Option text="I will help. What do you need?" next="questIntro"/>
+    <Option text="Your pain is your own; I cannot get involved." action="Close"/>
+  </Dialogue>
+
+  <!-- Questline Root -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      Sylvetra’s gaze sharpens, a flicker of hope surfacing.<BR><BR>
+      “In the ruins that lie beneath Qasaria’s dunes, a flower grows—nightbloom, violet as the dusk and deadly to touch. Only its petals can form the draught to break Minax’s spell upon my lost love.<BR><BR>
+      Will you brave the desert shadows and return with three nightbloom petals? I can offer coin, a rare tincture... and the gratitude of one who has treated both friend and foe.”
+      ]]>
+    </NPCText>
+    <Option text="I accept. Where do I search?" next="questDetails"
+            condition="!HasItem:NightbloomPetalQuestScroll"/>
+    <Option text="What dangers await in the ruins?" next="dangers"/>
+    <Option text="Why is this flower so rare?" next="nightbloomLore"/>
+    <Option text="I must decline." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="questDetails">
+    <NPCText>
+      <![CDATA[
+      She presses a cool parchment scroll into your hand.<BR>
+      “Venture to the ancient ruins east of Qasaria. Beware—Minax’s cultists gather there, and the sands are haunted by things best forgotten. Only harvest the nightbloom after moonrise; daylight destroys its virtue.<BR><BR>
+      Return with at least three petals, and I will reward you—and perhaps grant a blessing no gold can buy.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with the petals." 
+            action="GiveItem:NightbloomPetalQuestScroll(Sylvetra,Sunreach,350)"
+            condition="!HasItem:NightbloomPetalQuestScroll"
+            next="accept"/>
+    <Option text="On second thought, I’m not ready." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      “Thank you, stranger. I will await your return... and may the shadows keep you from Minax’s eyes.”
+      ]]>
+    </NPCText>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Lore and Risk Branches -->
+  <Dialogue id="dangers">
+    <NPCText>
+      <![CDATA[
+      “The ruins teem with Minax’s followers and desert spirits. Worse, the nightbloom itself is venomous—wear gloves, or its sap may send you dreaming into darkness. Should you fall, bring me even a single petal, and I will do what I can.”
+      ]]>
+    </NPCText>
+    <Option text="Understood. I will search for the petals." 
+            action="GiveItem:NightbloomPetalQuestScroll(Sylvetra,Sunreach,350)"
+            condition="!HasItem:NightbloomPetalQuestScroll"
+            next="accept"/>
+    <Option text="That sounds too dangerous for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="nightbloomLore">
+    <NPCText>
+      <![CDATA[
+      “Nightbloom blossoms only beneath starlight, fed by old magic and sorrow. Once, it was cultivated by healers of Qasaria, but Minax’s blight has twisted many patches. Only in ruins where blood was spilled does it still thrive.”
+      ]]>
+    </NPCText>
+    <Option text="I will risk it for your sake." 
+            action="GiveItem:NightbloomPetalQuestScroll(Sylvetra,Sunreach,350)"
+            condition="!HasItem:NightbloomPetalQuestScroll"
+            next="accept"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      “May your path be safer than mine, traveler. Should your heart change, you will find me here—waiting, as always.”
+      ]]>
+    </NPCText>
+    <Option text="Actually, do you need help with something?" next="questIntro"/>
+    <Option text="Goodbye." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="backstoryIntro">
+    <NPCText>
+      <![CDATA[
+      Sylvetra folds her hands, eyes dim with memory.<BR><BR>
+      “What is there to tell? I was not always a healer. Once, I was a seeker of forbidden roots and darker truths. And once... I loved someone more than I feared what we were becoming.”
+      ]]>
+    </NPCText>
+    <Option text="Was it Minax who changed him?" next="minaxInfluence"/>
+    <Option text="What kind of truths did you seek?" next="forbiddenKnowledge"/>
+    <Option text="You speak as though you regret your path." next="regrets"/>
+    <Option text="Is there anything you miss from those days?" next="nostalgia"/>
+    <Option text="We don’t have to talk about it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="minaxInfluence">
+    <NPCText>
+      <![CDATA[
+      “No... not at first. The world was already breaking. He simply reached for a promise too sweet. Minax didn’t seduce him—she *amplified* what was already there.”<BR><BR>
+      Sylvetra’s fingers tremble slightly as she adds bitterly, “And I was too proud to stop him.”
+      ]]>
+    </NPCText>
+    <Option text="You were trying to help him." next="regrets"/>
+    <Option text="Do you still love him?" condition="IsFemale" next="loveAnswerF"/>
+    <Option text="Do you still love her?" condition="IsMale" next="loveAnswerM"/>
+    <Option text="The past should stay buried." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="forbiddenKnowledge">
+    <NPCText>
+      <![CDATA[
+      “I chased the dreams of desert sages, ancient Myrrukh incantations, and relics that still throb with life in the deep sands. But forbidden things have a price—even if you do not *cast* the spell, *knowing* it marks you.”
+      ]]>
+    </NPCText>
+    <Option text="Sounds like you sought power." next="regrets"/>
+    <Option text="Do you regret that pursuit?" next="regrets"/>
+    <Option text="Can you teach me some of what you know?" condition="SkillAtLeast:Magery,75" next="teachSpell"/>
+    <Option text="I’ll steer clear of such lore." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="teachSpell">
+    <NPCText>
+      <![CDATA[
+      Sylvetra studies you closely, then produces a folded scrap of vellum.<BR><BR>
+      “One spell. A shielding charm woven from starlight and desert bloom. Use it wisely.”<BR><BR>
+      *(You feel a flicker of protective warmth.)*
+      ]]>
+    </NPCText>
+    <Option text="Thank you." action="AddSkill:Magery,5,300" />
+    <Option text="I'll treasure it." action="AddStat:Int,5,180" />
+  </Dialogue>
+
+  <Dialogue id="regrets">
+    <NPCText>
+      <![CDATA[
+      “We all wear regrets like veils. Mine is simply heavier than most. But still I wake, still I brew, still I try. Perhaps that is enough.”<BR><BR>
+      *(She offers a sad smile.)*
+      ]]>
+    </NPCText>
+    <Option text="It is more than enough." next="nostalgia"/>
+    <Option text="You could forgive yourself." condition="KarmaAtLeast:1000" action="SendMessage:Your compassion seems to touch her." next="compassionBonus"/>
+    <Option text="Not everyone deserves forgiveness." condition="KarmaBelow:-1000" action="SendMessage:Your cold words seem to harden her expression." next="karmaDark"/>
+    <Option text="I've no place judging." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="nostalgia">
+    <NPCText>
+      <![CDATA[
+      “I miss laughter. Real laughter, not the brittle kind you hear in Sunreach’s courts. I miss chasing stars across the dunes. And I miss a garden I once grew... beneath a city that no longer stands.”<BR><BR>
+      *(A warm scent briefly fills the air.)*
+      ]]>
+    </NPCText>
+    <Option text="You should plant another." next="blessingOffer"/>
+    <Option text="The past is beautiful because it's unreachable." next="wistful"/>
+    <Option text="Enough reminiscing." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="blessingOffer">
+    <NPCText>
+      <![CDATA[
+      She places a cool finger on your forehead, eyes closing.<BR><BR>
+      “Then take a seed of what I once tended. It will not grow in soil, but perhaps in soul.”<BR><BR>
+      *(You feel calmer, as if soothed.)*
+      ]]>
+    </NPCText>
+    <Option text="Thank you." action="AddStat:Int,2,600" />
+    <Option text="I feel... clearer." action="Heal:20"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="compassionBonus">
+    <NPCText>
+      <![CDATA[
+      “Strange... you remind me of someone I once trusted. Your words hold more power than you know.”<BR><BR>
+      *(She hands you a rare tincture.)*
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Sylvetra." action="GiveItem:RareTinctureOfClarity" />
+    <Option text="I’ll use this wisely." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="karmaDark">
+    <NPCText>
+      <![CDATA[
+      “Perhaps you’re right. Mercy is a weakness the world cannot afford.”<BR><BR>
+      *(Her voice grows colder.)*
+      ]]>
+    </NPCText>
+    <Option text="Good. We understand each other." action="AddStat:Str,3,300"/>
+    <Option text="Farewell, shadowed healer." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="loveAnswerF">
+    <NPCText>
+      <![CDATA[
+      “Yes. Though he’s a stranger now, I remember the soul that once stood in the sun beside me. If there is any chance of saving him—even one petal’s worth—I will not give up.”<BR><BR>
+      *(She touches her satchel, where you glimpse a withered flower.)*
+      ]]>
+    </NPCText>
+    <Option text="Then I will help you find that chance." next="questIntro"/>
+    <Option text="You carry him still. Even now." next="nostalgia"/>
+  </Dialogue>
+
+  <Dialogue id="loveAnswerM">
+    <NPCText>
+      <![CDATA[
+      “Yes. Though she’s a stranger now, I remember the fire that once warmed my path. If there is any chance of saving her—even one petal’s worth—I will not give up.”<BR><BR>
+      *(She touches her satchel, where you glimpse a withered flower.)*
+      ]]>
+    </NPCText>
+    <Option text="Then I will help you find that chance." next="questIntro"/>
+    <Option text="You carry her still. Even now." next="nostalgia"/>
+  </Dialogue>
+
+  <Dialogue id="wistful">
+    <NPCText>
+      <![CDATA[
+      “Perhaps you’re right. The past teaches us how to ache... and how to heal.”<BR><BR>
+      *(She offers you a faint smile.)*
+      ]]>
+    </NPCText>
+    <Option text="Farewell, Sylvetra." action="Close"/>
+  </Dialogue>
+
+
+</DialogueFile>

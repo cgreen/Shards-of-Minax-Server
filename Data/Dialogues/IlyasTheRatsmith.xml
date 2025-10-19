@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="IlyasTheRatsmith">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#dbc98f'>
+      The air in this catacomb seems to writhe and squirm. A lean, pale man in a grimy hooded shroud stands amid cages, chains, and a swarm of docile rats. His eyes glint with morbid delight as you approach.<BR><BR>
+      "Welcome to the Undermarket, friend. I am Ilyas the Ratsmith—extractor of secrets, collector of debts, and occasional connoisseur of pain. <BR>
+      Did you come for information... or to see what secrets you yourself might spill?"</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’m looking for work, not trouble." next="workIntro"/>
+    <Option text="Who are you really, Ilyas?" next="whoAreYou"/>
+    <Option text="What is the Undermarket?" next="undermarket"/>
+    <Option text="Those rats... are they your friends?" next="rats"/>
+	<Option text="Tell me more about your... hobbies." next="interestsRoot"/>
+    <Option text="Just browsing, thanks." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Work/Quest Introduction -->
+  <Dialogue id="workIntro">
+    <NPCText>
+      <![CDATA[
+      Ilyas grins, flashing stained teeth. "Oh, you’ll find both down here, eventually. But I do have a job for someone with courage and a disregard for personal safety.<BR><BR>
+      A traitor—my former apprentice, Jaedon the Silver-Tongue—hides in the tunnels beneath the Arena. He carries secrets meant for my ears alone, but now he trades them to Qasaria’s enemies... perhaps even to Minax herself.<BR>
+      Track down Jaedon, silence him, and bring me proof: the locket he stole from my kit of tools. Do this, and you may learn things Omar al-Onyx would kill to keep hidden."</NPCText>
+    <Option text="Tell me more about this traitor." next="aboutTraitor"/>
+    <Option text="What does this have to do with Omar al-Onyx?" next="omar"/>
+    <Option text="Is Minax involved?" next="minax"/>
+    <Option text="I’ll find Jaedon for you." 
+            action="GiveItem:FactionDeliveryQuestScroll(Jaedon the Silver-Tongue,Undermarket,350)" 
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="acceptQuest"/>
+    <Option text="Sounds too dangerous for me." next="noThanks"/>
+  </Dialogue>
+
+  <!-- Who is Ilyas -->
+  <Dialogue id="whoAreYou">
+    <NPCText>
+      <![CDATA[
+      Ilyas’s tone becomes wistful. "Once, I wore gold-trimmed robes and called myself Inquisitor of Trinsic. Tortured for justice, or so we said. When Lord British vanished, so did the meaning of ‘justice’... and the honest pay.<BR><BR>
+      Zahid offered me more than gold—he offered freedom, and a city where every secret has a price. Now I serve the Undermarket, my rats bring news from every shadow, and pain is just another language I speak fluently."<BR>
+      ]]>
+    </NPCText>
+    <Option text="How did you fall out with Trinsic?" next="trinsicFall"/>
+    <Option text="Why stay in Qasaria?" next="whyQasaria"/>
+    <Option text="What’s your connection to Zahid?" next="zahid"/>
+    <Option text="Let’s talk business instead." next="workIntro"/>
+  </Dialogue>
+
+  <!-- Undermarket Lore -->
+  <Dialogue id="undermarket">
+    <NPCText>
+      <![CDATA[
+      "The Undermarket is Qasaria’s hidden pulse. Down here, you’ll find things you’d never see in those golden streets above—spells forbidden, secrets for sale, poisons, and pleasures both rare and wretched. <BR>
+      Zahid is king in these tunnels, but the Council of Jewels all send their shadows to buy or sell what the sun would wither. If you need to know who is plotting against whom, you come to me or my rats."</NPCText>
+    <Option text="Who really controls the Undermarket?" next="control"/>
+    <Option text="Tell me about Zahid." next="zahid"/>
+    <Option text="I’d rather earn some coin." next="workIntro"/>
+  </Dialogue>
+
+  <Dialogue id="rats">
+    <NPCText>
+      <![CDATA[
+      Ilyas strokes a rat perched on his shoulder. "Ah, my little choir of listeners. They scurry through the walls, eavesdrop in the cracks. They eat what others discard and remember what others forget.<BR>
+      Whisper a secret here, and you may find a rat brings it to me before nightfall. They are my eyes... and sometimes, my teeth."</NPCText>
+    <Option text="Have your rats found Jaedon?" next="aboutTraitor"/>
+    <Option text="I suppose I should mind my words." next="workIntro"/>
+    <Option text="Goodbye." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Ilyas shrugs, turning away. "Don’t dawdle, friend. The Undermarket rewards the bold, not the cautious. Come back when you crave coin, secrets, or a taste of fear."
+      ]]>
+    </NPCText>
+    <Option text="On second thought, do you need help?" next="workIntro"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Traitor Details -->
+  <Dialogue id="aboutTraitor">
+    <NPCText>
+      <![CDATA[
+      "Jaedon was clever, slippery as oil. I taught him every method of extracting truth—from the rack to the whisper. But greed gnawed at him. He began selling what he learned: passwords, blackmail, the names of spies. <BR>
+      He hides now among the arena’s slaves and gladiators, trading pain for gold. You’ll know him by the rat-shaped scar on his left hand—and the silver locket, a gift he stole as he fled. Bring it to me, and you’ll be paid in coin... and secrets."
+      ]]>
+    </NPCText>
+    <Option text="What does this have to do with Omar al-Onyx?" next="omar"/>
+    <Option text="I’ll find Jaedon for you." 
+            action="GiveItem:FactionDeliveryQuestScroll(Jaedon the Silver-Tongue,Undermarket,350)" 
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="acceptQuest"/>
+    <Option text="Too dangerous for my taste." next="noThanks"/>
+  </Dialogue>
+
+  <Dialogue id="omar">
+    <NPCText>
+      <![CDATA[
+      Ilyas lowers his voice. "Omar thinks himself untouchable atop his arena. But Jaedon knows the names of every fighter Omar has paid with Minax’s black coin. Bring me that locket, and I’ll tell you what I know—names that could shake Qasaria’s foundations."
+      ]]>
+    </NPCText>
+    <Option text="So Omar is working with Minax?" next="minax"/>
+    <Option text="I’m convinced. I’ll hunt Jaedon." 
+            action="GiveItem:FactionDeliveryQuestScroll(Jaedon the Silver-Tongue,Undermarket,350)" 
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="acceptQuest"/>
+    <Option text="I’ll pass." next="noThanks"/>
+  </Dialogue>
+
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      "Minax’s shadows reach everywhere, especially where gold flows thick and easy. Omar may not know all his own debts, but Jaedon does. Some of those debts are paid in blood, some in souls. Qasaria will fall if Minax’s rot spreads deeper.<BR>
+      Help me cut out the gangrenous limb, and perhaps the city will survive."
+      ]]>
+    </NPCText>
+    <Option text="I’ll find Jaedon and bring you the locket." 
+            action="GiveItem:FactionDeliveryQuestScroll(Jaedon the Silver-Tongue,Undermarket,350)" 
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="acceptQuest"/>
+    <Option text="No thanks." next="noThanks"/>
+  </Dialogue>
+
+  <Dialogue id="acceptQuest">
+    <NPCText>
+      <![CDATA[
+      Ilyas’s eyes gleam. "Good. The tunnels beneath the arena are a maze—full of desperate men, lost beasts, and worse. Trust no one. When you have Jaedon’s locket, return to me. Payment awaits—if you make it back alive."
+      ]]>
+    </NPCText>
+    <Option text="I won’t disappoint you, Ratsmith." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="trinsicFall">
+    <NPCText>
+      <![CDATA[
+      "Trinsic lost its taste for unpleasant truths. After the Paladins took over, inquisitors like me became... inconvenient. Too many questions, too many skeletons. I took my tools and left for somewhere a little more honest—Qasaria’s shadows."
+      ]]>
+    </NPCText>
+    <Option text="Why stay in Qasaria?" next="whyQasaria"/>
+    <Option text="Let’s talk business." next="workIntro"/>
+  </Dialogue>
+
+  <Dialogue id="whyQasaria">
+    <NPCText>
+      <![CDATA[
+      "Here, secrets pay better than virtue. In a city run by merchant-princes and warlords, there’s always a buyer for what I can supply—pain, silence, or a whispered warning. Besides, the food’s better than in Trinsic."
+      ]]>
+    </NPCText>
+    <Option text="Tell me about Zahid." next="zahid"/>
+    <Option text="What work do you have?" next="workIntro"/>
+  </Dialogue>
+
+  <Dialogue id="zahid">
+    <NPCText>
+      <![CDATA[
+      "Zahid rules the Undermarket with a velvet fist. I trust him as much as a snake trusts another snake. We share business, not friendship. But he keeps order down here, and that’s good for rats like me."
+      ]]>
+    </NPCText>
+    <Option text="Tell me about the Undermarket." next="undermarket"/>
+    <Option text="Let’s talk work." next="workIntro"/>
+  </Dialogue>
+
+  <Dialogue id="control">
+    <NPCText>
+      <![CDATA[
+      "Everyone thinks they run the Undermarket. Zahid’s the biggest spider, but there are others: Council agents, foreign spies, even priests looking for lost relics. The real power is information—and no one hoards more than my rats."
+      ]]>
+    </NPCText>
+    <Option text="Tell me about Zahid." next="zahid"/>
+    <Option text="Do you need a hand with anything?" next="workIntro"/>
+  </Dialogue>
+
+  <Dialogue id="noThanks">
+    <NPCText>
+      <![CDATA[
+      "Pity. You looked like you had the stomach for it. If you change your mind, the tunnels will still be there—and so will Jaedon. And so will I."
+      ]]>
+    </NPCText>
+    <Option text="On second thought, I’ll take the job." 
+            action="GiveItem:FactionDeliveryQuestScroll(Jaedon the Silver-Tongue,Undermarket,350)" 
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="acceptQuest"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="interestsRoot">
+    <NPCText>
+      <![CDATA[
+      Ilyas licks his teeth and chuckles, a sound like dripping tar.<BR><BR>
+      "Ahh... finally, someone asks the right question. Torture, secrets, and rats? No, no, those are just tools. What I truly enjoy is watching the soul unravel, thread by thread. Would you like a glimpse of what that means?"
+      ]]>
+    </NPCText>
+    <Option text="Only if it doesn't involve my own thread..." next="interests1"/>
+    <Option text="I’m curious. Show me." next="interests2"/>
+    <Option text="That sounds vile. I should go." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="interests1">
+    <NPCText>
+      <![CDATA[
+      Ilyas laughs, though there’s no mirth in it.<BR><BR>
+      "Worry not, friend. I don't harm without cause. I'm no butcher—I’m an artist. Each scream a stanza, each confession a brushstroke. My magnum opus? A paladin who begged to forget his name. Took three weeks."<BR>
+      He leans in. "But you... you strike me as someone who's seen things too. What’s your vice?"
+      ]]>
+    </NPCText>
+    <Option text="I like gold. Everything else is noise." next="interestGreed"/>
+    <Option text="I crave knowledge, even the dark kind." next="interestLore"/>
+    <Option text="Honestly? I enjoy hurting the right people." next="interestViolence"/>
+    <Option text="Never mind. This was a mistake." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="interests2">
+    <NPCText>
+      <![CDATA[
+      Ilyas pulls out a thin hooked blade and balances it on his finger.<BR><BR>
+      "There’s truth buried in pain, like gold in a corpse’s mouth. But if you’re not ready to taste it, I can offer a... gentler initiation."<BR>
+      He snaps his fingers and a rat climbs onto your boot, staring at you with unsettling stillness.
+      ]]>
+    </NPCText>
+    <Option text="What... what do you want it to do?" next="interestRatTest"/>
+    <Option text="Nope. No rats. I'm out." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="interestGreed">
+    <NPCText>
+      <![CDATA[
+      "Ah yes, the oldest wound of all—avarice." Ilyas claps softly.<BR><BR>
+      "Many bleed for faith, but most bleed for coin. You’ll do well down here. Just don’t ask where your next paycheck comes from."<BR>
+      He flicks a small coin at you.<BR><BR>
+      <BASEFONT COLOR='#FFD700'>You feel dirtier… but richer.</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Thanks, I think." action="GiveGold:100" />
+    <Option text="Can we continue this later?" action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="interestLore">
+    <NPCText>
+      <![CDATA[
+      Ilyas’s eyes gleam. "Then you’re in the right place. The deepest truths are buried under floorboards, behind locked memories… and sometimes, in someone else’s mouth."<BR><BR>
+      <BASEFONT COLOR='#66FFFF'>Your mind sharpens ever so slightly.</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Knowledge has its price." action="AddSkill:Forensics,5,600"/>
+    <Option text="We’ll talk again." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="interestViolence">
+    <NPCText>
+      <![CDATA[
+      "Oh... how delightful," Ilyas says, eyes narrowing.<BR><BR>
+      "Righteous violence, selfish violence—does it matter? The end is the same: someone broken, someone made whole. You may not be so different from me."<BR>
+      A black rat slinks up beside you. It hisses approvingly.
+      ]]>
+    </NPCText>
+    <Option text="Maybe we're not so different." action="Karma:-500"/>
+    <Option text="That’s where we part ways." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="interestRatTest">
+    <NPCText>
+      <![CDATA[
+      Ilyas whispers: "Speak your true name aloud. If the rat doesn't bite, you’ve nothing to fear."<BR><BR>
+      You hesitate. The rat’s teeth glint in the torchlight…
+      ]]>
+    </NPCText>
+    <Option text="(Say your name aloud...)" next="ratOutcome"/>
+    <Option text="I changed my mind." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ratOutcome">
+    <NPCText>
+      <![CDATA[
+      The rat sniffs... and scurries away.<BR><BR>
+      Ilyas grins. "Well now. Either you're honest—or you lie better than most. Either way... impressive."<BR>
+      <BASEFONT COLOR='#00FF66'>You feel your Fame shift in the shadows.</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You’re creepy, but I like you." action="Fame:-200"/>
+    <Option text="Goodbye, Ilyas." action="Close"/>
+  </Dialogue>
+
+
+</DialogueFile>

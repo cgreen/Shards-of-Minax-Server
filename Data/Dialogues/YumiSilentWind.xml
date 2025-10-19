@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="YumiSilentWind">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#92e2ff'>
+      A slender woman emerges from the shadows—her ninja garb nearly blending into the dusk, a single sai gleaming at her side. Her voice is calm, almost a whisper.<BR><BR>
+      “Stranger… you walk softly for one so new to Hinokami. I am Yumi, called Silent Wind. These days, trust is a rare currency. So tell me—what brings you here?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek work—something secret." next="work"/>
+    <Option text="Who are you, really?" next="who"/>
+    <Option text="I wish to help Hinokami resist Minax." next="minax"/>
+	<Option text="Tell me about your past." next="backstoryIntro"/>
+    <Option text="I'm just exploring." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="who">
+    <NPCText>
+      <![CDATA[
+      She studies your face for a heartbeat, eyes flickering.<BR><BR>
+      “I was born in the cherry-shadowed alleys of Tokuno. I learned to move unseen, to listen for the truths whispered in the wind. Here, I serve Hinokami—not through the blade alone, but by knowing what the enemy plans before they act.<BR>
+      These are days of hidden war. I keep secrets. I steal them back when lost.”
+      ]]>
+    </NPCText>
+    <Option text="A difficult life. Why serve Hinokami?" next="whyServe"/>
+    <Option text="Can I earn your trust?" next="earnTrust"/>
+    <Option text="Do you know what Minax plots?" next="minax"/>
+    <Option text="I must go." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="whyServe">
+    <NPCText>
+      <![CDATA[
+      “Without honor, there is no homeland. Without vigilance, there is no honor.<BR>
+      Hinokami gave my people sanctuary when all else was lost. Now, my shadow falls where Hinokami commands.”
+      ]]>
+    </NPCText>
+    <Option text="I respect your purpose. How may I assist?" next="work"/>
+    <Option text="You seem lonely in this role." next="lonely"/>
+    <Option text="I must go." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="lonely">
+    <NPCText>
+      <![CDATA[
+      “Loneliness is the companion of all spies. But even the wind speaks, if you learn to listen. Speak less. Observe more. Sometimes, that is enough.”
+      ]]>
+    </NPCText>
+    <Option text="Understood. Is there work for one who listens?" next="work"/>
+    <Option text="Thank you. Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="earnTrust">
+    <NPCText>
+      <![CDATA[
+      “Trust is earned, not given. Will you risk the shadows for Hinokami? Prove your patience, your silence, your loyalty. Perhaps then, you will be more than just another face in the crowd.”
+      ]]>
+    </NPCText>
+    <Option text="Let me prove myself." next="work"/>
+    <Option text="I will return later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="work">
+    <NPCText>
+      <![CDATA[
+      She leans closer, her words a thread of silk.<BR><BR>
+      “There is a relic—a jade fox statue—stolen by Minax cultists and hidden among the Verdant Tribes. Without it, our shrine’s wards falter. The Verdant shaman Nura may know its secret whereabouts, but only trusts those who show respect for nature and stealth.<BR><BR>
+      Bring me the jade fox, and Hinokami’s shadow will shelter you.<BR>
+      Will you attempt this retrieval?”
+      ]]>
+    </NPCText>
+    <Option text="I accept. Give me details." action="GiveItem:FactionStealthQuestScroll(JadeFox,Hinokami,350)" condition="!HasItem:FactionStealthQuestScroll" next="accept"/>
+    <Option text="Why is this relic so important?" next="foxLore"/>
+    <Option text="Is Nura an enemy?" next="nura"/>
+    <Option text="I am not ready for such danger." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Yumi produces a thin scroll, sealed with black wax.<BR><BR>
+      “This scroll bears my cipher. It will convince Nura you act for me. Use stealth, or the Verdant guardians will hunt you. Return the jade fox to me, and you’ll find Hinokami’s doors—literal and figurative—more open to you.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll bring back the jade fox." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="foxLore">
+    <NPCText>
+      <![CDATA[
+      “The jade fox is more than art. It is a spirit vessel—linked to our shrine’s protective magics. Without it, shadows creep where they should not. Minax’s cult seeks to corrupt such relics, using them to undermine our spiritual defenses.”
+      ]]>
+    </NPCText>
+    <Option text="I understand. I will recover it." action="GiveItem:FactionStealthQuestScroll(JadeFox,Hinokami,350)" condition="!HasItem:FactionStealthQuestScroll" next="accept"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="nura">
+    <NPCText>
+      <![CDATA[
+      “Nura is no enemy—unless you make her one. She sees beyond flesh; spirit, intent, balance. Show respect for Verdant ways: bow before her fire, speak not of conquest. If you fail in stealth or courtesy, the tribes will drive you out.”
+      ]]>
+    </NPCText>
+    <Option text="How do I show respect?" next="respect"/>
+    <Option text="I see. I accept the task." action="GiveItem:FactionStealthQuestScroll(JadeFox,Hinokami,350)" condition="!HasItem:FactionStealthQuestScroll" next="accept"/>
+    <Option text="Maybe I’m not suited for this." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="respect">
+    <NPCText>
+      <![CDATA[
+      “Observe. Listen to the wind in the grass, the breath of the fire. Offer a token—herbs, or incense if you have it. Humility is armor in the wild places.”
+      ]]>
+    </NPCText>
+    <Option text="I will remember. I accept the mission." action="GiveItem:FactionStealthQuestScroll(JadeFox,Hinokami,350)" condition="!HasItem:FactionStealthQuestScroll" next="accept"/>
+    <Option text="Not today." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Her eyes narrow.<BR><BR>
+      “Minax’s webs are everywhere. She tempts the ambitious, preys upon the desperate, and sows discord between our town and the tribes. Her cultists seek artifacts like the jade fox to unravel our wards.<BR>
+      Every shadow hides either an ally… or a knife. Trust neither, until you are certain.”
+      ]]>
+    </NPCText>
+    <Option text="I want to help resist Minax." next="work"/>
+    <Option text="You seem to know much. How?" next="howKnow"/>
+    <Option text="I must be careful, then." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="howKnow">
+    <NPCText>
+      <![CDATA[
+      “I move where eyes do not look. I hear what is whispered in the night. There are others—Nura among the tribes, and a few bold monks—who share word with me, though none trust each other fully. Information is the only true weapon left to us.”
+      ]]>
+    </NPCText>
+    <Option text="I will serve as your agent." next="work"/>
+    <Option text="Thank you for your wisdom." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      “The wind changes, stranger. Should you wish to serve the shadows of Hinokami, return. I am never far.”
+      ]]>
+    </NPCText>
+    <Option text="I may return." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="backstoryIntro">
+  <NPCText>
+    <![CDATA[
+    Yumi steps back, folding her arms. Her voice softens slightly.<BR><BR>
+    “A dangerous question. The past is a blade without a hilt—easy to draw, hard to hold. But perhaps you’ve earned a glimpse.”
+    ]]>
+  </NPCText>
+  <Option text="I am listening." next="tokuno"/>
+  <Option text="If it pains you, I won’t press." action="Close"/>
+</Dialogue>
+
+<Dialogue id="tokuno">
+  <NPCText>
+    <![CDATA[
+    “I was born in Hanzaki-doro, a city of canals in the Tokuno Islands. My mother, a poet. My father, an imperial scout. When Minax's agents razed the southern provinces, my mother perished in the fire.<BR><BR>
+    My father never returned from the jungle. They say the wind carried his soul… that is why I took this name.”
+    ]]>
+  </NPCText>
+  <Option text="I’m sorry for your loss." next="lossResponse"/>
+  <Option text="So your name honors him?" next="nameMeaning"/>
+  <Option text="And that led you here?" next="refuge"/>
+</Dialogue>
+
+<Dialogue id="lossResponse">
+  <NPCText>
+    <![CDATA[
+    “Loss tempers the soul. In Tokuno, we say: ‘steel sharpens under flame, but the heart... only under silence.’ I learned to survive alone. Then I learned to listen.”
+    ]]>
+  </NPCText>
+  <Option text="How did you train to be a ninja?" next="training"/>
+</Dialogue>
+
+<Dialogue id="nameMeaning">
+  <NPCText>
+    <![CDATA[
+    “Hai. ‘Silent Wind’ is not just a name—it is a vow. I move like the wind and leave no echo behind. He taught me to read the grass, the leaf, the pause in breath.<BR>
+    When he vanished, I finished his teachings with the Brotherhood of Mist.”
+    ]]>
+  </NPCText>
+  <Option text="The Brotherhood of Mist?" next="brotherhood"/>
+</Dialogue>
+
+<Dialogue id="refuge">
+  <NPCText>
+    <![CDATA[
+    “Yes. The Tokuno fleet shattered. The monks of Skara Brae helped us land near this coast. Many fell to jungle fever or Verdant raiders. But I stayed. Hinokami grew, and I made it my shield.”
+    ]]>
+  </NPCText>
+  <Option text="You must have seen much." next="experience"/>
+</Dialogue>
+
+<Dialogue id="training">
+  <NPCText>
+    <![CDATA[
+    “I lived in shadowed dojo, where we learned not to fight—but to avoid fighting. To climb roofs in silence. To steal secrets from the wind. We sparred blindfolded and meditated on blades. I never failed a trial.”<BR><BR>
+    <BASEFONT COLOR='#c0ffc0'>You feel sharper, just listening.</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Add stealth bonus" action="AddSkill:Stealth,5,120" condition="SkillAtLeast:Stealth,40"/>
+  <Option text="Incredible. Thank you for sharing." next="closePersonal"/>
+</Dialogue>
+
+<Dialogue id="brotherhood">
+  <NPCText>
+    <![CDATA[
+    “An ancient Tokuno order. We did not kill unless the wind itself whispered permission. I left when they turned to vengeance. I serve Hinokami now… not rage.”
+    ]]>
+  </NPCText>
+  <Option text="You chose a nobler path." next="closePersonal"/>
+  <Option text="Do you ever regret leaving?" next="regret"/>
+</Dialogue>
+
+<Dialogue id="regret">
+  <NPCText>
+    <![CDATA[
+    “Sometimes. Regret is a shadow that follows us even when we run silently. But no, I do not wish to kill in the name of memory. I live for what may yet be saved.”
+    ]]>
+  </NPCText>
+  <Option text="A wise answer." next="closePersonal"/>
+</Dialogue>
+
+<Dialogue id="experience">
+  <NPCText>
+    <![CDATA[
+    Yumi’s eyes narrow.<BR><BR>
+    “I have watched a palace burn from inside its ceiling beams. I have walked barefoot across obsidian fields where Minax whispered in the stone. I have buried friends and enemies side by side.”<BR><BR>
+    <BASEFONT COLOR='#FFD700'>You gain 500 fame for honoring her story.</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Fame reward" action="Fame:+500" condition="!HasAttachment:XmlFameYumiBackstory" />
+  <Option text="You are a survivor, Yumi." next="closePersonal"/>
+</Dialogue>
+
+<Dialogue id="closePersonal">
+  <NPCText>
+    <![CDATA[
+    “Enough of me. A shadow’s story is for the moon alone. But I thank you for listening. Few do.”<BR>
+    <BASEFONT COLOR='#a0ffff'>She places a small folded paper crane in your hand.</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Accept gift" action="GiveItem:PaperCraneToken(Hinokami)" condition="!HasItem:PaperCraneToken" />
+  <Option text="I’ll carry your words with honor." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

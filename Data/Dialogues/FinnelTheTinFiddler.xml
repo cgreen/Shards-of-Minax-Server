@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="FinnelTheTinFiddler">
+
+  <!-- === root: Finnel greeting === -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#cc99ff'>
+      A bright-eyed bard in a patchwork blue songcoat and tin-toed slippers sits atop a battered cider barrel, plucking a wild tune from his shiny harp.<br><br>
+      He grins and tips his “Clinking Cap” as you approach.<br><br>
+      "Aha! A fresh face for my next verse! Welcome to Eldermoor—where the ale is honest, the mud sincere, and secrets travel faster than a hungry pig at festival. Finnel’s the name, tin-fiddling is my scandal, and you—are about to become inspiration! What brings you under our leaky roof today, friend?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ve heard you write songs about everyone here. Is that true?" next="gossip"/>
+    <Option text="You always this cheerful, or is it just the cider?" next="cheerful"/>
+    <Option text="Any work for a wandering hand?" next="questOffer"/>
+    <Option text="Just listening, for now." next="justListening"/>
+  </Dialogue>
+
+  <!-- Gossip branch -->
+  <Dialogue id="gossip">
+    <NPCText>
+      <![CDATA[
+      Finnel winks conspiratorially.<br><br>
+      "Oh, I sing for coin, for laughter, for love unreturned—and sometimes, just to see old Halric scowl! My tunes are stitched with gossip: Thalen’s hammer is louder than his heart, Edda whispers with foxes, and Mira—well, even the moon can’t outshine her eyes.<br><br>
+      Care to hear a verse? Or perhaps you’ve a secret you’d like woven into my next ballad?"
+      ]]>
+    </NPCText>
+    <Option text="Sing me a song about Eldermoor." next="songVerse"/>
+    <Option text="Maybe later. Got any work?" next="questOffer"/>
+    <Option text="How do folk feel about your songs?" next="folkFeel"/>
+  </Dialogue>
+
+  <Dialogue id="songVerse">
+    <NPCText>
+      <![CDATA[
+      Finnel sweeps his arm grandly, plucking a mischievous tune:<br><br>
+      <I>
+      “From muddy boots to broken dreams,<br>
+      Eldermoor stands strong, or so it seems.<br>
+      Old Halric’s law, Edda’s brew,<br>
+      Watch out, friend, they’re watching you!”</I><br><br>
+      He grins. "The verse changes, depending on who’s buying. Now, what brings you here? Work, or song?"
+      ]]>
+    </NPCText>
+    <Option text="You do know everyone’s secrets, don’t you?" next="folkFeel"/>
+    <Option text="Actually, I’m looking for work." next="questOffer"/>
+    <Option text="Just passing the time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="folkFeel">
+    <NPCText>
+      <![CDATA[
+      Finnel laughs. "Folk say they hate my gossip—yet no feast’s complete without it! Mira sneaks me stories for a silver coin, Edda claims she ‘tolerates’ me (though she saves me the best rootcakes), and Halric? He’d outlaw music if he could. I say: a village without songs is a field without rain."<br><br>
+      "Still, not all news is safe to sing. Some secrets bite. Speaking of—fancy earning a tale of your own?"
+      ]]>
+    </NPCText>
+    <Option text="I’m listening. Got a job for me?" next="questOffer"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Cheerful branch -->
+  <Dialogue id="cheerful">
+    <NPCText>
+      <![CDATA[
+      Finnel leans close, voice low.<br><br>
+      "Truth? A little cheer keeps the darkness from biting. Since Minax’s shadows crept close, folks need music more than ever. Still, I laugh to forget—because once, I came here with secrets too heavy for song."<br><br>
+      "But enough gloomy chords! If you want work, or something worth a good rhyme, I have a task that’s fit for heroes…or fools."
+      ]]>
+    </NPCText>
+    <Option text="I’ll take a foolish task, if it pays." next="questOffer"/>
+    <Option text="I’d rather hear a song." next="songVerse"/>
+    <Option text="Not today, friend." action="Close"/>
+  </Dialogue>
+
+  <!-- Listening branch -->
+  <Dialogue id="justListening">
+    <NPCText>
+      <![CDATA[
+      Finnel shrugs, strumming a gentle tune.<br><br>
+      "Ears open, mouth shut—Eddasays that’s how wisdom grows. Stay a while, friend; you never know when a melody turns into a fortune."<br><br>
+      He nods, as if you share a private joke.
+      ]]>
+    </NPCText>
+    <Option text="On second thought, got work for me?" next="questOffer"/>
+    <Option text="I’ll just listen for now." action="Close"/>
+  </Dialogue>
+
+  <!-- QUEST OFFER BRANCH -->
+  <Dialogue id="questOffer">
+    <NPCText>
+      <![CDATA[
+      Finnel twirls his harp, lowering his voice.<br><br>
+      "So you want a song that’s sung by survivors, eh? There’s a tune I dare not finish—a riddle in rhyme, wrapped around trouble and prophecy. But enough riddles!<br><br>
+      "If you want to win my gratitude—and maybe Mira’s too—there’s a Venomous Ettin haunting the marshy woods. The brute’s ruined half my best strings chasing livestock and chews anything that glints. Worse, they say it listens to my music at night. Creepy."<br><br>
+      "You bring me a piece of its venom-dripping hide, and I’ll reward you in silver and story. And…if you’re clever, I’ll tell you what I know of secrets beyond this mudhole."
+      ]]>
+    </NPCText>
+    <Option text="A venomous Ettin that likes music? Sounds odd." next="ettinLore"/>
+    <Option text="Why not ask Thalen or Aldric to handle it?" next="whyNotOthers"/>
+    <Option text="You write riddles that attract monsters?" next="songProphecy"/>
+    <Option text="I’ll do it—point me to the beast."
+      action="GiveItem:FactionKillQuestScroll(VenomousEttin,1,Eldermoor,500)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="questAccept"/>
+    <Option text="No thanks. Not my type of job." action="Close"/>
+  </Dialogue>
+
+  <!-- Ettin lore -->
+  <Dialogue id="ettinLore">
+    <NPCText>
+      <![CDATA[
+      Finnel nods gravely.<br><br>
+      "Folk say it’s twisted by Minax’s magics—green fire in its eyes, poison thick as Edda’s nettle brew. It’s clever, too: breaks traps, sniffs out my lunch, and—this is true—one night, it beat time to my song on a hollow log. Some things in this land, friend, remember more than you’d think."
+      ]]>
+    </NPCText>
+    <Option text="All right, I’ll hunt your musical monster."
+      action="GiveItem:FactionKillQuestScroll(VenomousEttin,1,Eldermoor,500)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="questAccept"/>
+    <Option text="Let the beast dance. I’m out." action="Close"/>
+  </Dialogue>
+
+  <!-- Why not other NPCs -->
+  <Dialogue id="whyNotOthers">
+    <NPCText>
+      <![CDATA[
+      Finnel laughs, gesturing with his harp.<br><br>
+      "Thalen’s busy arguing with his own hammer, and Aldric would rather chase ghosts than Ettins. Mira says she’d sooner wrestle a snake than cross that marsh, and Edda claims monsters like musicians best. I trust you more than the rest—besides, you look like you need the coin!"
+      ]]>
+    </NPCText>
+    <Option text="Fine, I’ll handle your beast."
+      action="GiveItem:FactionKillQuestScroll(VenomousEttin,1,Eldermoor,500)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="questAccept"/>
+    <Option text="Find yourself another fool." action="Close"/>
+  </Dialogue>
+
+  <!-- Song prophecy & cult hook -->
+  <Dialogue id="songProphecy">
+    <NPCText>
+      <![CDATA[
+      Finnel looks suddenly serious.<br><br>
+      "Some songs are just rhymes, but others…well, they slip out when I dream. Last week, I sang a verse that set old Miralda praying and Edda shushing me. Some say it’s prophecy—others, a cipher cultists crave. Last night, someone tried to snatch my songbook. If you find any strange tokens on the Ettin, bring them to me—or to Miralda. There’s a secret in these marshes, and I’m in the thick of it."
+      ]]>
+    </NPCText>
+    <Option text="I’ll hunt your Ettin and watch for oddities."
+      action="GiveItem:FactionKillQuestScroll(VenomousEttin,1,Eldermoor,500)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="questAccept"/>
+    <Option text="Prophecies? I’m not sure I’m the right one for this." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept quest -->
+  <Dialogue id="questAccept">
+    <NPCText>
+      <![CDATA[
+      Finnel beams, striking a triumphant chord.<br><br>
+      "Wonderful! The Ettin skulks near the willow-grove past Edda’s garden—look for broken branches and the stench of spoiled turnips. Mind the poison! Bring me proof—a patch of its scaly hide, say—and I’ll make you a hero in song, or at least a well-paid villain."<br><br>
+      "Oh—and if you meet any odd-eyed strangers lurking, whistle this tune." Finnel hums a curious melody, low and sharp.<br>
+      "It’s a sign, for those who know the right ears."
+      ]]>
+    </NPCText>
+    <Option text="I’ll be back with the Ettin’s hide." action="Close"/>
+  </Dialogue>
+
+</DialogueFile>

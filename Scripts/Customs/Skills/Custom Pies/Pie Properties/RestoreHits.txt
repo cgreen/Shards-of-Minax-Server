@@ -1,0 +1,23 @@
+using Server;
+using Server.Mobiles;
+
+namespace Server.CustomPies.Attributes
+{
+    public sealed class RestoreHits : IPieAttribute
+    {
+        public string Id    => "RestoreHits";
+        public string Label => "Restore Health";
+        public int    SoundId => 0x0F9;           // sipping
+        public void   Visual (Mobile m) => m.FixedEffect(0x373A,10,30);
+
+        static RestoreHits() => PieAttributeRegistry.Register(new RestoreHits());
+
+        public void Apply(Mobile eater)
+        {
+            int heal = Utility.RandomMinMax(10, 25);
+            eater.Heal(heal);
+            eater.SendMessage($"You feel reinvigorated (+{heal} HP).");
+            if (SoundId>=0) eater.PlaySound(SoundId); Visual(eater);
+        }
+    }
+}

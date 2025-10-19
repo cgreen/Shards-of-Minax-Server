@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="ThalrikVintgarde">
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#86ced6'>
+      A gaunt man in a frost-rimed cloak stands before you, his pale features half-concealed behind a stitched bear mask. Every movement is deliberate, his voice unnervingly calm and polite.
+      <BR><BR>
+      "Ah, a visitor—how charming! I do so rarely receive company in these frigid wilds. My name is Thalrik Vintgarde, humble gatherer and, some say, a hermit of dubious repute. Don’t believe all the stories you hear about me—especially from Svala, whose imagination runs almost as wild as her quarry."
+      <BR><BR>
+      He smiles with unsettling warmth. "What brings you to the edges of civilization? Curiosity? Or perhaps… a hunger for odd company?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’m seeking work—or maybe a story." next="introQuest"/>
+    <Option text="Are the stories about you true? Cannibalism, they say..." next="cannibal"/>
+    <Option text="Why live so far from Frostmere?" next="whyHermit"/>
+	<Option text="Tell me more about yourself. You’re no ordinary hermit." next="backstory1"/>
+    <Option text="Just passing by." next="bye"/>
+  </Dialogue>
+
+  <Dialogue id="bye">
+    <NPCText>
+      <![CDATA[
+      Thalrik nods graciously. "Then let the winds guide you, and may your bones remain un-gnawed. Should you change your mind, I am always here—watching the snows, awaiting more interesting company."
+      ]]>
+    </NPCText>
+    <Option text="On second thought, do you need any help?" next="introQuest"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Cannibal Branch -->
+  <Dialogue id="cannibal">
+    <NPCText>
+      <![CDATA[
+      Thalrik’s eyes widen in mock horror, then twinkle with humor.<BR><BR>
+      "Cannibal? I assure you, such tales are terribly exaggerated. Survival, in these lands, sometimes demands difficult choices. I do prefer my meals well-cooked and—ideally—not sentient. I save my sharpest knife for monsters, not men. Kaelen would tell you as much, were he here to defend my honor."
+      <BR><BR>
+      "Still, suspicion is the true currency in Frostmere. So—do you bring an open mind, or a pointed spear?"
+      ]]>
+    </NPCText>
+    <Option text="I’ll hear you out. Any tasks for me?" next="introQuest"/>
+    <Option text="I’m not here to judge. Just passing through." next="bye"/>
+    <Option text="If you did eat people, would you admit it?" next="admit"/>
+  </Dialogue>
+
+  <Dialogue id="admit">
+    <NPCText>
+      <![CDATA[
+      Thalrik’s grin sharpens. "A question worthy of a scholar! Let us say, should the day come that I crave forbidden flesh, I would at least invite my accuser to dinner first. But enough of rumors—perhaps you seek purpose, not philosophy?"
+      ]]>
+    </NPCText>
+    <Option text="I do. Is there work?" next="introQuest"/>
+    <Option text="No thanks, I’ll be going." action="Close"/>
+  </Dialogue>
+
+  <!-- Why Hermit Branch -->
+  <Dialogue id="whyHermit">
+    <NPCText>
+      <![CDATA[
+      Thalrik sweeps his hand at the frozen expanse.<BR><BR>
+      "Peace, mostly. I find the endless wind preferable to endless bickering. In the wild, one answers only to hunger and cold—both less treacherous than village gossip. Still, I keep ties with those I value. I once saved Kaelen from a blizzard’s embrace—he would freeze again, reading runes without his boots, if not for me."
+      <BR><BR>
+      "As for Svala, she claims I snack on hunters. I assure you, my tastes are much more… discriminating."
+      ]]>
+    </NPCText>
+    <Option text="Well, what brings trouble to your door these days?" next="introQuest"/>
+    <Option text="I’ll leave you to your solitude." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Offer -->
+  <Dialogue id="introQuest">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#86ced6'>
+      Thalrik’s demeanor grows earnest, his tone low and confidential.<BR><BR>
+      "Truth be told, I am troubled—more than I care to admit to the villagers. Something stalks the snows these nights: the <b>Frostbound Sovereign</b>, a monstrous horror wrapped in rime, crowned with jagged icicles and hungering for warm blood. I have seen its tracks, and worse—I have heard it singing to the moon."
+      <BR><BR>
+      "A hunting party vanished last dusk—brave fools led by Svala’s cousin, out to prove their worth. The villagers suspect me, of course. But if you would clear my name—and perhaps win a few rare spoils—I would ask this of you: Slay the Sovereign, and bring me a trophy. The hearts of the vanished may yet be saved, if the Sovereign is defeated quickly."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about this Sovereign." next="frostboundInfo"/>
+    <Option text="What proof will clear your name?" next="clearName"/>
+    <Option text="Do you truly care what the villagers think?" next="care"/>
+    <Option text="If I help, what’s in it for me?" next="reward"/>
+    <Option text="I accept. The monster dies." 
+      action="GiveItem:FactionKillQuestScroll(FrostboundSovereign,1,Frostmere,650)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="That’s too dangerous for me." action="Close"/>
+  </Dialogue>
+
+  <!-- Frostbound Sovereign Info -->
+  <Dialogue id="frostboundInfo">
+    <NPCText>
+      <![CDATA[
+      Thalrik’s eyes darken, voice a chill whisper.<BR><BR>
+      "It is old—older than this village, perhaps older than the Obelisk itself. Some say the Sovereign was once a king betrayed, frozen by the first curse of Minax. Its breath saps the will, its song calls forth the dead, and its claws can carve runes in living flesh."
+      <BR><BR>
+      "I have tracked it for years, yet never dared face it alone. If you are bold, seek it near the moonlit glacier to the north. Take care—those it feasts upon are not always truly dead."
+      ]]>
+    </NPCText>
+    <Option text="Sounds like a worthy hunt. I’ll do it." 
+      action="GiveItem:FactionKillQuestScroll(FrostboundSovereign,1,Frostmere,650)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="I’ll need time to prepare." action="Close"/>
+  </Dialogue>
+
+  <!-- Proof -->
+  <Dialogue id="clearName">
+    <NPCText>
+      <![CDATA[
+      "Bring me the <b>Frostbound Crown</b>—an icy circlet said to cling to its brow. And if you find any of the lost hunters alive, guide them home. Svala will still suspect me, but I prefer suspicion to open hatred. Return with proof, and I will see you rewarded—perhaps even share a secret of my own."
+      ]]>
+    </NPCText>
+    <Option text="I’ll bring the crown and seek the missing." 
+      action="GiveItem:FactionKillQuestScroll(FrostboundSovereign,1,Frostmere,650)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Let me think it over." action="Close"/>
+  </Dialogue>
+
+  <!-- Do you care what they think? -->
+  <Dialogue id="care">
+    <NPCText>
+      <![CDATA[
+      Thalrik hesitates, mask slipping a little.<BR><BR>
+      "A hermit’s lot is suspicion—but I am no monster. I care, perhaps too much. Frostmere is my home, for all its cold shoulders. Kaelen trusts me, Irinya tolerates me, Svala… well, she’d see my bones picked clean if given cause."
+      <BR><BR>
+      "If you help, you do more than slay a beast. You give a lonely man the chance to belong again."
+      ]]>
+    </NPCText>
+    <Option text="You have my word. The beast dies." 
+      action="GiveItem:FactionKillQuestScroll(FrostboundSovereign,1,Frostmere,650)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="I’ll consider it." action="Close"/>
+  </Dialogue>
+
+  <!-- Reward Info -->
+  <Dialogue id="reward">
+    <NPCText>
+      <![CDATA[
+      Thalrik smiles slyly.<BR><BR>
+      "Rare herbs, monster trophies, secrets of the old world—all are within my grasp, and yours, should you succeed. I might even teach you a recipe or two the villagers would never taste."
+      <BR>
+      "But most valuable is my gratitude, which endures long after flesh has faded. Do we have a pact?"
+      ]]>
+    </NPCText>
+    <Option text="It’s a deal. I’ll hunt the Sovereign." 
+      action="GiveItem:FactionKillQuestScroll(FrostboundSovereign,1,Frostmere,650)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Let me think about it." action="Close"/>
+  </Dialogue>
+
+  <!-- Acceptance Node -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Thalrik’s eyes gleam behind the mask.<BR><BR>
+      "May the frost hide your scent and the winds favor your hunt. Bring me the crown, or at least a piece of the Sovereign’s frozen heart. And if you find the lost hunters, give them my regards—they are braver, or perhaps more foolish, than I."
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with proof… and maybe a story." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="backstory1">
+  <NPCText>
+    <![CDATA[
+    Thalrik tilts his head, intrigued. “Ah, a curious one. Most folk just want a task, a trade, or an alibi. But you want… roots.”<BR><BR>
+    He leans on a frost-crusted staff. “Very well. Let us unearth the past, but know—dig too deep in the ice, and something always stirs...”
+    ]]>
+  </NPCText>
+  <Option text="Where are you from, originally?" next="backstory_origin"/>
+  <Option text="What exactly do you do out here?" next="backstory_work"/>
+  <Option text="Do you miss civilization?" next="backstory_civil"/>
+  <Option text="Ever been in love, Thalrik?" condition="IsFemale" next="backstory_love"/>
+  <Option text="You seem lonely out here." condition="KarmaAtLeast:1000" next="backstory_lonely"/>
+  <Option text="Let’s talk about something else." next="greeting"/>
+</Dialogue>
+
+<!-- Origin Story -->
+<Dialogue id="backstory_origin">
+  <NPCText>
+    <![CDATA[
+    “The frozen south, before the storms came,” Thalrik says softly. “I was a warden in the libraries beneath Moonglow. A ‘watcher of forbidden indexes,’ they called us. We kept cursed tomes behind seven seals.”<BR><BR>
+    “I… broke one. Curiosity, pride, maybe pity. The book whispered things about the Gem, about Minax. I was exiled. Rightly so.” He smiles faintly. “But I kept the knowledge. Some say I should have burned it.”<BR><BR>
+    His tone sharpens. “Would you have left it untouched?”
+    ]]>
+  </NPCText>
+  <Option text="Yes. Some doors should stay shut." next="origin_fear"/>
+  <Option text="No. Knowledge must be uncovered." next="origin_bold"/>
+</Dialogue>
+
+<Dialogue id="origin_fear">
+  <NPCText>
+    <![CDATA[
+    Thalrik nods solemnly. “Then you are wiser than I was.”<BR><BR>
+    <i>You feel a chill settle on your shoulders.</i>
+    ]]>
+  </NPCText>
+  <Option text="Go on..." next="backstory1" action="Karma:100"/>
+</Dialogue>
+
+<Dialogue id="origin_bold">
+  <NPCText>
+    <![CDATA[
+    “A seeker. Dangerous… but admirable.” Thalrik chuckles. “I’d have liked you, back then. Maybe you’d have talked me down—or followed me into madness.”<BR><BR>
+    <i>You sense something ancient watching you.</i>
+    ]]>
+  </NPCText>
+  <Option text="Continue." next="backstory1" action="Fame:100"/>
+</Dialogue>
+
+<!-- What he does -->
+<Dialogue id="backstory_work">
+  <NPCText>
+    <![CDATA[
+    “I study. I survive. I collect herbs that only grow in cursed frost and harvest glands from beasts whose breath freezes steel.”<BR><BR>
+    “Some I sell to Garrik for his forge. Some to Kaelen, for his wild little experiments. Some… I keep.” His eyes gleam. “For deeper uses.”<BR><BR>
+    “Would you like to learn one?”
+    ]]>
+  </NPCText>
+  <Option text="Yes, teach me something strange." next="work_teach" action="AddSkill:Alchemy,5,600"/>
+  <Option text="Better not. I value my soul." next="work_decline"/>
+</Dialogue>
+
+<Dialogue id="work_teach">
+  <NPCText>
+    <![CDATA[
+    Thalrik hands you a vial. “This will keep you warm in a blizzard. Or kill a wyvern in ten heartbeats. Depends on your aim.”<BR><BR>
+    “Consider it a welcome gift.”
+    ]]>
+  </NPCText>
+  <Option text="Thank you, hermit of the frost." next="backstory1" action="GiveItem:FrostbanePotion"/>
+</Dialogue>
+
+<Dialogue id="work_decline">
+  <NPCText>
+    <![CDATA[
+    “A wise refusal,” Thalrik nods. “Power and consequence travel as twins. Best not to take one without the other.”
+    ]]>
+  </NPCText>
+  <Option text="Carry on." next="backstory1"/>
+</Dialogue>
+
+<!-- Civilization -->
+<Dialogue id="backstory_civil">
+  <NPCText>
+    <![CDATA[
+    “No,” he replies instantly. “Civilization is just cruelty with stone walls. In the wild, if something tries to eat you, at least it does so honestly.”<BR><BR>
+    “In cities, they smile while they skin you.”<BR><BR>
+    “Still… I miss music. Laughter. The smell of baker’s bread.” His tone falters for a moment. “And stories shared by firelight.”
+    ]]>
+  </NPCText>
+  <Option text="I’ll bring you a story one day." next="civil_story" action="Karma:100"/>
+  <Option text="You could come back, you know." next="civil_return"/>
+</Dialogue>
+
+<Dialogue id="civil_story">
+  <NPCText>
+    <![CDATA[
+    “Do that,” he says, surprised. “And I will brew you something older than the stars. A fair trade.”
+    ]]>
+  </NPCText>
+  <Option text="Back to other matters." next="backstory1"/>
+</Dialogue>
+
+<Dialogue id="civil_return">
+  <NPCText>
+    <![CDATA[
+    “No. My exile is my shield. And besides, I suspect the ghosts in my shadow would never fit through town gates.”<BR><BR>
+    He smiles with honest sadness.
+    ]]>
+  </NPCText>
+  <Option text="Fair enough." next="backstory1"/>
+</Dialogue>
+
+<!-- Romance – available to females only -->
+<Dialogue id="backstory_love">
+  <NPCText>
+    <![CDATA[
+    Thalrik blinks slowly, surprised. “That… is a question few dare ask.”<BR><BR>
+    “Once. Her name was Myria. A ranger with leaves in her hair and arrows that sang. She died saving me from a corrupted wyrm. I carried her bones to a hot spring in the eastern ice, and laid her beneath the melting snow.”<BR><BR>
+    “Now, I speak to no one I could not bury.”
+    ]]>
+  </NPCText>
+  <Option text="I’m sorry for your loss." next="love_sorry" action="Karma:200"/>
+  <Option text="You still carry her memory." next="love_memory"/>
+</Dialogue>
+
+<Dialogue id="love_sorry">
+  <NPCText>
+    <![CDATA[
+    Thalrik bows. “Thank you. Few remember that grief is its own magic.”<BR><BR>
+    He whispers, “In spring, sometimes the ice weeps where I laid her.”
+    ]]>
+  </NPCText>
+  <Option text="You honor her well." next="backstory1"/>
+</Dialogue>
+
+<Dialogue id="love_memory">
+  <NPCText>
+    <![CDATA[
+    “Every night,” he says, “her voice joins the wind. I sometimes wonder if she guides me still.”<BR><BR>
+    “But perhaps, one day, I will share that song with someone new.”
+    ]]>
+  </NPCText>
+  <Option text="I would like to hear it." next="love_song" action="PlaySound:0x015"/>
+</Dialogue>
+
+<Dialogue id="love_song">
+  <NPCText>
+    <![CDATA[
+    He hums a low, haunting tune. The wind seems to still to listen.<BR><BR>
+    “There. That is all I remember. But if you hum it to the Obelisk… it may listen.”
+    ]]>
+  </NPCText>
+  <Option text="I’ll remember it." next="backstory1"/>
+</Dialogue>
+
+<!-- Karma-locked empathy branch -->
+<Dialogue id="backstory_lonely">
+  <NPCText>
+    <![CDATA[
+    “Lonely?” Thalrik whispers. “Yes. But solitude becomes a second skin.”<BR><BR>
+    He looks away. “You… see more than most. Perhaps that’s why the Obelisk tolerates your presence.”<BR><BR>
+    “Come back often. I’ll save a story or three.”
+    ]]>
+  </NPCText>
+  <Option text="You’re not as alone as you think." next="lonely_done" action="Fame:150"/>
+</Dialogue>
+
+<Dialogue id="lonely_done">
+  <NPCText>
+    <![CDATA[
+    He says nothing, but his eyes soften. A rare moment of peace touches the frostbitten air.
+    ]]>
+  </NPCText>
+  <Option text="Back to other questions." next="backstory1"/>
+</Dialogue>
+  
+  
+</DialogueFile>

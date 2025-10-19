@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="DaijiTheInkSeal">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#e8e1c7'>
+      You find a slender man in a meticulously pressed kimono, seated cross-legged behind a lacquered desk. His ink-stained hands move in fluid, graceful arcs as he inspects an endless stack of scrolls. Without looking up, he intones:<BR><BR>
+      “Greetings, petitioner. I am Daiji, Ink-Seal and Record-Keeper of Hinokami. What business brings you before the registry? Please, mind your manners—every word is immortalized in ink.”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I wish to request a quest permit." next="requestPermit"/>
+    <Option text="What is your role in Hinokami?" next="role"/>
+    <Option text="What are those seals you use?" next="seals"/>
+	<Option text="Tell me about yourself, Ink-Seal." next="origin"/>
+    <Option text="I am just exploring, forgive my intrusion." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="role">
+    <NPCText>
+      <![CDATA[
+      Daiji straightens, pride evident.<BR><BR>
+      “In Hinokami, all proper actions begin with proper record. I maintain the scrolls of citizenship, commerce, and valor—each sealed with my mark. No matter your strength, a brush may undo what a sword achieves.”
+      ]]>
+    </NPCText>
+    <Option text="May I request a permit, then?" next="requestPermit"/>
+    <Option text="Tell me about your seals." next="seals"/>
+    <Option text="I will return later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="seals">
+    <NPCText>
+      <![CDATA[
+      Daiji displays a set of carved ink-stones.<BR><BR>
+      “Each seal contains the spirit of tradition. One for labor, one for honor, one for outsiders. I know every forgery—yet I admire a clever hand, if it bows before formality.”<BR>
+      He eyes you shrewdly.
+      ]]>
+    </NPCText>
+    <Option text="How may I earn your seal for a quest?" next="requestPermit"/>
+    <Option text="Why such devotion to calligraphy?" next="calligraphy"/>
+    <Option text="Farewell, Scribe." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="calligraphy">
+    <NPCText>
+      <![CDATA[
+      Daiji’s brush dances mid-air.<BR><BR>
+      “Calligraphy is the soul poured onto paper. One’s brushwork reveals character: bold, timid, deceitful, honest. To sign in haste is to live without honor.”
+      ]]>
+    </NPCText>
+    <Option text="I will heed your wisdom. About that permit..." next="requestPermit"/>
+    <Option text="Thank you for your time." action="Close"/>
+  </Dialogue>
+
+  <!-- Main permit request branch: etiquette check -->
+  <Dialogue id="requestPermit">
+    <NPCText>
+      <![CDATA[
+      Daiji produces a crisp scroll.<BR><BR>
+      “All permits require proper etiquette. In Hinokami, one must bow and recite the formula of respect: ‘By ink and honor, I seek your blessing, Daiji Ink-Seal.’<BR><BR>
+      Will you do so?”
+      ]]>
+    </NPCText>
+    <Option text="*bow* By ink and honor, I seek your blessing, Daiji Ink-Seal." next="bowed" action="PlaySound:0x015"/>
+    <Option text="This is unnecessary. Just give me the quest." next="rude"/>
+    <Option text="Can I forge the document myself?" next="forgeAttempt" condition="SkillAtLeast:Inscription,80"/>
+    <Option text="I'll return when I am ready." action="Close"/>
+    <Option text="(*attempt to forge anyway*)" next="failForge" condition="SkillBelow:Inscription,80"/>
+  </Dialogue>
+
+  <!-- Correct etiquette path -->
+  <Dialogue id="bowed">
+    <NPCText>
+      <![CDATA[
+      Daiji’s expression finally softens. He stamps the scroll with a vermilion seal.<BR><BR>
+      “Respect and form—exquisite! Here is your permit, honored petitioner. Go forth and serve Hinokami with dignity.”<BR>
+      He slides a scroll across the desk with perfect precision.
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Daiji Ink-Seal." 
+      action="GiveItem:HinoQuestPermit"
+      next="permitGiven"/>
+  </Dialogue>
+
+  <!-- Rude path -->
+  <Dialogue id="rude">
+    <NPCText>
+      <![CDATA[
+      Daiji’s brush freezes in midair.<BR><BR>
+      “Disrespect soils the scroll and the soul alike. Return only when you have learned humility.”<BR>
+      He pointedly ignores you.
+      ]]>
+    </NPCText>
+    <Option text="Fine, I will bow." next="requestPermit"/>
+    <Option text="I will take my leave." action="Close"/>
+  </Dialogue>
+
+  <!-- Successful Inscription (forgery) -->
+  <Dialogue id="forgeAttempt">
+    <NPCText>
+      <![CDATA[
+      Daiji’s eyes twinkle with sly approval as he inspects your forged document.<BR><BR>
+      “Such boldness! Your script is nearly flawless—were you a scribe in Tokuno, once? Still, the real test is whether you respect the *spirit* of the law. Bow and recite, or I must expose your cleverness.”
+      ]]>
+    </NPCText>
+    <Option text="*bow* By ink and honor, I seek your blessing, Daiji Ink-Seal." next="bowed" action="PlaySound:0x015"/>
+    <Option text="I stand by my work; no need for ritual." next="caughtForgery"/>
+  </Dialogue>
+
+  <Dialogue id="caughtForgery">
+    <NPCText>
+      <![CDATA[
+      Daiji shakes his head.<BR><BR>
+      “Pride without respect is a broken brush. Leave my presence—this scroll will not bear your name today.”
+      ]]>
+    </NPCText>
+    <Option text="Very well." action="Close"/>
+  </Dialogue>
+
+  <!-- Failed Inscription (bad forgery) -->
+  <Dialogue id="failForge">
+    <NPCText>
+      <![CDATA[
+      Daiji narrows his eyes, snatching your clumsy forgery.<BR><BR>
+      “A child’s attempt! You have neither the skill nor the humility. Return when you have mastered your hand—or your heart.”
+      ]]>
+    </NPCText>
+    <Option text="I understand. I will practice more." action="Close"/>
+  </Dialogue>
+
+  <!-- Permit given (final node) -->
+  <Dialogue id="permitGiven">
+    <NPCText>
+      <![CDATA[
+      Daiji resumes his calligraphy with contentment.<BR><BR>
+      “Your name is immortalized among the petitioners of Hinokami. May your brush and your blade serve with equal grace.”
+      ]]>
+    </NPCText>
+    <Option text="I will honor the registry." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismiss path -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Daiji barely looks up.<BR><BR>
+      “Respect is never wasted. When you are ready for proper requests, I shall be here.”
+      ]]>
+    </NPCText>
+    <Option text="Until next time." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="origin">
+  <NPCText>
+    <![CDATA[
+    Daiji sets down his brush carefully.<BR><BR>
+    “Ah... few ask. Fewer still listen. I was once a monk-scribe of Tokuno’s Temple of the River Reed, before Minax's forces blackened the temple’s banners. I fled with nothing but my seals, my skill... and my shame for surviving.”<BR>
+    He adjusts his sleeve, hiding an old burn scar.
+    ]]>
+  </NPCText>
+  <Option text="You survived. That is not shameful." next="survival"/>
+  <Option text="What happened to the temple?" next="templeFall"/>
+  <Option text="Why did you become a bureaucrat?" next="pathOfInk"/>
+  <Option text="Did Minax’s forces chase you here?" next="minaxPursuit"/>
+</Dialogue>
+
+<Dialogue id="survival">
+  <NPCText>
+    <![CDATA[
+    Daiji sighs deeply.<BR><BR>
+    “Words like that... are rare. Thank you. I swore then that structure and memory would preserve what blades could not. Each scroll I file is a thread against the unraveling.”<BR>
+    He gestures to the endless rows of shelves with quiet reverence.
+    ]]>
+  </NPCText>
+  <Option text="You honor your lost temple through your work." next="respectfulReward"/>
+  <Option text="It must be lonely, preserving history." next="lonely"/>
+</Dialogue>
+
+<Dialogue id="templeFall">
+  <NPCText>
+    <![CDATA[
+    “Fire. Blood. Minax’s beasts tore the sacred sutras from their scroll racks. My master, Dogen-sensei, fought them alone while we novices fled. The scream of parchment burning… I still hear it.”<BR><BR>
+    Daiji closes his eyes, visibly pained.
+    ]]>
+  </NPCText>
+  <Option text="He would be proud you lived to preserve knowledge." next="survival"/>
+  <Option text="Do you seek revenge?" next="revenge"/>
+</Dialogue>
+
+<Dialogue id="pathOfInk">
+  <NPCText>
+    <![CDATA[
+    “A sword may kill a man. A scroll may shape generations. I chose the brush not out of cowardice, but because I believe the world must *remember* what was lost. And to remember... one must record.”<BR>
+    He touches a scroll gently, almost like a relic.
+    ]]>
+  </NPCText>
+  <Option text="Spoken like a true master of discipline." next="respectfulReward" />
+  <Option text="What sort of records do you keep?" next="recordTypes"/>
+</Dialogue>
+
+<Dialogue id="minaxPursuit">
+  <NPCText>
+    <![CDATA[
+    Daiji frowns.<BR><BR>
+    “Once. A blade marked with a crescent moon. Poison ink. But I rewrote the registry in time, and the assassin vanished... as did his name from our books.”<BR>
+    He smiles darkly. “Even Minax fears bureaucracy done properly.”
+    ]]>
+  </NPCText>
+  <Option text="That’s both hilarious and impressive." next="respectfulReward"/>
+  <Option text="Tell me more about Hinokami’s registries." next="recordTypes"/>
+</Dialogue>
+
+<Dialogue id="recordTypes">
+  <NPCText>
+    <![CDATA[
+    “I record quest permits, trade licenses, honorable duels, marriages, oaths, confessions, and once—an apology letter from a raccoon spirit. All must be stamped and filed. The raccoon drew a perfect pawprint.”<BR>
+    He chuckles, rare warmth in his tone.
+    ]]>
+  </NPCText>
+  <Option text="I’d like to see more someday." action="SendMessage:Daiji nods thoughtfully. 'Return with proper etiquette, and I may show you the ink archives.'" />
+  <Option text="That’s... unexpectedly adorable." next="respectfulReward"/>
+</Dialogue>
+
+<Dialogue id="lonely">
+  <NPCText>
+    <![CDATA[
+    Daiji nods slowly.<BR><BR>
+    “Ink is silent company. But when someone truly listens... even the quietest brushstroke echoes.”<BR>
+    A rare smile touches his lips.
+    ]]>
+  </NPCText>
+  <Option text="I’ll be sure to listen again, Ink-Seal." action="Karma:+100"/>
+  <Option text="Thank you for sharing your story." action="Close"/>
+</Dialogue>
+
+<Dialogue id="revenge">
+  <NPCText>
+    <![CDATA[
+    “I do not carry hatred. Vengeance stains the page. Instead, I build walls of order so her chaos finds no foothold here.”<BR>
+    He taps the inkstone once, sharp and final.
+    ]]>
+  </NPCText>
+  <Option text="Wise and resolute, as a calligrapher should be." next="respectfulReward"/>
+  <Option text="You may be more dangerous than a samurai." action="SendMessage:Daiji smiles thinly. 'They do say the pen...'" />
+</Dialogue>
+
+<!-- Reward node for respectful players -->
+<Dialogue id="respectfulReward">
+  <NPCText>
+    <![CDATA[
+    Daiji reaches beneath the desk and produces a tiny scroll tied in red cord.<BR><BR>
+    “Few show such attentiveness. Take this—an excerpt of Dogen-sensei’s final teachings. Let them guide your strokes, and your steps.”
+    ]]>
+  </NPCText>
+  <Option text="I will honor his words." 
+          action="GiveItem:DaogakuScrollFragment" 
+          condition="!HasItem:DaogakuScrollFragment" />
+  <Option text="I am humbled, Daiji." action="Karma:+250" />
+  <Option text="Farewell, master of ink." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

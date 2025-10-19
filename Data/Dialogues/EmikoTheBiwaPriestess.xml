@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="EmikoTheBiwaPriestess">
+
+  <!-- ================== GREETING ================== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#FFB7DD'>
+      A gentle woman kneels before a lacquered shrine, plucking a haunting melody from a four-stringed biwa strung with pale, shimmering hair.<BR><BR>
+      She looks up with wise, kind eyes.<BR><BR>
+      "Ah... a spirit stirs upon the wind. I am Emiko, guardian of the old songs and teller of Hinokami's hidden histories. Have you come seeking music, wisdom, or something that weighs heavier upon your soul?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I hear your music, but sense sorrow. Why do you play?" next="whyMusic"/>
+    <Option text="Can you teach me your spirit-banishing arts?" next="teach"/>
+    <Option text="Tell me of the old stories you guard." next="lore"/>
+    <Option text="Do you need aid, Priestess?" next="questOffer"/>
+	<Option text="Tell me more about yourself, Emiko." next="backstoryIntro"/>
+    <Option text="Just listening. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ================== WHY MUSIC ================== -->
+  <Dialogue id="whyMusic">
+    <NPCText>
+      <![CDATA[
+      Emiko plucks a trembling note, the air shimmering faintly.<BR><BR>
+      "Music binds the spirit and the world. My biwa—strung with my own hair—can soothe restless ghosts, or drive out those too stubborn to depart.<BR>
+      Each song preserves a memory. To forget is to lose ourselves to darkness. Even Minax fears what lingers in forgotten verses."
+      ]]>
+    </NPCText>
+    <Option text="Can your music truly banish spirits?" next="teach"/>
+    <Option text="What stories do you guard?" next="lore"/>
+    <Option text="How can I help?" next="questOffer"/>
+    <Option text="Thank you for your wisdom." action="Close"/>
+  </Dialogue>
+
+  <!-- ================== TEACHING PERFORMANCE ================== -->
+  <Dialogue id="teach">
+    <NPCText>
+      <![CDATA[
+      Emiko smiles, setting her biwa across her knees.<BR><BR>
+      "Few outside Hinokami have the patience for such craft. But if your heart is steady, I can show you the Song of Purifying Dawn. It drives evil spirits from hidden places, but only when played with reverence.<BR><BR>
+      Will you listen closely, and vow to use this art only for good?"
+      ]]>
+    </NPCText>
+    <Option text="I vow to use your song to protect the innocent." 
+            action="AddSkill:Musicianship,5,1800"
+            next="teachAccepted"/>
+    <Option text="What if I misuse your knowledge?" next="consequences"/>
+    <Option text="I wish to learn, but not today." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="teachAccepted">
+    <NPCText>
+      <![CDATA[
+      Emiko plucks a complex, uplifting melody—the air brightens, and faint motes swirl around you.<BR><BR>
+      "You learn the Song of Purifying Dawn. Play it when darkness creeps near, and you may banish spirits that haunt shrine and home.<BR><BR>
+      (Your Musicianship skill improves. Some spirits may now respond to your music in future quests!)"
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Emiko." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="consequences">
+    <NPCText>
+      <![CDATA[
+      Emiko’s eyes narrow, sorrowful.<BR><BR>
+      "Song shapes spirit as surely as sword shapes flesh. If you turn this gift to selfishness or cruelty, even Minax’s demons may pale beside what you unleash. All songs have a price."
+      ]]>
+    </NPCText>
+    <Option text="I understand. Please teach me." 
+            action="AddSkill:Musicianship,5,1800"
+            next="teachAccepted"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <!-- ================== STORY LORE ================== -->
+  <Dialogue id="lore">
+    <NPCText>
+      <![CDATA[
+      Emiko traces a faded sigil on her biwa’s lacquered body.<BR><BR>
+      "Hinokami’s people fled Minax’s wrath, but our stories survived—carried in music and whispered at night.<BR>
+      Some say the Verdant Tribes’ shamans were once our kin, until the world was torn asunder.<BR>
+      I remember the ballad of Lord British’s last blessing, and the day Minax’s shadow fell over the cherry trees.<BR><BR>
+      Which tale draws you: exile, unity, or the coming darkness?"
+      ]]>
+    </NPCText>
+    <Option text="Tell me of Hinokami’s exile." next="exile"/>
+    <Option text="What unity do you hope for?" next="unity"/>
+    <Option text="What darkness comes?" next="darkness"/>
+    <Option text="Thank you for your stories." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="exile">
+    <NPCText>
+      <![CDATA[
+      "We crossed the sea under moonlight, bringing what little we could: a branch of cherry, a handful of sacred soil, and our songs.<BR>
+      Minax’s monsters stalked our ships, but spirit-lanterns kept them at bay.<BR>
+      Here, in Hinokami, we planted hope. Yet exile always aches in our hearts."
+      ]]>
+    </NPCText>
+    <Option text="How do you keep hope alive?" next="unity"/>
+    <Option text="Tell me of the coming darkness." next="darkness"/>
+    <Option text="Thank you for your story." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="unity">
+    <NPCText>
+      <![CDATA[
+      "I dream of a festival where Hinokami and the Verdant Tribes share music beneath blooming trees. But wounds run deep.<BR>
+      Perhaps, with brave hearts, we can heal the land—spirit and song together stronger than steel.<BR>
+      Will you help me bring peace someday?"
+      ]]>
+    </NPCText>
+    <Option text="If the chance arises, I will." next="loreThanks"/>
+    <Option text="That dream seems distant." next="unityDistant"/>
+    <Option text="Tell me of the coming darkness." next="darkness"/>
+  </Dialogue>
+
+  <Dialogue id="unityDistant">
+    <NPCText>
+      <![CDATA[
+      Emiko sighs. "Perhaps you are right. But every harmony begins with a single note."<BR>
+      She resumes plucking the biwa softly.
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Emiko." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="loreThanks">
+    <NPCText>
+      <![CDATA[
+      "Then I entrust you with hope, as I entrust my biwa to the dawn. Thank you, friend."
+      ]]>
+    </NPCText>
+    <Option text="Farewell, Priestess." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="darkness">
+    <NPCText>
+      <![CDATA[
+      "Minax’s sorcery twists the spirits of land and sea. Where music once brought peace, now shadows gather. Ghosts grow bold, and nightmares whisper at every shrine.<BR>
+      But remember: a single song can drive back a thousand shadows—if sung with a pure heart."
+      ]]>
+    </NPCText>
+    <Option text="May your music protect Hinokami." action="Close"/>
+    <Option text="Can I help you resist the darkness?" next="questOffer"/>
+  </Dialogue>
+
+  <!-- ================== QUEST OFFER ================== -->
+  <Dialogue id="questOffer">
+    <NPCText>
+      <![CDATA[
+      Emiko listens, then nods solemnly.<BR><BR>
+      "A spirit of vengeance haunts the riverbank beneath the cherry trees. My music weakens it, but I lack the strength to banish it alone.<BR>
+      If you would aid me, take this Spirit-Binding Charm. Use it when the wailing grows strongest, and return with proof of the spirit’s release.<BR><BR>
+      Will you accept this task?"
+      ]]>
+    </NPCText>
+    <Option text="I accept. Give me the Spirit-Binding Charm." 
+            action="GiveItem:SpiritBindingCharm"
+            condition="!HasItem:SpiritBindingCharm"
+            next="questAccepted"/>
+    <Option text="Is it dangerous?" next="questDanger"/>
+    <Option text="Not right now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="questAccepted">
+    <NPCText>
+      <![CDATA[
+      Emiko hands you a woven charm, faintly humming with magic.<BR>
+      "Return when the spirit’s cries are silenced. Bring me a Whispering Fragment as proof, and you will have my thanks—and perhaps a song of power."
+      ]]>
+    </NPCText>
+    <Option text="I will return." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="questDanger">
+    <NPCText>
+      <![CDATA[
+      "The spirit was once a protector, corrupted by grief. It lashes out at the living, but fears music and sacred light. Face it with courage, and let your intent be pure.<BR>
+      Take the charm only if your heart is ready."
+      ]]>
+    </NPCText>
+    <Option text="I am ready. Give me the Spirit-Binding Charm."
+            action="GiveItem:SpiritBindingCharm"
+            condition="!HasItem:SpiritBindingCharm"
+            next="questAccepted"/>
+    <Option text="Not yet." action="Close"/>
+  </Dialogue>
+
+  <!-- ================== BACKSTORY BRANCH ================== -->
+  <Dialogue id="backstoryIntro">
+    <NPCText>
+      <![CDATA[
+      Emiko lowers her gaze for a moment, fingers resting gently on the strings of her biwa.<BR><BR>
+      "You honor me by asking. Most hear only the music, not the woman behind it. Very well... Would you hear of my youth, my vow, or the strings I bear?"
+      ]]>
+    </NPCText>
+    <Option text="Tell me of your youth." next="childhood"/>
+    <Option text="What vow binds you?" next="vow"/>
+    <Option text="Your biwa... the strings are made of your hair?" next="hair"/>
+    <Option text="Another time, perhaps." action="Close"/>
+  </Dialogue>
+
+  <!-- Childhood -->
+  <Dialogue id="childhood">
+    <NPCText>
+      <![CDATA[
+      "I was born on the western shores of Tokuno—before Minax razed our temple. My mother was a spirit-singer, my father a gardener who grew trees from prayers.<BR>
+      When the black ships came, we fled under lanternlight, singing songs meant to lull angry ghosts. I was ten. I’ve never stopped singing since."
+      ]]>
+    </NPCText>
+    <Option text="That must have been hard for a child." next="trauma"/>
+    <Option text="Is that when you became a priestess?" next="training"/>
+    <Option text="And yet you still sing. That is strength." next="vow"/>
+  </Dialogue>
+
+  <Dialogue id="trauma">
+    <NPCText>
+      <![CDATA[
+      Emiko nods slowly.<BR>
+      "Hard... but necessary. I learned early that grief can bind a soul tighter than love. But it can also guide us, if we give it rhythm. That’s what the songs are for."
+      ]]>
+    </NPCText>
+    <Option text="How did you become a priestess?" next="training"/>
+    <Option text="That grief… does it ever ease?" next="grief"/>
+    <Option text="You’ve given me much to think on." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="grief">
+    <NPCText>
+      <![CDATA[
+      "Grief is a ghost that never fully fades. But with each telling—each song—I feel its weight lessen. When I help others do the same… I think even my mother would smile."
+      ]]>
+    </NPCText>
+    <Option text="Tell me about your training." next="training"/>
+    <Option text="You are strong, Emiko." action="AddStat:Int,5,600"/>
+    <Option text="I hope to honor those I’ve lost, as you do." action="Karma:+100"/>
+  </Dialogue>
+
+  <!-- Training -->
+  <Dialogue id="training">
+    <NPCText>
+      <![CDATA[
+      "After the flight, I trained at the floating monastery of Tsunokai. We chanted to sunrise and plucked storms from the air with string and bone.<BR>
+      I passed the final trial by singing through the night to soothe a weeping spirit that had haunted a bell tower for decades."
+      ]]>
+    </NPCText>
+    <Option text="What happened to the spirit?" next="bellSpirit"/>
+    <Option text="That must have required great courage." next="courage"/>
+  </Dialogue>
+
+  <Dialogue id="bellSpirit">
+    <NPCText>
+      <![CDATA[
+      "When dawn came, she faded into blossoms. Her name was Saya. I carved it into my biwa. Every time I play, I call her spirit to witness. She guides my fingers when I falter."
+      ]]>
+    </NPCText>
+    <Option text="That is beautiful." next="vow"/>
+    <Option text="Do other spirits guide you too?" next="spirits"/>
+  </Dialogue>
+
+  <Dialogue id="courage">
+    <NPCText>
+      <![CDATA[
+      Emiko smiles faintly.<BR>
+      "Courage is only the name we give fear once we act despite it. I was terrified. But she was more terrified of being forgotten."
+      ]]>
+    </NPCText>
+    <Option text="Tell me about the spirits you help." next="spirits"/>
+    <Option text="What vow did you take?" next="vow"/>
+  </Dialogue>
+
+  <!-- Hair Strings -->
+  <Dialogue id="hair">
+    <NPCText>
+      <![CDATA[
+      She nods solemnly, brushing a strand from her eyes.<BR><BR>
+      "Yes. Each year, I offer a lock of my hair at the Spirit Festival and restring my biwa. The spirits know me by the strand—they recognize the pain, the growth, the intention.<BR>
+      Some say it’s morbid. But spirits are personal things. So my music must be, too."
+      ]]>
+    </NPCText>
+    <Option text="That is... strangely moving." action="SendMessage:You feel a chill pass through you."/>
+    <Option text="Does it hurt to pluck them?" next="pain"/>
+    <Option text="That explains why your music feels alive." next="vow"/>
+  </Dialogue>
+
+  <Dialogue id="pain">
+    <NPCText>
+      <![CDATA[
+      "Yes. And no. It hurts more the first time. After that, you learn to braid the pain into the song. Then it becomes a memory, not a wound."
+      ]]>
+    </NPCText>
+    <Option text="You have turned pain into power." action="Fame:+150"/>
+    <Option text="What vow did you swear, Emiko?" next="vow"/>
+  </Dialogue>
+
+  <!-- Spirits -->
+  <Dialogue id="spirits">
+    <NPCText>
+      <![CDATA[
+      "Not all spirits are kind—or cruel. Some are lost children. Some are warriors who never stopped fighting. Some are just lonely.<BR>
+      I don’t force them to move on. I help them understand that they can."
+      ]]>
+    </NPCText>
+    <Option text="Have you ever failed?" next="fail"/>
+    <Option text="That takes great patience." next="vow"/>
+  </Dialogue>
+
+  <Dialogue id="fail">
+    <NPCText>
+      <![CDATA[
+      Emiko’s eyes darken slightly.<BR>
+      "Once. A spirit too broken to remember its name. It tore through my melodies and shattered three charms. I still hear it sometimes, wailing across the cliffs. One day, I will return to finish the song."
+      ]]>
+    </NPCText>
+    <Option text="May your voice bring peace to it someday." action="Karma:+150"/>
+    <Option text="What vow did you take?" next="vow"/>
+  </Dialogue>
+
+  <!-- Vow -->
+  <Dialogue id="vow">
+    <NPCText>
+      <![CDATA[
+      Emiko lays her hand over her heart.<BR>
+      "My vow is threefold: to sing the forgotten, to soothe the restless, and to never play a false note—even under threat.<BR>
+      Music is truth. And I would rather perish than let Minax silence mine."
+      ]]>
+    </NPCText>
+    <Option text="That is a noble vow. I honor it." action="Karma:+100"/>
+    <Option text="Thank you for trusting me with your story." action="Close"/>
+    <Option text="May I ask more another time?" action="Close"/>
+  </Dialogue>
+
+
+</DialogueFile>

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="MaiyaTheSpiritSinger">
+
+  <!-- ========== GREETING ========== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#a7e0cf'>
+      You find a young woman sitting cross-legged by a wind-chime-laden willow. She hums, breathy and soft, the melody carried on the breeze. She opens her eyes—calm, sad, and oddly distant. When she speaks, it is barely above a whisper.<BR><BR>
+      <I>"Peace upon the wilds... Are you lost, or have the spirits guided you to me?"</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="The spirits guided me, I think." next="whoareyou"/>
+    <Option text="Are you Maiya, the Spirit-Singer?" next="whoareyou"/>
+    <Option text="I was only wandering." next="wanderer"/>
+    <Option text="What are you singing?" next="song"/>
+	<Option text="Tell me more about you, Maiya." next="backstoryIntro"/>
+    <Option text="Goodbye." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== WHO ARE YOU ========== -->
+  <Dialogue id="whoareyou">
+    <NPCText>
+      <![CDATA[
+      She bows her head, her voice a melodious whisper.<BR><BR>
+      <I>"I am Maiya. I sing for the wind, and the wind sometimes sings back. My songs ease the restless dead... or call the bold living. But my heart is troubled. The flute I use to summon the spirits has been taken from me—stolen by one tainted with Minax’s darkness."</I>
+      ]]>
+    </NPCText>
+    <Option text="Who stole your flute?" next="whoStole"/>
+    <Option text="Can I help recover it?" next="questOffer"/>
+    <Option text="What happens without your flute?" next="consequence"/>
+    <Option text="Tell me more about your singing." next="song"/>
+    <Option text="I must go." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== WANDERER ========== -->
+  <Dialogue id="wanderer">
+    <NPCText>
+      <![CDATA[
+      Her lips curve, but her gaze is sad.<BR><BR>
+      <I>"Few truly wander in these woods—most are fleeing, seeking, or lost. Tell me, are you one who listens to the whispers beneath the leaves?"</I>
+      ]]>
+    </NPCText>
+    <Option text="I listen, and I hear your sorrow." next="whoareyou"/>
+    <Option text="I am simply passing through." next="bye"/>
+    <Option text="Do you need help?" next="questOffer"/>
+  </Dialogue>
+
+  <Dialogue id="bye">
+    <NPCText>
+      <![CDATA[
+      <I>"May the wind bear you gently, traveler."</I>
+      ]]>
+    </NPCText>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== SONG ========== -->
+  <Dialogue id="song">
+    <NPCText>
+      <![CDATA[
+      Maiya draws a deep breath and begins to sing—a wordless, haunting melody. For a moment, the leaves tremble, and a cool breeze curls about your ankles. When she stops, she whispers:<BR><BR>
+      <I>"Song is a bridge: between worlds, between souls. My flute gave the song its voice, but now it calls for help, somewhere in the wild."</I>
+      ]]>
+    </NPCText>
+    <Option text="I will help find your flute." next="questOffer"/>
+    <Option text="Does the flute still sing?" next="fluteRiddle"/>
+    <Option text="Goodbye." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== FLUTE RIDDLE ========== -->
+  <Dialogue id="fluteRiddle">
+    <NPCText>
+      <![CDATA[
+      Her eyes grow distant.<BR><BR>
+      <I>"It does... though not for me. When close, it hums a melody only the wind can carry, and sometimes, it sings riddles. Follow the song, and the flute may guide you through peril, or into it."</I>
+      ]]>
+    </NPCText>
+    <Option text="How do I follow the song?" next="songDirection"/>
+    <Option text="What kind of riddles?" next="riddleSample"/>
+    <Option text="I will seek it out." next="questOffer"/>
+  </Dialogue>
+
+  <Dialogue id="songDirection">
+    <NPCText>
+      <![CDATA[
+      She points to the trees.<BR><BR>
+      <I>"When you draw near, you may hear a tune upon the breeze, or words in your mind:<BR>
+      ‘Wind bends the branch, shadow marks the stone—find the place where night and green are one.’<BR>
+      Seek where the woods grow darkest, and listen."</I>
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Maiya. I will search there." next="questOffer"/>
+    <Option text="I need to know more." next="whoStole"/>
+  </Dialogue>
+
+  <Dialogue id="riddleSample">
+    <NPCText>
+      <![CDATA[
+      She hums softly, then recites:<BR><BR>
+      <I>"‘Silver leaves in silent night,<BR>
+      A song lost out of sight.<BR>
+      Beneath the root where shadows grow,<BR>
+      The stolen breath begins to flow.’<BR><BR>
+      The riddles change, and only the truly listening may solve them."</I>
+      ]]>
+    </NPCText>
+    <Option text="I’ll remember. I will help." next="questOffer"/>
+    <Option text="Who stole it, again?" next="whoStole"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== WHO STOLE THE FLUTE ========== -->
+  <Dialogue id="whoStole">
+    <NPCText>
+      <![CDATA[
+      Maiya lowers her eyes.<BR><BR>
+      <I>"A wanderer with blackened eyes—her cloak smelled of ash and night. She called herself Seris. She came seeking spirits but carried only emptiness. Minax’s shadow walks with her, and my flute now mourns in her hands."</I>
+      ]]>
+    </NPCText>
+    <Option text="How can I find Seris?" next="findSeris"/>
+    <Option text="What is Minax’s interest in the flute?" next="minaxInterest"/>
+    <Option text="I’ll do what I can." next="questOffer"/>
+    <Option text="Goodbye." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== FINDING SERIS ========== -->
+  <Dialogue id="findSeris">
+    <NPCText>
+      <![CDATA[
+      <I>"Seris is drawn to places where the veil is thin—old graves, twisted trees, silent groves. If you hear the flute’s call—follow it, but beware: she weaves illusions and may not be what she seems."</I>
+      ]]>
+    </NPCText>
+    <Option text="I will find her." next="questOffer"/>
+    <Option text="Is there a way to break her illusions?" next="breakIllusion"/>
+  </Dialogue>
+
+  <Dialogue id="breakIllusion">
+    <NPCText>
+      <![CDATA[
+      Maiya produces a small pouch of fragrant herbs.<BR><BR>
+      <I>"Burn these spirit-leaves before you enter the grove. They sharpen the mind. Will you take them?"</I>
+      ]]>
+    </NPCText>
+    <Option text="Yes, please." action="GiveItem:SpiritLeaves" next="questOffer"/>
+    <Option text="No, I will rely on my own senses." next="questOffer"/>
+  </Dialogue>
+
+  <!-- ========== MINAX INTEREST ========== -->
+  <Dialogue id="minaxInterest">
+    <NPCText>
+      <![CDATA[
+      <I>"Minax despises the old songs. My flute’s song can call ancestral spirits who resist her. If she taints the flute, the spirits will turn wild—or silent."</I>
+      ]]>
+    </NPCText>
+    <Option text="Then I must recover it quickly." next="questOffer"/>
+    <Option text="Is there a way to purify the flute if it is corrupted?" next="purifyFlute"/>
+  </Dialogue>
+
+  <Dialogue id="purifyFlute">
+    <NPCText>
+      <![CDATA[
+      <I>"Bring the flute to the Heartwood Glade—where the oldest willow weeps. There, I can sing the purifying song. Will you try, if it is tainted?"</I>
+      ]]>
+    </NPCText>
+    <Option text="I promise. I will return it for the ritual." next="questOffer"/>
+    <Option text="I may not be able to." next="bye"/>
+  </Dialogue>
+
+  <!-- ========== CONSEQUENCES OF LOSS ========== -->
+  <Dialogue id="consequence">
+    <NPCText>
+      <![CDATA[
+      She closes her eyes, sadness heavy in her whisper.<BR><BR>
+      <I>"Without the flute, the winds fall silent. The spirits grow restless. If Minax bends them to her will, all Verdant lands may fall to nightmares."</I>
+      ]]>
+    </NPCText>
+    <Option text="Then your quest is urgent. I will help." next="questOffer"/>
+    <Option text="I wish you luck. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== QUEST OFFER ========== -->
+  <Dialogue id="questOffer">
+    <NPCText>
+      <![CDATA[
+      She meets your gaze, a glimmer of hope lighting her face.<BR><BR>
+      <I>"Will you search for my flute, even if the forest tests you with riddles and shadows?"</I>
+      ]]>
+    </NPCText>
+    <Option text="Yes. I will seek the flute and return it to you."
+            action="GiveItem:SpiritFluteQuestScroll(Maiya,Seris,300)"
+            condition="!HasItem:SpiritFluteQuestScroll"
+            next="questAccepted"/>
+    <Option text="Tell me what I should do, step by step." next="instructions"/>
+    <Option text="Not right now." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== QUEST ACCEPTED ========== -->
+  <Dialogue id="questAccepted">
+    <NPCText>
+      <![CDATA[
+      <I>"Go where the shadows thicken and the wind grows cold. Listen for the flute’s song. If you solve its riddles, it will reveal the path. Beware Seris, and bring the flute to me—untainted if you can."</I><BR>
+      She places a hand over her heart, her voice rising in song as you depart—a wordless blessing.
+      ]]>
+    </NPCText>
+    <Option text="I will not fail you, Maiya." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== INSTRUCTIONS ========== -->
+  <Dialogue id="instructions">
+    <NPCText>
+      <![CDATA[
+      Maiya nods, her words gentle:<BR>
+      <I>
+      1. Seek the dark grove north of the tribe’s sacred circle.<BR>
+      2. Listen for the flute’s song or riddling words.<BR>
+      3. If you find Seris, confront her. The spirit-leaves may break her spell.<BR>
+      4. Return the flute to me, especially if it feels changed.<BR>
+      Spirits watch over you.
+      </I>
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I will do this." 
+            action="GiveItem:SpiritFluteQuestScroll(Maiya,Seris,300)"
+            condition="!HasItem:SpiritFluteQuestScroll"
+            next="questAccepted"/>
+    <Option text="Goodbye." action="Close"/>
+  </Dialogue>
+
+<!-- ========== MAIYA BACKSTORY INTRO ========== -->
+<Dialogue id="backstoryIntro">
+  <NPCText>
+    <![CDATA[
+    She closes her eyes briefly, a soft smile on her lips.<BR><BR>
+    <I>"Few ask. Most just seek blessings or songs. But... I will tell you. I was not always of the Verdant Tribes. I was born beneath the stars of Moonglow." </I><BR><BR>
+    <I>"They taught me to bind spirits into books... to silence them. I could not bear it."</I>
+    ]]>
+  </NPCText>
+  <Option text="You left Moonglow?" next="leftMoonglow"/>
+  <Option text="How did you find the Verdant Tribes?" next="foundTribe"/>
+  <Option text="Why do you sing, not speak?" next="voiceLore"/>
+  <Option text="I’m ready to speak of something else." next="greeting"/>
+</Dialogue>
+
+<!-- ========== LEFT MOONGLOW ========== -->
+<Dialogue id="leftMoonglow">
+  <NPCText>
+    <![CDATA[
+    <I>"Yes. I fled during a storm, the sky tearing like parchment. A spirit I was meant to bind... sang to me. Its lament echoed in my heart. I followed the wind instead of orders."</I><BR><BR>
+    <I>"The mages called me mad. But here, the spirits call me sister."</I>
+    ]]>
+  </NPCText>
+  <Option text="That took courage." action="Karma:+100" next="foundTribe"/>
+  <Option text="Did the spirit bring you to the Verdant Tribes?" next="foundTribe"/>
+  <Option text="They called you mad?" next="mad"/>
+</Dialogue>
+
+<!-- ========== FOUND TRIBE ========== -->
+<Dialogue id="foundTribe">
+  <NPCText>
+    <![CDATA[
+    <I>"The forest found me first. I wandered half-starved, but the trees whispered. The tribes saw me as touched, maybe even cursed... but Shaman Nura listened. She heard the music too."</I><BR><BR>
+    <I>"She gave me the flute. A bone reed, carved in the shape of a wind serpent. My soul sang again."</I>
+    ]]>
+  </NPCText>
+  <Option text="So the flute is sacred to you." next="sacredFlute"/>
+  <Option text="Shaman Nura must be wise." next="nuraRespect"/>
+  <Option text="Did all the tribes accept you?" next="notAllAccept"/>
+</Dialogue>
+
+<!-- ========== VOICE LORE ========== -->
+<Dialogue id="voiceLore">
+  <NPCText>
+    <![CDATA[
+    Maiya touches her throat lightly.<BR><BR>
+    <I>"My voice was wounded when I was a child... by a spirit I could not control. Since then, only song carries my strength. Whispers soothe. Words shout."</I>
+    ]]>
+  </NPCText>
+  <Option text="Yet your song stirs the wind." next="fluteRiddle"/>
+  <Option text="Does singing help the pain?" next="painSong"/>
+</Dialogue>
+
+<Dialogue id="painSong">
+  <NPCText>
+    <![CDATA[
+    <I>"Sometimes. Singing is remembering. But also releasing. In music, I find peace—and sometimes, power."</I>
+    ]]>
+  </NPCText>
+  <Option text="A beautiful truth." action="Fame:+100" next="greeting"/>
+  <Option text="I’d like to hear a song someday." next="offerSong"/>
+</Dialogue>
+
+<Dialogue id="offerSong">
+  <NPCText>
+    <![CDATA[
+    Maiya smiles faintly.<BR><BR>
+    <I>"Return the flute to me, and I will sing a blessing to guard your dreams."</I>
+    ]]>
+  </NPCText>
+  <Option text="A promise." action="Close"/>
+</Dialogue>
+
+<!-- ========== CALLED MAD ========== -->
+<Dialogue id="mad">
+  <NPCText>
+    <![CDATA[
+    <I>"Madness is often just another path no one else dared take."</I><BR><BR>
+    She offers a rare grin. <I>"Even now, some in the tribes mutter that I walk too close to the veil. But the veil is where truth hides."</I>
+    ]]>
+  </NPCText>
+  <Option text="You walk with the spirits, not the mad." next="foundTribe"/>
+</Dialogue>
+
+<!-- ========== SACRED FLUTE ========== -->
+<Dialogue id="sacredFlute">
+  <NPCText>
+    <![CDATA[
+    <I>"More than sacred. It was carved from the bone of a spirit beast who gave its life to cleanse a corrupted glade. Its song is both memory and promise."</I>
+    ]]>
+  </NPCText>
+  <Option text="I swear I’ll recover it." action="Karma:+150" next="questOffer"/>
+  <Option text="It deserves to be returned." next="questOffer"/>
+</Dialogue>
+
+<!-- ========== NURA RESPECT ========== -->
+<Dialogue id="nuraRespect">
+  <NPCText>
+    <![CDATA[
+    <I>"She is the forest’s ear. Her dreams ripple through the leaves. Without her, I might have remained voiceless, wandering forever."</I>
+    ]]>
+  </NPCText>
+  <Option text="You honor her with your song." action="Karma:+50" next="greeting"/>
+  <Option text="Does she guide you now?" next="guidesYou"/>
+</Dialogue>
+
+<Dialogue id="guidesYou">
+  <NPCText>
+    <![CDATA[
+    <I>"Sometimes. Other times, she challenges me. The flute was her test, and now... its loss may be another."</I>
+    ]]>
+  </NPCText>
+  <Option text="Then I’ll help you pass it." next="questOffer"/>
+  <Option text="May your path be clear, Maiya." action="Close"/>
+</Dialogue>
+
+<!-- ========== NOT ALL ACCEPT ========== -->
+<Dialogue id="notAllAccept">
+  <NPCText>
+    <![CDATA[
+    <I>"Tahlia mistrusts me still. Says my voice is a danger, my presence a reminder of old pain. But I serve the spirits, not the council."</I>
+    ]]>
+  </NPCText>
+  <Option text="Should I speak with Tahlia?" next="warnAgainst"/>
+  <Option text="Do you wish to be part of the council?" next="tribePolitics"/>
+</Dialogue>
+
+<Dialogue id="warnAgainst">
+  <NPCText>
+    <![CDATA[
+    Maiya’s voice lowers further.<BR><BR>
+    <I>"She respects strength, not song. Prove yourself to her in trial or battle... but do not speak of me. Not yet."</I>
+    ]]>
+  </NPCText>
+  <Option text="Understood." action="Close"/>
+</Dialogue>
+
+<Dialogue id="tribePolitics">
+  <NPCText>
+    <![CDATA[
+    <I>"No. I serve something older. The tribe walks the land. I walk the wind. Balance lies between."</I>
+    ]]>
+  </NPCText>
+  <Option text="I think I understand now." action="Fame:+50" next="greeting"/>
+</Dialogue>
+
+
+</DialogueFile>

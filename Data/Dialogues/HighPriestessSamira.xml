@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="HighPriestessSamira">
+
+  <!-- ====== GREETING ====== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#FFD700'>
+      Bathed in sunbeams filtered through amber glass, the High Priestess stands before the Obelisk of Eternity. Her Solar Diadem glimmers above searching eyes, and incense curls from a jeweled censer in her hand.<BR><BR>
+      "Welcome, child of the shifting sands. I am High Priestess Samira, Keeper of the Obelisk, last voice of the Ancients, and humble warden of Qasaria’s light.<BR>
+      The world darkens, and Minax’s shadow grows long. Why do you come to the Sun Temple this day?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek guidance, Priestess." next="guidance"/>
+    <Option text="Tell me of yourself, and your role in Qasaria." next="aboutSamira"/>
+    <Option text="What is the Obelisk of Eternity?" next="obelisk"/>
+    <Option text="Do you believe Minax is truly the end-times?" next="minaxBelief"/>
+	<Option text="I wish to know who you truly are, beyond titles." next="deepBackstoryIntro"/>
+    <Option text="I am just a traveler. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== About Samira ====== -->
+  <Dialogue id="aboutSamira">
+    <NPCText>
+      <![CDATA[
+      Samira’s eyes are distant, her voice solemn.<BR><BR>
+      "Once I was Samira bint Rashid, daughter of a desert wise-woman and a humble scribe. My mother served as Sunkeeper here, tending the sacred flames before the Council of Jewels claimed power. I was raised among prophets, pearl-divers, and nomads. Yet the Obelisk called me.<BR><BR>
+      Now I counsel princes and paupers alike, though they rarely heed my warnings. Rafiq al-Ruby protects our gates, but his honor is weary. Safiya al-Sapphire grows rich in shade and sunlight alike. Some on the council trust me; others wish I would vanish into the dunes."
+      ]]>
+    </NPCText>
+    <Option text="Tell me of your rivals among the Council." next="councilRivals"/>
+    <Option text="What wisdom do you offer the people?" next="wisdom"/>
+    <Option text="How do you protect the city?" next="cityProtection"/>
+    <Option text="I seek a task worthy of the Sun Temple." next="taskIntro"/>
+    <Option text="Thank you, Priestess. Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="councilRivals">
+    <NPCText>
+      <![CDATA[
+      Samira lowers her voice.<BR><BR>
+      "Each prince is a jewel—bright, but never without flaws. Rafiq’s courage is legendary, but the burden of Qasaria’s armies bows his back. Safiya’s caravans fatten the city’s coffers, yet profit blinds her to danger. Karim the Emerald plots with shadows and whispers, and Omar the Onyx cares only for the arena’s bloody games. Only Yasmin of Topaz listens, for she too knows what sleeps beneath our sands.<BR>
+      These are my peers—and my obstacles. Yet I serve the Obelisk first."
+      ]]>
+    </NPCText>
+    <Option text="Tell me of Yasmin al-Topaz." next="yasmin"/>
+    <Option text="Can the council unite against Minax?" next="councilMinax"/>
+    <Option text="How do you protect the city?" next="cityProtection"/>
+    <Option text="I am ready to serve the Sun Temple." next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="yasmin">
+    <NPCText>
+      <![CDATA[
+      "Yasmin is both younger and older than she appears. Her study of the Ancients’ relics began when Qasaria was barely more than a camp. We are sisters in purpose—sometimes allies, sometimes wary. She believes knowledge is the path to salvation. I say faith and sacrifice must come first. Together, we strive to keep the council from tearing itself apart."
+      ]]>
+    </NPCText>
+    <Option text="How do you protect the city?" next="cityProtection"/>
+    <Option text="Can the council unite against Minax?" next="councilMinax"/>
+    <Option text="I seek a task worthy of the Sun Temple." next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="councilMinax">
+    <NPCText>
+      <![CDATA[
+      Samira frowns, the sun dimming behind her.<BR><BR>
+      "The council is divided. Rafiq would fight, but fears to bleed Qasaria dry. Safiya bargains with all sides—some say even with Minax’s agents. Karim’s spies know too much, yet say too little. Omar thirsts for glory, not wisdom. Without unity, the Obelisk’s warnings may come too late.<BR>
+      Perhaps you, outsider, can help shift the balance."
+      ]]>
+    </NPCText>
+    <Option text="What can I do to help?" next="taskIntro"/>
+    <Option text="Tell me of yourself." next="aboutSamira"/>
+    <Option text="I must go." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="wisdom">
+    <NPCText>
+      <![CDATA[
+      Samira traces a sigil in the air.<BR><BR>
+      "The desert teaches patience, and the sun burns away all lies. I teach my followers to see beyond gold and glory—to seek the sacred thread that weaves the world together. The Ancients warn that pride invites darkness. Minax exploits our divisions; unity and sacrifice alone may shield Qasaria."
+      ]]>
+    </NPCText>
+    <Option text="How do you protect the city?" next="cityProtection"/>
+    <Option text="Can the council unite against Minax?" next="councilMinax"/>
+    <Option text="May I serve the Sun Temple?" next="taskIntro"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== About the Obelisk ====== -->
+  <Dialogue id="obelisk">
+    <NPCText>
+      <![CDATA[
+      The Priestess gestures reverently.<BR><BR>
+      "The Obelisk of Eternity is a fragment of the Gem of Immortality itself, left by the Desert Ancients. It binds time and fate, its light a bulwark against darkness. Some on the council seek to use its power. I alone am sworn to protect it.<BR>
+      When Minax shattered the world, the Obelisk wept blood-red light. Its warnings have not ceased since."
+      ]]>
+    </NPCText>
+    <Option text="Can the Obelisk be used to stop Minax?" next="obeliskMinax"/>
+    <Option text="How did you become its Keeper?" next="aboutSamira"/>
+    <Option text="May I serve the Sun Temple?" next="taskIntro"/>
+    <Option text="Thank you, Priestess." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="obeliskMinax">
+    <NPCText>
+      <![CDATA[
+      "The Obelisk is both shield and mirror. It can reveal Minax’s servants and shield our dreams from her nightmares, but to wield its true power demands sacrifice—a price no prince yet dares pay. Perhaps, in time, a champion will rise who understands both faith and sorrow."
+      ]]>
+    </NPCText>
+    <Option text="How may I aid you?" next="taskIntro"/>
+    <Option text="Tell me more of Minax." next="minaxBelief"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Minax & Prophecy ====== -->
+  <Dialogue id="minaxBelief">
+    <NPCText>
+      <![CDATA[
+      Samira’s voice is grave.<BR><BR>
+      "Minax is not merely a conqueror—she is the serpent that devours the sun at world’s end. The Ancients warned that when pride splits the realms, the Dark Queen would return. The sands whisper her name in the night, and the Obelisk burns with omen. I have seen the signs: blood moons, rivers turned to glass, the city’s shadows lengthening. This is the twilight of the old world—unless we kindle a new dawn."
+      ]]>
+    </NPCText>
+    <Option text="How may I help kindle that dawn?" next="taskIntro"/>
+    <Option text="What signs have you seen?" next="prophecy"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="prophecy">
+    <NPCText>
+      <![CDATA[
+      "Prophecy is a river with many branches. I have seen Lord British vanishing beneath the sands, seen the Gem’s shards swirling in Minax’s grasp, seen a nameless champion bearing both sword and sunfire. What role will you play, I wonder?"
+      ]]>
+    </NPCText>
+    <Option text="Let me serve. Give me a task." next="taskIntro"/>
+    <Option text="That is enough for now." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== City Defense ====== -->
+  <Dialogue id="cityProtection">
+    <NPCText>
+      <![CDATA[
+      "Qasaria endures because of vigilance—ours, and that of our friends among the desert tribes. I keep sacred wards burning on the city walls and train acolytes to see truth beneath all masks. Still, Minax’s agents slip through shadows. Sometimes we must trust outsiders to deliver what my priests cannot."
+      ]]>
+    </NPCText>
+    <Option text="How can I help?" next="taskIntro"/>
+    <Option text="Farewell, Priestess." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== QUEST INTRO ====== -->
+  <Dialogue id="taskIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#FFD700'>
+      The Priestess inclines her head, weighing your worth.<BR><BR>
+      "There is a task, if you are bold. A sacred Sunfire Censer—blessed beneath the Obelisk—must reach a Sandwalker Priest at the edge of the Silent Dunes. Minax’s cultists prowl the roads, and the council’s own agents may wish to intercept it. Only one outside our temple can pass unmarked.<BR><BR>
+      Will you bear this light across the sands, risking both darkness and deceit? If so, I shall entrust you with the Censer. Return with proof of its delivery, and you will have the Sun Temple’s gratitude—and perhaps the Obelisk’s blessing."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will carry the Sunfire Censer. Entrust it to me."
+            action="GiveItem:FactionDeliveryQuestScroll(Sandwalker Priest,Qasaria,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Who are the Sandwalker Priests?" next="sandwalkers"/>
+    <Option text="What dangers lie on this road?" next="dangers"/>
+    <Option text="What will the council say if I succeed?" next="councilReward"/>
+    <Option text="I must decline, for now." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== QUEST ACCEPT ====== -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      The Priestess produces a golden censer, etched with runes, its incense rising in slow spirals.<BR><BR>
+      "Take this Sunfire Censer. Guard it well—its light repels Minax’s servants, but will draw their wrath. The Sandwalker Priests await at the oasis beyond the dunes. Return with their mark, and I shall see you rewarded as a friend of Qasaria’s light."
+      ]]>
+    </NPCText>
+    <Option text="I will not fail you, Priestess." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="sandwalkers">
+    <NPCText>
+      <![CDATA[
+      "The Sandwalker Priests are keepers of old desert rites, wanderers who commune with the Ancients’ spirits. They hold no love for the city, but they alone can purify relics tainted by Minax’s touch. The censer must reach their hands, or its blessing will fade."
+      ]]>
+    </NPCText>
+    <Option text="I will deliver it." 
+            action="GiveItem:FactionDeliveryQuestScroll(Sandwalker Priest,Qasaria,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I need time to prepare." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dangers">
+    <NPCText>
+      <![CDATA[
+      "Bandits and cultists stalk the desert. Worse, some wear the masks of council guards or trusted merchants. Do not trust easily—let the censer’s light guide you. If you are attacked, speak the word ‘Zahara’ and its sunfire will flare, though only once."
+      ]]>
+    </NPCText>
+    <Option text="I am ready for this trial." 
+            action="GiveItem:FactionDeliveryQuestScroll(Sandwalker Priest,Qasaria,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I need more time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="councilReward">
+    <NPCText>
+      <![CDATA[
+      "Delivering the censer may win you favor with Rafiq, or draw Safiya’s eye for trade. Yasmin will wish to question you about the relic. Beware Karim, whose spies may follow. Omar cares only for strength, but he will honor a proven champion."
+      ]]>
+    </NPCText>
+    <Option text="Then I accept the task." 
+            action="GiveItem:FactionDeliveryQuestScroll(Sandwalker Priest,Qasaria,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="deepBackstoryIntro">
+  <NPCText>
+    <![CDATA[
+    Samira smiles faintly, setting her censer aside.<BR><BR>
+    "A rare question, and rarer still the courage to ask it. Come then—if you have the patience for my truths, I shall share them as the stars once did for me."
+    ]]>
+  </NPCText>
+  <Option text="Tell me of your childhood in Qasaria." next="samiraChildhood"/>
+  <Option text="Have you always followed the Sun Temple?" next="sunTempleOrigin"/>
+  <Option text="What dreams guide your faith?" next="visions"/>
+  <Option text="Did you ever love anyone, Priestess?" next="samiraLove"/>
+  <Option text="What fascinates you most?" next="samiraInterests"/>
+  <Option text="I feel unworthy of such knowledge." action="Karma:+50" next="modestyReply"/>
+</Dialogue>
+
+<Dialogue id="samiraChildhood">
+  <NPCText>
+    <![CDATA[
+    "I was born during the eclipse of a twin sun—an omen in desert lore. My mother was a fire-keeper; my father, a scroll-seller who traded ink for dates. We lived on the temple’s edge, between firelight and poverty.<BR><BR>
+    One night, I wandered the shrine and touched the Obelisk. It burned, yet did not consume me. The priests said I was marked. The council called me cursed. My name was known from that day on—not always kindly."
+    ]]>
+  </NPCText>
+  <Option text="And what did that mark mean to you?" next="sunTempleOrigin"/>
+  <Option text="Do you bear the curse still?" next="curseInsight"/>
+  <Option text="You were destined, then." action="Fame:+100" next="destiny"/>
+</Dialogue>
+
+<Dialogue id="sunTempleOrigin">
+  <NPCText>
+    <![CDATA[
+    "My mother served the Sun Temple, tending flame and offering songs to the dawn. I watched her kneel in joy, never fear. That joy called to me. But the path was not gentle. I was tested—beaten in trials, exiled for visions the elders feared. Only when the Obelisk wept beneath my touch did they kneel instead."
+    ]]>
+  </NPCText>
+  <Option text="You walked through fire to stand in light." action="Karma:+100" next="blessing"/>
+  <Option text="Many fear what they cannot control." next="curseInsight"/>
+</Dialogue>
+
+<Dialogue id="visions">
+  <NPCText>
+    <![CDATA[
+    "I dream of rivers made of glass, and voices made of wind. One dream returns often—a golden throne crumbling into sand, while a serpent laughs beneath a black sun. Some say I see too much. Some, not enough. But I know Minax is the serpent. And she is stirring."
+    ]]>
+  </NPCText>
+  <Option text="Have your dreams ever saved lives?" next="dreamSaved"/>
+  <Option text="Can your dreams tell me my future?" next="visionProphecy"/>
+</Dialogue>
+
+<Dialogue id="visionProphecy">
+  <NPCText>
+    <![CDATA[
+    Samira narrows her eyes, studying you intently.<BR><BR>
+    "Yes... I see a crossroads. Fire in one hand, forgiveness in the other. You will choose which to offer to a traitor you once trusted. Choose wisely—one path ends in glory, the other in solitude."<BR><BR>
+    (You feel the hair on your arms rise.)
+    ]]>
+  </NPCText>
+  <Option text="That feels... true." action="SendMessage:Your future has been marked by Samira's vision."/>
+  <Option text="A warning I will carry." action="Karma:+100" />
+  <Option text="That’s enough prophecy for today." action="Close"/>
+</Dialogue>
+
+<Dialogue id="dreamSaved">
+  <NPCText>
+    <![CDATA[
+    "Once, I foresaw a caravan devoured by a sandstorm—but none believed me. I followed alone, chanting to the Obelisk with every step. When the storm struck, I redirected it with the censer’s light. Only three were spared. They call me miracle-maker. I call it guilt I still carry."
+    ]]>
+  </NPCText>
+  <Option text="I would have listened to your warning." action="Karma:+50" />
+  <Option text="That was not guilt. That was grace." next="blessing"/>
+</Dialogue>
+
+<Dialogue id="samiraLove">
+  <NPCText>
+    <![CDATA[
+    Samira pauses, the smile fading.<BR><BR>
+    "There was one—Nalik, a sandwalker poet. He wrote songs beneath the stars and once kissed my hand before the Obelisk. But he followed Yasmin to explore ruins best left undisturbed. They brought back a relic... and a curse. He died speaking words not his own.<BR>
+    I burned his poems to protect his soul. I have loved no other."
+    ]]>
+  </NPCText>
+  <Option text="I am sorry for your loss." action="Karma:+100" />
+  <Option text="Some wounds never heal." next="blessing"/>
+</Dialogue>
+
+<Dialogue id="samiraInterests">
+  <NPCText>
+    <![CDATA[
+    Samira brightens slightly.<BR><BR>
+    "I adore the old constellations—the ones no one names anymore. I believe each star is a story forgotten by time. I study the old gods: Khetar of the Golden Fang, Zal’hera the Wind-Eater, and Nihral, who weeps black suns. To the council, these are legends. To me—they are warnings."
+    ]]>
+  </NPCText>
+  <Option text="I would hear these stories, if you would teach me." 
+          condition="SkillAtLeast:SpiritSpeak,60"
+          action="AddSkill:SpiritSpeak,5,600"
+          next="teaching"/>
+  <Option text="The stars remember what we forget." action="Fame:+100" next="blessing"/>
+</Dialogue>
+
+<Dialogue id="teaching">
+  <NPCText>
+    <![CDATA[
+    Samira smiles warmly.<BR><BR>
+    "Then let the wind carry this memory: when Zal’hera was cast down, the dunes howled for three days. And those who listened gained tongues of silver. May your words carry wisdom, child of fate."
+    ]]>
+  </NPCText>
+  <Option text="I will carry your story." action="SendMessage:A forgotten god now knows your name."/>
+</Dialogue>
+
+<Dialogue id="curseInsight">
+  <NPCText>
+    <![CDATA[
+    "They feared my fire. Said I’d bring ruin. And yet—Qasaria still stands. I have learned: those marked by truth will always be called cursed by liars."
+    ]]>
+  </NPCText>
+  <Option text="Then let me be marked too." action="AddStat:Int,5,600"/>
+  <Option text="Your truth shines brighter than their fear." next="blessing"/>
+</Dialogue>
+
+<Dialogue id="destiny">
+  <NPCText>
+    <![CDATA[
+    "Destiny is not a throne one claims—it is a burden one carries. You speak like one who knows the difference. That is rare."
+    ]]>
+  </NPCText>
+  <Option text="Let me walk a little of that path beside you." next="taskIntro"/>
+</Dialogue>
+
+<Dialogue id="modestyReply">
+  <NPCText>
+    <![CDATA[
+    Samira bows her head slightly.<BR><BR>
+    "Humility is a rare gem in these times. For that, I offer you this blessing: may the sun rise early on your darkest days."
+    ]]>
+  </NPCText>
+  <Option text="I thank you, Priestess." action="AddStat:Str,5,300"/>
+</Dialogue>
+
+<Dialogue id="blessing">
+  <NPCText>
+    <![CDATA[
+    Samira gestures in a slow circle, tracing light in the air.<BR><BR>
+    "You walk with grace, whether you know it or not. The Obelisk stirs in your presence. Perhaps your thread in the tapestry is longer than you think."
+    ]]>
+  </NPCText>
+  <Option text="Then let me serve, Priestess." next="taskIntro"/>
+  <Option text="I’ll carry your words with me." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

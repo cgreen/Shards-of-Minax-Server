@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="HassimTheLioned">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#F9C04E'>
+      Before you stands a giant of a man, broad-shouldered and scarred, his wild mane spilling from beneath a lion-pelt helm. His studded arms and battered chestplate bear the marks of countless arena victories. The famous Bardiche, <B>Lion’s Crescent</B>, rests at his side.<BR><BR>
+      His gaze fixes on you, searching for weakness.<BR><BR>
+      "I am Hassim, once Champion of the <B>Sands of Blood</B>. Now I serve Omar al-Onyx—warlord, councilor, and the only man in Qasaria whose coin weighs heavier than his pride. Why do you disturb my vigil, stranger? Speak true. Weakness finds no mercy here."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I come seeking work. Do you have need of aid?" next="workIntro"/>
+    <Option text="You were champion of the arena? Tell me of your battles." next="arenaLore"/>
+    <Option text="What binds a champion like you to Omar al-Onyx?" next="omarAlOnyx"/>
+    <Option text="That lion helm... is it true you slew the beast yourself?" next="lionHelm"/>
+	<Option text="Tell me who you truly are, not just your title." next="whoIsHassim"/>
+    <Option text="I’m just passing by." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="arenaLore">
+    <NPCText>
+      <![CDATA[
+      Hassim’s lips curl into a faint smile.<BR><BR>
+      "I bled for Qasaria in the <B>Sands of Blood</B>. I faced beasts, men, and things best left unspoken. My brother Ramil fought beside me until he fell—betrayed by a coward’s blade, not a worthy foe.<BR><BR>
+      Every scar is a lesson. Every victory, a debt. The crowd cheered, but gold cannot mend what was lost in those sands."
+      ]]>
+    </NPCText>
+    <Option text="Did you ever seek vengeance for your brother?" next="brotherQuest"/>
+    <Option text="What do you do now as Omar’s bodyguard?" next="omarAlOnyx"/>
+    <Option text="I wish to earn a champion’s trust." next="workIntro"/>
+    <Option text="That is a grim tale. Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="omarAlOnyx">
+    <NPCText>
+      <![CDATA[
+      Hassim’s jaw clenches.<BR><BR>
+      "Omar al-Onyx knows the value of strength—and loyalty. He gave me purpose when the arena gave only emptiness. I keep his enemies at bay, watch his rivals for treachery, and ensure the Council of Jewels remembers who truly rules Qasaria’s streets.<BR><BR>
+      Yet even Omar cannot return what was stolen from me."
+      ]]>
+    </NPCText>
+    <Option text="What was stolen?" next="brotherQuest"/>
+    <Option text="I wish to prove myself to you." next="workIntro"/>
+    <Option text="You seem troubled by the past." next="brotherQuest"/>
+    <Option text="I’ll leave you to your vigil." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="lionHelm">
+    <NPCText>
+      <![CDATA[
+      Hassim throws back his head, baring his teeth in a grin.<BR><BR>
+      "Aye. The beast was brought from the deep desert—a sand lion, fierce and starved. I killed it with my bare hands before a crowd that hungered for my death.<BR>
+      I wear its mane so none forget: Hassim bows to no beast, man, or shadow."<BR><BR>
+      He taps the helm, pride clear in his voice.<BR>
+      "But even lions have kin. My brother fought at my side until the day he vanished."
+      ]]>
+    </NPCText>
+    <Option text="What became of your brother?" next="brotherQuest"/>
+    <Option text="Your story inspires me. How can I serve?" next="workIntro"/>
+    <Option text="Glory fades, scars remain. Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="brotherQuest">
+    <NPCText>
+      <![CDATA[
+      For a moment, Hassim’s bravado fades.<BR><BR>
+      "My brother, Ramil, fought as fiercely as any lion. When he fell, his soul was not at peace. The only thing I have left—a family heirloom, the <B>Ring of the Sun-Pride</B>—was stolen by Undermarket thieves as his body cooled.<BR>
+      I swore an oath: until that ring returns, I am but half a man."<BR><BR>
+      His fists tighten.<BR>
+      "I have chased rumors, bribed cowards, broken bones. But the Undermarket is a nest of vipers. Few dare its tunnels. Fewer still return."
+      ]]>
+    </NPCText>
+    <Option text="I will recover the Ring of the Sun-Pride for you." next="questIntro"/>
+    <Option text="Who leads the Undermarket thieves?" next="zahidLore"/>
+    <Option text="What makes this ring so precious?" next="ringLore"/>
+    <Option text="The Undermarket? I’ve no wish to cross them." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="zahidLore">
+    <NPCText>
+      <![CDATA[
+      Hassim’s voice is low.<BR><BR>
+      "Shadowmaster Zahid rules the Undermarket with daggers and whispers. If the ring is not in his vault, it is in the hands of Nadia the Dagger—his right hand and left conscience. They trade in secrets and blood.<BR>
+      Trust no one in those tunnels. Gold and betrayal are one and the same beneath Qasaria’s streets."
+      ]]>
+    </NPCText>
+    <Option text="I will search for the ring." next="questIntro"/>
+    <Option text="That is too dangerous for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ringLore">
+    <NPCText>
+      <![CDATA[
+      Hassim’s gaze turns inward.<BR><BR>
+      "It is all that remains of my mother’s line—a signet passed to Ramil when I took the arena’s oath. It was to be returned to me upon his death. Instead, thieves stole it with his last breath.<BR>
+      In Qasaria, honor is as rare as water. Help me reclaim it, and I will owe you a debt none could buy."
+      ]]>
+    </NPCText>
+    <Option text="I will retrieve the ring." next="questIntro"/>
+    <Option text="I am not interested in old rings." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="workIntro">
+    <NPCText>
+      <![CDATA[
+      Hassim studies you for a long moment.<BR><BR>
+      "Many come to the arena seeking glory. Few leave with honor. If you are as bold as you claim, prove it: help me reclaim my brother’s lost heirloom from the Undermarket’s grasp.<BR><BR>
+      Succeed, and you gain more than coin—you gain my respect, and the protection of Omar al-Onyx himself. Fail, and the shadows will swallow your name."<BR><BR>
+      Will you accept this challenge?"
+      ]]>
+    </NPCText>
+    <Option text="I accept. Give me any clue you have." 
+            action="GiveItem:FactionDeliveryQuestScroll(Ring of the Sun-Pride,Undermarket,500)" 
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="What dangers lie in the Undermarket?" next="undermarketLore"/>
+    <Option text="Why should I trust you?" next="trustLore"/>
+    <Option text="Not today, champion." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      Hassim presses a battered scrap of parchment into your hand.<BR><BR>
+      "This is what I know: The ring is said to bear the mark of the <B>Sun-Pride</B>, a lion beneath a rising sun. Last seen in the hands of a sallow thief called <B>Rahil</B>. He drinks at the Silk Shadow tavern, beneath the grand bazaar. Pay him enough, and he’ll talk. Pay too much, and he’ll betray you to Zahid.<BR><BR>
+      Bring me the ring, and Qasaria will know your name."<BR>
+      (A new quest has been added to your journal!)
+      ]]>
+    </NPCText>
+    <Option text="I will find this Rahil and retrieve the ring." 
+            action="GiveItem:FactionDeliveryQuestScroll(Ring of the Sun-Pride,Undermarket,500)" 
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="What if Zahid’s men confront me?" next="zahidWarning"/>
+    <Option text="I need more time to prepare." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="undermarketLore">
+    <NPCText>
+      <![CDATA[
+      Hassim’s eyes narrow.<BR><BR>
+      "The Undermarket is a maze of tunnels, traps, and worse. Shadowmaster Zahid’s spies are everywhere. If you go, trust no one. Many have entered for less than a ring—and never returned."<BR>
+      He leans in.<BR>
+      "If you find the ring, bring it to me in secret. There are those among the Council who would use it to buy my loyalty. I serve only honor—and my own."
+      ]]>
+    </NPCText>
+    <Option text="I will take the risk." 
+            action="GiveItem:FactionDeliveryQuestScroll(Ring of the Sun-Pride,Undermarket,500)" 
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I must reconsider." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="trustLore">
+    <NPCText>
+      <![CDATA[
+      Hassim’s glare is unwavering.<BR><BR>
+      "Trust is earned, not given. Bring me the ring, and you will see the measure of my gratitude. Betray me, and you will learn why even the lions of the arena whisper my name in fear."
+      ]]>
+    </NPCText>
+    <Option text="I accept your challenge." 
+            action="GiveItem:FactionDeliveryQuestScroll(Ring of the Sun-Pride,Undermarket,500)" 
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I do not deal in threats." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="zahidWarning">
+    <NPCText>
+      <![CDATA[
+      Hassim grins, savage and cold.<BR><BR>
+      "If Zahid’s men confront you, remember this: gold buys silence, steel buys fear. But true strength is walking away with your honor intact.<BR>
+      If you are forced to choose, choose wisely. Mercy is rare in the Undermarket."
+      ]]>
+    </NPCText>
+    <Option text="I’ll do what I must." next="accept"/>
+    <Option text="I think I’ll pass on this quest." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Hassim clasps your forearm, gaze fierce.<BR><BR>
+      "Go, then. Return with the <B>Ring of the Sun-Pride</B>—or not at all. The lions of Qasaria watch."<BR>
+      (Quest started: The Lost Heirloom of Hassim)
+      ]]>
+    </NPCText>
+    <Option text="I will not fail you, champion." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Hassim turns away, his massive shoulders blocking out the sun.<BR>
+      "Go, then. Return if you ever find your courage—or lose your weakness."
+      ]]>
+    </NPCText>
+    <Option text="Perhaps another time, champion." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="whoIsHassim">
+  <NPCText>
+    <![CDATA[
+    Hassim grunts, folding his massive arms.<BR><BR>
+    "Few ask that. Fewer still deserve the truth. But perhaps… you are worth more than a passing glance.<BR><BR>
+    I was not born in Qasaria’s glory. I was raised in the dust-ruined outer wastes—child of a runaway concubine and a lion-hunter. My brother and I learned early that strength is the only coin worth counting."<BR><BR>
+    He looks past you, gaze hard.<BR>
+    "Even now, I judge all things by it. But strength… comes in many forms."
+    ]]>
+  </NPCText>
+  <Option text="You mean physical strength?" next="strengthPhysical"/>
+  <Option text="Strength of will is greater." next="strengthWill"/>
+  <Option text="You sound bitter. Did life in the arena harden your heart?" next="arenaPain"/>
+  <Option text="I respect that you came from nothing." next="respect"/>
+</Dialogue>
+
+<Dialogue id="strengthPhysical">
+  <NPCText>
+    <![CDATA[
+    Hassim nods slowly.<BR><BR>
+    "Muscle can move mountains—and break bones. But strength of body fades with age. I saw giants fall to daggers in the dark. I broke a sand lion’s jaw, but could not protect my brother."<BR>
+    He clenches his fists. "A lesson bought in blood."
+    ]]>
+  </NPCText>
+  <Option text="Then what strength do you value now?" next="strengthWill"/>
+</Dialogue>
+
+<Dialogue id="strengthWill">
+  <NPCText>
+    <![CDATA[
+    "Will. Discipline. Loyalty."<BR><BR>
+    Hassim’s voice carries quiet conviction.<BR>
+    "To act despite fear. To stay true when all others fall. These are the strengths no arena can teach—and the ones Minax fears most."<BR><BR>
+    "I follow Omar because he understands this. But even he tests my patience with his alliances and games."
+    ]]>
+  </NPCText>
+  <Option text="Have you ever doubted Omar?" next="doubtOmar"/>
+  <Option text="Then why stay in his shadow?" next="whyServe"/>
+  <Option text="Your loyalty is admirable." next="loyaltyHonor"/>
+</Dialogue>
+
+<Dialogue id="arenaPain">
+  <NPCText>
+    <![CDATA[
+    Hassim’s eyes darken.<BR><BR>
+    "The arena makes you cruel… or dead. Each day I killed to live. And with each victory, a part of me died beside those I crushed.<BR>
+    My brother Ramil—he was the light that kept me human. When he fell, that light vanished. I kept fighting… but for the roar, not the reason."
+    ]]>
+  </NPCText>
+  <Option text="But you rose above that life." next="strengthWill"/>
+  <Option text="You need a new reason to fight." condition="KarmaAtLeast:0" next="reasonToFight"/>
+  <Option text="You should’ve walked away." condition="KarmaBelow:0" next="karmaLowJudgment"/>
+</Dialogue>
+
+<Dialogue id="respect">
+  <NPCText>
+    <![CDATA[
+    Hassim studies you for a moment, surprised.<BR><BR>
+    "Few nobles say that without sneering. You… you may yet carry the soul of the sand."<BR>
+    He taps the lion helm. "In the wastes, we say: only those who earn their names are worth remembering."
+    ]]>
+  </NPCText>
+  <Option text="What name did you earn?" next="earnedName"/>
+  <Option text="I strive to be remembered, too." next="gloryEcho"/>
+</Dialogue>
+
+<Dialogue id="earnedName">
+  <NPCText>
+    <![CDATA[
+    "The Lioned."<BR><BR>
+    "I killed the beast with bare hands… but it was the arena that gave me the name. Not for the lion I slew, but the <I>lion I became</I>—fierce, proud, untamed."<BR>
+    He lowers his voice. "But even lions can be caged. And I begin to feel the bars closing."
+    ]]>
+  </NPCText>
+  <Option text="Would you fight for freedom again?" next="freedomPath"/>
+  <Option text="You cage yourself with loyalty." next="whyServe"/>
+</Dialogue>
+
+<Dialogue id="gloryEcho">
+  <NPCText>
+    <![CDATA[
+    Hassim’s eyes gleam for a moment.<BR><BR>
+    "Then remember this: glory fades, but honor echoes. If you walk beside me, bring more than steel. Bring purpose."<BR><BR>
+    (Your fame grows from speaking with the arena legend.)
+    ]]>
+  </NPCText>
+  <Option text="I understand." action="Fame:+100"/>
+  <Option text="Thank you, Lioned." action="Close"/>
+</Dialogue>
+
+<Dialogue id="doubtOmar">
+  <NPCText>
+    <![CDATA[
+    Hassim growls, voice low.<BR><BR>
+    "Omar is no coward. But his ambition blinds him. He funds the Undermarket while pretending loyalty to the Council."<BR>
+    "If Minax offered him power enough… I fear he might take it."<BR><BR>
+    "I stay to watch. And if betrayal comes, I will stand between him and Qasaria. Even if it breaks the bond I swore."
+    ]]>
+  </NPCText>
+  <Option text="That’s a heavy burden." next="loyaltyHonor"/>
+  <Option text="Let me know if you ever need help against him." condition="KarmaAtLeast:500" action="SendMessage:Hassim nods once. 'I may call on you sooner than you think.'" />
+</Dialogue>
+
+<Dialogue id="whyServe">
+  <NPCText>
+    <![CDATA[
+    Hassim exhales slowly.<BR><BR>
+    "Because the city remembers champions only when they bleed for someone else’s banner."<BR>
+    "I serve Omar… for now. But my path ends when his crosses mine."<BR><BR>
+    "Until then, I guard his back. So long as he guards this city."
+    ]]>
+  </NPCText>
+  <Option text="Then let’s protect Qasaria—together." next="loyaltyHonor"/>
+</Dialogue>
+
+<Dialogue id="loyaltyHonor">
+  <NPCText>
+    <![CDATA[
+    "You speak with the heart of a lion," Hassim says solemnly.<BR><BR>
+    "I have known few who value honor in this city of masks. Perhaps… you are one."<BR>
+    (You feel a growing bond with Hassim. He may remember this when the time comes.)
+    ]]>
+  </NPCText>
+  <Option text="Thank you. Until we meet again." action="Karma:+250"/>
+</Dialogue>
+
+<Dialogue id="reasonToFight">
+  <NPCText>
+    <![CDATA[
+    Hassim narrows his eyes, testing your words.<BR><BR>
+    "Perhaps you are right. Perhaps strength without purpose is only destruction wearing pride."<BR>
+    "If you help me reclaim Ramil’s ring, perhaps I’ll believe you speak truth, not comfort."
+    ]]>
+  </NPCText>
+  <Option text="Then I will earn your trust." next="workIntro"/>
+</Dialogue>
+
+<Dialogue id="karmaLowJudgment">
+  <NPCText>
+    <![CDATA[
+    Hassim’s tone turns cold.<BR><BR>
+    "You speak easily of walking away. But you know nothing of the bonds forged in blood. Do not judge a lion for fighting the pit. You might not survive the gate."
+    ]]>
+  </NPCText>
+  <Option text="Perhaps I was wrong." action="Karma:-100"/>
+  <Option text="Say what you will. I speak truth." action="Close"/>
+</Dialogue>
+
+<Dialogue id="freedomPath">
+  <NPCText>
+    <![CDATA[
+    Hassim stares into the distance.<BR><BR>
+    "I dream of the sands—open, wild, unbound by coin or council. But dreams do not feed the city."<BR>
+    "Still… should a storm ever shatter the Council’s chains, I will ride its winds with open arms."<BR><BR>
+    (You sense Hassim may one day rebel against Omar—if pushed.)
+    ]]>
+  </NPCText>
+  <Option text="I’ll stand beside you, if that day comes." condition="KarmaAtLeast:300" action="Karma:+200"/>
+  <Option text="Storms are for fools and dead men." action="Karma:-100"/>
+</Dialogue>
+
+
+</DialogueFile>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="ArchmageSelaraVael">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#7fdfff'>
+      Before you stands a striking woman in a robe of deep azure, her crystalline diadem pulsing softly with power. The air crackles faintly as she turns her calculating gaze upon you.<BR><BR>
+      “Mortal, you approach the Spire of the Conclave, seat of Aerilon’s arcane authority. I am Archmage Selara Vael, master of the Azure Conclave and custodian of all that keeps this city aloft.<BR><BR>
+      Tell me, have you come seeking wisdom, ambition… or merely a task worthy of your talents?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek work worthy of Aerilon's renown." next="taskIntro"/>
+    <Option text="Who are you, Archmage Vael?" next="backstory"/>
+    <Option text="Tell me of the Azure Conclave." next="conclave"/>
+    <Option text="What is this city in the sky?" next="aerilonLore"/>
+	<Option text="I want to understand who you truly are." next="innerSelf"/>
+    <Option text="I’m just looking around." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Backstory branch -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      Selara lifts her chin, eyes distant.<BR><BR>
+      “I was born a Wind initiate, but grew weary of their cloistered secrets and stagnant traditions. I founded Aerilon so that magic and knowledge might rise—unfettered by the old order. For years I have held this city aloft, outwitted rivals, and repelled those who would see us brought low.<BR>
+      Trust is hard-earned among archmages; even now, my rival Corvus Deyne plots endlessly for advantage. Eryndil the Archivist, however, remains my most reliable advisor—though even he knows that secrets have a weight of their own.”
+      ]]>
+    </NPCText>
+    <Option text="You sound burdened by many enemies." next="taskIntro"/>
+    <Option text="What of your rivalry with Corvus Deyne?" next="corvus"/>
+    <Option text="What wisdom does Eryndil bring you?" next="eryndil"/>
+    <Option text="I would like to serve Aerilon." next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="corvus">
+    <NPCText>
+      <![CDATA[
+      Selara’s voice cools.<BR><BR>
+      “Corvus Deyne is brilliant in matters of war—less so in judgment. His obsession with strength blinds him to Minax’s corruption. Should he turn further, I may need hands willing to act where mine are bound by politics. But that is not today’s concern. For now, I require a more subtle task.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me of this task." next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="eryndil">
+    <NPCText>
+      <![CDATA[
+      “Eryndil sees what others miss, cataloging both knowledge and weakness. I trust him with the city’s deepest lore—though sometimes I wonder if he trusts me with the truth. Wisdom, like magic, is best wielded by the steady hand.”
+      ]]>
+    </NPCText>
+    <Option text="What task would you have of me?" next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="conclave">
+    <NPCText>
+      <![CDATA[
+      “The Azure Conclave is a council of six—archmages of varied temperament, each responsible for a sphere of the city. I rule by consensus, but consensus in Aerilon is as rare as silence. Power shifts as frequently as the winds below us. Remember: alliances may change, but Aerilon endures.”
+      ]]>
+    </NPCText>
+    <Option text="I am ready to serve the Conclave." next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="aerilonLore">
+    <NPCText>
+      <![CDATA[
+      “Aerilon floats by virtue of the Azure Crystals—artifacts drawn from the world’s shattered bedrock and bound by my Conclave’s will. Here, ambition takes flight, and knowledge is the coin of the realm. But beware: the higher one soars, the greater the fall.”
+      ]]>
+    </NPCText>
+    <Option text="How can I aid Aerilon’s ascent?" next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Selara arches a brow. “Very well. Wander as you will, but be mindful: Aerilon is no place for idle trespassers. Should you seek purpose, return and ask.”
+      ]]>
+    </NPCText>
+    <Option text="On second thought, do you have work?" next="taskIntro"/>
+    <Option text="I’ll be going now." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Introduction -->
+  <Dialogue id="taskIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#7fdfff'>
+      Selara’s eyes sharpen, her voice lowering conspiratorially.<BR><BR>
+      “Aerilon’s enemies grow bolder with every passing dusk. Yet our city is as reliant upon subtlety as on raw power. Today, I require a mortal agent for a delivery of utmost delicacy.<BR><BR>
+      In our arcane laboratories, we have created the ‘Azure Wheel of Transcendence’—a cheese infused with stabilizing magics. To most, it appears an eccentric delicacy, but to Aerilon’s mages, its essence fortifies the very crystals keeping our city aloft.<BR><BR>
+      You must deliver this Wheel, safely shielded, to a trusted Cheese Maker outside our walls. Only those with that trait may accept it; their art ensures the enchantment does not spoil. In exchange, you will earn the Conclave’s favor—no minor boon.<BR><BR>
+      But beware: there are those who would see this gift intercepted, especially agents of Minax or spies from Wind. Are you prepared for such a task?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I am ready. Give me the Azure Wheel of Transcendence."
+            action="GiveItem:FactionDeliveryQuestScroll(Cheese Maker,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Why cheese? Surely you jest, Archmage." next="whyCheese"/>
+    <Option text="Is this connected to Minax’s schemes?" next="minax"/>
+    <Option text="What risk is there on this errand?" next="risk"/>
+    <Option text="I need time to consider." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Selara produces a small, radiant wheel of cheese, sealed within a silvered box etched with runes.<BR><BR>
+      “Guard this well. The Azure Wheel’s power is subtle, but should it fall into the wrong hands, the consequences could be dire. Seek a true Cheese Maker outside Aerilon; only they possess the craft to preserve its enchantment.<BR><BR>
+      Return with proof of delivery, and you shall find Aerilon’s gates more open—and its mages less wary. Fail, and know that even the winds may not carry you safely home.”
+      ]]>
+    </NPCText>
+    <Option text="I will not fail you, Archmage." action="Close"/>
+  </Dialogue>
+
+  <!-- Cheese Lore -->
+  <Dialogue id="whyCheese">
+    <NPCText>
+      <![CDATA[
+      Selara almost smiles—a rare sight.<BR><BR>
+      “Magic and art often intersect in unexpected forms. The fermentation of cheese and the stabilization of Azure Crystals both require patience, delicacy, and a touch of madness. Our greatest crystal engineers are, oddly, former cheese makers.<BR>
+      Never underestimate the humble Wheel; in Aerilon, even lunch can be a matter of destiny.”
+      ]]>
+    </NPCText>
+    <Option text="Your reasoning is as sharp as this cheese, I suppose. I accept." 
+            action="GiveItem:FactionDeliveryQuestScroll(Cheese Maker,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I’ll leave the cheese to the experts." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax Lore -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      The Archmage’s voice drops to a whisper.<BR><BR>
+      “Minax’s agents hunger for any means to destabilize Aerilon. Some say she once corrupted an entire crop of Azure Crystals by poisoning a simple meal. Since then, I trust only those with the Cheese Maker’s touch.<BR>
+      This delivery, though humble, is a bulwark against her chaos.”
+      ]]>
+    </NPCText>
+    <Option text="Then I will ensure it reaches its destination." 
+            action="GiveItem:FactionDeliveryQuestScroll(Cheese Maker,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="This is too risky for me." action="Close"/>
+  </Dialogue>
+
+  <!-- Risk Explanation -->
+  <Dialogue id="risk">
+    <NPCText>
+      <![CDATA[
+      Selara fixes you with a steely gaze.<BR><BR>
+      “Few tasks in Aerilon are without peril. Minax’s spies lurk even among the cheese mongers, and Wind’s agents would dearly love to taste our secrets. Guard the Wheel well. Should trouble find you, do not hesitate to use the runes within the box—they will shield the Wheel, but only once.”
+      ]]>
+    </NPCText>
+    <Option text="I will deliver it with care." 
+            action="GiveItem:FactionDeliveryQuestScroll(Cheese Maker,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Perhaps I am not suited for this after all." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="innerSelf">
+  <NPCText>
+    <![CDATA[
+    Selara's expression falters for a brief moment—just enough to glimpse the weight she carries.<BR><BR>
+    "Curious. Most who stand before me only seek power, not truth. Very well, mortal. Ask your questions, and I shall answer. But know this: not all knowledge is a blessing."
+    ]]>
+  </NPCText>
+  <Option text="Why did you leave Wind?" next="leftWind"/>
+  <Option text="What do you fear most?" next="herFears"/>
+  <Option text="Is there anyone you trust fully?" next="trustIssues"/>
+  <Option text="Do you ever regret building Aerilon?" next="regret"/>
+  <Option text="Enough questions for now." action="Close"/>
+</Dialogue>
+
+<Dialogue id="leftWind">
+  <NPCText>
+    <![CDATA[
+    Selara folds her arms, voice low.<BR><BR>
+    "Wind was once my home. I was taught among the Crystalline Arches, where silence is law and secrets outweigh truth. But when I uncovered a forbidden text—one that spoke of shaping reality through resonance—they banished me.<BR><BR>
+    I left not in shame, but in purpose. I would build a city that spoke openly of power. I would outfly them all."
+    ]]>
+  </NPCText>
+  <Option text="Do you still miss Wind?" next="missWind"/>
+  <Option text="Sounds like you made the right choice." next="affirmation"/>
+</Dialogue>
+
+<Dialogue id="missWind">
+  <NPCText>
+    <![CDATA[
+    “I miss the stillness. The stars above the Echo Chambers. A young woman named Mira who taught me illusion before she was… silenced. But those days are shards of the past. And shards cut, if you cling to them.”
+    ]]>
+  </NPCText>
+  <Option text="Thank you for sharing. Let’s continue." next="innerSelf"/>
+</Dialogue>
+
+<Dialogue id="affirmation">
+  <NPCText>
+    <![CDATA[
+    She gives a rare nod of approval.<BR><BR>
+    “Perhaps. Though every choice carries weight. And the higher one climbs, the more wind bites at your heels.”
+    ]]>
+  </NPCText>
+  <Option text="Let’s go on." next="innerSelf"/>
+</Dialogue>
+
+<Dialogue id="herFears">
+  <NPCText>
+    <![CDATA[
+    Selara turns away briefly.<BR><BR>
+    “What do I fear? Loss of control. That the crystals will fall. That Corvus will one day force my hand. That Minax is right—that unity is a lie.<BR>
+    But most of all, I fear I’ve become what I hated most in Wind: a keeper of secrets, too proud to share the burden.”
+    ]]>
+  </NPCText>
+  <Option text="You’re not alone in this fight." next="empathy">
+    <Action>PlaySound:0x015</Action>
+  </Option>
+  <Option text="That’s your burden to carry." next="harshTruth"/>
+</Dialogue>
+
+<Dialogue id="empathy">
+  <NPCText>
+    <![CDATA[
+    She exhales slowly.<BR><BR>
+    “Few say that. Fewer mean it. I shall remember your words, and perhaps... reward them.”<BR><BR>
+    <BASEFONT COLOR='#94ecbe'><I>You feel a subtle warmth pass through your spine.</I></BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="What was that?" 
+          condition="!HasAttachment:SelaraEmpathyBooster"
+          action="AddStat:Int,2,1800;AttachXml:SelaraEmpathyBooster"
+          next="mysteryBooster"/>
+</Dialogue>
+
+<Dialogue id="mysteryBooster">
+  <NPCText>
+    <![CDATA[
+    “Just a whisper of insight. A temporary spark of clarity... for those who remind me that I am not a goddess, but a woman with burdens.”
+    ]]>
+  </NPCText>
+  <Option text="Let’s talk more." next="innerSelf"/>
+</Dialogue>
+
+<Dialogue id="harshTruth">
+  <NPCText>
+    <![CDATA[
+    “Indeed. I chose this path. I shall walk it until the crystals fall or I do.”<BR><BR>
+    Her voice becomes clipped. “Now—was there anything else, or are we done?”
+    ]]>
+  </NPCText>
+  <Option text="I still have questions." next="innerSelf"/>
+  <Option text="We are done." action="Close"/>
+</Dialogue>
+
+<Dialogue id="trustIssues">
+  <NPCText>
+    <![CDATA[
+    “Eryndil knows more than most. But even he cloaks his wisdom in riddles. Corvus was once a dear friend... before ambition curdled his mind.<BR><BR>
+    Perhaps that is why I ask favors of strangers. They have yet to betray me.”
+    ]]>
+  </NPCText>
+  <Option text="You can trust me, for what it’s worth." next="smallSmile"/>
+  <Option text="I suppose I’ll earn your trust eventually." next="cautiousHope"/>
+</Dialogue>
+
+<Dialogue id="smallSmile">
+  <NPCText>
+    <![CDATA[
+    Selara almost smiles.<BR><BR>
+    “Then perhaps Aerilon has not yet flown beyond hope. Let us speak more.”
+    ]]>
+  </NPCText>
+  <Option text="I’d like to hear about your regrets." next="regret"/>
+  <Option text="Let’s return to other matters." next="innerSelf"/>
+</Dialogue>
+
+<Dialogue id="cautiousHope">
+  <NPCText>
+    <![CDATA[
+    “We shall see. Just remember: in Aerilon, eyes are everywhere—even the ones etched into the floor tiles.”
+    ]]>
+  </NPCText>
+  <Option text="Understood. More questions?" next="innerSelf"/>
+</Dialogue>
+
+<Dialogue id="regret">
+  <NPCText>
+    <![CDATA[
+    Selara grows silent.<BR><BR>
+    “I regret the boy who fell from the low platforms when I ordered a redirection of power without warning. I regret the lovers I turned away, convinced my duty was more important. And sometimes... I regret building Aerilon at all. The city was meant to be a beacon, not a battleground.”<BR><BR>
+    She straightens, voice colder. “But regret is unproductive. Action shapes the future, not tears.”
+    ]]>
+  </NPCText>
+  <Option text="Your strength is in your honesty." next="praiseSelara"/>
+  <Option text="Perhaps you’ve grown too cold." next="challengeSelara"/>
+</Dialogue>
+
+<Dialogue id="praiseSelara">
+  <NPCText>
+    <![CDATA[
+    “You see more than most. That is rare. And valued.”<BR><BR>
+    <BASEFONT COLOR='#d7cdfc'><I>Your words carry weight in the mind of an Archmage...</I></BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Let’s move forward together." action="Fame:150" next="innerSelf"/>
+</Dialogue>
+
+<Dialogue id="challengeSelara">
+  <NPCText>
+    <![CDATA[
+    Her eyes sharpen.<BR><BR>
+    “Cold preserves. Cold kills. And cold builds towers that touch the stars. If warmth ruled the sky, we’d all be ashes by now.”<BR><BR>
+    Then, with a sigh: “Still… I will reflect upon your words.”
+    ]]>
+  </NPCText>
+  <Option text="Thank you for sharing, Archmage." next="innerSelf"/>
+</Dialogue>
+
+
+</DialogueFile>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="CaptainBryndra">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aee7fa'>
+      You see a woman in battered, pale-blue armor, her cloak trailing frost at the hem. She stands tall amid the snowdrifts, one gauntlet resting on the hilt of a broadsword, eyes always scanning the horizon.
+      <BR><BR>
+      "If you’re lost, the inn’s behind you. If you’re a troublemaker, I’ll know before you blink. And if you’re here to serve Frostmere, then speak quick and speak true. I’m Captain Bryndra, commander of the Frostguard. What do you need?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I want to help defend Frostmere." next="questIntro"/>
+    <Option text="Are the mages giving you trouble again?" next="mageTrouble"/>
+    <Option text="How did you end up in Frostmere, Bryndra?" next="origin"/>
+    <Option text="That’s quite the armor set—each piece has a name?" next="armor"/>
+    <Option text="Just passing through." next="passing"/>
+  </Dialogue>
+
+  <!-- Asking about armor -->
+  <Dialogue id="armor">
+    <NPCText>
+      <![CDATA[
+      Bryndra allows a small, prideful smirk.<BR><BR>
+      "Every piece was earned or forged right here—no city-forged parade mail. This helm’s Ironbrow’s Crest, courtesy of Garrik the Blacksmith—bested a frost troll for the right to wear it. Chillward Collar, to keep the wind from cutting my throat. Frostguard Hauberk, Defiant Gaiters, Snowbreaker Boots… each scar on ‘em has a story."
+      <BR><BR>
+      She taps her shield, the Wall of Resolve.<BR>
+      "I wear my battles. Each one reminds me who I’m protecting—and what I’m willing to lose."
+      ]]>
+    </NPCText>
+    <Option text="Impressive. How can I earn gear like that?" next="questIntro"/>
+    <Option text="You must trust Garrik the Blacksmith a lot." next="garrik"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <!-- Garrik relationship -->
+  <Dialogue id="garrik">
+    <NPCText>
+      <![CDATA[
+      She snorts, but her expression softens.<BR><BR>
+      "Garrik’s got more skill than sense. He’s stubborn, but he cares for Frostmere almost as much as I do. Couldn’t hold this place without his ice-tempered steel—or his bellowing. We disagree plenty, but when trouble’s on the wind, I want him by my side."
+      ]]>
+    </NPCText>
+    <Option text="Speaking of trouble, is there a threat right now?" next="questIntro"/>
+    <Option text="I’ll look for him at the forge. Thanks." action="Close"/>
+  </Dialogue>
+
+  <!-- Mage drama -->
+  <Dialogue id="mageTrouble">
+    <NPCText>
+      <![CDATA[
+      Her jaw tightens, voice clipped.<BR><BR>
+      "Trouble is their specialty. Elder Aelric plays secrets close as a frost drake, and Kaelen’s head is always in some dangerous book. I respect their power, but power unchecked brings disaster. Someone must keep them honest—and keep this village safe from magical mistakes."
+      <BR><BR>
+      She lowers her voice.<BR>
+      "Irinya sees more than she says. If you want the truth, sometimes you need to listen between words. But if you want action, you come to me."
+      ]]>
+    </NPCText>
+    <Option text="Is there a problem you want handled?" next="questIntro"/>
+    <Option text="Sounds like you don’t trust mages." next="trustMages"/>
+    <Option text="Let’s change the subject." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="trustMages">
+    <NPCText>
+      <![CDATA[
+      "Trust must be proven, especially with magic. We lost Trinsic to Minax’s corruption—too many put faith in spellcasters and not enough in blades. Here, everyone earns their place. Even the mages."
+      ]]>
+    </NPCText>
+    <Option text="How can I earn yours?" next="questIntro"/>
+    <Option text="I understand. Let’s talk about Frostmere’s needs." next="questIntro"/>
+  </Dialogue>
+
+  <!-- Passing through -->
+  <Dialogue id="passing">
+    <NPCText>
+      <![CDATA[
+      Bryndra shrugs, scanning the distance.<BR><BR>
+      "Then keep your head low and don’t get caught outside at night. This tundra eats the unprepared. But if your conscience wakes you, find me—I’ll always have work for a willing arm."
+      ]]>
+    </NPCText>
+    <Option text="Actually, I want to help now." next="questIntro"/>
+    <Option text="I’ll move along. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Bryndra's origin -->
+  <Dialogue id="origin">
+    <NPCText>
+      <![CDATA[
+      She glances away, voice hard.<BR><BR>
+      "I was Trinsic born—a captain there, before Lord British vanished and Minax’s monsters walked the walls. Watched too many friends fall to magic gone wrong. So I gathered survivors, marched them north, and found a new purpose in this frozen end of the world."
+      <BR><BR>
+      Her grip tightens on her sword.<BR>
+      "I’m no one’s hero. I just swore I’d never leave another village unguarded. Not while I live."
+      ]]>
+    </NPCText>
+    <Option text="I respect that. How can I help?" next="questIntro"/>
+    <Option text="Why stay in Frostmere?" next="whyStay"/>
+  </Dialogue>
+
+  <Dialogue id="whyStay">
+    <NPCText>
+      <![CDATA[
+      "Because here, every day is a battle worth fighting—and the folk here know the cost of surrender. We have no time for weakness or empty titles. If I can keep even one child safe from Minax’s shadow, it’s worth every frozen morning."
+      ]]>
+    </NPCText>
+    <Option text="You have my respect. Anything urgent needing done?" next="questIntro"/>
+    <Option text="I wish you luck. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Offer -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aee7fa'>
+      Bryndra’s gaze sharpens, voice lowering.<BR><BR>
+      "If you want to prove your worth to Frostmere, we’ve got a fresh nightmare. There’s a Crystal Changeling—shapeshifter, glimmering like a walking mirror, and twice as sly. It’s been haunting our supply roads, ambushing scouts and mimicking villagers. Last week, it wore Garrik’s face to try and lure a patrol into an ambush."
+      <BR><BR>
+      She gestures toward the icy pines.<BR>
+      "Left unchecked, it’ll gut this village from within. The beast is cunning, quick, and, if rumors are true, it feeds on spilled blood and secrets. Bring me proof—its Heart-Shard, cold and clear as diamond—and you’ll earn more than gold. You’ll earn Frostmere’s trust."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Describe this Crystal Changeling for me." next="changelingDetails"/>
+    <Option text="How did it get here? Is Minax involved?" next="changelingMinax"/>
+    <Option text="Has it hurt anyone close to you?" next="changelingPersonal"/>
+    <Option text="I’ll hunt it. How do I prove the kill?"
+      action="GiveItem:FactionKillQuestScroll(CrystalChangeling,1,Frostmere,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="questAccept"/>
+    <Option text="Maybe later. I need to prepare." action="Close"/>
+  </Dialogue>
+
+  <!-- Changeling Details -->
+  <Dialogue id="changelingDetails">
+    <NPCText>
+      <![CDATA[
+      Bryndra’s eyes narrow.<BR><BR>
+      "It can mimic the voice and manner of anyone it sees. Watch for the eyes—no matter whose face it wears, its eyes shimmer like cracked ice. It can shatter into fragments and reform elsewhere; a sword to the back won’t finish it unless you smash its Heart-Shard."
+      <BR><BR>
+      "Be wary—don’t trust any lone travelers out there, and don’t believe every friendly face. That’s how it gets you."
+      ]]>
+    </NPCText>
+    <Option text="Has it ever impersonated you?" next="changelingPersonal"/>
+    <Option text="I’m ready. Give me the quest scroll."
+      action="GiveItem:FactionKillQuestScroll(CrystalChangeling,1,Frostmere,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="questAccept"/>
+    <Option text="Not right now." action="Close"/>
+  </Dialogue>
+
+  <!-- Changeling & Minax connection -->
+  <Dialogue id="changelingMinax">
+    <NPCText>
+      <![CDATA[
+      She frowns, lowering her voice.<BR><BR>
+      "I suspect it’s Minax’s doing. When the Obelisk pulses, these things crawl from the snow. They crave secrets—just like her cultists. If it’s feeding on our doubts, then we’re already under siege, blade or no blade."
+      <BR><BR>
+      "You’ll find it stalking the old cairn road, west of the village, where the ground shines with scattered crystal. Don’t go alone."
+      ]]>
+    </NPCText>
+    <Option text="Anyone survived an encounter?" next="changelingPersonal"/>
+    <Option text="I’m ready. Give me the quest scroll."
+      action="GiveItem:FactionKillQuestScroll(CrystalChangeling,1,Frostmere,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="questAccept"/>
+    <Option text="Another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Has it hurt anyone close? -->
+  <Dialogue id="changelingPersonal">
+    <NPCText>
+      <![CDATA[
+      She hesitates, then nods curtly.<BR><BR>
+      "Took my second-in-command, Merrow, two nights past—left only a frozen husk. It’s been toying with Garrik too, imitating his laugh to lure hunters astray. I can’t be everywhere. I need someone I can trust to finish this."
+      ]]>
+    </NPCText>
+    <Option text="I’ll do it for Merrow." 
+      action="GiveItem:FactionKillQuestScroll(CrystalChangeling,1,Frostmere,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="questAccept"/>
+    <Option text="I’ll return when ready." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept quest -->
+  <Dialogue id="questAccept">
+    <NPCText>
+      <![CDATA[
+      Bryndra claps your shoulder, her grip iron.<BR><BR>
+      "Good. Don’t take risks—strike fast, and don’t trust anyone’s face but your own. Bring me the Heart-Shard, and you’ll have Frostmere’s gratitude—and maybe even a piece of gear worth a true defender."
+      ]]>
+    </NPCText>
+    <Option text="I’ll return victorious." action="Close"/>
+  </Dialogue>
+
+</DialogueFile>

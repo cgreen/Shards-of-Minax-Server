@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="EldaMatchstickVarn">
+
+  <!-- === Root Greeting === -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#FF8C00'>
+      Before you is a small, flame-haired girl with an impish grin and soot-smudged cheeks. She wears a blouse that flickers with ember patterns, an apron stitched from burnt fabrics, and a skirt with ashen frays. Her fingers clutch a burnt twig, and there's a strange intensity in her bright eyes.
+      <BR><BR>
+      "Oi! Don’t come too close—I run hot. That’s what Lira says anyway. I’m Elda, but most just call me Matchstick. If you’re looking for warmth or mischief, I’m the one to find! Mind the cold—makes me sneeze fire, and that gets messy. So, what brings you to the White Boar’s hearth?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I heard you’re the bravest in Frostmere. Is it true?" next="bravest"/>
+    <Option text="What’s with all the fire, Matchstick?" next="fire"/>
+    <Option text="I’m looking for work. Anyone need help?" next="questIntro"/>
+	<Option text="Tell me more about you, Matchstick." next="aboutMatchstick"/>
+    <Option text="Just staying warm. Thanks!" next="warm"/>
+  </Dialogue>
+
+  <!-- === Bravest branch === -->
+  <Dialogue id="bravest">
+    <NPCText>
+      <![CDATA[
+      Elda puffs up with pride, eyes sparkling.<BR>
+      "Bravest? Ha! I out-ran a blizzard spirit last month and scared off a frost wolf with just a candle! Lira says I’m reckless, but someone’s gotta keep the cold in its place. Bryndra wanted to send me away—said I’m too dangerous to have in the village. She’s never seen me save Kaelen from his own icy spells, though! And Svala? She bets I’ll melt the Obelisk before I turn twelve."
+      ]]>
+    </NPCText>
+    <Option text="You and Lira close?" next="lira"/>
+    <Option text="Are you really dangerous?" next="dangerous"/>
+    <Option text="That’s impressive! Need a hand with anything?" next="questIntro"/>
+    <Option text="Good luck with the cold, Matchstick." action="Close"/>
+  </Dialogue>
+
+  <!-- === Fire branch === -->
+  <Dialogue id="fire">
+    <NPCText>
+      <![CDATA[
+      She giggles, spinning her burnt twig between nimble fingers.<BR>
+      "Can’t stand the chill, and the cold hates me back! If I don’t keep a flame nearby, my nose goes all tingly and—<i>boom</i>—something catches fire. Kaelen says I’m ‘elementally unstable’—big words for a boy who froze his own boots last week. Elder Aelric says I’ve got ‘untamed potential’… but really, I just get shivery without a spark. Lira keeps an eye out so I don’t burn the inn again."
+      ]]>
+    </NPCText>
+    <Option text="Ever wish you were just normal?" next="normal"/>
+    <Option text="What happens if you sneeze in your sleep?" next="sneeze"/>
+    <Option text="Can I help you with anything?" next="questIntro"/>
+    <Option text="Stay fiery, Matchstick." action="Close"/>
+  </Dialogue>
+
+  <!-- === Work/Quest branch === -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      Elda’s face goes suddenly serious, eyes darting to the frosted window.<BR>
+      "Actually… there <i>is</i> something. Down by the ice fields, near Widow Corla’s old shanty, something’s been scuttling at night—leaving frosty webs and biting holes in firewood stacks. Kaelen calls it a FrostedWidowSpider, and Irinya says its venom’s colder than my worst fever. I can’t get near or I’ll end up in the healers’ shed for days. But someone has to stop it before it freezes all my kindling—or worse, <i>me</i>!"
+      <BR><BR>
+      "If you’re brave and not too chilly yourself, would you chase off or squish that spidery pest for me? I’ll give you a special fire-charm I made—guaranteed to keep your socks toasty, or your boots back in fashion!"
+      ]]>
+    </NPCText>
+    <Option text="I’ll take care of the FrostedWidowSpider for you." 
+      action="GiveItem:FactionKillQuestScroll(FrostedWidowSpider,1,Frostmere,250)" 
+      condition="!HasItem:FactionKillQuestScroll" next="accept"/>
+    <Option text="What makes this spider so scary?" next="spider"/>
+    <Option text="Why don’t you ask Captain Bryndra or Svala for help?" next="npcWhyNot"/>
+    <Option text="Do you think this is Minax’s doing?" next="minax"/>
+    <Option text="Maybe another time, Matchstick." action="Close"/>
+  </Dialogue>
+
+  <!-- === Lira relationship branch === -->
+  <Dialogue id="lira">
+    <NPCText>
+      <![CDATA[
+      Elda smiles warmly.<BR>
+      "Lira’s the best! She lets me sleep by the hearth and always has burnt honey bread when I wake up coughing. When I get in trouble—and I do, a lot—she just sighs and gives me her famous ‘brew for reckless children.’ Kaelen tries to help, but he’s busy with his icy experiments. Lira’s more patient than the snow is stubborn."
+      ]]>
+    </NPCText>
+    <Option text="She sounds wonderful. Can I help you with something?" next="questIntro"/>
+    <Option text="Hope you stay safe together." action="Close"/>
+  </Dialogue>
+
+  <!-- === Are you dangerous? branch === -->
+  <Dialogue id="dangerous">
+    <NPCText>
+      <![CDATA[
+      Elda chews her lip.<BR>
+      "I don’t mean to be. It’s just… the magic gets itchy. If I’m scared or sad or too cold, sometimes things catch fire. The stable roof, my shoes, once even Aelric’s beard—he still glares when I giggle. But mostly I help! I keep the inn warm during blizzards and scare off little frost-spirits when they poke their noses in. I’m only dangerous if you hate surprises."
+      ]]>
+    </NPCText>
+    <Option text="I don’t mind surprises. Anything I can help with?" next="questIntro"/>
+    <Option text="Try not to burn the town down, okay?" action="Close"/>
+  </Dialogue>
+
+  <!-- === Normal? branch === -->
+  <Dialogue id="normal">
+    <NPCText>
+      <![CDATA[
+      She wrinkles her nose.<BR>
+      "Normal is boring. No one sings about the normal girl who never set her mittens alight, right? Sometimes I wish I could hug a snowball or dance in a blizzard without sneezing. But then I remember: if I was normal, who’d light the Yule logs or keep Lira’s tea bubbling through the night?"
+      ]]>
+    </NPCText>
+    <Option text="That’s a good point! Anything you need help with?" next="questIntro"/>
+    <Option text="Stay fiery, Elda." action="Close"/>
+  </Dialogue>
+
+  <!-- === Sneeze in sleep? branch === -->
+  <Dialogue id="sneeze">
+    <NPCText>
+      <![CDATA[
+      She laughs.<BR>
+      "Last time, I woke up in the woodpile! Lira had to put out three little fires with her tea kettle. Now I sleep under a quilt stuffed with heatstones—works most nights, unless there’s a storm or Kaelen’s casting spells again. If you ever see smoke from the chimney at midnight, it’s probably just me dreaming of summer."
+      ]]>
+    </NPCText>
+    <Option text="That’s adorable. Need help with anything?" next="questIntro"/>
+    <Option text="Rest well, Matchstick." action="Close"/>
+  </Dialogue>
+
+  <!-- === Warm? branch === -->
+  <Dialogue id="warm">
+    <NPCText>
+      <![CDATA[
+      "Stay warm, friend. If you need a spark, just ask! And watch your step outside—frost bites worse than flames."
+      ]]>
+    </NPCText>
+    <Option text="Will do. Take care, Matchstick." action="Close"/>
+  </Dialogue>
+
+  <!-- === Spider scary? branch === -->
+  <Dialogue id="spider">
+    <NPCText>
+      <![CDATA[
+      "It’s big as a milk goat and twice as mean! Kaelen says its silk can freeze a flame in mid-air, and its bite makes even Svala’s wolfdog shiver for hours. Lira found its web in the woodpile—nearly lost her favorite mug. Irinya says the spider’s angry because something’s wrong with the Obelisk, but I just think it hates my fire. Will you help before it turns my toes to ice cubes?"
+      ]]>
+    </NPCText>
+    <Option text="I’ll squish the FrostedWidowSpider for you."
+      action="GiveItem:FactionKillQuestScroll(FrostedWidowSpider,1,Frostmere,250)" 
+      condition="!HasItem:FactionKillQuestScroll" next="accept"/>
+    <Option text="Maybe later." action="Close"/>
+  </Dialogue>
+
+  <!-- === NPC help? branch === -->
+  <Dialogue id="npcWhyNot">
+    <NPCText>
+      <![CDATA[
+      Elda frowns.<BR>
+      "Captain Bryndra says she’s too busy training the Frostguard—she thinks I should leave Frostmere and ‘find a safer life,’ whatever that means. Svala’s tough, but she’s out hunting frost elk for the whole village. Besides, I want someone who isn’t scared of a little weird magic. That could be you!"
+      ]]>
+    </NPCText>
+    <Option text="Alright, I’ll do it."
+      action="GiveItem:FactionKillQuestScroll(FrostedWidowSpider,1,Frostmere,250)" 
+      condition="!HasItem:FactionKillQuestScroll" next="accept"/>
+    <Option text="Not for me, sorry." action="Close"/>
+  </Dialogue>
+
+  <!-- === Minax? branch === -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Her voice drops to a whisper.<BR>
+      "Irinya thinks so. She says Minax’s minions creep through the ice at night, twisting creatures and making the Obelisk pulse like a heartbeat. Sometimes I hear voices in the chimney smoke, whispering names I don’t know. I just hope the spider isn’t one of hers—or if it is, that you’re strong enough to beat it."
+      ]]>
+    </NPCText>
+    <Option text="If Minax is behind it, I’ll be extra careful."
+      action="GiveItem:FactionKillQuestScroll(FrostedWidowSpider,1,Frostmere,250)" 
+      condition="!HasItem:FactionKillQuestScroll" next="accept"/>
+    <Option text="That’s unsettling. I’ll think about it." action="Close"/>
+  </Dialogue>
+
+  <!-- === Accept Quest === -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Elda beams, practically hopping with excitement.<BR>
+      "Thank you! You’re braver than Bryndra’s Frostguard and twice as clever. If you find any weird icy silk or extra legs, bring them back—Kaelen and I can make charms to keep the cold away! And, um, if you see my burnt mitten out there, it’s probably still smoking. Good luck!"
+      ]]>
+    </NPCText>
+    <Option text="I’ll bring you proof when the spider’s gone." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="aboutMatchstick">
+  <NPCText>
+    <![CDATA[
+    Elda tilts her head, smile flickering like candlelight.<BR>
+    "Me? I’m just a spark in the snow. I don’t really remember my parents—Lira says I showed up during a firestorm that melted the north gate and boiled the inn’s water barrels. They found me asleep in the ashes with singed braids and a fever hotter than a forge. Aelric says I’m 'touched by an element,' but no one’s sure what that means."
+    ]]>
+  </NPCText>
+  <Option text="Do you think you’re human?" next="elementalBlood"/>
+  <Option text="That sounds lonely." next="lonely"/>
+  <Option text="Any hobbies beyond lighting things on fire?" next="hobbies"/>
+  <Option text="Maybe that power can be used for something greater." next="greaterPurpose"/>
+  <Option text="Let’s talk about something else." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="elementalBlood">
+  <NPCText>
+    <![CDATA[
+    "Sometimes I wonder. I don’t feel cold like others—I feel pain. Like my blood rebels against the frost. When Kaelen tested my aura, his frost crystal cracked in half! Irinya says my dreams whisper in fire-tongue. I once sneezed and lit a torch two rooms away!"
+    <BR><BR>
+    "If I’m not human, maybe I’m fire wrapped in skin. Or maybe I’m just very unlucky."
+    ]]>
+  </NPCText>
+  <Option text="You’re unique, not unlucky." action="Fame:+25" next="warmth"/>
+  <Option text="Sounds like a curse." action="Karma:-10" next="curseReaction"/>
+  <Option text="That’s... mildly terrifying." next="laughItOff"/>
+</Dialogue>
+
+<Dialogue id="warmth">
+  <NPCText>
+    <![CDATA[
+    She blinks and blushes a little, looking away.<BR>
+    "You’re the first to say that. Most folks just keep water buckets nearby. Thanks... That’s warm in a good way."
+    ]]>
+  </NPCText>
+  <Option text="Glad to hear it. What else do you like?" next="hobbies"/>
+</Dialogue>
+
+<Dialogue id="curseReaction">
+  <NPCText>
+    <![CDATA[
+    Elda’s smile dims.<BR>
+    "Maybe you're right. Curses don’t usually come with mittens, though. Still, if this fire inside me ever hurts someone, I’d rather it hurt me instead."
+    ]]>
+  </NPCText>
+  <Option text="You’re stronger than you know." next="greaterPurpose"/>
+  <Option text="Sorry. That came out wrong." action="Karma:+10" next="warmth"/>
+</Dialogue>
+
+<Dialogue id="laughItOff">
+  <NPCText>
+    <![CDATA[
+    She cackles.<BR>
+    "A little fire keeps people on their toes, right? I’m practically public safety training! Stick with me and you’ll learn the fine art of putting out scarf fires."
+    ]]>
+  </NPCText>
+  <Option text="That sounds... useful?" next="hobbies"/>
+</Dialogue>
+
+<Dialogue id="lonely">
+  <NPCText>
+    <![CDATA[
+    Elda pauses, eyes flickering like a dimming coal.<BR>
+    "Yeah… Sometimes it’s lonely. Kaelen tries, but he’s always chasing answers in the ice. Lira is my whole world, really. I dream of fire-kin—others like me who don’t shiver at night. But for now, I talk to the hearth and the steam from my tea."
+    ]]>
+  </NPCText>
+  <Option text="Maybe I can be a friend." action="Karma:+50" next="friendship"/>
+  <Option text="You should leave Frostmere someday." next="leaveTown"/>
+</Dialogue>
+
+<Dialogue id="friendship">
+  <NPCText>
+    <![CDATA[
+    Her face lights up like sunrise on snow.<BR>
+    "Really? I don’t get many visitors who don’t carry buckets or fear in their eyes. You’ve got neither. Thanks... I’ll save you my last fireberry tart."
+    ]]>
+  </NPCText>
+  <Option text="Looking forward to it." action="PlaySound:0x015" next="hobbies"/>
+</Dialogue>
+
+<Dialogue id="leaveTown">
+  <NPCText>
+    <![CDATA[
+    "Maybe someday. I hear the deserts of Qasaria are warm and shimmering. But if I leave… who’ll relight the hearth after blizzards? Who’ll boil Lira’s kettle when the wind howls? No. Not yet."
+    ]]>
+  </NPCText>
+  <Option text="You’ve got a hero’s heart." action="Fame:+50" next="greaterPurpose"/>
+</Dialogue>
+
+<Dialogue id="hobbies">
+  <NPCText>
+    <![CDATA[
+    She grins mischievously.<BR>
+    "I like building tiny furnaces out of tin scraps. I make fireberry pies. Oh! And I collect burnt things—leaves, bones, sticks, once even a melted snowflake. I call them my 'ashlings.' Lira says it’s creepy, but Kaelen thinks it’s 'elemental taxonomy.' That means science-y fire junk!"
+    ]]>
+  </NPCText>
+  <Option text="Can I see your ashlings sometime?" next="ashlings"/>
+  <Option text="Sounds creative. Ever think about enchanting?" next="enchant"/>
+</Dialogue>
+
+<Dialogue id="ashlings">
+  <NPCText>
+    <![CDATA[
+    She claps excitedly.<BR>
+    "Yes! But only if you promise not to laugh. They’re sorted by burn smell. The pinecone from Irinya’s fire smells like moon tea. The scorched book page? Smells like secrets. Don’t ask how—I just know!"
+    ]]>
+  </NPCText>
+  <Option text="You’re a fire-scent oracle." next="enchant"/>
+</Dialogue>
+
+<Dialogue id="enchant">
+  <NPCText>
+    <![CDATA[
+    "Kaelen says I could one day forge 'Runes of Heatshaping.' Sounds cool, right? I wanna make a scarf that never ices up, or boots that melt snow as you walk. Lira just wants me to stop setting things on fire. But if I ever learn proper control..."
+    ]]>
+  </NPCText>
+  <Option text="You could be a master crafter one day." action="AddSkill:Blacksmith,5,180" next="greaterPurpose"/>
+</Dialogue>
+
+<Dialogue id="greaterPurpose">
+  <NPCText>
+    <![CDATA[
+    Elda’s gaze grows distant.<BR>
+    "You know… maybe the fire inside me isn’t just chaos. Maybe it’s something waiting to be aimed. Like a lantern in a blizzard—or a match before the dark."
+    ]]>
+  </NPCText>
+  <Option text="Whatever it is, I’ll help you find it." action="AttachXml:XmlQuestTracker,EldaBond" next="greeting"/>
+  <Option text="Let’s change the subject for now." next="greeting"/>
+</Dialogue>
+
+
+</DialogueFile>

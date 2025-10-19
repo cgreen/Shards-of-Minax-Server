@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="RakaMossfoot">
+
+  <!-- Greeting Node -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#85d16a'>
+      A wiry woman crouches beside an array of gnarled baskets, her robe damp with dew and spattered with earth. Strands of moss dangle from a crown of woven blooms. She sniffs the air, grins, and speaks in singsong rhyme:<BR><BR>
+      "A stranger sniffs the wind today—<BR>
+      Will you linger, trade, or stray?<BR>
+      Raka brews with root and cap—<BR>
+      But watch your wits, avoid the trap!"<BR><BR>
+      Her eyes glint expectantly.
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Who are you?" next="who"/>
+    <Option text="What do you brew?" next="brews"/>
+    <Option text="Any work for a wanderer?" next="questIntro"/>
+    <Option text="What’s that strange glow in your basket?" next="glow"/>
+	<Option text="Tell me about yourself, Raka." next="backstory_intro"/>
+    <Option text="Just passing by." next="goodbye"/>
+  </Dialogue>
+
+  <!-- Who is Raka? -->
+  <Dialogue id="who">
+    <NPCText>
+      <![CDATA[
+      She bows, arms akimbo.<BR><BR>
+      "Raka, finder of spores and shade,<BR>
+      Weaver of sleep and fevered parade.<BR>
+      From dew-kissed logs and leaf-strewn moor,<BR>
+      My wisdom grows with every spore."<BR>
+      ]]> 
+    </NPCText>
+    <Option text="What do you brew with those mushrooms?" next="brews"/>
+    <Option text="Any work for a wanderer?" next="questIntro"/>
+    <Option text="I’ll leave you to your fungi." next="goodbye"/>
+  </Dialogue>
+
+  <!-- Brewing lore -->
+  <Dialogue id="brews">
+    <NPCText>
+      <![CDATA[
+      Raka rattles a pouch of dried caps.<BR><BR>
+      "Teas for dreams and roots for health,<BR>
+      Draughts for courage, slips for stealth.<BR>
+      Potions for laughter, salves for pain—<BR>
+      All found beneath the falling rain.<BR><BR>
+      Care to taste, or perhaps assist? My shelves are full, but one thing is missed..."
+      ]]>
+    </NPCText>
+    <Option text="What are you missing?" next="questIntro"/>
+    <Option text="I’d like to try a brew." next="tryBrew"/>
+    <Option text="I’ll be on my way." next="goodbye"/>
+  </Dialogue>
+
+  <!-- Brew effects (random) -->
+  <Dialogue id="tryBrew">
+    <NPCText>
+      <![CDATA[
+      She grins slyly.<BR><BR>
+      "Sip and see what fate may spin—<BR>
+      For every brew a chance to win!"<BR><BR>
+      Raka hands you a pungent cup. Do you dare drink?
+      ]]>
+    </NPCText>
+    <Option text="Drink the brew." action="RandomChance:33;AddStat:Int,10,180;SendMessage:You feel your mind bloom with vibrant thoughts!" next="afterBrewGood"/>
+    <Option text="Drink the brew." action="RandomChance:33;AddSkill:Stealth,10,180;SendMessage:Your limbs tingle and fade—you move like mist!" next="afterBrewGood"/>
+    <Option text="Drink the brew." action="RandomChance:34;AddStat:Str,-5,120;SendMessage:Your head spins—perhaps too much mushroom..." next="afterBrewBad"/>
+    <Option text="No thank you." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="afterBrewGood">
+    <NPCText>
+      <![CDATA[
+      "See? Not all that’s wild will rot your tongue.<BR>
+      Return to Raka, and your legend’s sung!"
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Raka." next="greeting"/>
+  </Dialogue>
+  <Dialogue id="afterBrewBad">
+    <NPCText>
+      <![CDATA[
+      She laughs gently.<BR><BR>
+      "Some spores bring woe, some bring delight—<BR>
+      Fear not, friend, the world rights itself by night."
+      ]]>
+    </NPCText>
+    <Option text="I feel... strange." next="greeting"/>
+  </Dialogue>
+
+  <!-- Quest Introduction -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      Raka leans in, voice low and urgent.<BR><BR>
+      "A task for you, if moon be red—<BR>
+      A glowing cap, by legends led.<BR>
+      Bloodmoon shines, the mycelium wakes;<BR>
+      Find me the cap, for both our sakes.<BR><BR>
+      Will you seek the bioluminescent mushroom called the Bloodmoon Cap?"
+      ]]>
+    </NPCText>
+    <Option text="I’ll find your mushroom." 
+      action="GiveItem:BloodmoonMushroomQuestScroll(Raka Mossfoot, Verdant Tribes, 100)"
+      condition="!HasItem:BloodmoonMushroomQuestScroll"
+      next="questAccept"/>
+    <Option text="Why do you need this cap?" next="questWhy"/>
+    <Option text="That sounds dangerous." next="questDanger"/>
+    <Option text="Not interested." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="questWhy">
+    <NPCText>
+      <![CDATA[
+      "The Bloodmoon Cap in night does gleam—<BR>
+      Its visions fierce, its power supreme.<BR>
+      To ward the tribe from Minax’s blight,<BR>
+      I need its glow for ritual night."<BR><BR>
+      Will you bring it, when next the blood moon rises?"
+      ]]>
+    </NPCText>
+    <Option text="I’ll find your mushroom." 
+      action="GiveItem:BloodmoonMushroomQuestScroll(Raka Mossfoot, Verdant Tribes, 100)"
+      condition="!HasItem:BloodmoonMushroomQuestScroll"
+      next="questAccept"/>
+    <Option text="Not today, Raka." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="questDanger">
+    <NPCText>
+      <![CDATA[
+      "Red moon’s hour, the woods run wild—<BR>
+      Ghosts and shadows, none are mild.<BR>
+      But dangers great bring rewards sublime—<BR>
+      Will you brave the haunted time?"
+      ]]>
+    </NPCText>
+    <Option text="I will brave the blood moon." 
+      action="GiveItem:BloodmoonMushroomQuestScroll(Raka Mossfoot, Verdant Tribes, 100)"
+      condition="!HasItem:BloodmoonMushroomQuestScroll"
+      next="questAccept"/>
+    <Option text="On second thought, I’ll pass." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="questAccept">
+    <NPCText>
+      <![CDATA[
+      She tucks a dried sprig behind your ear.<BR><BR>
+      "Find the cap by blood moon’s shine—<BR>
+      In haunted groves where lost shades pine.<BR>
+      Bring it safe to Mossfoot’s hands,<BR>
+      And claim your gift from forest lands."
+      ]]>
+    </NPCText>
+    <Option text="I’ll return when I have the mushroom." action="Close"/>
+  </Dialogue>
+
+  <!-- When player returns with the Bloodmoon Cap (handled by quest logic) -->
+  <Dialogue id="questComplete">
+    <NPCText>
+      <![CDATA[
+      Raka’s eyes widen as you present the glowing cap.<BR><BR>
+      "By roots and rain, you’ve done it true!<BR>
+      My thanks, and now—let visions ensue!"<BR><BR>
+      She grinds the cap, mixing a steaming draught for you...
+      ]]>
+    </NPCText>
+    <Option text="Drink the Bloodmoon draught." action="RandomChance:40;AddStat:Int,15,300;SendMessage:Your mind shimmers with forest wisdom!" next="afterBrewGood"/>
+    <Option text="Drink the Bloodmoon draught." action="RandomChance:40;AddStat:Str,15,300;SendMessage:Power surges through your veins, wild as moonlit beasts!" next="afterBrewGood"/>
+    <Option text="Drink the Bloodmoon draught." action="RandomChance:20;AddStat:Str,-10,120;SendMessage:Your limbs go weak—visions whirl, then darkness falls..." next="afterBrewBad"/>
+    <Option text="No thank you, just the reward." next="altReward"/>
+  </Dialogue>
+
+  <Dialogue id="altReward">
+    <NPCText>
+      <![CDATA[
+      She nods, tucking the mushroom away.<BR>
+      "For courage shown and quest complete,<BR>
+      Take this pouch and blessings sweet."
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Raka." action="GiveGold:150;Karma:50;Close"/>
+  </Dialogue>
+
+  <!-- What’s that glow? -->
+  <Dialogue id="glow">
+    <NPCText>
+      <![CDATA[
+      She holds up a basket that glows with faint blue light.<BR><BR>
+      "Blue for vision, red for pain,<BR>
+      Mushrooms bloom with moon and rain.<BR>
+      Touch not, unless you trust your fate—<BR>
+      Some doors, once opened, never abate."
+      ]]>
+    </NPCText>
+    <Option text="Are they dangerous?" next="glowDanger"/>
+    <Option text="Can I buy one?" next="glowBuy"/>
+    <Option text="I’ll just look from afar." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="glowDanger">
+    <NPCText>
+      <![CDATA[
+      She winks.<BR>
+      "What brings dream can also bring dread—<BR>
+      Not all who wander wake in bed."
+      ]]>
+    </NPCText>
+    <Option text="Understood." next="greeting"/>
+  </Dialogue>
+  <Dialogue id="glowBuy">
+    <NPCText>
+      <![CDATA[
+      She shakes her head.<BR>
+      "Mushrooms rare, not meant for trade—<BR>
+      Bring me one, a deal is made."
+      ]]>
+    </NPCText>
+    <Option text="I see. Maybe I can find one." next="questIntro"/>
+    <Option text="Maybe not." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="goodbye">
+    <NPCText>
+      <![CDATA[
+      Raka returns to sorting her baskets, humming softly.<BR>
+      "When spirits call or hunger grows,<BR>
+      Return to me—see what Raka knows."
+      ]]>
+    </NPCText>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Backstory Branch -->
+  <Dialogue id="backstory_intro">
+    <NPCText>
+      <![CDATA[
+      Raka pauses, lowering a basket to her lap. For once, she does not rhyme.<BR><BR>
+      “Few ask about old Mossfoot. Most just want a brew or a boon.”<BR><BR>
+      She looks up, her eyes sharp and moss-colored.<BR>
+      “But if you truly wish to know, then I’ll tell you how the forest made me.”<BR><BR>
+      Do you still want to hear it?”
+      ]]>
+    </NPCText>
+    <Option text="Yes, I want to know your story." next="backstory_root"/>
+    <Option text="On second thought, maybe later." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="backstory_root">
+    <NPCText>
+      <![CDATA[
+      She leans in close.<BR><BR>
+      "I was born when the vines were strong,<BR>
+      When no tribe danced to outsider song.<BR>
+      My mother fed me spores and dew,<BR>
+      Said, 'Let the grove awaken you.'<BR><BR>
+      But it was *Minax* who took her life—<BR>
+      A black breath stole her with no knife."<BR><BR>
+      Her tone darkens with grief, and the moss at her feet coils.
+      ]]>
+    </NPCText>
+    <Option text="Minax killed your mother?" next="minax_pain"/>
+    <Option text="How did you survive?" next="survival"/>
+    <Option text="Your words are poetry and pain." next="flattery"/>
+  </Dialogue>
+
+  <Dialogue id="minax_pain">
+    <NPCText>
+      <![CDATA[
+      Her voice sharpens like nettles.<BR><BR>
+      "A creeping rot came through the glade,<BR>
+      Not with sword, but spells unmade.<BR>
+      Mother stood with bark and bough—<BR>
+      She’s gone, but I remember how."<BR><BR>
+      She takes a breath, then recovers.
+      ]]>
+    </NPCText>
+    <Option text="You fight her with mushrooms?" next="mushroom_war"/>
+    <Option text="I’m sorry for your loss." action="Karma:25" next="sympathy"/>
+  </Dialogue>
+
+  <Dialogue id="sympathy">
+    <NPCText>
+      <![CDATA[
+      Raka nods once.<BR>
+      “Grief is a seed. I water it with purpose.”<BR><BR>
+      She seems calmer now, almost serene.
+      ]]>
+    </NPCText>
+    <Option text="What purpose drives you now?" next="mushroom_war"/>
+    <Option text="I’ll leave you to your memories." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="mushroom_war">
+    <NPCText>
+      <![CDATA[
+      She gestures to her jars and sacks.<BR><BR>
+      "Fungi feed on death and fear,<BR>
+      Yet from decay, new life grows near.<BR>
+      My brews bring strength, or dreams, or dread—<BR>
+      Each sip recalls what spirits said."<BR><BR>
+      She grins suddenly.<BR>
+      "Would you taste my past? Or shall I ask *you* a question instead?"
+      ]]>
+    </NPCText>
+    <Option text="Ask your question, Raka." next="quiz_start"/>
+    <Option text="I’ll try a vision brew." next="tryBrew"/>
+    <Option text="Another time." next="greeting"/>
+  </Dialogue>
+
+  <!-- Fun little interactive test -->
+  <Dialogue id="quiz_start">
+    <NPCText>
+      <![CDATA[
+      She taps your forehead.<BR><BR>
+      "Tell me this, leaf or blade:<BR>
+      Which survives the longer shade?<BR><BR>
+      Choose what lasts when sky turns black:<BR>
+      The blooming vine, or warrior’s attack?"
+      ]]>
+    </NPCText>
+    <Option text="The vine endures." action="Karma:50;Fame:25;SendMessage:Raka nods approvingly." next="quiz_vine"/>
+    <Option text="The warrior conquers." action="Fame:50;SendMessage:Raka frowns, but nods." next="quiz_warrior"/>
+    <Option text="I don’t know." next="quiz_neutral"/>
+  </Dialogue>
+
+  <Dialogue id="quiz_vine">
+    <NPCText>
+      <![CDATA[
+      “You speak as I do,” Raka says warmly.<BR>
+      “Softness is not weakness, not when roots run deep.”<BR><BR>
+      She slips a sprig of silvermoss into your hand.
+      ]]>
+    </NPCText>
+    <Option text="What is this?" action="GiveItem:SilvermossSprig()" next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="quiz_warrior">
+    <NPCText>
+      <![CDATA[
+      “Blades carve paths, yes,” she admits.<BR>
+      “But they forget the forest always grows back.”<BR><BR>
+      Still, she gives you a hardened root with carvings burned into it.
+      ]]>
+    </NPCText>
+    <Option text="What’s this for?" action="GiveItem:CarvedFeralRoot()" next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="quiz_neutral">
+    <NPCText>
+      <![CDATA[
+      Raka chuckles.<BR>
+      “An honest answer—rare as moonmilk.”<BR>
+      “Return when you’ve watched the forest long enough.”<BR><BR>
+      She hands you a pouch of spores, no judgment in her eyes.
+      ]]>
+    </NPCText>
+    <Option text="Thanks, Raka." action="GiveItem:VerdantSporesPouch()" next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="survival">
+    <NPCText>
+      <![CDATA[
+      “The wilds raised me. Ferns my cloak, frogs my choir.”<BR>
+      “The tribe shunned me—feared my visions.”<BR><BR>
+      She shrugs.<BR>
+      “But now, even the council drinks my draughts.”<BR><BR>
+      She tilts her head curiously.
+      ]]>
+    </NPCText>
+    <Option text="What visions did you see?" next="visions_seen"/>
+    <Option text="You’re stronger than they knew." action="Karma:25" next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="visions_seen">
+    <NPCText>
+      <![CDATA[
+      Raka’s eyes gleam faintly green.<BR><BR>
+      “I saw Minax’s shadow walking with a deer’s skull mask.”<BR>
+      “I saw Lord British vanish like a breath caught in fog.”<BR>
+      “And once… I saw *you*, before you ever came here.”<BR><BR>
+      She grins.<BR>
+      “But that’s a tale for another brew.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me more another time." next="greeting"/>
+    <Option text="What do you see when you look at me *now*?" next="see_you_now"/>
+  </Dialogue>
+
+  <Dialogue id="see_you_now">
+    <NPCText>
+      <![CDATA[
+      She stares deeply into your eyes.<BR><BR>
+      <BASEFONT COLOR='#5eeb7f'>
+      “A leaf on fire…<BR>
+      A knife in fog…<BR>
+      A question the forest hasn’t answered yet.”</BASEFONT><BR><BR>
+      “But answer it you will, little ember.”
+      ]]>
+    </NPCText>
+    <Option text="Then I’ll see that it burns bright." action="Fame:25;Karma:10" next="greeting"/>
+    <Option text="Then I’d best not be caught in the fog." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="flattery">
+    <NPCText>
+      <![CDATA[
+      She smiles genuinely.<BR>
+      “You have an ear for the wild tongue.<BR>
+      Perhaps you’ll learn to speak it in dreams.”<BR><BR>
+      She hums a melody that makes the moss shiver.
+      ]]>
+    </NPCText>
+    <Option text="I’ll listen next time I sleep." next="greeting"/>
+  </Dialogue>
+
+
+</DialogueFile>

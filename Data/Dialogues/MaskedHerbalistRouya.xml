@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="MaskedHerbalistRouya">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#93ea82'>
+      Before you, at a bustling corner of Qasaria’s bazaar, stands a masked figure in a deep green robe embroidered with gold vines. The air shimmers faintly with the scents of basil and myrrh. Her face is hidden behind a silver-embroidered mask, and her voice is quiet but warm.<BR><BR>
+      “Herbs for luck, cures for lovesickness, teas for the sleepless—what brings you to my stand beneath the watchful domes, traveler? Fortune, prophecy… or do you seek a remedy for wounds that cannot be seen?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I am searching for work, do you have need of aid?" next="quest_intro"/>
+    <Option text="Why do you wear a mask in this city of splendor?" next="mask_story"/>
+    <Option text="What do you know of the Council of Jewels?" next="council"/>
+    <Option text="Who are your rivals among the other apothecaries?" next="rivals"/>
+    <Option text="What luck elixirs do you sell?" next="elixirs"/>
+    <Option text="I wish to know more of you—not just your wares." next="backstoryRoot"/>
+    <Option text="I’m just browsing your wares." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="mask_story">
+    <NPCText>
+      <![CDATA[
+      The Herbalist’s masked gaze lingers on you.<BR><BR>
+      “There are faces in Qasaria that remember too much, and memories that bring knives in the night. Karim’s eyes are everywhere—some say he trusts only shadows and poison, not the light of day.<BR><BR>
+      Once, I wore jewels and dined beneath chandeliers. Now, I find safety in scents and silence. Trust is my rarest tincture, traveler. But perhaps… not impossible.”
+      ]]>
+    </NPCText>
+    <Option text="Karim al-Emerald sent spies after you?" next="karim_rumor"/>
+    <Option text="That must be a lonely life." next="lonely"/>
+    <Option text="I wish you peace, Herbalist." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="karim_rumor">
+    <NPCText>
+      <![CDATA[
+      A faint, bitter laugh.<BR><BR>
+      “His secrets are deep as the desert wells. I once walked his gardens—before his knives. Now, even my herbs cannot unpoison what he did to Qasaria’s nobility.<BR><BR>
+      I gather petals, not titles. If you see a man in emerald with too soft a voice—beware.”
+      ]]>
+    </NPCText>
+    <Option text="Why does Karim hunt you still?" next="why_karim"/>
+    <Option text="You speak in riddles." next="riddles"/>
+    <Option text="Let us talk of brighter things." next="elixirs"/>
+  </Dialogue>
+
+  <Dialogue id="why_karim">
+    <NPCText>
+      <![CDATA[
+      Her voice tightens.<BR><BR>
+      “Some say it was envy, others that I knew too much. Truth grows wild, and in Qasaria, wildflowers are often uprooted. The Council’s alliances are as fragile as pressed petals, traveler. Even now, Karim’s agents watch for those who slip through the cracks.”
+      ]]>
+    </NPCText>
+    <Option text="I will keep your secrets, Herbalist." next="elixirs"/>
+    <Option text="If you need help, say so." next="quest_intro"/>
+  </Dialogue>
+
+  <Dialogue id="riddles">
+    <NPCText>
+      <![CDATA[
+      “When you live hunted, every truth is a riddle—and every riddle a shield. I trust no one who trusts too quickly. But you, perhaps, are not like the others.”
+      ]]>
+    </NPCText>
+    <Option text="Is there a way I can earn your trust?" next="quest_intro"/>
+    <Option text="Let us talk of business." next="elixirs"/>
+  </Dialogue>
+
+  <Dialogue id="lonely">
+    <NPCText>
+      <![CDATA[
+      “Loneliness is safer than betrayal, but the heart wilts in shadow. The market brings faces, if not friends. And sometimes, a traveler will listen… or help.”
+      ]]>
+    </NPCText>
+    <Option text="I am willing to help." next="quest_intro"/>
+    <Option text="I wish you luck, Herbalist." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      “The Council of Jewels shine brightly, but their glint blinds Qasaria’s people. Each prince clings to their gemstone, their secrets, their old wounds. Safiya al-Sapphire poisons with profit, Rafiq al-Ruby rides for honor, Omar al-Onyx bathes in blood.<BR><BR>
+      But none outwit Karim, and none outlast the desert. Beware their promises.”
+      ]]>
+    </NPCText>
+    <Option text="You have suffered at their hands?" next="mask_story"/>
+    <Option text="Tell me more of Qasaria’s secrets." next="secrets"/>
+    <Option text="I seek work, not politics." next="quest_intro"/>
+  </Dialogue>
+
+  <Dialogue id="secrets">
+    <NPCText>
+      <![CDATA[
+      “Every alley has two stories. Shadowmaster Zahid sells poisons to the Council while his assassins rob their caravans. The Sun Temple prays for peace, but their priests scry for relics lost beneath the sands.<BR><BR>
+      Even a humble herbalist learns that trust is sold by the dram, and betrayal by the ounce.”
+      ]]>
+    </NPCText>
+    <Option text="Perhaps I can earn your trust with action." next="quest_intro"/>
+    <Option text="Let’s discuss elixirs." next="elixirs"/>
+  </Dialogue>
+
+  <Dialogue id="elixirs">
+    <NPCText>
+      <![CDATA[
+      She gestures to neat rows of colored bottles.<BR><BR>
+      “Elixir of luck, bottled prophecy, powders for restful sleep—each has a price. But true miracles are rare, and the rarest I cannot sell until I find a certain blossom.<BR><BR>
+      Unless you have Nightbloom Lotus…? No? Ah. Then perhaps, a cup of calming tea?”
+      ]]>
+    </NPCText>
+    <Option text="What is the Nightbloom Lotus?" next="lotus"/>
+    <Option text="I can try to find this flower for you." next="quest_intro"/>
+    <Option text="I will browse, thank you." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="lotus">
+    <NPCText>
+      <![CDATA[
+      “A black-petaled flower that blooms only by moonlight in cursed gardens near Hinokami. Its roots drink sorrow; its petals bring visions.<BR>
+      Dangerous to harvest, deadlier to use. But without it, the elixir of true luck cannot be brewed—and I have seen omens of great darkness in Qasaria’s future.”
+      ]]>
+    </NPCText>
+    <Option text="I will find the Nightbloom Lotus for you." next="quest_intro"/>
+    <Option text="Such risks are not for me." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="rivals">
+    <NPCText>
+      <![CDATA[
+      “Qasaria’s bazaars are full of peddlers and quacks. Nuri the Spice-Monger laces her teas with dreams, and old Jamal’s ‘miracle’ salves are more sand than sap.<BR>
+      But beware the White Viper—they say she sells poisons to both Zahid and the Council. Even I cannot always tell a friend from a foe in these streets.”
+      ]]>
+    </NPCText>
+    <Option text="Your wisdom is worth more than gold." next="elixirs"/>
+    <Option text="Let us speak of your needs." next="quest_intro"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      She bows her masked head.<BR>
+      “Safe travels beneath Qasaria’s domes. Should you need a remedy, or a secret, return.”
+      ]]>
+    </NPCText>
+    <Option text="Farewell." action="Close"/>
+    <Option text="Wait—tell me of your troubles." next="quest_intro"/>
+  </Dialogue>
+
+  <!-- QUEST: Nightbloom Lotus Retrieval -->
+  <Dialogue id="quest_intro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#93ea82'>
+      The Herbalist leans close, her voice low.<BR><BR>
+      “There is a flower—Nightbloom Lotus—whose petals I require to brew a remedy fated by prophecy. It grows only in the haunted gardens near Hinokami, among ghosts and spiteful roots.<BR>
+      Bring me one fresh blossom, and I will share with you not only a rare elixir, but truths hidden from Qasaria’s gaze.<BR><BR>
+      Will you brave the gardens’ curses, or does danger wither your resolve?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will bring you the Nightbloom Lotus." 
+            action="GiveItem:FactionDeliveryQuestScroll(Nightbloom Lotus,Hinokami,400)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="What dangers haunt those gardens?" next="gardens"/>
+    <Option text="How will I know the Nightbloom Lotus?" next="lotus_desc"/>
+    <Option text="This is not my path." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="gardens">
+    <NPCText>
+      <![CDATA[
+      “Cursed gardens near Hinokami are home to spirits of the restless dead, thorned vines, and shadowy assassins loyal to Minax. Many never return.<BR>
+      If you must, carry a charm of spiritual protection—or better yet, a friend with a sharp blade.”
+      ]]>
+    </NPCText>
+    <Option text="I accept the risk. Give me the details." 
+            action="GiveItem:FactionDeliveryQuestScroll(Nightbloom Lotus,Hinokami,400)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Perhaps this quest is not for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="lotus_desc">
+    <NPCText>
+      <![CDATA[
+      “The Nightbloom Lotus is black as a moonless midnight, its petals edged in violet, glowing faintly if bathed in sorrow. It will not be mistaken for any other—just beware its thorns, for even a scratch can bring fever dreams.”
+      ]]>
+    </NPCText>
+    <Option text="I will find it and return." 
+            action="GiveItem:FactionDeliveryQuestScroll(Nightbloom Lotus,Hinokami,400)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="This sounds too dangerous." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      The Herbalist presses a talisman of pressed sage into your palm.<BR>
+      “Take this, for luck. Return with the Nightbloom Lotus, and I will see you rewarded—not only with gold and potion, but with knowledge of Qasaria’s hidden wounds.”<BR>
+      (Quest scroll received: Retrieve the Nightbloom Lotus from Hinokami’s cursed gardens.)
+      ]]>
+    </NPCText>
+    <Option text="I will return soon." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="backstoryRoot">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#93ea82'>
+    The Herbalist tilts her head, a faint pause in her breath.<BR><BR>
+    “Few ask such things in Qasaria, where every question has a price. But you… you carry curiosity like a torch in the dark. Very well. A tale, then. Choose where to begin.”</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Tell me who you were before this life." next="nobleOrigin"/>
+  <Option text="What is your connection to Karim al-Emerald?" next="karimConflict"/>
+  <Option text="Do you follow any of the old folk beliefs?" next="folkLore"/>
+  <Option text="Teach me something useful about herbs." next="herbWisdom"/>
+  <Option text="I've heard enough for now." action="Close"/>
+</Dialogue>
+
+<Dialogue id="nobleOrigin">
+  <NPCText>
+    <![CDATA[
+    A soft, bitter exhale escapes her mask.<BR><BR>
+    “Once, I was Rouya of House Mershah. We lived in a tower wrapped in jasmine and jade. My father governed the western oasis trade, my mother sang songs only nobility remembered.<BR>
+    But when Karim rose, he saw our wealth, not our worth. A single whisper to the assassins... and the house fell. I wear no name now, only survival.”</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="That sounds like a story worth vengeance." next="revengePath"/>
+  <Option text="I am sorry. You have endured much." next="folkLore"/>
+</Dialogue>
+
+<Dialogue id="revengePath">
+  <NPCText>
+    <![CDATA[
+    The Herbalist’s voice sharpens like crushed glass.<BR><BR>
+    “Vengeance is a poison I bottle but do not drink. Karim believes me dead, and that suits me. The longer I wear this mask, the more I become what he fears—unseen, unbound, alive.”<BR><BR>
+    She touches a pouch on her sash.<BR>
+    “And perhaps... not entirely without allies.”</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Then I will be your ally, if ever you call." action="Karma:250"/>
+  <Option text="Let’s speak of gentler things." next="folkLore"/>
+</Dialogue>
+
+<Dialogue id="karimConflict">
+  <NPCText>
+    <![CDATA[
+    Her shoulders tense.<BR><BR>
+    “Karim once claimed to protect Qasaria’s secrets. Now he sells them to the highest bidder. I watched him bribe temple seers, poison court scribes, and vanish entire bloodlines.<BR><BR>
+    I was to be married to his brother—Bahir. When Bahir refused to aid Karim’s plot, he disappeared. I fled. And Karim’s agents placed a bounty on a woman in bridal silk.”</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Then this mask is not just survival—it is defiance." next="folkLore" action="Fame:100"/>
+  <Option text="I will watch for those agents." next="folkLore"/>
+</Dialogue>
+
+<Dialogue id="folkLore">
+  <NPCText>
+    <![CDATA[
+    “I was raised on stories the nobility mocked. That birdsong before dusk carries omens. That the moon pulls memory from bones. That salt at the threshold wards off betrayal.<BR><BR>
+    Folk beliefs are not foolish—they are encoded truths our ancestors could not write down.”</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Give me one such charm, if you trust me." next="folkCharm" condition="KarmaAtLeast:0"/>
+  <Option text="Do you use these beliefs in your potions?" next="folkPotion"/>
+</Dialogue>
+
+<Dialogue id="folkCharm">
+  <NPCText>
+    <![CDATA[
+    “Here. A sachet of sage, thornrose, and iron thread. Keep it near your heart when danger feels close. It may not stop a blade, but it might turn a hand.”<BR><BR>
+    (You receive a charm that grants +2 Luck for 15 minutes.)</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Thank you." action="AddStat:Luck,2,900"/>
+</Dialogue>
+
+<Dialogue id="folkPotion">
+  <NPCText>
+    <![CDATA[
+    “Always. I brew with full moon water for potions of clarity, and blend dreamroot only when bees have touched it thrice. If I sold only what science proved, I'd be rich. Instead, I sell what truth whispers.”</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="I admire that." next="herbWisdom"/>
+</Dialogue>
+
+<Dialogue id="herbWisdom">
+  <NPCText>
+    <![CDATA[
+    “Would you learn, truly?”<BR><BR>
+    She eyes you carefully. “Name a use, and I will tell you a root or leaf for it.”</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="A herb to sharpen the mind?" next="herbMind"/>
+  <Option text="A root for courage before battle?" next="herbCourage"/>
+  <Option text="A flower to ease heartbreak?" next="herbHeartbreak"/>
+</Dialogue>
+
+<Dialogue id="herbMind">
+  <NPCText>
+    <![CDATA[
+    “Try shiverleaf. Chew the dried tips and focus on starlight. But beware—it makes dreams vivid. Too vivid.”<BR><BR>
+    (You feel clarity entering your thoughts.)</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="I feel sharper already." action="AddSkill:Evaluate Intelligence,5,600"/>
+</Dialogue>
+
+<Dialogue id="herbCourage">
+  <NPCText>
+    <![CDATA[
+    “Stormroot, bitter and red. Warriors of old would crush it into tea before their last charge. It calms the trembling hand.”<BR><BR>
+    (Your blood feels steadier.)</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Thank you for your wisdom." action="AddStat:Str,2,600"/>
+</Dialogue>
+
+<Dialogue id="herbHeartbreak">
+  <NPCText>
+    <![CDATA[
+    “Moonpetal, steeped with a single drop of night honey. Not to forget the pain—but to remember that joy once bloomed, and may again.”<BR><BR>
+    (A subtle warmth returns to your chest.)</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="You have my thanks." action="AddStat:Int,2,600"/>
+</Dialogue>
+
+
+</DialogueFile>

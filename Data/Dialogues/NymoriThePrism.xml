@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="NymoriThePrism">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#B7EFFF'>
+      A pale woman stands before an unfinished mural, colors shifting and swirling as if alive. Her eyes seem to hold every season at once, and her brush hangs poised midair.<BR><BR>
+      “Ah… a visitor. Have you come to add your shade to my canvas? Or do you seek only the comfort of untroubled memory?”<BR>
+      The scent of fresh paint lingers, tinged with something sorrowful.
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="What is it you paint, Nymori?" next="paint"/>
+    <Option text="Your eyes seem heavy with memory..." next="memories"/>
+    <Option text="I heard your work is forbidden." next="ban"/>
+    <Option text="Do you need help with anything?" next="questIntro"/>
+	<Option text="Tell me who you truly are, Nymori." next="identity"/>
+    <Option text="I’m just passing by." next="farewell"/>
+  </Dialogue>
+
+  <!-- About her Art -->
+  <Dialogue id="paint">
+    <NPCText>
+      <![CDATA[
+      Nymori’s brush trembles, releasing a faint shimmer into the air.<BR><BR>
+      “Here in Aerilon, I paint not merely what is seen, but what is felt. With each stroke, a memory returns—a joy, a loss, a longing yet to come. My mural today... is of an invasion that has not yet happened.<BR><BR>
+      Some call it prophecy, others heresy. Cassien Veylor would silence me for such art. But the city needs to *feel* what may come, or it will not awaken in time.”
+      ]]>
+    </NPCText>
+    <Option text="A vision of invasion? Tell me more." next="vision"/>
+    <Option text="Why does Cassien hate your art?" next="ban"/>
+    <Option text="I would help you share this warning." next="questIntro"/>
+    <Option text="I must go." next="farewell"/>
+  </Dialogue>
+
+  <!-- Her Memories -->
+  <Dialogue id="memories">
+    <NPCText>
+      <![CDATA[
+      She looks through you, as if seeing a thousand yesterdays.<BR><BR>
+      “Memories swirl, unwanted, unbidden. Yet lately... I have seen a face I never met—a king lost to shadow, Lord British. I paint him from dreams alone. It frightens me, what images the Prism brings.<BR>
+      Sometimes I think even the Azure Conclave fears the power of honest emotion.”
+      ]]>
+    </NPCText>
+    <Option text="Why would they fear you?" next="ban"/>
+    <Option text="Can your paintings help find Lord British?" next="british"/>
+    <Option text="What is the Prism?" next="prism"/>
+    <Option text="I would aid you, if I can." next="questIntro"/>
+    <Option text="I will leave you to your thoughts." next="farewell"/>
+  </Dialogue>
+
+  <!-- Banned by Cassien Veylor -->
+  <Dialogue id="ban">
+    <NPCText>
+      <![CDATA[
+      Her lips curl, bitter and wistful.<BR><BR>
+      “Cassien Veylor—high enchanter of Aerilon—believes art should never meddle with mind or heart. He calls my work ‘emotional subversion.’ Perhaps he fears losing control of his own facade.<BR>
+      Still, I paint. The mural must speak, even if the price is exile. Only Eryndil the Archivist offers me quiet protection; he knows that memory is a power not so easily erased.”
+      ]]>
+    </NPCText>
+    <Option text="Does Eryndil know your visions?" next="eryndil"/>
+    <Option text="Why do you paint forbidden things?" next="forbidden"/>
+    <Option text="I wish to help." next="questIntro"/>
+    <Option text="Farewell, then." next="farewell"/>
+  </Dialogue>
+
+  <Dialogue id="eryndil">
+    <NPCText>
+      <![CDATA[
+      “Eryndil is gentle—he gathers secrets like fallen leaves. Sometimes I trust him with my visions. Sometimes... I fear he sees too much. But better his kindness than the Conclave’s cold decrees.”
+      ]]>
+    </NPCText>
+    <Option text="I would aid you, if I can." next="questIntro"/>
+    <Option text="I’ll leave you to your painting." next="farewell"/>
+  </Dialogue>
+
+  <Dialogue id="forbidden">
+    <NPCText>
+      <![CDATA[
+      “If pain is hidden, how will we ever heal? I paint wounds so the city might see itself—and perhaps, in time, change. My exile is the price for truth, and still, I would choose it again.”
+      ]]>
+    </NPCText>
+    <Option text="Is there any way I can help?" next="questIntro"/>
+    <Option text="Farewell, Nymori." next="farewell"/>
+  </Dialogue>
+
+  <!-- Vision of the Invasion -->
+  <Dialogue id="vision">
+    <NPCText>
+      <![CDATA[
+      Her hand sketches a trembling arc on the wall.<BR><BR>
+      “I see ships—sky-ships, not our own—borne by storm and shadow. I see a beast with fangs like sabers leaping through flame. The mural shows a meeting: one who adores these beasts will stand at the world’s turning, their heart swayed by a single color. If we do not act, all Aerilon may fall.<BR>
+      That is why I need your help.”
+      ]]>
+    </NPCText>
+    <Option text="What do you need from me?" next="questIntro"/>
+    <Option text="I will ponder this vision." next="farewell"/>
+  </Dialogue>
+
+  <!-- Lord British Visions -->
+  <Dialogue id="british">
+    <NPCText>
+      <![CDATA[
+      “Perhaps… if enough fragments are gathered, my visions might form a path. Find others who remember the king—let them stand before my mural, and I shall paint what they recall. For now, my warning must come first.”
+      ]]>
+    </NPCText>
+    <Option text="Then let me aid your warning." next="questIntro"/>
+    <Option text="I wish you luck in your quest for memory." next="farewell"/>
+  </Dialogue>
+
+  <Dialogue id="prism">
+    <NPCText>
+      <![CDATA[
+      “The Prism is my soul, and my curse. It shows me all the colors of the heart, but makes it hard to see the world as others do. Perhaps you are luckier than I, to see only what is truly there.”
+      ]]>
+    </NPCText>
+    <Option text="How can I serve the Prism’s vision?" next="questIntro"/>
+    <Option text="Farewell." next="farewell"/>
+  </Dialogue>
+
+  <!-- Quest Introduction -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#FFD4F5'>
+      Nymori’s eyes glimmer with hope—and anxiety.<BR><BR>
+      “There is one beyond these clouds who cherishes the company of beasts, especially those with fangs like ancient blades: the ‘Sabertoothed Tiger Aficionado’. My vision says their soul will decide whether Aerilon is saved or sundered.<BR>
+      I have painted an emotion—*Courage in Twilight*—trapped within a single brushstroke, sealed in glass. You must deliver this Prism Flask to the Aficionado, wherever they dwell. Only one attuned to such creatures can open it without peril.<BR><BR>
+      Take it, and you will earn Aerilon’s trust—for they will know you dared to carry a piece of my heart. But beware: agents of Cassien, and those who follow Minax, may covet or destroy it.<BR>
+      Will you carry my art into the uncertain world?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will carry the Prism Flask to the Aficionado."
+            action="GiveItem:FactionDeliveryQuestScroll(Sabertoothed Tiger Aficionado,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="What is this Prism Flask?" next="flask"/>
+    <Option text="What if I am caught?" next="danger"/>
+    <Option text="This burden is too strange for me." next="farewell"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      She gently offers a glass vial, within which colors swirl and dance.<BR><BR>
+      “Deliver this safely, and return with word of its acceptance. You will find Aerilon’s walls warmer, and perhaps… my next mural brighter.”<BR>
+      The air shivers as the Prism Flask passes into your hands.
+      ]]>
+    </NPCText>
+    <Option text="I will honor your trust, Nymori." action="Close"/>
+  </Dialogue>
+
+  <!-- About the Prism Flask -->
+  <Dialogue id="flask">
+    <NPCText>
+      <![CDATA[
+      “Within the Prism Flask is an emotion, painted into form: ‘Courage in Twilight.’ It can be opened only by one whose heart runs wild with the spirit of the saber-tooth. If any other tries, it will show them only sorrow.<BR>
+      Art is dangerous, but also healing. The Aficionado will understand.”
+      ]]>
+    </NPCText>
+    <Option text="I will deliver it." 
+            action="GiveItem:FactionDeliveryQuestScroll(Sabertoothed Tiger Aficionado,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I must decline." next="farewell"/>
+  </Dialogue>
+
+  <!-- Risk/Lore -->
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      “If Cassien’s agents find you, they may try to erase the art—or you. Minax’s servants hunger for any hope that might turn the tide against her. Should you be threatened, hold the Prism Flask up to the sun and call my name. For a moment, you will vanish from their sight—but only once.”
+      ]]>
+    </NPCText>
+    <Option text="I will deliver the Prism Flask with care." 
+            action="GiveItem:FactionDeliveryQuestScroll(Sabertoothed Tiger Aficionado,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="This is too much for me." next="farewell"/>
+  </Dialogue>
+
+  <!-- Farewell/Refuse -->
+  <Dialogue id="farewell">
+    <NPCText>
+      <![CDATA[
+      Nymori’s smile is distant, already fading.<BR>
+      “Then go, and carry only your own colors. If the world grows too gray, return—and I shall paint you a memory worth keeping.”
+      ]]>
+    </NPCText>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="identity">
+  <NPCText>
+    <![CDATA[
+    Nymori sets her brush down, the paint trembling slightly as it stills.<BR><BR>
+    “A prism refracts. It does not lie, yet it shows many truths at once.<BR>
+    I was born beneath Wind, daughter of silence and starlight. My mother spoke only in color, my father only in song. I suppose it was inevitable that I learned to *feel* before I ever learned to speak.”<BR><BR>
+    Her voice grows quieter.<BR>
+    “Tell me, <BASEFONT COLOR='#FFE7AE'>who are you?</BASEFONT> Are you a wanderer of wonder, or a creature of caution?”
+    ]]>
+  </NPCText>
+  <Option text="I am curious about beauty and truth." next="origin_art"/>
+  <Option text="I walk a careful path; emotion is dangerous." next="origin_guarded"/>
+  <Option text="Sometimes I don’t know what I am." next="origin_doubt"/>
+</Dialogue>
+
+<Dialogue id="origin_art">
+  <NPCText>
+    <![CDATA[
+    “Ah… then we are kin, in spirit at least. Beauty is a burden, but also a balm.<BR>
+    Would you like to see my first painting? It’s crude—scrawled on cloth—but it was the first time I made a stranger weep.”<BR>
+    She gestures to a folded canvas by her side.
+    ]]>
+  </NPCText>
+  <Option text="Yes, I’d love to see it." action="PlaySound:0x015" next="show_painting"/>
+  <Option text="Maybe another time." next="farewell"/>
+</Dialogue>
+
+<Dialogue id="origin_guarded">
+  <NPCText>
+    <![CDATA[
+    Nymori studies you, not unkindly.<BR>
+    “To fear emotion is to know its strength. That is wisdom. Yet walls built too high may also block the sun. Still… I will not try to change your course. Only offer a path beside it.”
+    ]]>
+  </NPCText>
+  <Option text="I respect your honesty." next="brush_story"/>
+  <Option text="I should be on my way." next="farewell"/>
+</Dialogue>
+
+<Dialogue id="origin_doubt">
+  <NPCText>
+    <![CDATA[
+    “Not knowing is the beginning of knowing. Most who say otherwise are lying to themselves.”<BR>
+    She reaches out gently, not quite touching your shoulder.<BR>
+    “Let me show you what steadied me, once. My brush…”
+    ]]>
+  </NPCText>
+  <Option text="Tell me about your brush." next="brush_story"/>
+</Dialogue>
+
+<Dialogue id="show_painting">
+  <NPCText>
+    <![CDATA[
+    She unfurls the canvas. The colors are raw, chaotic—but there’s a stillness in the center, like a heartbeat caught mid-beat.<BR>
+    “This was called ‘Echo After Silence.’ I painted it after my mother died. She never spoke, but the grief… it howled.”<BR>
+    A single tear slides down her cheek, unnoticed.<BR>
+    You feel the brush in your pack shift, as if responding. 
+    ]]>
+  </NPCText>
+  <Option text="It’s beautiful." action="Karma:+250" next="brush_story"/>
+  <Option text="That’s... too much for me." action="Karma:-50" next="farewell"/>
+</Dialogue>
+
+<Dialogue id="brush_story">
+  <NPCText>
+    <![CDATA[
+    Nymori lifts a crystalline-handled brush from her belt.<BR><BR>
+    “This is the Prism Lash. It is not mine, not truly—it was found buried beneath Aerilon’s lowest floating shard. It does not paint *color*—it paints *memory.*<BR>
+    Once, I tried to use it to erase a nightmare. It refused. It will not lie.”<BR>
+    She glances at you.<BR>
+    “Tell me, what is your craft?”
+    ]]>
+  </NPCText>
+  <Option text="I am a warrior." next="brush_response_warrior"/>
+  <Option text="I am a mage, like you." condition="SkillAtLeast:Magery,70" next="brush_response_mage"/>
+  <Option text="I work with my hands—craft, not combat." next="brush_response_crafter"/>
+</Dialogue>
+
+<Dialogue id="brush_response_warrior">
+  <NPCText>
+    <![CDATA[
+    “Steel has its own truth. Each scar a line in a story few can read.”<BR>
+    She places the brush gently on your shoulder—no paint appears, but you feel a pulse, like thunder beneath calm skies.
+    ]]>
+  </NPCText>
+  <Option text="What did it feel?" next="random_pulse"/>
+</Dialogue>
+
+<Dialogue id="brush_response_mage">
+  <NPCText>
+    <![CDATA[
+    “Then you know that magic too has moods. The Prism Lash… responds best to restraint. It once bit a sorcerer who demanded it capture flame. Instead, it painted his *fear of fire.*”<BR>
+    She raises a brow. “Would you try it?”
+    ]]>
+  </NPCText>
+  <Option text="Yes. Let the brush speak." action="AddSkill:EvalInt,+10,120" next="random_pulse"/>
+  <Option text="No... I’ve seen enough." next="farewell"/>
+</Dialogue>
+
+<Dialogue id="brush_response_crafter">
+  <NPCText>
+    <![CDATA[
+    “Ah. Creation, then. Like me.”<BR>
+    She smiles with something like kinship.<BR>
+    “Would you like to know what the Prism Lash reveals in you?”
+    ]]>
+  </NPCText>
+  <Option text="Yes, I’m curious." action="PlaySound:0x015" next="random_pulse"/>
+  <Option text="Perhaps another time." next="farewell"/>
+</Dialogue>
+
+<!-- Randomized Emotional Reveal -->
+<Dialogue id="random_pulse">
+  <NPCText>
+    <![CDATA[
+    Nymori closes her eyes and draws the Prism Lash across a piece of parchment.<BR><BR>
+    <BASEFONT COLOR='#EBACFF'>
+    The lines swirl and twist, forming one of three distinct images:<BR><BR>
+    - A lone tree bending in wind.<BR>
+    - A mask with a single tear.<BR>
+    - A child releasing a dove into the sky.
+    </BASEFONT><BR><BR>
+    She hands it to you wordlessly.
+    ]]>
+  </NPCText>
+  <Option text="What does it mean?" next="meanings"/>
+  <Option text="...Thank you." next="farewell"/>
+</Dialogue>
+
+<Dialogue id="meanings">
+  <NPCText>
+    <![CDATA[
+    “The tree speaks of endurance. The mask—grief hidden. The child? Hope, even in letting go.<BR>
+    The brush sees into what we carry, not what we say. It may not be true forever, but it is true now.”<BR>
+    She tucks the brush away.<BR>
+    “Perhaps one day, I will paint *you.*”
+    ]]>
+  </NPCText>
+  <Option text="I’d like that." action="Fame:+250" next="farewell"/>
+  <Option text="Maybe… maybe not." action="Karma:-100" next="farewell"/>
+</Dialogue>
+
+
+</DialogueFile>

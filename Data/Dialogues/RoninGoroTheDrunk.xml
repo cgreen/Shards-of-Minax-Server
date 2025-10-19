@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="RoninGoroTheDrunk">
+
+  <!-- ===================== GREETING ===================== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#bca76b'>
+      You find a disheveled man slumped at the low table, surrounded by empty sake bottles. His kimono is threadbare, his face a map of scars and regrets.<BR><BR>
+      He lifts his head, squinting blearily. “Eh? Who—hic—dares disturb Goro’s blessed nap? If you brought sake, sit! If you brought trouble, sit faster. Life’s too short for either, but one burns less…”<BR>
+      He eyes you with a sly, drunken grin.
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Are you Goro, the exiled ronin?" next="intro"/>
+    <Option text="You look like you’ve seen battle. What’s your story?" next="about"/>
+    <Option text="Can you teach me any secrets of war?" next="secrets" condition="GoldAtLeast:100"/>
+    <Option text="Have you heard anything about Minax’s agents?" next="minax"/>
+    <Option text="I brought sake." next="offerSake" condition="HasItem:Bottle"/>
+	<Option text="Tell me more about your past." next="pastIntro"/>
+    <Option text="Just passing by. Don’t let me disturb you." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================== INTRO/ABOUT ===================== -->
+  <Dialogue id="intro">
+    <NPCText>
+      <![CDATA[
+      He laughs, deep and bitter.<BR>
+      “Ronin Goro, yes—once samurai, now the spirit of cheap rice wine. Exiled for…eh, the details blur. But I remember swinging my blade for Tokuno, then for Hinokami, now for no one.”<BR><BR>
+      “What do you want, traveler? Wisdom? A duel? Or a drinking lesson?”<BR>
+      He raises a bottle invitingly.
+      ]]>
+    </NPCText>
+    <Option text="Tell me a war story." next="about"/>
+    <Option text="Know any buried weapons near Hinokami?" next="rumor" condition="RandomChance:30"/>
+    <Option text="I brought sake for you." next="offerSake" condition="HasItem:SakeBottle"/>
+    <Option text="Just listening, old man." next="ramble"/>
+    <Option text="I’ll leave you to your bottle." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="about">
+    <NPCText>
+      <![CDATA[
+      He tips the sake bottle, sloshing some into his mouth and more down his robe.<BR>
+      “I fought many. Saw friends die for lords who never knew our names. Now my only lord is Lady Sake. She never judges.”<BR><BR>
+      He belches, then leans close. “I’ve seen strange things since Minax’s shadow fell. You want war secrets? Get me drunk enough, and I might even remember where I buried my sword…”<BR>
+      He eyes your coin pouch.
+      ]]>
+    </NPCText>
+    <Option text="I’ll buy you a drink. (Give 100 gold)" next="drunk" action="GiveGold:100"/>
+    <Option text="I actually brought sake for you." next="offerSake" condition="HasItem:SakeBottle"/>
+    <Option text="I don’t have money to spare." next="dismissed"/>
+    <Option text="What did you see of Minax?" next="minax"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================== SECRETS (if player has enough gold) ===================== -->
+  <Dialogue id="secrets">
+    <NPCText>
+      <![CDATA[
+      He lurches upright. “You want the *secrets* of war? No man should seek them sober. Pour the sake—or pour out your gold!”<BR>
+      He leers expectantly.
+      ]]>
+    </NPCText>
+    <Option text="Here’s some gold. Drink up." action="GiveGold:100" next="drunk"/>
+    <Option text="I have sake instead." next="offerSake" condition="HasItem:SakeBottle"/>
+    <Option text="Nevermind." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================== GIVING SAKE ===================== -->
+  <Dialogue id="offerSake">
+    <NPCText>
+      <![CDATA[
+      His eyes go wide as you produce the sake bottle.<BR>
+      “Ahh! A kind soul! This earns you not just my blessing—hic—but a secret or two. Pour it, and let the ghosts of old battles sing!”<BR>
+      He drinks deeply, cheeks flushed.
+      ]]>
+    </NPCText>
+    <Option text="Drink up, Goro. Tell me a secret." action="PlaySound:0x02A" next="drunk" />
+    <Option text="Wait—what do you know of Minax’s agents?" next="minaxDrunk"/>
+    <Option text="That’s all I wanted to see." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================== DRUNKEN SECRETS ===================== -->
+  <Dialogue id="drunk">
+    <NPCText>
+      <![CDATA[
+      He sways, then starts to mumble:<BR>
+      “Long ago, I buried a blade in the old cherry grove north of Hinokami—too bloodied to carry further. Marked the spot with a broken lantern. Still sharp, still thirsty…”<BR><BR>
+      “If you seek it, mind the restless spirits. And…eh, if you find it, pour some sake for me…”<BR>
+      (You sense the tale is true. A hidden weapon may await!)
+      ]]>
+    </NPCText>
+    <Option text="Where is the grove exactly?" next="groveDetails"/>
+    <Option text="Do you know any martial techniques worth learning?" next="teachSkill"/>
+    <Option text="Tell me about Minax’s first agents." next="minaxDrunk"/>
+    <Option text="That’s enough for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="groveDetails">
+    <NPCText>
+      <![CDATA[
+      He squints, as if seeing the past.<BR>
+      “North edge, near the old fox shrine. Lantern’s rusted—watch for it among the roots. Dig deep, or the earth will keep its secrets.”<BR>
+      “Bring the blade here, and I’ll teach you something they never taught the samurai…or just drink with you.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll search for it." action="GiveItem:BuriedWakizashiClue(Cherry Grove, Hinokami, 0,0,0)" next="searchAccepted"/>
+    <Option text="I’ll find it later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="searchAccepted">
+    <NPCText>
+      <![CDATA[
+      “Good luck, traveler. The blade remembers more blood than I do.”
+      ]]>
+    </NPCText>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Martial Skill Teach -->
+  <Dialogue id="teachSkill">
+    <NPCText>
+      <![CDATA[
+      He tries to stand, then sinks back down.<BR>
+      “Try this—‘The Staggering Crane’. Let your enemy think you’re unsteady, then strike from below. Old trick for those who drink and duel.”<BR>
+      (You feel a flicker of inspiration, odd but useful.)
+      ]]>
+    </NPCText>
+    <Option text="(Attempt to learn technique)" condition="SkillBelow:Swords,80" action="AddSkill:Swords,5,600" next="skillLearned"/>
+    <Option text="I already know enough swordplay." next="skillMaster"/>
+    <Option text="Thanks, old man." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="skillLearned">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#7fdfff'>
+      You practice the Staggering Crane stance. For a moment, you feel your blade-hand steadier—despite the sake fumes.<BR>
+      (Your Swords skill has increased!)
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Goro." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="skillMaster">
+    <NPCText>
+      <![CDATA[
+      “Ha! Maybe you should be buying me a drink next time, master swordsman!”
+      ]]>
+    </NPCText>
+    <Option text="Another time, Goro." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================== MINAX TALES ===================== -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Goro frowns, suddenly more lucid.<BR>
+      “Minax? Bah. Her agents wear many faces. Last year, one tried to poison the sakehouse well. Look for nervous newcomers who never drink. They hate real spirits!”<BR>
+      He laughs darkly.
+      ]]>
+    </NPCText>
+    <Option text="Thank you for the warning." action="Close"/>
+    <Option text="You sure you’re not one of them?" next="challenge"/>
+    <Option text="Know where they hide?" next="rumor" condition="RandomChance:25"/>
+  </Dialogue>
+
+  <Dialogue id="minaxDrunk">
+    <NPCText>
+      <![CDATA[
+      Goro’s gaze sharpens.<BR>
+      “I saw a woman—eyes like midnight, words like poison—slipping through the bamboo at dusk. She left black sigils under the lanterns. Spirits grew restless after. Maybe she still haunts the grove…”<BR>
+      (You suspect this is a real clue to Minax’s agents in Hinokami.)
+      ]]>
+    </NPCText>
+    <Option text="I’ll search the grove for signs." action="GiveItem:MinaxAgentClue(Cherry Grove, Hinokami, 0,0,0)" next="searchAccepted"/>
+    <Option text="Anything else I should know?" next="ramble"/>
+    <Option text="Rest easy, Goro." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="challenge">
+    <NPCText>
+      <![CDATA[
+      He barks a laugh.<BR>
+      “If I am, I’m the worst agent in history. Couldn’t even poison my own liver properly!”
+      ]]>
+    </NPCText>
+    <Option text="Fair enough." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================== RANDOM RUMOR ===================== -->
+  <Dialogue id="rumor">
+    <NPCText>
+      <![CDATA[
+      He looks shifty.<BR>
+      “Sometimes I see strangers meeting behind the bathhouse at midnight. Don’t know if they’re spies, lovers, or just very lost. But the bamboo there remembers everything…”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I’ll check it out." action="GiveItem:RumorBathhouseMidnight(Hinokami)" next="searchAccepted"/>
+    <Option text="Thanks for the tip." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================== DRUNK RAMBLE ===================== -->
+  <Dialogue id="ramble">
+    <NPCText>
+      <![CDATA[
+      He begins to hum a song, words slurring:<BR>
+      “Blades break, lords fade, only sake stays true…”<BR>
+      He trails off, already lost to another drunken dream.
+      ]]>
+    </NPCText>
+    <Option text="Sleep well, ronin." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================== NO GOLD ===================== -->
+  <Dialogue id="dismissed">
+    <NPCText>
+      <![CDATA[
+      He waves you away, then reaches for a half-empty bottle.<BR>
+      “No coin, no sake, no secrets. Come back when you’ve got one of the three.”
+      ]]>
+    </NPCText>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+  
+  <!-- ===================== GORO'S BACKSTORY BRANCH ===================== -->
+  <Dialogue id="pastIntro">
+    <NPCText>
+      <![CDATA[
+      Goro sighs, staring into his cup.<BR>
+      “They say a ronin has no past—only the weight of it. But you asked, so I’ll spill more than sake…”<BR><BR>
+      “I served under Lord Hoshinaga in the southern provinces of Tokuno. Before the war. Before the fall. Before I...”<BR>
+      He trails off, as if caught in memory.
+      ]]>
+    </NPCText>
+    <Option text="What happened to Lord Hoshinaga?" next="hoshinaga"/>
+    <Option text="Why did you leave Tokuno?" next="exile"/>
+    <Option text="Did you have any family?" next="family"/>
+    <Option text="Do you still dream of battle?" next="interests"/>
+    <Option text="Too heavy for now. Let’s drink instead." next="offerSake" condition="HasItem:SakeBottle"/>
+    <Option text="I should let you rest." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="hoshinaga">
+    <NPCText>
+      <![CDATA[
+      Goro narrows his eyes.<BR>
+      “Lord Hoshinaga was no fool. He knew the tide was turning even before Minax rose. But honor kept him blind. He ordered us to defend a shrine against overwhelming odds. I disobeyed... I lived. He didn’t.”<BR>
+      He clenches his jaw.<BR>
+      “Exile was my reward for surviving dishonorably. That shrine... still haunts me.”
+      ]]>
+    </NPCText>
+    <Option text="Where was that shrine?" next="shrineMemory"/>
+    <Option text="Did Minax’s forces attack it?" next="minaxShrine"/>
+    <Option text="You made the right choice." next="affirm"/>
+    <Option text="That is tragic..." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="shrineMemory">
+    <NPCText>
+      <![CDATA[
+      “The Shrine of Sazanami. Hidden in the southern cliffs of old Tokuno, overlooking the sea. There was a relic there—a bell that soothed spirits. I wonder if it still rings.”<BR>
+      (You feel a personal quest forming: perhaps the bell still exists.)
+      ]]>
+    </NPCText>
+    <Option text="Should I search for the bell?" action="GiveItem:QuestBellClue(Sazanami Shrine)" next="bellQuest"/>
+    <Option text="It’s not my place." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="bellQuest">
+    <NPCText>
+      <![CDATA[
+      “You’d do that? Hah... you’re braver than I was. If you find the Bell of Sazanami... ring it once for my soul. Maybe I’ll sleep better.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll find it, Ronin." action="Karma:25"/>
+    <Option text="No promises." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="minaxShrine">
+    <NPCText>
+      <![CDATA[
+      “Not directly. But her shadow had already touched our generals. They starved villages to feed armies. Her madness spreads like oil in water—quiet, but total.”
+      ]]>
+    </NPCText>
+    <Option text="Then the shrine fell to fear, not force." next="shrineMemory"/>
+    <Option text="Let’s talk of other things." next="interests"/>
+  </Dialogue>
+
+  <Dialogue id="affirm">
+    <NPCText>
+      <![CDATA[
+      He grunts. “Maybe. Maybe not. But thanks.”<BR>
+      (Your compassion has not gone unnoticed.)
+      ]]>
+    </NPCText>
+    <Option text="You’re not the first to carry regret." action="Karma:10"/>
+    <Option text="Want to tell me more?" next="family"/>
+    <Option text="We’ve shared enough sorrow." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="exile">
+    <NPCText>
+      <![CDATA[
+      “Exile wasn’t a punishment. It was a release.”<BR>
+      He looks away.<BR>
+      “But it meant leaving behind everything. The dojo. The cherry trees. Her.”
+      ]]>
+    </NPCText>
+    <Option text="Who was ‘her’?" next="herLove"/>
+    <Option text="Let’s change the subject." next="interests"/>
+  </Dialogue>
+
+  <Dialogue id="herLove">
+    <NPCText>
+      <![CDATA[
+      “Mizuki.”<BR>
+      He smiles, painfully.<BR>
+      “She was a healer. Gentle hands. Fierce heart. She tended wounds the blade could never reach. I was to marry her—then the war came.”<BR>
+      He downs another cup.<BR>
+      “I don’t know if she lived... or worse, joined Minax’s cult to survive.”
+      ]]>
+    </NPCText>
+    <Option text="Do you want help finding out?" action="GiveItem:QuestLoveLostNote(Mizuki,Tokuno)" next="loveQuest"/>
+    <Option text="That’s heartbreaking." action="Karma:10"/>
+    <Option text="You should rest, old warrior." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="loveQuest">
+    <NPCText>
+      <![CDATA[
+      He stares at you as if seeing a ghost.<BR>
+      “If you find word of her—good or ill—bring it to me. I’ll trade all the secrets I have for one truth.”
+      ]]>
+    </NPCText>
+    <Option text="I will do what I can." action="Karma:50"/>
+    <Option text="I’ll let her past rest." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="family">
+    <NPCText>
+      <![CDATA[
+      “My only brother died young. Parents passed in the plagues. Mizuki was all I had left. Hinokami… it’s not home, but it’s something. And now, perhaps, so are you.”<BR>
+      He offers a sake cup in toast.
+      ]]>
+    </NPCText>
+    <Option text="To Hinokami." action="Karma:10"/>
+    <Option text="To forgotten homes and new friends." action="Fame:25"/>
+    <Option text="Cheers." action="PlaySound:0x015"/>
+    <Option text="Another time, Goro." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="interests">
+    <NPCText>
+      <![CDATA[
+      “You want to know what still stirs my old blood?”<BR>
+      He leans in conspiratorially.<BR>
+      “Sake. Songs of old heroes. Bamboo duels at dawn. And... painting.”<BR>
+      He shrugs. “Surprised? I sketch with sake when ink runs out. Come by with parchment, I’ll draw you something.”
+      ]]>
+    </NPCText>
+    <Option text="Show me your painting style." action="GiveItem:GoroPaintingScroll(Bamboo Crane)" next="artGiven" condition="!HasItem:GoroPaintingScroll"/>
+    <Option text="You’re full of surprises, Ronin." next="affirm"/>
+    <Option text="No time for art, sadly." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="artGiven">
+    <NPCText>
+      <![CDATA[
+      Goro dabs a sake-soaked brush across worn parchment. The strokes reveal a crane standing atop a crooked sword beneath bamboo.<BR><BR>
+      “We all balance something sharp, traveler. Even you.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you for the gift." action="Fame:25"/>
+    <Option text="That’s surprisingly profound." action="Karma:10"/>
+    <Option text="Goodbye, old painter." action="Close"/>
+  </Dialogue>
+  
+  
+</DialogueFile>

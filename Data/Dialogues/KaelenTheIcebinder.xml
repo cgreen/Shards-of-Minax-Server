@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="KaelenTheIcebinder">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#00d2ff'>
+      You find Kaelen the Icebinder kneeling by the Obelisk of Veyra, blue flames dancing in his outstretched palm. His Glacier-Woven Shirt glimmers in the frosted light, and an Obelisk-Blue Shroud frames his youthful face. He looks up, a bright eagerness in his ice-blue eyes.
+      <BR><BR>
+      "Ah! A visitor. Finally. Most folk here would rather brave a blizzard than talk to a mage—unless something needs thawing. I’m Kaelen, apprentice to Elder Aelric and, for now, the only person in Frostmere mad enough to think the Obelisk can save us all. You… you’re not here to warn me away like Captain Bryndra, are you?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You seem hopeful. What are you working on?" next="project"/>
+    <Option text="Isn’t the Obelisk dangerous?" next="danger"/>
+    <Option text="What’s your connection to Elder Aelric?" next="mentor"/>
+    <Option text="I hear you clash with Irinya, the Ice Seer." next="irinya"/>
+    <Option text="Actually, I was looking for work." next="questOffer"/>
+    <Option text="Just passing through. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Project Branch -->
+  <Dialogue id="project">
+    <NPCText>
+      <![CDATA[
+      "Hopeful? That’s generous! My latest theory is that the Obelisk’s magic, if properly attuned, could purge Minax’s corruption from the land. Elder Aelric says I’m reckless; Captain Bryndra says I’m naïve; Irinya… well, she says the Obelisk is ‘hungry for secrets.’<BR><BR>
+      Still, someone must try, right? I just need the right reagents—and the council won’t let me gather them myself after the last ‘incident.’"
+      ]]>
+    </NPCText>
+    <Option text="What kind of reagents?" next="reagents"/>
+    <Option text="Why are people so afraid of your research?" next="fear"/>
+    <Option text="Maybe I could help?" next="questOffer"/>
+    <Option text="Sounds risky. I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="reagents">
+    <NPCText>
+      <![CDATA[
+      "Essence of frost lotus, blood of a true ice wyvern, a sliver of star-iron… you know, just your everyday bits from a frozen nightmare! Actually, I’ve hit a wall lately. There’s a creature in the nearby caves, a ChillSatyr, whose horn holds the resonance I need for my next experiment. If you could retrieve it, I could finally attempt the binding ritual!"
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about this ChillSatyr." next="satyr"/>
+    <Option text="I’ll hunt the ChillSatyr for you." next="questStart"/>
+    <Option text="That sounds dangerous. No thanks." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="fear">
+    <NPCText>
+      <![CDATA[
+      "Let’s just say the last time I tried to tap the Obelisk’s power, half the town’s ale froze solid—and Lira still hasn’t forgiven me. Most folks are superstitious about mages. And Irinya is always warning that the ice ‘remembers everything’—I think she means well, but it’s hard to make progress when everyone expects doom!"
+      ]]>
+    </NPCText>
+    <Option text="Maybe they’re right to worry." next="danger"/>
+    <Option text="What does Aelric think?" next="mentor"/>
+    <Option text="I’ll help if you need it." next="questOffer"/>
+    <Option text="I’ll leave you to it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      "Dangerous? All magic is dangerous. But so is doing nothing. The Obelisk could be our salvation—or our undoing. Elder Aelric believes in careful study; Captain Bryndra wants it buried beneath ten feet of ice. And Irinya... she listens to the wind and claims it whispers names.<BR><BR>
+      Me? I believe in potential. Isn’t it better to risk a little for the chance to save many?"
+      ]]>
+    </NPCText>
+    <Option text="What happened between you and Bryndra?" next="bryndra"/>
+    <Option text="Do you have proof the Obelisk can fight Minax?" next="minax"/>
+    <Option text="Let’s talk about that ChillSatyr you mentioned." next="satyr"/>
+    <Option text="I should go." action="Close"/>
+  </Dialogue>
+
+  <!-- Connections -->
+  <Dialogue id="mentor">
+    <NPCText>
+      <![CDATA[
+      "Elder Aelric is the closest thing I’ve had to a father since Moonglow exiled us. He’s brilliant, patient, and—well—he saved my life more than once. Sometimes he acts like I’m still a child, but he trusts me with secrets he wouldn’t share with anyone else.<BR><BR>
+      I owe him everything. That’s why I want to prove the Obelisk can help—not just for me, but for him. He’s lost too much to Minax already."
+      ]]>
+    </NPCText>
+    <Option text="What’s your history with Irinya?" next="irinya"/>
+    <Option text="Back to the problem at hand—tell me about the ChillSatyr." next="satyr"/>
+    <Option text="I’ll be going." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="irinya">
+    <NPCText>
+      <![CDATA[
+      "Irinya’s visions are powerful, but she treats every risk like it’s an apocalypse. She’s certain the Obelisk is a prison for something old and hungry. We clash, yes, but sometimes I wonder if she’s right to fear.<BR><BR>
+      Still, her dreams have saved the village more than once. I respect her, even if she drives me mad. In a way, I think we balance each other—she’s the voice of caution, I’m… well, the voice of not listening."
+      ]]>
+    </NPCText>
+    <Option text="What’s your relationship with Captain Bryndra?" next="bryndra"/>
+    <Option text="Let’s talk about that ChillSatyr quest." next="satyr"/>
+    <Option text="I’ll let you get back to your work." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="bryndra">
+    <NPCText>
+      <![CDATA[
+      "Bryndra is all discipline and steel. She’s kept the militia together since the day Lord British vanished, and I respect her courage. But she thinks magic is just a disaster waiting to happen. We argue—a lot. But I know, deep down, she wants what’s best for Frostmere. She just can’t see that the Obelisk might be part of our future."
+      ]]>
+    </NPCText>
+    <Option text="Let’s return to the ChillSatyr problem." next="satyr"/>
+    <Option text="You’re all very different people." next="different"/>
+    <Option text="That’s all I wanted to know." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="different">
+    <NPCText>
+      <![CDATA[
+      "Different, yes! That’s why Frostmere works—barely. Aelric keeps the balance, Bryndra keeps us safe, Irinya keeps us honest, and… I suppose I keep things interesting. Or so Lira says, when she’s not threatening to dump ice-water over my head."
+      ]]>
+    </NPCText>
+    <Option text="Back to the ChillSatyr, then?" next="satyr"/>
+    <Option text="I should go." action="Close"/>
+  </Dialogue>
+
+  <!-- ChillSatyr Quest Offer -->
+  <Dialogue id="questOffer">
+    <NPCText>
+      <![CDATA[
+      "Actually, yes—there is something you could do, if you’re brave or foolhardy enough. There’s a ChillSatyr in the ice caves to the north. It’s been terrorizing travelers and eating my frost lotus patches. Worse, its horn resonates with the same magic as the Obelisk—I need it for my next experiment!<BR><BR>
+      If you can slay the ChillSatyr and bring me its horn, I’ll reward you handsomely. And maybe—just maybe—you’ll help me save Frostmere from Minax’s shadow."
+      ]]>
+    </NPCText>
+    <Option text="I’ll do it. Tell me where to find the beast."
+            action="GiveItem:FactionKillQuestScroll(ChillSatyr,1,Frostmere,750)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="questStart"/>
+    <Option text="Why can’t you handle it yourself?" next="whyNot"/>
+    <Option text="Sounds like trouble. Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="whyNot">
+    <NPCText>
+      <![CDATA[
+      "I tried—believe me! But Bryndra banned me from leaving the village after the last fiasco with the frost wraiths. And honestly, I’m better at theory than field work. If the Satyr’s horn shatters in combat, we’re all in trouble—so please, use care!<BR><BR>
+      If you bring back the horn, I’ll even let you watch the ritual. Or, well, help clean up if it explodes…"
+      ]]>
+    </NPCText>
+    <Option text="Alright, I’ll deal with the ChillSatyr."
+            action="GiveItem:FactionKillQuestScroll(ChillSatyr,1,Frostmere,750)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="questStart"/>
+    <Option text="Maybe not for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="satyr">
+    <NPCText>
+      <![CDATA[
+      "ChillSatyrs are rare, twisted creatures—half-man, half goat, all cold fury. This one’s horn glows with a blue light, and its breath will freeze a grown bear. They sing a mournful tune that can numb your mind if you’re not careful. Some say they were once guardians of the old forests, before Minax’s magic warped them.<BR><BR>
+      The cave lies past the frozen falls, but beware—ice trolls and worse roam there. Oh, and don’t listen if it starts to play its flute! Lira says I have no sense of self-preservation, but I’d rather risk danger than live in fear."
+      ]]>
+    </NPCText>
+    <Option text="You’ve convinced me. I’ll take the quest."
+            action="GiveItem:FactionKillQuestScroll(ChillSatyr,1,Frostmere,750)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="questStart"/>
+    <Option text="I’ll pass, but good luck with your studies." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="questStart">
+    <NPCText>
+      <![CDATA[
+      "Excellent! Here—take this scroll. It describes the ChillSatyr’s habits and how to safely remove the horn. I’d recommend a strong friend, fire magic, or at least a pair of earmuffs. Please, be careful! Frostmere needs you—well, I need you. And if you see Lira, tell her the frost lotus patch will recover. Probably."
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with the horn." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax proof branch -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      "I have hope, not proof. The Obelisk reacts violently when Minax’s cultists come near, and once it even pulsed bright blue during a blizzard—scared the frost wraiths away for a week! I believe, with the right attunement, it could shield all Frostmere from corruption. If only I had that horn…"
+      ]]>
+    </NPCText>
+    <Option text="I’ll get the horn for you." next="questOffer"/>
+    <Option text="Perhaps it’s too great a risk." action="Close"/>
+  </Dialogue>
+
+</DialogueFile>

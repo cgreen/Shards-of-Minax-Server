@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="AureliaWynn">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#91ffb6'>
+      Amidst cascading blooms and shimmering vines, you find a gentle woman weaving between rows of radiant, magical flowers. Her hair, adorned with a glowing garland, shifts hues with the sunlight filtering through the azure domes.<BR><BR>
+      She looks up, her eyes bright as new leaves.<BR><BR>
+      “Oh! Another seeker among the petals. I am Aurelia Wynn, humble caretaker of Aerilon’s Glimmer Garden—home to every rare flora our city can cradle, and, it seems, not a few secrets besides.”<BR>
+      “Tell me, do you come for healing, wisdom… or are you simply lost in the garden’s spell?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Your garden is wondrous, Aurelia. What is its story?" next="gardenLore"/>
+    <Option text="I seek work—or a way to help Aerilon." next="questIntro"/>
+    <Option text="I hear you supply rare herbs to the city's mages." next="herbSupply"/>
+    <Option text="Who tends such beauty alone?" next="backstory"/>
+	<Option text="Tell me about yourself, Aurelia." next="personal1"/>
+    <Option text="Just admiring the flowers, thank you." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Garden Lore -->
+  <Dialogue id="gardenLore">
+    <NPCText>
+      <![CDATA[
+      Aurelia gently brushes a blue-glowing leaf.<BR><BR>
+      “When Aerilon rose, the first archmages thought only of stone and crystal. But where magic hums, life yearns to follow. Every seed here was ferried from some distant glade or coaxed from shards of wild magic—some say even from the world’s forgotten roots.<BR>
+      The Glimmer Garden is more than a haven for beauty; it is a sanctuary, a wellspring of renewal, and—recently—a battleground. Minax’s shadows would twist even the gentlest sprout to poison, if allowed.”
+      ]]>
+    </NPCText>
+    <Option text="Can I aid in its defense?" next="questIntro"/>
+    <Option text="Tell me more of Minax’s threats." next="minax"/>
+    <Option text="Are any of these plants dangerous?" next="danger"/>
+    <Option text="I should be going." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Introduction -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#91ffb6'>
+      Aurelia’s smile fades to thoughtful concern.<BR><BR>
+      “Your offer is well-timed. The garden flourishes, but not without peril. Last moon, one of my most cherished Glimmer Ferns mutated—its roots whispered a warning of impending collapse, echoing through the earth magic below. I suspect sabotage: perhaps Minax’s alchemists, or even someone in the city coveting my secrets.<BR><BR>
+      I have distilled a potent essence, the Heartbloom Elixir, which may stabilize the roots and restore balance—but it must be analyzed and warded by a scholar with the ‘Ridgeback’ trait. Such individuals are rare, their lore inherited from druidic tribes exiled to the wilds below. Only they can see if corruption has truly begun.<BR><BR>
+      Would you be willing to carry this elixir beyond Aerilon, seeking a Ridgeback Scholar before the petals fade?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Yes, I will take the Heartbloom Elixir to a Ridgeback Scholar."
+            action="GiveItem:FactionDeliveryQuestScroll(Ridgeback Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Why Ridgeback Scholars? What makes them special?" next="ridgeback"/>
+    <Option text="What will happen if I fail?" next="fail"/>
+    <Option text="Is this truly Minax’s doing?" next="minax"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Aurelia hands you a vial, glowing faintly with swirling emerald light.<BR><BR>
+      “Guard the Heartbloom Elixir as you would your own breath. Seek out any Ridgeback Scholar beyond these skyborne walls—they will know how to test its purity. If you succeed, I will speak your name to the Azure Conclave; Aerilon is generous to its true friends.<BR>
+      And… if you listen closely on your journey, the roots may whisper warnings. They are my eyes where I cannot see.”
+      ]]>
+    </NPCText>
+    <Option text="I will see it done, Keeper Wynn." action="Close"/>
+  </Dialogue>
+
+  <!-- Ridgeback Scholar Lore -->
+  <Dialogue id="ridgeback">
+    <NPCText>
+      <![CDATA[
+      Aurelia’s eyes glint with respect.<BR><BR>
+      “Ridgeback Scholars are stewards of living lore—descendants of the wild tribes who first tamed the magical ridgebacks, guardians of the earth’s secrets. Their senses are attuned to both corruption and renewal; even the Azure Conclave grudgingly admits their value.<BR>
+      Sadly, they are not welcome in Aerilon. Prejudice lingers. That is why this task must pass through trusted hands, not city mages.”
+      ]]>
+    </NPCText>
+    <Option text="You can rely on me to find one." 
+            action="GiveItem:FactionDeliveryQuestScroll(Ridgeback Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Maybe it is too risky for me." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax Lore -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Aurelia’s voice is grave.<BR><BR>
+      “The Glimmer Garden grows on the threshold of worlds. Minax knows this—her followers covet any wellspring of creation, seeking to corrupt, to drain, to twist. Already I have found blackened petals and hollow roots.<BR>
+      But perhaps it is not only Minax; envy breeds poison, and not all foes come from beyond. Some bloom in our own shade.”
+      ]]>
+    </NPCText>
+    <Option text="Your trust will not be misplaced." 
+            action="GiveItem:FactionDeliveryQuestScroll(Ridgeback Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I need more time." action="Close"/>
+  </Dialogue>
+
+  <!-- Danger Lore -->
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      Aurelia grins wryly.<BR><BR>
+      “Danger? Only for those who disrespect the living weave. The Moonfire Nettles will sting, the Whispering Ferns may snare a careless foot, and the Starfruit Vines sing strange songs on moonless nights. But the truest peril lies in neglect. This garden survives because I love every thorn as much as every rose.”
+      ]]>
+    </NPCText>
+    <Option text="A lesson for all caretakers. I will help however I can." next="questIntro"/>
+    <Option text="That is a comfort. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Herb Supply Lore -->
+  <Dialogue id="herbSupply">
+    <NPCText>
+      <![CDATA[
+      Aurelia nods, brushing soil from her gloves.<BR><BR>
+      “Indeed. Salia Moontide depends on my roots to stabilize the Azure Crystals—her engines would falter without Glimmerroot and Nightshade Moss. Thendril, too, requires rare blossoms for alchemical wards.<BR>
+      Yet I trust only a few. This work demands purity and devotion—qualities too rare among the ambitious. Would you prove yourself in a task?”
+      ]]>
+    </NPCText>
+    <Option text="Yes, give me your task." next="questIntro"/>
+    <Option text="I should go." action="Close"/>
+  </Dialogue>
+
+  <!-- Backstory -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      Aurelia’s expression softens, but her gaze grows distant.<BR><BR>
+      “Few choose this life. I was not born to Aerilon—my mother was a Wind initiate, exiled for nurturing wild magic. I followed her path, though the Conclave only accepted me when my first Moonlily bloomed under their windows.<BR>
+      My only true companions are these flowers… and the creatures who tend them with me. But now, as darkness spreads, perhaps I must trust more than petals and roots.”
+      ]]>
+    </NPCText>
+    <Option text="You may trust me with your task." next="questIntro"/>
+    <Option text="Your story is moving. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Failure Lore -->
+  <Dialogue id="fail">
+    <NPCText>
+      <![CDATA[
+      Aurelia’s voice is quiet, yet urgent.<BR><BR>
+      “If the Elixir’s magic wanes, the Glimmer Fern will wither—and with it, the balance of the garden may fail. Should Minax’s corruption spread unchecked, even Aerilon’s crystals may crack.<BR>
+      But I trust you to try. Return if you change your mind, or if your heart is stronger than your doubts.”
+      ]]>
+    </NPCText>
+    <Option text="I will consider it carefully." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismiss -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Aurelia smiles, returning to her work.<BR>
+      “Even wandering souls are welcome among the blooms. Should you crave purpose or peace, the garden will be waiting.”
+      ]]>
+    </NPCText>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Personal History Branch -->
+  <Dialogue id="personal1">
+    <NPCText>
+      <![CDATA[
+      Aurelia pauses among the blossoms, her hands gently resting on a glowing Glimmer Vine.<BR><BR>
+      “I don't often speak of myself… but perhaps the time has come to trust those who ask kindly.”<BR>
+      “My mother was exiled from Wind for nurturing 'wild' magics—living spells, root-bound familiars, flora that sang to the stars. I followed her path, though it brought no fewer scornful eyes. Here in Aerilon, I tend what others fear: magic that breathes.”<BR><BR>
+      “Would you hear more, wanderer? Or shall we leave past petals undisturbed?”
+      ]]>
+    </NPCText>
+    <Option text="I’d like to know more about your mother." next="personal_mother"/>
+    <Option text="What sort of magic do you mean—magic that breathes?" next="personal_magic"/>
+    <Option text="Have you always lived in Aerilon?" next="personal_earlylife"/>
+    <Option text="I’d prefer to let you tend your garden." action="Close"/>
+  </Dialogue>
+
+  <!-- Mother -->
+  <Dialogue id="personal_mother">
+    <NPCText>
+      <![CDATA[
+      A wistful look overtakes Aurelia’s face.<BR><BR>
+      “Her name was Lysari. A dreamer and a rebel. She taught me to speak to seeds as if they were kin. She once healed a wounded wind drake using nothing but moonlilies and lullabies.<BR>
+      The mages of Wind called her dangerous, unnatural… so we wandered.”<BR><BR>
+      “She passed before Aerilon rose—but I feel her in every bloom that curls toward the moon.”<BR>
+      “Sometimes I wonder: would she have found peace here, or planted her roots elsewhere still?”
+      ]]>
+    </NPCText>
+    <Option text="She sounds remarkable. I’d like to learn what she taught you." next="personal_magic"/>
+    <Option text="She would be proud of what you’ve made." action="SendMessage:She smiles, quietly."/>
+    <Option text="This world has little mercy for the gentle-hearted." next="personal_reflect"/>
+  </Dialogue>
+
+  <!-- Magic Philosophy -->
+  <Dialogue id="personal_magic">
+    <NPCText>
+      <![CDATA[
+      Aurelia traces glowing patterns on a fern leaf with her fingertip.<BR><BR>
+      “Most here shape magic like stone—rigid, sharp, obedient. I coax it like a gardener shapes vines. I grow spells, not cast them. Every plant here is part spell, part spirit. Some even whisper in dreams.”<BR>
+      “It frightens the Conclave. Magic that thinks, breathes, chooses? It doesn't fit their geometry.”<BR><BR>
+      “But perhaps… it is time their circles learned from roots and rings.”
+      ]]>
+    </NPCText>
+    <Option text="That’s a beautiful way to see the world." next="personal_reflect"/>
+    <Option text="Sounds risky. Isn’t that close to druidic heresy?" next="personal_druid"/>
+    <Option text="I prefer structured spells, myself." condition="SkillAtLeast:Magery,70" next="personal_compare_mage"/>
+    <Option text="Could I learn from these plants?" condition="SkillAtLeast:Healing,60" next="personal_compare_natural"/>
+  </Dialogue>
+
+  <!-- Response to Player as Mage -->
+  <Dialogue id="personal_compare_mage">
+    <NPCText>
+      <![CDATA[
+      Aurelia smiles softly.<BR><BR>
+      “Structure has its place. But even a rune must breathe. Even a glyph must grow to suit its caster.”<BR>
+      “Should you wish to blend the arcane and the wild… come, and I shall teach you the Song of the Hollow Seed.”<BR>
+      <BASEFONT COLOR='#aaffaa'><I>(Your connection to Aerilon grows.)</I></BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I’ll return to learn more." action="Fame:+50"/>
+  </Dialogue>
+
+  <!-- Response to Player as Healer/Nature Aligned -->
+  <Dialogue id="personal_compare_natural">
+    <NPCText>
+      <![CDATA[
+      “Ah, you listen to the rhythm of life already,” she says warmly. “Then you understand that a plant’s pulse is no less sacred than a heartbeat.”<BR>
+      “Here, take this sprig of dreamroot—it will guide you if you ever become lost in the fractal wilds.”<BR>
+      <BASEFONT COLOR='#aaffaa'><I>(You feel a connection awaken beneath your feet.)</I></BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will protect it well." action="GiveItem:DreamrootSprig"/>
+  </Dialogue>
+
+  <!-- Reflection -->
+  <Dialogue id="personal_reflect">
+    <NPCText>
+      <![CDATA[
+      Aurelia’s voice softens to a whisper.<BR><BR>
+      “The world is unkind, yes. But that is why I nurture kindness in return. Not because it wins—but because it *persists*.”<BR>
+      “Every blossom is defiance. Every vine, a quiet song of resistance.”<BR>
+      “Thank you for listening. Few do.”<BR>
+      <BASEFONT COLOR='#aaffaa'><I>(Your Karma increases slightly.)</I></BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I hope your kindness spreads." action="Karma:+100"/>
+  </Dialogue>
+
+  <!-- Early Life -->
+  <Dialogue id="personal_earlylife">
+    <NPCText>
+      <![CDATA[
+      “I’ve lived in many places—cloudforest groves, ruined towers, even a hollowed-out tusk of a crystal leviathan. But never truly belonged until Aerilon.”<BR><BR>
+      “I came when the first root poked through the sky-stone. The Conclave gave me one platform, half a seedbed. They thought I’d fail.”<BR>
+      “But every garden begins with belief, not permission.”<BR>
+      <BASEFONT COLOR='#aaffaa'><I>(You sense she has earned every inch of this paradise.)</I></BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I admire your resolve." action="Fame:+50"/>
+    <Option text="Your defiance is its own kind of magic." action="AddStat:Int,5,120"/>
+    <Option text="I should be going now." action="Close"/>
+  </Dialogue>
+
+  <!-- Druidic Critique -->
+  <Dialogue id="personal_druid">
+    <NPCText>
+      <![CDATA[
+      Aurelia raises an eyebrow.<BR><BR>
+      “Heresy to whom? To the Conclave who burn what they cannot catalogue? Or to Wind, which locks its gardens in vaults?”<BR>
+      “I do not follow druidic rites—I *feel* them. But I am no druid. Nor mage
+
+
+</DialogueFile>

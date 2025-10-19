@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="TariqBlackfist">
+
+  <!-- GREETING -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#d19c5b'>
+      You find yourself before a broad-shouldered man with scarred knuckles, arms folded over his chest. His gaze is sharp, weighing you like a fighter sizing up a new opponent.<BR><BR>
+      "This is the Black Pits. My arena, my rules. Name’s Tariq Blackfist. If you’re here for coin, glory, or just to bleed, you’ll answer to me.<BR>
+      But unless you fancy rigged matches and poison in your ale, maybe you’re the kind I need today."<BR><BR>
+      What brings you to the pits?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I'm looking for work—anything worth my skill?" next="workIntro"/>
+    <Option text="Who are you, Tariq Blackfist?" next="aboutTariq"/>
+    <Option text="Tell me about the Black Pits." next="aboutPits"/>
+	<Option text="Tell me more about you. You seem like you've seen it all." next="deepBackstoryIntro" />
+    <Option text="Just passing through." next="dismiss"/>
+  </Dialogue>
+
+  <!-- ABOUT TARIK -->
+  <Dialogue id="aboutTariq">
+    <NPCText>
+      <![CDATA[
+      Tariq cracks his knuckles.<BR><BR>
+      "I fought for my name—across Sunreach, Qasaria, even in the desert wastes. These days, I run the pits for Lady Seraphine. She handles the gold, I handle the fists.<BR>
+      I keep it honest. Cheats, poisoners, or cowards—I break ‘em. Simple as that. The only thing I hate more than a cheat is a cultist. Especially those Minax scum slithering in my shadows."
+      ]]>
+    </NPCText>
+    <Option text="You sound like a man with enemies." next="workIntro"/>
+    <Option text="Tell me about Lady Seraphine." next="aboutSeraphine"/>
+    <Option text="What are these Minax cultists up to?" next="minaxLore"/>
+    <Option text="Can I fight in the pits?" next="joinPits"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="aboutSeraphine">
+    <NPCText>
+      <![CDATA[
+      Tariq lowers his voice.<BR><BR>
+      "Seraphine runs Sunreach’s underworld with a silk glove over a steel fist. Cross her and you’re fish food. But she looks after her own, and I owe her that much. She won’t let this city rot from the inside—if we can stamp out Minax’s filth first."
+      ]]>
+    </NPCText>
+    <Option text="So you want help rooting out cultists?" next="workIntro"/>
+    <Option text="Tell me about the other fighters." next="aboutFighters"/>
+    <Option text="I'm just here for the spectacle." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="aboutFighters">
+    <NPCText>
+      <![CDATA[
+      "My fighters are hard men and women. Some born in the streets, some escaped slaves from Qasaria, some ex-paladins from Trinsic. They all bleed the same in the sand.<BR>
+      I keep them safe—when I can. That’s harder these days. Poison in their drinks, black magic in their wounds. Someone wants the pits broken, and it stinks of Minax."
+      ]]>
+    </NPCText>
+    <Option text="Sounds like you need an investigator." next="workIntro"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- ABOUT THE BLACK PITS -->
+  <Dialogue id="aboutPits">
+    <NPCText>
+      <![CDATA[
+      Tariq grins—a flash of gold tooth.<BR><BR>
+      "The Black Pits is where Sunreach gambles its soul. Fighters brawl for gold, crowds cheer for blood. Nobles and pirates both pay to watch. But when the odds are rigged or my fighters fall sick, the pit’s honor is stained. I won’t have it."<BR>
+      He leans in.<BR>
+      "Think you can sniff out a cheat? Or deal with a poisoner? Prove it."
+      ]]>
+    </NPCText>
+    <Option text="What’s the job?" next="workIntro"/>
+    <Option text="I’m here to fight, not investigate." next="joinPits"/>
+    <Option text="On second thought, I’ll be leaving." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="joinPits">
+    <NPCText>
+      <![CDATA[
+      Tariq sizes you up.<BR><BR>
+      "Every blood wants to fight until they see the sand’s red. You want in? Earn my trust first. Prove you can handle a task—then maybe you’ll get a shot at the champion’s purse."
+      ]]>
+    </NPCText>
+    <Option text="All right, what's the real job?" next="workIntro"/>
+    <Option text="I’ll come back when I’m ready." action="Close"/>
+  </Dialogue>
+
+  <!-- QUEST INTRO -->
+  <Dialogue id="workIntro">
+    <NPCText>
+      <![CDATA[
+      Tariq’s eyes narrow.<BR><BR>
+      "Something’s wrong in my pits. Matches rigged, fighters collapsing mid-bout—vomiting, convulsing. Healers say it’s poison, but no one talks. Word is, Minax cultists pay off the staff to slip toxin in food and drink."<BR>
+      He gestures you closer.<BR>
+      "I need someone who can keep their head down. Talk to my people. Search for evidence. Root out whoever’s corrupting my fighters before the next champion dies."
+      ]]>
+    </NPCText>
+    <Option text="Where do I start looking?" next="questDetails"/>
+    <Option text="Why do you suspect Minax cultists?" next="minaxLore"/>
+    <Option text="What do I get if I succeed?" next="reward"/>
+    <Option text="This isn’t my fight." action="Close"/>
+  </Dialogue>
+
+  <!-- MINAX LORE -->
+  <Dialogue id="minaxLore">
+    <NPCText>
+      <![CDATA[
+      Tariq’s jaw tightens.<BR><BR>
+      "Minax cultists thrive where there’s weakness—poison, bribery, fear. One of my old pit healers vanished last week. Another’s gone mad, babbling about ‘shards of the end.’ I’ve found blood sigils scrawled under the stands. That’s Minax’s mark, all right."<BR>
+      He spits.<BR>
+      "If they turn my fighters into thralls, Sunreach will fall. I can’t let that happen."
+      ]]>
+    </NPCText>
+    <Option text="Tell me where to start." next="questDetails"/>
+    <Option text="This is too dangerous." action="Close"/>
+  </Dialogue>
+
+  <!-- QUEST DETAILS -->
+  <Dialogue id="questDetails">
+    <NPCText>
+      <![CDATA[
+      "Talk to my staff—Gara the barkeep, Jorah the pit healer, maybe even ‘Ratboy’ Niko, the runner. Someone knows something, but they’re scared. Find proof—a vial, sigil, cult token, whatever. Bring it to me."<BR>
+      He locks eyes with you.<BR>
+      "Don’t rough up my people. But if you catch a cultist red-handed, break as many bones as you like."
+      ]]>
+    </NPCText>
+    <Option text="I’ll find your culprit, Tariq." 
+            action="GiveItem:FactionInvestigationQuestScroll(BlackPitsInvestigation,Sunreach,250)"
+            condition="!HasItem:FactionInvestigationQuestScroll"
+            next="accept"/>
+    <Option text="Who’s Gara the barkeep?" next="garaInfo"/>
+    <Option text="What about Jorah the healer?" next="jorahInfo"/>
+    <Option text="Who is ‘Ratboy’ Niko?" next="nikoInfo"/>
+    <Option text="Maybe I’ll come back later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="garaInfo">
+    <NPCText>
+      <![CDATA[
+      "Gara pours the drinks. Knows every regular, every shady customer. She’s tough—won’t talk to strangers unless you buy a round. But if anyone’s seen poison go in a cup, it’s her."
+      ]]>
+    </NPCText>
+    <Option text="Got it. Tell me about Jorah." next="jorahInfo"/>
+    <Option text="And Ratboy Niko?" next="nikoInfo"/>
+    <Option text="I’ll start the investigation." 
+            action="GiveItem:FactionInvestigationQuestScroll(BlackPitsInvestigation,Sunreach,250)"
+            condition="!HasItem:FactionInvestigationQuestScroll"
+            next="accept"/>
+    <Option text="Maybe later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="jorahInfo">
+    <NPCText>
+      <![CDATA[
+      "Jorah’s my healer. Good man, but nerves shot after his apprentice vanished. He’ll trust you if you show respect. Ask him about strange wounds or odd herbs used lately."
+      ]]>
+    </NPCText>
+    <Option text="Tell me about Gara." next="garaInfo"/>
+    <Option text="What about Ratboy Niko?" next="nikoInfo"/>
+    <Option text="I’ll start the investigation." 
+            action="GiveItem:FactionInvestigationQuestScroll(BlackPitsInvestigation,Sunreach,250)"
+            condition="!HasItem:FactionInvestigationQuestScroll"
+            next="accept"/>
+    <Option text="Another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="nikoInfo">
+    <NPCText>
+      <![CDATA[
+      "Ratboy Niko—little sneak who runs bets and messages between the fighters. Sees everything, says nothing. Catch him near the eastern stands, but don’t threaten him—he bites. Bribe him if you must."
+      ]]>
+    </NPCText>
+    <Option text="Gara the barkeep?" next="garaInfo"/>
+    <Option text="Jorah the healer?" next="jorahInfo"/>
+    <Option text="I’m ready to begin." 
+            action="GiveItem:FactionInvestigationQuestScroll(BlackPitsInvestigation,Sunreach,250)"
+            condition="!HasItem:FactionInvestigationQuestScroll"
+            next="accept"/>
+    <Option text="Later." action="Close"/>
+  </Dialogue>
+
+  <!-- ACCEPT QUEST -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Tariq grins grimly.<BR><BR>
+      "Good. Bring me proof, not rumors. Do that, and you’ll have the Blackfist’s favor—and a shot at the arena purse. Fail, and I’ll know you for a coward."<BR>
+      "Now get moving before another fighter drops dead."
+      ]]>
+    </NPCText>
+    <Option text="I’m on it." action="Close"/>
+  </Dialogue>
+
+  <!-- REWARD BRANCH -->
+  <Dialogue id="reward">
+    <NPCText>
+      <![CDATA[
+      "Bring me solid evidence—a cult token, poison vial, whatever you find. I’ll pay you well and you’ll earn a place in the Black Pits. Maybe even a word in Lady Seraphine’s ear. Not many get that chance."
+      ]]>
+    </NPCText>
+    <Option text="That’s good enough for me. I’ll do it." 
+            action="GiveItem:FactionInvestigationQuestScroll(BlackPitsInvestigation,Sunreach,250)"
+            condition="!HasItem:FactionInvestigationQuestScroll"
+            next="accept"/>
+    <Option text="I’ll pass on this one." action="Close"/>
+  </Dialogue>
+
+  <!-- DISMISS -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Tariq shrugs.<BR><BR>
+      "Then don’t get in the way. There’s always blood to clean off the sand."
+      ]]>
+    </NPCText>
+    <Option text="Maybe I’ll return when I’m ready." action="Close"/>
+  </Dialogue>
+
+
+  <!-- === Backstory Introduction === -->
+  <Dialogue id="deepBackstoryIntro">
+    <NPCText>
+      <![CDATA[
+      Tariq grunts and leans against a pillar, arms crossed.<BR><BR>
+      "Heh. Most folks want gold, not ghost stories. But fine—you’re not the usual pit-watcher, are you?"<BR><BR>
+      He squints, searching your face.<BR>
+      "What do you want to know? My scars, my sins, or the fights that built this city?"
+      ]]>
+    </NPCText>
+    <Option text="Tell me how you became pitmaster." next="originStory"/>
+    <Option text="What’s the worst fight you’ve ever seen?" next="worstFight"/>
+    <Option text="What do you believe in, Tariq?" next="beliefs"/>
+    <Option text="That’s enough—maybe later." action="Close"/>
+  </Dialogue>
+
+  <!-- === Origin Story === -->
+  <Dialogue id="originStory">
+    <NPCText>
+      <![CDATA[
+      "Wasn’t always a boss. I was a slave once, in Qasaria’s sapphire mines. Fought in underground arenas to earn food. Killed my first man over a crust of bread and a ring he stole from his wife’s corpse."<BR><BR>
+      He flexes his scarred fists.<BR>
+      "Seraphine bought my contract. Said I had 'the will of a king with the fists of a beast.' Told me I could either rot... or rise. I chose to rise."
+      ]]>
+    </NPCText>
+    <Option text="You earned your title. That deserves respect." 
+            action="Karma:+100" />
+    <Option text="So Seraphine made you? Interesting." next="aboutSeraphine"/>
+    <Option text="What happened to that ring?" next="ringStory"/>
+    <Option text="Back to something else..." next="deepBackstoryIntro"/>
+  </Dialogue>
+
+  <Dialogue id="ringStory">
+    <NPCText>
+      <![CDATA[
+      "Still have it."<BR>
+      He lifts a heavy iron chain from his neck, revealing a battered silver ring.<BR><BR>
+      "It reminds me that we all bleed the same, no matter how rich or poor. The man I killed begged me to return it to his son. Never found the boy. So I wear it until I do."<BR><BR>
+      His tone darkens.<BR>
+      "If you ever hear of a Qasarian named Nemed... tell him Tariq Blackfist owes him truth."
+      ]]>
+    </NPCText>
+    <Option text="If I find this Nemed, I’ll send word." 
+            action="SendMessage:Tariq nods solemnly." />
+    <Option text="That’s heavy. Let's change the subject." next="deepBackstoryIntro"/>
+  </Dialogue>
+
+  <!-- === Worst Fight Story === -->
+  <Dialogue id="worstFight">
+    <NPCText>
+      <![CDATA[
+      "It was in the ash pits of Jhelom, before the city rose again. A fight between a half-mad knight and a beast-masked berserker. No rules, no audience, just a blood pact."<BR><BR>
+      He exhales slowly.<BR>
+      "They fought for *seven hours*. The knight begged for death in the end. The berserker refused. Said, ‘He dies only when the gods speak.’ That day, I learned true violence doesn’t shout—it whispers."<BR>
+      He shakes his head.<BR>
+      "I banned all death duels after that."
+      ]]>
+    </NPCText>
+    <Option text="You have rules? Surprising for a pitmaster." next="beliefs"/>
+    <Option text="Sounds like you’ve seen too much." action="Fame:+100" />
+    <Option text="Enough gore—back to your story." next="deepBackstoryIntro"/>
+  </Dialogue>
+
+  <!-- === Beliefs and Morals === -->
+  <Dialogue id="beliefs">
+    <NPCText>
+      <![CDATA[
+      Tariq’s voice is firm.<BR><BR>
+      "I believe in three things: strength, honesty, and keeping your word. You break a deal in my pits, you don’t fight again. Ever."<BR><BR>
+      "Some say I’m old-fashioned. But when poison creeps in, when Minax whispers in a man’s ear, you’d better have your own law inside your bones. Or you'll fall."<BR>
+      "I won’t let the pits fall."
+      ]]>
+    </NPCText>
+    <Option text="What would you do if Seraphine broke your code?" next="codeDilemma"/>
+    <Option text="You sound more knight than criminal." action="Karma:+200" />
+    <Option text="Your rules are clear. I respect that." next="deepBackstoryIntro"/>
+  </Dialogue>
+
+  <Dialogue id="codeDilemma">
+    <NPCText>
+      <![CDATA[
+      Tariq’s expression hardens.<BR><BR>
+      "If Seraphine crossed the line? I’d warn her once. Then I'd stand against her."<BR>
+      "Honor ain’t a word I use lightly. That’s why Rhogar still respects me. And that’s why these pits still stand."<BR><BR>
+      "Don’t think I won’t test *your* code someday, too."
+      ]]>
+    </NPCText>
+    <Option text="I’ll stand with you if it ever comes to that." action="Fame:+200" />
+    <Option text="Good to know. Let's go back." next="deepBackstoryIntro"/>
+  </Dialogue>
+
+
+</DialogueFile>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="BrendylWheyfoot">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#e6e2c2'>
+      A stooped man with curd-stained robes eyes you warily while rearranging rounds of cheese in mismatched baskets.<br>
+      <i>"You there—yes, you look like someone who values fine dairy and a faint hint of mystery."</i><br><br>
+      He clutches a cheese wheel like a holy relic.<br>
+      <b>"I'm Brendyl Wheyfoot, and I’m in dire need of aid. Have you ever met a true Cheese Maker? No? Well then. This may be your destiny."</b>
+      </BASEFONT>
+    ]]>
+    </NPCText>
+    <Option text="A Cheese Maker? That’s... oddly specific." next="explain"/>
+    <Option text="What sort of aid are you looking for?" next="questIntro"/>
+    <Option text="I’m lactose intolerant. Goodbye." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="explain">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#e6e2c2'>
+      “He was once the Crown’s Royal Curdmaster—Theodor Curdswain. Said to have created a blue-veined wedge so potent it cured lycanthropy. But after Lord British vanished, Theodor disappeared too.”<br>
+      Brendyl sighs, eyes watering.<br>
+      “Last I heard, he’d retreated to the caves north of Wind, mumbling about soul cultures and sacred molds. I fear for him.”
+      </BASEFONT>
+    ]]>
+    </NPCText>
+    <Option text="You want me to find him?" next="questIntro"/>
+    <Option text="That sounds like a you-problem." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#e6e2c2'>
+      Brendyl offers a tightly wrapped parchment.<br>
+      “I’ve prepared a delivery scroll, bound by goatgut twine and dairy ink. You need only find Theodor Curdswain—the man bearing the trait of <b>Cheese Maker</b>—and hand him this message.”<br><br>
+      “Do this, and the Artisan’s Circle of Frostmere will honor you with reputation... and perhaps a wheel of something pungent and delightful.”
+      </BASEFONT>
+    ]]>
+    </NPCText>
+    <Option text="I’ll find this Cheese Maker for you."
+            action="GiveItem:FactionDeliveryQuestScroll(Cheese Maker,Frostmere,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Any clues to where he is now?" next="clues"/>
+    <Option text="I must decline. Cheese is not my path." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="clues">
+    <NPCText>
+      <![CDATA[
+      Brendyl sniffs the air as if following a scent.<br>
+      “I once tracked his trail to a frozen waterfall near Wind. There were odd holes in the snow—round and faintly fragrant. His signs. But beware—Theodor was never the same after he invented the Lamenting Brie.”<br>
+      He stares into the distance.<br>
+      “You’ll know him by the smell. Like regret, aged 20 years.”
+      ]]>
+    </NPCText>
+    <Option text="I'll deliver your scroll to Theodor."
+            action="GiveItem:FactionDeliveryQuestScroll(Cheese Maker,Frostmere,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="On second thought, this sounds insane." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Brendyl nods solemnly.<br>
+      “Blessings of the Buttered Saint be upon you. Find Theodor. Deliver the scroll. Let him know his cheeses are missed... and his return awaited.”<br><br>
+      He bows, pressing the scroll into your hands.
+      ]]>
+    </NPCText>
+    <Option text="I’ll find him. Farewell, Wheyfoot." action="Close"/>
+  </Dialogue>
+
+</DialogueFile>

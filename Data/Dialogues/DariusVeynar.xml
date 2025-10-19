@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="DariusVeynar">
+
+  <!-- ========= GREETING & BRANCHES ========= -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ffce63'>
+      Before you stands a sharply dressed man, adorned in gold-trimmed silks and a sable surcoat. His eyes weigh you as swiftly as any set of merchant's scales.<BR><BR>
+      “Welcome to Sunreach, jewel of the southern coast. I am <B>Darius Veynar</B>, Merchant Prince and head of the Council of Five Houses.<BR>
+      In these days of shadows and shifting fortunes, I am always in need of capable hands—provided they know the value of discretion. Speak, then: have you come to trade, to bargain, or to serve?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek profitable work." next="taskIntro"/>
+    <Option text="What is Sunreach?" next="sunreach"/>
+    <Option text="Who are the Council of Five Houses?" next="council"/>
+    <Option text="Do you know anything about Minax’s agents?" next="minax"/>
+	<Option text="Tell me about yourself." next="dariusBackstory"/>
+    <Option text="Just passing through." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Sunreach Lore -->
+  <Dialogue id="sunreach">
+    <NPCText>
+      <![CDATA[
+      Darius smiles thinly.<BR><BR>
+      “Sunreach is a city of opportunity—for those who recognize its tides. Our harbor is the largest in the southern lands; goods, rumors, and gold flow here from every continent. But beware: fortunes can turn as quickly as the wind, and loyalty is bought and sold as easily as silk.”
+      ]]>
+    </NPCText>
+    <Option text="And your Council rules this city?" next="council"/>
+    <Option text="I am seeking work, not a lecture." next="taskIntro"/>
+    <Option text="I’ll keep that in mind. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Council Lore -->
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      He adjusts his sash, almost proudly.<BR><BR>
+      “The Council of Five Houses—trade dynasties old and new. We keep the peace, set tariffs, and—some say—decide the fate of the entire coast.<BR>
+      Of course, beneath the velvet and gold there is always a dagger or two. Only a fool trusts appearances in Sunreach.”
+      ]]>
+    </NPCText>
+    <Option text="You sound like a man with many enemies." next="taskIntro"/>
+    <Option text="Tell me about the Houses." next="houses"/>
+    <Option text="Enough politics. Do you have work?" next="taskIntro"/>
+  </Dialogue>
+
+  <!-- House Details -->
+  <Dialogue id="houses">
+    <NPCText>
+      <![CDATA[
+      “Five Houses, five ambitions. The House of Ashveil rules the sea lanes, the House of Veynar—mine—handles land trade and silks. Then there are the desert-born, the coiners, and the arms dealers.<BR>
+      Alliances shift, rivalries simmer, and profit always finds a way. But enough of that—unless you’d like to join our little game?”
+      ]]>
+    </NPCText>
+    <Option text="I am ready for your game. What do you need done?" next="taskIntro"/>
+    <Option text="No thanks, sounds dangerous." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax Lore -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Darius lowers his voice.<BR><BR>
+      “In times past, we’d laugh at rumors of shadow cults. Now? I see Minax’s hand everywhere—spies, saboteurs, and fools who think her chaos brings profit. But Sunreach is not so easily broken.<BR>
+      If you hear whispers of the ‘Blood Cult’ in our undercity… take care whom you trust. Even the Council’s not immune to corruption.”
+      ]]>
+    </NPCText>
+    <Option text="What do you want done about these cultists?" next="cultistJob"/>
+    <Option text="Do you suspect anyone in the Council?" next="suspect"/>
+    <Option text="I prefer not to get involved in cult business." next="taskIntro"/>
+  </Dialogue>
+
+  <!-- Cultist Side-Quest -->
+  <Dialogue id="cultistJob">
+    <NPCText>
+      <![CDATA[
+      “Information is my preferred currency. If you uncover names, symbols, or shipments tied to Minax, bring them to me—discreetly. Payment will not be an issue.<BR>
+      For now, I have a more immediate task.”
+      ]]>
+    </NPCText>
+    <Option text="Let’s discuss this task." next="taskIntro"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Suspect Response -->
+  <Dialogue id="suspect">
+    <NPCText>
+      <![CDATA[
+      “A wise question. Some say Seraphine Ashveil’s ships fly black sails after midnight; others whisper of Magistrate Thornwall’s debts. Even I, it’s rumored, have my own secrets.<BR>
+      Best not to believe everything you hear, but if you uncover the truth—come to me first.”
+      ]]>
+    </NPCText>
+    <Option text="Understood. What is the task?" next="taskIntro"/>
+    <Option text="I’ll steer clear of Council politics." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismissal -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      “Then move along. Sunreach has little patience for idle wanderers. But should you desire gold or secrets, return to me.”
+      ]]>
+    </NPCText>
+    <Option text="On second thought, do you have work?" next="taskIntro"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ========= QUEST OFFER ============ -->
+  <Dialogue id="taskIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ffce63'>
+      Darius steeples his fingers, voice lowering.<BR><BR>
+      “There is a shipment of enchanted Qasarian silk—worth a king’s ransom—due to arrive at midnight. My rivals would see it ‘misplaced’ en route. I need someone neither House nor pirate to ensure the goods reach my warehouse, unmolested.<BR><BR>
+      Deliver this <B>Sealed Ledger</B> to my contact at the Docks—do not let it fall into the wrong hands. Pirates, cultists, even the city guard may try to interfere.<BR>
+      Do this well, and the coffers of House Veynar will remember your name. Are you prepared to take this risk?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I accept. Give me the Sealed Ledger."
+            action="GiveItem:FactionDeliveryQuestScroll(Dock Contact,Sunreach,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="What dangers should I expect?" next="risk"/>
+    <Option text="Why not use your own men?" next="whyOutsider"/>
+    <Option text="Let me think it over." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Darius hands you a wax-sealed ledger, heavy with concealed runes.<BR><BR>
+      “Guard it with your life. If intercepted, the silk—and my favor—are lost. Deliver it to a woman named <B>Mara</B> at the central docks. She wears a violet cloak.<BR>
+      Return here for your reward once the deed is done. And remember: Sunreach does not forget its friends—or its enemies.”
+      ]]>
+    </NPCText>
+    <Option text="It will be done, Merchant Prince." action="Close"/>
+  </Dialogue>
+
+  <!-- Risk Explanation -->
+  <Dialogue id="risk">
+    <NPCText>
+      <![CDATA[
+      “Pirates under Lady Seraphine’s flag may try to seize the ledger. Some city guards are in her pocket, and rumor has it a Minax cultist seeks to sabotage trade tonight.<BR>
+      Trust only those you know—or those who cannot afford betrayal.”
+      ]]>
+    </NPCText>
+    <Option text="Sounds exciting. I’ll do it." 
+            action="GiveItem:FactionDeliveryQuestScroll(Dock Contact,Sunreach,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="On second thought, I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <!-- Outsider Reasoning -->
+  <Dialogue id="whyOutsider">
+    <NPCText>
+      <![CDATA[
+      He grins, teeth sharp.<BR><BR>
+      “My men are known. Yours is a face the city will not expect. If you succeed, perhaps that will change.<BR>
+      In Sunreach, anonymity is a valuable coin. Spend it wisely.”
+      ]]>
+    </NPCText>
+    <Option text="That makes sense. I’ll do it." 
+            action="GiveItem:FactionDeliveryQuestScroll(Dock Contact,Sunreach,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I value my anonymity too much to risk it." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="dariusBackstory">
+  <NPCText>
+    <![CDATA[
+    Darius leans back slightly, studying you with a measured gaze.<BR><BR>
+    “Curious, are you? Most only care about coin. But very well… I was not born into power. I earned it—through wit, risk, and an unwavering refusal to play by anyone else’s rules.<BR>
+    I built my House from a caravan, a rusted blade, and debts owed by the right people. Now I trade in silk, secrets, and silence.”
+    ]]>
+  </NPCText>
+  <Option text="How did you rise to lead a House?" next="riseToPower"/>
+  <Option text="What do you want for Sunreach?" next="dariusVision"/>
+  <Option text="Who do you trust in the Council?" next="trust"/>
+  <Option text="Sounds like you’ve made enemies." next="rivals"/>
+  <Option text="Impressive. Do you reward ambition?" next="rewardCheck"/>
+  <Option text="Enough biography. Let’s talk work." next="taskIntro"/>
+</Dialogue>
+
+<Dialogue id="riseToPower">
+  <NPCText>
+    <![CDATA[
+    “I began as a caravan broker between Britannia and the Tokuno archipelago. Pirates stole my first cargo. Bandits raided the second. I learned to hire swords, forge permits, and bribe port masters.<BR><BR>
+    By my fifth year, I owned three ships, two warehouses, and enough blackmail material to start a House. Now… I don’t lose shipments. I lose patience.”
+    ]]>
+  </NPCText>
+  <Option text="What about Sunreach’s future?" next="dariusVision"/>
+  <Option text="Sounds like you value cunning." next="rewardCheck"/>
+  <Option text="Let’s get back to business." next="taskIntro"/>
+</Dialogue>
+
+<Dialogue id="dariusVision">
+  <NPCText>
+    <![CDATA[
+    “Sunreach stands between dying empires and rising shadows. With Lord British gone, and Minax in motion, we must choose: cling to old crowns, or build something new.<BR><BR>
+    I would see Sunreach become a sovereign power—answering to no kingdom, beholden to no mage tower. Trade is eternal. Empires are not.”
+    ]]>
+  </NPCText>
+  <Option text="What stands in your way?" next="rivals"/>
+  <Option text="I admire your vision." next="rewardCheck"/>
+  <Option text="This sounds dangerous." next="taskIntro"/>
+</Dialogue>
+
+<Dialogue id="trust">
+  <NPCText>
+    <![CDATA[
+    Darius smirks.<BR><BR>
+    “Trust is a liability. Still... I respect Hassan Al-Kadir. His honor gets in the way of profit, but he holds this city’s soul better than the rest. As for Lady Seraphine…”<BR>
+    He pauses. “Let’s just say she’s a useful storm. Until she turns.”
+    ]]>
+  </NPCText>
+  <Option text="She sounds dangerous." next="rivals"/>
+  <Option text="I’d like to meet her." 
+          condition="KarmaBelow:0"
+          action="SendMessage:Best watch your step. She likes her guests bold—or expendable."
+          next="taskIntro"/>
+  <Option text="And what of the Magistrate?" next="magistrate"/>
+</Dialogue>
+
+<Dialogue id="magistrate">
+  <NPCText>
+    <![CDATA[
+    Darius waves a hand dismissively.<BR><BR>
+    “Thornwall? He’s as malleable as wet parchment. Seraphine owns half his soul. The Blood Cult might own the rest. I keep him close for now… like one might keep a spoiled fruit until the right guest arrives.”
+    ]]>
+  </NPCText>
+  <Option text="Sounds like he needs removing." 
+          condition="FameAtLeast:1000"
+          action="SendMessage:Dangerous talk... but I like your fire."
+          next="taskIntro"/>
+  <Option text="That’s your concern, not mine." next="taskIntro"/>
+</Dialogue>
+
+<Dialogue id="rivals">
+  <NPCText>
+    <![CDATA[
+    “Power breeds enemies. Hassan opposes corruption. Seraphine wants chaos she can profit from. Aerilon's mages scorn us as ‘grounded opportunists.’<BR>
+    I call that envy. Let them scoff while I control the docks, the coin, and the secrets.”
+    ]]>
+  </NPCText>
+  <Option text="What would you do about Seraphine?" next="seraphinePlans"/>
+  <Option text="I could help you... discreetly." 
+          condition="SkillAtLeast:Hiding,60"
+          action="SendMessage:Useful. I may call on you when the moon is dark."
+          next="taskIntro"/>
+  <Option text="You’re walking a dangerous path." next="taskIntro"/>
+</Dialogue>
+
+<Dialogue id="seraphinePlans">
+  <NPCText>
+    <![CDATA[
+    “I use her ships. She uses my trade lanes. It’s a game—until someone missteps. Should her pirates take liberties with my silk again, I’ll turn the city guard loose with full sanction. Or perhaps… someone quieter.”<BR><BR>
+    He glances at you.
+    ]]>
+  </NPCText>
+  <Option text="You’re looking at someone quieter now." 
+          condition="SkillAtLeast:Snooping,50"
+          action="Karma:-500"
+          next="taskIntro"/>
+  <Option text="That’s not my kind of job." next="taskIntro"/>
+</Dialogue>
+
+<Dialogue id="rewardCheck">
+  <NPCText>
+    <![CDATA[
+    Darius narrows his eyes appraisingly.<BR><BR>
+    “Ambition... I see it in you. Most lack the nerve to ask. Perhaps you’ll go far.”<BR><BR>
+    He tosses you a small token.
+    ]]>
+  </NPCText>
+  <Option text="Thank you."
+          condition="!HasItem:GoldRing"
+          action="GiveItem:GoldRing"
+          next="greeting"/>
+  <Option text="Generous of you." next="greeting"/>
+</Dialogue>
+
+
+</DialogueFile>

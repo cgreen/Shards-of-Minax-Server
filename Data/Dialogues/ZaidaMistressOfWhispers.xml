@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="ZaidaMistressOfWhispers">
+
+  <!-- ========================================================= -->
+  <!-- Zaida, Mistress of Whispers – Sunreach Info Broker Quest  -->
+  <!-- ========================================================= -->
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ce3bfd'>
+      A veiled woman stands in the shadows of the Sunreach bazaar. Her voice is a whisper that cuts through the bustle.<BR><BR>
+      "Tread carefully, friend. Words have weight here, and I trade in nothing but the heaviest secrets.<BR>
+      I am Zaida, Mistress of Whispers. You have business, or merely curiosity?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I hear you can provide information—for a price." next="infoPrice"/>
+    <Option text="Who are you, truly?" next="backstory"/>
+    <Option text="What brings you to Sunreach?" next="sunreachLore"/>
+	<Option text="Tell me your true story." next="zaidaBackstory"/>
+    <Option text="I'm just passing through." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Backstory branch -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      She smiles, though her eyes remain hidden.<BR><BR>
+      "What am I? A shadow that whispers to the powerful, a rumor that topples kings. My allegiances shift with the winds—today, I am for myself. Tomorrow? Perhaps for you… if you prove useful."
+      ]]>
+    </NPCText>
+    <Option text="What do you want from me?" next="questIntro"/>
+    <Option text="How do you know so much about Sunreach?" next="sunreachLore"/>
+    <Option text="Never mind, I have no business here." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="sunreachLore">
+    <NPCText>
+      <![CDATA[
+      "Sunreach is a city built on secrets and sand. Every merchant, every pirate, every councilor owes me a debt—though few realize it until it's far too late.<BR>
+      If you wish to survive here, you must learn the art of discretion. Or else, hire one who has mastered it."
+      ]]>
+    </NPCText>
+    <Option text="Can I hire your skills?" next="infoPrice"/>
+    <Option text="Do you have any tasks for me?" next="questIntro"/>
+    <Option text="I’ll take my leave." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="infoPrice">
+    <NPCText>
+      <![CDATA[
+      "My knowledge is not free. Some pay in coin, others in loyalty—or blood. But today, I seek something rare: the truth of an artifact lost beneath Sunreach, a relic that can sway the Council's votes. Find it for me, and I will owe you a debt greater than gold."
+      ]]>
+    </NPCText>
+    <Option text="What artifact do you seek?" next="questIntro"/>
+    <Option text="That sounds dangerous. Who else seeks it?" next="danger"/>
+    <Option text="I have no interest in council politics." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      Her voice lowers.<BR><BR>
+      "Everyone seeks it—Darius, Seraphine, even Thornwall, though he’s too cowardly to admit it. The Minax cultists want it to puppet the council. I want it for leverage, nothing more. Help me, and I’ll make sure you leave Sunreach richer… and alive."
+      ]]>
+    </NPCText>
+    <Option text="Very well. Tell me what I must do." next="questIntro"/>
+    <Option text="This sounds above my station." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Introduction -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ce3bfd'>
+      "Beneath Sunreach’s oldest cistern lies the *Signet of Silent Dominion*—an ancient ring that, when worn, compels a single council vote in your favor. It vanished decades ago. I believe Minax cultists now guard it in the undercity.<BR><BR>
+      Bring me the Signet, and I will reward you with secrets the council would kill for. Fail… and perhaps you’ll become just another rumor."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="How do I find the cistern?" next="cistern"/>
+    <Option text="Who guards it?" next="guarded"/>
+    <Option text="What’s in it for me?" next="reward"/>
+    <Option text="Let me think about it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="cistern">
+    <NPCText>
+      <![CDATA[
+      "Seek the oldest well in the Silk Quarter. A word to the right beggar—'Silver flows downward'—and you will be shown the way below. But beware: not all beggars serve honest coin."
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I’ll seek the well." 
+            action="GiveItem:SignetHuntQuestScroll(Signet of Silent Dominion,Sunreach,1)"
+            condition="!HasItem:SignetHuntQuestScroll"
+            next="accept"/>
+    <Option text="Is there anything else I should know?" next="warning"/>
+    <Option text="I need more time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="guarded">
+    <NPCText>
+      <![CDATA[
+      "Minax’s cultists—masked, branded, half-mad. They trust no outsider. There is a password: 'Obedience is silence.' Speak it at their gate or you’ll never leave alive. But remember—betray me, and I will know."
+      ]]>
+    </NPCText>
+    <Option text="I’m ready for this." 
+            action="GiveItem:SignetHuntQuestScroll(Signet of Silent Dominion,Sunreach,1)"
+            condition="!HasItem:SignetHuntQuestScroll"
+            next="accept"/>
+    <Option text="That sounds… challenging. Any advice?" next="warning"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="reward">
+    <NPCText>
+      <![CDATA[
+      Zaida’s veil twitches—a hint of amusement.<BR><BR>
+      "Return with the Signet, and I will reveal to you:<BR>
+      - Darius Veynar’s greatest blackmail,<BR>
+      - The true allegiance of Lady Seraphine,<BR>
+      - Or the names of Minax’s hidden cultists in Sunreach.<BR>
+      Choose one, and the other secrets may yet be for sale…"
+      ]]>
+    </NPCText>
+    <Option text="Knowledge is more precious than gold. I accept." 
+            action="GiveItem:SignetHuntQuestScroll(Signet of Silent Dominion,Sunreach,1)"
+            condition="!HasItem:SignetHuntQuestScroll"
+            next="accept"/>
+    <Option text="Let me weigh my options." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="warning">
+    <NPCText>
+      <![CDATA[
+      She leans in, voice barely audible.<BR><BR>
+      "Trust nothing in the undercity—least of all the ones who seem helpful. If you are caught, speak my name only as a last resort. Even I have enemies in the dark."
+      ]]>
+    </NPCText>
+    <Option text="Understood. I’ll return with the Signet." 
+            action="GiveItem:SignetHuntQuestScroll(Signet of Silent Dominion,Sunreach,1)"
+            condition="!HasItem:SignetHuntQuestScroll"
+            next="accept"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Zaida produces a thin scroll sealed in black wax.<BR><BR>
+      "Take this. The scroll marks your claim to the Signet—and to my favor, should you return. Do not lose it. Do not trust anyone who offers to 'help.'"
+      ]]>
+    </NPCText>
+    <Option text="I won’t fail you, Mistress of Whispers." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismiss -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Zaida tilts her head, unreadable.<BR><BR>
+      "Very well. In Sunreach, even silence is an answer. If you need what I offer, the shadows will find you."
+      ]]>
+    </NPCText>
+    <Option text="Actually, I have questions..." next="greeting"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="zaidaBackstory">
+  <NPCText>
+    <![CDATA[
+    Her laughter is a whisper, laced with venom and velvet.<BR><BR>
+    "A bold request. Most who seek my story never live to tell it.<BR>
+    Still… the stars are restless tonight. Why not indulge a little mythology?"
+    ]]>
+  </NPCText>
+  <Option text="Were you born in Sunreach?" next="zaidaOrigin"/>
+  <Option text="What drives you to gather secrets?" next="zaidaMotive"/>
+  <Option text="Have you crossed paths with Minax?" next="zaidaMinaxHint"/>
+  <Option text="On second thought, never mind." action="Close"/>
+</Dialogue>
+
+<Dialogue id="zaidaOrigin">
+  <NPCText>
+    <![CDATA[
+    "Sunreach? No, child.<BR>
+    I was born in the shadow of Wind, among scholars too arrogant to imagine betrayal.<BR>
+    I was once one of them… until I whispered the truth too loudly and paid for it in blood and exile."
+    ]]>
+  </NPCText>
+  <Option text="So you were betrayed?" next="zaidaBetrayal"/>
+  <Option text="That explains your disdain for mages." next="zaidaMotive"/>
+  <Option text="Let’s change the subject." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="zaidaBetrayal">
+  <NPCText>
+    <![CDATA[
+    "Betrayed, flayed, and banished—yes.<BR>
+    They feared I knew too much… because I did.<BR>
+    The archives beneath Wind spoke of more than spells. They spoke of the Shards... and the Mistress who would reunite them."
+    ]]>
+  </NPCText>
+  <Option text="You mean Minax?" next="zaidaMinaxHint"/>
+  <Option text="That sounds like prophecy." next="zaidaProphecy"/>
+</Dialogue>
+
+<Dialogue id="zaidaMotive">
+  <NPCText>
+    <![CDATA[
+    "Secrets are leverage. They are currency that never devalues.<BR>
+    Every smile in Sunreach hides a dagger. I simply make sure mine is sharper.<BR><BR>
+    Now tell me, mortal... do you collect secrets as I do?"
+    ]]>
+  </NPCText>
+  <Option text="I deal in information too." condition="SkillAtLeast:DetectHidden,60" action="AddSkill:DetectHidden,5,600" next="infoAlly"/>
+  <Option text="I prefer action to whispers." condition="SkillAtLeast:Swords,80" action="AddStat:Str,5,300" next="warriorRebuff"/>
+  <Option text="I’m just a curious fool, perhaps." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="infoAlly">
+  <NPCText>
+    <![CDATA[
+    "Then we are kindred, you and I. Here, take this boon. Use it wisely, and perhaps next time, I'll whisper something truly dangerous."
+    ]]>
+  </NPCText>
+  <Option text="Thank you. We will speak again." action="Close"/>
+</Dialogue>
+
+<Dialogue id="warriorRebuff">
+  <NPCText>
+    <![CDATA[
+    "Blades break. Secrets endure. But I do not fault you—sometimes, a sword is the truest lie-detector of all."
+    ]]>
+  </NPCText>
+  <Option text="Fair point." action="Close"/>
+</Dialogue>
+
+<Dialogue id="zaidaMinaxHint">
+  <NPCText>
+    <![CDATA[
+    "Minax? She is the echo behind the silence, the fracture in the mirror.<BR>
+    I have not served her... but I have *listened* when she speaks through others."
+    ]]>
+  </NPCText>
+  <Option text="You fear her." next="zaidaFear"/>
+  <Option text="You admire her, don't you?" next="zaidaAdmire"/>
+  <Option text="You’ve met her, haven’t you?" condition="RandomChance:10" next="zaidaMeet"/>
+</Dialogue>
+
+<Dialogue id="zaidaFear">
+  <NPCText>
+    <![CDATA[
+    "I fear *nothing*—but I *respect* chaos when it wears a woman’s face.<BR>
+    You’d do well to do the same. Even now, her agents shift beneath your feet."
+    ]]>
+  </NPCText>
+  <Option text="Then perhaps I should shift too." action="AddStat:Dex,5,300"/>
+  <Option text="I'll remember your warning." action="Close"/>
+</Dialogue>
+
+<Dialogue id="zaidaAdmire">
+  <NPCText>
+    <![CDATA[
+    "Admire? No. But I understand her. Power corrupts; Minax merely removed the mask.<BR>
+    We are all monsters given the right motive. She simply stopped pretending otherwise."
+    ]]>
+  </NPCText>
+  <Option text="That’s a chilling perspective." action="Karma:-500"/>
+  <Option text="Perhaps you're more alike than you admit." next="zaidaRecoil"/>
+</Dialogue>
+
+<Dialogue id="zaidaRecoil">
+  <NPCText>
+    <![CDATA[
+    Her voice tightens.<BR><BR>
+    "Careful, friend. Some mirrors crack when stared into too long."
+    ]]>
+  </NPCText>
+  <Option text="Noted." action="Close"/>
+</Dialogue>
+
+<Dialogue id="zaidaMeet">
+  <NPCText>
+    <![CDATA[
+    (Her veil stiffens. The air goes still.)<BR><BR>
+    "That… is a very dangerous question.<BR>
+    Come back when you’ve walked the bloodpaths beneath Qasaria. Perhaps then, we will speak plainly."
+    ]]>
+  </NPCText>
+  <Option text="You’ve said enough for now." action="Close"/>
+</Dialogue>
+
+<Dialogue id="zaidaProphecy">
+  <NPCText>
+    <![CDATA[
+    "Prophecy is just memory, poorly timed.<BR>
+    The Gem was never whole. Neither was Britannia. Perhaps Minax is not the villain—we are simply the wrong audience."
+    ]]>
+  </NPCText>
+  <Option text="You think she’s right?" action="Karma:-250"/>
+  <Option text="That’s heresy." action="Karma:+250"/>
+  <Option text="You speak like someone who’s still deciding." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

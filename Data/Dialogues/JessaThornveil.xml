@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="JessaThornveil">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#B1A7E3'>
+      Before you is a figure draped in swirling fabrics and a mask that shifts color with each word. The air shimmers as reality bends gently around them.<BR><BR>
+      “Ah! Welcome, wanderer, to my atelier above the clouds. I am Jessa Thornveil—maskwright, illusionist, collector of secrets and spinner of stories. My masks are more than mere costume; with every face I don, I become another self. Which Jessa will you meet today, I wonder?”<BR><BR>
+      They gesture theatrically, the mask’s eyes glimmering.<BR>
+      “Do you come seeking art, intrigue, or perhaps… an adventure of identity?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek work worthy of Aerilon's finest maskwright." next="questIntro"/>
+    <Option text="Who are you beneath the mask, Jessa?" next="identity"/>
+    <Option text="Tell me about your art and these masks." next="masks"/>
+    <Option text="Do you know Lira Veyra? I’ve heard rumors." next="lira"/>
+	<Option text="You intrigue me. Tell me more of your past and passions." next="deepBackstoryIntro"/>
+    <Option text="Just admiring your attire." next="outfit"/>
+    <Option text="I’m only browsing." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Identity branch -->
+  <Dialogue id="identity">
+    <NPCText>
+      <![CDATA[
+      Jessa tilts their head, the mask shimmering from feminine to masculine.<BR><BR>
+      “Who am I beneath the mask? Sometimes, a question is more precious than any answer. I am Jessa when laughter fills the air, Thornveil when shadows creep. I have been she, he, neither, and both—my art demands it!<BR><BR>
+      If you wish to know me, try on a mask, and meet yourself anew.”
+      ]]>
+    </NPCText>
+    <Option text="Perhaps I’ll try, one day. For now, have you any work?" next="questIntro"/>
+    <Option text="How did you come to this craft?" next="origin"/>
+    <Option text="A mask for every mood—how fascinating." next="masks"/>
+    <Option text="I’ll leave you to your mysteries." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="origin">
+    <NPCText>
+      <![CDATA[
+      “My hands learned their first tricks in Vesper, my voice found song in Magincia’s ruins. But it was here, in Aerilon, that I learned to weave illusion into form. The Azure Conclave supplies the power, but it is I who give it shape.<BR>
+      Once, Lira Veyra herself wore one of my masks, slipping unseen through a nest of Minax cultists. It is not the mask that deceives, but the courage beneath it.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me more of Lira." next="lira"/>
+    <Option text="May I aid you in your craft?" next="questIntro"/>
+    <Option text="Thank you for sharing your story." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="masks">
+    <NPCText>
+      <![CDATA[
+      Jessa twirls, their mask rippling into a deer’s visage, then a shimmering harlequin, then blank.<BR><BR>
+      “A mask is a window, not a wall. Mine hold enchantments—some for revels, some for escape, a few… for secrets best left buried. Nobles commission me for balls; mages covet my wards against scrying.<BR><BR>
+      And sometimes, a mask chooses its wearer. Beware those touched by Minax—her malice lingers in things once beautiful.”
+      ]]>
+    </NPCText>
+    <Option text="You speak of a cursed mask?" next="curse"/>
+    <Option text="Do you have work for me?" next="questIntro"/>
+    <Option text="Fascinating. Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="curse">
+    <NPCText>
+      <![CDATA[
+      “Ah, you’ve heard whispers, haven’t you? One of my masquerade masks, the ‘Arachne’s Whisper,’ was tainted by a Minaxian artifact. The wearer finds themselves becoming another—memories and faces shifting at dusk. Most unsettling… yet some nobles pay double for the thrill!”<BR><BR>
+      They sigh, softer now.<BR>
+      “If you hear rumor of a Spider Chronicler—a lorekeeper obsessed with webs and secrets—take care. The mask’s curse may have spread further than I dared guess.”
+      ]]>
+    </NPCText>
+    <Option text="How can I help with this cursed mask?" next="questIntro"/>
+    <Option text="Do you know who wears it now?" next="spider"/>
+    <Option text="The mask sounds dangerous. I’ll be careful." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="spider">
+    <NPCText>
+      <![CDATA[
+      “The last I heard, a scholar left Aerilon in haste, the mask clutched close, muttering about threads and stories. Some call them the Spider Chronicler—a trait earned, not given. If you cross their path, do not trust every tale they spin.”<BR>
+      Their gaze lingers on you, intent.<BR>
+      “If you find this Chronicler, a word or a delivery may prove… enlightening. Or perilous.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll keep an eye out for them. Any work for me?" next="questIntro"/>
+    <Option text="Thank you for the warning." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="lira">
+    <NPCText>
+      <![CDATA[
+      “Lira Veyra? Ah, my favorite paladin-in-training—fierce and far too earnest for courtly intrigue. I once lent her my ‘Duskwing Masque’ for a mission against Minax’s spies. She returned it singed, but victorious, and gave me a poem in thanks.<BR>
+      We share secrets, laughter, and sometimes tears over moonlit rooftops. If you seek her favor, bring a jest and a daring heart!”
+      ]]>
+    </NPCText>
+    <Option text="You seem to know many secrets, Jessa." next="secrets"/>
+    <Option text="May I serve you or Lira?" next="questIntro"/>
+    <Option text="I’ll leave you two to your tales." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="secrets">
+    <NPCText>
+      <![CDATA[
+      “The walls of Aerilon have ears, but masks have lips. Nobles let slip their schemes behind velvet and silk; mages trade stories for spells. I am but a vessel for secrets—some heavy, some honey-sweet.<BR><BR>
+      But even I keep a few truths behind lock and veil. Win my trust, and perhaps I’ll share a mask of your own.”
+      ]]>
+    </NPCText>
+    <Option text="What can I do to win your trust?" next="questIntro"/>
+    <Option text="Mysteries are best left mysterious." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="outfit">
+    <NPCText>
+      <![CDATA[
+      Jessa bows grandly, fabric and mask shifting in a cascade of color.<BR><BR>
+      “A maskwright must be the canvas and the paint, the dream and the deception! My ‘Veil of Thousand Faces’ is never still, and my Sable-Satin Chemise glimmers with the moods of the day.<BR>
+      See this Opaline Sash? It changes hue when I change my heart. And these Harlequin Boots have danced in every ballroom from Vesper to the Lyceum!”<BR>
+      They flash a conspiratorial wink.<BR>
+      “Careful—admire too long, and you might find yourself in disguise as well.”
+      ]]>
+    </NPCText>
+    <Option text="Such style deserves a quest, surely." next="questIntro"/>
+    <Option text="You are truly a wonder, Jessa." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Jessa sweeps an extravagant bow.<BR>
+      “To browse is to dream! If you seek transformation, or a task more substantial, return and ask for Jessa Thornveil—the mask will know you.”
+      ]]>
+    </NPCText>
+    <Option text="On second thought, do you need help?" next="questIntro"/>
+    <Option text="I’ll be going now." action="Close"/>
+  </Dialogue>
+
+  <!-- QUEST INTRODUCTION -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#B1A7E3'>
+      Jessa leans in, voice dropping to a dramatic whisper.<BR><BR>
+      “If it’s intrigue you crave, fortune smiles! I have crafted a most peculiar letter—inked in mirror-script, sealed with a silver spider, its wax swirling with illusion. The recipient is a Spider Chronicler, a lorekeeper touched by Minax’s own web. Only those with their trait may receive such missives; all others are… ensnared by confusion.”<BR><BR>
+      They press a delicate scroll into your hands, faintly humming with arcane glamour.<BR>
+      “Deliver this to the Spider Chronicler beyond Aerilon’s gates. The content within will either free them from a cursed mask’s grip, or bind them deeper—depends, of course, on the nature of your heart.”<BR><BR>
+      “Complete this errand, and you will earn my trust—and the favor of Aerilon’s maskwrights. Dare you accept?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will deliver your arcane missive to the Spider Chronicler."
+            action="GiveItem:FactionDeliveryQuestScroll(Spider Chronicler,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Who is the Spider Chronicler, truly?" next="whoSpider"/>
+    <Option text="What is in the letter? Is it dangerous?" next="letter"/>
+    <Option text="What’s in it for me?" next="reward"/>
+    <Option text="On second thought, I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Jessa produces a sealed scroll, the wax writhing with illusory threads.<BR><BR>
+      “Take care! Deliver it only to one marked as Spider Chronicler. Should others attempt to open it, the illusions will bite—and not gently.<BR><BR>
+      When you return, bring word of your deed. Perhaps, if you succeed, I shall craft a mask in your honor—one that fits the truest face you dare show.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll not fail you, Maskwright." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="whoSpider">
+    <NPCText>
+      <![CDATA[
+      “To be Spider Chronicler is to weave stories and secrets, to hoard truth like flies in amber. Their identity shifts—sometimes sage, sometimes charlatan, sometimes the mask itself speaks. In the end, the only certainty is their hunger for stories. Beware—Minax’s touch lingers in every tale they tell.”
+      ]]>
+    </NPCText>
+    <Option text="I will seek them with care." 
+            action="GiveItem:FactionDeliveryQuestScroll(Spider Chronicler,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Perhaps this is too tangled for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="letter">
+    <NPCText>
+      <![CDATA[
+      Jessa’s eyes twinkle behind the mask.<BR><BR>
+      “What is in the letter? Only illusion, memory, and a sliver of my own essence. If the Chronicler is truly themselves, it will break Minax’s hold. If not… it may simply offer a new mask to wear.<BR>
+      Danger is a partner in all my art. Are you brave enough to dance with it?”
+      ]]>
+    </NPCText>
+    <Option text="Every dance needs a partner—I accept." 
+            action="GiveItem:FactionDeliveryQuestScroll(Spider Chronicler,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="No, this is not for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="reward">
+    <NPCText>
+      <![CDATA[
+      “Deliver my letter, and you shall have Aerilon’s gratitude—a reward not easily earned! The Conclave’s favor opens doors, and my own… perhaps a mask that lets you slip unseen, or become someone new for a night. What is reputation, if not the finest disguise?”
+      ]]>
+    </NPCText>
+    <Option text="That is worth the risk. Give me the letter." 
+            action="GiveItem:FactionDeliveryQuestScroll(Spider Chronicler,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I’ll pass on reputation for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="deepBackstoryIntro">
+    <NPCText>
+      <![CDATA[
+      Jessa’s mask pulses with soft light. They speak in a voice low and textured—neither quite masculine nor feminine.<BR><BR>
+      “You ask not just who I am now—but who I have been. Few show such curiosity. Perhaps a mask of yours awaits its name…”<BR><BR>
+      “Very well. Choose the path you wish to walk through my memory.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me about your childhood." next="childhood"/>
+    <Option text="How did you become an illusionist?" next="illusionOrigin"/>
+    <Option text="Have you ever been in love?" next="love"/>
+    <Option text="What do you fear most?" next="fear"/>
+    <Option text="Surprise me." next="surprise" condition="RandomChance:33"/>
+    <Option text="On second thought, maybe not." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="childhood">
+    <NPCText>
+      <![CDATA[
+      “I was born in the lower slums of Vesper, among coal dust and shouted dreams. My mother was a street performer, my father a brewer of something stronger than ale. I learned sleight-of-hand to steal bread before I ever learned to speak clearly.”<BR><BR>
+      Their eyes darken behind the mask.<BR>
+      “But every night, I watched her transform—lace and laughter hiding hunger. That’s when I learned: **masks don’t hide the truth—they protect it.**”
+      ]]>
+    </NPCText>
+    <Option text="That’s… beautifully said." next="deepRespect"/>
+    <Option text="You used sleight-of-hand? Show me!" next="trick" action="PlaySound:0x015"/>
+    <Option text="Let’s talk of something lighter." next="deepBackstoryIntro"/>
+  </Dialogue>
+
+  <Dialogue id="illusionOrigin">
+    <NPCText>
+      <![CDATA[
+      “My first mentor was an old conjurer in Magincia—before it burned. He wore peacock feathers and smelled of cinnamon and ozone. He told me: ‘Magic is just theatre with consequences.’<BR><BR>
+      I studied illusion to escape poverty… and then to escape myself. When I learned how to remake my reflection—I wept.”<BR>
+      A pause. “It was the first time I saw **me**.”
+      ]]>
+    </NPCText>
+    <Option text="You used magic to change how you looked?" next="identity"/>
+    <Option text="That sounds painful… and powerful." next="deepRespect"/>
+    <Option text="So who are you now, truly?" next="identity"/>
+  </Dialogue>
+
+  <Dialogue id="love">
+    <NPCText>
+      <![CDATA[
+      The mask flickers between joy and sorrow. “Ah… love. That impossible mirror. Yes, many times. A painter in Moonglow. A warrior in Jhelom. Lira Veyra—though she’ll never admit it.”<BR><BR>
+      “Each one fell in love with a different version of me. But which was the real one? *Perhaps none… perhaps all.*”<BR>
+      They look away, quieter now. “The heart, like illusion, can never be truly caught.”
+      ]]>
+    </NPCText>
+    <Option text="Maybe the right person sees through all the masks." next="hope"/>
+    <Option text="That sounds… lonely." next="lonely"/>
+    <Option text="Let’s change the subject." next="deepBackstoryIntro"/>
+  </Dialogue>
+
+  <Dialogue id="fear">
+    <NPCText>
+      <![CDATA[
+      Jessa’s voice drops to a whisper.<BR><BR>
+      “Oblivion. Not death. *Erasure.*<BR>
+      That someday, my masks will all vanish and no one will remember the self beneath them.”<BR><BR>
+      They reach for their sash instinctively.<BR>
+      “I don’t fear being hated. I fear being… forgotten.”
+      ]]>
+    </NPCText>
+    <Option text="I won’t forget you, Jessa." next="deepRespect" action="Fame:+100"/>
+    <Option text="Then let us make a memory together." next="trick" action="PlaySound:0x015"/>
+    <Option text="Everyone vanishes eventually." next="grim"/>
+  </Dialogue>
+
+  <Dialogue id="surprise">
+    <NPCText>
+      <![CDATA[
+      Jessa claps their hands with glee.<BR>
+      “A daring spirit! You’ll do well here. Let me tell you the tale of the time I stole the wig of an Archmage mid-duel, wearing only a curtain and confidence!”<BR><BR>
+      (You spend ten surreal minutes laughing and wondering how real any of it was.)
+      ]]>
+    </NPCText>
+    <Option text="You’re incredible." next="deepRespect" action="Karma:+50"/>
+    <Option text="You’re completely mad." next="deflect"/>
+    <Option text="I want to hear another story!" next="surprise" condition="RandomChance:33"/>
+  </Dialogue>
+
+  <Dialogue id="deepRespect">
+    <NPCText>
+      <![CDATA[
+      Jessa’s voice softens, mask glowing faintly.<BR><BR>
+      “You… listen differently. Most want tricks, or tasks. You wanted truth.”<BR>
+      They lean closer.<BR>
+      “Perhaps there is more to you than most see. *Take this—just a token.* Let it be the beginning of a face you’ve not yet worn.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you." action="GiveItem:FancyShirt" />
+    <Option text="You honor me, Jessa." action="GiveGold:200" />
+    <Option text="I’ll wear it with pride." action="Fame:+150" />
+  </Dialogue>
+
+  <Dialogue id="trick">
+    <NPCText>
+      <![CDATA[
+      Jessa flicks their wrist and with a puff of smoke… your own mask vanishes from your belt and reappears spinning on their finger!<BR>
+      “Never trust a maskwright with free hands. You’ll never know what they’ll reveal… or take.”<BR>
+      (They return the item with a wink.)
+      ]]>
+    </NPCText>
+    <Option text="Clever trick!" action="PlaySound:0x015"/>
+    <Option text="I’ll keep my eye on you." action="SendMessage:You feel slightly lighter..." />
+    <Option text="Let’s talk more." next="deepBackstoryIntro"/>
+  </Dialogue>
+
+  <Dialogue id="hope">
+    <NPCText>
+      <![CDATA[
+      “Perhaps,” they whisper. “And perhaps the right person is the one who wears no mask at all. But that would be a rare soul indeed.”<BR>
+      The mask fades to transparency for just a breath—revealing soft, haunted eyes.
+      ]]>
+    </NPCText>
+    <Option text="Your eyes speak volumes." action="Karma:+100"/>
+    <Option text="Let’s not ruin the mystery." next="deepBackstoryIntro"/>
+  </Dialogue>
+
+  <Dialogue id="lonely">
+    <NPCText>
+      <![CDATA[
+      “It is. But loneliness has always been my muse. Every mask I make carries a fragment of longing. That’s what gives them magic… not the enchantment—but the ache.”
+      ]]>
+    </NPCText>
+    <Option text="That’s… beautiful, and tragic." next="deepRespect"/>
+    <Option text="I’ve had enough emotion for one day." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="grim">
+    <NPCText>
+      <![CDATA[
+      The mask hardens into obsidian.<BR>
+      “Yes. We all fade. But I’d rather burn bright in memory than rot slowly in silence.”<BR>
+      A cold breeze stirs around you.
+      ]]>
+    </NPCText>
+    <Option text="I understand." action="Fame:+25"/>
+    <Option text="That’s… fair." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="deflect">
+    <NPCText>
+      <![CDATA[
+      “Oh, completely. But I’ve never let sanity stand in the way of style.”<BR>
+      They wink beneath their mask.
+      ]]>
+    </NPCText>
+    <Option text="Let’s return to your past." next="deepBackstoryIntro"/>
+    <Option text="Carry on, Jessa." action="Close"/>
+  </Dialogue>
+
+
+</DialogueFile>

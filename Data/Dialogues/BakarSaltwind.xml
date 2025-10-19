@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="BakarSaltwind">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#c6a77a'>
+      Before you stands a broad-shouldered, sun-darkened man swathed in a salt-flecked cloak and a wide-brimmed hat trimmed with golden thread. His smile is quick, but his eyes are always moving—counting coins, watching exits.<BR><BR>
+      “Well met, friend. They call me Bakar of the Saltwind—merchant, gambler, sailor, and purveyor of all things exotic between Sunreach and Qasaria. If it glitters, I’ve shipped it; if it stings the tongue, I’ve tasted it.<BR>
+      What brings you to my corner of the bazaar—honest trade, hidden secrets, or something riskier?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’m looking for work. Any trouble on your routes?" next="questIntro"/>
+    <Option text="Tell me of Sunreach and Qasaria." next="sunQasaria"/>
+    <Option text="Are the rumors true—you run arms for Minax’s rebels?" next="rumor"/>
+    <Option text="Who do you trust in Qasaria’s Council of Jewels?" next="council"/>
+    <Option text="What’s with your outfit? Never seen those threads before." next="outfit"/>
+	<Option text="Tell me about your past, Bakar." next="backstoryRoot"/>
+    <Option text="Just browsing." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Main Quest Offer -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      Bakar leans in, lowering his voice.<BR><BR>
+      “Trade in these sands is never dull, and lately, it's downright deadly. My best cargo—spices and, well, more—was hijacked outside the city by those Ash Serpents raiders. Trouble is, they're not just after my coin. My crates are now arming desert bandits, and I’ll lose more than gold if the Sapphire Queen finds out.<BR><BR>
+      Recover my stolen cargo, and you’ll find the Saltwind’s gratitude...and perhaps a secret worth more than gold. What do you say?”
+      ]]>
+    </NPCText>
+    <Option text="Point me to the raiders. I’ll get your cargo back." 
+            action="GiveItem:FactionDeliveryQuestScroll(SaltwindCargo,Qasaria,500)" 
+            condition="!HasItem:FactionDeliveryQuestScroll" 
+            next="acceptQuest"/>
+    <Option text="What’s in these crates—spices or weapons?" next="cargoTruth"/>
+    <Option text="If I do this, what do I get?" next="reward"/>
+    <Option text="Who are the Ash Serpents?" next="raiders"/>
+    <Option text="I’ll pass for now." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="acceptQuest">
+    <NPCText>
+      <![CDATA[
+      He hands you a faded shipping manifest marked with the Saltwind sigil.<BR><BR>
+      “Track their camp northeast of the old Sunreach caravan trail. Bring the crates back to me—intact, mind! And if you find a certain pearl-inlaid lockbox, keep it shut and between us, eh?”<BR><BR>
+      (You have accepted Bakar’s Saltwind Delivery quest!)
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with your cargo." action="Close"/>
+    <Option text="What’s the story with that lockbox?" next="lockbox"/>
+  </Dialogue>
+
+  <!-- Crate Contents -->
+  <Dialogue id="cargoTruth">
+    <NPCText>
+      <![CDATA[
+      He grins, flashing a gold tooth.<BR><BR>
+      “Mostly spices, some rare Qasarian silks, a barrel of Sunreach saltfish... and perhaps a few steel blades for friends with sharper needs. War fattens the purse, but it’s not always wise to count your coins in public. Let’s just say, if you recover my goods, I can pay in coin or secrets.” 
+      ]]>
+    </NPCText>
+    <Option text="Secrets? I’m listening." next="secret"/>
+    <Option text="I’ll just take gold, thanks." next="reward"/>
+    <Option text="I’m still not sure." next="questIntro"/>
+  </Dialogue>
+
+  <!-- Secret Hook -->
+  <Dialogue id="secret">
+    <NPCText>
+      <![CDATA[
+      Bakar’s gaze flickers, measuring your ambition.<BR><BR>
+      “The desert hides more than bones. Rumor says a shipwreck lies beneath the shifting sands—once a sea, now a grave. I may have a map pointing to a sunken shard of the Gem of Immortality itself. Help me, and perhaps you’ll earn a glimpse. But betray me... and you’ll wish you were lost at sea.” 
+      ]]>
+    </NPCText>
+    <Option text="Now you have my attention. I’ll recover your crates." 
+            action="GiveItem:FactionDeliveryQuestScroll(SaltwindCargo,Qasaria,500)" 
+            condition="!HasItem:FactionDeliveryQuestScroll" 
+            next="acceptQuest"/>
+    <Option text="If I find the shard, it’s mine." next="negotiateShard"/>
+    <Option text="This is too risky. I’m out." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="negotiateShard">
+    <NPCText>
+      <![CDATA[
+      Bakar laughs, loud and rough.<BR><BR>
+      “If you find it, you’ll need more than luck and lungs to keep it. That’s a story for after the job, friend. Bring me my cargo first, then we’ll talk sunken legends and cutthroat splits.”
+      ]]>
+    </NPCText>
+    <Option text="Deal. The cargo comes first." 
+            action="GiveItem:FactionDeliveryQuestScroll(SaltwindCargo,Qasaria,500)" 
+            condition="!HasItem:FactionDeliveryQuestScroll" 
+            next="acceptQuest"/>
+    <Option text="I’ll consider it." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Reward -->
+  <Dialogue id="reward">
+    <NPCText>
+      <![CDATA[
+      “You’ll have your choice—Qasarian coin, a cut of the best Sunreach saffron, or a rumor only a fool would ignore. Depends how much sand you’re willing to get in your boots. Now, will you take the job?”
+      ]]>
+    </NPCText>
+    <Option text="I’ll do it for the coin." 
+            action="GiveItem:FactionDeliveryQuestScroll(SaltwindCargo,Qasaria,500)" 
+            condition="!HasItem:FactionDeliveryQuestScroll" 
+            next="acceptQuest"/>
+    <Option text="Tell me the rumor instead." next="secret"/>
+    <Option text="Let me think on it." action="Close"/>
+  </Dialogue>
+
+  <!-- Raiders Info -->
+  <Dialogue id="raiders">
+    <NPCText>
+      <![CDATA[
+      Bakar scowls.<BR><BR>
+      “The Ash Serpents—nomads, thieves, fanatics. Some say Minax herself blessed their blades with shadow. They move camps nightly, but my last scout tracked them to a dry riverbed near the Qasarian border. Expect poison, curses, and trouble.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll find them and get your cargo." 
+            action="GiveItem:FactionDeliveryQuestScroll(SaltwindCargo,Qasaria,500)" 
+            condition="!HasItem:FactionDeliveryQuestScroll" 
+            next="acceptQuest"/>
+    <Option text="Sounds too dangerous." action="Close"/>
+  </Dialogue>
+
+  <!-- Lockbox Lore (Shard Hook) -->
+  <Dialogue id="lockbox">
+    <NPCText>
+      <![CDATA[
+      He glances around, voice barely above a whisper.<BR><BR>
+      “The lockbox? Let’s just say it was never meant for Qasaria’s council. Some say what’s inside is a map, or a curse, or both. If you open it without my say-so, don’t blame me for what follows. Bring it to me, sealed, and you’ll see your fortunes change.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll handle it with care." action="Close"/>
+    <Option text="If it’s the Gem’s map, I want a share." next="negotiateShard"/>
+  </Dialogue>
+
+  <!-- Outfit Banter -->
+  <Dialogue id="outfit">
+    <NPCText>
+      <![CDATA[
+      Bakar grins, spinning his pearl-hilted cutlass.<BR><BR>
+      “Every piece tells a tale, friend. This Sunreach Saltcrown kept my head cool off Buccaneer’s Den. The Caravan Shirt? Stained by saffron and stormwater from half the world. My Spicebelt? Smuggled more opium than a Qasarian vizier’s dreams.<BR>
+      The Duster Cloak’s got more salt than the Sunreach docks. Sandrunner’s Driftsteps—try chasing down pirates barefoot! Even this cutlass—won in a game of ‘Sevens’ with a magelord who cheats with his mind.” 
+      ]]>
+    </NPCText>
+    <Option text="You’ve sailed far, haven’t you?" next="sunQasaria"/>
+    <Option text="What’s the richest cargo you ever lost?" next="cargoTruth"/>
+    <Option text="Enough stories—got work?" next="questIntro"/>
+    <Option text="Good day, merchant." action="Close"/>
+  </Dialogue>
+
+  <!-- Sunreach & Qasaria Lore -->
+  <Dialogue id="sunQasaria">
+    <NPCText>
+      <![CDATA[
+      “Sunreach is a city of thieves and dreamers—if you’ve got a secret or a ship, you’ll make your fortune there. But Qasaria? That’s the jewel—gold domes, minarets, more secrets than sand.<BR>
+      The Council of Jewels run the city, but trust? That’s as scarce as rain. I trade with them all—Safiya al-Sapphire for coin, Rafiq al-Ruby for muscle, Yasmin al-Topaz for magic relics. Don’t cross Karim al-Emerald though. That one’s got eyes everywhere.” 
+      ]]>
+    </NPCText>
+    <Option text="You deal with the council? Who do you trust?" next="council"/>
+    <Option text="Ever run into Minax’s agents?" next="rumor"/>
+    <Option text="Sounds like you live for danger." next="outfit"/>
+    <Option text="Let’s talk business." next="questIntro"/>
+  </Dialogue>
+
+  <!-- Council Relationships -->
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      He leans in, eyes narrowing.<BR><BR>
+      “Trust? That’s for gamblers, not traders. Safiya al-Sapphire would sell her own kin if the price was right. Rafiq’s an honorable fool, but he keeps the city’s roads clear. Yasmin? She’s more shadow than woman. Omar al-Onyx—if you hear your name in his arena, run. Karim? Don’t even ask.” 
+      ]]>
+    </NPCText>
+    <Option text="Have you ever worked for Safiya?" next="safiya"/>
+    <Option text="Is Karim really in league with Minax?" next="rumor"/>
+    <Option text="Let’s get back to your cargo." next="questIntro"/>
+    <Option text="That’s all I needed." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="safiya">
+    <NPCText>
+      <![CDATA[
+      Bakar shrugs.<BR><BR>
+      “Safiya’s coin is clean but her business isn’t. Once smuggled a shipload of glass—turned out to be enchanted mirrors meant for Minax’s cultists. Never again. Take her coin, watch your back.” 
+      ]]>
+    </NPCText>
+    <Option text="Who else pays for arms these days?" next="rumor"/>
+    <Option text="Back to business. About that job..." next="questIntro"/>
+    <Option text="Goodbye." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax Rumor & Allegiance -->
+  <Dialogue id="rumor">
+    <NPCText>
+      <![CDATA[
+      He eyes you carefully.<BR><BR>
+      “Rumors are my second currency. Some say I run arms for the rebels. Some say I deal with Minax’s spies. Truth is, in Qasaria, everyone sells to someone. But I keep my loyalties for gold—and for those who help me when the tide turns.<BR>
+      You want to prove yourself? Help me get back what’s mine. Then, maybe, you’ll hear a real secret or two.” 
+      ]]>
+    </NPCText>
+    <Option text="You have a deal—where’s your cargo?" 
+            action="GiveItem:FactionDeliveryQuestScroll(SaltwindCargo,Qasaria,500)" 
+            condition="!HasItem:FactionDeliveryQuestScroll" 
+            next="acceptQuest"/>
+    <Option text="I’m not interested in rumors." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismissal -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Bakar grins and gestures to the bustling market.<BR><BR>
+      “Plenty of trinkets to buy and tales to chase. If you change your mind—or need a spice to flavor your fortune—you know where to find me.”
+      ]]>
+    </NPCText>
+    <Option text="On second thought, got work for me?" next="questIntro"/>
+    <Option text="Farewell, Saltwind." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="backstoryRoot">
+  <NPCText>
+    <![CDATA[
+    Bakar's smile fades slightly, replaced with a distant gaze.<BR><BR>
+    “Funny thing about the past. Most folk bury it in sand or rum. Me? I let it ride the wind.”<BR>
+    He taps his Saltwind cloak, the fabric stiff with brine and sun.<BR><BR>
+    “You really want to know how a boy from the gutters of Sunreach ended up trading whispers with merchant-princes?”
+    ]]>
+  </NPCText>
+  <Option text="I do. Tell me how it started." next="originStory"/>
+  <Option text="No thanks, I like my merchants mysterious." action="Close"/>
+</Dialogue>
+
+<Dialogue id="originStory">
+  <NPCText>
+    <![CDATA[
+    “I was born in the alleys behind the Salt Quarter—a bastard child of a dockhand and a tavern dancer.”<BR><BR>
+    He shrugs, unbothered.<BR><BR>
+    “My first trade was a half-loaf of stolen bread... traded for a knife. My first lie? Told a pirate I was a prince. He laughed so hard, he gave me a silver coin. Been dealing in fiction and steel ever since.”<BR>
+    “Made my first big haul smuggling relics from Magincia after the plague. That’s when I met... her.”
+    ]]>
+  </NPCText>
+  <Option text="Who was she?" next="mysteriousShe"/>
+  <Option text="Did you ever return to Magincia?" next="magincia"/>
+</Dialogue>
+
+<Dialogue id="mysteriousShe">
+  <NPCText>
+    <![CDATA[
+    He chuckles, a hint of warmth and pain.<BR><BR>
+    “She was Yasmin’s apprentice, back when Topaz wasn’t yet draped in riddles. Her name was Layla. Smart, sharp, smelled like cinnamon and ink. She taught me that knowledge could buy more than blades ever could.”<BR>
+    “She vanished in the catacombs beneath Qasaria. Some say she sought a relic. Others… that Minax took her.”<BR><BR>
+    “I still look for signs. Every tomb I open, every map I chase—I hope to find her trace.”
+    ]]>
+  </NPCText>
+  <Option text="That’s tragic. You truly cared for her." next="reflectLove" condition="KarmaAtLeast:0"/>
+  <Option text="Still chasing a lost flame? Sentimental." next="reflectCynic" condition="KarmaBelow:0"/>
+</Dialogue>
+
+<Dialogue id="reflectLove">
+  <NPCText>
+    <![CDATA[
+    Bakar nods slowly.<BR><BR>
+    “The sea teaches many lessons. The first is that nothing stays. The second is that some things are worth remembering.”<BR>
+    “You speak like one who has lost someone too. That earns my respect.”
+    ]]>
+  </NPCText>
+  <Option text="I have. Thank you, Bakar." action="Karma:+250" />
+  <Option text="Let’s move on. What are your hobbies?" next="interests"/>
+</Dialogue>
+
+<Dialogue id="reflectCynic">
+  <NPCText>
+    <![CDATA[
+    He smirks.<BR><BR>
+    “Sentiment gets you stabbed in a back alley or sold to slavers. But... she was different.”<BR>
+    “Anyway. There’s coin to chase. Want to know what keeps a salt trader entertained in a city of shadows?”
+    ]]>
+  </NPCText>
+  <Option text="I do. What are your vices?" next="interests"/>
+</Dialogue>
+
+<Dialogue id="interests">
+  <NPCText>
+    <![CDATA[
+    Bakar leans back against a spice crate.<BR><BR>
+    “I gamble. I chase shipwrecks. I collect carved dice from every land I visit. I once drank naga venom just to see if the hallucinations were prophetic.”<BR>
+    “Also have a thing for oceanic relics—pearls that whisper, coral knives, sunken charts. Lost one once to a Vesper noble who cheated with a rigged rune deck.”<BR><BR>
+    “Still owe him a visit.”
+    ]]>
+  </NPCText>
+  <Option text="What’s your favorite relic?" next="relicFavorite"/>
+  <Option text="Did the naga venom *was* prophetic?" next="venomVision"/>
+  <Option text="Tell me more about those dice." next="dice"/>
+</Dialogue>
+
+<Dialogue id="relicFavorite">
+  <NPCText>
+    <![CDATA[
+    “An obsidian conch said to echo the voice of a drowned god. I traded half my fleet for it. Listened once. Never again.”<BR><BR>
+    He shudders, eyes distant.<BR>
+    “But the conch is locked away. Someday, I might let you see it—if you survive what’s coming.”
+    ]]>
+  </NPCText>
+  <Option text="That sounds like a story for another time." next="closeBackstory"/>
+</Dialogue>
+
+<Dialogue id="venomVision">
+  <NPCText>
+    <![CDATA[
+    He laughs, clapping you on the back.<BR><BR>
+    “Saw a city of sails flying over the ocean. A throne of coral. A face... maybe mine, maybe not. Could’ve been prophecy. Or just very bad rum.”<BR>
+    “Who knows? Maybe you're in that vision now, eh?”
+    ]]>
+  </NPCText>
+  <Option text="I’ll keep that in mind." next="closeBackstory"/>
+  <Option text="Sounds like you’ve seen too much sun." action="Karma:-100"/>
+</Dialogue>
+
+<Dialogue id="dice">
+  <NPCText>
+    <![CDATA[
+    “Got a set carved from serpent bone, and another from the teeth of a drowned kraken. Each pair tells a story—if you roll ‘em right.”<BR><BR>
+    He produces a pouch, shaking it lightly. “Want to try your luck?”
+    ]]>
+  </NPCText>
+  <Option text="Roll the dice." next="diceRoll"/>
+  <Option text="I’ll pass on games of chance." next="closeBackstory"/>
+</Dialogue>
+
+<Dialogue id="diceRoll">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#e6d25a'>
+    Bakar rolls two bone dice across the crate...<BR><BR>
+    <i>The first shows a serpent.<BR>
+    The second shows a shattered crown.</i><BR><BR>
+    “Interesting,” he murmurs. “You’ll face a ruler who’s broken—yet dangerous still. Might be a warning. Or a promise.”
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="A warning, I’m sure." action="Fame:+150" />
+  <Option text="I like promises better." action="Karma:+100" />
+  <Option text="You believe that nonsense?" action="Karma:-200" />
+  <Option text="Let’s move on." next="closeBackstory"/>
+</Dialogue>
+
+<Dialogue id="magincia">
+  <NPCText>
+    <![CDATA[
+    “Once. After the fires. There was gold in the ash, if you knew where to look. But the dead whispered in the wind there. No place for the living.”<BR><BR>
+    “Still... I found a shard of something there. Could have been from the Gem. Could have been a broken bottle. But it glowed like truth.”
+    ]]>
+  </NPCText>
+  <Option text="Do you still have it?" next="maginciaShard"/>
+  <Option text="You’ve lived quite a life." next="closeBackstory"/>
+</Dialogue>
+
+<Dialogue id="maginciaShard">
+  <NPCText>
+    <![CDATA[
+    He taps his cloak.<BR><BR>
+    “I keep it sewn in the hem of my Saltcrown. A reminder. Some say Minax wants every piece of the Gem... but I’d rather keep mine out of reach.”<BR>
+    “Maybe I’ll show it to you—if you prove you're not one of her agents.”
+    ]]>
+  </NPCText>
+  <Option text="You can trust me." action="Karma:+150" />
+  <Option text="I’d sell it to the highest bidder." action="Karma:-200" />
+  <Option text="Another time, perhaps." next="closeBackstory"/>
+</Dialogue>
+
+<Dialogue id="closeBackstory">
+  <NPCText>
+    <![CDATA[
+    “Enough salt and story for one day, eh?”<BR><BR>
+    Bakar pulls his cloak close and flashes a familiar smirk.<BR>
+    “Come find me again. I’ll pour you a tale worth twice its weight in saffron.”
+    ]]>
+  </NPCText>
+  <Option text="Until next time, Saltwind." action="Close"/>
+  <Option text="Let’s talk about work again." next="questIntro"/>
+</Dialogue>
+
+
+</DialogueFile>

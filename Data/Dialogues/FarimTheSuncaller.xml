@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="FarimTheSuncaller">
+
+  <!-- ====== GREETING ====== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#FAD355'>
+      A gaunt, blindfolded prophet sways in the market square, sunlight glinting off the charms braided into his beard. His empty gaze meets yours.<BR><BR>
+      "You… you walk in shadow, yet bear the scent of distant dawn. I am Farim, once seer to kings, now cast adrift in Sunreach’s swirling tides.<BR><BR>
+      What brings you? Is it truth you seek, or merely fortune?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek guidance, Suncaller." next="guidance"/>
+    <Option text="You are Farim the prophet? What do you see?" next="prophecy"/>
+    <Option text="I heard you need help. Tell me." next="need"/>
+	<Option text="Tell me about yourself, Suncaller." next="backstory_intro"/>
+    <Option text="Just passing through." next="dismiss"/>
+  </Dialogue>
+
+  <!-- ====== GUIDANCE ====== -->
+  <Dialogue id="guidance">
+    <NPCText>
+      <![CDATA[
+      Farim tilts his head, listening to voices only he can hear.<BR><BR>
+      "All roads here lead to crossroads—of sand and secrets, of coin and conscience. Sunreach is a stage; the Council plays at power while darker hands draw the curtains.<BR>
+      Yet sometimes the sun’s path is bent. Even a blind man may light another’s way, if given the means."<BR>
+      He frowns, troubled.<BR>
+      "But I am diminished. Minax’s agents stole from me the <I>Heliotrope Relic</I>—a fragment of light that sharpens my visions. Without it, my warnings are mere whispers."
+      ]]>
+    </NPCText>
+    <Option text="Can I help recover your relic?" next="need"/>
+    <Option text="Tell me more of your visions." next="prophecy"/>
+    <Option text="What is the Heliotrope Relic?" next="relic"/>
+    <Option text="I will be going." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== PROPHECY ====== -->
+  <Dialogue id="prophecy">
+    <NPCText>
+      <![CDATA[
+      Farim’s hands trace invisible glyphs in the air.<BR><BR>
+      "I see a city drowned in golden light, its rulers gnawed by their own shadows. The Gem of Immortality glimmers, shattered yet yearning to be whole. Minax’s hand is everywhere, yet so is the seed of rebellion.<BR>
+      Beware the one who smiles with two faces, and trust not the council when gold changes hands."<BR>
+      His blind eyes gleam.<BR>
+      "Will you help me see more clearly? Only with the relic can I pierce the veils that Minax draws over Sunreach."
+      ]]>
+    </NPCText>
+    <Option text="Tell me of this relic." next="relic"/>
+    <Option text="I will find your relic, if I can." next="need"/>
+    <Option text="I must leave you, prophet." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== NEED/QUEST INTRO ====== -->
+  <Dialogue id="need">
+    <NPCText>
+      <![CDATA[
+      Farim clasps your hand with surprising strength.<BR><BR>
+      "My sight is darkness without the Heliotrope Relic—a crystal stolen by Minax cultists who fester in Sunreach’s old cisterns. Their leader, the madman called Sul Vek, twists the relic’s power for his own unholy rites."<BR><BR>
+      "Retrieve it, and not only will I see—so shall you. I will reveal what others hide, for the sun shows all in time."<BR><BR>
+      Will you brave the undercity for the sake of light?"
+      ]]>
+    </NPCText>
+    <Option text="I will retrieve the Heliotrope Relic." 
+            action="GiveItem:HeliotropeRelicQuestScroll(Farim,Sunreach,400)" 
+            condition="!HasItem:HeliotropeRelicQuestScroll"
+            next="accept"/>
+    <Option text="Where do I find Sul Vek and his cultists?" next="location"/>
+    <Option text="What is this relic’s power?" next="relic"/>
+    <Option text="This sounds dangerous—I must decline." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== ACCEPT QUEST ====== -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Farim’s voice is fierce:<BR>
+      "Go now. Beneath Sunreach, through the old well behind the spice market, you will find the way to the cisterns. Sul Vek and his zealots defile the place—beware their blood magic.<BR>
+      Return the relic, and I will repay you with sight beyond sight… and perhaps a secret the Council would kill to learn."
+      ]]>
+    </NPCText>
+    <Option text="I will not fail you, Suncaller." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== LOCATION INFO ====== -->
+  <Dialogue id="location">
+    <NPCText>
+      <![CDATA[
+      "The path lies beneath the city: seek the cracked well behind the spice market. Descend in darkness, but carry hope—the cultists fear the sun’s touch. Sul Vek marks his lair with banners of crimson and gold. He will not part with the relic willingly."<BR>
+      Farim’s mouth twists in wry humor.<BR>
+      "You may find allies—or traitors—in those depths. Choose your trust as you would choose your weapons."
+      ]]>
+    </NPCText>
+    <Option text="I will find the relic." 
+            action="GiveItem:HeliotropeRelicQuestScroll(Farim,Sunreach,400)" 
+            condition="!HasItem:HeliotropeRelicQuestScroll"
+            next="accept"/>
+    <Option text="Thank you, Farim." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== RELIC LORE ====== -->
+  <Dialogue id="relic">
+    <NPCText>
+      <![CDATA[
+      "The Heliotrope Relic is a sunstone crystal, said to be touched by the first light of dawn. With it, I see not just futures, but the present as it is—truth without shadow.<BR>
+      The cultists use it to glimpse hidden places, but their minds are poisoned by Minax’s lies. If you return it, I will show you things even the Council cannot conceal."
+      ]]>
+    </NPCText>
+    <Option text="I will seek it for you." 
+            action="GiveItem:HeliotropeRelicQuestScroll(Farim,Sunreach,400)" 
+            condition="!HasItem:HeliotropeRelicQuestScroll"
+            next="accept"/>
+    <Option text="I have questions about Sul Vek." next="location"/>
+    <Option text="I’ll return when I am ready." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== DISMISS ====== -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Farim bows, fingers brushing a sun-charm at his throat.<BR>
+      "The market’s clamor drowns most wisdom. Seek me if your path grows dark… or if you wish to see with new eyes."
+      ]]>
+    </NPCText>
+    <Option text="Perhaps I will return." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="backstory_intro">
+  <NPCText>
+    <![CDATA[
+    Farim’s lips twitch into a sad smile.<BR><BR>
+    “My story? It drifts like desert sand—true in parts, obscured in others. But if you have time and mind enough to listen, I shall paint the echoes in sunlight."<BR><BR>
+    He leans on his cane, listening for your silence.
+    ]]>
+  </NPCText>
+  <Option text="I’m listening." next="backstory1"/>
+  <Option text="Another time, perhaps." action="Close"/>
+</Dialogue>
+
+<Dialogue id="backstory1">
+  <NPCText>
+    <![CDATA[
+    "I was once a vizier to the Qasarian court. A ‘light-seer,’ they called me. My visions were praised, feared, ignored. That is the fate of truth.<BR>
+    But when I spoke of Minax’s return—of the Gem’s slow reformation—I was cast out. I wandered, blindfolded by choice, to see what lies within, not without."<BR><BR>
+    He chuckles.<BR>
+    “Sunreach took me in. Barely.”
+    ]]>
+  </NPCText>
+  <Option text="Why blindfold yourself?" next="blindfold"/>
+  <Option text="How did you know of Minax?" next="minax_vision"/>
+  <Option text="Were you betrayed?" next="betrayal"/>
+</Dialogue>
+
+<Dialogue id="blindfold">
+  <NPCText>
+    <![CDATA[
+    "I once trusted my eyes too much—and they showed me only splendor. Wealth. Power. Lies wrapped in silk.<BR>
+    But with darkness, I learned to hear what the light cannot speak. Sight is not just what the eye beholds—it is the soul’s reckoning."<BR>
+    He tilts his head toward you.<BR>
+    "Can *you* see beyond the veil, wanderer?"
+    ]]>
+  </NPCText>
+  <Option text="I try to see with both eyes and heart." next="blessing" condition="KarmaAtLeast:0"/>
+  <Option text="I trust what I can see, nothing more." next="skeptic" condition="KarmaBelow:0"/>
+</Dialogue>
+
+<Dialogue id="blessing">
+  <NPCText>
+    <![CDATA[
+    Farim smiles.<BR>
+    “Then may the dawn guide your path."<BR>
+    He reaches toward your brow and murmurs a blessing.
+    ]]>
+  </NPCText>
+  <Option text="(You feel calmer... wiser.)" action="AddStat:Int,5,600"/>
+</Dialogue>
+
+<Dialogue id="skeptic">
+  <NPCText>
+    <![CDATA[
+    “Then I pity you,” Farim sighs. “Sight without understanding is like a sword without a hilt. It cuts all, even its bearer.”<BR>
+    He turns slightly away, muttering something in an ancient tongue.
+    ]]>
+  </NPCText>
+  <Option text="I didn’t mean offense." next="backstory1"/>
+  <Option text="Wisdom cloaked in riddles is still shadow." action="Karma:-250"/>
+</Dialogue>
+
+<Dialogue id="minax_vision">
+  <NPCText>
+    <![CDATA[
+    Farim’s voice drops.<BR><BR>
+    “She appeared first in dream. Then in fire. Always where the world was weakest—fractures of the old Gem bleeding through reality.<BR>
+    I saw her weaving her net across shards, whispering promises to the ambitious. Not conquest—<I>rebirth</I>. Not cruelty—<I>balance</I>. That is how she seduces.”<BR><BR>
+    “The Council fears her. I <I>understand</I> her.”
+    ]]>
+  </NPCText>
+  <Option text="Do you serve her?" next="serve_minax"/>
+  <Option text="How can we stop her?" next="resist_minax"/>
+</Dialogue>
+
+<Dialogue id="serve_minax">
+  <NPCText>
+    <![CDATA[
+    “No,” he says quietly. “But I do not hate her either. She is a mirror to our failings. She does not destroy—she accelerates.”<BR>
+    He tilts his head toward you.<BR>
+    “Would you follow her, if she offered you power enough to reshape the world?”
+    ]]>
+  </NPCText>
+  <Option text="Power is always tempting..." next="temptation"/>
+  <Option text="I would never serve her." action="Karma:250" next="resist_minax"/>
+</Dialogue>
+
+<Dialogue id="temptation">
+  <NPCText>
+    <![CDATA[
+    “Then beware,” he whispers. “Minax does not tempt with lies. She tempts with truth.”<BR>
+    The air chills subtly around you.
+    ]]>
+  </NPCText>
+  <Option text="(You feel a strange shiver...)" action="AddStat:Int,-5,300"/>
+</Dialogue>
+
+<Dialogue id="resist_minax">
+  <NPCText>
+    <![CDATA[
+    “Then do not look away from what must be done. She feeds on our divisions, our secrets, our pride.”<BR>
+    “Unite those who dwell in shadow. Raise voices in forgotten tongues. Remember: prophecy is not fate. It is warning.”
+    ]]>
+  </NPCText>
+  <Option text="I will remember your words." action="Karma:100"/>
+</Dialogue>
+
+<Dialogue id="betrayal">
+  <NPCText>
+    <![CDATA[
+    “Betrayed? Mmm.”<BR>
+    “Some betray by sword. Some with silence. When I spoke the truth of Qasaria’s corruption, none defended me. Even Zaida—my pupil once—stood with the Council."<BR>
+    “Now she returns, asking questions, seeking secrets.”<BR>
+    He exhales slowly.<BR>
+    “Would you hear a secret in return?”
+    ]]>
+  </NPCText>
+  <Option text="Yes. Tell me." next="secret" condition="FameAtLeast:3000"/>
+  <Option text="Not now. But thank you." action="Close"/>
+</Dialogue>
+
+<Dialogue id="secret">
+  <NPCText>
+    <![CDATA[
+    Farim leans close, whispering in your ear.<BR>
+    “There is a vault beneath the Council’s Hall—marked only with a golden sunburst. Inside lies a relic… not of this world. Not even Minax dares claim it.”<BR>
+    “If you wish answers the Council fears, start there. But tread carefully—truth can blind even the faithful.”
+    ]]>
+  </NPCText>
+  <Option text="(You feel a pulse of fate…)" action="AttachXml:XmlQuestTracker,SunreachVaultHint"/>
+</Dialogue>
+
+
+</DialogueFile>

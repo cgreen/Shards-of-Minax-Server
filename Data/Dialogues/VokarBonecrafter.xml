@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="VokarBonecrafter">
+
+  <!-- Greeting / main hub -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#c2b280'>
+      Before you stands a gruff, broad-shouldered man in bone and fur, his hands stained with marrow and resin. Tribal tattoos spiral up his forearms, and a heavy tribal mask hangs from his neck.<BR><BR>
+      He looks you up and down, sizing you as he might a carcass.<BR>
+      “Speak up. I’m busy carving, not listening to idle gossip. If you want bone, beast, or talisman, say so. Or maybe you’re here for something riskier...?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I want to know more about your craft." next="craft"/>
+    <Option text="What do you mean by 'something riskier'?" next="secretTrade"/>
+    <Option text="Looking for work. Got any?" next="questOffer"/>
+    <Option text="What do you think of Hinokami?" next="hinokamiOpinion"/>
+	<Option text="Tell me about yourself, Bonecrafter." next="backstory1"/>
+    <Option text="Never mind." action="Close"/>
+  </Dialogue>
+
+  <!-- About Bonecraft -->
+  <Dialogue id="craft">
+    <NPCText>
+      <![CDATA[
+      Vokar grunts and holds up a jagged talisman, freshly carved.<BR>
+      “Bones hold stories. I carve their secrets—strength, swiftness, spirit—into something new. Not just weapons. Protection. Warding. Even talking to the dead, if you believe the shamans.<BR>
+      Everything I make, I test. Only fools trust untested bone.”</NPCText>
+    <Option text="Could you make something for me?" next="makeSomething"/>
+    <Option text="What’s the strongest bone you’ve ever worked with?" next="strongestBone"/>
+    <Option text="Back to other matters." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="makeSomething">
+    <NPCText>
+      <![CDATA[
+      He eyes your gear.<BR>
+      “Maybe. If you bring me rare beast bones—dragon, shadow boar, spirit stag—I’ll see what I can do. You get me good material, you get good work. Otherwise, don’t waste my time.”</NPCText>
+    <Option text="What if I brought you something legendary?" next="legendaryOffer"/>
+    <Option text="Where can I find these beasts?" next="beastHints"/>
+    <Option text="Back." next="craft"/>
+  </Dialogue>
+
+  <Dialogue id="strongestBone">
+    <NPCText>
+      <![CDATA[
+      “Hardest bone? Starlit Wyvern. Killed by a falling star long ago. Made a bow for the chieftain that never misses its mark. Broke three knives carving it. I still carry a splinter—brings luck, they say.”</NPCText>
+    <Option text="Show me the splinter." next="splinterShow"/>
+    <Option text="Back." next="craft"/>
+  </Dialogue>
+
+  <Dialogue id="splinterShow">
+    <NPCText>
+      <![CDATA[
+      Vokar fishes a glimmering fragment from his belt.<BR>
+      “One day, I’ll use it again. If the need’s great. Until then, I keep it close.” He tucks it away, eyeing you suspiciously.</NPCText>
+    <Option text="Back." next="craft"/>
+  </Dialogue>
+
+  <!-- Secret trade hook -->
+  <Dialogue id="secretTrade">
+    <NPCText>
+      <![CDATA[
+      Vokar’s eyes narrow.<BR>
+      “Depends who’s asking. Hinokami pays well for Verdant bone, and sometimes I trade their steel in return. Not that the council approves. You want in on this, you prove your loyalty to the tribe first.”</NPCText>
+    <Option text="I want to help the Verdant, not Hinokami." next="questOffer"/>
+    <Option text="I can be discreet. What do you need moved?" next="smuggling"/>
+    <Option text="Back." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="smuggling">
+    <NPCText>
+      <![CDATA[
+      “Heh. Smuggling’s only risky if you get caught. Hinokami’s got a craftsman—Kaoru—wants a talisman of spirit boar bone. Problem is, the spirit boar roams the haunted groves, and the druids won’t let just anyone hunt there.<BR>
+      You bring me that boar’s skull, I’ll cut a deal. But decide who you want to help—Verdant, or the outsiders.”</NPCText>
+    <Option text="I’ll hunt the spirit boar for you." action="GiveItem:FactionKillQuestScroll(Spirit Boar Skull,Vokar,500)" condition="!HasItem:FactionKillQuestScroll" next="boarQuest"/>
+    <Option text="Who is Kaoru?" next="kaoru"/>
+    <Option text="What do you do with these rare bones?" next="useBones"/>
+    <Option text="Back." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="kaoru">
+    <NPCText>
+      <![CDATA[
+      “Kaoru’s a lantern-maker in Hinokami—clever hands, sharp tongue. She believes spirit bones can guide the lost. Maybe she’s right. Me? I just like a fair trade. But if the council learns I’m dealing with her, things get messy.”</NPCText>
+    <Option text="How risky is this trade?" next="smugglingRisk"/>
+    <Option text="Back." next="smuggling"/>
+  </Dialogue>
+
+  <Dialogue id="useBones">
+    <NPCText>
+      <![CDATA[
+      “Depends on the bone. Some I grind for warding powder, some I carve into charms. The rare ones—like the spirit boar’s skull—can make talismans to shield against Minax’s corruption. Or open doors the council would rather stay shut.”</NPCText>
+    <Option text="I’ll find this spirit boar skull." action="GiveItem:FactionKillQuestScroll(Spirit Boar Skull,Vokar,500)" condition="!HasItem:FactionKillQuestScroll" next="boarQuest"/>
+    <Option text="Back." next="smuggling"/>
+  </Dialogue>
+
+  <Dialogue id="smugglingRisk">
+    <NPCText>
+      <![CDATA[
+      Vokar shrugs. “If you’re caught, you answer to the shamans—or worse, Tahlia. I’ll deny everything. But help me, and you’ll have my respect… and something bone-wrought that no Hinokami steel can match.”</NPCText>
+    <Option text="I accept the risk." action="GiveItem:FactionKillQuestScroll(Spirit Boar Skull,Vokar,500)" condition="!HasItem:FactionKillQuestScroll" next="boarQuest"/>
+    <Option text="No thanks." action="Close"/>
+  </Dialogue>
+
+  <!-- Work / Quest Offer -->
+  <Dialogue id="questOffer">
+    <NPCText>
+      <![CDATA[
+      “Want work? Good. The tribe needs a true hunter. There’s a beast stalking our groves—the spirit boar. Its bones are strong, its spirit stronger. Bring me its skull. Do that, and you’ll earn the respect of Verdant and a reward in bone or gold.”</NPCText>
+    <Option text="I’ll take the hunt." action="GiveItem:FactionKillQuestScroll(Spirit Boar Skull,Vokar,500)" condition="!HasItem:FactionKillQuestScroll" next="boarQuest"/>
+    <Option text="Tell me more about this boar." next="boarLore"/>
+    <Option text="Maybe later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="boarLore">
+    <NPCText>
+      <![CDATA[
+      “The spirit boar’s hide is silvered in moonlight, and its eyes burn with green fire. Some say it’s the tribe’s old chieftain, cursed for pride. It’ll gore you if you’re not careful—and worse, it can vanish in a breath. The only way to catch it is to use spirit-sight or bait it with sacred root.”</NPCText>
+    <Option text="How do I get spirit-sight?" next="spiritSight"/>
+    <Option text="Where can I find sacred root?" next="sacredRoot"/>
+    <Option text="I’ll take the hunt." action="GiveItem:FactionKillQuestScroll(Spirit Boar Skull,Vokar,500)" condition="!HasItem:FactionKillQuestScroll" next="boarQuest"/>
+    <Option text="I’ll pass for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="spiritSight">
+    <NPCText>
+      <![CDATA[
+      “Find Shaman Nura, she’ll grant you a potion—or a vision—if you prove yourself. Don’t ask me for spirit-magic. I just carve the bones.”</NPCText>
+    <Option text="Back." next="boarLore"/>
+  </Dialogue>
+
+  <Dialogue id="sacredRoot">
+    <NPCText>
+      <![CDATA[
+      “Sacred root grows near the Heart Tree, but you’ll need a druid’s blessing to pick it. Ask around camp. And mind the guardians.”</NPCText>
+    <Option text="Back." next="boarLore"/>
+  </Dialogue>
+
+  <!-- Boar Quest Branch -->
+  <Dialogue id="boarQuest">
+    <NPCText>
+      <![CDATA[
+      “Good. Bring me the spirit boar’s skull, but choose: do you want the tribe’s blessing, or the favor of Hinokami? Deliver the skull to me or to Kaoru in Hinokami. But choose wisely—word travels fast, and neither side forgets.”</NPCText>
+    <Option text="If I bring you the skull, what’s my reward?" next="rewardTribe"/>
+    <Option text="What happens if I give it to Kaoru?" next="rewardHinokami"/>
+    <Option text="Understood. I’ll return when I have it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="rewardTribe">
+    <NPCText>
+      <![CDATA[
+      “You get your choice: a talisman of warding, or gold. Plus, respect among the Verdant. But betray us for Hinokami, and don’t expect warm fires or friendly faces.”</NPCText>
+    <Option text="I serve the tribe. I’ll bring the skull to you." action="SendMessage:Vokar nods gruffly. 'Prove it, then.'" next="boarQuest"/>
+    <Option text="Let me consider..." next="boarQuest"/>
+  </Dialogue>
+
+  <Dialogue id="rewardHinokami">
+    <NPCText>
+      <![CDATA[
+      “Kaoru will pay in fine steel or coin, but the tribe will know. Some here might turn their backs on you. I’m no snitch, but word finds its way.”</NPCText>
+    <Option text="Thanks for the warning. I’ll decide when the time comes." next="boarQuest"/>
+    <Option text="Back." next="boarQuest"/>
+  </Dialogue>
+
+  <!-- If quest item is returned to Vokar -->
+  <Dialogue id="questComplete">
+    <NPCText>
+      <![CDATA[
+      Vokar’s eyes widen as you present the spirit boar’s skull.<BR>
+      “You did it. Even the spirits will remember this hunt. You’ve earned your reward—choose. Bone talisman of warding, or a pouch of gold?”</NPCText>
+    <Option text="I want the talisman." action="GiveItem:BoneTalismanOfWarding" next="tribeThanks"/>
+    <Option text="I’ll take gold." action="GiveGold:1000" next="tribeThanks"/>
+    <Option text="Let me think a moment." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="tribeThanks">
+    <NPCText>
+      <![CDATA[
+      “Take it, and my thanks. The tribe will hear of your deed.” Vokar’s gruffness softens for a moment.<BR>
+      “And if you ever find rarer bones, bring them to me first. We look after our own.”</NPCText>
+    <Option text="Farewell, bonecrafter." action="Close"/>
+  </Dialogue>
+
+  <!-- Factional dialogue if skull delivered to Kaoru -->
+  <Dialogue id="betrayed">
+    <NPCText>
+      <![CDATA[
+      Vokar scowls.<BR>
+      “You chose Hinokami over your own? Fine. I hope their gold keeps you warm. Don’t come looking for favors here again.”<BR>
+      (You sense the tribe’s trust in you has diminished.)</NPCText>
+    <Option text="It was just business." action="Karma:-500" next="end"/>
+    <Option text="I regret it." action="Karma:-250" next="end"/>
+    <Option text="..." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="end">
+    <NPCText>
+      <![CDATA[
+      Vokar turns away, returning to his bonecarving in silence.
+      ]]>
+    </NPCText>
+    <Option text="Leave." action="Close"/>
+  </Dialogue>
+
+  <!-- Hinokami opinion -->
+  <Dialogue id="hinokamiOpinion">
+    <NPCText>
+      <![CDATA[
+      “Hinokami’s warriors are strong, and their smiths know their craft. But they hunger for land that’s not theirs. I respect their skill. Trust is another matter.”</NPCText>
+    <Option text="Back." next="greeting"/>
+  </Dialogue>
+
+  <!-- Legendary Offer Branch -->
+  <Dialogue id="legendaryOffer">
+    <NPCText>
+      <![CDATA[
+      Vokar grins.<BR>
+      “Legendary bones? Bring me something I haven’t seen, and I’ll owe you more than coin. There’s rumor of a drake nesting in the obsidian cliffs... but that’s a death hunt. You up for it?”</NPCText>
+    <Option text="Maybe one day." next="craft"/>
+    <Option text="Where are the obsidian cliffs?" next="obsidianCliffs"/>
+  </Dialogue>
+
+  <Dialogue id="obsidianCliffs">
+    <NPCText>
+      <![CDATA[
+      “West of the Verdant heartland, past the shattered pines. You’ll know them by the black glass and the smell of scorched air. Not for the faint of heart.”</NPCText>
+    <Option text="Thanks for the warning." next="craft"/>
+  </Dialogue>
+
+  <!-- Beast hunting tips -->
+  <Dialogue id="beastHints">
+    <NPCText>
+      <![CDATA[
+      “Spirit boar, I told you. But if you want a real hunt—try for the nightstalker panther or the ember wolf. Bring me a fang or a paw, I’ll carve you something worthy.”</NPCText>
+    <Option text="Back." next="craft"/>
+  </Dialogue>
+
+  <Dialogue id="backstory1">
+    <NPCText>
+      <![CDATA[
+      Vokar grunts, clearly unused to small talk.<BR><BR>
+      “I don’t share my story for free, but you’re still standing, so that counts for something. I wasn’t always a bonecrafter, you know. Used to be a warrior—first spear in Kaelor’s warband. Carved through Hinokami scouts like sapwood. But war... it takes things.”<BR><BR>
+      He touches the jagged scar down his jaw.
+      ]]>
+    </NPCText>
+    <Option text="What did the war take from you?" next="backstory2"/>
+    <Option text="You fought against Hinokami? Why trade with them now?" next="backstory3"/>
+    <Option text="Do you regret leaving the warband?" next="backstory4"/>
+    <Option text="That's enough talk. Back to work." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="backstory2">
+    <NPCText>
+      <![CDATA[
+      “My brother. Arnon. Spear-brother and blood. We trained together. Fought together. Died together... almost.”<BR><BR>
+      He lifts a bone dagger—sleek, polished.<BR>
+      “This was his rib. Carved it myself after the battle. Keeps his strength near. Still hear his voice in bad dreams.”<BR>
+      His voice grows quiet. “If you ever lose someone... take something with you. Something real. Not just memories.”<BR><BR>
+      (You sense a weight in his words.)
+      ]]>
+    </NPCText>
+    <Option text="I'm sorry for your loss." action="Karma:+100" next="backstoryEmpathy"/>
+    <Option text="That’s grim, but practical." action="Fame:+50" next="backstoryEmpathy"/>
+    <Option text="I’ve lost people too. I understand." action="Karma:+100" next="backstoryEmpathy"/>
+    <Option text="That's enough sentiment." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="backstoryEmpathy">
+    <NPCText>
+      <![CDATA[
+      Vokar gives a grunt that might be respect.<BR><BR>
+      “The dead don’t speak to cowards. If you remember that, maybe you’ll make it out of this world with more than bones and scars.”<BR><BR>
+      He offers a nod. “Tell me... ever lost someone close?”
+      ]]>
+    </NPCText>
+    <Option text="Yes. I lost a sibling." action="AddStat:Str,+5,300" next="griefBond"/>
+    <Option text="Yes. A friend in battle." action="AddStat:Dex,+5,300" next="griefBond"/>
+    <Option text="Not yet. But I fear I will." action="AddStat:Int,+5,300" next="griefBond"/>
+    <Option text="No. I keep my distance." action="Karma:-100" next="griefBond"/>
+  </Dialogue>
+
+  <Dialogue id="griefBond">
+    <NPCText>
+      <![CDATA[
+      “Then you understand. Bone remembers. That’s why I carve—not just to make weapons. To make meaning.”<BR><BR>
+      He eyes you differently now.<BR>
+      “Maybe you’re not just another meddler after all.”<BR>
+      (You feel a subtle bond form between you.)
+      ]]>
+    </NPCText>
+    <Option text="Back to other matters." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="backstory3">
+    <NPCText>
+      <![CDATA[
+      “Because wars end. The land doesn’t.”<BR><BR>
+      He sets down a bone chisel.<BR>
+      “Hinokami took what they wanted, but they held their dead like we did. Buried with honor. Made lanterns from their bones. That kind of reverence? It earns my respect.”<BR><BR>
+      He looks at you, measuring.<BR>
+      “Besides… hatred feeds Minax. Balance weakens her.”
+      ]]>
+    </NPCText>
+    <Option text="So peace is your rebellion?" next="backstoryPhilosophy"/>
+    <Option text="You're wiser than you let on." action="Fame:+100" next="greeting"/>
+    <Option text="Sounds like rationalizing profit." action="Karma:-50" next="greeting"/>
+    <Option text="I see. Back to work then." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="backstoryPhilosophy">
+    <NPCText>
+      <![CDATA[
+      “Heh. Don’t confuse age for wisdom. But yes—building is harder than breaking. I broke plenty once. Now I shape. That’s rebellion enough.”<BR>
+      He gestures to a carved talisman hanging over the door.<BR>
+      “You want to change the world? Start with what’s in your hands.”
+      ]]>
+    </NPCText>
+    <Option text="I'll remember that." next="greeting"/>
+    <Option text="Back to other matters." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="backstory4">
+    <NPCText>
+      <![CDATA[
+      Vokar shrugs.<BR><BR>
+      “Sometimes. I miss the fire in my chest. The rhythm of battle. But I have fire here too.”<BR>
+      He taps his carving knife against a boar tusk, then points to his forge.<BR><BR>
+      “I train the young now. Tahlia’s hunters wear my work. The tribe still fights with me—just through the edge of bone.”<BR>
+      He pauses, then mutters: “But when Minax comes for us again… I’ll be the first to draw blood.”
+      ]]>
+    </NPCText>
+    <Option text="You’re still a warrior, just in a different way." action="Fame:+100" next="greeting"/>
+    <Option text="Minax is coming?" next="minaxWorry"/>
+    <Option text="The tribe is lucky to have you." action="Karma:+100" next="greeting"/>
+    <Option text="Back to other matters." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="minaxWorry">
+    <NPCText>
+      <![CDATA[
+      “Always. She’s like rot under the bark—never truly gone. Her cults are growing again. Some even whisper she’s gathering the Shards again.”<BR><BR>
+      He leans in.<BR>
+      “If that’s true… bone and blade won’t be enough. We’ll need spirit. And unity. And watchers like you.”
+      ]]>
+    </NPCText>
+    <Option text="I'll keep my eyes open." action="AddSkill:DetectingHidden,+10,300" next="greeting"/>
+    <Option text="Thanks for the warning." next="greeting"/>
+  </Dialogue>
+
+
+</DialogueFile>

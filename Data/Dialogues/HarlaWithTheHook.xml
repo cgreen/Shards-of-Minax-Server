@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="HarlaWithTheHook">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#d6b174'>
+      You spot a one-armed woman with sea-bright eyes and a face carved from storms, perched at the far end of The Stubborn Boar’s counter. She twirls her battered iron hook idly, grinning wide.<BR><BR>
+      "Well look what the tide dragged in! Pull up a stool—Harla’s got a mug, a map, and a tale for anyone bold or bored. Don’t mind the hook; it’s only bitten three folk today. Care to swap stories, or you here to test your luck on an old pirate’s favor?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Heard you sailed where no honest sailor dares. Truth, or another tall tale?" next="sailing"/>
+    <Option text="You always drink alone, Harla?" next="alone"/>
+    <Option text="What’s with that iron hook?" next="hook"/>
+    <Option text="Looking for work, not stories." next="work"/>
+    <Option text="Just passing by, thanks." action="Close"/>
+  </Dialogue>
+
+  <!-- Branch: Sailor's Boast -->
+  <Dialogue id="sailing">
+    <NPCText>
+      <![CDATA[
+      Harla winks, sliding her mug aside.<BR>
+      "Oh, the stories are true as this storm-tossed scar." She gestures to the puckered seam on her jaw. "I sailed past Minax’s black fortress—aye, in a world that echoes this one but stinks of shadow and sorrow. Saw twisted moonlight and ships with no crew but bone and salt."
+      <BR><BR>
+      "But don’t fret. I made it back—one arm lighter, a dozen secrets heavier. Some call me liar, some call me cursed. I call myself lucky. You want proof? I’ve pieces of the old ship’s map, lost ‘round Eldermoor. Find ‘em, and maybe you’ll believe... or maybe you’ll wish you didn’t."
+      ]]>
+    </NPCText>
+    <Option text="If the stories are true, why stay here drinking?" next="whyhere"/>
+    <Option text="Who do you trust in Eldermoor, after all you’ve seen?" next="trust"/>
+    <Option text="Can I help you find the map pieces?" next="questMap"/>
+    <Option text="Sounds like nonsense to me." next="nonsense"/>
+    <Option text="Tell me about this GloomOgre I keep hearing about." next="gloomogre"/>
+  </Dialogue>
+
+  <!-- Branch: Drinks Alone -->
+  <Dialogue id="alone">
+    <NPCText>
+      <![CDATA[
+      "Alone? Pah! I’ve got old Brenvar’s ale for company, Mira’s giggles behind the counter, and Aldric glaring at me like I stole his boots. Besides, half this town thinks pirates are trouble—other half just hopes I’ll buy the next round."
+      <BR><BR>
+      "Still, I’ve got one friend: the sea. Though lately, these marshes smell more like ogre sweat than saltwater. Speaking of—"
+      ]]>
+    </NPCText>
+    <Option text="Is the GloomOgre real, or more tavern gossip?" next="gloomogre"/>
+    <Option text="Why does Aldric dislike you?" next="aldric"/>
+    <Option text="Heard Mira wants to leave. Do you blame her?" next="mira"/>
+    <Option text="Got any work for me?" next="work"/>
+  </Dialogue>
+
+  <!-- Branch: The Iron Hook -->
+  <Dialogue id="hook">
+    <NPCText>
+      <![CDATA[
+      Harla raps her iron hook on the table, grinning.<BR>
+      "The ‘Storm-Crook,’ they call it. Fished from the wreck of my own ship, back in the shadowed sea—bent, battered, but handy for cracking walnuts or skulls. Lost my real hand to a sea-wraith, or so the tale goes."
+      <BR><BR>
+      "Thalen offers to smith me a new hand every winter, but I say—why cover up a badge of luck? Besides, with two hands, I’d drink twice as fast. No one needs that."
+      ]]>
+    </NPCText>
+    <Option text="What was your ship called?" next="ship"/>
+    <Option text="Ever miss the sea?" next="sea"/>
+    <Option text="I’d rather talk business than stories." next="work"/>
+  </Dialogue>
+
+  <Dialogue id="ship">
+    <NPCText>
+      <![CDATA[
+      Her gaze grows distant.<BR>
+      "The ‘Sable Star.’ Fastest cutter on any world, if you believe old sailors’ yarns. She’s scattered now—some planks sunk in the shadow marsh, her heart in my chest, and a map that might open doors best left shut. Maybe you’ll find her one day, if you chase enough storms."
+      ]]>
+    </NPCText>
+    <Option text="Back to business. Got any work?" next="work"/>
+    <Option text="I’ll keep an eye out for your map." next="questMap"/>
+    <Option text="Farewell for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="sea">
+    <NPCText>
+      <![CDATA[
+      Harla sighs, her rough voice softening.<BR>
+      "The sea never leaves you, not really. Mira asks why I stare at puddles when it rains—truth is, I’m waiting for the next tide to take me home. But for now? Eldermoor’s as good a harbor as any. At least until the next big storm—or the next ugly ogre—comes along."
+      ]]>
+    </NPCText>
+    <Option text="About that ogre…" next="gloomogre"/>
+    <Option text="I’ll be back." action="Close"/>
+  </Dialogue>
+
+  <!-- Branch: Business -->
+  <Dialogue id="work">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#d6b174'>
+      Harla leans in, lowering her voice. Her breath smells of sea brine and strong ale.<BR><BR>
+      "You want honest work or pirate work? Eldermoor’s got enough mud to bury a ship, but lately, something’s stirring out in the marsh. They call it the GloomOgre—big as a fishing sloop, foul as a privy at low tide. It’s been smashing fences, stealing livestock, and spooking every soul from Thalen’s forge to Edda’s herb garden."
+      <BR><BR>
+      "Now, most folks here talk. Me? I pay. Bring me the ogre’s club—proof you’ve dealt with the brute—and I’ll show you a piece of my old map. That, or a round of the good stuff, on me."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll hunt down your GloomOgre."
+      action="GiveItem:FactionKillQuestScroll(GloomOgre,1,Eldermoor,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="What else can you tell me about the GloomOgre?" next="gloomogre"/>
+    <Option text="Why offer your map for an ogre’s club?" next="whymap"/>
+    <Option text="Sounds too dangerous. Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Acceptance -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Harla slaps the table with her hook, startling a sleepy dog.<BR>
+      "That’s the spirit! Folk say the GloomOgre lairs near the willow thicket by Edda’s hut. Watch your step—he blends in with the fog and isn’t shy about throwing boulders at strangers. Bring me his club—big, ugly, and probably smells of dead fish. I’ll keep a bottle chilled for your return."
+      ]]>
+    </NPCText>
+    <Option text="I’ll bring you the ogre’s club." action="Close"/>
+  </Dialogue>
+
+  <!-- GloomOgre Info -->
+  <Dialogue id="gloomogre">
+    <NPCText>
+      <![CDATA[
+      Harla’s tone grows serious for once.<BR>
+      "He’s real, all right. Big, blue-skinned, eyes like lanterns in the dark. I watched him tear a tree in half just to scratch his back. Edda swears he’s ‘tainted by shadow-magic’—I just think he’s hungry. Someone’s got to put the beast down before Mira or the cattle get trampled."
+      <BR><BR>
+      "If you bring me proof—a club as tall as Thalen’s temper—I’ll reward you. Deal?"
+      ]]>
+    </NPCText>
+    <Option text="I’ll take the quest."
+      action="GiveItem:FactionKillQuestScroll(GloomOgre,1,Eldermoor,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Where did he come from?" next="gloomorigin"/>
+    <Option text="I’ll think on it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="gloomorigin">
+    <NPCText>
+      <![CDATA[
+      "Old Brenvar says GloomOgre’s a ghost of the marsh, cursed by Minax herself. Edda claims the beast’s shadow is always facing east, no matter where the sun sits. Me? I reckon he just wandered in through a crack in the world. Sometimes things slip in, y’know? I would know."
+      ]]>
+    </NPCText>
+    <Option text="I’ll take care of him for you."
+      action="GiveItem:FactionKillQuestScroll(GloomOgre,1,Eldermoor,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="If you say so." action="Close"/>
+  </Dialogue>
+
+  <!-- Pirate Map Quest -->
+  <Dialogue id="questMap">
+    <NPCText>
+      <![CDATA[
+      Harla’s eyes glint with mischief.<BR>
+      "Aye, keen for adventure, are you? My old map broke to pieces the night I sailed back through Minax’s shadow. Three scraps, last I saw: one with Mira—she took it for a keepsake; one in Aldric’s cabin, where I hid it from thieves; and one, well, the GloomOgre snatched it, mistaking it for a snack. Find all three, and you’ll see sights no sober sailor should!"
+      ]]>
+    </NPCText>
+    <Option text="Where should I start looking?" next="mapWhere"/>
+    <Option text="What does the map show?" next="mapShow"/>
+    <Option text="I’ll hunt down the pieces after I deal with the ogre." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="mapWhere">
+    <NPCText>
+      <![CDATA[
+      "Try Mira first—she loves stories more than I do. If Aldric’s home, watch for traps—he doesn’t trust even his own shadow. As for the last piece… get ready to pry it from a GloomOgre’s molars. Don’t say I didn’t warn you!"
+      ]]>
+    </NPCText>
+    <Option text="Why is Mira holding your map?" next="mira"/>
+    <Option text="Back to the ogre job." next="work"/>
+    <Option text="I’ll start searching." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="mapShow">
+    <NPCText>
+      <![CDATA[
+      "Shows places that aren’t supposed to exist—a hidden port, a shadow-fortress, and paths between worlds. It’s not for the faint-hearted, and it’s inked in something that glows under moonlight. Some say following it brings fortune. Others say it brings doom. Only one way to find out, eh?"
+      ]]>
+    </NPCText>
+    <Option text="Let’s focus on the ogre first." next="work"/>
+    <Option text="Maybe later." action="Close"/>
+  </Dialogue>
+
+  <!-- Relationship Branches -->
+  <Dialogue id="aldric">
+    <NPCText>
+      <![CDATA[
+      Harla rolls her eyes.<BR>
+      "Aldric hates pirates, simple as that. Says we bring trouble, drink too much, and steal the best stories. He’s not wrong. Still, I saved his hide in the marsh once—he hasn’t forgotten, but he’ll never thank me, either. If you see him, tell him Harla says ‘hi.’ That’ll rile him up."
+      ]]>
+    </NPCText>
+    <Option text="Back to the ogre business." next="work"/>
+    <Option text="Thanks for the tip." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="mira">
+    <NPCText>
+      <![CDATA[
+      "Mira’s got wanderlust worse than any pirate I ever met. I keep telling her: storms are harder than dreams. Still, I’d take her aboard, if I ever had a ship again. She’s clever, and she doesn’t judge. One of the few."
+      ]]>
+    </NPCText>
+    <Option text="Back to work." next="work"/>
+    <Option text="She sounds special." action="Close"/>
+  </Dialogue>
+
+  <!-- Map for Ogre Reward -->
+  <Dialogue id="whymap">
+    <NPCText>
+      <![CDATA[
+      Harla smirks.<BR>
+      "Because stories are worth more than gold, friend. Besides, anyone brave enough to wrestle a GloomOgre deserves a taste of real adventure. And, truth be told, I’d rather see that map in your hands than rotting in a monster’s belly."
+      ]]>
+    </NPCText>
+    <Option text="Alright, I’ll do it for the map." 
+      action="GiveItem:FactionKillQuestScroll(GloomOgre,1,Eldermoor,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Maybe just a drink instead." action="Close"/>
+  </Dialogue>
+
+  <!-- If player calls her a liar -->
+  <Dialogue id="nonsense">
+    <NPCText>
+      <![CDATA[
+      Harla’s smile grows sharper.<BR>
+      "All tales sound mad ‘til you see the horizon for yourself. But listen close—there’s more truth in an old pirate’s wink than most priests’ sermons. If you change your mind and crave a tale or two, you know where to find me."
+      ]]>
+    </NPCText>
+    <Option text="I’ll think on it." action="Close"/>
+    <Option text="Let’s talk ogres, not stories." next="work"/>
+  </Dialogue>
+
+  <!-- Why still in Eldermoor? -->
+  <Dialogue id="whyhere">
+    <NPCText>
+      <![CDATA[
+      "You ever lose everything in a single wave, friend? After the shadow-sea, all I wanted was dry land and folk stubborn enough to never run. Eldermoor’s just right—half mud, half grit, all heart. Maybe one day I’ll leave. Or maybe I’m just waiting for one last good adventure."
+      ]]>
+    </NPCText>
+    <Option text="Let’s make that adventure about killing an ogre." next="work"/>
+    <Option text="Stories for another night, Harla." action="Close"/>
+  </Dialogue>
+
+  <!-- Trust in Eldermoor -->
+  <Dialogue id="trust">
+    <NPCText>
+      <![CDATA[
+      Harla leans close, lowering her voice.<BR>
+      "Edda trusts herbs more than people. Thalen trusts his forge. Mira trusts the stars. Me? I trust folk who get their hands dirty. Help the town, and you’ll find trust comes easy—even from an old pirate."
+      ]]>
+    </NPCText>
+    <Option text="Let’s get to work, then." next="work"/>
+    <Option text="I’ll remember that." action="Close"/>
+  </Dialogue>
+
+</DialogueFile>

@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="BrotherHalric">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aad0e6'>
+      Before you stands a monk, his pale cowl framing gentle features and eyes reflecting calm seas. Robes of muted blue and grey, a simple sash, and worn sandals mark him as a humble soul among Aerilon’s grandeur.<BR><BR>
+      “Ah… a visitor. I am Brother Halric, once of Wind, now a seeker of balance in this city adrift between earth and sky. Tell me: do you seek knowledge, solace… or simply a task to weigh your worth?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek a task, Brother Halric." next="taskIntro"/>
+    <Option text="What does it mean to be 'of Balance'?" next="balance"/>
+    <Option text="Why did you leave Wind for Aerilon?" next="wind"/>
+    <Option text="You seem out of place here." next="place"/>
+	<Option text="Tell me more of your past and interests." next="originIntro"/>
+    <Option text="Just passing through." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="balance">
+    <NPCText>
+      <![CDATA[
+      Halric smiles, serene.<BR><BR>
+      “To seek balance is to stand between storm and stillness. Wind taught control—Aerilon, ambition. Yet both can blind one to compassion. My days are spent meditating, teaching others to listen as much to silence as to spellcraft.<BR>
+      Even now, I guide lost ones—Kaelis was once my student, though pain has darkened his path. Perhaps you too will find clarity, should you walk the line between chaos and order.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me of Kaelis." next="kaelis"/>
+    <Option text="I would serve in whatever way I can." next="taskIntro"/>
+    <Option text="I am curious about Wind." next="wind"/>
+  </Dialogue>
+
+  <Dialogue id="kaelis">
+    <NPCText>
+      <![CDATA[
+      A shadow passes over Halric’s calm.<BR><BR>
+      “Kaelis… once a bright pupil, always questioning, yearning for forbidden truths. I taught him to meditate upon the deeper waters of the soul. But anger lured him to the Fractured Isle. If you meet him, speak gently: bitterness is but imbalance unresolved.<BR>
+      Many in Aerilon, especially Corvus Deyne, see only threats where I see lost brethren. But I have not given up hope—not for Kaelis, nor for this city.”
+      ]]>
+    </NPCText>
+    <Option text="You have hope for even the lost?" next="hope"/>
+    <Option text="Tell me of Corvus Deyne." next="corvus"/>
+    <Option text="I will help, if I can." next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="hope">
+    <NPCText>
+      <![CDATA[
+      Halric’s voice softens.<BR><BR>
+      “Every soul teeters upon a fulcrum of darkness and light. I have seen tyrants redeemed, and the gentle corrupted. My meditation can reveal echoes of memory—yours, or even the world’s.<BR>
+      Would you like to learn a meditation that unveils ancient truths—glimpses even of Minax’s shadowed past?”
+      ]]>
+    </NPCText>
+    <Option text="Teach me this meditation." next="meditation"/>
+    <Option text="Perhaps another time." next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="meditation">
+    <NPCText>
+      <![CDATA[
+      Halric closes his eyes, chanting softly. For a moment, your vision swims—<BR><BR>
+      You see a jewel shattering, worlds splintering. A woman’s laughter, cruel and triumphant. Armies twisting in shadow, the face of Minax as both child and conqueror.<BR>
+      Halric’s voice returns, faint:<BR>
+      “The past endures in all things. Remember this: even Minax was once a seeker of truth, before bitterness became her blade. Do not let hate blind you—balance is the key to breaking her hold.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Brother Halric." next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="corvus">
+    <NPCText>
+      <![CDATA[
+      Halric’s gaze grows troubled.<BR><BR>
+      “Corvus Deyne is all flame and storm—he scorns compassion as weakness. I have tried to counsel him, but he would rather wrestle with shadows than sit in peace.<BR>
+      Still, his strength defends Aerilon when others falter. We are all needed, in balance. My hope is not yet lost.”
+      ]]>
+    </NPCText>
+    <Option text="You are very forgiving, Brother." next="hope"/>
+    <Option text="What task do you have for me?" next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="wind">
+    <NPCText>
+      <![CDATA[
+      Halric bows his head.<BR><BR>
+      “Wind is a place of order, silence, secrets—too many secrets, I thought. When Aerilon rose, I saw a chance to balance ambition with humility. Here, I am at odds with the Conclave, yet I serve still.<BR>
+      My years among Wind’s sages taught me patience. Sometimes, the winds must change before the world can heal.”
+      ]]>
+    </NPCText>
+    <Option text="What brought you to Aerilon?" next="place"/>
+    <Option text="I am ready for your task." next="taskIntro"/>
+  </Dialogue>
+
+  <Dialogue id="place">
+    <NPCText>
+      <![CDATA[
+      Halric shrugs, robe whispering.<BR><BR>
+      “I walk where balance is most needed—Aerilon, for all its wonder, leans dangerously toward pride. I keep to the lower platforms and market docks, tending to those the Conclave forgets.<BR>
+      If ever you feel lost, seek me there. But for now… perhaps a small service, if you are willing?”
+      ]]>
+    </NPCText>
+    <Option text="What would you have me do?" next="taskIntro"/>
+    <Option text="Perhaps later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Halric bows politely.<BR><BR>
+      “May your steps be steady, wherever they wander.”
+      ]]>
+    </NPCText>
+    <Option text="Wait, I do seek purpose." next="taskIntro"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Branch: SeaHorse Specialist Faction Delivery -->
+
+  <Dialogue id="taskIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aad0e6'>
+      Halric produces a sealed scroll case, its wax stamped with a sigil of intertwined tides and wind.<BR><BR>
+      “Balance is found not only in spirit, but in the web of all things. Aerilon’s engineers, proud as they are, depend upon rare reagents harvested from the sea—gills of the Azure Seahorse, known only to a few specialists below.<BR><BR>
+      There is one outside our city—marked by the gift and the patience of the SeaHorse Specialist. Deliver this scroll to them. It contains both my plea and a small blessing, that they may continue their work untroubled by the city’s intrigues.<BR><BR>
+      In return, bring me their sign of receipt, and the Conclave will know you as a friend to balance—and to the forgotten workers who keep us all afloat.”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will carry your words to the SeaHorse Specialist."
+            action="GiveItem:FactionDeliveryQuestScroll(SeaHorse Specialist,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Why not ask the Conclave to do this?" next="conclave"/>
+    <Option text="What makes this 'SeaHorse Specialist' so vital?" next="specialist"/>
+    <Option text="How does this help Aerilon?" next="purpose"/>
+    <Option text="I must reflect before I accept." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Halric hands you the scroll, his fingers lingering as if imparting a silent benediction.<BR><BR>
+      “Remember: the smallest balance can sway the greatest tower. Take the docks below Aerilon’s east wing, and seek the sea’s voice. The SeaHorse Specialist will know you by this seal.<BR><BR>
+      Return safely—and may the tides of fate grant you calm waters.”
+      ]]>
+    </NPCText>
+    <Option text="I will not fail." action="Close"/>
+  </Dialogue>
+
+  <!-- Lore and Philosophy Branches -->
+
+  <Dialogue id="conclave">
+    <NPCText>
+      <![CDATA[
+      Halric smiles with a hint of sadness.<BR><BR>
+      “The Conclave’s eyes are skyward; their hands rarely touch the waters below. Sometimes, the highest must remember the lowest. It is the task of humble folk—and those like you—to remind them. Will you help bear this message?”
+      ]]>
+    </NPCText>
+    <Option text="I will deliver your scroll." 
+            action="GiveItem:FactionDeliveryQuestScroll(SeaHorse Specialist,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I must decline." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="specialist">
+    <NPCText>
+      <![CDATA[
+      Halric nods appreciatively.<BR><BR>
+      “The Azure Seahorse is a miracle of nature—only the patient and gentle may approach them. SeaHorse Specialists preserve a wisdom even Wind’s sages lack. Without them, the city would falter, for it is their hands that steady the foundations others forget.<BR>
+      Honor them, and you honor all of Aerilon.”
+      ]]>
+    </NPCText>
+    <Option text="Then your errand is worthy. I accept." 
+            action="GiveItem:FactionDeliveryQuestScroll(SeaHorse Specialist,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="purpose">
+    <NPCText>
+      <![CDATA[
+      Halric answers quietly.<BR><BR>
+      “Great cities rise and fall by small acts. This scroll brings balance—between ambition above and need below, between Conclave pride and humble service. Even Minax cannot break what is truly balanced.<BR>
+      Your steps matter, even if no one sees them.”
+      ]]>
+    </NPCText>
+    <Option text="I understand. Give me the scroll." 
+            action="GiveItem:FactionDeliveryQuestScroll(SeaHorse Specialist,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Not today." action="Close"/>
+  </Dialogue>
+
+  <!-- Origin Branch -->
+  <Dialogue id="originIntro">
+    <NPCText>
+      <![CDATA[
+      Halric folds his hands, a faint smile playing across his face.<BR><BR>
+      “Curious about an old monk, are you? Very well. Few ask, and fewer still linger to listen. But walk with me a while in words, and I shall share what winds shaped me.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me of your childhood." next="childhood"/>
+    <Option text="What did Wind teach you?" next="teachings"/>
+    <Option text="How do you spend your days now?" next="hobbies"/>
+    <Option text="What is your view of Minax?" next="minaxView"/>
+    <Option text="I’m ready to move on." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="childhood">
+    <NPCText>
+      <![CDATA[
+      Halric chuckles softly.<BR><BR>
+      “I was born in the outskirts of Yew, before Wind claimed me. My parents were herbalists—taught me plants have personalities if you listen long enough. I brought that curiosity to Wind, and their silence… taught me much about sound.”<BR><BR>
+      He pauses, smiling warmly.<BR>
+      “It was a quiet life. I miss the green more than the stone. But Wind gave me questions. Aerilon demands answers.”
+      ]]>
+    </NPCText>
+    <Option text="So you began in nature, not magic?" next="herbal"/>
+    <Option text="How did Wind accept you?" next="windAccept"/>
+  </Dialogue>
+
+  <Dialogue id="herbal">
+    <NPCText>
+      <![CDATA[
+      “Indeed. I still keep a few dried petals tucked in my sash. Here—”<BR><BR>
+      He produces a small sachet of dried lavender.<BR>
+      “Breathe it in. Let it remind you that not all power burns or blinds.”<BR><BR>
+      <BASEFONT COLOR='#60c060'><I>You feel calmer and more focused.</I></BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="(Inhale and reflect)" action="AddStat:Int,5,300" next="originIntro"/>
+    <Option text="I prefer fire to flowers." action="AddStat:Str,-5,300" next="originIntro"/>
+  </Dialogue>
+
+  <Dialogue id="windAccept">
+    <NPCText>
+      <![CDATA[
+      “At first, with skepticism. Wind trusts few who weren’t born to its towers. But I offered silence and service… and I listened.”<BR><BR>
+      He sighs.<BR>
+      “I did not leave in anger. I left in hope. That there might be more than restraint—that one could balance wisdom with warmth.”
+      ]]>
+    </NPCText>
+    <Option text="You sound like you miss it." next="missWind"/>
+    <Option text="Aerilon seems the opposite." next="contrast"/>
+  </Dialogue>
+
+  <Dialogue id="missWind">
+    <NPCText>
+      <![CDATA[
+      “Sometimes. Especially the stillness. But Wind lacks… soul. It denies music, dance, mess. Aerilon has too much. Between the two lies… balance.”<BR><BR>
+      <BASEFONT COLOR='#aaaaaa'><I>You understand why he’s called the Acolyte of Balance.</I></BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="That makes sense." next="originIntro"/>
+  </Dialogue>
+
+  <Dialogue id="contrast">
+    <NPCText>
+      <![CDATA[
+      “Yes, Aerilon is all glitter and rising flame. Magic soaring, unchecked. But it forgets to breathe. That’s why I walk among its forgotten edges. I remind it to exhale.”<BR><BR>
+      He taps his staff against the floor.<BR>
+      “I have no power seat. But I have peace. And that is enough.”
+      ]]>
+    </NPCText>
+    <Option text="Perhaps I need that peace." action="AddSkill:Meditation,5,300" next="originIntro"/>
+    <Option text="Power still tempts me more." action="Karma:-500" next="originIntro"/>
+  </Dialogue>
+
+  <Dialogue id="teachings">
+    <NPCText>
+      <![CDATA[
+      “Wind taught silence before speech. Patience before reaction. Control… before passion. But there were things they feared to teach—love, laughter, loss. I sought those elsewhere.”<BR><BR>
+      “Kaelis sought them too. But not all find them with gentle hands.”
+      ]]>
+    </NPCText>
+    <Option text="You and Kaelis were close?" next="kaelisFriend"/>
+    <Option text="What did you fear they withheld?" next="withheld"/>
+  </Dialogue>
+
+  <Dialogue id="kaelisFriend">
+    <NPCText>
+      <![CDATA[
+      Halric’s expression darkens.<BR><BR>
+      “He was brilliant. But burned too bright. He wanted truths too fast, and Wind’s cold walls gave no answers. I offered balance. But he mistook balance for weakness.”<BR><BR>
+      “He still meditates, I think—between nightmares.”
+      ]]>
+    </NPCText>
+    <Option text="Would you want him redeemed?" next="redeem"/>
+    <Option text="He sounds dangerous." next="originIntro"/>
+  </Dialogue>
+
+  <Dialogue id="redeem">
+    <NPCText>
+      <![CDATA[
+      “Yes. I would. Redemption is not approval. It is the act of reaching again.”<BR><BR>
+      <BASEFONT COLOR='#8888ff'><I>You feel your own alignment subtly shift.</I></BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Karma is a winding path." action="Karma:+250" next="originIntro"/>
+    <Option text="He should face justice." action="Karma:-250" next="originIntro"/>
+  </Dialogue>
+
+  <Dialogue id="withheld">
+    <NPCText>
+      <![CDATA[
+      “They withheld anything that stirred the heart. Music. Story. Touch. They feared chaos would slip in through joy.”<BR><BR>
+      “Yet without joy… control becomes a cage.”
+      ]]>
+    </NPCText>
+    <Option text="Do you now embrace those things?" next="hobbies"/>
+    <Option text="Perhaps their fears were valid." action="Karma:-100" next="originIntro"/>
+  </Dialogue>
+
+  <Dialogue id="hobbies">
+    <NPCText>
+      <![CDATA[
+      Halric lights up, unexpectedly animated.<BR><BR>
+      “Oh yes! I play the bone flute—poorly. I carve skyglass stones into spirals. I even dance, when no one watches.”<BR><BR>
+      He winks.<BR>
+      “Balance isn’t just silence. It’s rhythm.”
+      ]]>
+    </NPCText>
+    <Option text="Will you play for me?" next="flute"/>
+    <Option text="Rhythm? That’s… unexpected." next="originIntro"/>
+  </Dialogue>
+
+  <Dialogue id="flute">
+    <NPCText>
+      <![CDATA[
+      Halric produces a small bone flute and plays a soft, haunting melody. The air around you seems to shimmer briefly.<BR><BR>
+      <BASEFONT COLOR='#aaf0ff'><I>You feel a deeper calm take root.</I></BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="That was beautiful." action="PlaySound:0x015" next="originIntro"/>
+    <Option text="You should stick to teaching." action="Karma:-50" next="originIntro"/>
+  </Dialogue>
+
+  <Dialogue id="minaxView">
+    <NPCText>
+      <![CDATA[
+      Halric’s tone lowers.<BR><BR>
+      “Minax… I saw her once. Not in person—but in vision. A girl, grieving. A woman, twisted by loss. A force now, more than a person.”<BR><BR>
+      “She is the imbalance made manifest. We cannot simply strike her down. We must restore what broke.”
+      ]]>
+    </NPCText>
+    <Option text="You speak with compassion." action="Karma:+250" next="originIntro"/>
+    <Option text="That’s naïve." action="Karma:-250" next="originIntro"/>
+  </Dialogue>
+
+
+</DialogueFile>

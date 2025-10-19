@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="SisterRanaMoonVow">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b8e0ff'>
+      A serene woman in moonlit blue stands amid incense and sand, her silver diadem catching every flicker of light.<BR><BR>
+      “May the moon’s blessing find you, traveler. I am Sister Rana of the Moon Vow, once of Moonglow, now humble cleric of Qasaria’s Temple of the Moonlight Sands.<BR>
+      What is it you seek beneath these shifting heavens—a glimpse of fate, a confession, or perhaps a task requiring celestial insight?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek purpose. Is there work for me here?" next="taskIntro"/>
+    <Option text="Tell me of yourself, Sister Rana." next="backstory"/>
+    <Option text="What is the Temple of the Moonlight Sands?" next="temple"/>
+    <Option text="How fares Qasaria in these times?" next="qasarialore"/>
+	<Option text="I wish to learn more about *you*, Sister Rana." next="backstoryExpanded"/>
+    <Option text="I am simply passing by." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Backstory -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      She lowers her hood, moonstone eyes gleaming.<BR><BR>
+      “Long ago, I served at Moonglow’s Lyceum, reading the heavens and binding omens to parchment. But as the world changed, so did the tides within me. The phases of the moon began to whisper of a coming darkness—of Minax’s hand reshaping fate itself.<BR>
+      I left Moonglow behind, guided by visions to Qasaria, where the stars burn brightest above the sands. Here I watch for omens, and aid those seeking balance amidst chaos.<BR>
+      My sister soul, lost in darkness, is rumored to walk this world anew—a shadow echoing Minax’s ambition. I fear what will come if her eclipse falls upon Qasaria.”
+      ]]>
+    </NPCText>
+    <Option text="Who is your 'sister soul'?" next="soul"/>
+    <Option text="Do you regret leaving Moonglow?" next="moonglow"/>
+    <Option text="Tell me of your role in Qasaria." next="templerole"/>
+    <Option text="Is there a way I can help you?" next="taskIntro"/>
+  </Dialogue>
+
+  <!-- Sister Soul -->
+  <Dialogue id="soul">
+    <NPCText>
+      <![CDATA[
+      Her voice drops, shadowed with dread.<BR><BR>
+      “My soul was once split in two beneath a rare lunar eclipse. I embody the waxing, the hopeful, the guiding light. But my ‘twin’—born in the umbra—was seduced by forbidden magics.<BR>
+      The cultists now call her ‘Naxara’. They say she seeks the lost lunar gem to bring about an eternal night, as Minax did with the Gem of Immortality.<BR>
+      Beware: a second Minax rises, and she wears my face.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="How can she be stopped?" next="quest"/>
+    <Option text="This is grave news. Tell me of the lunar gem." next="gem"/>
+    <Option text="I would help you restore balance." next="quest"/>
+    <Option text="Let us change the subject." next="greeting"/>
+  </Dialogue>
+
+  <!-- Moonglow Regret -->
+  <Dialogue id="moonglow">
+    <NPCText>
+      <![CDATA[
+      “Moonglow’s scholars were blinded by tradition. They feared the signs, refused to act, and so the tides of fate swept me far away.<BR>
+      Yet, I miss the scent of midnight flowers and the tranquil light upon the Lyceum’s marble. I have only the sky for comfort now.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Your wisdom is needed here. Tell me of your work in Qasaria." next="templerole"/>
+    <Option text="Is there something you need?" next="taskIntro"/>
+  </Dialogue>
+
+  <!-- Temple Role -->
+  <Dialogue id="templerole">
+    <NPCText>
+      <![CDATA[
+      “Here I guide the lost and interpret omens. I advise the Council of Jewels when they deign to listen—especially Yasmin al-Topaz, who respects old magics. Rafiq al-Ruby is wary of my visions, and Safiya al-Sapphire dismisses prophecy unless it enriches her coffers.<BR>
+      Still, it is I who warned of the cultist in their midst. But without the lunar gem, my divinations are clouded…”
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about the lunar gem." next="gem"/>
+    <Option text="Is the council divided?" next="council"/>
+    <Option text="Can I assist you?" next="taskIntro"/>
+  </Dialogue>
+
+  <!-- Temple Lore -->
+  <Dialogue id="temple">
+    <NPCText>
+      <![CDATA[
+      “The Temple of the Moonlight Sands is a sanctuary to all who seek solace beneath the desert stars. We keep the rites of Moonglow alive, though the sands test our faith.<BR>
+      It is said our altar holds a sliver of the Desert Ancients’ crystal—attuned to the moon. Many come here to glimpse fate, or seek shelter from the city’s intrigue.”
+      ]]>
+    </NPCText>
+    <Option text="Does the temple serve the Council of Jewels?" next="council"/>
+    <Option text="Tell me of the Ancients." next="ancients"/>
+    <Option text="Let us speak of something else." next="greeting"/>
+  </Dialogue>
+
+  <!-- Council of Jewels -->
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      “The council’s ambitions wax and wane, just as the moon does. Rafiq al-Ruby values order, but fears omens; Safiya al-Sapphire’s fortunes rise with each caravan, and she listens only to profit. Karim al-Emerald’s secrets ripple beneath the surface, and Yasmin al-Topaz walks the line between scholar and sorceress.<BR>
+      I serve as a lamp in their darkness, though sometimes they prefer to walk in shadow.”
+      ]]>
+    </NPCText>
+    <Option text="Let us speak of your troubles." next="taskIntro"/>
+    <Option text="What of Yasmin al-Topaz?" next="yasmin"/>
+    <Option text="I’d like to hear of the Ancients." next="ancients"/>
+    <Option text="Return to another topic." next="greeting"/>
+  </Dialogue>
+
+  <!-- Yasmin al-Topaz -->
+  <Dialogue id="yasmin">
+    <NPCText>
+      <![CDATA[
+      “Yasmin and I share a cautious respect. She alone among the council seeks to understand the moon’s power—though she covets the relics it touches. We have argued beneath the stars and traded secrets in shadow.<BR>
+      If anyone can help restore the lunar gem, it is she. But beware her bargains, for every gift demands a price.”
+      ]]>
+    </NPCText>
+    <Option text="How do I recover the lunar gem?" next="quest"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <!-- Ancients Lore -->
+  <Dialogue id="ancients">
+    <NPCText>
+      <![CDATA[
+      “The Desert Ancients shaped this land when the world was young. Their crystals sleep beneath the sands, storing memories of every moonrise since the dawn of time.<BR>
+      Some whisper that the Ancients still walk among us, changed by magic and years. I have glimpsed such a figure in my dreams, warning that the age of mortals nears its end.”
+      ]]>
+    </NPCText>
+    <Option text="How does this relate to the lunar gem?" next="gem"/>
+    <Option text="Let’s return to your troubles." next="taskIntro"/>
+  </Dialogue>
+
+  <!-- Qasaria Lore -->
+  <Dialogue id="qasarialore">
+    <NPCText>
+      <![CDATA[
+      “Qasaria thrives, but its heart is troubled. The Council of Jewels circle each other like hungry jackals; Minax’s shadow grows longer; and even the sands have begun to shift.<BR>
+      The city endures by cunning and coin, but I sense a trial approaching that no gold can buy away.”
+      ]]>
+    </NPCText>
+    <Option text="Is Minax’s influence felt here?" next="minax"/>
+    <Option text="I wish to help defend Qasaria." next="taskIntro"/>
+    <Option text="I will leave you to your vigil." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      “Minax’s hand is everywhere—in the marketplace, in the council chamber, even in the dreams of the desperate. But worse still is the rise of my twin soul, a shadow that wears my face.<BR>
+      The cultists who stole the lunar gem seek to invoke her at the coming eclipse. If they succeed, Qasaria may never see dawn again.”
+      ]]>
+    </NPCText>
+    <Option text="I will stop them. What must be done?" next="quest"/>
+    <Option text="Tell me about this cultist." next="cultist"/>
+    <Option text="I must go." action="Close"/>
+  </Dialogue>
+
+  <!-- Cultist Info -->
+  <Dialogue id="cultist">
+    <NPCText>
+      <![CDATA[
+      “The thief is called Jabril, a desert wanderer twisted by forbidden rites. He hides in the catacombs beneath Qasaria, protected by moon-maddened followers.<BR>
+      The lunar gem glows only in darkness; find him before the eclipse, or all is lost.”
+      ]]>
+    </NPCText>
+    <Option text="Give me the means to recover the gem." next="quest"/>
+    <Option text="Thank you. I will seek Jabril." action="Close"/>
+  </Dialogue>
+
+  <!-- Gem Info -->
+  <Dialogue id="gem">
+    <NPCText>
+      <![CDATA[
+      “The lunar gem is a fragment of the first moonstone, once housed in Moonglow’s sanctum. It channels the tides of fate, focusing visions and warding away shadow. Without it, my divinations fail, and Qasaria is blind to the coming night.<BR>
+      It must be returned before the eclipse. Will you aid me?”
+      ]]>
+    </NPCText>
+    <Option text="I will recover the gem for you." next="quest"/>
+    <Option text="This is too great a burden for me." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Start -->
+  <Dialogue id="taskIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b8e0ff'>
+      Rana clasps your hands, her voice low and urgent.<BR><BR>
+      “A sacred lunar gem, my focus for divination, has been stolen by a cultist loyal to my dark twin. Without it, my omens are lost, and Qasaria stands blind before the coming eclipse.<BR><BR>
+      Will you brave the catacombs beneath Qasaria and recover the gem before the shadow rises?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will recover the lunar gem, Sister Rana." action="GiveItem:FactionDeliveryQuestScroll(Lunar Gem,Qasaria,400)" condition="!HasItem:FactionDeliveryQuestScroll" next="accept"/>
+    <Option text="What dangers await in the catacombs?" next="dangers"/>
+    <Option text="Who has taken the gem?" next="cultist"/>
+    <Option text="I need time to prepare." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Rana presses a pale scroll into your palm.<BR><BR>
+      “Take this and seek the lower catacombs. The cultists are mad beneath the moon, but this scroll bears my mark—use it if you find the gem, and I shall sense its return.<BR>
+      May the moon’s light shield you. Return to me before the next full moon, or all may be lost.”
+      ]]>
+    </NPCText>
+    <Option text="I will not fail you, Sister." action="Close"/>
+  </Dialogue>
+
+  <!-- Catacomb Dangers -->
+  <Dialogue id="dangers">
+    <NPCText>
+      <![CDATA[
+      “The catacombs are ancient, carved by the Ancients and haunted by their remnants. The cultists use lunar runes to ward off intruders; shadows twist into beasts on the nights before the eclipse.<BR>
+      Carry a moonlit torch if you value your sanity, and trust not every reflection you see in the dark.”
+      ]]>
+    </NPCText>
+    <Option text="I am ready. Give me the quest scroll." action="GiveItem:FactionDeliveryQuestScroll(Lunar Gem,Qasaria,400)" condition="!HasItem:FactionDeliveryQuestScroll" next="accept"/>
+    <Option text="I must reconsider this task." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismiss -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Rana bows, her eyes distant.<BR>
+      “Then go with the moon’s blessing. Should you seek guidance or purpose, return to me.”
+      ]]>
+    </NPCText>
+    <Option text="On second thought, do you need help?" next="taskIntro"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="backstoryExpanded">
+  <NPCText>
+    <![CDATA[
+    She folds her hands, eyes cast upward toward the crescent window above.<BR><BR>
+    “To speak of myself is to speak of phases—of what was, and what I hope still may be.<BR>
+    Ask what you will, child of the shifting sands. But know that each answer has weight, like tides drawn by distant stars.”
+    ]]>
+  </NPCText>
+  <Option text="Why did you truly leave Moonglow?" next="leftMoonglow"/>
+  <Option text="What does the moon *mean* to you?" next="lunarPhilosophy"/>
+  <Option text="You said your soul is split. How can that be?" next="soulSplit"/>
+  <Option text="Have your visions ever failed you?" next="visions"/>
+  <Option text="Can you share a divination with me?" next="divinationAttempt" condition="SkillAtLeast:SpiritSpeak,60"/>
+  <Option text="Can you bless me with lunar power?" next="lunarBlessing" condition="KarmaAtLeast:0"/>
+  <Option text="Thank you, Sister. Let us speak of something else." next="greeting"/>
+</Dialogue>
+<Dialogue id="leftMoonglow">
+  <NPCText>
+    <![CDATA[
+    “The scholars of Moonglow once praised clarity above all else—but clarity dims when dogma blinds.<BR>
+    I foresaw the rising of a twin moon in my dreams, a symbol of split souls and shifting fates. They laughed. Called me ‘Moonmad.’<BR>
+    So I walked away... and let the sky guide my steps.”
+    ]]>
+  </NPCText>
+  <Option text="Did anyone follow you?" next="followers"/>
+  <Option text="Do you ever long to return?" next="returnMoonglow"/>
+  <Option text="You were right, weren’t you?" next="acknowledge"/>
+</Dialogue>
+<Dialogue id="followers">
+  <NPCText>
+    <![CDATA[
+    “Only one—my apprentice, Ashen. He now walks the ruins of Serpent’s Hold, seeking stars of his own. Perhaps you’ll meet him.”<BR>
+    <BASEFONT COLOR='#cfc'>
+    (You gain a mental image of a young man under a serpent-bannered sky.)
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="I will look for him." action="AddStat:Int,5,300"/>
+  <Option text="Let’s return to another topic." next="backstoryExpanded"/>
+</Dialogue>
+
+<Dialogue id="returnMoonglow">
+  <NPCText>
+    <![CDATA[
+    “Only when the tide of doubt returns. I still see its spires in dreams—but always crumbling, always drowned in light too harsh to bear.”
+    ]]>
+  </NPCText>
+  <Option text="Moonglow’s loss is Qasaria’s gain." action="Karma:+100" next="backstoryExpanded"/>
+  <Option text="Let’s change the subject." next="backstoryExpanded"/>
+</Dialogue>
+
+<Dialogue id="acknowledge">
+  <NPCText>
+    <![CDATA[
+    She smiles faintly.<BR>
+    “So few have said that aloud. Thank you. Perhaps the stars remember truth even when mortals forget.”
+    ]]>
+  </NPCText>
+  <Option text="You honor the moon with your wisdom." action="Fame:+150"/>
+  <Option text="Let’s move on." next="backstoryExpanded"/>
+</Dialogue>
+<Dialogue id="lunarPhilosophy">
+  <NPCText>
+    <![CDATA[
+    “The moon is change incarnate—never static, never truly lost. It teaches us to shift, to reflect, to *balance*.<BR>
+    Waxing is hope, waning is wisdom. The full moon is clarity, and the new moon... is surrender.<BR>
+    Would you like to know which phase governs *your* path?”
+    ]]>
+  </NPCText>
+  <Option text="Yes, tell me my lunar phase." next="revealMoonPhase" condition="RandomChance:33"/>
+  <Option text="I’d rather not know." action="SendMessage:You decline Sister Rana’s insight."/>
+  <Option text="Let’s speak of something else." next="backstoryExpanded"/>
+</Dialogue>
+
+<Dialogue id="revealMoonPhase">
+  <NPCText>
+    <![CDATA[
+    She touches your brow briefly, and her eyes go wide.<BR>
+    “Ahh... the waning gibbous. You walk between legacy and loss. A seeker of old truths, and keeper of others’ burdens.”<BR>
+    <BASEFONT COLOR='#b8e0ff'>
+    (You feel strangely validated.)
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="That feels… true." action="AddSkill:SpiritSpeak,5,600"/>
+  <Option text="Interesting. Let’s continue." next="backstoryExpanded"/>
+</Dialogue>
+<Dialogue id="soulSplit">
+  <NPCText>
+    <![CDATA[
+    “When the twin moons eclipsed each other, my spirit was torn.<BR>
+    I became two—Rana and Naxara. Light and shadow. Purpose and hunger.<BR>
+    She left me hollow, and grew strong feeding on prophecy and fear.<BR><BR>
+    She now serves something deeper than even Minax—something... older.”
+    ]]>
+  </NPCText>
+  <Option text="You speak of something ancient?" next="olderForce"/>
+  <Option text="Naxara must be stopped." next="quest"/>
+</Dialogue>
+
+<Dialogue id="olderForce">
+  <NPCText>
+    <![CDATA[
+    “The Ancients built shrines aligned with moons no longer visible.<BR>
+    I fear Naxara’s goals lie not in conquest, but *return*. She seeks to rewrite the night sky.”<BR>
+    <BASEFONT COLOR='#f66'>
+    (You feel a cold wind pass through you… though no doors moved.)
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="I will help you stop her." next="quest"/>
+  <Option text="This is beyond me." action="Close"/>
+</Dialogue>
+<Dialogue id="visions">
+  <NPCText>
+    <![CDATA[
+    “Once, I foresaw a plague upon Qasaria and warned the Council. They ignored me. But the plague never came.<BR>
+    For years, I questioned myself… until a merchant confessed he had poisoned the well. He stopped because of my vision.<BR>
+    So—was I wrong, or did the warning *work*?”
+    ]]>
+  </NPCText>
+  <Option text="The vision *changed* the future." next="faithInVisions"/>
+  <Option text="It was coincidence." action="Karma:-100" next="backstoryExpanded"/>
+</Dialogue>
+
+<Dialogue id="faithInVisions">
+  <NPCText>
+    <![CDATA[
+    “Then you understand. Prophecy is not fate—it is *possibility*, offered like a lantern in the dark.”
+    ]]>
+  </NPCText>
+  <Option text="Guide me, then." next="quest"/>
+</Dialogue>
+<Dialogue id="divinationAttempt">
+  <NPCText>
+    <![CDATA[
+    “You carry the spark of Spirit Sight… I see it flicker. Let us peer together.”<BR><BR>
+    (She kneels, scattering sand in a ritual pattern.)<BR>
+    <BASEFONT COLOR='#cfc'>
+    A vision flickers: Minax’s armies, a figure cloaked in twin moons, a crystal heart beating beneath Qasaria.
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="What does it mean?" next="interpretVision"/>
+</Dialogue>
+
+<Dialogue id="interpretVision">
+  <NPCText>
+    <![CDATA[
+    “The armies are inevitable. But the twin moon-cloaked figure? That may be you—or Naxara. One shall claim the crystal heart of the Ancients.<BR>
+    You must decide who touches it first.”
+    ]]>
+  </NPCText>
+  <Option text="I won’t let Naxara win." next="quest"/>
+</Dialogue>
+<Dialogue id="lunarBlessing">
+  <NPCText>
+    <![CDATA[
+    “You walk in balance and carry no great hate. I shall call the moonlight to favor you.”<BR><BR>
+    (Rana draws a silver rune in the air. It glows, then vanishes into your chest.)
+    ]]>
+  </NPCText>
+  <Option text="(You feel lighter... more focused.)" action="AddStat:Int,3,600"/>
+  <Option text="(The moon's calm fills you.)" action="AddSkill:Meditation,5,600"/>
+</Dialogue>
+
+
+</DialogueFile>

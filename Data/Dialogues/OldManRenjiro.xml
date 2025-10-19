@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="OldManRenjiro">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#D56D00'>
+      An old man sits cross-legged by a crackling incense burner. His <b>demon mask</b> glimmers in the firelight, its empty eyes staring past you.<br><br>
+      “Ahh… a traveler’s footfall. Or is it the echo of a memory? I am Renjiro, spirit-seer of Hinokami. What do you seek, beneath mortal flesh and shifting fate?”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek wisdom, if you will share it." next="wisdom"/>
+    <Option text="Are your visions true, or just tales for coin?" next="taunt"/>
+    <Option text="Why do you wear that mask?" next="mask"/>
+    <Option text="I have heard you speak in riddles. Will you divine my fortune?" next="fortune"/>
+	<Option text="Tell me about your past, Renjiro." next="backstory_intro"/>
+    <Option text="I am only passing by." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="wisdom">
+    <NPCText>
+      <![CDATA[
+      Renjiro bows his masked head.<br>
+      “To seek wisdom is to invite riddles, and to solve riddles is to taste the shape of tomorrow. Is it prophecy you crave, or guidance for a task unseen?”<br><br>
+      He listens for your answer, blind eyes fixed on your spirit.
+      ]]>
+    </NPCText>
+    <Option text="Tell me of the darkness troubling Hinokami." next="darkness"/>
+    <Option text="Have you seen anything of Minax’s influence?" next="minax"/>
+    <Option text="I wish to hear a riddle, not an omen." next="riddle"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="taunt">
+    <NPCText>
+      <![CDATA[
+      Renjiro’s mask turns; you cannot see his eyes, but sense amusement.<br>
+      “A doubter! Even demons respect caution. For every coin, a prophecy—some sharp as blades, others soft as mist. What price will you pay for truth?”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Here is gold—show me a vision." 
+            condition="GoldAtLeast:200"
+            action="GiveGold:200"
+            next="fortune"/>
+    <Option text="I trust not in fortune-tellers." next="doubt"/>
+    <Option text="Your wisdom is worth no coin to me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="mask">
+    <NPCText>
+      <![CDATA[
+      “This mask? It is not to frighten children, nor hide an ugly face.<br>
+      Its eyes are empty—so my spirit may see where mortal eyes fail. The demon within lends me visions… but every vision comes with a price.”<br><br>
+      He fingers a string of old prayer beads.<br>
+      “Would you like to see what I see?”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Show me, Old Man." next="dream"/>
+    <Option text="That sounds dangerous. I will not risk it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="fortune">
+    <NPCText>
+      <![CDATA[
+      Renjiro produces a battered deck of cards. He shuffles, then deals three onto the mat.<br><br>
+      <b>“Past. Present. Future. Listen well, for riddles are all I may give…”</b><br><br>
+      <i>“A blossom falls in moonlight—betrayal at the garden’s edge.<br>
+      A maskless stranger stirs the silent well.<br>
+      Beware the shadow that walks in dreams, for it serves no master but chaos.”</i>
+      ]]>
+    </NPCText>
+    <Option text="What does your riddle mean?" next="interpret"/>
+    <Option text="Is this about Minax?" next="minax"/>
+    <Option text="Are you always so mysterious?" next="tease"/>
+    <Option text="Thank you, I will reflect on this." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Renjiro nods, incense smoke wreathing his mask.<br>
+      “Even a fleeting presence can leave deep footprints. May the spirits walk beside you.”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Actually, I am curious after all." next="greeting"/>
+    <Option text="Farewell, seer." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="doubt">
+    <NPCText>
+      <![CDATA[
+      Renjiro shrugs. “Doubt is a wise companion. But sometimes it blinds us to opportunity. When you wish to see with more than your eyes, return.”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Perhaps I misjudged. Read my fortune." next="fortune"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="riddle">
+    <NPCText>
+      <![CDATA[
+      Renjiro leans in.<br>
+      <i>“A river splits, two branches flow—one to darkness, one to dawn.<br>
+      The one who chooses neither path may find only drowning.”</i><br>
+      “Take heed. Sometimes, indecision is the greatest risk.”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will remember your words." action="Close"/>
+    <Option text="Tell me more about these paths." next="paths"/>
+  </Dialogue>
+
+  <Dialogue id="paths">
+    <NPCText>
+      <![CDATA[
+      “You ask of choice? In these times, every heart is a crossroads.<br>
+      Some serve Minax in shadow, others defend in the light. But some are lost between—beware, lest you become one of them.”<br><br>
+      He gestures toward the Shrine of Amateru.<br>
+      “Seek guidance in the sun, or dare the darkness. But do not tarry.”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will seek the shrine." action="Teleport:1234,567,0,Tokuno"/>
+    <Option text="I prefer to walk my own path." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="darkness">
+    <NPCText>
+      <![CDATA[
+      The incense smoke curls, growing dark.<br>
+      “Shadows lengthen at Hinokami’s gate. Minax’s servants whisper in the bamboo groves. There is rot beneath the cherry trees—find it, before it flowers.”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="How can I help?" next="quest"/>
+    <Option text="Where should I search?" next="search"/>
+    <Option text="That is troubling. I will warn others." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="quest">
+    <NPCText>
+      <![CDATA[
+      “You have spirit, traveler. Seek the <b>Silent Well</b> in the moonlit gardens. There, watch for a figure with no shadow—follow, but do not confront directly.<br><br>
+      Return to me with what you learn, and perhaps the spirits will favor you.”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will investigate the Silent Well."
+            action="GiveItem:FactionInvestigationScroll(Silent Well,Hinokami,200)"
+            condition="!HasItem:FactionInvestigationScroll"
+            next="sendoff"/>
+    <Option text="That sounds too dangerous for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="sendoff">
+    <NPCText>
+      <![CDATA[
+      Renjiro inclines his head.<br>
+      “Go with caution, for the shadow at the well does not walk alone. Should you return with news, your path will brighten.”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Renjiro." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="search">
+    <NPCText>
+      <![CDATA[
+      “Seek where the lantern’s light does not reach—the Silent Well, in the southeast garden. Watch, but do not be seen. Listen, but do not speak. There, truth waits in the dark.”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will search there." 
+            action="GiveItem:FactionInvestigationScroll(Silent Well,Hinokami,200)"
+            condition="!HasItem:FactionInvestigationScroll"
+            next="sendoff"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Renjiro’s voice becomes a hush.<br>
+      “Minax is the serpent in every garden, the poison in every cup. Her power spreads in dreams and whispers. Do not trust what you see in shadows—or in yourself.”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Can you protect us from her?" next="protect"/>
+    <Option text="Have you dreamt of her victory?" next="victory"/>
+    <Option text="Thank you for the warning." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="protect">
+    <NPCText>
+      <![CDATA[
+      “Protection? A seer’s gift is warning, not warding. But perhaps I can teach you a charm against nightmares…”<br>
+      He hands you a <b>Spirit Charm</b> on a braided cord.
+      ]]>
+    </NPCText>
+    <Option text="Accept the charm." 
+            action="GiveItem:SpiritCharm"
+            next="charm"/>
+    <Option text="I do not need such things." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="charm">
+    <NPCText>
+      <![CDATA[
+      “Wear it at night. If your dreams turn black, hold it and remember my voice. Sometimes, that is enough.”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Renjiro." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="victory">
+    <NPCText>
+      <![CDATA[
+      Renjiro’s mask droops.<br>
+      “Once, I dreamt all Britannia aflame, and a woman in black laughing at the end. But dreams are warnings, not certainties. The future is shaped by the bold.”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Then I will help shape it for the better." action="Karma:+100"/>
+    <Option text="I hope you are right." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dream">
+    <NPCText>
+      <![CDATA[
+      Renjiro gestures for you to kneel. As you close your eyes, a vision floods your mind:<br>
+      <i>You stand on a bridge of lotus petals. On one end, Hinokami in blossom; on the other, a swirling shadow beckons. The petals tremble beneath your feet…</i><br>
+      “The dream world touches all who listen. Return to me if your nights bring troubling visions.”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="What does this dream mean?" next="interpret"/>
+    <Option text="Thank you. I will ponder it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="interpret">
+    <NPCText>
+      <![CDATA[
+      Renjiro tilts his head.<br>
+      “Dreams rarely tell the same story twice. Perhaps you stand at a crossroads. Perhaps the blossom is hope—or a warning. If you wish to know more, seek the real bridge near the gardens, and trust your instincts.”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will seek the bridge." action="Teleport:1402,788,0,Tokuno"/>
+    <Option text="Your riddles have given me much to think on." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="tease">
+    <NPCText>
+      <![CDATA[
+      The old man laughs, a dry but gentle sound.<br>
+      “If I answered plainly, I would put myself out of work. In these times, only fools and spirits speak without riddles.”</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Fair enough. Thank you." action="Close"/>
+    <Option text="Tell me another riddle." next="riddle"/>
+  </Dialogue>
+
+<Dialogue id="backstory_intro">
+  <NPCText>
+    <![CDATA[
+    Renjiro tilts his masked head.<br>
+    “The past is like incense smoke—visible only in fading wisps. But perhaps… it is time someone knew the whole of it.”<br><br>
+    He taps his staff twice.<br>
+    “Ask what you wish, but know—truth has its own cost.”
+    ]]>
+  </NPCText>
+  <Option text="Where were you born?" next="renjiro_birth"/>
+  <Option text="How did you become a seer?" next="renjiro_blindness"/>
+  <Option text="Do you regret leaving Tokuno?" next="renjiro_tokuno"/>
+  <Option text="What do you believe in now?" next="renjiro_beliefs"/>
+  <Option text="Why help strangers like me?" next="renjiro_motives"/>
+  <Option text="That’s enough story for now." action="Close"/>
+</Dialogue>
+
+<Dialogue id="renjiro_birth">
+  <NPCText>
+    <![CDATA[
+    “I was born under a blood moon in Makoto-Jima. My mother called me cursed from the moment I opened my eyes.”<br><br>
+    He pauses.<br>
+    “But the monks said I had the ‘Sight’. They raised me among sakura trees and silence. I never saw a city until I was already blind.”
+    ]]>
+  </NPCText>
+  <Option text="Why did you lose your sight?" next="renjiro_blindness"/>
+  <Option text="What were the monks like?" next="renjiro_monks"/>
+  <Option text="Please go on." next="renjiro_tokuno"/>
+</Dialogue>
+
+<Dialogue id="renjiro_blindness">
+  <NPCText>
+    <![CDATA[
+    “I blinded myself.”<br><br>
+    You freeze.<br>
+    “Not in madness—but in devotion. To truly see spirits, one must close mortal eyes. I offered mine willingly at the Shrine of the Sun’s Reflection.”<br>
+    His voice is calm, unwavering.
+    ]]>
+  </NPCText>
+  <Option text="Was it worth it?" next="renjiro_beliefs"/>
+  <Option text="That’s… extreme." next="renjiro_regret"/>
+  <Option text="You are braver than I." action="Karma:+50"/>
+</Dialogue>
+
+<Dialogue id="renjiro_monks">
+  <NPCText>
+    <![CDATA[
+    “Harsh. Wise. Kind, in strange ways. They taught me that pain is a doorway—and silence, a teacher.”<br><br>
+    He smiles under the mask.<br>
+    “But they feared Minax’s dreams. I did not. That is why I left.”
+    ]]>
+  </NPCText>
+  <Option text="So you chose exile?" next="renjiro_tokuno"/>
+  <Option text="They were wrong to fear." action="Karma:+25"/>
+</Dialogue>
+
+<Dialogue id="renjiro_tokuno">
+  <NPCText>
+    <![CDATA[
+    “When Minax shattered the southern islands, many fled. I came west—not for safety, but for silence. Hinokami is the closest I have found to peace.”<br>
+    He leans on his staff.<br>
+    “But peace is a rare guest, these days.”
+    ]]>
+  </NPCText>
+  <Option text="What do you believe in now?" next="renjiro_beliefs"/>
+  <Option text="You sound lonely." next="renjiro_motives"/>
+</Dialogue>
+
+<Dialogue id="renjiro_beliefs">
+  <NPCText>
+    <![CDATA[
+    “I believe… in stillness. In the balance between shadow and flame.”<br>
+    He holds up two fingers, one charred, one bandaged.<br>
+    “Minax thrives on fear. The sun goddess Amateru teaches clarity through fire. I serve neither. I listen. I warn.”<br><br>
+    He taps your chest with his staff.<br>
+    “And you? What do you believe in?”
+    ]]>
+  </NPCText>
+  <Option text="I fight for justice." action="Karma:+100"/>
+  <Option text="I protect those I care about." action="Karma:+50"/>
+  <Option text="I believe in nothing." action="Karma:-50"/>
+  <Option text="I'm still figuring that out." next="renjiro_motives"/>
+</Dialogue>
+
+<Dialogue id="renjiro_regret">
+  <NPCText>
+    <![CDATA[
+    “Regret is a luxury. I have traded it for vision.”<br>
+    His mask gleams faintly.<br>
+    “But sometimes… in dreams, I see colors I have never known. Perhaps that is regret. Or hunger.”
+    ]]>
+  </NPCText>
+  <Option text="You have sacrificed much." action="Karma:+25"/>
+  <Option text="You don’t sound sure." next="renjiro_motives"/>
+</Dialogue>
+
+<Dialogue id="renjiro_motives">
+  <NPCText>
+    <![CDATA[
+    “Why do I help strangers?”<br>
+    He chuckles.<br>
+    “Because fate is not a lone thread. Each life tugs another. If I aid you, perhaps you will one day aid Hinokami—or save a spirit not yet born.”<br><br>
+    “Also, I am very bored.”
+    ]]>
+  </NPCText>
+  <Option text="That is... unexpectedly honest." next="gift_check"/>
+  <Option text="Thank you for sharing, Renjiro." action="Close"/>
+</Dialogue>
+
+<Dialogue id="gift_check">
+  <NPCText>
+    <![CDATA[
+    “Mmm. You listened with more heart than most.”<br>
+    He reaches into his robe and draws a small talisman.<br>
+    “Take this. May it protect your spirit from the whispers in the dark.”
+    ]]>
+  </NPCText>
+  <Option text="Accept the talisman."
+          action="GiveItem:SpiritCharm"
+          condition="!HasItem:SpiritCharm"
+          next="gift_end"/>
+  <Option text="I’ve already received one." action="SendMessage:You already carry his charm."/>
+  <Option text="I don’t need it." action="Close"/>
+</Dialogue>
+
+<Dialogue id="gift_end">
+  <NPCText>
+    <![CDATA[
+    “Guard it well. If it hums in your pocket… do not ignore the warning.”<br><br>
+    He leans back and resumes his meditations.
+    ]]>
+  </NPCText>
+  <Option text="I won’t forget your kindness." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

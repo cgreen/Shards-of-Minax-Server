@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="BrotherFalin">
+
+  <!-- === root/greeting ================================================= -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b3e0ff'>
+      You see a stooped man in a tattered monk’s robe, swirling watered wine in a battered tin cup. Shadows cling to his sunken eyes, and his fingers trace a faded sigil of Yew in the dust on the table.<BR><BR>
+      He looks up with a tired smile. “Ah. Another soul seeking warmth in cold Eldermoor. They call me Brother Falin, once of Yew… though here, I am little more than a ghost in exile.”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You were a monk of Yew? What brings you here?" next="exile"/>
+    <Option text="What do you seek in Eldermoor, Brother?" next="seek"/>
+    <Option text="You look troubled. Is something wrong?" next="troubled"/>
+    <Option text="Just passing by." action="Close"/>
+  </Dialogue>
+
+  <!-- Exile branch -->
+  <Dialogue id="exile">
+    <NPCText>
+      <![CDATA[
+      Falin’s gaze turns inward.<BR>
+      “I tended the Shrine of Justice once. Then… shadows fell. I saw things that broke my vows—broken oaths, broken seals, broken minds. They say I fled. Perhaps they are right. Here, in Eldermoor, I serve in silence and try not to remember.”
+      ]]>
+    </NPCText>
+    <Option text="What happened at the Shrine?" next="shrine"/>
+    <Option text="Can I help you, Brother?" next="help"/>
+    <Option text="We all have ghosts. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Seek branch -->
+  <Dialogue id="seek">
+    <NPCText>
+      <![CDATA[
+      He smiles, sad and wry.<BR>
+      “I seek peace, and find only echoes. The villagers let me warm their benches so long as I keep my tales short and my wine weaker than Brenvar’s wit. Sometimes I help Edda gather herbs, or listen to Mira’s dreams. But peace… it’s a rare coin these days.”
+      ]]>
+    </NPCText>
+    <Option text="You’re a friend of Edda and Mira?" next="friends"/>
+    <Option text="If there’s trouble, maybe I can help." next="help"/>
+    <Option text="I’ll let you be." action="Close"/>
+  </Dialogue>
+
+  <!-- Troubled branch -->
+  <Dialogue id="troubled">
+    <NPCText>
+      <![CDATA[
+      Falin winces, as if the question pains him.<BR>
+      “There is an ogre—no, a thing that wears an ogre’s shape. They call it the Necrotic Ogre, but I fear it is no mere beast. I sense… corruption, as I once did at the shrine. It haunts the night beyond Edda’s fields, scaring children and slaughtering cattle. Mayor Halric says to hunt it. Edda whispers it carries sickness on its claws. I drink, and pray it will move on. But it lingers.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll hunt the Necrotic Ogre for you." next="questOffer"/>
+    <Option text="Is it truly cursed, or just an ogre?" next="ogreLore"/>
+    <Option text="Why do you fear it so?" next="fear"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Shrine backstory -->
+  <Dialogue id="shrine">
+    <NPCText>
+      <![CDATA[
+      His hand trembles, spilling wine.<BR>
+      “The shrine was… violated. Its seal, ancient and delicate, was broken. I remember chanting, candlelight, a shadow deeper than the night. Minax’s voice, sweet as poison, echoing in my mind. I… fled, and the land grew bitter behind me. That is all I can say.”<BR><BR>
+      His voice drops. “Some burdens are best left unshared.”
+      ]]>
+    </NPCText>
+    <Option text="If you ever wish to return, I will help you." next="vow"/>
+    <Option text="Is the shrine truly lost?" next="lost"/>
+    <Option text="That must weigh heavy on your soul." next="weight"/>
+    <Option text="Let’s speak of other things." next="troubled"/>
+  </Dialogue>
+
+  <Dialogue id="vow">
+    <NPCText>
+      <![CDATA[
+      He looks at you, hope flickering in his gaze.<BR>
+      “Would you? There are few in Eldermoor I trust. If you’d stand with me, perhaps we could cleanse what was broken. But first, the darkness must be thinned—begin with the ogre, and perhaps the path home will open.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about this ogre." next="ogreLore"/>
+    <Option text="I’ll face the Necrotic Ogre." next="questOffer"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="lost">
+    <NPCText>
+      <![CDATA[
+      “Yew is never truly lost, nor the Virtues. But the shrine… it is sealed by old magic, and guarded by things I once called friends. I would not ask anyone to face it until the corruption here is driven out. The ogre is a symptom. Heal the wound, then cleanse the shrine.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll handle the ogre for you." next="questOffer"/>
+    <Option text="Let’s talk of Eldermoor’s people." next="friends"/>
+  </Dialogue>
+
+  <Dialogue id="weight">
+    <NPCText>
+      <![CDATA[
+      He gives a thin smile.<BR>
+      “You have the eyes of a confessor. Yes, it weighs on me. But hope flickers even in darkness, yes? I see it in Mira’s laughter, in Edda’s stubborn kindness. And in strangers willing to face monsters for those in need.”
+      ]]>
+    </NPCText>
+    <Option text="You’re not alone, Brother." next="help"/>
+    <Option text="Let’s face the ogre." next="questOffer"/>
+  </Dialogue>
+
+  <!-- Friends branch -->
+  <Dialogue id="friends">
+    <NPCText>
+      <![CDATA[
+      “Edda is wise—some say half-witch, but I know her as healer. Mira is light in a heavy world, though her feet ache to roam. I trust them more than I trust Halric’s stubborn pride. Here, one must earn trust sip by sip, not in grand gestures.”
+      ]]>
+    </NPCText>
+    <Option text="Edda sent me to check on you." next="edda"/>
+    <Option text="Mira’s father worries for her." next="mira"/>
+    <Option text="I’d like to help you." next="help"/>
+    <Option text="About the ogre…" next="ogreLore"/>
+  </Dialogue>
+
+  <Dialogue id="edda">
+    <NPCText>
+      <![CDATA[
+      He chuckles softly.<BR>
+      “She’s a thorn, that one, but her heart’s true. She brings me wild herbs to ease my dreams. If she trusts you, then so do I—at least a little.”
+      ]]>
+    </NPCText>
+    <Option text="I want to help the village." next="help"/>
+    <Option text="Tell me about the ogre." next="ogreLore"/>
+  </Dialogue>
+
+  <Dialogue id="mira">
+    <NPCText>
+      <![CDATA[
+      “Brenvar would chase off the sun if he thought it’d steal Mira from his inn. She deserves the world, not just muddy floors and stale ale. Still, Eldermoor needs its laughter.”
+      ]]>
+    </NPCText>
+    <Option text="Let’s help your village." next="help"/>
+    <Option text="Tell me about this ogre." next="ogreLore"/>
+  </Dialogue>
+
+  <!-- Help/Quest offer branch -->
+  <Dialogue id="help">
+    <NPCText>
+      <![CDATA[
+      “There is a creature—the Necrotic Ogre—skulking in the hollow north of the marsh. Some say it was once a simple brute, but Minax’s shadow twists all it touches. Its hide rots and writhes, its breath withers grass. I have seen it watching from the treeline. Will you drive it out?”
+      ]]>
+    </NPCText>
+    <Option text="I’ll hunt it down." next="questOffer"/>
+    <Option text="What makes it so dangerous?" next="ogreLore"/>
+    <Option text="I’m not sure I’m ready." action="Close"/>
+  </Dialogue>
+
+  <!-- Ogre Lore branch -->
+  <Dialogue id="ogreLore">
+    <NPCText>
+      <![CDATA[
+      “This ogre—Necrotic, they call it—bears wounds that never heal. Maggots squirm beneath its flesh, and its eyes burn with green fire. Some whisper it feeds on sorrow and fear. It has crushed livestock, torn fences, and left poison in its wake. Edda says the land sours where it walks. Halric wants it gone, but even Aldric keeps his distance. I… I sense a shadow on it, a shadow I have met before.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll destroy the creature for Eldermoor."
+      action="GiveItem:FactionKillQuestScroll(NecroticOgre,1,Eldermoor,700)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="acceptQuest"/>
+    <Option text="Could it be redeemed?" next="redeem"/>
+    <Option text="Sounds grim. I need to think." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="fear">
+    <NPCText>
+      <![CDATA[
+      He hesitates, voice a whisper.<BR>
+      “Because I know the darkness that stirs within it. It calls to those who have tasted despair. I… am not as strong as I once was. But perhaps you are.”
+      ]]>
+    </NPCText>
+    <Option text="Let me handle the ogre." next="questOffer"/>
+    <Option text="You’re stronger than you think." next="weight"/>
+  </Dialogue>
+
+  <Dialogue id="redeem">
+    <NPCText>
+      <![CDATA[
+      “Perhaps all things can be redeemed. But this beast… its pain is bound to Minax’s magic. If you find a token or charm clutched in its hand, bring it to Priestess Miralda before burning it. She will know if redemption is possible—or if the darkness must be put to rest.”
+      ]]>
+    </NPCText>
+    <Option text="I accept the hunt." next="questOffer"/>
+    <Option text="I’ll consult Miralda first." action="Close"/>
+  </Dialogue>
+
+  <!-- Actual quest offer -->
+  <Dialogue id="questOffer">
+    <NPCText>
+      <![CDATA[
+      Falin’s haunted eyes steady.<BR>
+      “The ogre lairs in the sunken hollow, north of Edda’s marsh. Hunt it by dusk, when its strength wanes. If you return with proof—a rotted claw or its shrunken skull—I will share what I know of the shrine’s fate… and perhaps, together, we may find redemption for more than just Eldermoor.”
+      ]]>
+    </NPCText>
+    <Option text="I will bring you proof of its demise."
+      action="GiveItem:FactionKillQuestScroll(NecroticOgre,1,Eldermoor,700)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="acceptQuest"/>
+    <Option text="Tell me more about what happened in Yew." next="shrine"/>
+    <Option text="Farewell for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptQuest">
+    <NPCText>
+      <![CDATA[
+      “Thank you, friend. Remember—do not touch the ogre’s wounds with bare flesh. And if you see strange runes or tokens on its body, bring them to Miralda or Edda. Return safe, and perhaps I will have the courage to return with you to Yew, and face what I have fled.”
+      ]]>
+    </NPCText>
+    <Option text="I will be careful." action="Close"/>
+  </Dialogue>
+
+</DialogueFile>

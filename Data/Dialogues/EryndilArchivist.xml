@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="EryndilArchivist">
+  <!-- Root greeting -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6fb6d6'>
+      You see a quiet, slender man in flowing azure robes, his gaze deep and analytical beneath a sable wizard’s hat. He closes a heavy tome with a whisper of parchment and looks up, offering a faint, knowing smile.<BR><BR>
+      "Another seeker among the clouds. Welcome to the Shelved Storm, as some call my archive. I am Eryndil, chronicler of Aerilon and keeper of the memories this city would rather forget. Have you come to learn, or to bargain? Or, perhaps, simply to hide from the politics below?"</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek knowledge—what is your story?" next="story"/>
+    <Option text="I wish to aid Aerilon. Is there work for me?" next="questIntro"/>
+    <Option text="You seem wary, Archivist. Is it dangerous here?" next="danger"/>
+	<Option text="Tell me something personal, Archivist." next="deepDive"/>
+    <Option text="Just passing through. Goodbye." action="Close"/>
+  </Dialogue>
+
+  <!-- Story branch -->
+  <Dialogue id="story">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6fb6d6'>
+      Eryndil traces his fingers along a shelf etched with glowing runes.<BR>
+      "Dangerous? Perhaps. Necessary? Certainly. I once studied beneath the crystal domes of Moonglow, before Aerilon’s founding. When the Wind exiles constructed this floating haven, I was asked—by Selara Vael herself—to safeguard not only our tomes, but the very secrets that keep us aloft.<BR><BR>
+      "I am neither Conclave nor guildsman. I stand at the crossroads of knowledge and caution. Selara trusts me because I speak softly; Corvus Deyne threatens me because I listen too well."<BR><BR>
+      "And lately, I suspect, secrets may prove deadlier than spells."</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Tell me about Selara Vael." next="selara"/>
+    <Option text="Tell me about Corvus Deyne." next="corvus"/>
+    <Option text="Is there any way I can help?" next="questIntro"/>
+    <Option text="Thank you for sharing." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="selara">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6fb6d6'>
+      "Selara is Aerilon’s unyielding anchor. Without her, these stones might have crumbled long ago. Yet, power and paranoia are twin shadows. She seeks order, even at the price of mercy. I fear she has forgotten what it is to rest or to trust."<BR><BR>
+      He lowers his voice.<BR>
+      "She once entrusted me with every volume ever scribed in Wind. I will not betray that trust… unless necessity outweighs loyalty."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="And Corvus Deyne?" next="corvus"/>
+    <Option text="What do you need done, Archivist?" next="questIntro"/>
+    <Option text="Let us speak of something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="corvus">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6fb6d6'>
+      "Corvus Deyne is a flame seeking fuel, uncaring if he burns Aerilon itself. His hunger for power is matched only by his cunning. He courts Minax’s whispers—though not openly—and many young mages are drawn to his strength.<BR><BR>
+      "Yet I know his weaknesses. Should Aerilon’s balance tip, his ambition may be our undoing. Salia Moontide despises his methods, but she cannot refuse his demands."<BR><BR>
+      He glances at a hidden drawer.<BR>
+      "In this city, information is often sharper than steel."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="How do you remain neutral?" next="neutral"/>
+    <Option text="Do you need help with these secrets?" next="questIntro"/>
+    <Option text="Back to other matters." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="neutral">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6fb6d6'>
+      "Neutrality is a balancing act—one foot in shadow, one in light. Some say I am a coward for not choosing sides. I prefer to think I am Aerilon’s memory. Even secrets must be protected from those who would misuse them."<BR><BR>
+      "But… there are moments when I must risk exposure, for the sake of this city’s future. Today may be such a day."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Is there something you need done?" next="questIntro"/>
+    <Option text="Thank you for your candor." next="greeting"/>
+  </Dialogue>
+
+  <!-- Danger -->
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6fb6d6'>
+      "Danger is the cost of knowledge, friend. Secrets swirl here like clouds around our spires. The Azure Conclave watches, the War Mages plot, and even the crystal engineers fear the truths hidden in these shelves.<BR><BR>
+      "I keep careful notes on every council member—not to wield, but to defend. And yes, sometimes to barter. If you wish to earn Aerilon’s favor, I may have a delicate task for you—one that requires discretion and swiftness."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I can be discreet. What is your request?" next="questIntro"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Offer -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6fb6d6'>
+      Eryndil lowers his voice, eyes darting to ensure no Conclave ears are near.<BR><BR>
+      "There are those beyond our city who keep eyes on the skies—some loyal, some merely curious, and a few who possess gifts Aerilon needs in these perilous times.<BR><BR>
+      "One such is known as the Silver Steed Savant—a rider whose wisdom and mount are spoken of in old prophecies. This Savant dwells far below, outside our gates, ever wary of Conclave entanglements.<BR><BR>
+      "I have prepared a folio of encoded lore for the Savant—dire warnings and subtle reassurances. Deliver it discreetly, and your loyalty to Aerilon shall be marked. Do not read it; its sigils are keyed to the Savant alone."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will deliver the folio to the Silver Steed Savant." 
+      action="GiveItem:FactionDeliveryQuestScroll(Silver Steed Savant,Aerilon,250)" 
+      condition="!HasItem:FactionDeliveryQuestScroll"
+      next="questAccepted"/>
+    <Option text="Who is this Silver Steed Savant, really?" next="whoSavant"/>
+    <Option text="Why can’t Salia or Selara do this?" next="whyNotThem"/>
+    <Option text="This sounds risky. What if I’m caught?" next="risk"/>
+    <Option text="I’ll think about it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="questAccepted">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6fb6d6'>
+      "Trust is a currency more valuable than gold in Aerilon. Bring the Savant my folio; return with their sigil in reply, and you will have earned both my gratitude and the Conclave’s recognition."<BR><BR>
+      "May the winds keep you aloft, friend—and beware of those who ask too many questions. Even knowledge can be a dangerous burden in these skies."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will return with proof of delivery." action="Close"/>
+  </Dialogue>
+
+  <!-- Who is the Savant? -->
+  <Dialogue id="whoSavant">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6fb6d6'>
+      "A curious question—and one even I dare not answer in full. The Savant is a scholar, yes, but also a guardian of rare steeds whose bloodlines trace to the Age of Fracture. Some say their mount can gallop between worlds; others believe the Savant is a prophet in disguise.<BR><BR>
+      "It is enough to say the Savant is no friend to Minax, nor to the Conclave. That is why I trust only a neutral hand—yours."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Very well, I’ll deliver your message." 
+      action="GiveItem:FactionDeliveryQuestScroll(Silver Steed Savant,Aerilon,250)"
+      condition="!HasItem:FactionDeliveryQuestScroll"
+      next="questAccepted"/>
+    <Option text="Still seems risky. Why not ask someone else?" next="whyNotThem"/>
+    <Option text="I’ll pass for now." action="Close"/>
+  </Dialogue>
+
+  <!-- Why not Salia or Selara -->
+  <Dialogue id="whyNotThem">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6fb6d6'>
+      "Selara Vael must never be seen dealing with outlanders—her reputation for control is both shield and shackle. As for Salia Moontide, she is watched day and night by both the War Mages and the Sky Guild. I, however, slip through shadows that go unremarked.<BR><BR>
+      "You are my best hope for discretion. Will you take this burden?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Alright, give me the folio." 
+      action="GiveItem:FactionDeliveryQuestScroll(Silver Steed Savant,Aerilon,250)"
+      condition="!HasItem:FactionDeliveryQuestScroll"
+      next="questAccepted"/>
+    <Option text="I still have doubts. What if I’m caught?" next="risk"/>
+    <Option text="Not today." action="Close"/>
+  </Dialogue>
+
+  <!-- Risk branch -->
+  <Dialogue id="risk">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6fb6d6'>
+      "You are wise to ask. If intercepted, deny all. The folio is written in cipher, unreadable except by the Savant. If truly cornered, destroy it—better lost than in the hands of Minax or Corvus Deyne. Should you succeed, Aerilon’s eyes will look more kindly on you. Should you fail… well, some secrets are worth the risk."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll deliver it, risks and all." 
+      action="GiveItem:FactionDeliveryQuestScroll(Silver Steed Savant,Aerilon,250)"
+      condition="!HasItem:FactionDeliveryQuestScroll"
+      next="questAccepted"/>
+    <Option text="Maybe I am not the right messenger." action="Close"/>
+  </Dialogue>
+  
+<Dialogue id="deepDive">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6fb6d6'>
+    Eryndil closes his eyes for a moment. When he speaks, his voice is softer, tinged with nostalgia.<BR><BR>
+    "Most assume I was born an Archivist, that I emerged from the Lyceum in robes and riddles. The truth? I was once a bard in Moonglow. I sang of constellations, recited spells as sonnets, and danced on rooftops when the moons aligned."<BR><BR>
+    "But as the world fractured, so too did I. When Minax’s shadows rose and Britannia began to tear, I traded my lute for scrolls, and melody for memory."
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="You were a bard? Can you still play?" next="bardSong"/>
+  <Option text="Why give up music for magic?" next="musicToMagic"/>
+  <Option text="What do you miss the most?" next="nostalgia"/>
+  <Option text="That’s surprising. I imagined you... colder." next="notCold"/>
+</Dialogue>
+
+<Dialogue id="bardSong">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6fb6d6'>
+    He chuckles faintly.<BR>
+    "I still pluck strings in the quiet hours. Want to hear something ancient?"
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Play something for me." action="PlaySound:0x015" next="bardPlay"/>
+  <Option text="Another time." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="bardPlay">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6fb6d6'>
+    He hums an old Moonglow nocturne, soft and slow. The melody is haunting—like moonlight filtered through memory.<BR><BR>
+    "That was for the stars who still remember our names. And those who no longer do."
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Thank you. That was beautiful." next="deepDiveFollowUp"/>
+</Dialogue>
+
+<Dialogue id="musicToMagic">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6fb6d6'>
+    "Magic, like music, shapes the soul. But music bends the heart; magic bends the world."<BR><BR>
+    "I needed to do more than comfort—I needed to change fate. But I still think of songs when I read sigils."
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Have you ever regretted that choice?" next="regrets"/>
+</Dialogue>
+
+<Dialogue id="nostalgia">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6fb6d6'>
+    "I miss laughter in the street. Wine shared without suspicion. The sky before it buzzed with spells and floating towers."<BR><BR>
+    He sighs.<BR>
+    "But nostalgia is a soft dagger—it cuts slowly. Better to let it stay sheathed."
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Even so, it shaped who you are." next="deepDiveFollowUp"/>
+</Dialogue>
+
+<Dialogue id="notCold">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6fb6d6'>
+    "Colder? Hmm. You’re not the first to say it. Knowledge often freezes those who dwell in it too long. But every glacier began as rain."<BR><BR>
+    He offers a rare smile.<BR>
+    "Perhaps you’ve warmed me more than you know."
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="May I ask more?" next="deepDiveFollowUp"/>
+</Dialogue>
+
+<Dialogue id="regrets">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6fb6d6'>
+    "Every choice leaves shadows. I once loved a woman in Skara Brae. Her voice could wake spirits from slumber. When I joined Aerilon’s founding, I let her go. I’ve never found a voice like hers since."<BR><BR>
+    "But perhaps she sings still, somewhere the stars still hear."
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="That’s... very human of you." next="deepDiveFollowUp"/>
+</Dialogue>
+
+<Dialogue id="deepDiveFollowUp">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6fb6d6'>
+    "You ask the questions most never dare. That earns you something—not just my trust, but a bit of insight."
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="What sort of insight?" condition="SkillAtLeast:EvaluateIntelligence,80" next="insightHigh"/>
+  <Option text="What sort of insight?" condition="SkillBelow:EvaluateIntelligence,80" next="insightLow"/>
+</Dialogue>
+
+<Dialogue id="insightHigh">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6fb6d6'>
+    Eryndil leans close.<BR>
+    "There’s an echo inside Aerilon’s crystals—an anomaly. I suspect it’s not natural. Something beneath the city hums in response to certain tones—harmonics only ancient bardic chords seem to reach.<BR><BR>
+    I believe… our city may be singing back. Or warning us."<BR>
+    He hands you a page torn from an old folio.
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="I’ll study this." action="GiveItem:FactionLoreFragment(AerilonCrystalEcho)" />
+</Dialogue>
+
+<Dialogue id="insightLow">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6fb6d6'>
+    "Perhaps one day, when your mind sharpens further, you’ll hear the whisper that dwells between runes and rhyme."<BR><BR>
+    "For now, take this: a thought, not a truth—Aerilon's levitation is not powered by crystals alone. Something… older pulses within its foundations."
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="I’ll keep listening." action="AddSkill:EvaluateIntelligence,3,300"/>
+</Dialogue>
+  
+  
+</DialogueFile>

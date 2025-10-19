@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="ToskBellringer">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#86ccf9'>
+      You find a gaunt, hollow-eyed man pacing the snowy lane, clutching an iron-banded staff crowned with a bell. His “Moonless Watch Cloak” sweeps behind him like a shadow; frost clings to his "Icebound Boots." Tosk barely blinks as you approach, but his eyes dart everywhere, haunted and alert.
+      <BR><BR>
+      He gives a slight nod, his voice hoarse with sleep deprivation:<BR>
+      "Careful now—tread softly after dark, friend. Night’s got teeth here in Frostmere. I’m Tosk—been ringing this bell ten years, or ten centuries, depending who you ask. Sleep’s a stranger. But the bell keeps me company. She warns me when danger’s close… or used to."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You never sleep? How do you manage?" next="nosleep"/>
+    <Option text="Is that the famous bell? Does it really speak to you?" next="thebell"/>
+    <Option text="You look worried. Has something happened?" next="questIntro"/>
+    <Option text="How do you know Svala and Bryndra?" next="relations"/>
+	<Option text="You seem like you’ve lived a life. Mind if I ask about it?" next="backstoryStart"/>
+    <Option text="Just passing by." next="goodbye"/>
+  </Dialogue>
+
+  <Dialogue id="nosleep">
+    <NPCText>
+      <![CDATA[
+      Tosk gives a thin, eerie smile.<BR><BR>
+      "Sleep? No, not for me. Tried once—my dreams were made of ice and screams. The bell calls me each night, so I walk the circuit. Folk think it’s madness, but the wolves and worse know my steps. Bryndra says I’m a relic. Svala trusts my instincts—she’s the only one who listens when the wind’s wrong."
+      ]]>
+    </NPCText>
+    <Option text="How do you stay sane?" next="sane"/>
+    <Option text="What’s worrying you tonight?" next="questIntro"/>
+    <Option text="Svala seems interesting. What’s she like?" next="svala"/>
+    <Option text="Back to your rounds, then." next="goodbye"/>
+  </Dialogue>
+
+  <Dialogue id="thebell">
+    <NPCText>
+      <![CDATA[
+      Tosk taps the bell-staff.<BR><BR>
+      "Ah, you hear her too? Most folk just hear noise. But this bell—Iron Bellstaff, forged in Minoc and blessed at the Obelisk of Veyra itself—she whispers warnings only I can understand. Wind changes, evil stirs, the bell hums in my bones. But lately… silence. It chills me worse than any blizzard."
+      ]]>
+    </NPCText>
+    <Option text="What do you think happened to the bell?" next="questIntro"/>
+    <Option text="Is the Obelisk truly magical?" next="obelisk"/>
+    <Option text="Does Bryndra ever listen to you?" next="bryndra"/>
+    <Option text="You must be lonely out here." next="lonely"/>
+    <Option text="I’ll let you be." next="goodbye"/>
+  </Dialogue>
+
+  <Dialogue id="sane">
+    <NPCText>
+      <![CDATA[
+      "Sanity’s a thin blanket up here. I keep moving, count my steps, listen for the bell’s music. Sometimes I talk to Svala or Widow Corla, but mostly I talk to the snow. Some nights I think the bell’s all that keeps me from wandering into the storm and never coming back."
+      ]]>
+    </NPCText>
+    <Option text="Tell me what troubles you tonight." next="questIntro"/>
+    <Option text="I admire your dedication." next="admire"/>
+    <Option text="Sounds rough. Stay safe, Tosk." next="goodbye"/>
+  </Dialogue>
+
+  <Dialogue id="admire">
+    <NPCText>
+      <![CDATA[
+      Tosk looks surprised—a fleeting smile warms his face.<BR><BR>
+      "Kind of you. Not many folk see past the sleepless eyes. If you’re offering help, I might have a task only a brave soul would attempt…"
+      ]]>
+    </NPCText>
+    <Option text="What is it?" next="questIntro"/>
+    <Option text="Maybe another time." next="goodbye"/>
+  </Dialogue>
+
+  <Dialogue id="svala">
+    <NPCText>
+      <![CDATA[
+      "Svala’s the best hunter I’ve known. She hears the ice cracking long before the rest of us. Doesn’t laugh at my stories—knows when to trust a warning. If she says trouble’s coming, you’d best believe her. Sometimes we walk the midnight perimeter together. I’d trust her with my life."
+      ]]>
+    </NPCText>
+    <Option text="I’d like to meet her." next="svala2"/>
+    <Option text="Back to your rounds." next="goodbye"/>
+  </Dialogue>
+
+  <Dialogue id="svala2">
+    <NPCText>
+      <![CDATA[
+      "You’ll find her at dawn, out by the eastern ridge—if she lets herself be found. Just don’t get in her way when she’s hunting, or you’ll end up in her stewpot."
+      ]]>
+    </NPCText>
+    <Option text="Understood." next="goodbye"/>
+  </Dialogue>
+
+  <Dialogue id="bryndra">
+    <NPCText>
+      <![CDATA[
+      Tosk sighs, shaking his head.<BR>
+      "Bryndra… she’s Frostguard, heart and steel. She thinks the bell’s just a superstition. Calls me ‘old man ghost’—never to my face, mind you. But she keeps this village standing, so I can’t blame her. If I vanish, she’ll just post someone younger, someone who sleeps. But they won’t hear the bell."
+      ]]>
+    </NPCText>
+    <Option text="Maybe you’re both needed." next="relations"/>
+    <Option text="Tell me about the Frostguard." next="frostguard"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="obelisk">
+    <NPCText>
+      <![CDATA[
+      Tosk leans closer, whispering.<BR><BR>
+      "Oh, it’s magic—old and cold as creation. Some say the Obelisk of Veyra is a prison; others, a beacon against Minax. Me, I think it’s alive, and it doesn’t sleep either. The bell and the Obelisk—sometimes I wonder if they talk to each other when I’m not listening."
+      ]]>
+    </NPCText>
+    <Option text="That’s unsettling…" next="greeting"/>
+    <Option text="Let’s get back to your troubles." next="questIntro"/>
+  </Dialogue>
+
+  <Dialogue id="lonely">
+    <NPCText>
+      <![CDATA[
+      Tosk laughs, a brittle sound.<BR><BR>
+      "Lonely? Sometimes. But the wind keeps me company, and the bell… or she did. I watch over the village so they can sleep. Maybe I’ll find rest myself, one day."
+      ]]>
+    </NPCText>
+    <Option text="What keeps you going?" next="sane"/>
+    <Option text="Back to your patrols, then." next="goodbye"/>
+  </Dialogue>
+
+  <Dialogue id="relations">
+    <NPCText>
+      <![CDATA[
+      "Svala trusts my warnings, always checks with me before a hunt. Bryndra… she respects the bell more than she lets on, but the militia wants order, not omens. Me, I’m just glad someone still listens."
+      ]]>
+    </NPCText>
+    <Option text="What’s troubling you tonight?" next="questIntro"/>
+    <Option text="I should let you be." next="goodbye"/>
+  </Dialogue>
+
+  <Dialogue id="frostguard">
+    <NPCText>
+      <![CDATA[
+      "Frostguard—the militia. Tough as glacier stone. Bryndra leads them with a frozen fist, but she’s fair. They patrol the walls at dusk. Me, I walk the lanes and listen for things the guards don’t see. Keeps the peace. Usually."
+      ]]>
+    </NPCText>
+    <Option text="About your troubles tonight..." next="questIntro"/>
+    <Option text="Stay safe, Tosk." next="goodbye"/>
+  </Dialogue>
+
+  <Dialogue id="goodbye">
+    <NPCText>
+      <![CDATA[
+      Tosk inclines his head.<BR>
+      "Stay in the lamplight, friend. And if you hear a bell in the night, run toward it—or away. Trust your gut."
+      ]]>
+    </NPCText>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Main Quest Offer Node -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#86ccf9'>
+      Tosk’s face clouds with worry; his iron staff trembles.<BR><BR>
+      "The bell’s gone silent. For three nights now, not a whisper—not even when the wolves circled the livestock pens. I thought it was the frost in my ears, but last night, Svala saw something vast moving beyond the watchlights. A shape like a glacier given life—<B>the Glacial Abomination</B>."
+      <BR><BR>
+      "It slithered from the old crevasse north of the Obelisk. The snow itself recoiled. Since then, the bell has not rung. I fear it’s stifling the bell’s voice—maybe drawing the worst sort of monsters closer. I can’t sleep, but now the village can’t rest either. Bryndra wants to send the Frostguard, but we’re stretched thin."
+      <BR><BR>
+      "If you’re brave or foolish enough to face a thing born of ice and malice, bring me proof it’s dead—a chunk of its crystalline heart. Maybe then the bell will ring again, and the village can dream without fear."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll hunt the Glacial Abomination for you."
+      action="GiveItem:FactionKillQuestScroll(GlacialAbomination,1,Frostmere,700)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Why does the bell go silent near it?" next="bellmagic"/>
+    <Option text="Is anyone helping you?" next="helping"/>
+    <Option text="That sounds too dangerous for me." next="goodbye"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Tosk bows low, relief and gratitude in his eyes.<BR><BR>
+      "Thank you. You’ll find its lair north of the Obelisk—where the glacier cracks like a wound. Beware: it’s cunning for a beast, and its frost breath can freeze a mammoth in mid-charge. If the bell rings when you strike it down, I’ll know you succeeded. And if you don’t return… I’ll ring the bell for you, if I ever hear it again."
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with the crystal heart." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="bellmagic">
+    <NPCText>
+      <![CDATA[
+      "Some magics aren’t meant for mortal minds. Irinya thinks the Abomination was drawn by the Obelisk’s call—or perhaps Minax’s curse. The bell is old, older than this village, and it hates corruption. When the Abomination draws near, the bell… it just stops. As if the night itself is holding its breath. Please—free us from this dread."
+      ]]>
+    </NPCText>
+    <Option text="You can count on me."
+      action="GiveItem:FactionKillQuestScroll(GlacialAbomination,1,Frostmere,700)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Let me think on it." next="goodbye"/>
+  </Dialogue>
+
+  <Dialogue id="helping">
+    <NPCText>
+      <![CDATA[
+      "Svala scouts, Bryndra stands ready—but they have the walls to watch. Irinya says the storm spirits are restless, that something ancient is waking. Me? I only have my bell and hope that someone like you will act before the cold claims more than sleep."
+      ]]>
+    </NPCText>
+    <Option text="I’ll take the quest."
+      action="GiveItem:FactionKillQuestScroll(GlacialAbomination,1,Frostmere,700)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="I’d best stay out of it." next="goodbye"/>
+  </Dialogue>
+
+<Dialogue id="backstoryStart">
+  <NPCText>
+    <![CDATA[
+    Tosk pauses mid-step, the bell swaying softly. His expression darkens—but then softens.<BR><BR>
+    "That so? Most folk just want my warnings, not my memories. But you... sure. A little truth under a quiet moon never hurt no one. Ask, and I’ll try not to lie too much."
+    ]]>
+  </NPCText>
+  <Option text="Where are you from originally?" next="fromWhere"/>
+  <Option text="Why did you choose this life?" next="whyThisLife"/>
+  <Option text="What do you do for fun?" next="funThings"/>
+  <Option text="You’re clearly more than just a watchman." next="hiddenSkills"/>
+  <Option text="Maybe some other time." action="Close"/>
+</Dialogue>
+
+<Dialogue id="fromWhere">
+  <NPCText>
+    <![CDATA[
+    "Me? Born near Moonglow, back when the stars still sang to scholars. My father was a wind-scribe—used to chart the sky with ink and wine. But one day, the sky screamed instead. We fled north. Only I survived the journey. Frost took the rest."<BR><BR>
+    Tosk looks up at the stars, silent.
+    ]]>
+  </NPCText>
+  <Option text="I’m sorry for your loss." next="sympathy"/>
+  <Option text="That explains why you watch the skies." next="whyThisLife"/>
+</Dialogue>
+
+<Dialogue id="sympathy">
+  <NPCText>
+    <![CDATA[
+    Tosk nods slowly.<BR><BR>
+    "Grief is a cold companion—but one that sharpens the senses. The dead whisper to me on windy nights. They remind me why I listen… and why I ring the bell."
+    ]]>
+  </NPCText>
+  <Option text="You carry their memory well." next="gift"/>
+  <Option text="Let’s talk about something else." next="backstoryStart"/>
+</Dialogue>
+
+<Dialogue id="gift">
+  <NPCText>
+    <![CDATA[
+    "A kind soul still walks this land. That gives me more hope than you know."<BR><BR>
+    Tosk places a small shard of clear ice in your palm—faintly warm to the touch.
+    ]]>
+  </NPCText>
+  <Option text="Thank you." 
+          action="GiveItem:QuestItemToken(FrostMemoryShard,1)" />
+</Dialogue>
+
+<Dialogue id="whyThisLife">
+  <NPCText>
+    <![CDATA[
+    Tosk taps his chest.<BR><BR>
+    "I didn’t choose. The bell chose me. One night, I followed its call and found the Obelisk glowing like a second moon. After that, I couldn’t sleep. Couldn't *not* walk. Like the cold itself had given me a purpose."<BR><BR>
+    "Or maybe I just went mad. Who can say?"
+    ]]>
+  </NPCText>
+  <Option text="Seems like a noble calling." next="hiddenSkills"/>
+  <Option text="What do you do when you're not patrolling?" next="funThings"/>
+</Dialogue>
+
+<Dialogue id="funThings">
+  <NPCText>
+    <![CDATA[
+    Tosk actually chuckles.<BR><BR>
+    "Fun? Now that’s a rare thing. I carve faces into icicles and name them after people I miss. I collect frostbitten buttons. I also play a guessing game with Widow Corla: ‘Ghost or Goat?’ She’s better at it than you'd think."
+    ]]>
+  </NPCText>
+  <Option text="That’s... unique." 
+          action="PlaySound:0x015" 
+          next="uniqueFun"/>
+</Dialogue>
+
+<Dialogue id="uniqueFun">
+  <NPCText>
+    <![CDATA[
+    "Unique keeps you alive in Frostmere. The moment you're ordinary, the cold eats you first."
+    ]]>
+  </NPCText>
+  <Option text="You're full of surprises." next="hiddenSkills"/>
+  <Option text="Thanks for the laugh." action="Karma:+50"/>
+</Dialogue>
+
+<Dialogue id="hiddenSkills">
+  <NPCText>
+    <![CDATA[
+    Tosk raises an eyebrow.<BR><BR>
+    "I was a tracker once. Learned from Snowfox tribes near the Vale of Ash. I can smell a corrupted spirit on the wind and draw maps with my toes. I also know 47 lullabies, but only remember the lyrics to three."<BR><BR>
+    He smirks. "Bet you didn’t expect that."
+    ]]>
+  </NPCText>
+  <Option text="No, but I’m impressed." next="bonusStat"/>
+  <Option text="Let’s keep talking." next="backstoryStart"/>
+</Dialogue>
+
+<Dialogue id="bonusStat">
+  <NPCText>
+    <![CDATA[
+    Tosk looks at you with rare admiration.<BR><BR>
+    "Tell you what. For listening to an old fool, I’ll share something from the Snowfox rites. Just breathe like the cold—slow and patient."
+    ]]>
+  </NPCText>
+  <Option text="(Breathe in... and out.)"
+          condition="RandomChance:50"
+          action="AddStat:Dex,5,300"
+          next="statSuccess"/>
+    <Option text="(Breathe in... and out.)"
+          condition="RandomChance:50"
+          action="AddStat:Int,5,300"
+          next="statAltSuccess"/>
+</Dialogue>
+
+<Dialogue id="statSuccess">
+  <NPCText>
+    <![CDATA[
+    A faint surge of agility tingles in your limbs.<BR><BR>
+    "You’ve got Snowfox blood, I’d wager. You’ll move quieter now, for a little while."
+    ]]>
+  </NPCText>
+  <Option text="Thank you." action="Close"/>
+</Dialogue>
+
+<Dialogue id="statAltSuccess">
+  <NPCText>
+    <![CDATA[
+    Your mind sharpens like ice fractals forming.<BR><BR>
+    "That’s the cold thinking through you now. May your thoughts stay clear, wanderer."
+    ]]>
+  </NPCText>
+  <Option text="Thank you." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

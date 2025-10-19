@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="YunisTheSandRat">
+
+  <!-- Greeting -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#deb887'>
+      In a shadowed alcove near a sewer grate, a sharp-eyed child with a crimson bandana and mismatched clothes greets you with a sly grin.<BR><BR>
+      "Lost, are ya? Or just bored enough to talk to sewer-rats? Name's Yunis. Out here, we watch the shadows, snatch what others drop, and sell what they don't miss. You look like someone who walks both sides of the law. What brings you down to the real Qasaria, stranger?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I'm just looking around." next="idle"/>
+    <Option text="Who are you, really?" next="backstory"/>
+    <Option text="I heard you know things others don't." next="intel"/>
+    <Option text="Do you need help with something?" next="questIntro"/>
+	<Option text="Tell me more about yourself." next="deepBackstory"/>
+    <Option text="How do you survive in this city?" next="survival"/>
+  </Dialogue>
+
+  <!-- Idle -->
+  <Dialogue id="idle">
+    <NPCText>
+      <![CDATA[
+      Yunis shrugs. "Suit yourself. But no one comes to the sewers for the scenery. If you change your mind—or find yourself short on luck—I'm always here."
+      ]]>
+    </NPCText>
+    <Option text="On second thought, let's talk." next="greeting"/>
+    <Option text="Goodbye." action="Close"/>
+  </Dialogue>
+
+  <!-- Backstory -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      Yunis scowls, eyes darting around. "My story? Ash Serpents burned my family's tent and sold us out to slavers, all 'cause a merchant wanted to clear the streets for his fat caravan. I was small enough to slip away. Now, I'm the king of these tunnels. The beggars and rats—mine to command. Some councilors call me 'thief', but they pay for secrets all the same."
+      ]]>
+    </NPCText>
+    <Option text="You must hate the Ash Serpents." next="revenge"/>
+    <Option text="Which merchant betrayed you?" next="merchant"/>
+    <Option text="What about the Council of Jewels?" next="council"/>
+    <Option text="Do you trust anyone here?" next="trust"/>
+    <Option text="That's a hard life. How do you survive?" next="survival"/>
+  </Dialogue>
+
+  <!-- Revenge Motivation -->
+  <Dialogue id="revenge">
+    <NPCText>
+      <![CDATA[
+      "Hate? Hate don't keep you alive. But it sharpens your blade, and your memory. The Serpents work for whoever pays—the council, the princes, or even Minax. But the man who gave my family's name to the Serpents... Karim al-Emerald. He's the Council's shadow. One day, I'll bleed him in the dark, or make him pay another way."
+      ]]>
+    </NPCText>
+    <Option text="You want revenge on Karim?" next="questIntro"/>
+    <Option text="Maybe you need an ally for that." next="allyOffer"/>
+    <Option text="That sounds dangerous." next="danger"/>
+    <Option text="Let's talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <!-- Karim al-Emerald Info -->
+  <Dialogue id="merchant">
+    <NPCText>
+      <![CDATA[
+      Yunis spits. "Karim al-Emerald, the council's spymaster. Says he keeps Qasaria safe, but he sells out his own. If you see a shadow where there should be light, Karim's got a knife behind it. You want to get close? You'll need proof he's dirty. Or a map to the catacombs under his house."
+      ]]>
+    </NPCText>
+    <Option text="Where do I find proof?" next="questIntro"/>
+    <Option text="Do you have a map?" next="maps"/>
+    <Option text="Why not take revenge yourself?" next="danger"/>
+    <Option text="I see. Let's move on." next="greeting"/>
+  </Dialogue>
+
+  <!-- Council of Jewels -->
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      "Council's just a pack of jeweled jackals. Safiya smiles, but she'll slit your purse for a copper. Rafiq? He means well but trusts soldiers too much. Yasmin—she knows the tunnels better than me. And Omar, well, he buys fighters from me sometimes. None are innocent. But only Karim deals in betrayals."
+      ]]>
+    </NPCText>
+    <Option text="You know their secrets?" next="intel"/>
+    <Option text="Why stay in Qasaria?" next="stay"/>
+    <Option text="Sounds like a dangerous game." next="danger"/>
+    <Option text="Back to your story." next="backstory"/>
+  </Dialogue>
+
+  <!-- Trust -->
+  <Dialogue id="trust">
+    <NPCText>
+      <![CDATA[
+      Yunis grins, gap-toothed. "Trust? Rats trust cheese, not men. I got eyes in every alley, ears in every tavern. My gang keeps me fed and safe. Sometimes a stranger earns my trust—for a price. Gold, secrets, or a good map. You got any of those?"
+      ]]>
+    </NPCText>
+    <Option text="I have gold." next="bribe"/>
+    <Option text="I have secrets." next="intel"/>
+    <Option text="I have a map." next="mapTrade"/>
+    <Option text="Maybe I'll earn your trust some other way." next="questIntro"/>
+  </Dialogue>
+
+  <!-- Survival -->
+  <Dialogue id="survival">
+    <NPCText>
+      <![CDATA[
+      "Survive? You learn to move quiet, sleep with a dagger, and never show fear. I trade news, lift purses, sell relics found in the old drains. Council pays me, sometimes, for things they're too proud—or too scared—to find themselves. Better to be a Sand Rat than a prince's pawn."
+      ]]>
+    </NPCText>
+    <Option text="Can I help you with anything?" next="questIntro"/>
+    <Option text="What relics have you found?" next="relics"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <!-- Map Trade -->
+  <Dialogue id="mapTrade">
+    <NPCText>
+      <![CDATA[
+      Yunis’ eyes widen. "A map, eh? Show me what you got. Maybe I’ll trade you for something rare—an old tunnel, a forgotten escape, or even a way into a council vault."
+      ]]>
+    </NPCText>
+    <Option text="Give him a map." condition="HasItem:AncientMap" action="GiveGold:300" next="mapReward"/>
+    <Option text="Not right now." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="mapReward">
+    <NPCText>
+      <![CDATA[
+      He snatches the map, holding it up to the lantern’s glow. "This will buy a few meals—and maybe a secret or two. If you want a real job, I got one. Dirty work, but it pays."
+      ]]>
+    </NPCText>
+    <Option text="Tell me about the job." next="questIntro"/>
+    <Option text="Maybe another time." next="idle"/>
+  </Dialogue>
+
+  <!-- Bribe -->
+  <Dialogue id="bribe">
+    <NPCText>
+      <![CDATA[
+      Yunis counts the coins, then pockets them. "A Sand Rat remembers generosity. Next time you’re in trouble, look for a mark—a chalk rat—on any wall in the Bazaar. That means my folk are nearby."
+      ]]>
+    </NPCText>
+    <Option text="Got any work for me now?" next="questIntro"/>
+    <Option text="That’s all I needed." action="Close"/>
+  </Dialogue>
+
+  <!-- Intel / Rumors -->
+  <Dialogue id="intel">
+    <NPCText>
+      <![CDATA[
+      "Depends on what you pay. Karim’s got spies everywhere. Safiya’s hiring Ash Serpents to hit rival caravans. Zahid, the Shadowmaster, runs the Undermarket—half the Council owes him. Minax’s cult pays in gems and nightmares. Want details, or a job that'll put you in their crosshairs?"
+      ]]>
+    </NPCText>
+    <Option text="Give me the dangerous job." next="questIntro"/>
+    <Option text="More gossip, less danger, please." next="rumors"/>
+    <Option text="I’ll think about it." next="idle"/>
+  </Dialogue>
+
+  <!-- Rumors -->
+  <Dialogue id="rumors">
+    <NPCText>
+      <![CDATA[
+      Yunis leans close. "Word is, Yasmin’s found a relic under the Oasis Baths, and Safiya’s buying every smuggled artifact she can. Rafiq’s men keep vanishing at night—maybe lost in the sewers, maybe eaten by something worse. Me? I keep my head down, and my eyes open."
+      ]]>
+    </NPCText>
+    <Option text="Tell me about the dangerous job." next="questIntro"/>
+    <Option text="I’ll pass for now." next="idle"/>
+  </Dialogue>
+
+  <!-- Relics -->
+  <Dialogue id="relics">
+    <NPCText>
+      <![CDATA[
+      "Relics? Statues that whisper in sleep, rings that burn cold, a dagger made of black glass. Most I sell, some I hide. A few, like the Heart of the Dunes, are worth more than a city. But you gotta survive to spend what you earn."
+      ]]>
+    </NPCText>
+    <Option text="Do you have any for sale?" next="relicsSale"/>
+    <Option text="I want to hear about your job." next="questIntro"/>
+    <Option text="Enough about relics." next="greeting"/>
+  </Dialogue>
+
+  <!-- Relics Sale (flavor only, not a vendor) -->
+  <Dialogue id="relicsSale">
+    <NPCText>
+      <![CDATA[
+      Yunis grins. "You want to buy, you’ll need Zahid’s coin—or to do a job for me first. I trust favors more than gold."
+      ]]>
+    </NPCText>
+    <Option text="What’s the job?" next="questIntro"/>
+    <Option text="Maybe another time." next="idle"/>
+  </Dialogue>
+
+  <!-- Ally Offer -->
+  <Dialogue id="allyOffer">
+    <NPCText>
+      <![CDATA[
+      "Maybe. Or maybe I just use you to get close, then disappear. Trust is poison in my world, but if you bleed Karim, I’ll remember your face."
+      ]]>
+    </NPCText>
+    <Option text="I'm not afraid of danger. What's your plan?" next="questIntro"/>
+    <Option text="On second thought, I'll keep my distance." next="idle"/>
+  </Dialogue>
+
+  <!-- Danger -->
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      Yunis' voice hardens. "Everything in Qasaria is dangerous, especially trusting a Sand Rat. But the rewards? Sometimes worth a few scars. You want easy coin, go sweep Safiya’s docks. You want real work—dirty, ugly, and true—talk to me."
+      ]]>
+    </NPCText>
+    <Option text="I’m ready for real work." next="questIntro"/>
+    <Option text="Maybe later." next="idle"/>
+  </Dialogue>
+
+  <!-- Stay in Qasaria -->
+  <Dialogue id="stay">
+    <NPCText>
+      <![CDATA[
+      "Where else would I go? The sands eat the weak, the council eats the bold. Here, in the dark, I make my own kingdom. Besides, Qasaria’s secrets are deeper than any grave."
+      ]]>
+    </NPCText>
+    <Option text="About that job you mentioned…" next="questIntro"/>
+    <Option text="I’ll leave you to your kingdom, then." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Introduction -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#deb887'>
+      Yunis lowers his voice, eyes glinting with conspiracy.<BR><BR>
+      "You want a job? Karim al-Emerald pays the Ash Serpents to burn out rivals—and to keep beggars like me quiet. He hides proof in a ledger, kept in a locked chest beneath the Emerald House, guarded by spells and worse. I want that ledger. Bring it to me, and you’ll see how much the council fears a Sand Rat’s bite.<BR><BR>
+      You up for a bit of larceny, or do you prefer safer coin?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll steal Karim’s ledger for you."
+            action="GiveItem:FactionDeliveryQuestScroll(Emerald Ledger, Qasaria, 500)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="What’s in it for me?" next="reward"/>
+    <Option text="How dangerous is this job?" next="risk"/>
+    <Option text="Do you have something easier?" next="easyJob"/>
+    <Option text="I’m not interested." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Yunis slips you a folded scrap of rough canvas, drawn with sewer tunnels.<BR><BR>
+      "Here’s your map—mind the glyphs, some traps are meant for council thieves. Get the ledger and bring it here. You’ll be paid in gold, secrets, and maybe a way into the Council’s vaults. Fail, and I’ll know. I have eyes in every shadow."
+      ]]>
+    </NPCText>
+    <Option text="I’ll get it done." action="Close"/>
+  </Dialogue>
+
+  <!-- Reward Explanation -->
+  <Dialogue id="reward">
+    <NPCText>
+      <![CDATA[
+      "Bring me the ledger, and you’ll get gold, maybe a favor. Secrets are worth more than coins here—maybe you want to know which councilor’s been selling relics to Minax, or a way out of Qasaria when things get hot. Cross me, though, and I’ll sell your name to the highest bidder."
+      ]]>
+    </NPCText>
+    <Option text="I’ll take the job." 
+            action="GiveItem:FactionDeliveryQuestScroll(Emerald Ledger, Qasaria, 500)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Not interested." action="Close"/>
+  </Dialogue>
+
+  <!-- Risk Explanation -->
+  <Dialogue id="risk">
+    <NPCText>
+      <![CDATA[
+      Yunis flashes a crooked grin. "Dangerous? The chest is warded by the Emerald House’s mages. Fail, and you might wake up in Zahid’s oubliette. But I’ll throw in a sand-charm—crush it if you’re caught, and maybe you’ll slip away. Only works once, though."
+      ]]>
+    </NPCText>
+    <Option text="Give me the job and the charm." 
+            action="GiveItem:FactionDeliveryQuestScroll(Emerald Ledger, Qasaria, 500)"
+            next="accept"/>
+    <Option text="Not worth it." action="Close"/>
+  </Dialogue>
+
+  <!-- Easier Job -->
+  <Dialogue id="easyJob">
+    <NPCText>
+      <![CDATA[
+      "Safer coin? Fine. A merchant owes me for lost goods. Go to Safiya’s docks, collect my cut, and bring it back. You’ll get a rat’s share. Not much glory, but easier on the bones."
+      ]]>
+    </NPCText>
+    <Option text="I’ll collect your debt." 
+            action="GiveItem:FactionDeliveryQuestScroll(Merchant Debt, Qasaria, 150)"
+            next="easyAccept"/>
+    <Option text="Never mind." next="idle"/>
+  </Dialogue>
+
+  <Dialogue id="easyAccept">
+    <NPCText>
+      <![CDATA[
+      Yunis gives you a battered token stamped with a rat sigil.<BR>
+      "Show this to Raziya at the docks. She’ll know to pay up. But if she cheats you—take a finger. She’ll respect that."
+      ]]>
+    </NPCText>
+    <Option text="Understood." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="deepBackstory">
+  <NPCText>
+    <![CDATA[
+    Yunis tilts his head, one eye narrowing.<BR><BR>
+    "Most folk don't ask that. You're either nosy... or kind. Or maybe you're just fishing for leverage, like the rest."<BR><BR>
+    He shifts uncomfortably, then shrugs.<BR>
+    "Fine. You want the story? You get the scars too."
+    ]]>
+  </NPCText>
+  <Option text="I’m listening. Tell it your way." next="origin"/>
+  <Option text="Is this a sob story or something useful?" next="deflect"/>
+  <Option text="People like you fascinate me." condition="KarmaAtLeast:500" next="empathy"/>
+  <Option text="I was orphaned once too..." condition="RandomChance:20" next="sharedTrauma"/>
+  <Option text="On second thought, maybe another time." action="Close"/>
+</Dialogue>
+
+<Dialogue id="origin">
+  <NPCText>
+    <![CDATA[
+    Yunis pulls up his knees and rests his chin on them.<BR><BR>
+    "We had a caravan. Not rich, not poor. We sold sandglass clocks and spice from the northern dunes. My ma sang while she worked. My da told stories. Said the desert only eats those who forget how to smile."<BR><BR>
+    His voice cracks slightly.<BR>
+    "We were laughing the night before the raid."
+    ]]>
+  </NPCText>
+  <Option text="What happened?" next="tragedy"/>
+</Dialogue>
+
+<Dialogue id="tragedy">
+  <NPCText>
+    <![CDATA[
+    "The Ash Serpents came before dawn. Quiet at first—then fire, smoke, screaming... I saw one of them take a coin from a man with green rings—Karim's man, I know it now."<BR><BR>
+    "I hid. In a crate of salt fish. Heard my ma scream once, then never again."<BR><BR>
+    He looks away, blinking rapidly.<BR>
+    "I crawled out hours later. No one left. Not even bones worth burying."
+    ]]>
+  </NPCText>
+  <Option text="I’m sorry. That’s... horrible." next="code"/>
+  <Option text="You survived. That counts for something." next="code"/>
+  <Option text="No wonder you’re like this." next="code"/>
+</Dialogue>
+
+<Dialogue id="code">
+  <NPCText>
+    <![CDATA[
+    Yunis straightens, eyes sharp again.<BR><BR>
+    "I don’t steal from orphans. I don’t sell kids. I don’t snitch for gold. That’s my code. Everything else—fair game."<BR>
+    "Secrets are food. Maps are lifelines. Coins are armor. That’s how you live when you’re a rat in a city of serpents."
+    ]]>
+  </NPCText>
+  <Option text="Why maps?" next="mapsMeaning"/>
+  <Option text="Do you ever wish for something more?" next="ambitions"/>
+  <Option text="Sounds like you trust no one." next="paranoia"/>
+  <Option text="Thanks for sharing this." next="endBackstory" action="Fame:+100"/>
+</Dialogue>
+
+<Dialogue id="mapsMeaning">
+  <NPCText>
+    <![CDATA[
+    "Maps show the truth. Who owns what. Who hides where. Which tunnels flood when the tides rise. Maps don’t lie—people do."<BR><BR>
+    He pats his sash. "I got ones nobody’s seen. Ones from before Qasaria rose. Some even hint at ruins the Council sealed off."
+    ]]>
+  </NPCText>
+  <Option text="Could I trade for one of those maps?" next="mapTrade"/>
+  <Option text="You're full of secrets, huh?" next="ambitions"/>
+</Dialogue>
+
+<Dialogue id="ambitions">
+  <NPCText>
+    <![CDATA[
+    "I don’t want a throne. I want leverage. One secret that scares every jewel on that Council."<BR><BR>
+    Yunis grins wickedly.<BR>
+    "Imagine their faces when a sewer rat makes them dance for crumbs. That’s the dream."
+    ]]>
+  </NPCText>
+  <Option text="That dream might get you killed." next="paranoia"/>
+  <Option text="I respect it. Let’s make it real." next="questIntro" action="Karma:+250"/>
+</Dialogue>
+
+<Dialogue id="paranoia">
+  <NPCText>
+    <![CDATA[
+    "Everyone lies, everyone schemes. Even you, I bet."<BR><BR>
+    He taps his temple. "But I got spies in silk robes and rats in the rafters. I know who bought poison last week. I know which guard drinks too much. Paranoia ain’t a flaw—it’s survival."
+    ]]>
+  </NPCText>
+  <Option text="Smart thinking. I’d like to work with you." next="questIntro"/>
+  <Option text="Good luck, Sand Rat." action="Close"/>
+</Dialogue>
+
+<Dialogue id="empathy">
+  <NPCText>
+    <![CDATA[
+    Yunis peers at you for a long time, then nods.<BR><BR>
+    "You get it. The silence after fire. The hunger that never fades. If more folk had your eyes, Qasaria might be a better place."<BR>
+    He tosses you a small pouch.<BR><BR>
+    "Take this. Just a little gratitude from one ghost to another."
+    ]]>
+  </NPCText>
+  <Option text="Thank you, Yunis." action="GiveGold:300" next="endBackstory"/>
+</Dialogue>
+
+<Dialogue id="sharedTrauma">
+  <NPCText>
+    <![CDATA[
+    Yunis pauses. His bravado fades.<BR><BR>
+    "...Then you know the taste of ashes, too. The way dreams rot under sand and grief."<BR><BR>
+    "Maybe we're not so different. Maybe that means we survive better. Together."
+    ]]>
+  </NPCText>
+  <Option text="Then let's make sure we both live long enough to matter." next="questIntro"/>
+  <Option text="Maybe we are different. But I respect you." next="endBackstory"/>
+</Dialogue>
+
+<Dialogue id="deflect">
+  <NPCText>
+    <![CDATA[
+    Yunis smirks. "Oh, you’re one of those. Fine. Maybe I’ll sell my story to a bard next time."<BR><BR>
+    "But stories are just coins with teeth. I hope yours doesn’t bite you back."
+    ]]>
+  </NPCText>
+  <Option text="Fine, let’s talk business then." next="questIntro"/>
+  <Option text="Whatever. Goodbye." action="Close"/>
+</Dialogue>
+
+<Dialogue id="endBackstory">
+  <NPCText>
+    <![CDATA[
+    Yunis shrugs again, but there's something softer in his eyes now.<BR><BR>
+    "Words don’t change the past. But maybe they shape what’s next. You’re alright... for a skywalker."<BR>
+    "If you ever need a guide through the dark, look for the chalk rat. We’ll find you."
+    ]]>
+  </NPCText>
+  <Option text="I won’t forget this." action="Close"/>
+  <Option text="About that job you mentioned..." next="questIntro"/>
+</Dialogue>
+
+
+</DialogueFile>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="GrelTheTinkerer">
+  <!-- ======= Root Greeting ======= -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#7fc7c2'>
+      Before you stands a wiry man bristling with contraptions: cogs in his hair, a cloak patched with blueprints, and a left arm unmistakably replaced by a copper teapot. The wizard's hat he wears is festooned with clock hands that spin erratically.
+      <BR><BR>
+      He squints at you, tinkering with a spanner, and grins crookedly. "Ah! A visitor! Or are you one of those Minax agents disguised as a visitor? Hmm. No matter. Unless you’re here to borrow my hands—number sixteen is a lefty teapot this week—you’d best state your business."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="What happened to your arm? Is that a teapot?" next="teapotArm"/>
+    <Option text="I heard you build magical engines. Need help?" next="engineHelp"/>
+    <Option text="How did you end up in Frostmere?" next="howFrostmere"/>
+    <Option text="You seem… eccentric. Do you know Garrik?" next="aboutGarrik"/>
+	<Option text="Tell me more about your past, Grel." next="backstoryRoot"/>
+    <Option text="I’m just looking around." next="justLooking"/>
+  </Dialogue>
+
+  <!-- ======= Arm/Teapot Branch ======= -->
+  <Dialogue id="teapotArm">
+    <NPCText>
+      <![CDATA[
+      Grel flexes his copper teapot arm, pouring a faint trickle of steam onto the floor.<BR><BR>
+      "Teapot, yes! A mark of genius or desperation—hard to say. Seventeenth revision, actually. Much more ergonomic than the ladle, and the inkwell model was a disaster.<BR><BR>
+      You see, my original arm is... well, somewhere between here and the Wind Tower after a regrettable 'kinetic resonance test.' Master Pyrrhion still sends me letters, mostly curses."
+      ]]>
+    </NPCText>
+    <Option text="Do the locals treat you well, being from Wind?" next="localsTreat"/>
+    <Option text="How do you get along with Garrik the Blacksmith?" next="aboutGarrik"/>
+    <Option text="Let’s talk business. Need a hand?" next="engineHelp"/>
+    <Option text="You know, I like the teapot. Very distinguished." next="teapotCompliment"/>
+  </Dialogue>
+
+  <Dialogue id="teapotCompliment">
+    <NPCText>
+      <![CDATA[
+      Grel beams. "Ha! A discerning eye! This village is full of hammer-wavers and sticklers for 'tradition.' They’d rather swing a sword than wind a spring. You, my friend, have taste!<BR><BR>
+      But if you truly wish to help, I do have a problem needing more than just a clever spout..."
+      ]]>
+    </NPCText>
+    <Option text="I’m ready. What’s the trouble?" next="engineHelp"/>
+    <Option text="Tell me about this place first." next="howFrostmere"/>
+  </Dialogue>
+
+  <!-- ======= How He Ended Up Here ======= -->
+  <Dialogue id="howFrostmere">
+    <NPCText>
+      <![CDATA[
+      "Let’s see… banished from Wind for turning a meditation chamber into a steam bath, nearly eaten by frost wolves in the tundra, and rescued by Svala the Huntress—who only did so because she wanted the wolves’ pelts!<BR><BR>
+      They let me stay because I fix broken things, make traps for the militia, and, well, they haven’t figured out how to get rid of me. Frostmere is odd, dangerous, and full of problems—my kind of place."
+      ]]>
+    </NPCText>
+    <Option text="Sounds like you fit in perfectly." next="engineHelp"/>
+    <Option text="So, what’s the latest trouble needing a tinkerer?" next="engineHelp"/>
+    <Option text="I bet Garrik isn’t a fan." next="aboutGarrik"/>
+  </Dialogue>
+
+  <!-- ======= Garrik Rivalry ======= -->
+  <Dialogue id="aboutGarrik">
+    <NPCText>
+      <![CDATA[
+      Grel huffs, slamming a gear into his toolloop apron.<BR><BR>
+      "Garrik! That man wouldn’t know innovation if it bit his anvil. Leather, steel, muscle—bah! He scorns my 'unnatural' devices, but half his tools are sharper thanks to my 'unnatural' whetstone gears.<BR><BR>
+      He keeps to his forges and mutters about 'cursed magic,' but ask him where his frost-proof tongs came from! Still… the village needs both of us. Sometimes we even drink together, when he forgets to hate me."
+      ]]>
+    </NPCText>
+    <Option text="I think both of you keep Frostmere running." next="engineHelp"/>
+    <Option text="Tell me, what needs doing?" next="engineHelp"/>
+    <Option text="I’ll be going." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Locals Treat You Well? ======= -->
+  <Dialogue id="localsTreat">
+    <NPCText>
+      <![CDATA[
+      "Well, let’s see… Svala once set a bear trap for me (I fixed it so it wouldn’t snap). Bryndra rolls her eyes at my 'toys,' but her militia wears my clockwork braces in the cold.<BR><BR>
+      The innkeeper Lira Snowbrew? She’s a true friend—lets me test my tea infusions, even the ones with a 12% chance to induce hiccups. The kids love my clockwork mice, the elders… tolerate me. Progress!"
+      ]]>
+    </NPCText>
+    <Option text="Glad to see you have some friends here." next="engineHelp"/>
+    <Option text="You seem resourceful. Got work for me?" next="engineHelp"/>
+  </Dialogue>
+
+  <!-- ======= Just Looking ======= -->
+  <Dialogue id="justLooking">
+    <NPCText>
+      <![CDATA[
+      "Looking is the first step to invention! If you see any suspicious gears, loose springs, or a rogue squirrel wearing a monocle—let me know. If you decide you want to make yourself useful, come back—I always have jobs for nimble fingers."
+      ]]>
+    </NPCText>
+    <Option text="I’m ready to help now." next="engineHelp"/>
+    <Option text="Farewell, Grel." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Quest Offer: GlacialEagle ======= -->
+  <Dialogue id="engineHelp">
+    <NPCText>
+      <![CDATA[
+      Grel’s eyes dart about, lowering his voice conspiratorially.<BR><BR>
+      "All right, here’s the thing. My latest invention—a 'resonance dampener' to stabilize the Obelisk’s energy—needs a critical part: the *inductive feather* of a GlacialEagle. Nasty creature, all talons and ice-wind.<BR><BR>
+      The problem is, this particular eagle has taken a liking to my workbench. It swoops in, steals my tools, then drops frozen owl pellets on my blueprints. Last week it carried off my best cogwinder!<BR><BR>
+      I’d fetch it myself, but last time I lost a boot and half a mustache. Would you be brave—or foolhardy—enough to track it down? Bring me its inductive feather and I’ll reward you with a tinker’s blessing. Or, well, at least something that explodes *only* when you want it to."
+      ]]>
+    </NPCText>
+    <Option text="I’ll hunt the GlacialEagle and bring back its feather."
+            action="GiveItem:FactionKillQuestScroll(GlacialEagle,1,Frostmere,500)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="acceptQuest"/>
+    <Option text="A GlacialEagle? Are they really that dangerous?" next="aboutEagle"/>
+    <Option text="Wouldn’t Garrik help you with this?" next="garrikHelp"/>
+    <Option text="What will you do with the feather?" next="featherUse"/>
+    <Option text="I’ll pass on this job." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Accept Quest ======= -->
+  <Dialogue id="acceptQuest">
+    <NPCText>
+      <![CDATA[
+      Grel claps his teapot arm to your shoulder. "Marvelous! The GlacialEagle nests up on the Frostspire Crag—careful, its cry can shatter icicles. And, er, try not to let it peck your eyes out. Return with the feather and I’ll let you test my Mark IV Warming Elixir… on purpose, this time!"
+      ]]>
+    </NPCText>
+    <Option text="Wish me luck! I’ll return soon." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= About the Eagle ======= -->
+  <Dialogue id="aboutEagle">
+    <NPCText>
+      <![CDATA[
+      "Dangerous? Hah! Its talons are sharper than Garrik’s wit, and its breath can freeze a running stream. Legend says they once served as sentinels for ancient Obelisk priests—guardians of forbidden relics. I’ve seen it tear the hide off a frost bear, and rumor has it Bryndra’s best shield has a dent the size of its beak."
+      ]]>
+    </NPCText>
+    <Option text="I see. All right, I’ll do it."
+            action="GiveItem:FactionKillQuestScroll(GlacialEagle,1,Frostmere,500)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="acceptQuest"/>
+    <Option text="On second thought, maybe not for me." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Why Not Ask Garrik? ======= -->
+  <Dialogue id="garrikHelp">
+    <NPCText>
+      <![CDATA[
+      "Garrik? He’d rather face a frost wyrm barehanded than help me with a 'magical nuisance.' He thinks every problem is solved with a bigger hammer. Besides, last time he tried, the eagle stole his lunch. He was so offended, he forged three new traps just to keep it away from his smithy.<BR><BR>
+      But you—you have potential. And perhaps fewer grudges."
+      ]]>
+    </NPCText>
+    <Option text="I’ll handle the eagle myself."
+            action="GiveItem:FactionKillQuestScroll(GlacialEagle,1,Frostmere,500)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="acceptQuest"/>
+    <Option text="No thanks, I’ll leave this to you two." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= What Will You Do With Feather ======= -->
+  <Dialogue id="featherUse">
+    <NPCText>
+      <![CDATA[
+      Grel’s eyes widen as if seeing equations in the air.<BR><BR>
+      "The inductive feather channels ambient magical vibrations—it’ll act as a perfect conductor for my resonance dampener. With luck (and a touch of genius), it’ll keep the Obelisk from… well, shattering the village in a crystalline cataclysm!<BR><BR>
+      Of course, there’s a *chance* it could do the opposite, but progress is built on small, calculated risks. Besides, wouldn’t you prefer an explosion with style?"
+      ]]>
+    </NPCText>
+    <Option text="Sounds risky, but I’ll get your feather."
+            action="GiveItem:FactionKillQuestScroll(GlacialEagle,1,Frostmere,500)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="acceptQuest"/>
+    <Option text="I’ll pass on the risk for now." action="Close"/>
+  </Dialogue>
+  
+<!-- === Backstory Root === -->
+<Dialogue id="backstoryRoot">
+  <NPCText>
+    <![CDATA[
+    Grel leans back, gears clicking gently inside his coat.<BR><BR>
+    "My past? Well, that’s a mess of brilliant disasters and experimental explosions. Still interested?"
+    ]]>
+  </NPCText>
+  <Option text="Absolutely. Start from the beginning." next="originStory"/>
+  <Option text="Maybe later. I’ll stick to your inventions." action="Close"/>
+</Dialogue>
+
+<!-- === Origin in Wind === -->
+<Dialogue id="originStory">
+  <NPCText>
+    <![CDATA[
+    "I was born in Wind. Not the calm kind, mind you—the floating city full of pointy-hatted arrogance and wards up the nostril. My parents were crystal mathematicians. Me? I tried to animate cutlery at age seven. Ended up with a violent soup ladle incident that earned me my first exile. Temporarily!"<BR><BR>
+    He beams with pride.
+    ]]>
+  </NPCText>
+  <Option text="You were exiled as a child?" next="childExile"/>
+  <Option text="Animated cutlery? You’ve always been this weird, haven’t you?" next="weirdness"/>
+</Dialogue>
+
+<!-- === Child Exile === -->
+<Dialogue id="childExile">
+  <NPCText>
+    <![CDATA[
+    "Technically, they called it 'magical quarantine for the protection of lunchware.' But yes. I spent most of my youth repairing old constructs, sneaking into libraries, and racing arcane beetles down drainpipes."<BR><BR>
+    He taps his teapot arm, wistfully. "That’s where I built Prototype Arm #1. Made from bronze and spoons. Collapsed under its own brilliance after two hours."
+    ]]>
+  </NPCText>
+  <Option text="So when did things go truly wrong?" next="towerExplosion"/>
+  <Option text="I admire your perseverance." next="encouragement" action="AddStat:Int,5,60"/>
+</Dialogue>
+
+<!-- === Weirdness Response === -->
+<Dialogue id="weirdness">
+  <NPCText>
+    <![CDATA[
+    "Rude! But not inaccurate. I consider it… *unorthodox brilliance*. Or perhaps brilliance that avoids orthodoxy like a flaming mongoose."<BR><BR>
+    He crosses his arms. "Though if you’re here to mock, perhaps you’d prefer to test the spring-loaded trousers I rigged up for Garrik. They’re *very* expressive."
+    ]]>
+  </NPCText>
+  <Option text="Apologies. I’m just curious." next="towerExplosion"/>
+  <Option text="Spring-loaded trousers? I’m listening." next="tinkeringCuriosity" action="AddSkill:Tinkering,3,60"/>
+</Dialogue>
+
+<!-- === Tower Explosion === -->
+<Dialogue id="towerExplosion">
+  <NPCText>
+    <![CDATA[
+    Grel sighs, dramatically.<BR><BR>
+    "Ah, the incident. I call it ‘The Event of Unintended Levitation and Several Unpleasant Smells.’ My master in Wind, Archmage Pyrrhion, warned me not to combine resonance crystals with chronomantic tea leaves. Naturally, I did. The tower rang like a bell for two days."<BR><BR>
+    He leans closer. "The good news? I invented a way to brew tea across time. The bad news? The tea was cursed and bit Pyrrhion’s soul out of his beard."
+    ]]>
+  </NPCText>
+  <Option text="That’s… disturbingly impressive." next="lifeAfterWind"/>
+  <Option text="You made cursed time tea?!" next="teaStory" action="PlaySound:0x015"/>
+</Dialogue>
+
+<!-- === Tinkering Curiosity (funny) === -->
+<Dialogue id="tinkeringCuriosity">
+  <NPCText>
+    <![CDATA[
+    "Oh-ho! A brave soul. The trousers are powered by compressed wind essence and a small slap rune. Jump once, and you’re halfway to Aerilon. Jump twice, and you’re in orbit with frost gnats. Not entirely… safe."<BR><BR>
+    He eyes you. "Maybe you *are* mad enough to be my apprentice someday."
+    ]]>
+  </NPCText>
+  <Option text="I’ll think about it. What happened after Wind?" next="lifeAfterWind"/>
+</Dialogue>
+
+<!-- === Tea Time Backfire === -->
+<Dialogue id="teaStory">
+  <NPCText>
+    <![CDATA[
+    "Indeed! I was trying to invent a drinkable chronometer. The result... well, it glitched reality by seven seconds and summoned a polite but menacing tea elemental. Pyrrhion was not amused. Or conscious, for a time."<BR><BR>
+    He chuckles, tapping his head. "But it taught me something important: never trust leaves that shimmer *against* the wind."
+    ]]>
+  </NPCText>
+  <Option text="So that’s why you ended up in Frostmere?" next="lifeAfterWind"/>
+</Dialogue>
+
+<!-- === Life After Wind === -->
+<Dialogue id="lifeAfterWind">
+  <NPCText>
+    <![CDATA[
+    "I wandered north. Built a few traps for nomads, fixed a collapsing glacier bridge, and accidentally gave sentience to a shovel. Eventually Svala dragged me here half-frozen."<BR><BR>
+    He nods. "Frostmere didn’t trust me at first, but I repaired their waterwheel with a wind harp and a goose-shaped gear. Now I’m the 'eccentric essential.' I even get invited to council meetings! When they forget to uninvite me."
+    ]]>
+  </NPCText>
+  <Option text="What do you *really* care about, Grel?" next="interests"/>
+</Dialogue>
+
+<!-- === Encouragement (from earlier) === -->
+<Dialogue id="encouragement">
+  <NPCText>
+    <![CDATA[
+    Grel grins wide.<BR><BR>
+    "You're the rare type that doesn't sneer at madness—er, *vision*. Much appreciated. Most think my ‘gearweaving’ is just ‘clock nonsense.’ But it’s heart and soul work, you know?"
+    ]]>
+  </NPCText>
+  <Option text="So what drives that passion?" next="interests"/>
+</Dialogue>
+
+<!-- === Core Motivations and Interests === -->
+<Dialogue id="interests">
+  <NPCText>
+    <![CDATA[
+    Grel grows unexpectedly thoughtful.<BR><BR>
+    "You want truth? I build things because I can’t stop. Because *creation* is louder than fear. Minax wants to twist the world—I want to reinvent it. One hinge, one spring, one teapot at a time."<BR><BR>
+    He meets your eyes. "If I can leave behind just one invention that *helps*… that sings harmony against her madness… maybe the noise in my head will finally make sense."
+    ]]>
+  </NPCText>
+  <Option text="That’s noble. You have my respect." next="finalWords" action="Karma:50"/>
+  <Option text="You’re completely mad. But kind of brilliant." next="finalWords" action="Fame:100"/>
+  <Option text="That’s a lot to take in." action="Close"/>
+</Dialogue>
+
+<!-- === Final Words from Grel === -->
+<Dialogue id="finalWords">
+  <NPCText>
+    <![CDATA[
+    Grel tips his teapot arm like a gentleman’s salute.<BR><BR>
+    "You’ve heard more than most. And you didn’t run, laugh, or confiscate my sprockets. That means something. If you ever want to build something truly ridiculous—and possibly world-changing—you know where to find me."
+    ]]>
+  </NPCText>
+  <Option text="Thanks, Grel. I’ll be back." action="Close"/>
+</Dialogue>
+  
+  
+</DialogueFile>

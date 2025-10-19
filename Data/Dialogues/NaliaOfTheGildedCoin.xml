@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="NaliaOfTheGildedCoin">
+
+  <!-- ======= GREETING ======= -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR="#ffd700">
+      Before you stands a regal woman in golden dress and fine silks, fingers heavy with rings. Her eyes flicker with appraisal as she closes an ornate ledger.<BR><BR>
+      "You stand in the Gilded Hall, where Sunreach's fortunes are weighed—and, if you can afford it, multiplied. I am Nalia, master of the Merchant Guild and keeper of every honest (and less-than-honest) coin that passes these gates.<BR><BR>
+      Tell me: are you here to deposit, withdraw, or... invest in something more *lucrative*?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I'm looking for profitable work." next="taskIntro"/>
+    <Option text="Are all fortunes truly made here?" next="philosophy"/>
+    <Option text="Who truly runs Sunreach?" next="politics"/>
+    <Option text="What services does the Merchant Guild offer?" next="services"/>
+	<Option text="Tell me more about yourself." next="backstoryIntro"/>
+    <Option text="Just browsing, thank you." next="dismiss"/>
+  </Dialogue>
+
+  <!-- ======= Philosophy ======= -->
+  <Dialogue id="philosophy">
+    <NPCText>
+      <![CDATA[
+      Nalia’s lips curl in a faint smile.<BR><BR>
+      "Fortune is made wherever people want more than they can earn, and lose more than they can afford. But yes—Sunreach makes fortunes, breaks them, and sells them back to their original owners for a fee.<BR>
+      My advice? Never trust a smiling merchant. Especially not in this city."
+      ]]>
+    </NPCText>
+    <Option text="I want in on these fortunes." next="taskIntro"/>
+    <Option text="You sound almost honest." next="taskIntro"/>
+    <Option text="I'll be going." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Politics ======= -->
+  <Dialogue id="politics">
+    <NPCText>
+      <![CDATA[
+      She lowers her voice.<BR><BR>
+      "Five Houses squabble for control; pirates, princes, and scholars all believe they rule. But gold is the only authority Sunreach truly respects.<BR>
+      I run the Guild. The Guild moves the coin. Coin moves the city. Remember that."
+      ]]>
+    </NPCText>
+    <Option text="Sounds like you have enemies." next="enemies"/>
+    <Option text="Who do you trust, then?" next="trust"/>
+    <Option text="Enough talk. I seek opportunity." next="taskIntro"/>
+  </Dialogue>
+
+  <!-- ======= Services ======= -->
+  <Dialogue id="services">
+    <NPCText>
+      <![CDATA[
+      "Banking, exchange, loans, investments—if it touches coin, it passes through my ledgers. Of course, not every transaction is... for public record.<BR>
+      If you have gold to hide, debts to erase, or enemies to ruin, the Gilded Coin offers creative solutions. Discretion costs extra."
+      ]]>
+    </NPCText>
+    <Option text="I’m interested in discreet work." next="taskIntro"/>
+    <Option text="I'd rather keep things simple." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Enemies ======= -->
+  <Dialogue id="enemies">
+    <NPCText>
+      <![CDATA[
+      "Every guildmaster has rivals: Darius wants my ledgers, Seraphine wants my vaults, and Magistrate Thornwall wants plausible deniability.<BR>
+      Minax's cultists want everything. But gold buys silence, loyalty—or at least, enough time to plan your next move."
+      ]]>
+    </NPCText>
+    <Option text="I can help you buy loyalty." next="taskIntro"/>
+    <Option text="That sounds dangerous. I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Trust ======= -->
+  <Dialogue id="trust">
+    <NPCText>
+      <![CDATA[
+      "Trust? Trust is a commodity, like salt or silk. Everyone has a price; mine is simply higher.<BR>
+      Work for me, and perhaps you’ll earn a share."
+      ]]>
+    </NPCText>
+    <Option text="I want to prove myself." next="taskIntro"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Dismiss ======= -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Nalia raises a brow. "Opportunity knocks rarely in Sunreach, traveler. If you tire of honest work, return here—I always have use for ambition."
+      ]]>
+    </NPCText>
+    <Option text="Actually, I want work." next="taskIntro"/>
+    <Option text="Good day." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= QUEST INTRO ======= -->
+  <Dialogue id="taskIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR="#ffd700">
+      She leans in, voice low and precise.<BR><BR>
+      "Sunreach's prosperity depends on smooth currents—and occasionally, laundering gold too hot for open exchange.<BR>
+      My rivals sniff at my operations. I need someone unconnected to quietly deliver a sealed satchel to a broker in the Crimson Quarter.<BR>
+      The satchel contains coins marked by pirate hands. If intercepted, it will be traced back to Lady Seraphine—and, by extension, me. Fail, and you may find Sunreach’s jails less forgiving than its market.<BR><BR>
+      Discretion and speed, that’s all I require. Are you the reliable sort?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You can rely on me. I’ll deliver the satchel." 
+            action="GiveItem:FactionDeliveryQuestScroll(Broker,Sunreach,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Who is this broker?" next="broker"/>
+    <Option text="What’s in it for me?" next="reward"/>
+    <Option text="Isn’t this illegal?" next="illegal"/>
+    <Option text="I need time to consider." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Accept Quest ======= -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Nalia slides a velvet satchel across the counter, her gaze unblinking.<BR><BR>
+      "The Crimson Quarter, northeast docks. Find Broker Saren—give her the password 'Brass Lantern.' She’ll do the rest.<BR>
+      Return with her signed token, and you’ll have earned my trust—and a taste of the Gilded Coin’s favor."
+      ]]>
+    </NPCText>
+    <Option text="I won’t fail you." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Broker Details ======= -->
+  <Dialogue id="broker">
+    <NPCText>
+      <![CDATA[
+      "Broker Saren runs a pawnshop at the edge of the Crimson Quarter. She has more aliases than I have vaults. She’ll know you by the password: 'Brass Lantern.'<BR>
+      Do not mention my name—or Seraphine’s. Fail, and neither of us will save you from Thornwall’s dungeons."
+      ]]>
+    </NPCText>
+    <Option text="Understood. Give me the satchel." 
+            action="GiveItem:FactionDeliveryQuestScroll(Broker,Sunreach,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="On second thought, maybe not." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Reward Details ======= -->
+  <Dialogue id="reward">
+    <NPCText>
+      <![CDATA[
+      She smirks.<BR><BR>
+      "Coin, of course—plus the goodwill of the Merchant Guild. Complete the job, and I’ll see your account credited handsomely. Loyal contractors may receive... *special* access to guild secrets and under-the-table exchanges.<BR>
+      Fail, and you’ll find your debts mounting—and your enemies multiplying."
+      ]]>
+    </NPCText>
+    <Option text="Very well, I’ll take the job." 
+            action="GiveItem:FactionDeliveryQuestScroll(Broker,Sunreach,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Not for me." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Is this Illegal? ======= -->
+  <Dialogue id="illegal">
+    <NPCText>
+      <![CDATA[
+      Nalia’s eyes narrow, measuring.<BR><BR>
+      "Every coin has a history. Some are best forgotten, some quietly cleansed. The law bends to gold—or breaks. But if you’re too timid, Sunreach may not be the city for you."
+      ]]>
+    </NPCText>
+    <Option text="I’ll do it anyway." 
+            action="GiveItem:FactionDeliveryQuestScroll(Broker,Sunreach,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Maybe I’m not cut out for this." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="backstoryIntro">
+  <NPCText>
+    <![CDATA[
+    Nalia arches an eyebrow, clearly amused.<BR><BR>
+    "Curious, are we? Few bother to ask *who* counts the coin—only how much there is. But... I suppose you've earned a glimpse behind the ledger."
+    ]]>
+  </NPCText>
+  <Option text="How did you rise to power in Sunreach?" next="origin"/>
+  <Option text="Who do you trust in the Council?" next="councilRivals"/>
+  <Option text="What does gold *mean* to you?" next="philosophyDeep"/>
+  <Option text="Do you have any regrets?" condition="SkillAtLeast:Evaluating Intelligence,80" next="regrets"/>
+  <Option text="I'd rather speak of business." next="taskIntro"/>
+</Dialogue>
+
+<Dialogue id="origin">
+  <NPCText>
+    <![CDATA[
+    Nalia smiles faintly, almost nostalgically.<BR><BR>
+    "I was born in the gutter outside Qasaria's western bazaar. By twelve, I ran dice games under temple stairs. By sixteen, I’d loaned half the city's brothel owners their startup gold—and repossessed three of them. Sunreach was a logical next conquest."<BR>
+    She leans in. "You climb with coin, or fall without it."
+    ]]>
+  </NPCText>
+  <Option text="Impressive. And the guild?" next="guildRise"/>
+  <Option text="That sounds cutthroat." next="ethics"/>
+</Dialogue>
+
+<Dialogue id="guildRise">
+  <NPCText>
+    <![CDATA[
+    "I didn't build the Gilded Coin—I *absorbed* it. Their former master vanished one night after a ledger audit. A coincidence, I assure you."<BR>
+    She smiles with gleaming teeth. "When you can balance books with blood, you’re fit to rule this city."
+    ]]>
+  </NPCText>
+  <Option text="You’re more dangerous than you look." next="taskIntro"/>
+  <Option text="I think I understand now." next="taskIntro"/>
+</Dialogue>
+
+<Dialogue id="ethics">
+  <NPCText>
+    <![CDATA[
+    "Cutthroat? No. *Clean*. Every debt paid, every price weighed. It's the world that's messy—the numbers are pure."<BR>
+    She shrugs. "Trust steel, but price it first."
+    ]]>
+  </NPCText>
+  <Option text="Then let's talk business." next="taskIntro"/>
+</Dialogue>
+
+<Dialogue id="councilRivals">
+  <NPCText>
+    <![CDATA[
+    "Darius Veynar is useful. He moves gold like a gambler moves dice—fast and without regret. But I fund him."<BR>
+    "Seraphine? She thinks herself untouchable at sea. But her pirates eat my coin. Thornwall pretends to be clean, but I own two of his vices."<BR>
+    She taps the side of her nose. "Everyone has a balance sheet. Even the righteous."
+    ]]>
+  </NPCText>
+  <Option text="You're clearly at the center of it all." next="taskIntro"/>
+  <Option text="Do you ever feel... surrounded?" next="paranoia"/>
+</Dialogue>
+
+<Dialogue id="paranoia">
+  <NPCText>
+    <![CDATA[
+    Her eyes darken.<BR><BR>
+    "Only fools sleep well in Sunreach. I count the coins before bed—and the knives." <BR>
+    "Still, it's better to hold the debt than owe it."
+    ]]>
+  </NPCText>
+  <Option text="You live a dangerous life." next="taskIntro"/>
+</Dialogue>
+
+<Dialogue id="philosophyDeep">
+  <NPCText>
+    <![CDATA[
+    "Gold is not wealth. It is *leverage*. A sword rusts, but a coin changes hands forever.<BR>
+    With it, you may move hearts, halt armies, and unseat kings. What is loyalty, if not a recurring investment?"
+    ]]>
+  </NPCText>
+  <Option text="That’s… cynical." next="cynicalReply"/>
+  <Option text="That’s… wise." next="wiseReply"/>
+</Dialogue>
+
+<Dialogue id="cynicalReply">
+  <NPCText>
+    <![CDATA[
+    Nalia shrugs. "Cynicism is just experience with the shine rubbed off. You’ll see, in time."
+    ]]>
+  </NPCText>
+  <Option text="Let's change topics." next="taskIntro"/>
+</Dialogue>
+
+<Dialogue id="wiseReply">
+  <NPCText>
+    <![CDATA[
+    Nalia studies you a moment, then nods.<BR>
+    "Few see that. You may go far in this city."<BR>
+    <BASEFONT COLOR="#00ff00">[You feel your insight deepen.]</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="(Gain +2 Evaluating Intelligence for 5 minutes)" action="AddSkill:Evaluating Intelligence,2,300" next="taskIntro"/>
+</Dialogue>
+
+<Dialogue id="regrets">
+  <NPCText>
+    <![CDATA[
+    Nalia pauses longer than usual.<BR><BR>
+    "Yes... one." <BR>
+    She runs a thumb along her signet ring.<BR>
+    "A girl I raised to be sharper than I ever was. I sent her to Qasaria to broker peace. She returned with ideals—and scars."<BR>
+    "Now she plots against me from the desert sands. I admire her resolve… but I mourn the loss."
+    ]]>
+  </NPCText>
+  <Option text="You could reconcile." next="regretHope"/>
+  <Option text="What would you do, if she returns?" next="regretThreat"/>
+</Dialogue>
+
+<Dialogue id="regretHope">
+  <NPCText>
+    <![CDATA[
+    Nalia’s expression softens for just a heartbeat.<BR>
+    "Perhaps. But trust, once broken, trades at steep interest."
+    ]]>
+  </NPCText>
+  <Option text="Thank you for sharing that." next="taskIntro"/>
+</Dialogue>
+
+<Dialogue id="regretThreat">
+  <NPCText>
+    <![CDATA[
+    Her voice steels.<BR>
+    "I would offer her a seat… or a funeral. The choice is hers. I hope she chooses wisely."
+    ]]>
+  </NPCText>
+  <Option text="A fair warning." next="taskIntro"/>
+</Dialogue>
+
+
+</DialogueFile>

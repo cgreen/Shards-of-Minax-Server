@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="TahliaGreenFlame">
+
+  <!-- Root: Greeting -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#7cff54'>
+      Before you stands a fierce woman cloaked in furs and leaves, her face marked with streaks of green ash. She grips a flame-tipped spear, appraising you with wary, ember-bright eyes.<BR><BR>
+      "Outsider, you tread close to the heart of Verdant lands. Speak plainly. Are you here to prove your worth—or to test my patience?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek to earn the respect of the Verdant Tribes." next="proveWorth"/>
+    <Option text="I wish to join your warband." next="warband"/>
+    <Option text="What is the Green Flame?" next="greenFlame"/>
+    <Option text="Tell me about Hinokami." next="hinokami"/>
+	<Option text="Who were you before the Green Flame?" next="backstoryIntro"/>
+    <Option text="I am just passing through." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Prove Worth Branch -->
+  <Dialogue id="proveWorth">
+    <NPCText>
+      <![CDATA[
+      Tahlia narrows her gaze.<BR><BR>
+      "Respect is not given, it is taken—earned in the wild, not the firepit. The jungle holds a beast our best have yet to bring down: the Dire Ashpaw. Track it. Slay it. Return with a trophy, and I will speak your name with honor."
+      ]]>
+    </NPCText>
+    <Option text="Where can I find the Dire Ashpaw?" next="ashpawHint"/>
+    <Option text="I will face this beast for your respect." 
+            action="GiveItem:FactionKillQuestScroll(Dire Ashpaw,Verdant,500)" 
+            condition="!HasItem:FactionKillQuestScroll"
+            next="acceptHunt"/>
+    <Option text="That sounds too dangerous for me." next="dismiss"/>
+    <Option text="Is there another way to earn your trust?" next="trials"/>
+  </Dialogue>
+
+  <!-- Warband Join Branch -->
+  <Dialogue id="warband">
+    <NPCText>
+      <![CDATA[
+      Tahlia laughs, sharp and wild.<BR><BR>
+      "The warband is no place for the soft-handed. Survive our trials, and perhaps I'll let you watch our backs. Fail, and the forest will reclaim your bones."
+      ]]>
+    </NPCText>
+    <Option text="What are your trials?" next="trials"/>
+    <Option text="I am ready. Test me." 
+            action="GiveItem:FactionTrialQuestScroll(Verdant Warband Trials,Verdant,250)" 
+            condition="!HasItem:FactionTrialQuestScroll"
+            next="trialGiven"/>
+    <Option text="On second thought, I'll pass." action="Close"/>
+  </Dialogue>
+
+  <!-- Green Flame Lore -->
+  <Dialogue id="greenFlame">
+    <NPCText>
+      <![CDATA[
+      Tahlia taps her mask.<BR><BR>
+      "The Green Flame is our fury—fierce, wild, and unbroken. It burns in those who fight for the tribe, not for self. Only the worthy bear its mark. Outsiders rarely understand... and even fewer survive to."
+      ]]>
+    </NPCText>
+    <Option text="How do I earn that mark?" next="proveWorth"/>
+    <Option text="I see. Thank you for the wisdom." action="Close"/>
+  </Dialogue>
+
+  <!-- Hinokami Branch -->
+  <Dialogue id="hinokami">
+    <NPCText>
+      <![CDATA[
+      Tahlia scowls.<BR><BR>
+      "Hinokami's people walk with order in their veins—every step rehearsed, every blade polished. They are worthy rivals, but their ways do not suit our wild. Still, when Minax’s darkness creeps, sometimes even old enemies must share the hunt."
+      ]]>
+    </NPCText>
+    <Option text="Are you at war with Hinokami?" next="rivalry"/>
+    <Option text="Have you ever fought beside them?" next="allyMoment"/>
+    <Option text="Thank you for sharing your thoughts." action="Close"/>
+  </Dialogue>
+
+  <!-- Rivalry Branch -->
+  <Dialogue id="rivalry">
+    <NPCText>
+      <![CDATA[
+      "War? Not as the city-folk know it. We battle for pride, for territory, for the spirits of the land. When blood is spilled, it is to honor—not hatred. Still, I will not let their roots choke ours."
+      ]]>
+    </NPCText>
+    <Option text="Can I help ease tensions between tribes?" next="mediate"/>
+    <Option text="Sounds like you respect them, in a way." next="respectHinokami"/>
+    <Option text="Enough politics. Tell me of your warband." next="warband"/>
+  </Dialogue>
+
+  <!-- Trials Explanation -->
+  <Dialogue id="trials">
+    <NPCText>
+      <![CDATA[
+      Tahlia grins, exposing sharpened teeth.<BR><BR>
+      "You want to walk with hunters? Prove your speed, your cunning, and your aim. Complete the warband’s gauntlet—three challenges: the Ember Path, the Blind Hunt, and the Ashen Leap. Return unbroken, and you may earn a place. Will you attempt it?"
+      ]]>
+    </NPCText>
+    <Option text="I accept the warband trials." 
+            action="GiveItem:FactionTrialQuestScroll(Verdant Warband Trials,Verdant,250)" 
+            condition="!HasItem:FactionTrialQuestScroll"
+            next="trialGiven"/>
+    <Option text="What are the details of each trial?" next="trialDetails"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="trialGiven">
+    <NPCText>
+      <![CDATA[
+      Tahlia hands you a carved bone token, etched with green flame.<BR><BR>
+      "Take this. Survive our trials—bring me proof. Many enter, few return. Show me I am wrong to mistrust you."
+      ]]>
+    </NPCText>
+    <Option text="I will return victorious." action="Close"/>
+    <Option text="Any advice before I go?" next="trialAdvice"/>
+  </Dialogue>
+
+  <Dialogue id="trialAdvice">
+    <NPCText>
+      <![CDATA[
+      "Let the forest guide your steps. Listen before you strike, and trust nothing in the mist. The land remembers every footstep."
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Tahlia." action="Close"/>
+  </Dialogue>
+
+  <!-- Trial Details -->
+  <Dialogue id="trialDetails">
+    <NPCText>
+      <![CDATA[
+      "Ember Path—outrun the burning thorns. Blind Hunt—track your prey with no eyes but your spirit. Ashen Leap—cross the chasm by faith and foot. Fail, and you feed the jungle. Succeed, and you may wear the warpaint."
+      ]]>
+    </NPCText>
+    <Option text="I am ready. Give me the trials." 
+            action="GiveItem:FactionTrialQuestScroll(Verdant Warband Trials,Verdant,250)" 
+            condition="!HasItem:FactionTrialQuestScroll"
+            next="trialGiven"/>
+    <Option text="On second thought, not today." action="Close"/>
+  </Dialogue>
+
+  <!-- Legendary Beast Hint -->
+  <Dialogue id="ashpawHint">
+    <NPCText>
+      <![CDATA[
+      "Seek the Ashpaw where the old trees burn brightest and the ground stinks of ash. Bring me its fang or pelt—not just its head. The spirits crave proof, not boasts."
+      ]]>
+    </NPCText>
+    <Option text="Understood. I will hunt the Ashpaw." 
+            action="GiveItem:FactionKillQuestScroll(Dire Ashpaw,Verdant,500)" 
+            condition="!HasItem:FactionKillQuestScroll"
+            next="acceptHunt"/>
+    <Option text="Another time, perhaps." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptHunt">
+    <NPCText>
+      <![CDATA[
+      Tahlia offers a rare, approving nod.<BR><BR>
+      "May the Green Flame light your path. Return with the proof—and see if the wild accepts you as one of its own."
+      ]]>
+    </NPCText>
+    <Option text="I will not disappoint you." action="Close"/>
+  </Dialogue>
+
+  <!-- Mediation & Diplomacy Branches -->
+  <Dialogue id="mediate">
+    <NPCText>
+      <![CDATA[
+      Tahlia’s eyes narrow.<BR><BR>
+      "Words heal less than deeds, outsider. If you wish to play mediator, prove you walk in both worlds—help a Verdant child and a Hinokami elder. Then we’ll speak of peace."
+      ]]>
+    </NPCText>
+    <Option text="What tasks do you suggest?" next="mediateTasks"/>
+    <Option text="Maybe I should leave politics alone." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="mediateTasks">
+    <NPCText>
+      <![CDATA[
+      "Seek Eru, our Spirit Dancer, for the child in need. For Hinokami, the Lantern Keeper Kaoru may have work for you. Aid both—then return, and I will judge your worth."
+      ]]>
+    </NPCText>
+    <Option text="I will help both sides." action="Close"/>
+    <Option text="I will not get involved." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="respectHinokami">
+    <NPCText>
+      <![CDATA[
+      "Respect, yes. But respect is not friendship. Even rival roots drink from the same river—yet fight for the sun."
+      ]]>
+    </NPCText>
+    <Option text="A wise way to see it." action="Close"/>
+    <Option text="Let’s change topic." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="allyMoment">
+    <NPCText>
+      <![CDATA[
+      "Once, when Minax's beasts threatened both our camps. Side by side, we drove them out, and shared meat after. But do not mistake a single night for a season."
+      ]]>
+    </NPCText>
+    <Option text="Thank you for your honesty." action="Close"/>
+    <Option text="How can I help the tribes against Minax?" next="minaxQuest"/>
+  </Dialogue>
+
+  <!-- Minax Invasion Quest Hook -->
+  <Dialogue id="minaxQuest">
+    <NPCText>
+      <![CDATA[
+      "Hunt Minax’s spies. Burn their totems. Free those tainted by her shadows. Our shamans—speak to Nura—know more. If you have the fire, strike at her heart."
+      ]]>
+    </NPCText>
+    <Option text="I will aid the shamans against Minax." action="Close"/>
+    <Option text="I need more time." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismiss / Leave -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Tahlia steps aside, but never takes her eyes off you.<BR><BR>
+      "Then move on. The wild judges all trespassers."
+      ]]>
+    </NPCText>
+    <Option text="Perhaps we will meet again." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="backstoryIntro">
+  <NPCText>
+    <![CDATA[
+    Tahlia tilts her head, narrowing her eyes.<BR><BR>
+    "Few ask that. Fewer deserve the answer. But... the Green Flame judges by deeds, not titles."<BR><BR>
+    She gestures to the ash-streaks on her face.<BR><BR>
+    "Before this? I had no name. Just smoke. I was a ghost-child, raised by the forest after raiders burned my kin. The wild fed me, taught me to strike, to vanish, to burn back."<BR><BR>
+    "What do you truly want to know, outsider?"
+    ]]>
+  </NPCText>
+  <Option text="Why do you mistrust outsiders?" next="mistrust"/>
+  <Option text="What do you fight for now?" next="purpose"/>
+  <Option text="Were you ever close to someone?" next="loss"/>
+  <Option text="That explains much. I’ll leave you be." action="Close"/>
+</Dialogue>
+
+<Dialogue id="mistrust">
+  <NPCText>
+    <![CDATA[
+    "Because I've seen how 'civilized' folk repay kindness—with chains, steel, or fire. The last man I trusted tried to sell my tribe’s location to Hinokami for gold."<BR><BR>
+    She clenches her jaw.<BR><BR>
+    "Only the forest is honest. It kills when it must, nurtures when it wills. That, I respect."
+    ]]>
+  </NPCText>
+  <Option text="I understand your caution." next="respectPlus"/>
+  <Option text="I hope you’ll come to trust me." next="trustCheck"/>
+  <Option text="Maybe you’re too rigid." next="insulted"/>
+</Dialogue>
+
+<Dialogue id="purpose">
+  <NPCText>
+    <![CDATA[
+    "I fight to protect the grove, the children, the whispers of the old trees. I fight so our tribe doesn't vanish like mist in the sun."<BR><BR>
+    "And perhaps... to prove that fire can heal as well as destroy."
+    ]]>
+  </NPCText>
+  <Option text="A noble reason. I respect that." next="respectPlus"/>
+  <Option text="The forest is lucky to have you." 
+          action="AddStat:Karma,50,300" 
+          next="respectPlus"/>
+  <Option text="Sounds like you carry a burden." next="loss"/>
+</Dialogue>
+
+<Dialogue id="loss">
+  <NPCText>
+    <![CDATA[
+    Tahlia’s tone grows quiet.<BR><BR>
+    "There was one... Kaelen. A hunter like me. He believed in unity, even with Hinokami. Took his case to the council."<BR><BR>
+    She looks away.<BR><BR>
+    "Minax’s cult found him first. Left only his mask in the river reeds."<BR><BR>
+    "Since then, I’ve led. Alone. As fire does."
+    ]]>
+  </NPCText>
+  <Option text="I'm sorry. That pain... it shows your strength." next="respectPlus"/>
+  <Option text="Did you ever find those responsible?" next="revenge"/>
+  <Option text="I should go." action="Close"/>
+</Dialogue>
+
+<Dialogue id="revenge">
+  <NPCText>
+    <![CDATA[
+    "Not yet. But I will. There are whispers of a cult blade—a curved dagger, green flame etched in obsidian. If I ever see it again..."<BR><BR>
+    She pauses.<BR><BR>
+    "If you find it first, bring it to me. And I will owe you more than words."
+    ]]>
+  </NPCText>
+  <Option text="I'll keep watch for such a blade." 
+          action="SendMessage:Tahlia will remember this."
+          next="respectPlus"/>
+  <Option text="I hope you find peace, not just vengeance." next="respectPlus"/>
+</Dialogue>
+
+<Dialogue id="trustCheck">
+  <NPCText>
+    <![CDATA[
+    Tahlia studies you.<BR><BR>
+    <IF condition="KarmaAtLeast:0">
+      "Your heart is not yet blackened. Perhaps... you might earn trust in time."
+    </IF>
+    <IF condition="KarmaBelow:0">
+      "You speak sweet, but the spirits say otherwise. I do not trust shadows."
+    </IF>
+    ]]>
+  </NPCText>
+  <Option text="Then I will prove myself." 
+          condition="KarmaAtLeast:0" 
+          action="Fame:25" 
+          next="respectPlus"/>
+  <Option text="I’ll let my actions speak louder." next="respectPlus"/>
+  <Option text="I’m no saint. But I’m honest." next="respectPlus"/>
+</Dialogue>
+
+<Dialogue id="respectPlus">
+  <NPCText>
+    <![CDATA[
+    Tahlia offers a rare nod of approval.<BR><BR>
+    "Perhaps the wild hasn’t judged you harshly yet. That alone is rare."<BR><BR>
+    "You’ve earned a sliver of my respect. Don’t waste it."
+    ]]>
+  </NPCText>
+  <Option text="Thank you, Tahlia." 
+          action="AddStat:Str,2,600"
+          next="bonusBuff"/>
+</Dialogue>
+
+<Dialogue id="bonusBuff">
+  <NPCText>
+    <![CDATA[
+    You feel your body surge with a burst of primal energy.<BR><BR>
+    (+2 Strength for 10 minutes)
+    ]]>
+  </NPCText>
+  <Option text="The Green Flame burns within me." action="Close"/>
+</Dialogue>
+
+<Dialogue id="insulted">
+  <NPCText>
+    <![CDATA[
+    Tahlia’s eyes flash dangerously.<BR><BR>
+    "Speak like that again, and the only roots you'll know are the ones covering your grave."<BR><BR>
+    She turns away, dismissing you with disdain.
+    ]]>
+  </NPCText>
+  <Option text="Perhaps I’ve said enough." action="Karma:-100" />
+  <Option text="Let’s talk of something else." next="greeting"/>
+</Dialogue>
+
+
+</DialogueFile>

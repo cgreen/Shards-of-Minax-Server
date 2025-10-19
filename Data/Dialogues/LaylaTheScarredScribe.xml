@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="LaylaTheScarredScribe">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#eebb77'>
+      You find a woman hunched at a sand-worn workbench, her arms and neck a map of shimmering runes and scars. Her eyes are sharp, wary, but when she speaks, her voice is a whisper of sand and ink.<BR><BR>
+      "You're not the first to seek power, protection, or purpose in my marks. I'm Layla, once a slave of the arena—now Qasaria's only true ward-scribe. My sigils kept me alive when blades failed. If you wish to wear magic on your flesh, you must pay in coin, pain... and something rarer still."<BR><BR>
+      She gestures at her battered satchel and the odd, green-tinged inkwell.<BR>
+      "What do you seek, traveler?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Tell me about yourself." next="backstory"/>
+    <Option text="I want your wards against Minax." next="wardIntro"/>
+    <Option text="What does your ink do?" next="inkLore"/>
+    <Option text="Who else comes here?" next="npcs"/>
+	<Option text="Your scars… tell me who you really are." next="deepBackstoryIntro"/>
+    <Option text="I'm just browsing the bazaar." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      Layla lets out a dry laugh.<BR><BR>
+      "Qasaria sees many survivors, but few bear their battles on their skin. I fought in the Sands of Blood arena for Omar al-Onyx—won and lost, scar by scar. The others broke. I drew sigils in stolen soot and scorpion ink—magic to mend wounds, to dull pain, to turn Minax's whispers aside.<BR><BR>
+      When I escaped, Yasmin al-Topaz hid me. In return, I inscribe her scholars, though I trust few in the Council. Zahid of the Undermarket keeps offering to buy my secrets. But I’d rather die with inked dignity than sell my soul. Now, I trade my pain for your protection, if you’re brave enough."<BR>
+      She flexes a hand—sigils shimmer faintly.<BR>
+      ]]>
+    </NPCText>
+    <Option text="Do you still fear Omar al-Onyx?" next="omar"/>
+    <Option text="You mention Yasmin al-Topaz. Are you friends?" next="yasmin"/>
+    <Option text="Who is Zahid of the Undermarket?" next="zahid"/>
+    <Option text="Can your sigils really resist Minax?" next="wardIntro"/>
+    <Option text="I need a ward inscribed." next="wardIntro"/>
+  </Dialogue>
+
+  <Dialogue id="omar">
+    <NPCText>
+      <![CDATA[
+      Her lips curl into a thin smile.<BR><BR>
+      "Omar thrives on fear. He thinks himself a king, but his crown is blood and sand. I no longer bow to him—or any man. He may rule the arena, but not the streets, not my scars. Should his thugs come for me, let them taste the bite of my ink. If you find yourself in his arena, don’t trust anyone with clean skin."
+      ]]>
+    </NPCText>
+    <Option text="Thank you for the warning. Tell me of your wards." next="wardIntro"/>
+    <Option text="What of Yasmin al-Topaz?" next="yasmin"/>
+    <Option text="I want a ward." next="wardIntro"/>
+  </Dialogue>
+
+  <Dialogue id="yasmin">
+    <NPCText>
+      <![CDATA[
+      Layla’s gaze softens slightly.<BR><BR>
+      "Yasmin saved my life, but she always asks a price. Her magic is older than the city—some say older than death. She studies the Ancients, chases relics, and trusts too few. I’m grateful, but I keep my own secrets. My sigils are my own invention—not even Yasmin knows them all."
+      ]]>
+    </NPCText>
+    <Option text="What of Zahid and the Undermarket?" next="zahid"/>
+    <Option text="I want a protective ward." next="wardIntro"/>
+    <Option text="Can your sigils resist Minax?" next="wardIntro"/>
+  </Dialogue>
+
+  <Dialogue id="zahid">
+    <NPCText>
+      <![CDATA[
+      She spits in the sand.<BR><BR>
+      "Zahid is a shadow with too many eyes. He deals in secrets, relics, and lives. He wants my formulas for ink, but he’ll never get them. If you go below the Bazaar, watch your purse—and your back. Karim al-Emerald sends his spies to Zahid often. No friend to the weak, that one."
+      ]]>
+    </NPCText>
+    <Option text="I want a ward to protect me." next="wardIntro"/>
+    <Option text="I’m done with questions." next="wardIntro"/>
+  </Dialogue>
+
+  <Dialogue id="inkLore">
+    <NPCText>
+      <![CDATA[
+      "My ink is made from scorpion venom and nightbloom petals—ground with silver dust and tears. Each mark is pain, but also power. Wards against madness, poisons, or Minax's corrupting whispers. But the rarest ink—the one you need—must come from a venomous tomb-scourge scorpion. I am out."<BR>
+      She leans forward, hopeful.<BR>
+      "If you fetch it, I’ll inscribe a ward strong enough to turn back Minax’s influence. It will hurt. But you will stand tall when others fall."
+      ]]>
+    </NPCText>
+    <Option text="Where do I find this scorpion ink?" next="questIntro"/>
+    <Option text="Will your ward truly shield me from Minax?" next="wardDetails"/>
+    <Option text="I want to know more about you." next="backstory"/>
+    <Option text="Let me think." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="npcs">
+    <NPCText>
+      <![CDATA[
+      "You see all sorts in Qasaria. Council merchants in gilded cloaks. Arena warriors hungry for protection or revenge. Even Shadowmaster Zahid's assassins come for tattoos—though I never turn my back on them. I trust only Leila the Sand Dancer; her family brought me food when I had none. If you meet her, tell her Layla remembers."<BR>
+      She pauses.<BR>
+      "Now—what do you seek?"
+      ]]>
+    </NPCText>
+    <Option text="A ward against Minax." next="wardIntro"/>
+    <Option text="Where can I find scorpion ink?" next="questIntro"/>
+    <Option text="I’m just looking." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Layla nods. "Not everyone has the heart for scars. When you change your mind, my ink is ready." She returns to sharpening a bone needle, eyes never leaving you.<BR>
+      ]]>
+    </NPCText>
+    <Option text="On second thought, I want a ward." next="wardIntro"/>
+    <Option text="Goodbye." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Introduction -->
+  <Dialogue id="wardIntro">
+    <NPCText>
+      <![CDATA[
+      Layla inspects your arms, as if imagining patterns already forming there.<BR><BR>
+      "If Minax's shadow worries you, my sigils can buy you time—sometimes, even hope. But I need true scorpion venom ink. Deep in the Tomb of Forgotten Kings, below Qasaria, roam tomb-scourge scorpions. Their glands yield the purest ink for resisting corruption. Bring me three fresh venom glands, and I will mark you with a ward against Minax’s touch. Your soul will ache, but your mind will remain your own."
+      ]]>
+    </NPCText>
+    <Option text="How do I reach the Tomb of Forgotten Kings?" next="questIntro"/>
+    <Option text="Why does it hurt?" next="wardDetails"/>
+    <Option text="I’ll return with the glands." 
+            action="GiveItem:FactionDeliveryQuestScroll(LaylaTheScarredScribe,Qasaria,500)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="This sounds dangerous. I need time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      "The Tomb lies beyond the merchant quarter, hidden beneath the sands near the ruined Obelisk of Eternity. Many do not return—the scorpions are drawn to those touched by Minax, and the dead are restless. Seek out their queen, the Grand Matron—her venom is the purest. Bring me three venom glands. When you return, I will give you a ward fit for any true survivor."
+      ]]>
+    </NPCText>
+    <Option text="I will find the glands and return." 
+            action="GiveItem:FactionDeliveryQuestScroll(LaylaTheScarredScribe,Qasaria,500)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Why do your wards hurt so much?" next="wardDetails"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="wardDetails">
+    <NPCText>
+      <![CDATA[
+      Layla traces a scar running down her forearm.<BR><BR>
+      "Magic has a price. The venom burns out what is weak in you—fear, doubt, the subtle taint of Minax. The sigils go deeper than skin. They cut into the soul, sealing cracks where shadows creep. Most flinch, but those who endure walk away changed. When you’re ready, and when you have the venom, come back to me. I’ll inscribe a ward none in Qasaria can match."
+      ]]>
+    </NPCText>
+    <Option text="I will seek the scorpion glands." 
+            action="GiveItem:FactionDeliveryQuestScroll(LaylaTheScarredScribe,Qasaria,500)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I’m not ready." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Layla hands you a worn parchment scroll, inked with a jagged map and strange sigils.<BR><BR>
+      "Take this. When you return with the glands, my ink and needle will be ready. If you survive the Tomb, you’ll have more than a story—you’ll have protection from the darkness rising in every shadow."<BR><BR>
+      "Survive, and you’ll wear your scars with pride."
+      ]]>
+    </NPCText>
+    <Option text="I will return with the venom glands." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="deepBackstoryIntro">
+  <NPCText>
+    <![CDATA[
+    Layla’s expression shifts. Her fingers trace a sigil along her collarbone—one that glows faintly in response.<BR><BR>
+    "Few ask that. Fewer want the truth. But... you remind me of someone who once did."<BR><BR>
+    She sets down her stylus. “Ask, then. But know—my past was carved with fire, blood... and choices no child should make.”
+    ]]>
+  </NPCText>
+  <Option text="How did you become a ward-scribe?" next="backstoryTraining"/>
+  <Option text="What happened in the arena?" next="backstoryArena"/>
+  <Option text="You weren’t born here, were you?" next="backstoryOrigins"/>
+  <Option text="What do your tattoos *mean*?" next="backstoryPhilosophy"/>
+  <Option text="On second thought... too personal." next="greeting"/>
+</Dialogue>
+<Dialogue id="backstoryTraining">
+  <NPCText>
+    <![CDATA[
+    "There was no mentor. No scroll. Just pain... and need."<BR><BR>
+    "They threw us into cages before the arena—barely fed. I found scraps of soot, scraps of bone... mixed with venom from the rats and scorpions under the pits. Drew on myself—runes I barely understood. But they worked. When others screamed from fear or flame, I stood."<BR><BR>
+    She raises her hand, revealing a faded rune along her palm. "This one silences fear. The first thing I ever made... and the one I still use the most."
+    ]]>
+  </NPCText>
+  <Option text="That’s powerful. Can you teach me that?" 
+          condition="SkillAtLeast:Inscription,70"
+          action="AddSkill:Inscription,5,300"
+          next="teachRune"/>
+  <Option text="That’s powerful. Can you teach me that?" 
+          condition="SkillBelow:Inscription,70"
+          action="SendMessage:Your hands are not ready to hold this wisdom."
+          next="cannotLearn"/>
+  <Option text="That explains your strength. What happened in the arena?" next="backstoryArena"/>
+  <Option text="Why not flee instead of fight?" next="backstoryPhilosophy"/>
+</Dialogue>
+
+<Dialogue id="teachRune">
+  <NPCText>
+    <![CDATA[
+    She nods once and gestures for your arm.<BR><BR>
+    "You already understand part of the glyph’s shape. Let me show you the rest..."<BR>
+    Her stylus dances over your skin, glowing softly as it writes nothing—yet everything.
+    ]]>
+  </NPCText>
+  <Option text="I’ll remember this. Thank you." action="Karma:+250"/>
+</Dialogue>
+
+<Dialogue id="cannotLearn">
+  <NPCText>
+    <![CDATA[
+    Layla shakes her head.<BR><BR>
+    "The ink would burn you. Come back when your hand no longer trembles and your heart understands glyphs beyond beauty."
+    ]]>
+  </NPCText>
+  <Option text="I’ll study until I’m ready." action="AddStat:Int,5,120"/>
+</Dialogue>
+<Dialogue id="backstoryArena">
+  <NPCText>
+    <![CDATA[
+    "Pain teaches fast. Death, faster."<BR><BR>
+    "In the arena, you learn the weight of a second. The sound of breath before betrayal. I etched wards to slow my bleeding... to blind enemies... even to make them hallucinate flames. Some called me witch. I called it survival."<BR><BR>
+    Her gaze lingers on your weapon. "I can still hear the crowd. But now I inscribe others, so *they* don’t die in silence."
+    ]]>
+  </NPCText>
+  <Option text="You ever miss it? The fight?" next="arenaMiss"/>
+  <Option text="What was your worst match?" next="arenaWorst"/>
+  <Option text="Let’s change the subject..." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="arenaMiss">
+  <NPCText>
+    <![CDATA[
+    "Sometimes."<BR><BR>
+    "Not the blood, but the clarity. In the pit, everything made sense. Win. Or vanish."<BR><BR>
+    She exhales slowly. "Here in Qasaria... everyone wears masks."
+    ]]>
+  </NPCText>
+  <Option text="You’ve earned your peace." action="Fame:+100"/>
+</Dialogue>
+
+<Dialogue id="arenaWorst">
+  <NPCText>
+    <![CDATA[
+    Layla closes her eyes.<BR><BR>
+    "A beast from Moonglow—twice my size. No name. Just chains. The crowd threw in *fire beetles* for ‘fun.’ I couldn’t run. Couldn’t scream."<BR><BR>
+    "So I inked myself with a death ward. It worked. Barely. When it ended, I wasn’t the same. But I was... still breathing."
+    ]]>
+  </NPCText>
+  <Option text="And now you share that strength with others." next="backstoryPhilosophy"/>
+</Dialogue>
+<Dialogue id="backstoryOrigins">
+  <NPCText>
+    <![CDATA[
+    "No. I was born in a caravan crossing the Mirror Wastes, east of Nujel’m. My mother was a silk weaver. My father, a ghost. Never met him."<BR><BR>
+    "Bandits raided us near the Singing Dunes. Sold the survivors to Qasaria’s arenas. I was... nine."<BR><BR>
+    She laughs darkly. "The desert took everything but my will."
+    ]]>
+  </NPCText>
+  <Option text="I’m sorry. That’s a heavy burden." 
+          condition="IsFemale"
+          action="SendMessage:Layla offers you a quiet nod of respect."
+          next="greeting"/>
+  <Option text="That must have been hard." 
+          condition="IsMale"
+          action="SendMessage:She studies your face, unsure if pity or judgment hides there."
+          next="greeting"/>
+  <Option text="That explains your resilience." next="backstoryTraining"/>
+</Dialogue>
+<Dialogue id="backstoryPhilosophy">
+  <NPCText>
+    <![CDATA[
+    Layla lifts her arm, running a finger along a fresh sigil.<BR><BR>
+    "Each line is a memory. Each rune, a choice. I don’t just tattoo spells—I *bind moments*. Pain, loss, victory… woven into ink."<BR><BR>
+    "You want a ward? Then understand—it’s not just magic. It’s *your story*, etched in blood and venom."
+    ]]>
+  </NPCText>
+  <Option text="Then make me a sigil of hope." 
+          action="AddStat:Int,5,300"
+          next="inkHope"/>
+  <Option text="Give me one of vengeance." 
+          action="AddStat:Str,5,300"
+          next="inkVengeance"/>
+  <Option text="Do you have one for clarity?" 
+          action="AddStat:Dex,5,300"
+          next="inkClarity"/>
+</Dialogue>
+
+<Dialogue id="inkHope">
+  <NPCText>
+    <![CDATA[
+    "Hope is sharpest when carved from despair."<BR>
+    She inscribes a gentle loop over your wrist. Warmth radiates through your veins.<BR>
+    "Remember: even the deepest scar means you survived."
+    ]]>
+  </NPCText>
+  <Option text="Thank you, Layla." action="Karma:+250"/>
+</Dialogue>
+
+<Dialogue id="inkVengeance">
+  <NPCText>
+    <![CDATA[
+    Her voice hardens.<BR>
+    "You’ll burn brighter. But flames consume."<BR>
+    The sigil stings as it sears into your skin—anger focused, cold and perfect.
+    ]]>
+  </NPCText>
+  <Option text="Let them fear me now." action="Karma:-150"/>
+</Dialogue>
+
+<Dialogue id="inkClarity">
+  <NPCText>
+    <![CDATA[
+    "Clarity comes at a cost."<BR>
+    She traces a mirrored glyph behind your ear. Sound fades for a moment, replaced by focused silence.<BR>
+    "Use it when choices cloud. Not all noise is truth."
+    ]]>
+  </NPCText>
+  <Option text="I feel... still." action="SendMessage:Your mind feels sharper for a moment."/>
+</Dialogue>
+
+
+</DialogueFile>

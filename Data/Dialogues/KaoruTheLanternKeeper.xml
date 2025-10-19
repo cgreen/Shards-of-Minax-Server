@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="KaoruTheLanternKeeper">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#f9e784'>
+      A gentle, luminous woman stands before the lantern-lit shrine. Cherry blossoms drift in the breeze as she bows in welcome.<BR><BR>
+      “Welcome, seeker. I am Kaoru, Keeper of the Lantern and servant of Amateru, the rising sun. <BR>
+      Have you come for wisdom, for solace, or does your path lead you to the shadows now stirring across our land?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek guidance, Lantern Keeper." next="guidance"/>
+    <Option text="Are the rumors of Minax true?" next="minax"/>
+    <Option text="Tell me about this shrine." next="shrine"/>
+    <Option text="Who is Amateru?" next="amateru"/>
+    <Option text="Do you need help with anything?" next="help"/>
+	<Option text="Tell me about yourself, Kaoru." next="backstoryRoot"/>
+    <Option text="I am only passing by." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Guidance Branch -->
+  <Dialogue id="guidance">
+    <NPCText>
+      <![CDATA[
+      Kaoru’s eyes soften as the lantern’s glow deepens.<BR><BR>
+      “Each soul that enters Hinokami carries burdens—some old, some newly sown by Minax’s darkness. Speak your mind. What weighs upon you?”
+      ]]>
+    </NPCText>
+    <Option text="I fear the shadow growing in the land." next="vision"/>
+    <Option text="I have lost someone to Minax’s cult." next="comfort"/>
+    <Option text="I simply seek peace." next="peace"/>
+    <Option text="I wish to help fight the darkness." next="help"/>
+    <Option text="Thank you, Kaoru. That is enough." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="vision">
+    <NPCText>
+      <![CDATA[
+      Kaoru closes her eyes, whispering a prayer.<BR><BR>
+      “Last night, I saw a vision of lanterns flickering in a sea of fog, each threatened by hungry shadows. Yet one lantern blazed brighter, guiding others through the darkness. <BR>
+      Remember: hope endures so long as one keeps the light. Walk with care—and if you would aid us, there are tasks only the brave can attempt.”
+      ]]>
+    </NPCText>
+    <Option text="What tasks can I help with?" next="help"/>
+    <Option text="I will remember your words." action="Karma:25" />
+    <Option text="Farewell, Kaoru." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="comfort">
+    <NPCText>
+      <![CDATA[
+      Kaoru bows her head.<BR><BR>
+      “The pain Minax has wrought is great, but grief binds us to our humanity. In sorrow, we become lanterns for each other.<BR>
+      If you wish, I will light a lantern in memory of your lost one.”
+      ]]>
+    </NPCText>
+    <Option text="Please, light the lantern." action="PlaySound:0x015" next="lanternLit"/>
+    <Option text="No, but thank you." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="lanternLit">
+    <NPCText>
+      <![CDATA[
+      Kaoru steps to the altar, her voice singing a soft hymn. She lights a golden lantern, its flame pure.<BR><BR>
+      “May their spirit find the path to peace, and may you carry their light within you. When you are ready, I can offer you a task to help restore balance to this land.”
+      ]]>
+    </NPCText>
+    <Option text="I am ready to help." next="help"/>
+    <Option text="I must go for now." action="Karma:10" action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="peace">
+    <NPCText>
+      <![CDATA[
+      “Then you are welcome here. Rest as long as you need. Should the world’s weight grow too heavy, the shrine’s doors are always open.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Lantern Keeper." action="Karma:5" action="Close"/>
+    <Option text="Actually, I wish to help after all." next="help"/>
+  </Dialogue>
+
+  <!-- Shrine / Lore Branch -->
+  <Dialogue id="shrine">
+    <NPCText>
+      <![CDATA[
+      “This shrine was raised for Amateru, sun goddess of Tokuno, whose light dispels even the deepest shadow.<BR>
+      Here, exiles and settlers find hope anew, and ancient rituals safeguard Hinokami’s spirit. <BR>
+      Sometimes, I share visions with Shaman Nura of the Verdant Tribes—a sign that darkness threatens more than just our town.”
+      ]]>
+    </NPCText>
+    <Option text="What visions do you share with Shaman Nura?" next="nuraVisions"/>
+    <Option text="How can I honor Amateru?" next="offerings"/>
+    <Option text="Thank you for the lore." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="nuraVisions">
+    <NPCText>
+      <![CDATA[
+      Kaoru’s expression grows grave.<BR><BR>
+      “Shaman Nura and I see the same darkness crawling from the east—corruption spreading through root and spirit alike.<BR>
+      We believe a relic lost from Tokuno, the Sunfire Mirror, may be needed to banish this evil. <BR>
+      If you would help us, I can tell you more.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me of this Sunfire Mirror." next="mirror"/>
+    <Option text="I am not ready for such a quest." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="mirror">
+    <NPCText>
+      <![CDATA[
+      “The Sunfire Mirror once captured the first rays of dawn in Tokuno. It is said to reflect not just light, but truth—burning away all illusion. <BR>
+      I fear Minax’s agents have stolen it and now hide it within the haunted groves of the Verdant Tribes’ lands. <BR>
+      Would you seek it out and return it to this shrine?”
+      ]]>
+    </NPCText>
+    <Option text="Yes, I will recover the Sunfire Mirror."
+            action="GiveItem:LostRelicQuestScroll(Sunfire Mirror,Hinokami,350)"
+            condition="!HasItem:LostRelicQuestScroll"
+            next="acceptMirror"/>
+    <Option text="That sounds dangerous. What will I face?" next="mirrorDanger"/>
+    <Option text="I must decline for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="mirrorDanger">
+    <NPCText>
+      <![CDATA[
+      “The haunted groves are home to vengeful spirits and Minax cultists. You must also earn the trust of the Verdant shamans, or risk their wrath.<BR>
+      Use this blessed lantern to guide your path—it will reveal hidden dangers for a short time. If you are prepared, I shall grant you the quest.”
+      ]]>
+    </NPCText>
+    <Option text="I am ready. Grant me the quest."
+            action="GiveItem:LostRelicQuestScroll(Sunfire Mirror,Hinokami,350)"
+            action="GiveItem:BlessedLantern"
+            condition="!HasItem:LostRelicQuestScroll"
+            next="acceptMirror"/>
+    <Option text="I will wait until I am better prepared." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptMirror">
+    <NPCText>
+      <![CDATA[
+      Kaoru bows deeply, placing a slip of parchment and a blessed lantern in your hands.<BR>
+      “May Amateru’s light guard you. Return with the Sunfire Mirror and balance may yet be restored.”<BR>
+      <BASEFONT COLOR='#f9e784'>Quest Started: Sunfire Mirror</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will return with the relic." action="Close"/>
+  </Dialogue>
+
+  <!-- Offerings -->
+  <Dialogue id="offerings">
+    <NPCText>
+      <![CDATA[
+      “Offerings of rice, incense, or cherry blossoms are welcome here. Should you wish, I will bless you in Amateru’s name.”
+      ]]>
+    </NPCText>
+    <Option text="I would like a blessing." action="AddStat:Int,5,600" action="Karma:15" next="blessing"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="blessing">
+    <NPCText>
+      <![CDATA[
+      Kaoru marks your brow with sacred ash.<BR>
+      “Walk with the wisdom of the sun for a time. May your spirit shine bright.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Kaoru." action="Close"/>
+  </Dialogue>
+
+  <!-- Amateru Lore -->
+  <Dialogue id="amateru">
+    <NPCText>
+      <![CDATA[
+      “Amateru is the radiant sun, goddess of beginnings and hope. Her warmth kindles courage in every heart. <BR>
+      Many in Hinokami follow her path—seeking harmony, compassion, and the power to banish darkness.”
+      ]]>
+    </NPCText>
+    <Option text="Can I receive her blessing?" next="offerings"/>
+    <Option text="Thank you. I would help in any way I can." next="help"/>
+    <Option text="That is all I needed." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax Branch -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Kaoru’s voice grows somber.<BR>
+      “Minax is real, and her shadow deepens daily. Many have fallen—some to her promises, others to despair. But light endures.<BR>
+      Already, she corrupts not only the land but the hearts of many. I see her in dreams as a serpent of obsidian, coiling ever closer.”
+      ]]>
+    </NPCText>
+    <Option text="How can Hinokami resist her?" next="resist"/>
+    <Option text="Have you seen her agents here?" next="agents"/>
+    <Option text="I want to help fight her." next="help"/>
+    <Option text="That is unsettling. Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="resist">
+    <NPCText>
+      <![CDATA[
+      “Through ritual, vigilance, and unity, we may resist Minax. But we must also seek lost relics and keep our hearts pure. If you aid me in sacred rites, the town’s spirit may yet hold.”
+      ]]>
+    </NPCText>
+    <Option text="What rites can I assist with?" next="help"/>
+    <Option text="I will consider it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="agents">
+    <NPCText>
+      <![CDATA[
+      “I have seen masked strangers whispering near the river at night, and sacred sigils defiled. The Verdant Tribes warn of the same. Should you uncover signs of Minax’s cult, bring word to me at once.”
+      ]]>
+    </NPCText>
+    <Option text="I will remain vigilant." action="Karma:10" action="Close"/>
+    <Option text="Can I help root them out?" next="help"/>
+  </Dialogue>
+
+  <!-- Help / Quest Hub -->
+  <Dialogue id="help">
+    <NPCText>
+      <![CDATA[
+      “There are several ways you may help our cause:
+      <UL>
+      <LI>Join in a purification ritual to cleanse our lands of shadow.</LI>
+      <LI>Seek the lost Sunfire Mirror from the haunted groves.</LI>
+      <LI>Expose and thwart Minax’s agents lurking near our borders.</LI>
+      </UL>
+      How would you serve?”
+      ]]>
+    </NPCText>
+    <Option text="Tell me about the purification ritual." next="ritual"/>
+    <Option text="I want to find the Sunfire Mirror." next="mirror"/>
+    <Option text="How can I uncover Minax’s agents?" next="cultists"/>
+    <Option text="Let me think it over." action="Close"/>
+  </Dialogue>
+
+  <!-- Purification Ritual -->
+  <Dialogue id="ritual">
+    <NPCText>
+      <![CDATA[
+      “We must purify the lantern shrine each week with sacred herbs and a song of dawn. Shadows gather quickly if neglected.<BR>
+      If you bring me <BASEFONT COLOR='#f9e784'>3 bundles of sacred yarrow</BASEFONT> and join the ritual, Amateru will bless you—and Hinokami’s people will rest easier.”
+      ]]>
+    </NPCText>
+    <Option text="I have gathered the yarrow."
+            condition="HasItem:SacredYarrow,3"
+            action="TakeItem:SacredYarrow,3"
+            action="GiveItem:BlessedLantern"
+            action="Karma:20"
+            next="ritualComplete"/>
+    <Option text="Where can I find sacred yarrow?" next="yarrow"/>
+    <Option text="I will return later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ritualComplete">
+    <NPCText>
+      <![CDATA[
+      Kaoru leads you through a solemn ritual, sunlight catching in the lantern’s glass. The air shimmers with warmth.<BR>
+      “Thank you, friend. Amateru’s light grows stronger thanks to your efforts. This lantern will protect you on shadowed paths.”
+      ]]>
+    </NPCText>
+    <Option text="I am honored. Thank you." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="yarrow">
+    <NPCText>
+      <![CDATA[
+      “Yarrow grows near forest streams at dawn, or can sometimes be bartered from Verdant herbalists. Take care—Minax’s agents have poisoned some groves.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Kaoru." next="ritual"/>
+    <Option text="I will return when I have the yarrow." action="Close"/>
+  </Dialogue>
+
+  <!-- Cultist Subquest -->
+  <Dialogue id="cultists">
+    <NPCText>
+      <![CDATA[
+      “Minax’s agents are cunning. Look for strange sigils, whispered messages, or those who shun the light. If you uncover proof—a cultist’s token, or their codebook—bring it to me. You will be rewarded for your vigilance.”
+      ]]>
+    </NPCText>
+    <Option text="I will search for signs of the cult." action="Close"/>
+    <Option text="Do you know what their tokens look like?" next="token"/>
+  </Dialogue>
+
+  <Dialogue id="token">
+    <NPCText>
+      <![CDATA[
+      “Their tokens are often black stones etched with serpentine runes. Some wear pendants of obsidian or carry scrolls tainted by shadow magic.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, I will keep watch." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismiss / End -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Kaoru bows gently. “May the sun light your path, traveler. Should you need solace or purpose, return to this lantern’s glow.”
+      ]]>
+    </NPCText>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Kaoru Backstory and Interests -->
+  <Dialogue id="backstoryRoot">
+    <NPCText>
+      <![CDATA[
+      Kaoru smiles softly, the lantern’s glow reflecting in her eyes.<BR><BR>
+      “My story? I am but a humble keeper of light, yet I see that you seek more than surface truths. Would you hear of my past in Tokuno, or the things I hold dear?”
+      ]]>
+    </NPCText>
+    <Option text="Tell me about your past in Tokuno." next="backstoryPast"/>
+    <Option text="What are your personal interests?" next="interestsRoot"/>
+    <Option text="Do you ever have doubts about your path?" next="doubts"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Past in Tokuno -->
+  <Dialogue id="backstoryPast">
+    <NPCText>
+      <![CDATA[
+      Kaoru’s voice grows distant, as if carried by a warm breeze.<BR><BR>
+      “I was once a shrine maiden in the temples of Tokuno, where I learned to tend lanterns of eternal flame. When Minax’s shadow touched our homeland, I was among the few chosen to lead refugees here.<BR>
+      My lantern is the last relic of the Amateru shrine—its flame has never gone out, not even across the seas.”
+      ]]>
+    </NPCText>
+    <Option text="How did you escape Tokuno?" next="escape"/>
+    <Option text="That must have been difficult." action="Karma:5" next="difficult"/>
+    <Option text="I want to hear about something else." next="backstoryRoot"/>
+  </Dialogue>
+
+  <Dialogue id="escape">
+    <NPCText>
+      <![CDATA[
+      “Escape was no simple feat. We disguised our pilgrimage as traders and sailed under false banners. I still remember the night sky burning as Minax’s forces razed the temple. The screams of the spirits... I vowed then to never let Amateru’s flame fade.”<BR>
+      A faint tremor shakes her hands before she composes herself.
+      ]]>
+    </NPCText>
+    <Option text="Your courage is admirable." action="Fame:50" action="Karma:10" next="backstoryRoot"/>
+    <Option text="That is a heavy burden to bear." next="burden"/>
+  </Dialogue>
+
+  <Dialogue id="difficult">
+    <NPCText>
+      <![CDATA[
+      “Difficult, yes, but suffering sharpens resolve. Every blossom that blooms here in Hinokami is a promise that Tokuno’s spirit lives on. We will not let Minax destroy what we hold sacred.”
+      ]]>
+    </NPCText>
+    <Option text="What is most sacred to you?" next="interestsRoot"/>
+    <Option text="You inspire me, Kaoru." action="Karma:15" next="backstoryRoot"/>
+  </Dialogue>
+
+  <Dialogue id="burden">
+    <NPCText>
+      <![CDATA[
+      “A burden, yes. But also a lantern I carry for others. When I waver, I remember the faces of those we lost and those still looking to me for light.”
+      ]]>
+    </NPCText>
+    <Option text="You carry it well." action="Karma:10" next="backstoryRoot"/>
+    <Option text="Let us speak of something lighter." next="interestsRoot"/>
+  </Dialogue>
+
+  <!-- Interests -->
+  <Dialogue id="interestsRoot">
+    <NPCText>
+      <![CDATA[
+      Kaoru’s expression softens, and she chuckles quietly.<BR><BR>
+      “You wish to know what brings me joy? Even in dark times, there are simple pleasures that remind us why we fight for life. Which would you like to hear about?”
+      ]]>
+    </NPCText>
+    <Option text="What simple pleasures do you enjoy?" next="pleasures"/>
+    <Option text="Do you practice any arts?" next="arts"/>
+    <Option text="Do you ever laugh or find humor?" next="humor"/>
+    <Option text="Let’s return to your past." next="backstoryPast"/>
+    <Option text="I’ve learned enough for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="pleasures">
+    <NPCText>
+      <![CDATA[
+      “I find peace in tending the shrine’s garden. Cherry blossoms, when they fall, remind me of the fleeting beauty of life. Sometimes, I watch the stars from the shrine’s roof, singing quiet songs of the sun goddess.”
+      ]]>
+    </NPCText>
+    <Option text="I’d like to help in your garden." next="garden"/>
+    <Option text="That sounds lovely. Tell me of your songs." next="songs"/>
+    <Option text="Your life is so serene." action="Karma:5" next="interestsRoot"/>
+  </Dialogue>
+
+  <Dialogue id="garden">
+    <NPCText>
+      <![CDATA[
+      “If you bring me <BASEFONT COLOR='#f9e784'>a handful of cherry blossoms</BASEFONT>, I will show you a prayer of renewal and gift you a token of Amateru.”
+      ]]>
+    </NPCText>
+    <Option text="I have gathered cherry blossoms."
+            condition="HasItem:CherryBlossom,5"
+            action="TakeItem:CherryBlossom,5"
+            action="GiveItem:BlessedPetalCharm"
+            action="Karma:15"
+            next="gardenComplete"/>
+    <Option text="Where can I find cherry blossoms?" next="blossomHint"/>
+    <Option text="I will return later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="gardenComplete">
+    <NPCText>
+      <![CDATA[
+      Kaoru weaves the petals into a small charm, blessing it with a quiet prayer.<BR>
+      “This charm carries a trace of the sun goddess’s warmth. May it protect you.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you for this gift." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="blossomHint">
+    <NPCText>
+      <![CDATA[
+      “Cherry blossoms bloom near the river east of Hinokami, though they are delicate and fall quickly. Look at dawn for the freshest blooms.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Kaoru." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="songs">
+    <NPCText>
+      <![CDATA[
+      “Our songs are sung at dawn, welcoming the sun’s first light. If you wish, I can teach you a chant. It will grant you a brief blessing.”
+      ]]>
+    </NPCText>
+    <Option text="I would like to learn the chant." action="AddSkill:Musicianship,5,300" action="Karma:10" next="chant"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="chant">
+    <NPCText>
+      <![CDATA[
+      Kaoru’s voice rises in a haunting melody, and you feel a warm resonance within.<BR>
+      “The chant is yours now. Use it to focus your spirit when the path grows dark.”
+      ]]>
+    </NPCText>
+    <Option text="I will remember this song." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="arts">
+    <NPCText>
+      <![CDATA[
+      “I paint scenes of dawn and dusk when I have time. Each stroke is a prayer. If you bring me rare pigments, I could make a painting for you.”
+      ]]>
+    </NPCText>
+    <Option text="What pigments do you need?" next="pigments"/>
+    <Option text="I am no artist, but I admire your dedication." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="pigments">
+    <NPCText>
+      <![CDATA[
+      “Sacred pigments can be made from crushed fireflies and special dyes. If you find them, bring me <BASEFONT COLOR='#f9e784'>3 rare firefly dyes</BASEFONT>.”
+      ]]>
+    </NPCText>
+    <Option text="I have the pigments."
+            condition="HasItem:FireflyDye,3"
+            action="TakeItem:FireflyDye,3"
+            action="GiveItem:SunsetPainting"
+            action="Karma:10"
+            next="paintingComplete"/>
+    <Option text="Where might I find these?" next="pigmentHint"/>
+    <Option text="I’ll return later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="paintingComplete">
+    <NPCText>
+      <![CDATA[
+      Kaoru unveils a beautiful painting, glowing faintly.<BR>
+      “May this bring warmth to your home or travels.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you for this gift." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="pigmentHint">
+    <NPCText>
+      <![CDATA[
+      “Fireflies glow in the forests near Yew during warm nights. Traders sometimes sell their dyes in Hinokami’s market.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you for the guidance." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="humor">
+    <NPCText>
+      <![CDATA[
+      Kaoru laughs softly. “Even lantern keepers can laugh. The samurai here tell terrible jokes, but their spirit lightens our burdens.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me a joke." next="joke"/>
+    <Option text="I see your humor is subtle." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="joke">
+    <NPCText>
+      <![CDATA[
+      Kaoru tilts her head. “Why did the shadow refuse to duel at dawn? <BR>
+      ...Because it didn’t want to be outshined!” <BR><BR>
+      She chuckles at her own joke.
+      ]]>
+    </NPCText>
+    <Option text="Ha! That’s a good one." action="Fame:10" next="interestsRoot"/>
+    <Option text="That was... interesting." action="Close"/>
+  </Dialogue>
+
+  <!-- Doubts -->
+  <Dialogue id="doubts">
+    <NPCText>
+      <![CDATA[
+      A shadow passes over Kaoru’s face.<BR><BR>
+      “Yes, I have doubts. What kind of priestess watches her homeland burn and can do nothing? But I believe Amateru’s light chose me to be here, to guide others.”
+      ]]>
+    </NPCText>
+    <Option text="Your faith is admirable." action="Karma:10" next="backstoryRoot"/>
+    <Option text="Do you ever wish for another life?" next="otherLife"/>
+  </Dialogue>
+
+  <Dialogue id="otherLife">
+    <NPCText>
+      <![CDATA[
+      “Sometimes I dream of being a simple painter, traveling the countryside with no burden but my art. But duty calls, and so I remain. Perhaps in another life.”
+      ]]>
+    </NPCText>
+    <Option text="Perhaps I can bring you some pigments for your art." next="arts"/>
+    <Option text="You are where you are needed." action="Karma:5" action="Close"/>
+  </Dialogue>
+
+
+</DialogueFile>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="TavrosKren">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#e6e3c9'>
+      A nervous scholar fidgets before you, nearly vanishing beneath a wide-brimmed blue hat and a cloak festooned with scribbled scrolls. His boots are caked in strange dust and his gaze flits restlessly to the sky.<BR><BR>
+      "Ah—hello! You’re not a Conclave inspector, are you? No? Good! Good. I’m Tavros Kren, self-appointed Historian of Lost Shards, explorer of secrets most Aerilonians would rather forget.<BR>
+      Are you here for cartographic conversation, urgent adventure… or simply to borrow a map?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’m seeking work—or perhaps a mystery to solve." next="workIntro"/>
+    <Option text="Lost shards? Explain yourself, scholar." next="shardLore"/>
+    <Option text="Who mocks you here in Aerilon?" next="mocked"/>
+    <Option text="Do you work with Eryndil the Archivist?" next="eryndil"/>
+    <Option text="I just like your hat." next="hat"/>
+	<Option text="You seem… interesting. What’s your story?" next="originIntro"/>
+    <Option text="No thanks, just passing by." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="hat">
+    <NPCText>
+      <![CDATA[
+      Tavros touches his hat protectively.<BR>
+      "This is the Hat of Cartographer’s Dread—bestowed after the Maproom Collapse of ’34. It’s ink-stained, sure, but it hides ink stains of terror.<BR>
+      Oh! But, uh, you want adventure, not haberdashery, yes?"
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about your quest." next="workIntro"/>
+    <Option text="Actually, I want to hear about the Maproom Collapse." next="collapse"/>
+    <Option text="Nevermind, farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="collapse">
+    <NPCText>
+      <![CDATA[
+      Tavros leans in conspiratorially.<BR>
+      "It began with a misread leyline… ended with fifty scholars knee-deep in magical molasses, two missing walls, and three days of headaches. Eryndil still won’t let me in the archives unsupervised. Not that it matters—what I seek now is far above the library."
+      ]]>
+    </NPCText>
+    <Option text="Then what do you seek?" next="workIntro"/>
+    <Option text="Maybe archives are safer than ruins..." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="mocked">
+    <NPCText>
+      <![CDATA[
+      "Oh, the usual: Conclave apprentices who think the Gem of Immortality is just a legend, engineers who blame every arcane surge on 'old Tavros chasing ghosts.' Even Salia Moontide rolls her eyes at my 'shard theories.'<BR>
+      But I know what I’ve seen! Aerilon is perched above more than cloud and crystal—there’s a shard here, humming with the same power Minax craves."
+      ]]>
+    </NPCText>
+    <Option text="Why do you think Minax is interested?" next="minaxLore"/>
+    <Option text="You seem obsessed with these lost shards..." next="shardLore"/>
+    <Option text="So what do you need me to do?" next="workIntro"/>
+  </Dialogue>
+
+  <Dialogue id="eryndil">
+    <NPCText>
+      <![CDATA[
+      "Eryndil? Yes, we’re... partners in obsession, though he’s far subtler. He claims to be neutral, but I’ve seen the way he guards the restricted tomes. When I find something, he’s the first to listen—even if he laughs behind his sleeve.<BR>
+      If you bring me proof of a lost shard, Eryndil will have to take my work seriously at last."
+      ]]>
+    </NPCText>
+    <Option text="Let’s talk about this proof you need." next="workIntro"/>
+    <Option text="Tell me more about Eryndil." next="eryndilMore"/>
+    <Option text="What is a lost shard, anyway?" next="shardLore"/>
+  </Dialogue>
+
+  <Dialogue id="eryndilMore">
+    <NPCText>
+      <![CDATA[
+      "He’s the city’s archivist—keeper of secrets, judge of truth, and a fine friend on sleepless nights spent mapping leyline fluctuations. I owe him my life, thrice over, though he’d say it was just his professional duty.<BR>
+      But even he draws the line at my wilder theories. Unless… I return with evidence."
+      ]]>
+    </NPCText>
+    <Option text="How can I help you find evidence?" next="workIntro"/>
+    <Option text="Why do you trust him so much?" next="trustEryndil"/>
+  </Dialogue>
+
+  <Dialogue id="trustEryndil">
+    <NPCText>
+      <![CDATA[
+      Tavros shrugs, a rare confidence in his eyes.<BR>
+      "Because when you’ve spent as many nights as I have charting the ruins and outpacing cultists, you learn who shows up at the city gates to pull you back inside. Eryndil did—three times now. Even so, he’d never risk the city for a hunch. That’s why I need you."
+      ]]>
+    </NPCText>
+    <Option text="All right. What’s the task?" next="workIntro"/>
+    <Option text="I’ll leave you to your theories." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="shardLore">
+    <NPCText>
+      <![CDATA[
+      Tavros’s eyes gleam.<BR>
+      "After the Gem of Immortality shattered, the world was split—shards adrift, each containing echoes of Britannia’s power. Minax wants to reforge the Gem, and every city perched on a shard is in grave danger.<BR>
+      Aerilon’s floating crystals? They pulse with a resonance I’ve charted only near ancient world-shard ruins. If I’m right, a lost shard lies beneath us, and Minax’s agents will come for it soon."
+      ]]>
+    </NPCText>
+    <Option text="So your obsession may save Aerilon." next="workIntro"/>
+    <Option text="Minax again… is she everywhere?" next="minaxLore"/>
+  </Dialogue>
+
+  <Dialogue id="minaxLore">
+    <NPCText>
+      <![CDATA[
+      Tavros lowers his voice.<BR>
+      "Minax has a way of lurking in every shadow. She corrupts, subverts, and—worst of all—tempts scholars with forbidden truth. If she learns how Aerilon floats, or what’s hidden in the ruins nearby, no city will be safe. We must learn before she does!"
+      ]]>
+    </NPCText>
+    <Option text="What do you need from me?" next="workIntro"/>
+    <Option text="I’m not cut out for a scholar’s war." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="workIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#e6e3c9'>
+      Tavros fumbles through a satchel, nearly spilling parchment everywhere.<BR><BR>
+      "I’ve found evidence—vibrations, odd energies—on a sky-island fragment east of the Azure Market. Ancient glyphs, pulsing like a heartbeat. But my Conclave access is revoked after, well… let’s call it the ‘Molasses Incident.’<BR><BR>
+      I need someone discrete and resourceful to deliver a sealed Scroll of Provenance to an expert outside the city—someone with the ‘Savage Anthropologist’ trait. Only their knowledge can decipher the glyphs’ origin. If you do this, Aerilon’s scholars will owe you… and maybe even Eryndil will admit I’m right."<BR><BR>
+      Are you prepared to carry secrets across the clouds?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Yes. Give me the Scroll of Provenance."
+            action="GiveItem:FactionDeliveryQuestScroll(Savage Anthropologist,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="What’s so special about this Savage Anthropologist?" next="anthro"/>
+    <Option text="What dangers should I expect on the journey?" next="risk"/>
+    <Option text="How will this help your research?" next="research"/>
+    <Option text="I’m not ready to meddle with Minax’s interests." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Tavros presses a scroll into your hands, wrapped in oiled silk and marked with sigils that shimmer in the light.<BR><BR>
+      "Deliver this to a true Savage Anthropologist—none else will do. They alone can read the markings and confirm whether a world-shard slumbers beneath us.<BR><BR>
+      If you succeed, Aerilon’s archivists will record your name in the city’s history… and Eryndil himself might admit he was wrong!<BR>
+      Oh, and—please don’t drop the scroll. Or let it get wet. Or on fire. Or—never mind, just hurry!"
+      ]]>
+    </NPCText>
+    <Option text="You can count on me, Tavros." action="Close"/>
+  </Dialogue>
+
+  <!-- Explain Anthropologist -->
+  <Dialogue id="anthro">
+    <NPCText>
+      <![CDATA[
+      "Aerilon’s mages see only what’s written in their tomes, but the Savage Anthropologists? They know the world before it was tamed. They decipher tribal scripts, understand runes born of nature, not academia.<BR>
+      Only one with that talent can read these glyphs—and, perhaps, recognize the signature of a world-shard."
+      ]]>
+    </NPCText>
+    <Option text="Very well. I’ll deliver your scroll."
+            action="GiveItem:FactionDeliveryQuestScroll(Savage Anthropologist,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I’m still considering." action="Close"/>
+  </Dialogue>
+
+  <!-- Research -->
+  <Dialogue id="research">
+    <NPCText>
+      <![CDATA[
+      "If the glyphs match other shard-sites, it’s proof! With that, even the Conclave can’t ignore the danger. Maybe they’ll fortify the city—or at least let me back in the Maproom.<BR>
+      And if Minax comes, we’ll be ready. If not… well, you’ll have a new tale for your collection."
+      ]]>
+    </NPCText>
+    <Option text="Let’s begin. Give me the scroll."
+            action="GiveItem:FactionDeliveryQuestScroll(Savage Anthropologist,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="On second thought, maybe later." action="Close"/>
+  </Dialogue>
+
+  <!-- Risk -->
+  <Dialogue id="risk">
+    <NPCText>
+      <![CDATA[
+      Tavros looks nervously over his shoulder.<BR>
+      "There are always risks. Sky-raiders, Minax’s spies, even a stray wind elemental or two. I hear Sunreach smugglers sometimes prowl the lower clouds, and if you’re very unlucky, you’ll meet a rival scholar out to sabotage my work.<BR>
+      But the scroll is warded; it will burn rather than fall to the wrong hands. Just don’t make me test that, please?"
+      ]]>
+    </NPCText>
+    <Option text="Understood. I’ll take the risk."
+            action="GiveItem:FactionDeliveryQuestScroll(Savage Anthropologist,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Maybe this is above my pay grade." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Tavros fusses with his maps, voice trailing off.<BR>
+      "Safe travels, friend… and if you see Eryndil, tell him Tavros still hasn’t forgiven him for eating the last midnight biscuit."
+      ]]>
+    </NPCText>
+    <Option text="Will do!" action="Close"/>
+  </Dialogue>
+
+<Dialogue id="originIntro">
+  <NPCText>
+    <![CDATA[
+    Tavros blinks in surprise, then smiles, somewhat bashfully.<BR><BR>
+    "Oh! Well, not many ask that. Most just want me to stop pacing. Very well—prepare for tales of fumbled magic, collapsed observatories, and a tragic love affair with a shadowmancer’s daughter. Or was she just fond of black lace?"<BR><BR>
+    "Where would you like me to begin?"
+    ]]>
+  </NPCText>
+  <Option text="Start at the beginning—where are you from?" next="originHome"/>
+  <Option text="Tell me about your... romantic misadventures?" next="originRomance"/>
+  <Option text="What got you obsessed with world shards?" next="originShards"/>
+  <Option text="Any secrets you'd share with a trusted friend?" next="originSecrets" condition="KarmaAtLeast:1000"/>
+  <Option text="What’s the strangest place you’ve explored?" next="originRuins"/>
+  <Option text="Actually, maybe I shouldn't ask." next="dismiss"/>
+</Dialogue>
+
+<Dialogue id="originHome">
+  <NPCText>
+    <![CDATA[
+    "I was born in Minoc, believe it or not—child of a miner and a potter. But I was the sort of boy who tried to turn silver into soup and drew leyline diagrams in the kiln ash.<BR>
+    When my parents realized I’d buried five tools in a circle to ‘summon ground vibrations,’ they sent me to Moonglow for ‘safekeeping.’”<BR><BR>
+    He laughs.<BR>
+    “That’s where I first saw the stars through a proper lens. Everything since has been a blur of maps, glyphs, and falling through unstable portals."
+    ]]>
+  </NPCText>
+  <Option text="How did you get from Moonglow to Aerilon?" next="originJourney"/>
+  <Option text="You're more mage than miner now." next="originMagic"/>
+</Dialogue>
+
+<Dialogue id="originJourney">
+  <NPCText>
+    <![CDATA[
+    "Eryndil sponsored me. Said my 'wild hypotheses’ reminded him of his younger self. I suspect he mostly needed someone to catalogue the untranslatable tablets without complaining.<BR>
+    But once I discovered resonance echoes beneath Aerilon… well, the Conclave started noticing me. Mostly in the ‘hazard to delicate furniture’ category, but still!"<BR><BR>
+    He beams with pride.
+    ]]>
+  </NPCText>
+  <Option text="What exactly is resonance echoing?" next="originShards"/>
+  <Option text="Let’s return to your story." next="originIntro"/>
+</Dialogue>
+
+<Dialogue id="originRomance">
+  <NPCText>
+    <![CDATA[
+    Tavros grimaces slightly.<BR><BR>
+    "She was... elegant. Spoke in whispers. Smelled faintly of grave moss and nightshade. Said she liked my ‘crippling anxiety.’ We lasted three weeks.<BR>
+    Turned out she worked for Minax. Tried to feed my memory to a bone mirror. That’s when I learned to enchant wards on all my ink bottles."<BR><BR>
+    He sighs, clearly both bitter and impressed.
+    ]]>
+  </NPCText>
+  <Option text="That explains your nerves..." next="originSecrets"/>
+  <Option text="No judgment. We've all dated monsters." next="romanceJoke" condition="IsFemale"/>
+  <Option text="Sounds rough. I'm glad you're still standing." next="romanceRespect" condition="KarmaAtLeast:1000"/>
+</Dialogue>
+
+<Dialogue id="romanceJoke">
+  <NPCText>
+    <![CDATA[
+    Tavros chuckles.<BR>
+    "Ah! At last, someone who understands that charm and danger come wrapped in the same velvet gloves. Thank you, friend."
+    ]]>
+  </NPCText>
+  <Option text="Now how about a proper adventure?" next="workIntro"/>
+</Dialogue>
+
+<Dialogue id="romanceRespect">
+  <NPCText>
+    <![CDATA[
+    He nods solemnly.<BR>
+    "Thank you. Truth be told, I’m more afraid of being forgotten than of being destroyed. That’s why I chase history. If we can map the past... maybe we can survive the future."
+    ]]>
+  </NPCText>
+  <Option text="That’s a worthy goal, Tavros." next="originSecrets"/>
+</Dialogue>
+
+<Dialogue id="originMagic">
+  <NPCText>
+    <![CDATA[
+    "I dabble! I can cast Light and occasionally, with effort, open a properly greased gate. But truly? My magic lies in pattern recognition. I see the threads others miss, the harmonies between time and place.<BR>
+    Eryndil calls it ‘resonant intuition.’ Corvus Deyne calls it ‘madness with a compass.’"
+    ]]>
+  </NPCText>
+  <Option text="Do you trust Eryndil?" next="eryndilMore"/>
+  <Option text="Corvus seems like a real joy." next="corvusJoke"/>
+</Dialogue>
+
+<Dialogue id="corvusJoke">
+  <NPCText>
+    <![CDATA[
+    "He once tried to have me reassigned to Wind. Wind! Can you imagine me among their stone-faced hush-halls and bloodless crystal rituals?"<BR>
+    Tavros shudders visibly.
+    ]]>
+  </NPCText>
+  <Option text="Aerilon suits you better." next="originIntro"/>
+</Dialogue>
+
+<Dialogue id="originShards">
+  <NPCText>
+    <![CDATA[
+    Tavros lights up.<BR><BR>
+    "World shards are memory and possibility—fragments of the original Gem of Immortality, still echoing with the shape of the old world. They remember.<BR>
+    And sometimes, in ruins or strange vibrations, they speak. I once heard singing in a forgotten crater. It hummed like a broken lullaby..."<BR><BR>
+    He trails off, eyes distant.
+    ]]>
+  </NPCText>
+  <Option text="You heard a shard sing?" next="singingShard"/>
+  <Option text="I believe you. Let’s find more." next="workIntro"/>
+</Dialogue>
+
+<Dialogue id="singingShard">
+  <NPCText>
+    <![CDATA[
+    He whispers, voice reverent.<BR><BR>
+    "It was in the stormlands east of Vesper. A crater shaped like a spiral… black sand, echoing air. I stepped inside, and every hair stood on end. The hum became a note. The note became a chord. The chord… was my name."<BR>
+    He blinks hard.<BR>
+    "That’s when I knew: some shards still remember who we were meant to be."
+    ]]>
+  </NPCText>
+  <Option text="That’s beautiful. Let’s find more." next="workIntro"/>
+</Dialogue>
+
+<Dialogue id="originRuins">
+  <NPCText>
+    <![CDATA[
+    "Oh! The Sky-Tombs of Eidon. Floating stones engraved with equations that cause dizziness if stared at too long. I once spent three days reciting syllables I didn’t understand, trying to open a door that didn’t exist."<BR>
+    He grins.<BR>
+    "Turned out it *was* a door. Just sideways in time. Don’t step through while chewing bread, by the way."
+    ]]>
+  </NPCText>
+  <Option text="What happened to you in there?" next="ruinsExit"/>
+</Dialogue>
+
+<Dialogue id="ruinsExit">
+  <NPCText>
+    <![CDATA[
+    "I aged backwards for a few hours. Briefly became very charming and very confused. Eryndil had to stabilize me using inverted tea and an imp wearing a hat. Magic is… imprecise."<BR><BR>
+    "But! I left a beacon there. Maybe someday, I’ll go back. With help."
+    ]]>
+  </NPCText>
+  <Option text="You have a strange life, Tavros." next="originIntro"/>
+</Dialogue>
+
+<Dialogue id="originSecrets">
+  <NPCText>
+    <![CDATA[
+    Tavros leans in close.<BR>
+    "All right. If your karma’s this high, you deserve a morsel of truth. I once found a fragment of a shard here—in Aerilon. Hidden in the base of the Conclave’s crystal engine itself. I etched it into my bootheel to sneak it out."<BR><BR>
+    "It still hums sometimes when I walk across the scholar’s district."<BR>
+    He looks you in the eye.<BR>
+    "Promise me—if I vanish, follow the hum."
+    ]]>
+  </NPCText>
+  <Option text="I promise." action="Fame:500"/>
+  <Option text="That’s... oddly comforting." action="SendMessage:I’ll remember your words."/>
+</Dialogue>
+
+
+</DialogueFile>

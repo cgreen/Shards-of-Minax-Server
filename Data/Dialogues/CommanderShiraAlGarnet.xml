@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="CommanderShiraAlGarnet">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#B33A3A'>
+      Before you stands a vigilant woman in a crimson-crested helm and desert-worn hauberk, her posture rigid but her eyes sharp with purpose.<BR><BR>
+      “Halt! This is the domain of the Ruby Guard. I am Commander Shira al-Garnet—loyal to Qasaria, loyal to Rafiq, and loyal to order above all. State your business. There is little patience for loiterers or would-be spies in my city.”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I wish to serve the city, Commander." next="taskIntro"/>
+    <Option text="Your reputation precedes you. Who are you, truly?" next="backstory"/>
+    <Option text="What do you know of the Council of Jewels?" next="council"/>
+    <Option text="Any work for someone who can handle themselves?" next="taskIntro"/>
+	<Option text="Tell me more about yourself, Commander." next="deepBackstoryIntro"/>
+    <Option text="I’m just passing through." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Backstory branch -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      Shira’s jaw sets. “I was not born to command. My name was a stain in Qasaria for years—my platoon was blamed for a failed defense at the River of Stones. I clawed back my honor in the dunes, bled for every officer’s respect. Rafiq al-Ruby saw more than a scapegoat. He named me Commander, not for my lineage, but for my resolve.<BR>
+      Do not mistake loyalty for blindness. Qasaria is riddled with those who crave power, not peace.”
+      ]]>
+    </NPCText>
+    <Option text="Rafiq must trust you greatly." next="rafiq"/>
+    <Option text="Do you trust the other councilmembers?" next="council"/>
+    <Option text="Your strength inspires loyalty." next="taskIntro"/>
+    <Option text="Can you offer work for someone of integrity?" next="taskIntro"/>
+  </Dialogue>
+
+  <!-- Rafiq branch -->
+  <Dialogue id="rafiq">
+    <NPCText>
+      <![CDATA[
+      “Rafiq al-Ruby is a good man, even if his ideals sometimes cloud his judgment. He stands for Qasaria as it was—proud, independent, not some puppet of Magincia or Nujel’m. He gave me a second chance; I will not let him—or this city—fall while I draw breath.”
+      ]]>
+    </NPCText>
+    <Option text="And the others on the council?" next="council"/>
+    <Option text="Let’s discuss more pressing matters." next="taskIntro"/>
+  </Dialogue>
+
+  <!-- Council branch -->
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      Shira scowls, her tone low.<BR><BR>
+      “The Council of Jewels. Five princes and princesses, each sharper than a scorpion’s sting. Safiya al-Sapphire cares only for her profit margins—she’d trade Qasaria’s soul for the right price. Karim al-Emerald? I trust him less than a glass blade in battle; he plants spies where my soldiers should be.<BR>
+      Yasmin al-Topaz locks herself away with relics and secrets. Omar al-Onyx is loyal… until his next arena champion tempts him otherwise.<BR>
+      But this city stands because some of us still value duty over coin or magic. Rafiq and I are among the last.”
+      ]]>
+    </NPCText>
+    <Option text="You sound beset on all sides." next="taskIntro"/>
+    <Option text="Are you at odds with Yasmin’s mystics?" next="magic"/>
+    <Option text="Do you have work rooting out these spies?" next="taskIntro"/>
+  </Dialogue>
+
+  <!-- Magic branch -->
+  <Dialogue id="magic">
+    <NPCText>
+      <![CDATA[
+      Shira’s voice is cold.<BR>
+      “I do not trust magic—not since I watched a sorcerous betrayal cost us a hundred lives at the River of Stones. Yasmin and her circle claim to serve the city, but their secrets breed more secrets. Let them study relics and desert omens, but I will keep Qasaria’s streets safe the old-fashioned way.”
+      ]]>
+    </NPCText>
+    <Option text="I respect your caution. How can I help?" next="taskIntro"/>
+    <Option text="Magic can be a tool for good, if kept in check." next="taskIntro"/>
+    <Option text="Your distrust is noted. Perhaps I should be going." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Shira nods curtly. “Then move along. Qasaria’s streets are not a playground. But if you wish to prove your loyalty, come back with purpose.”
+      ]]>
+    </NPCText>
+    <Option text="On second thought, have you any work?" next="taskIntro"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Introduction -->
+  <Dialogue id="taskIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#B33A3A'>
+      Shira lowers her voice, scanning the shadows.<BR><BR>
+      “Listen closely. Karim al-Emerald and Safiya al-Sapphire have been seeding my barracks with spies—servants, scribes, even supposed recruits. My Ruby Guard bleeds discipline, but loyalty cannot be taken for granted. I need an outsider to confirm my suspicions. Someone not yet tainted by council intrigue.<BR><BR>
+      Find three suspects among the barracks—speak with each, uncover their true allegiances, and return with proof. But beware: some may try to bribe or threaten you. Choose carefully who you accuse. If you’re discovered aiding Karim or Safiya, do not expect my gratitude.”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will expose the traitors, Commander." action="GiveItem:FactionDeliveryQuestScroll(Ruby Guard, Qasaria, 400)" condition="!HasItem:FactionDeliveryQuestScroll" next="accept"/>
+    <Option text="Why do you trust me with this?" next="whytrust"/>
+    <Option text="If I help you, will Rafiq reward me?" next="rafiqreward"/>
+    <Option text="What if the spies are innocent?" next="innocent"/>
+    <Option text="This is not my fight." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="whytrust">
+    <NPCText>
+      <![CDATA[
+      “You’re new blood. Not yet tangled in the Council’s web—or at least, I hope so. Outsiders see what my loyalists cannot. And frankly, if you betray me, I’d rather know now than later.”
+      ]]>
+    </NPCText>
+    <Option text="I will prove myself worthy." action="GiveItem:FactionDeliveryQuestScroll(Ruby Guard, Qasaria, 400)" condition="!HasItem:FactionDeliveryQuestScroll" next="accept"/>
+    <Option text="Maybe you’re right to be paranoid…" next="taskIntro"/>
+    <Option text="On second thought, I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="rafiqreward">
+    <NPCText>
+      <![CDATA[
+      Shira grins for the first time.<BR>
+      “Rafiq rewards courage and loyalty. Prove yourself, and you will earn a favor from the Ruby Prince himself. But cross me—or play both sides—and you may find Qasaria’s gates less welcoming.”
+      ]]>
+    </NPCText>
+    <Option text="I accept your terms." action="GiveItem:FactionDeliveryQuestScroll(Ruby Guard, Qasaria, 400)" condition="!HasItem:FactionDeliveryQuestScroll" next="accept"/>
+    <Option text="Sounds risky. I’ll decline." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="innocent">
+    <NPCText>
+      <![CDATA[
+      “Then bring me proof of their innocence, and I will judge accordingly. I punish only traitors. But remember—every hour wasted gives Karim’s agents more time to burrow deeper.”
+      ]]>
+    </NPCText>
+    <Option text="I will investigate with care." action="GiveItem:FactionDeliveryQuestScroll(Ruby Guard, Qasaria, 400)" condition="!HasItem:FactionDeliveryQuestScroll" next="accept"/>
+    <Option text="I cannot risk accusing innocents." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Shira hands you a wax-sealed dossier stamped with the mark of the Ruby Guard.<BR><BR>
+      “This contains the names and quarters of three suspects. Use your judgment—interrogate, persuade, bribe, or spy as you see fit. Bring me evidence: tokens, confessions, or coded missives. Choose your allies wisely; my gratitude is reserved for those who serve Qasaria, not her enemies.<BR><BR>
+      Go—and trust no one in the barracks. Not even me.”
+      ]]>
+    </NPCText>
+    <Option text="Understood. I will return with answers." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="deepBackstoryIntro">
+  <NPCText>
+    <![CDATA[
+    Shira folds her arms, eyeing you warily.<BR><BR>
+    “Few ask who I was before I wore this helm. You’re either bold—or looking for leverage. But fine. You want to know who I am? Listen, and listen well. There are truths in this city that weigh heavier than plate armor.”
+    ]]>
+  </NPCText>
+  <Option text="I listen to understand, not to judge." next="childhood"/>
+  <Option text="You clearly earned your rank. I respect that." next="honor"/>
+  <Option text="Is this another tale of a fallen noble turned patriot?" next="insulted"/>
+</Dialogue>
+
+<Dialogue id="childhood">
+  <NPCText>
+    <![CDATA[
+    “I was born in the gutters of Old Qasaria—before the city rose atop sandglass towers and silken dreams. My mother was a stonemason. My father, a soldier who never came home. I learned early how to fight for my meals, and later, how to fight for others.”<BR><BR>
+    She pauses. “When Rafiq marched on the renegades of the Crimson Divide, I volunteered. They said gutter-born scum couldn’t wear a uniform. I made them eat those words… with bloodied teeth.”
+    ]]>
+  </NPCText>
+  <Option text="That sounds like a hard road." next="trials"/>
+  <Option text="And now you command the Ruby Guard." next="honor"/>
+</Dialogue>
+
+<Dialogue id="honor">
+  <NPCText>
+    <![CDATA[
+    “I earned every stripe by bleeding beside my comrades. But command isn’t just shouting orders and polishing steel. It’s keeping weak men strong and strong men honest.<BR>
+    That’s where I differ from Omar al-Onyx. He trains champions. I raise defenders.”
+    ]]>
+  </NPCText>
+  <Option text="Sounds like you’ve no love for the arena." next="omarArena"/>
+  <Option text="Have you ever fought in it?" condition="SkillAtLeast:Swords,70" next="arenaPast"/>
+</Dialogue>
+
+<Dialogue id="omarArena">
+  <NPCText>
+    <![CDATA[
+    “The Sands of Blood? Glorified slaughter. Entertainment for bored nobles and criminals. Real battles don’t give you cheering crowds. Just dirt, screaming, and regret.”<BR><BR>
+    She grimaces. “Omar drinks applause like wine. But out there, on the dunes? Applause doesn’t stop arrows.”
+    ]]>
+  </NPCText>
+  <Option text="That’s fair. I’ve seen real battles myself." condition="FameAtLeast:2500" next="respect"/>
+  <Option text="Still, arena fighters are brave too." next="disagreeArena"/>
+</Dialogue>
+
+<Dialogue id="arenaPast">
+  <NPCText>
+    <![CDATA[
+    Shira’s lips curl in a rare smirk.<BR>
+    “Once. Long ago. Before the Guard. I fought under the name *Scorpion’s Dagger*—to pay for my mother’s debts. Three wins, no deaths. I walked away before the crowd could claim my soul.”<BR>
+    She leans in. “Don’t tell Omar. He’d challenge me to a rematch.”
+    ]]>
+  </NPCText>
+  <Option text="Your secret is safe with me." action="AddStat:Dex,5,300" next="respect"/>
+  <Option text="Maybe you still have some fight left in you." next="challenge"/>
+</Dialogue>
+
+<Dialogue id="challenge">
+  <NPCText>
+    <![CDATA[
+    “Careful, soldier. Flattery smells a lot like provocation. You don’t want to see what the Ruby Guard trains for when the crowds aren’t watching.”<BR>
+    She narrows her eyes. “Unless you’re *that* bored.”
+    ]]>
+  </NPCText>
+  <Option text="Let’s keep this friendly… for now." next="respect"/>
+  <Option text="Maybe I do want a sparring session." condition="StatAtLeast:Str,80" action="SendMessage:She nods toward the practice yard..." next="sparHook"/>
+</Dialogue>
+
+<Dialogue id="disagreeArena">
+  <NPCText>
+    <![CDATA[
+    “They are. But bravery without purpose is just noise. Qasaria needs discipline, not spectacle. Still, I don’t begrudge those who survive the pit. Just don’t mistake the sand for the battlefield.”
+    ]]>
+  </NPCText>
+  <Option text="We see differently, but I respect your view." next="respect"/>
+</Dialogue>
+
+<Dialogue id="respect">
+  <NPCText>
+    <![CDATA[
+    “Not many outsiders ask questions like these. Fewer still listen. I’ll remember that.”<BR>
+    Shira looks away, then back.<BR>
+    “If you truly wish to serve Qasaria, understand this: loyalty isn’t given—it’s earned. Come back when you’re ready to prove yours.”
+    ]]>
+  </NPCText>
+  <Option text="You have my word. I’ll return with purpose." action="Fame:+200" next="returnPoint"/>
+  <Option text="I already walk that path." condition="KarmaAtLeast:0" action="Karma:+100" next="returnPoint"/>
+</Dialogue>
+
+<Dialogue id="returnPoint">
+  <NPCText>
+    <![CDATA[
+    “Then go. Watch the streets. Feel their pulse. The rot spreads from beneath the silken towers. The sooner you see it, the sooner you’ll understand why I trust blades more than words.”
+    ]]>
+  </NPCText>
+  <Option text="Then I’ll return with more than words." action="Close"/>
+</Dialogue>
+
+<Dialogue id="trials">
+  <NPCText>
+    <![CDATA[
+    “Hard roads forge sharp blades. Mine was crooked, bloody, and full of regret. I’ve buried friends. Burned bridges. Broken my word—once. Never again.”<BR>
+    She looks away.<BR>
+    “The day I watched my mentor fall in the ambush at Echo Dune, I vowed I’d make Qasaria stronger than the desert that devours us. Every spy rooted, every wall reinforced—that’s my penance.”
+    ]]>
+  </NPCText>
+  <Option text="Sounds like you’ve paid your dues." next="respect"/>
+  <Option text="You carry a heavy burden." action="AddStat:Int,5,300" next="respect"/>
+</Dialogue>
+
+<Dialogue id="insulted">
+  <NPCText>
+    <![CDATA[
+    Shira’s voice turns to steel.<BR>
+    “Careful. Your tongue might get you thrown from the barracks before your boots leave the gate. I may be loyal to Qasaria—but I don’t suffer fools in my ranks.”
+    ]]>
+  </NPCText>
+  <Option text="My apologies. That was uncalled for." action="Karma:-100" next="backstory"/>
+  <Option text="Then let’s keep things professional." action="Close"/>
+</Dialogue>
+
+<Dialogue id="sparHook">
+  <NPCText>
+    <![CDATA[
+    Shira cracks her neck. “Fine. Meet me at the Ruby Guard’s sparring circle at dusk. No spells. No theatrics. Just steel.”<BR>
+    <BASEFONT COLOR='#C04040'>[A new sidequest becomes available at the sparring arena after 6PM game time]</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="I’ll be there." action="SendMessage:A sparring session is now unlocked at the Ruby Guard training ground." next="respect"/>
+</Dialogue>
+
+
+</DialogueFile>

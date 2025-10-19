@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="LiraSnowbrew">
+
+  <!-- ========== Greeting ========= -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#88cfff'>
+      A wave of herbal steam and warm laughter greets you at the <B>White Boar Inn</B>. Behind the bar, a woman with frost-touched hair, a <I>Winterspring Garland</I> atop her brow, and alchemist's stains on her apron sets a mug down with practiced cheer.<BR><BR>
+      "Well, well! Someone braving the cold, or just desperate for my famous <U>Frostfire Mead</U>? Name’s <B>Lira Snowbrew</B>—I pour the drinks, mend the hearts, and keep half the village from freezing solid.<BR><BR>
+      If you’re looking for a warm hearth, new friends, or trouble with a splash of ice, you’re in the right place! What’ll it be, traveler?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Heard you’re the heart of Frostmere. Got a minute to talk?" next="heart"/>
+    <Option text="Can you teach me about frost potions and alchemy?" next="alchemy"/>
+    <Option text="Any rumors or trouble brewing lately?" next="trouble"/>
+	<Option text="Tell me about yourself, Lira. Who were you before Frostmere?" next="liraBackstory"/>
+    <Option text="I’d just like a drink and a bit of quiet, thanks." next="quiet"/>
+  </Dialogue>
+
+  <!-- ==== Heart of the Village ==== -->
+  <Dialogue id="heart">
+    <NPCText>
+      <![CDATA[
+      Lira grins, wiping her hands on her <I>Alchemist’s Iceveil</I>.<BR><BR>
+      "‘Heart’ is a bit much, but I do see most of what goes on—especially after a few mugs of mead. When you grow up in Frostmere, you learn quick: folks need warmth as much as food. That’s why I took over after old Merek froze his nose shut with a miscast spell—still keeps it in a jar upstairs, he does.<BR><BR>
+      My brother Kaelen stirs up more magical messes than I can count, and someone’s got to keep him out of the snowdrifts. Most nights I’m half innkeeper, half alchemist, and a little smuggler when the supply lines freeze. Don’t tell Bryndra." 
+      ]]>
+    </NPCText>
+    <Option text="You and Kaelen close, then?" next="kaelen"/>
+    <Option text="I’m looking for work—need anything dangerous done?" next="danger"/>
+    <Option text="What do you think of Bryndra and the militia?" next="bryndra"/>
+    <Option text="Sounds cozy. I’ll let you get back to it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="kaelen">
+    <NPCText>
+      <![CDATA[
+      She laughs, rolling her eyes affectionately.<BR><BR>
+      "Close as ice and fire, some days. Kaelen’s brilliant, but always two steps ahead of his common sense. Last week he tried to ‘improve’ my frostbrew recipe with wyvern blood—almost blew the inn sky-high. I keep him in line when I can. If you see him wandering with that mad look, steer him back my way before Irinya starts muttering about omens."
+      ]]>
+    </NPCText>
+    <Option text="Will do. Now—got any work for me?" next="danger"/>
+    <Option text="Tell me about the Obelisk everyone’s so worried about." next="obelisk"/>
+    <Option text="I’m done chatting for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      Lira leans in, lowering her voice, eyes darting toward the frosted windows.<BR><BR>
+      "As a matter of fact, there <I>is</I> something. A certain armored pest—calls himself the <B>Frostbound Knight</B>—has been haunting the roads at dusk. Used to be a hero, they say, but now he’s all blue flame and frozen steel, and he’s scaring my suppliers off.<BR><BR>
+      I’d go myself, but Bryndra gets prickly when I vanish into the night, and besides… fighting undead knights isn’t great for business. If you’re feeling brave, bring me his ‘<U>Frostforged Sigil</U>’ as proof, and I’ll see you rewarded—with gold and a taste of my rarest brew. What do you say?"
+      ]]>
+    </NPCText>
+    <Option text="I’ll deal with the Frostbound Knight for you."
+      action="GiveItem:FactionKillQuestScroll(FrostboundKnight,1,Frostmere,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="What’s the story behind this Frostbound Knight?" next="knightLore"/>
+    <Option text="Couldn’t Bryndra’s militia handle him?" next="bryndra"/>
+    <Option text="This sounds dangerous. Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      She grins, pouring you a splash of blue-tinged mead.<BR><BR>
+      "That’s the spirit! You’ll find him stalking the northern pass at twilight, armor steaming with cold. Watch yourself—he was a terror even before Minax cursed him. And if you find anything odd—a locket, a book—bring it back. Kaelen and Irinya will want a look. Good luck, and don’t freeze solid!"
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with the sigil." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="knightLore">
+    <NPCText>
+      <![CDATA[
+      Lira pours herself a drink, voice dropping.<BR><BR>
+      "His real name was Sir Edric Tern—once defended this place against raiders, years before Minax ever showed her face. Then, something happened out by the Obelisk. Folk say he bargained for power to protect us, but the magic took his mind. Now he’s just cold steel and fury.<BR><BR>
+      Some still leave flowers by the road, hoping his soul will remember. If you find any sign of the old Edric, let me know. There’s some in town who would want to put him to rest."
+      ]]>
+    </NPCText>
+    <Option text="All right, I’ll do it."
+      action="GiveItem:FactionKillQuestScroll(FrostboundKnight,1,Frostmere,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="On second thought, maybe not for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="bryndra">
+    <NPCText>
+      <![CDATA[
+      She gives a sly grin.<BR><BR>
+      "Bryndra’s heart’s in the right place—just ask the militia, they’d march into a blizzard for her. But she likes to keep everything ‘orderly’, and I’m a bit too… flexible for her taste. We’re friends, mostly, but she’s always fussing about my side dealings with Sunreach and my ‘unregistered alchemy.’<BR><BR>
+      But between you and me, if it weren’t for Bryndra, this place would have melted away. Just don’t get caught arguing with her about weapon permits. She’s still mad about the explosive honey incident."
+      ]]>
+    </NPCText>
+    <Option text="I’ll keep that in mind. About that job…?" next="danger"/>
+    <Option text="Thanks for the warning. I’ll leave you be." action="Close"/>
+  </Dialogue>
+
+  <!-- ==== Alchemy branch ==== -->
+  <Dialogue id="alchemy">
+    <NPCText>
+      <![CDATA[
+      Her eyes light up, and she gestures to the cluttered shelf behind her.<BR><BR>
+      "You’ve come to the right hands! I brew frost-resistance elixirs, warming spirits, even some potions the militia aren’t supposed to know about. If you bring me a few <U>Glacier Petals</U> and a <U>Wisp-Root</U>, I’ll show you how to craft a potion that’ll keep you toasty on even the coldest night.<BR><BR>
+      Of course, the rarest herbs only grow near Minax’s corruption—tricky, that. Just don’t mix them with anything Kaelen gives you, unless you want to see through walls or turn blue for a week."
+      ]]>
+    </NPCText>
+    <Option text="What’s the story with Kaelen’s wild magic?" next="kaelen"/>
+    <Option text="Where do I find these herbs?" next="herbs"/>
+    <Option text="Sounds complicated. Maybe just a drink, then." next="quiet"/>
+  </Dialogue>
+
+  <Dialogue id="herbs">
+    <NPCText>
+      <![CDATA[
+      She taps a battered map behind the bar.<BR><BR>
+      "Glacier Petals grow along the southern ice cliffs—mind the frostbats. Wisp-Root is rarer, found near the old Minax shrine, northeast of the Obelisk. You’ll want to watch for glowing spores—nasty things. If you bring them here, I’ll set up the alchemy bench and teach you a trick or two."
+      ]]>
+    </NPCText>
+    <Option text="Thanks, I’ll start searching." action="Close"/>
+    <Option text="Maybe some other time." action="Close"/>
+  </Dialogue>
+
+  <!-- ==== Rumors / Trouble ==== -->
+  <Dialogue id="trouble">
+    <NPCText>
+      <![CDATA[
+      She lowers her voice, eyes flickering to a frost-rimed window.<BR><BR>
+      "Rumors? Always. Garrik’s hammer’s gone missing again—blames Svala, but I think it’s the goats. Irinya says the Obelisk has started to hum at midnight, which has half the elders sleepless. And if you hear singing from the lake, best ignore it—Corla’s feeding the dead again.<BR><BR>
+      Oh, and the Frostbound Knight is making trouble for my couriers. If you’re feeling bold, I could use a hand dealing with him. Interested?"
+      ]]>
+    </NPCText>
+    <Option text="Tell me about the Frostbound Knight." next="danger"/>
+    <Option text="Any news about Minax or her agents?" next="minax"/>
+    <Option text="No trouble for me, thanks." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Lira’s expression turns serious.<BR><BR>
+      "Minax’s agents? Never far, I’m afraid. Sunreach sent word that a merchant vanished on the pass. We’ve spotted blue-green flames on the tundra—Kaelen says it’s ‘anomalous entropy,’ but I say it’s Minax’s spies. If you find any tokens or runes with her mark, burn them or bring them straight to Irinya. There’s no magic more treacherous than hope turned sour."
+      ]]>
+    </NPCText>
+    <Option text="I’ll be careful. About that knight…?" next="danger"/>
+    <Option text="Thanks for the warning. I’ll lay low." action="Close"/>
+  </Dialogue>
+
+  <!-- ==== Quiet / End ==== -->
+  <Dialogue id="quiet">
+    <NPCText>
+      <![CDATA[
+      Lira smiles, filling your mug with a steaming, sweet-smelling brew.<BR><BR>
+      "Every hero needs a rest—and every story needs an audience. Stay as long as you like, traveler. The White Boar’s always warmer than the wind outside."
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Lira." action="Close"/>
+  </Dialogue>
+
+  <!-- ==== Obelisk Lore ==== -->
+  <Dialogue id="obelisk">
+    <NPCText>
+      <![CDATA[
+      Lira’s gaze goes distant, voice dropping.<BR><BR>
+      "The Obelisk of Veyra? It’s older than any here remember—older than Frostmere itself, I wager. It keeps us safe from Minax’s worst magic, but nothing comes free. Some nights, I hear it singing, and it’s not always a lullaby. Kaelen wants to unlock its power. Irinya says it’s a prison. Me? I think it’s both a blessing and a warning.<BR><BR>
+      If you’re wise, don’t linger near it after dark. Too many shadows move in the ice."
+      ]]>
+    </NPCText>
+    <Option text="Chilling advice. Thanks for the story." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="liraBackstory">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#88cfff'>
+    Lira leans against the bar, exhaling a slow breath that frosts in the air.<BR><BR>
+    "Before Frostmere? Hah. That’s a tale with bitter edges and too many burned pages. I grew up near Moonglow, just a fisher’s daughter. My mother—gods rest her—ran a potion shop near the docks. She taught me alchemy, brewing, charmcraft… and how to hide a blade in a bouquet."<BR><BR>
+    Her smile fades for a moment.<BR>
+    "Then the cults came. Minax’s rot spread quick. I lost her in the smoke. Frostmere offered me a second life—half frost, half flame. Now I make potions, pour drinks, and keep my brother from turning into a glacier."
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Sounds like you’ve lived many lives already." next="liraWisdom"/>
+  <Option text="Moonglow? So you were once part of the Mage’s Guild?" next="moonglowPast"/>
+  <Option text="Do you ever think about leaving Frostmere?" next="wanderlust"/>
+  <Option text="Wait—you mentioned charmcraft. You studied enchantments?" next="charmcraft"/>
+</Dialogue>
+
+<!-- Wisdom Path -->
+<Dialogue id="liraWisdom">
+  <NPCText>
+    <![CDATA[
+    "Wisdom’s a fancy word for scars you’ve named. I’ve earned a few. But scars don’t mean you stop dancing." She smirks, sliding a warm mug your way.<BR><BR>
+    "Now… question is, how many stories do <I>you</I> carry?"
+    ]]>
+  </NPCText>
+  <Option text="Too many to count." action="Karma:+100" />
+  <Option text="None worth telling." action="Karma:-100" />
+  <Option text="I’d rather hear yours, honestly." next="secretLiraLore"/>
+</Dialogue>
+
+<Dialogue id="secretLiraLore">
+  <NPCText>
+    <![CDATA[
+    She narrows her eyes, then nods slowly.<BR><BR>
+    "Alright. One secret, for one willing soul: My garland? The <U>Winterspring</U>? It’s made from petals grown in a cave bathed in Obelisk light. It hums if danger is near—Kaelen thinks it’s attuned to me. I think it remembers my mother."<BR><BR>
+    She taps her cup twice.<BR>
+    "But that’s between us, friend."
+    ]]>
+  </NPCText>
+  <Option text="Your secret is safe with me." action="Karma:+50" />
+  <Option text="That sounds… cursed." action="Karma:-50" />
+</Dialogue>
+
+<!-- Moonglow Mage Past -->
+<Dialogue id="moonglowPast">
+  <NPCText>
+    <![CDATA[
+    Lira laughs dryly.<BR><BR>
+    "Oh, I was a ‘guildling’, aye—briefly. Apprentice brewer in the Moonglow Circle. But they frowned on... improvisation. I tried adding phoenix dust to a freezing salve once. It exploded. Beautifully.<BR><BR>
+    Kaelen begged them to let me stay, but it was easier for them to exile two than risk one. Frostmere was waiting, and I had tricks up my sleeves they never dreamed of."
+    ]]>
+  </NPCText>
+  <Option text="Sounds like Moonglow’s loss." action="Fame:+100"/>
+  <Option text="You’re lucky they didn’t turn you into a toad." action="PlaySound:0x03E"/>
+</Dialogue>
+
+<!-- Wanderlust Option -->
+<Dialogue id="wanderlust">
+  <NPCText>
+    <![CDATA[
+    Lira spins a bottle on the bar absentmindedly.<BR><BR>
+    "Sometimes. I dream of deserts with fire-orange skies, or floating cities where magic pours from fountains. But I’ve got roots here. The inn, Kaelen, the villagers… even Bryndra’s scowl.<BR><BR>
+    Besides, where else can I pour drinks for ghost-hunters and cursed knights while brewing illegal elixirs by moonlight?"
+    ]]>
+  </NPCText>
+  <Option text="When you put it that way, this place sounds perfect." action="Fame:+50" />
+  <Option text="Maybe someday you’ll leave—take your garland to warmer winds." next="departureHope"/>
+</Dialogue>
+
+<Dialogue id="departureHope">
+  <NPCText>
+    <![CDATA[
+    She grins wistfully.<BR><BR>
+    "Maybe. And if I do, I’ll leave a frostbrew barrel just for you—etched with your name in Obelisk script. Deal?"
+    ]]>
+  </NPCText>
+  <Option text="Deal." action="Karma:+100" />
+</Dialogue>
+
+<!-- Charmcraft & Hidden Ability -->
+<Dialogue id="charmcraft">
+  <NPCText>
+    <![CDATA[
+    Her eyes twinkle.<BR><BR>
+    "Caught that, did you? Aye, I studied enchantments. Not the flashy kind—more subtle things. A whisper to make someone pause, a draft to ease sorrow. Once made a love potion that worked too well… they chased each other across town naked. Poor Bryndra nearly resigned.<BR><BR>
+    I still dabble. If your Charm skill’s strong enough, I might even show you a trick."
+    ]]>
+  </NPCText>
+  <Option text="Show me—my Charm is strong." condition="SkillAtLeast:Begging,80" action="AddSkill:Begging,+10,120"/>
+  <Option text="Maybe later. Sounds risky." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

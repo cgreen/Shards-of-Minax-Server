@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="ZarrahTheBarkbound">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#93ce83'>
+      Before you stands a woman almost one with the ancient tree—her skin bark-like, hair hung with moss and wildflowers. She moves slowly, as if her limbs are roots. Her eyes gleam with centuries of wisdom.<BR><BR>
+      "Greetings, leaf-walker. I am Zarrah, Barkbound and hermit of the Verdant groves. The wind brings strange omens... What stirs you to this sacred soil?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek wisdom from the old groves." next="lore"/>
+    <Option text="You seem troubled, Barkbound. What weighs on your heart?" next="trouble"/>
+    <Option text="Are you truly part tree?" next="treeflesh"/>
+	<Option text="I want to know more about *you*, Zarrah." next="barkbound_intro"/>
+    <Option text="Just passing through." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Lore about the Verdant and the groves -->
+  <Dialogue id="lore">
+    <NPCText>
+      <![CDATA[
+      Zarrah nods, bark skin creaking. <BR><BR>
+      "Long before stone and steel, our tribes lived in balance with forest and stream. The groves remember all things—songs, sorrows, and the shadow that creeps anew. Ask, and I shall share what the roots recall."
+      ]]>
+    </NPCText>
+    <Option text="Tell me of the Verdant Tribes." next="tribes"/>
+    <Option text="What is this shadow you speak of?" next="trouble"/>
+    <Option text="I am curious about you, Zarrah." next="treeflesh"/>
+    <Option text="Thank you, that is enough." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="tribes">
+    <NPCText>
+      <![CDATA[
+      Zarrah's voice is slow and deep.<BR><BR>
+      "The Verdant are the old blood of these woods. We walk with the spirits, speak with beasts, and guard what remains unspoiled. The groves know each footfall—even those of outsiders or invaders like the steel-clad Hinokami. Yet now, all must unite or be swept away by a greater darkness."
+      ]]>
+    </NPCText>
+    <Option text="What darkness threatens us?" next="trouble"/>
+    <Option text="Why do you distrust Hinokami?" next="hinokami"/>
+    <Option text="Let us speak of other things." next="lore"/>
+  </Dialogue>
+
+  <Dialogue id="hinokami">
+    <NPCText>
+      <![CDATA[
+      "They are not evil, only lost from their roots. The cherry blossom folk seek new soil, but do not hear the song of our groves. Still, even bitter saplings may become mighty oaks, given time and care. Our quarrel is old—our enemy is new."
+      ]]>
+    </NPCText>
+    <Option text="Tell me of the new enemy." next="trouble"/>
+    <Option text="Thank you for your wisdom." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Zarrah's concern about the elemental -->
+  <Dialogue id="trouble">
+    <NPCText>
+      <![CDATA[
+      Zarrah's bark fingers flex anxiously.<BR><BR>
+      "The roots whisper unrest. A force ancient as the world stirs beneath us. An elemental spirit, neither wholly evil nor good, yet dangerous if awoken by imbalance. The taint of Minax and the folly of mortals risk breaking its slumber."
+      ]]>
+    </NPCText>
+    <Option text="Can it be stopped?" next="questIntro"/>
+    <Option text="What happens if it awakens?" next="elementalAwakens"/>
+    <Option text="Who is Minax to you?" next="minax"/>
+    <Option text="I wish to learn more about you." next="treeflesh"/>
+  </Dialogue>
+
+  <!-- Personal question -->
+  <Dialogue id="treeflesh">
+    <NPCText>
+      <![CDATA[
+      Zarrah smiles, slow and sad.<BR><BR>
+      "Through the rite of Barkbinding, I have bound flesh to root. I feel the seasons turn beneath my skin. My pace is slow, my vision long. Do not pity me—such wisdom is the price of peace between spirit and mortal."
+      ]]>
+    </NPCText>
+    <Option text="Your wisdom is needed now. Tell me of the threat." next="trouble"/>
+    <Option text="How can I learn the ways of the Verdant?" next="learnVerdant"/>
+    <Option text="I will let you rest, Zarrah." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="learnVerdant">
+    <NPCText>
+      <![CDATA[
+      Zarrah inclines her head.<BR><BR>
+      "Begin by listening to the wind, watching the leaf, and treading lightly. If you serve the tribe, their wisdom may be opened to you in time. Prove your respect for the old ways; perhaps the groves will whisper your name."
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Zarrah. I will try." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Minax lore -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      "Minax is a blight—a scar upon the living land. Her magic corrupts, her greed rends the natural balance. If the elemental awakens in anger, Minax will turn its wrath upon all, Verdant and stranger alike."
+      ]]>
+    </NPCText>
+    <Option text="How can I help prevent this?" next="questIntro"/>
+    <Option text="Tell me more of this elemental." next="elementalAwakens"/>
+    <Option text="Let us speak of other things." next="lore"/>
+  </Dialogue>
+
+  <!-- What happens if the elemental awakens? -->
+  <Dialogue id="elementalAwakens">
+    <NPCText>
+      <![CDATA[
+      "The slumbering heart is older than our tribe, older than Britannia itself. If awakened in rage, it may flood the woods, uproot villages, or even rend the world. Yet if treated with reverence, its awakening could restore the wilds, purify tainted land, and drive out Minax's corruption. The choice will rest with those who hold the ancient runestones."
+      ]]>
+    </NPCText>
+    <Option text="What are these runestones?" next="questIntro"/>
+    <Option text="How can I find them?" next="questIntro"/>
+    <Option text="This is a heavy burden..." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Quest branch: runestone gathering -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      Zarrah leans forward, bark groaning.<BR><BR>
+      "Scattered through the woods lie ancient runestones—lost by my forebears, guarded by spirits, or stolen by Minax’s servants. With these, the fate of the elemental may be shaped. Will you help gather them, root-seeker?"
+      ]]>
+    </NPCText>
+    <Option text="Yes. I will gather the runestones for the tribe." action="GiveItem:AncientRunestoneQuestScroll(Verdant,3)" condition="!HasItem:AncientRunestoneQuestScroll" next="acceptQuest"/>
+    <Option text="If I gather the stones, how will we use them?" next="choosePath"/>
+    <Option text="This sounds dangerous. I need time to think." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="acceptQuest">
+    <NPCText>
+      <![CDATA[
+      "May the roots guide your steps. Seek the stones in hidden groves, spirit-haunted hollows, and the ruins tainted by Minax. Return when you have them, and the choice will be yours: awaken the elemental with hope, or seal it in slumber."
+      ]]>
+    </NPCText>
+    <Option text="I will return with the stones." action="Close"/>
+  </Dialogue>
+
+  <!-- Explain awakening/sealing path -->
+  <Dialogue id="choosePath">
+    <NPCText>
+      <![CDATA[
+      Zarrah’s eyes seem to deepen, like knotholes in ancient wood.<BR><BR>
+      "With the stones, one may perform the Rite of Awakening or the Rite of Sealing. To awaken the elemental, risk its fury—but also its blessing. To seal it, preserve the world as it is, but forfeit its wild renewal. Both paths have cost. What calls to your heart?"
+      ]]>
+    </NPCText>
+    <Option text="Awaken the elemental. The wild must rise again." condition="HasItem:AncientRunestoneQuestScroll" next="awakenElemental"/>
+    <Option text="Seal the elemental. The world is too fragile now." condition="HasItem:AncientRunestoneQuestScroll" next="sealElemental"/>
+    <Option text="I have not yet found the runestones." next="gatherHint"/>
+    <Option text="I must reflect on this." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="gatherHint">
+    <NPCText>
+      <![CDATA[
+      "You must hold the runestones before you may choose. Seek the deepest grove, the Spirit Pool, and the ruins where the vines grow blood-red. Listen for the whispers of the wind."
+      ]]>
+    </NPCText>
+    <Option text="I will continue my search." action="Close"/>
+  </Dialogue>
+
+  <!-- Outcome: Awakening the elemental -->
+  <Dialogue id="awakenElemental">
+    <NPCText>
+      <![CDATA[
+      Zarrah’s eyes glow with fierce pride.<BR><BR>
+      "So be it. Place the stones upon the altar beneath the Great Oak. Speak the words I teach you: ‘Life returns as fire and flood, awaken now, heart of wood!’ May you be strong in the wild storm to come."
+      ]]>
+    </NPCText>
+    <Option text="I am ready for what follows." action="GiveItem:BlessingOfTheWild(1)" next="blessing"/>
+    <Option text="Wait—tell me what to expect." next="awakenWarning"/>
+  </Dialogue>
+
+  <Dialogue id="awakenWarning">
+    <NPCText>
+      <![CDATA[
+      "The elemental may test you or the land itself. Floods may come, beasts may rise, but corruption will be purged. Those of pure intent will be blessed, but the weak of spirit should take shelter."
+      ]]>
+    </NPCText>
+    <Option text="I accept these risks." action="GiveItem:BlessingOfTheWild(1)" next="blessing"/>
+    <Option text="Perhaps I should seal it instead." next="sealElemental"/>
+    <Option text="I must wait and see." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="blessing">
+    <NPCText>
+      <![CDATA[
+      "Go, bearer of the wild’s will. You carry the blessing of the Verdant heart. Let none—Minax nor mortal—stand in the way of renewal."
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Zarrah. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Outcome: Sealing the elemental -->
+  <Dialogue id="sealElemental">
+    <NPCText>
+      <![CDATA[
+      Zarrah’s bark fingers tremble, relief and regret mingling.<BR><BR>
+      "So be it. Place the stones in the Moonlit Pool and speak: ‘Sleep, child of earth, until peace returns.’ The balance will hold, but the land’s wounds may never fully heal."
+      ]]>
+    </NPCText>
+    <Option text="I will see it done." action="GiveItem:GiftOfBalance(1)" next="balance"/>
+    <Option text="Let me reconsider." next="choosePath"/>
+  </Dialogue>
+
+  <Dialogue id="balance">
+    <NPCText>
+      <![CDATA[
+      "Thank you, gentle one. Sometimes caution is the greatest wisdom. The tribe will remember your choice, as will the spirits of the land."
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Zarrah. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismiss -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Zarrah closes her eyes, bark face serene.<BR><BR>
+      "Then walk gently among the roots, stranger. The forest watches, always."
+      ]]>
+    </NPCText>
+    <Option text="Farewell, Zarrah." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="barkbound_intro">
+  <NPCText>
+    <![CDATA[
+    Zarrah tilts her head slowly, moss falling from her wreath.<BR><BR>
+    “Few ask. Fewer listen. I was not always bark and bone.<BR>
+    Once, I was Zarietha, child of flame and wind, kin to the Tempest Dancers of the Eastern Tribes. But the spirits called me west—toward silence, toward soil.<BR>
+    Here, I planted my name in the roots… and became Zarrah.”
+    ]]>
+  </NPCText>
+  <Option text="Why did you leave your old tribe?" next="barkbound_departure"/>
+  <Option text="What does it mean to become Barkbound?" next="barkbound_ritual"/>
+  <Option text="Zarietha… That name still lives in you." next="barkbound_name"/>
+  <Option text="This past shapes you. Thank you for sharing." next="barkbound_close"/>
+</Dialogue>
+
+<Dialogue id="barkbound_departure">
+  <NPCText>
+    <![CDATA[
+    “My tribe sought dominion over the sky—storm dancers, lightning tamers. I… could not bear the harm we caused. Fire without balance, fury without thought. So I walked, and walked, until the wind grew silent and the roots embraced me.<BR>
+    This forest took me in. It asked nothing—yet gave all.”
+    ]]>
+  </NPCText>
+  <Option text="You found peace here?" next="barkbound_peace"/>
+  <Option text="Would you return, if they asked you?" next="barkbound_return"/>
+  <Option text="Let’s speak of something else." next="dismiss"/>
+</Dialogue>
+
+<Dialogue id="barkbound_peace">
+  <NPCText>
+    <![CDATA[
+    “Peace is not stillness—it is balance. The trees whisper sorrows, the rivers rage. But all returns. I learned this with time... and bark.”<BR><BR>
+    She smiles faintly, her hand resting on her own wooden cheek.
+    ]]>
+  </NPCText>
+  <Option text="You are wiser than most sages." action="AddStat:Int,5,600" next="barkbound_blessing"/>
+  <Option text="Let’s continue another time." next="dismiss"/>
+</Dialogue>
+
+<Dialogue id="barkbound_return">
+  <NPCText>
+    <![CDATA[
+    Zarrah’s gaze sharpens like a thorn.<BR><BR>
+    “If they truly saw me—rooted, changed, sacred—then perhaps. But they fear stillness. They would see bark and call it weakness. Let them learn.”<BR><BR>
+    She closes her eyes, leaves drifting from her garland.
+    ]]>
+  </NPCText>
+  <Option text="They are the ones who lost, not you." next="barkbound_affirm"/>
+  <Option text="Perhaps they will grow too, in time." next="barkbound_wisdom"/>
+</Dialogue>
+
+<Dialogue id="barkbound_affirm">
+  <NPCText>
+    <![CDATA[
+    “You speak with the clarity of stream water. Perhaps your roots, too, go deep.”<BR><BR>
+    She reaches out, touching your brow gently. You feel calmer.
+    ]]>
+  </NPCText>
+  <Option text="(You feel a spiritual calm wash over you.)" action="AddStat:Str,2,300" next="barkbound_blessing"/>
+</Dialogue>
+
+<Dialogue id="barkbound_wisdom">
+  <NPCText>
+    <![CDATA[
+    “Even stone crumbles, even the sky shifts. Yes… perhaps they will.”<BR><BR>
+    Zarrah bows her head.
+    ]]>
+  </NPCText>
+  <Option text="Thank you for sharing your path." next="barkbound_close"/>
+</Dialogue>
+
+<Dialogue id="barkbound_ritual">
+  <NPCText>
+    <![CDATA[
+    “To be Barkbound is to surrender haste, to hear the turning of seasons in your bones. I drank the sap of the Elder Tree, fasted under moonlight, and offered my name to the root heart.<BR>
+    In return, I was given long life, vision… and bark.”
+    ]]>
+  </NPCText>
+  <Option text="Could I undergo such a rite?" next="barkbound_trial"/>
+  <Option text="That sounds… lonely." next="barkbound_lonely"/>
+</Dialogue>
+
+<Dialogue id="barkbound_trial">
+  <NPCText>
+    <![CDATA[
+    Zarrah’s wooden fingers flex, and she studies you closely.<BR><BR>
+    “Few are called. Fewer still endure it. But if you seek the Rite of Barkbinding… bring me the *Heartwood Tear*, a seed said to grow only in a glade where no metal has touched the earth. If you can find it, perhaps the trees will whisper your name as well.”
+    ]]>
+  </NPCText>
+  <Option text="Where can I begin looking?" next="barkbound_hint"/>
+  <Option text="I will return when I have the seed." action="Close"/>
+</Dialogue>
+
+<Dialogue id="barkbound_hint">
+  <NPCText>
+    <![CDATA[
+    “Look west of the Fallen Grove, where deer still kneel to drink and no blade scars the bark. The Tear grows beneath moonlight and songbird, in silence. Seek gently.”
+    ]]>
+  </NPCText>
+  <Option text="Thank you, Zarrah." action="Close"/>
+</Dialogue>
+
+<Dialogue id="barkbound_lonely">
+  <NPCText>
+    <![CDATA[
+    “At first. But the silence speaks. The moss comforts. The wind laughs. In time… you forget you were ever alone.”<BR><BR>
+    She looks past you, eyes wet bark.
+    ]]>
+  </NPCText>
+  <Option text="You are not alone now." action="Karma:+250" next="barkbound_blessing"/>
+</Dialogue>
+
+<Dialogue id="barkbound_name">
+  <NPCText>
+    <![CDATA[
+    “Zarietha was flame. Zarrah is root. I remember her when I dream of storms. But I do not miss her.”<BR><BR>
+    She places a hand over her chest.<BR>
+    “Names change. Spirits remain.”
+    ]]>
+  </NPCText>
+  <Option text="Then both names are sacred." next="barkbound_affirm"/>
+  <Option text="May I still call you Zarietha?" condition="IsFemale" next="barkbound_flattered"/>
+</Dialogue>
+
+<Dialogue id="barkbound_flattered">
+  <NPCText>
+    <![CDATA[
+    Zarrah smiles—a real, human smile.<BR><BR>
+    “Few have earned that right. But yes… you may.”<BR>
+    (You feel a strange warmth in your heart.)
+    ]]>
+  </NPCText>
+  <Option text="(You are filled with quiet confidence.)" action="AddStat:Dex,5,300" next="barkbound_blessing"/>
+</Dialogue>
+
+<Dialogue id="barkbound_blessing">
+  <NPCText>
+    <![CDATA[
+    “May the roots protect your step, and the wind remember your name.”<BR><BR>
+    She fades once more into stillness.
+    ]]>
+  </NPCText>
+  <Option text="Farewell, Zarrah." action="Close"/>
+</Dialogue>
+
+<Dialogue id="barkbound_close">
+  <NPCText>
+    <![CDATA[
+    “Thank you for listening. The trees remember kindness.”<BR><BR>
+    She bows her head slowly, as a branch in breeze.
+    ]]>
+  </NPCText>
+  <Option text="Until next time." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

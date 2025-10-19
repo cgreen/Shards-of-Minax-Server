@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="IrinyaTheIceSeer">
+  <!-- === root greeting === -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b2e5f9'>
+      A tall woman draped in a silvery monk’s robe sits cross-legged atop a boulder, her cloak shimmering with the faint glow of morning frost. Strands of ice-silver hair spill from beneath a garland of frozen flowers. When she turns, her eyes reflect the Obelisk’s ancient blue. <BR><BR>
+      "Hush—listen. Can you hear it? The song of the wind, threading secrets through the heart of ice and stone. I am Irinya, and all I know is what the winter wind confides.<BR><BR>
+      If you seek warmth, find Lira at the White Boar. If you crave wisdom... step closer, but beware: the Obelisk whispers, and not all who listen return unchanged."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’m here to help Frostmere. What troubles you?" next="questIntro"/>
+    <Option text="Why do you speak to the ice? Does it answer?" next="icewhisper"/>
+    <Option text="You look... different from the others here." next="outfit"/>
+    <Option text="Do you know the Silent Hunter?" next="hunter"/>
+    <Option text="I just wanted to watch the snow." next="justwatch"/>
+  </Dialogue>
+
+  <!-- outfit node -->
+  <Dialogue id="outfit">
+    <NPCText>
+      <![CDATA[
+      Irinya lets a small, enigmatic smile bloom.<BR><BR>
+      "The villagers call my garb odd, but every piece was chosen by the wind’s whim: <BR>
+      The <BASEFONT COLOR='#9aeff7'>Veil of Winter’s Silence</BASEFONT> keeps the voices of the past at bay.<BR>
+      My <BASEFONT COLOR='#8ad8e6'>Frozen Blossom Circlet</BASEFONT> was woven from petals picked during the last midnight aurora.<BR>
+      This <BASEFONT COLOR='#6feef7'>Aurora Sash</BASEFONT> is said to bind the wearer’s soul to the northern lights.<BR>
+      <BASEFONT COLOR='#c3f7ff'>Snowdrift Boots</BASEFONT> tread softly, so as not to wake the things sleeping beneath the ice.<BR>
+      The <BASEFONT COLOR='#b2e5f9'>Seer’s Touch</BASEFONT>—my gloves—allow me to hold frost without pain.<BR>
+      And the <BASEFONT COLOR='#a3c3e7'>Mantle of Icy Dreams</BASEFONT> is a gift from a blizzard itself.<BR>
+      Only the staff is mine by right: the <BASEFONT COLOR='#81d1ec'>Staff of Whispering Frost</BASEFONT>, carved from the heart of the oldest glacier."
+      ]]>
+    </NPCText>
+    <Option text="You must be powerful to have such relics." next="humility"/>
+    <Option text="What do the voices say about the Obelisk?" next="obswhispers"/>
+    <Option text="I want to help. Is there a task for me?" next="questIntro"/>
+  </Dialogue>
+
+  <!-- humility node -->
+  <Dialogue id="humility">
+    <NPCText>
+      <![CDATA[
+      Irinya’s smile fades.<BR><BR>
+      "Power? No. Each relic is a chain as much as a blessing. The cold remembers all mistakes—mine, Aelric’s, even Minax’s. True power is restraint: resisting the urge to pry too deep, to claim too much.<BR><BR>
+      Still, the village needs defenders. Will you hear what Frostmere faces?"
+      ]]>
+    </NPCText>
+    <Option text="Yes, I am ready." next="questIntro"/>
+    <Option text="Tell me more about Aelric’s mistakes." next="aelric"/>
+  </Dialogue>
+
+  <!-- aelric -->
+  <Dialogue id="aelric">
+    <NPCText>
+      <![CDATA[
+      "Aelric is wise, but the burden of secrets weighs heavy. He fears what the Obelisk might become, and with good reason—he saw what magic did to Moonglow.<BR>
+      Yet he forgets: fear can be as blinding as arrogance. I watch so that neither dooms us.<BR>
+      If you wish to protect Frostmere, listen carefully: the wind has carried word of a new threat..."
+      ]]>
+    </NPCText>
+    <Option text="I will listen. What threat?" next="questIntro"/>
+    <Option text="First, tell me: what really happened in Moonglow?" next="moonglow"/>
+  </Dialogue>
+
+  <Dialogue id="moonglow">
+    <NPCText>
+      <![CDATA[
+      "Moonglow was once a beacon, but its scholars sought truth at any price. Forbidden ice magics melted reason, until the ground split and the stars themselves wept. I fled, as did Aelric, carrying guilt and knowledge in equal measure.<BR>
+      But enough old wounds—will you help heal this new one?"
+      ]]>
+    </NPCText>
+    <Option text="Yes, what is needed?" next="questIntro"/>
+    <Option text="Not today. I need to think." action="Close"/>
+  </Dialogue>
+
+  <!-- obswhispers -->
+  <Dialogue id="obswhispers">
+    <NPCText>
+      <![CDATA[
+      "The Obelisk is no mere monument. It is a *sentient prison*—a wound stitched in blue ice, holding something ancient and hungry at bay.<BR>
+      Some wish to harness its magic; others to shatter it. I say: leave it undisturbed, lest it remember its name.<BR>
+      Yet now, something circles it in the night. Scales scrape on stone, and even the wind recoils..."
+      ]]>
+    </NPCText>
+    <Option text="Is there something I can do?" next="questIntro"/>
+    <Option text="This sounds dangerous." next="danger"/>
+  </Dialogue>
+
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      "Danger and destiny are siblings. To do nothing is to perish slowly. To act is to risk waking things best left sleeping.<BR>
+      Still, the village cannot afford stillness. Will you act on Frostmere’s behalf?"
+      ]]>
+    </NPCText>
+    <Option text="I will help." next="questIntro"/>
+    <Option text="No, I must decline." action="Close"/>
+  </Dialogue>
+
+  <!-- icewhisper -->
+  <Dialogue id="icewhisper">
+    <NPCText>
+      <![CDATA[
+      "Of course the ice answers. It remembers every footprint, every drop of blood, every secret whispered when breath fogs in the night.<BR>
+      The coldscale lizardfolk speak to the frost, too—but theirs is a language of hunger and rage.<BR>
+      Would you see for yourself what haunts the snow?"
+      ]]>
+    </NPCText>
+    <Option text="Yes. What must I do?" next="questIntro"/>
+    <Option text="Coldscale lizardfolk? Tell me more." next="coldscale"/>
+  </Dialogue>
+
+  <!-- coldscale info -->
+  <Dialogue id="coldscale">
+    <NPCText>
+      <![CDATA[
+      "The Coldscale Lizardmen—reptilian marauders from the glacier’s shadow—once slumbered in deep caves, leaving Frostmere in peace.<BR>
+      Now, the ice wind carries their anger: one of their champions, a beast known as *Isskarth the Frosttongue*, stalks our shrine and stirs the snow with poison and hate. The villagers fear for their children; Aelric wishes to bargain, Bryndra to hunt. I say: the cold must be answered by courage."
+      ]]>
+    </NPCText>
+    <Option text="I will face Isskarth." next="questIntro"/>
+    <Option text="Why does Aelric want to bargain?" next="aelric"/>
+  </Dialogue>
+
+  <!-- hunter -->
+  <Dialogue id="hunter">
+    <NPCText>
+      <![CDATA[
+      Irinya’s eyes flicker with warmth.<BR><BR>
+      "The Silent Hunter? My most devoted pupil, though you’ll not get a word from him. He listens as I do—he hears the truth in wind and snow.<BR>
+      If you meet him in the wild, trust his guidance. He’s led more souls home than the sun has thawed frost.<BR>
+      But I speak too long. Will you lend Frostmere your strength?"
+      ]]>
+    </NPCText>
+    <Option text="Yes, what needs doing?" next="questIntro"/>
+    <Option text="Not today." action="Close"/>
+  </Dialogue>
+
+  <!-- just watching the snow -->
+  <Dialogue id="justwatch">
+    <NPCText>
+      <![CDATA[
+      "Then watch well. Snow records all things, though it forgets in the thaw. If you see a shadow circling the Obelisk, tell me what shape it bears.<BR>
+      Should you grow weary of waiting, my door remains open. The cold wind is ever speaking."
+      ]]>
+    </NPCText>
+    <Option text="I think I want to help after all." next="questIntro"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- QUEST OFFER -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b2e5f9'>
+      Irinya’s voice becomes solemn, her breath pluming in the cold.<BR><BR>
+      "Last night, the wind shuddered and the Obelisk’s song soured. Isskarth the Frosttongue—champion of the Coldscale Lizardmen—prowls near our sacred caves. Children dream of fangs in the darkness; the hunter’s traps freeze shut. Even the spirits are restless.<BR><BR>
+      Some say the lizardfolk serve Minax now, worshipping power over harmony. Others claim Isskarth is a harbinger—the first sign the Obelisk’s bonds are weakening.<BR>
+      I need someone with courage and keen senses. Slay Isskarth, and bring me proof: a shard of his frostbitten scale. But take care—killing him may stir ancient wrath."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I accept. I will bring you the scale of Isskarth."
+      action="GiveItem:FactionKillQuestScroll(ColdscaleLizardman,1,Frostmere,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Why not send Captain Bryndra or Garrik?" next="whyNotBryndra"/>
+    <Option text="What if the Coldscales are misunderstood?" next="empathy"/>
+    <Option text="Minax again? Why is she interested in lizardfolk?" next="minaxLizard"/>
+    <Option text="I must decline, for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Irinya nods, a faint sadness in her eyes.<BR><BR>
+      "May the wind guide your blade and frost shield your soul. Isskarth haunts the caverns east of Frostmere, near the frozen waterfall. Return with his scale—and, if you find tokens of dark magic, bring them to me alone.<BR>
+      The Obelisk’s story is far from over. Walk carefully."
+      ]]>
+    </NPCText>
+    <Option text="I will return." action="Close"/>
+  </Dialogue>
+
+  <!-- why not Bryndra -->
+  <Dialogue id="whyNotBryndra">
+    <NPCText>
+      <![CDATA[
+      "Bryndra is fire and iron—she’d face Isskarth head-on and break half our militia in the doing. Garrik would fight, but his hammer is needed at the forge, not shattered in an icy den.<BR>
+      No, this task needs someone unburdened by old grudges. Will you bear it?"
+      ]]>
+    </NPCText>
+    <Option text="Yes. I will go." next="accept"/>
+    <Option text="Not right now." action="Close"/>
+  </Dialogue>
+
+  <!-- empathy -->
+  <Dialogue id="empathy">
+    <NPCText>
+      <![CDATA[
+      "Empathy is a virtue, rare as summer here. But Isskarth has slain three villagers and shattered our ice wards. Sometimes, mercy and survival cannot share the same hearth.<BR>
+      Still—bring me any signs of peace you find. I will listen, even if the village cannot."
+      ]]>
+    </NPCText>
+    <Option text="Very well. I accept the quest." next="accept"/>
+    <Option text="On second thought, I must decline." action="Close"/>
+  </Dialogue>
+
+  <!-- minax lizardfolk -->
+  <Dialogue id="minaxLizard">
+    <NPCText>
+      <![CDATA[
+      "Minax is not content to twist only humans—she sows discord wherever ambition festers. The lizardfolk have old magic in their blood, and the Obelisk’s presence draws all who hunger for forgotten power.<BR>
+      If you find evidence of her influence—sigils, charms, corruption—bring them to me before anyone else. Some secrets are safest in silence."
+      ]]>
+    </NPCText>
+    <Option text="I understand. I will bring you what I find." next="accept"/>
+    <Option text="I am not ready for this." action="Close"/>
+  </Dialogue>
+
+</DialogueFile>

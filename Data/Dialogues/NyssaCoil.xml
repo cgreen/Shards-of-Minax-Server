@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="NyssaCoil">
+
+  <!-- ========== GREETING ========== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b0f7ff'>
+      Before you sits a frail woman swathed in flowing robes, her eyes unfocused, flickering with motes of dream-light. The sigil on her sash ripples as if caught between worlds.<BR><BR>
+      She speaks in a voice that seems layered—many tones echo, one barely her own.<BR><BR>
+      <I>"The sky is a door, but the lock is in the mind... Who stirs the river between sleeping and waking?"</I><BR>
+      Her head tilts, as if listening to someone only she can hear.<BR>
+      <I>"Do you come for answers, or for the questions that answer themselves?"</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I heard you are a seer. Can you guide me?" next="whoAmI"/>
+    <Option text="What happened to you, Nyssa?" next="past"/>
+    <Option text="What do you see in your visions?" next="visions"/>
+    <Option text="I seek work in Aerilon." next="taskOffer"/>
+	<Option text="You seem... fragmented. Tell me who you were." next="deepPast"/>
+    <Option text="You seem troubled. Should I return later?" next="dismiss"/>
+  </Dialogue>
+
+  <!-- ========== WHO AM I ========== -->
+  <Dialogue id="whoAmI">
+    <NPCText>
+      <![CDATA[
+      Nyssa’s lips twist in a half-smile, her gaze glassy.<BR><BR>
+      <I>“I was Nyssa, dream-diver, once mindweaver to the Conclave. Meliara Whisperwind keeps my feet in this world—her voice tethers me when I stray too far.<BR>
+      Minax—she gnawed at my thoughts, wore my mind like a borrowed mask. Now I am patchwork—Lord British’s shadow sometimes visits my dreams, or perhaps I visit his? Our words tangle in the weave.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Who is Meliara Whisperwind?" next="meliara"/>
+    <Option text="Have you spoken to Lord British?" next="british"/>
+    <Option text="How did Minax invade your dreams?" next="minax"/>
+    <Option text="I wish to help Aerilon. Do you need aid?" next="taskOffer"/>
+  </Dialogue>
+
+  <!-- ========== NYSSA'S PAST ========== -->
+  <Dialogue id="past">
+    <NPCText>
+      <![CDATA[
+      Nyssa draws a circle in the air, unfocused.<BR><BR>
+      <I>“I journeyed through Minax’s sleeping world, seeking secrets to guard Aerilon. Her dreams... devour. I returned with more minds than my own—now I am never alone. Some call me mad. Meliara calls me necessary. The Conclave calls me trouble, but keeps me close.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Do you regret it?" next="regret"/>
+    <Option text="What secrets did you find?" next="secrets"/>
+    <Option text="Can you offer me a task?" next="taskOffer"/>
+  </Dialogue>
+
+  <Dialogue id="regret">
+    <NPCText>
+      <![CDATA[
+      She laughs, the sound strange and musical.<BR><BR>
+      <I>“Regret is a tether, and I drift beyond tethers. I would do it again, or perhaps I already have… in someone else’s dream.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Do you remember Lord British?" next="british"/>
+    <Option text="Is Minax still in your mind?" next="minax"/>
+    <Option text="I want to help Aerilon." next="taskOffer"/>
+  </Dialogue>
+
+  <!-- ========== VISION TALK ========== -->
+  <Dialogue id="visions">
+    <NPCText>
+      <![CDATA[
+      Her voice becomes sing-song, her eyes rolling back.<BR>
+      <I>“I see cities in the sky, broken crystals weeping blue, a king lost to mirrors and a queen who is everywhere at once.<BR>
+      The Soul Watchers walk between worlds—find them, and the path will reveal itself.”</I><BR>
+      She shudders.<BR>
+      <I>“Beware the voice that wears another’s face. Sometimes, I speak and it is not my own lips moving…”</I>
+      ]]>
+    </NPCText>
+    <Option text="What is a Soul Watcher?" next="soulWatcher"/>
+    <Option text="Who wears your voice?" next="voice"/>
+    <Option text="Can you give me a quest?" next="taskOffer"/>
+  </Dialogue>
+
+  <Dialogue id="soulWatcher">
+    <NPCText>
+      <![CDATA[
+      <I>“They are those who listen to the song beneath dreaming—their touch can untangle memory. There are few, and they walk quietly. Seek them beyond the cloud gates. They will know you by what you carry.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Can I carry something for you to a Soul Watcher?" next="taskOffer"/>
+    <Option text="Thank you. I must ponder this." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="voice">
+    <NPCText>
+      <![CDATA[
+      Nyssa looks pained.<BR>
+      <I>“Sometimes it is the voice of Lord British, sometimes Minax. Sometimes both. The memory is not mine, or is it? If you seek truth, you must find the memory that is missing—carry it to those who can heal.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Let me help you find your memory." next="taskOffer"/>
+    <Option text="I’ll return another time." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== MELIARA ========== -->
+  <Dialogue id="meliara">
+    <NPCText>
+      <![CDATA[
+      <I>“Meliara Whisperwind is guardian and friend—her patience is a harbor in the storm. She weaves sleepward songs to guide me home when I stray. Trust her more than you trust me.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Thank you. About your dreams..." next="visions"/>
+    <Option text="How can I help you?" next="taskOffer"/>
+  </Dialogue>
+
+  <!-- ========== LORD BRITISH ========== -->
+  <Dialogue id="british">
+    <NPCText>
+      <![CDATA[
+      Nyssa’s tone shifts, echoing oddly regal.<BR>
+      <I>“His crown is broken but not lost. He wanders the crystal maze behind the mirrors—reach the Soul Watcher, and perhaps you will hear his true call, not just echoes.”</I>
+      ]]>
+    </NPCText>
+    <Option text="What is the crystal maze?" next="maze"/>
+    <Option text="I will help you recover your memory." next="taskOffer"/>
+  </Dialogue>
+
+  <Dialogue id="maze">
+    <NPCText>
+      <![CDATA[
+      <I>“A shard of the Gem of Immortality, hidden in the heart of dreaming. Find it, and you find the king.”</I>
+      ]]>
+    </NPCText>
+    <Option text="I am ready for your task." next="taskOffer"/>
+    <Option text="I’ll return with more questions." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== MINAX ========== -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Her eyes blaze for a moment.<BR>
+      <I>“Minax is the waking nightmare. She is everywhere that hope falters, and in every mind that fears. She touched me—marked me. Sometimes, she still whispers. Take this memory to a Soul Watcher, and perhaps you will untangle what she knotted.”</I>
+      ]]>
+    </NPCText>
+    <Option text="How do I find a Soul Watcher?" next="soulWatcher"/>
+    <Option text="I am ready for your errand." next="taskOffer"/>
+    <Option text="I must go." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== SECRETS ========== -->
+  <Dialogue id="secrets">
+    <NPCText>
+      <![CDATA[
+      <I>“I found too much—names that cut, memories not my own. There is a memory she fears, one hidden in me but no longer known to me. Deliver it to the Soul Watcher; they will see what I cannot.”</I>
+      ]]>
+    </NPCText>
+    <Option text="What must I do?" next="taskOffer"/>
+    <Option text="This is too much for now." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== TASK OFFER ========== -->
+  <Dialogue id="taskOffer">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b0f7ff'>
+      Nyssa’s hands tremble as she produces a shimmering orb sealed in crystal, threads of mist swirling within.<BR>
+      <I>“This is the Mnemonic Sphere—my missing memory. I cannot know it, but the Soul Watchers may. Carry it beyond Aerilon’s walls, to one who bears the Soul Watcher’s mark. Only they can unlock what is locked.<BR><BR>
+      Be wary. Minax’s shades may try to follow, and not all memories wish to be found.”</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will deliver the Mnemonic Sphere."
+            action="GiveItem:FactionDeliveryQuestScroll(Soul Watcher,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="What dangers await on this path?" next="danger"/>
+    <Option text="Why can’t you remember?" next="whyMemory"/>
+    <Option text="I need time before I accept this task." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== QUEST ACCEPTED ========== -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Nyssa presses the sphere into your hands.<BR>
+      <I>“The path is not straight. Sometimes the Soul Watcher is seen, sometimes only felt. If you fail, the memory may return to me twisted, or worse—become Minax’s. Guard it as you would your own mind.<BR>
+      Bring proof of delivery, and I will reward you… or perhaps someone else will.”</I>
+      ]]>
+    </NPCText>
+    <Option text="I will not fail you, Mindweaver." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== DANGER EXPLAINED ========== -->
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      <I>“Dreams have guardians—some are memories, some are nightmares. Minax’s followers may come in waking or in sleep. The Sphere will protect you… once. Use it if shadows crowd your path.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I accept the Mnemonic Sphere."
+            action="GiveItem:FactionDeliveryQuestScroll(Soul Watcher,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I will consider it carefully." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== WHY MEMORY LOST ========== -->
+  <Dialogue id="whyMemory">
+    <NPCText>
+      <![CDATA[
+      Nyssa’s eyes shimmer with unshed tears.<BR>
+      <I>“Some memories are caged for a reason. I locked this one away to keep Aerilon safe, or so I believe. But it pulls at me, even now. Perhaps it is the key to Lord British, or a lock for Minax. You decide which.”</I>
+      ]]>
+    </NPCText>
+    <Option text="I will carry your memory to the Soul Watcher."
+            action="GiveItem:FactionDeliveryQuestScroll(Soul Watcher,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I will leave you to your thoughts." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== DISMISS ========== -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      <I>“Go, or stay, or dream—each is a path. I will wait. Time is a circle, after all.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Perhaps later, Mindweaver." action="Close"/>
+    <Option text="On second thought, do you have a task for me?" next="taskOffer"/>
+  </Dialogue>
+
+<!-- ========== DEEPER BACKSTORY ========== -->
+<Dialogue id="deepPast">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#b0f7ff'>
+    Nyssa stares through you, her voice quiet.<BR><BR>
+    <I>“I was not always drifting through dream and echo. I was once a prodigy of Wind. Not the Wind of today—cold and still—but a living place of inquiry and wonder.<BR><BR>
+    I studied the tides of thought, the folds of memory. I built maps of minds. I helped the Azure Conclave form—though I did not follow Selara into the storm immediately.”</I>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="You helped found the Conclave?" next="conclaveOrigin"/>
+  <Option text="Why did you leave Wind?" next="leftWind"/>
+  <Option text="What kind of maps of minds?" next="mindMaps"/>
+</Dialogue>
+
+<Dialogue id="conclaveOrigin">
+  <NPCText>
+    <![CDATA[
+    <I>“I taught many of the current archmages, in dream and waking. Selara... I loved her brilliance. Corvus feared me, always. Eryndil was my student once, and then my friend—until he grew afraid of what I might uncover.”</I><BR>
+    A faint smirk curves her lips.<BR>
+    <I>“It is dangerous to know too much in a city where secrets float heavier than stone.”</I>
+    ]]>
+  </NPCText>
+  <Option text="Did Selara betray you?" next="betrayal"/>
+  <Option text="What about Eryndil?" next="eryndilBond"/>
+  <Option text="You said you loved Selara?" condition="IsFemale" next="selaraLove"/>
+  <Option text="You said you loved Selara?" condition="IsMale" next="selaraRespect"/>
+</Dialogue>
+
+<Dialogue id="betrayal">
+  <NPCText>
+    <![CDATA[
+    Her voice stills.<BR>
+    <I>“She did what she believed was best. I was unraveling—thread by thread. But she chose Meliara to watch me, not to silence me. That must count for something.”</I>
+    ]]>
+  </NPCText>
+  <Option text="Do you hate her now?" next="forgiveness"/>
+  <Option text="What did you unravel?" next="mindMaps"/>
+</Dialogue>
+
+<Dialogue id="selaraLove">
+  <NPCText>
+    <![CDATA[
+    <I>“Love takes many forms. I loved her mind, her fire. I would have followed her into the void. And perhaps I did.”</I><BR>
+    <BASEFONT COLOR='#FF69B4'>
+    You feel a soft heat in your chest. Something awakens—an echo of unspoken memory.
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Did she feel the same?" next="selaraReturn"/>
+  <Option text="That explains your loyalty." next="eryndilBond"/>
+  <Option text="Strange... I feel that warmth too." action="AddStat:Int,5,180"/>
+</Dialogue>
+
+<Dialogue id="selaraRespect">
+  <NPCText>
+    <![CDATA[
+    <I>“Not love of flesh. Love of flame. Of mind. Selara is a sun in human shape—radiant, merciless, essential.”</I><BR>
+    <BASEFONT COLOR='#FFB347'>
+    You feel a pulse behind your eyes. For a moment, you glimpse a vision of Selara walking on air, her robe trailing starlight.
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="That’s… powerful." action="AddSkill:Focus,10,120"/>
+  <Option text="She still holds you in her circle." next="eryndilBond"/>
+</Dialogue>
+
+<Dialogue id="selaraReturn">
+  <NPCText>
+    <![CDATA[
+    <I>“She returned it with silence—and mercy. That was answer enough.”</I>
+    ]]>
+  </NPCText>
+  <Option text="Let’s speak of Eryndil." next="eryndilBond"/>
+</Dialogue>
+
+<Dialogue id="eryndilBond">
+  <NPCText>
+    <![CDATA[
+    <I>“Eryndil knew how to listen. He sees everything, stores everything. But his fear made him cautious. He keeps a book of my life, bound in dream-leather. I wonder if he’ll ever finish it.”</I>
+    ]]>
+  </NPCText>
+  <Option text="Can I find that book?" action="SendMessage:Seek the Dream Codex in the Archivist's sanctum... if it still dreams."/>
+  <Option text="What is dream-leather?" next="dreamLeather"/>
+</Dialogue>
+
+<Dialogue id="dreamLeather">
+  <NPCText>
+    <![CDATA[
+    <I>“It is not from beasts. It is made of memories hardened by guilt, loss, or shame. Very few can weave it. Fewer still survive after.”</I><BR>
+    <BASEFONT COLOR='#aaffdd'>
+    You feel a shiver up your spine. One of your memories feels slightly... thinner.
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="I feel something missing..." action="AddStat:Int,-2,120"/>
+  <Option text="Let’s change subject." next="leftWind"/>
+</Dialogue>
+
+<Dialogue id="leftWind">
+  <NPCText>
+    <![CDATA[
+    <I>“Wind grew afraid of the truth. They wanted order, silence, obedience. I wanted truth—even if it broke me.”</I><BR>
+    <BASEFONT COLOR='#ddfaff'>
+    A flicker of flame dances across your vision. You feel a surge of clarity.
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="You sought something sacred." action="AddSkill:Meditation,10,180"/>
+  <Option text="And did you find it?" next="mindMaps"/>
+</Dialogue>
+
+<Dialogue id="mindMaps">
+  <NPCText>
+    <![CDATA[
+    <I>“Thoughts leave trails. Memories coil like snakes. I mapped them—not just of people, but of places, cities, even the wind itself. Aerilon dreams, you know. It remembers its own building.”</I>
+    ]]>
+  </NPCText>
+  <Option text="What does Aerilon dream of?" next="aerilonDreams"/>
+</Dialogue>
+
+<Dialogue id="aerilonDreams">
+  <NPCText>
+    <![CDATA[
+    <I>“It dreams of falling. Always. The crystals ache. They miss the ground. One day… they may stop holding.”</I><BR>
+    <BASEFONT COLOR='#faff91'>
+    A chill wind passes over you though there is no breeze.
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="How do we stop that?" next="warnSelara"/>
+  <Option text="I wish I hadn’t asked." action="Close"/>
+</Dialogue>
+
+<Dialogue id="warnSelara">
+  <NPCText>
+    <![CDATA[
+    <I>“Tell Selara. Or Salia. Or Eryndil. Or no one. If they already know, they may lie. If they don’t… then the dream will become a scream.”</I>
+    ]]>
+  </NPCText>
+  <Option text="I will speak with Salia Moontide." action="SendMessage:She works by the lowest platform. Watch her hands—they tremble." />
+  <Option text="I will go to Eryndil." action="SendMessage:Bring the word 'Fracture' to Eryndil. He will understand." />
+  <Option text="I will tell Selara directly." action="Karma:150" />
+  <Option text="I can’t handle this responsibility." action="Karma:-50" />
+</Dialogue>
+
+
+</DialogueFile>

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="FarahWindBorn">
+
+  <!-- GREETING -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#a9e3f7'>
+      The scent of ozone and distant rain fills the market air. Before you stands a woman draped in flowing azure and sand-colored cloth, her eyes bright as lightning on the horizon.<BR><BR>
+      "Ah—another land-walker, curious enough to notice a stranger adrift in Qasaria’s gilded dunes? I am Farah, once of Aerilon’s heights, now called Wind-Born among the desert folk.<BR>
+      Tell me, do you seek tales of the sky, the secrets of the storm, or simply a chance to prove your worth beneath these endless sands?"</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You are not Qasarian, are you?" next="backstory"/>
+    <Option text="What brings a sky mage to the desert?" next="backstory"/>
+    <Option text="Do you need help with something?" next="questIntro"/>
+    <Option text="Tell me about Aerilon." next="aerilonLore"/>
+    <Option text="What do you think of Qasaria?" next="qasariaLore"/>
+	<Option text="Tell me your story, Wind-Born." next="deepBackstory"/>
+    <Option text="Just passing by." next="dismiss"/>
+  </Dialogue>
+
+  <!-- BACKSTORY -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      Farah’s gaze grows distant.<BR><BR>
+      "I was born above the world, in Aerilon—the floating city of azure ambition, where mages rule the winds and few question their own wisdom. But not all clouds are pure. When I questioned the Council’s hold on knowledge, they called me traitor.<BR>
+      I sailed the sky-currents on my own, seeking a home where thought and magic fly freer. Qasaria has gold and spice, but its Council of Jewels is no less a storm—just... differently wild."<BR><BR>
+      She fingers her Galecrest Circlet absently.<BR>
+      "Here, my only true allegiance is to the wind—and to those who would unshackle it."</NPCText>
+    <Option text="Do you have allies here?" next="relationships"/>
+    <Option text="You sound like you distrust both cities." next="distrust"/>
+    <Option text="Is that why you left Aerilon?" next="aerilonSplit"/>
+    <Option text="Can I help you with something?" next="questIntro"/>
+    <Option text="I’ll leave you to your thoughts." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="relationships">
+    <NPCText>
+      <![CDATA[
+      Farah smirks.<BR><BR>
+      "In Qasaria, trust is as fleeting as a summer storm. Safiya al-Sapphire tolerates me for my magical skills, so long as I repair her merchant skiffs. Rafiq al-Ruby respects my duels—less so my politics. Karim al-Emerald... well, he would hire the wind itself as a spy if he could.<BR>
+      But beware—friendships here are easily bought and sold. My true confidante is old Aqil, the Seer—he alone listens without scheming."</NPCText>
+    <Option text="What of Yasmin al-Topaz?" next="yasmin"/>
+    <Option text="What do you think of the Council of Jewels?" next="council"/>
+    <Option text="Tell me about Aqil the Seer." next="aqil"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="yasmin">
+    <NPCText>
+      <![CDATA[
+      "Yasmin sees through most masks, including mine. She covets relics from the old world—especially those that shape weather or sand. Sometimes, I trade her information for old Aerilon scrolls.<BR>
+      She is a rival and a mirror both: ambitious, secretive, and never quite satisfied."</NPCText>
+    <Option text="What’s your history with Aerilon?" next="aerilonSplit"/>
+    <Option text="Do you need help with something?" next="questIntro"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      Farah sighs.<BR>
+      "Five rulers, five storms—each claims to steer Qasaria’s fate, but none can command the desert winds. Their rivalry keeps Minax at bay... for now.<BR>
+      If I had their ear, I’d urge them to unite, but old grudges and secret ambitions keep the council fractured. Sometimes I wonder if I left one cage for another."</NPCText>
+    <Option text="You sound weary of politics." next="distrust"/>
+    <Option text="Is there anyone you truly trust?" next="relationships"/>
+    <Option text="What brought you to Qasaria?" next="backstory"/>
+    <Option text="Can I help you with something?" next="questIntro"/>
+  </Dialogue>
+
+  <Dialogue id="aqil">
+    <NPCText>
+      <![CDATA[
+      Farah’s eyes twinkle.<BR>
+      "Aqil? He once rode the winds, before prophecy blinded him. Now he wanders the bazaar, selling riddles to fools and wisdom to the desperate. If you ever need to know where the storms will break, ask him. If you need to know your own fate... ask carefully."
+      ]]>
+    </NPCText>
+    <Option text="Can I help you with something?" next="questIntro"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="distrust">
+    <NPCText>
+      <![CDATA[
+      Farah shrugs, her cloak rustling.<BR>
+      "Both Aerilon and Qasaria are towers built on shifting sand. I trust the wind—the only constant is change. My work is to see that neither city grows too powerful, lest Minax or any tyrant rule unopposed.<BR>
+      Some call that betrayal. I call it balance."
+      ]]>
+    </NPCText>
+    <Option text="Do you have a job for me?" next="questIntro"/>
+    <Option text="Why are you so wary of Minax?" next="minax"/>
+    <Option text="I’ll be going." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="aerilonSplit">
+    <NPCText>
+      <![CDATA[
+      Farah’s tone sharpens.<BR>
+      "Aerilon’s Conclave grew fearful as the world changed. They would rather shackle knowledge than risk their floating paradise. When I sought out the forbidden lore of the wind spirits, they exiled me. My Galecrest Circlet is all that remains of my old rank.<BR>
+      I do not regret leaving. Freedom is worth any cost."
+      ]]>
+    </NPCText>
+    <Option text="Do you have a job for me?" next="questIntro"/>
+    <Option text="Tell me about wind spirits." next="windspirits"/>
+    <Option text="What would you have me do?" next="questIntro"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="windspirits">
+    <NPCText>
+      <![CDATA[
+      "The wind spirits are the world’s memory—old as the Gem of Immortality itself. They linger where the storms never cease.<BR>
+      I seek an artifact: a <b>storm crystal</b>, lost within a ruin forever locked in a prison of sand and lightning. With it, I could learn what the wind remembers... or perhaps set some memories free."
+      ]]>
+    </NPCText>
+    <Option text="Can I help retrieve this crystal?" next="questIntro"/>
+    <Option text="Tell me about Aerilon." next="aerilonLore"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="aerilonLore">
+    <NPCText>
+      <![CDATA[
+      "Aerilon: city of ambition, floating on the breath of lost gods. Its archmages claim wisdom, but their hearts are guarded as the city’s engines. To them, exile is a mercy—and a warning.<BR>
+      They watch Qasaria with envy, and with fear."
+      ]]>
+    </NPCText>
+    <Option text="Why did you leave?" next="aerilonSplit"/>
+    <Option text="What do you think of Qasaria?" next="qasariaLore"/>
+    <Option text="Do you have a task for me?" next="questIntro"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="qasariaLore">
+    <NPCText>
+      <![CDATA[
+      "Qasaria is no stranger to secrets. The Council of Jewels squabbles over relics while Minax’s shadows lengthen at their gates. Here, gold and knowledge are both currency—but neither buys safety for long.<BR>
+      Still, there is freedom in the desert winds, if you can weather the storms."
+      ]]>
+    </NPCText>
+    <Option text="Do you need help with something?" next="questIntro"/>
+    <Option text="Tell me about the Council of Jewels." next="council"/>
+    <Option text="I’ll be going." action="Close"/>
+  </Dialogue>
+
+  <!-- QUEST INTRO -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      Farah leans close, voice lowering.<BR><BR>
+      "There is a ruin, veiled by a storm that never ends. Within it lies a <b>storm crystal</b>—a fragment of pure tempest, sealed since the age of the Desert Ancients.<BR>
+      I need a brave soul to slip past the sandstorm, enter the ruin, and retrieve the storm crystal for me.<BR><BR>
+      Beware: Minax’s cultists and Aerilon spies both hunt for such power. If you bring me the crystal, I will reward you with a secret that could shake both city and sky.<BR>
+      Will you attempt the task, or does the storm frighten you?"
+      ]]>
+    </NPCText>
+    <Option text="I will brave the storm and seek the crystal." 
+            action="GiveItem:FactionDeliveryQuestScroll(Storm Crystal,Qasaria,500)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="What dangers await in the storm?" next="dangers"/>
+    <Option text="Why do you need this crystal?" next="questLore"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <!-- QUEST ACCEPTED -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Farah hands you a battered map, its ink smudged by salt and rain.<BR>
+      "Follow the edge of the Zephyr Wastes—look for a tower crowned by thunder. Use this token to calm the winds for a time.<BR>
+      Return with the storm crystal, and you shall have my gratitude... and perhaps more."<BR>
+      (A <b>Storm Crystal Quest Scroll</b> has been added to your pack.)
+      ]]>
+    </NPCText>
+    <Option text="I will not fail you, Wind-Born." action="Close"/>
+  </Dialogue>
+
+  <!-- QUEST LORE -->
+  <Dialogue id="questLore">
+    <NPCText>
+      <![CDATA[
+      "The storm crystal is no mere bauble. It holds memories of the winds that once bound Aerilon to the earth—and secrets Minax would pay dearly to possess.<BR>
+      With it, I could unmask Aerilon’s greatest lie, or give Qasaria the power to resist invasion.<BR>
+      Who knows? If you bring it to me, you may choose its fate."
+      ]]>
+    </NPCText>
+    <Option text="I accept your quest." 
+            action="GiveItem:FactionDeliveryQuestScroll(Storm Crystal,Qasaria,500)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Let me think about it." action="Close"/>
+  </Dialogue>
+
+  <!-- QUEST DANGERS -->
+  <Dialogue id="dangers">
+    <NPCText>
+      <![CDATA[
+      Farah’s expression turns grave.<BR>
+      "The ruin is ringed by living sandstorms—elementals and wraiths twisted by the ancient magics. Minax’s cultists linger, hungry for chaos. And I have heard whispers of a sky-captain from Aerilon hunting defectors... perhaps for me.<BR>
+      Take care. If you fall, your bones will join the dunes."
+      ]]>
+    </NPCText>
+    <Option text="I will take the risk." 
+            action="GiveItem:FactionDeliveryQuestScroll(Storm Crystal,Qasaria,500)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <!-- MINAX -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Farah’s lips thin.<BR>
+      "Minax is a storm that shatters empires, but she is not the only threat. She would bend all magic to her will—no matter the cost. Qasaria and Aerilon squabble while her shadows gather.<BR>
+      The wise serve no queen, but the world itself. That is why I fight."
+      ]]>
+    </NPCText>
+    <Option text="How can I help fight her influence?" next="questIntro"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <!-- DISMISS -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Farah smiles faintly, her sandals scuffing the marble.<BR>
+      "Very well. Should the wind change and courage move you, seek me again—there is always work for those who walk between storm and sand."
+      ]]>
+    </NPCText>
+    <Option text="On second thought, do you need help?" next="questIntro"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="deepBackstory">
+    <NPCText>
+      <![CDATA[
+      Farah studies you carefully, as if weighing something.<BR><BR>
+      “Very well. If you would walk my skies, you deserve more than whispers.”<BR>
+      She adjusts her Galecrest Circlet and begins to speak, her voice distant, wind-like.<BR><BR>
+      “My mother served Aerilon’s Conclave as a Tempest Chanter. My father was a rogue scholar—banished for building his own skyship without permission.”<BR>
+      Her expression darkens.<BR>
+      “They vanished in a storm that shouldn’t have existed. I was seven. Since then, I’ve trusted only the wind.”</NPCText>
+    <Option text="What do you believe happened to them?" next="deepBackstory2"/>
+    <Option text="That must have been hard to grow up with." next="empathy"/>
+    <Option text="Sounds like you were born to rebel." next="challenge"/>
+  </Dialogue>
+
+  <Dialogue id="deepBackstory2">
+    <NPCText>
+      <![CDATA[
+      “Aerilon covered it up. Claimed it was sabotage by Wind. But Wind denies it too. I think the storm was <i>summoned</i>... or maybe born from the crystal engines we don’t understand.”<BR><BR>
+      She exhales slowly.<BR>
+      “Truth is a dangerous thing when it threatens pride. That’s why I left.”</NPCText>
+    <Option text="Do you still want revenge?" next="revenge"/>
+    <Option text="That takes courage. What will you do now?" next="future"/>
+  </Dialogue>
+
+  <Dialogue id="empathy">
+    <NPCText>
+      <![CDATA[
+      Farah looks at you quietly for a moment.<BR><BR>
+      “It was lonely. But the wind teaches you to dance alone, or die still.”<BR>
+      She touches your arm lightly.<BR>
+      “Thank you for asking. Not many do.”</NPCText>
+    <Option text="Your strength is admirable." action="Karma:+100" next="future"/>
+    <Option text="Pain makes us who we are." action="Fame:+50" next="future"/>
+  </Dialogue>
+
+  <Dialogue id="challenge">
+    <NPCText>
+      <![CDATA[
+      Farah smirks. “Maybe I was.”<BR>
+      “Or maybe I just got tired of licking boots dusted with starfall powder and ego.”<BR>
+      Her gaze sharpens.<BR>
+      “Aerilon says it floats by virtue of crystal purity. But sometimes, it’s just full of hot air.”</NPCText>
+    <Option text="Spoken like a true heretic." action="SendMessage:She laughs, despite herself." next="future"/>
+    <Option text="You sound like trouble." next="reveal"/>
+  </Dialogue>
+
+  <Dialogue id="revenge">
+    <NPCText>
+      <![CDATA[
+      Farah’s voice drops to a whisper.<BR>
+      “No. I want the truth, not blood.”<BR>
+      “But if Aerilon ever tries to silence me again... I will tear open their sky.”</NPCText>
+    <Option text="You’re not alone in this." action="AttachXml:XmlQuestTracker,WindBornAlly" next="future"/>
+    <Option text="Just don’t become what you hate." action="Karma:+50" next="future"/>
+  </Dialogue>
+
+  <Dialogue id="reveal">
+    <NPCText>
+      <![CDATA[
+      She chuckles, folding her arms.<BR><BR>
+      “I am trouble. But not yours—unless you plan to sell secrets to the Conclave.”<BR>
+      The air briefly crackles around her fingertips. Then she smiles.<BR>
+      “I like you. You listen.”</NPCText>
+    <Option text="What is it you truly want?" next="future"/>
+    <Option text="What about Minax?" next="minax"/>
+  </Dialogue>
+
+  <Dialogue id="future">
+    <NPCText>
+      <![CDATA[
+      “What do I want?” she repeats, eyes flickering.<BR>
+      “I want skies where no council hoards the wind. I want magic to belong to the people who breathe it, not thrones of crystal and coin.”<BR><BR>
+      “And if I must become a storm to change this world... then let the thunder dance.”</NPCText>
+    <Option text="You have my support, Wind-Born." action="Karma:+200" next="ally"/>
+    <Option text="You walk a dangerous path." action="Fame:+50" next="greeting"/>
+    <Option text="Perhaps we’ll walk the storm together." condition="IsFemale" action="SendMessage:Farah gives you a look that lingers." next="ally"/>
+    <Option text="I’ll keep my distance—for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ally">
+    <NPCText>
+      <![CDATA[
+      She smiles—truly this time.<BR>
+      “Then we are windbound together. When the time comes, I’ll remember your name.”<BR><BR>
+      <BASEFONT COLOR='#d0f5ff'>[You feel something unseen shift—Farah now considers you an ally.]</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="So... about that storm crystal?" next="questIntro"/>
+    <Option text="Let’s talk of something lighter." next="greeting"/>
+  </Dialogue>
+
+
+</DialogueFile>

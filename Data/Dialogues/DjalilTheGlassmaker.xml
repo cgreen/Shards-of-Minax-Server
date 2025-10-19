@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="DjalilTheGlassmaker">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#FFD700'>
+      You find yourself before a tall, bronze-skinned man clad in gilded desert robes. His eyes reflect light like cut glass, and his hands are dusted with fine, shimmering powder.<BR><BR>
+      The <b>Robe of the Desert Ancients</b> glimmers as he bows, while a <b>Sash of Prismatic Hues</b> shifts color with every motion. At his side, a <b>Glassblower’s Ember Apron</b> and <b>Gloves of the Furnace Spirit</b> mark him as an artisan of great skill.<BR><BR>
+      “Welcome, traveler, to my humble atelier. I am <b>Djalil</b>, the shaper of lenses, mender of mirrors, and seeker of secrets most dare not reflect upon.<BR><BR>
+      Is it the light of the sun, the veiled shadow, or perhaps a glimmer of your own soul you seek today?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Tell me about yourself, Djalil." next="aboutDjalil"/>
+    <Option text="What do you craft here in Qasaria?" next="craft"/>
+    <Option text="I heard you commune with spirits—truth or tale?" next="spirits"/>
+    <Option text="You seem troubled. Can I aid you?" next="questIntro"/>
+	<Option text="You seem... different. Who *are* you really?" next="deepRoots"/>
+    <Option text="Just browsing, thanks." next="dismiss"/>
+  </Dialogue>
+
+  <!-- About Djalil -->
+  <Dialogue id="aboutDjalil">
+    <NPCText>
+      <![CDATA[
+      Djalil smiles wistfully.<BR><BR>
+      “My blood traces to the <b>Desert Ancients</b>, though such lineage is more curse than crown. My family has blown glass for centuries—each mirror we shape, a window for spirits to see this world.<BR><BR>
+      Yet, it is not fame I seek. Many in Qasaria call me eccentric; <b>Safiya al-Sapphire</b> would rather I made baubles for her traders. <b>Yasmin al-Topaz</b> comes for arcane lenses, but fears what my mirrors might reveal. Even <b>Shadowmaster Zahid</b> would buy secrets, but not my silence.”<BR><BR>
+      “Still, I prefer my art to their intrigues.” 
+      ]]>
+    </NPCText>
+    <Option text="Do you and Yasmin work together?" next="yasmin"/>
+    <Option text="What of Safiya al-Sapphire?" next="safiya"/>
+    <Option text="Zahid of the Undermarket... do you fear him?" next="zahid"/>
+    <Option text="I am curious about your mirrors." next="craft"/>
+    <Option text="Is something haunting you?" next="questIntro"/>
+    <Option text="Thank you, Djalil." next="greeting"/>
+  </Dialogue>
+
+  <!-- Yasmin Branch -->
+  <Dialogue id="yasmin">
+    <NPCText>
+      <![CDATA[
+      Djalil nods respectfully.<BR><BR>
+      “Yasmin’s wisdom runs deep as desert wells. She and I have studied the resonance of glass and sand—her relics, my mirrors. She trusts me to shield her scholars from scrying eyes.<BR><BR>
+      Yet even she treads carefully—some glass remembers, and some memories are not meant for mortal minds.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me of these memories." next="spirits"/>
+    <Option text="What is troubling you, Djalil?" next="questIntro"/>
+    <Option text="I want to know about your craft." next="craft"/>
+    <Option text="I will be going." action="Close"/>
+  </Dialogue>
+
+  <!-- Safiya Branch -->
+  <Dialogue id="safiya">
+    <NPCText>
+      <![CDATA[
+      “Safiya is as shrewd as she is dazzling. She buys my finest lenses for her caravans and port masters—every merchant in Qasaria spies their rivals through glass I made.<BR><BR>
+      Yet, she cannot buy the secrets my family keeps. Nor can she see what I saw in the <b>Cursed Mirror</b> of Minax. Some reflections cost too much.”
+      ]]>
+    </NPCText>
+    <Option text="What did you see in the Cursed Mirror?" next="vision"/>
+    <Option text="Is this why you seem troubled?" next="questIntro"/>
+    <Option text="I wish to know more about your glasswork." next="craft"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Zahid Branch -->
+  <Dialogue id="zahid">
+    <NPCText>
+      <![CDATA[
+      “Shadowmaster Zahid would buy a man’s name, his secrets, and his shadow if he could. He sends Nadia to watch me, but I tell her: the truest glass reveals nothing to those who seek only darkness.<BR><BR>
+      Still, in Qasaria, even shadows barter for light.”
+      ]]>
+    </NPCText>
+    <Option text="I want to know about your glasscraft." next="craft"/>
+    <Option text="What weighs on your mind, Djalil?" next="questIntro"/>
+    <Option text="I will take my leave." action="Close"/>
+  </Dialogue>
+
+  <!-- Glasscraft branch -->
+  <Dialogue id="craft">
+    <NPCText>
+      <![CDATA[
+      “My art is in <b>mirrors, lenses, and prisms</b>—each capturing more than mere light. A true glassmaker listens to the <b>song of the furnace</b>, hears the wind within sand, and shapes memory as much as matter.<BR><BR>
+      My <b>Mirrors of Second Sight</b> have aided Yasmin’s scholars, my <b>Veil Lenses</b> have exposed spies, and my <b>Spirit Prisms</b> adorn the temples of Qasaria. But... lately, my craft is haunted.<BR><BR>
+      I fear the <b>Cursed Mirror of Minax</b>—broken, scattered, but not silenced—may reflect doom into our city.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me about this Cursed Mirror." next="vision"/>
+    <Option text="Are you in need of help?" next="questIntro"/>
+    <Option text="Thank you, Djalil." next="greeting"/>
+  </Dialogue>
+
+  <!-- Spirit Communion -->
+  <Dialogue id="spirits">
+    <NPCText>
+      <![CDATA[
+      Djalil’s gaze turns inward.<BR><BR>
+      “Through flame and sand, my ancestors taught me to <b>listen to the voices between reflections</b>. Some spirits linger in glass—whispering warnings, sometimes offering guidance.<BR><BR>
+      Not all are kind. One voice has troubled my dreams of late: a man in silver, crowned, trapped behind fractured glass, crying out from beyond time.<BR><BR>
+      I believe it is <b>Lord British himself</b>—and that Minax’s curse binds him yet.”
+      ]]>
+    </NPCText>
+    <Option text="Is there any way to help him?" next="questIntro"/>
+    <Option text="How can you be sure it was Lord British?" next="british"/>
+    <Option text="Tell me of Minax’s curse." next="vision"/>
+    <Option text="I’ll ponder your words, thank you." action="Close"/>
+  </Dialogue>
+
+  <!-- Lord British vision branch -->
+  <Dialogue id="british">
+    <NPCText>
+      <![CDATA[
+      “His sigil shone behind him—a silver ankh, shattered and wreathed in blue flame. His voice called through the shards: ‘Find me in the glass that dreams.’<BR><BR>
+      I have cast every ritual I know, but until the <b>Cursed Mirror’s</b> fragments are gathered, I cannot help him… or Qasaria.”
+      ]]>
+    </NPCText>
+    <Option text="If I gather the shards, will it help?" next="questIntro"/>
+    <Option text="This is heavy news, Djalil. Thank you." next="greeting"/>
+  </Dialogue>
+
+  <!-- Mirror Curse/Quest Intro -->
+  <Dialogue id="vision">
+    <NPCText>
+      <![CDATA[
+      “The <b>Cursed Mirror</b> was Minax’s tool—a vessel of reflection, illusion, and entrapment. Broken by Yasmin’s scholars, it now infects Qasaria with <b>living nightmares</b>. The shards slip between realities; some say the market’s shadows hold one, another was seen in the <b>Sands of Blood Arena</b>, and yet a third in the <b>catacombs</b> beneath the city.<BR><BR>
+      If you would help, find these <b>Mirror Shards</b> and bring them to me. Only then can I attempt to free Lord British—or banish Minax’s curse for good.”
+      ]]>
+    </NPCText>
+    <Option text="I will find the Mirror Shards." next="questAccept"/>
+    <Option text="Where should I search?" next="locations"/>
+    <Option text="This sounds dangerous—I’ll consider it." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest (Give Quest Scroll) -->
+  <Dialogue id="questAccept">
+    <NPCText>
+      <![CDATA[
+      Djalil presses a thin, rune-etched lens into your hand.<BR><BR>
+      “This is a <b>Shard-Seeker Lens</b>. It will shimmer when a <b>Mirror Shard</b> is near—hold it to the light, and you may glimpse their hiding places.<BR><BR>
+      Return with all three shards, and the spirits may grant us a vision… or a warning.”<BR><BR>
+      <i>(You have received a quest scroll: ‘The Mirror’s Curse’)</i>
+      ]]>
+    </NPCText>
+    <Option text="I will return with the shards." 
+            action="GiveItem:FactionDeliveryQuestScroll(Mirror Shards,Qasaria,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="greeting"/>
+    <Option text="What else should I know?" next="locations"/>
+    <Option text="On second thought, perhaps later." action="Close"/>
+  </Dialogue>
+
+  <!-- Locations/Clues for Shards -->
+  <Dialogue id="locations">
+    <NPCText>
+      <![CDATA[
+      Djalil counts on his fingers:<BR><BR>
+      “First: The <b>Undermarket</b>, where Zahid’s thieves barter shadows and rumors. Beware Nadia’s blade.<BR>
+      Second: The <b>Sands of Blood Arena</b>. The arena’s floor is swept each night, but glass does not bleed.<BR>
+      Third: The <b>catacombs</b> beneath Qasaria, haunted by echoes of the Ancients. Some say a shard clings to a <b>restless spirit</b>.”<BR><BR>
+      “With the <b>Shard-Seeker Lens</b>, you will see what others cannot. Be wary—Minax’s servants crave the mirror’s power.”
+      ]]>
+    </NPCText>
+    <Option text="I will search each place. Thank you." 
+            action="GiveItem:FactionDeliveryQuestScroll(Mirror Shards,Qasaria,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="greeting"/>
+    <Option text="I am not ready for this quest." action="Close"/>
+  </Dialogue>
+
+  <!-- Direct Quest Request -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      Djalil lowers his voice.<BR><BR>
+      “There is a task only one with courage and clarity may complete. Will you recover the <b>shards of Minax’s Cursed Mirror</b> for me? Each fragment brings us closer to freeing Lord British—and perhaps saving Qasaria from a shadow none can reflect away.”
+      ]]>
+    </NPCText>
+    <Option text="I will find the shards for you." next="questAccept"/>
+    <Option text="Where do I search for the shards?" next="locations"/>
+    <Option text="This is too much for me." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismissal -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Djalil bows politely, the light playing across his <b>Sash of Prismatic Hues</b>.<BR>
+      “If you seek more than your reflection, return to me. Qasaria’s secrets are many—but in glass, all is revealed, for those who know how to look.”
+      ]]>
+    </NPCText>
+    <Option text="Farewell." action="Close"/>
+    <Option text="Actually, I wish to help." next="questIntro"/>
+  </Dialogue>
+
+<Dialogue id="deepRoots">
+  <NPCText>
+    <![CDATA[
+    Djalil’s gaze hardens, his voice now quieter—measured.<BR><BR>
+    “You see robes and rumors. But few ever ask what breathes beneath the glass…”<BR><BR>
+    He raises a shimmering shard to the light. In it, your face refracts—twisted, multiplied, older.<BR><BR>
+    “I am the last speaker of the <b>Sand-Seers of Al’Hashir</b>—a line long thought extinguished. We shaped <b>mirrors not to reflect, but to remember</b>. Each pane I craft is a fragment of the past—blown with ash, blood, and the breath of the desert.”<BR><BR>
+    He leans in. “If you truly wish to know me... choose what you seek to see.”
+    ]]>
+  </NPCText>
+  <Option text="Tell me of the Sand-Seers." next="seers"/>
+  <Option text="What do your mirrors show you?" next="visions"/>
+  <Option text="You speak of breath, ash, and blood?" next="rituals"/>
+  <Option text="I just wanted a story, not a sermon." next="dismiss"/>
+</Dialogue>
+
+<Dialogue id="seers">
+  <NPCText>
+    <![CDATA[
+    “The <b>Sand-Seers</b> were not mages, not priests—we were <b>keepers of reflection</b>. When the Desert Ancients warred with Minax's ancestors, we trapped memories in molten glass, forging windows to warn the future.<BR><BR>
+    But our clan was hunted. Burned. Silenced. The art faded… except within me.”<BR><BR>
+    He pauses. “Few believe the Ancients still whisper. Fewer still dare to listen.”
+    ]]>
+  </NPCText>
+  <Option text="I would listen, if they would speak to me." next="initiateSeer" condition="IntAtLeast:80"/>
+  <Option text="That sounds dangerous. Why not destroy the mirrors?" next="visionRisk"/>
+  <Option text="Go on. What else have they shown you?" next="visions"/>
+</Dialogue>
+
+<Dialogue id="initiateSeer">
+  <NPCText>
+    <![CDATA[
+    Djalil studies your face, then places a warm lens against your forehead.<BR>
+    “A glimmer of truth lingers in your mind. Take this—one of my earliest <b>Sand-Lenses</b>. Gaze through it under moonlight, and you may see what lies forgotten.”<BR><BR>
+    <i>(You feel your senses briefly expand.)</i>
+    ]]>
+  </NPCText>
+  <Option text="Thank you. I’ll honor this gift." 
+          action="GiveItem:FactionDeliveryQuestScroll(Sand-Seer Lens,Qasaria,100)"
+          next="greeting"/>
+</Dialogue>
+
+<Dialogue id="visions">
+  <NPCText>
+    <![CDATA[
+    “Mirrors hold more than vanity. They capture echoes. Regret. Wishes never spoken.<BR><BR>
+    I once forged a mirror for <b>Yasmin al-Topaz</b> to reflect hidden glyphs. Instead, it showed her a city consumed by fire and shadow. That mirror cracked in her hands—and she has never requested another.”<BR><BR>
+    He sighs. “To see too much is its own curse.”
+    ]]>
+  </NPCText>
+  <Option text="Have your mirrors shown you your own future?" next="selfVision"/>
+  <Option text="Could your mirrors show me mine?" next="playerVision"/>
+  <Option text="I see why you are cautious." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="selfVision">
+  <NPCText>
+    <![CDATA[
+    “Only once did I dare reflect upon myself. I saw <b>Qasaria in ruins</b>... and my hands forging a blade, not a lens.<BR><BR>
+    I broke that mirror, but shards remain. Sometimes, I dream of it... and wake with blood on my gloves, though I have never killed.”<BR><BR>
+    <i>The temperature around you seems to drop.</i>
+    ]]>
+  </NPCText>
+  <Option text="That is... deeply unsettling." action="PlaySound:0x10A"/> <!-- eerie sound -->
+  <Option text="Perhaps it's a vision you can prevent." next="playerVision"/>
+  <Option text="Farewell, glassmaker." action="Close"/>
+</Dialogue>
+
+<Dialogue id="playerVision">
+  <NPCText>
+    <![CDATA[
+    “If you truly wish to know, I can show you a <b>reflected truth</b>. Not prophecy—but <b>possibility</b>.”<BR><BR>
+    He raises a tiny <b>mirror fragment</b> and intones a forgotten chant. The air hums softly.<BR><BR>
+    “Look, and accept what you see.”<BR><BR>
+    <i>(You glimpse a version of yourself... older, crowned... or broken, alone. The image vanishes.)</i>
+    ]]>
+  </NPCText>
+  <Option text="I saw power." action="AddStat:Int,5,300"/>
+  <Option text="I saw sorrow." action="AddStat:Str,5,300"/>
+  <Option text="I saw nothing." action="SendMessage:The mirror remains silent... for now."/>
+  <Option text="That was... enlightening." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="rituals">
+  <NPCText>
+    <![CDATA[
+    “A mirror is not glass alone. It is made with memory.”<BR><BR>
+    He holds up a vial of ash. “<b>Ash from my grandfather’s forge</b>.” Then a drop of red. “<b>Blood from my own cut hand.</b>”<BR><BR>
+    “Every piece I make contains a trace of sacrifice. This is why my lenses <b>remember</b>. And why they should not be mass-produced for vanity, as Safiya urges.”<BR><BR>
+    “When my time comes, my heart shall be turned to sand... and blown into my final mirror.”
+    ]]>
+  </NPCText>
+  <Option text="That is... beautiful. And tragic." next="greeting"/>
+  <Option text="Do all your pieces carry such weight?" next="visions"/>
+  <Option text="I cannot imagine living that way." next="dismiss"/>
+</Dialogue>
+
+<Dialogue id="visionRisk">
+  <NPCText>
+    <![CDATA[
+    “Would you unwrite a warning because it bears ill news?”<BR><BR>
+    “No. My mirrors endure, because their truth matters. Even when unbearable. Even when cursed.”<BR><BR>
+    He stares hard at you. “If you ever look into one... be ready to look back at yourself.”
+    ]]>
+  </NPCText>
+  <Option text="Perhaps one day I will." next="playerVision"/>
+  <Option text="Not today." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

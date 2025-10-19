@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="BrinnaSaltwhistle">
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b0e2ff'>
+      You see a flamboyantly dressed woman slouched over the bar, feathered hat askew and eyes sparkling with mischief and memory. The scent of strong liquor wafts around her as she raises a battered mug and slurs, yet her gaze is unsettlingly sharp.<BR><BR>
+      "Ho there, cold-walker! Care for a tale, a tipple, or a tangled truth? Brinna Saltwhistle, late of Qasaria’s farthest bar, now Frostmere’s reigning champion of nonsense. Some say I talk too much. Those people are missing tongues—ah, but I jest. Or do I?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You seem to know everyone here. Who are your favorites?" next="gossip"/>
+    <Option text="Got any news from the outside world?" next="outside"/>
+    <Option text="I hear you’re full of stories… Any worth my time?" next="stories"/>
+    <Option text="That cloak’s got more patches than a fishing net." next="cloak"/>
+    <Option text="I’m looking for work. Anything needing a brave hand?" next="questIntro"/>
+	<Option text="Tell me about yourself—who *is* Brinna Saltwhistle?" next="whoIsBrinna"/>
+    <Option text="Just passing through, thanks." action="Close"/>
+  </Dialogue>
+
+  <!-- Gossip branch -->
+  <Dialogue id="gossip">
+    <NPCText>
+      <![CDATA[
+      "Favorites, eh? Old Aelric, of course. Once swept me off my feet, now sweeps up magical catastrophes. Lira the innkeep pours the only drink worth freezing for, though she glares when I filch her cherries. Captain Bryndra? Straight as a spear and twice as stubborn—don’t challenge her to arm wrestling, unless you fancy frostbite. Irinya mutters to ice spirits. Garrik the blacksmith? Once sang me a love song with a hammer. I could go on! What sort of gossip whets your whistle?"
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about Elder Aelric and you." next="aelric"/>
+    <Option text="Any trouble brewing in Frostmere?" next="stories"/>
+    <Option text="You seem fond of Lira." next="lira"/>
+    <Option text="That’s enough gossip for now." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="aelric">
+    <NPCText>
+      <![CDATA[
+      Brinna’s eyes unfocus, then twinkle wickedly.<BR>
+      "Ah, Aelric. Once we danced by Qasarian moonlight, before the frost bit his bones and the magic bit his heart. These days he broods over that icy Obelisk. But I remember when he could outdrink the best and laugh at the worst. Careful—ask him for a story and you’ll get a sermon."
+      ]]>
+    </NPCText>
+    <Option text="Does he trust you?" next="trust"/>
+    <Option text="Why did you leave Qasaria?" next="qbackstory"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="trust">
+    <NPCText>
+      <![CDATA[
+      "Trust? In Frostmere? Darling, that’s rarer than a warm bed and twice as valuable. Aelric trusts only the wind and the Obelisk, and neither’s told him the truth in years. But secrets, ah—those stick to me like wine stains. Be wary what you tell Brinna Saltwhistle!"
+      ]]>
+    </NPCText>
+    <Option text="Good to know. Any secrets you want to share?" next="secrets"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="secrets">
+    <NPCText>
+      <![CDATA[
+      Brinna leans closer, voice dropping to a whisper.<BR>
+      "Here’s a tale for free: There’s a wolf among us, a FrostbrandWarrior who wears the skin of a friend but burns with Minax’s hunger. Folk say he guards the northern path, but I’ve seen him feed the snow with blue fire. If you’re brave or foolish, track him down and see whose name he mutters before he dies."
+      ]]>
+    </NPCText>
+    <Option text="You want me to hunt this FrostbrandWarrior?" next="questIntro"/>
+    <Option text="Sounds dangerous. Why not go yourself?" next="whyNotMe"/>
+    <Option text="Is he working for Minax?" next="minaxHint"/>
+    <Option text="Maybe later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="lira">
+    <NPCText>
+      <![CDATA[
+      "Fond? She makes a mean cherry cordial and a meaner glare when I spill it. But Lira’s heart is as warm as her gloves are sticky. Buy her a drink, she’ll tell you which miners are cheating at cards. Steal her cherries, you might wake up in the snow."
+      ]]>
+    </NPCText>
+    <Option text="She seems trustworthy." next="greeting"/>
+    <Option text="You two must have stories together." next="greeting"/>
+  </Dialogue>
+
+  <!-- Qasaria backstory -->
+  <Dialogue id="qbackstory">
+    <NPCText>
+      <![CDATA[
+      "Qasaria, jewel of sand and spice, and I was its finest liar. Until a jealous prince threw me north with a kiss and a curse. I followed Aelric to this icebox. Now I trade tales for drinks and secrets for coins—some from Qasaria, some from… well, let’s not name names."
+      ]]>
+    </NPCText>
+    <Option text="You’re no stranger to danger, then." next="questIntro"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <!-- Outside world -->
+  <Dialogue id="outside">
+    <NPCText>
+      <![CDATA[
+      "News? The sandships of Qasaria still float, the gold of Sunreach still flows, and the pirates of the Den still drink to Lord British’s ghost. Word is, Minax’s cultists have eyes everywhere, even here among the snow. So keep your secrets tight, friend, and your drink tighter."
+      ]]>
+    </NPCText>
+    <Option text="Tell me of Minax’s spies." next="minaxHint"/>
+    <Option text="Back to Frostmere business." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="minaxHint">
+    <NPCText>
+      <![CDATA[
+      "I’ve heard tales of folk who speak with burning breath and bleed blue. They whisper in the old tongue of Minax and vanish with the moon. But the worst is the FrostbrandWarrior—a brute corrupted by cold fire. If you’re clever, you’ll find him before he finds you. Bring proof of his end, and perhaps I’ll find a reward in my pocket. Or a new story for my next song."
+      ]]>
+    </NPCText>
+    <Option text="You want me to hunt him?" next="questIntro"/>
+    <Option text="Maybe I’ll steer clear." action="Close"/>
+  </Dialogue>
+
+  <!-- Cloak branch (quirky outfit lore) -->
+  <Dialogue id="cloak">
+    <NPCText>
+      <![CDATA[
+      Brinna twirls, causing the Mistcloak of Whispered Words to flutter.<BR>
+      "Every patch a place, every stitch a secret. This cloak’s got more stories than a Qasarian sand-prince’s harem. Some say it’s lucky, others say it’s just dirty. Me? I say it hides stains both wine and blood, and that’s a blessing in my line of work."
+      ]]>
+    </NPCText>
+    <Option text="Do you collect stories, or make them?" next="stories"/>
+    <Option text="It suits you. Now, about work…" next="questIntro"/>
+    <Option text="I should go." action="Close"/>
+  </Dialogue>
+
+  <!-- Stories branch -->
+  <Dialogue id="stories">
+    <NPCText>
+      <![CDATA[
+      "Worth your time? Well, some stories are best paid in coin, others in courage. There’s a tale whispering through the snow—a FrostbrandWarrior, not born but made, torching what little warmth we have left. Folk vanish up the north ridge. Their voices echo on cold nights. Perhaps you’re the sort who chases nightmares, or makes them?"
+      ]]>
+    </NPCText>
+    <Option text="Give me the details. I’ll handle it." next="questIntro"/>
+    <Option text="Why is he such a threat?" next="whyThreat"/>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="whyThreat">
+    <NPCText>
+      <![CDATA[
+      "He’s no ordinary bandit. The FrostbrandWarrior carries a sword of living ice, flame locked in frost. He burns crops, slays deer, and marks doorways with runes older than the Obelisk. Svala tried hunting him—lost three hounds. Irinya swears the wind howls his name. Even Bryndra keeps her militia clear of the north path. Want to make your name here? Bring me his cold, blue medallion as proof."
+      ]]>
+    </NPCText>
+    <Option text="I’ll bring you proof." next="questIntro"/>
+    <Option text="That’s more than I bargained for." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Offer Main Node -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b0e2ff'>
+      Brinna lowers her mug, her voice suddenly sharp beneath the slur.<BR><BR>
+      "If you’re half as brave as you look, here’s a task: North of town, past Widow Corla’s frozen graves, a FrostbrandWarrior stalks the snow, burning blue and singing in Minax’s tongue. Some call him cursed, others say he’s lost. Me? I say he’s a knife at our throat. Bring me his cold medallion—proof you’ve faced the fire in the frost. I’ll see to it your name’s toasted here for a week, and perhaps I’ll whisper a secret only Qasaria’s shadows know."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll hunt down the FrostbrandWarrior."
+      action="GiveItem:FactionKillQuestScroll(FrostbrandWarrior,1,Frostmere,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Who was he, before Minax’s corruption?" next="whoWasHe"/>
+    <Option text="Is anyone helping him?" next="helping"/>
+    <Option text="That’s too much trouble." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      "Go on, then. North path, where the willows moan and the air stings your skin. If he speaks your name, don’t answer—just swing. And if you find anything stranger than a blue flame out there, come straight back and tell me, not Irinya or Bryndra. I pay better, and I keep secrets colder."
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with proof." action="Close"/>
+  </Dialogue>
+
+  <!-- Who was he before corruption? -->
+  <Dialogue id="whoWasHe">
+    <NPCText>
+      <![CDATA[
+      Brinna taps her mug, brow furrowing in rare sobriety.<BR>
+      "Used to be a man, or so the stories claim. Some say he was a paladin exiled from Trinsic, others whisper he was once Svala’s hunting rival, lost on the glacier and found by the wrong spirits. Now? He’s little more than fire and sorrow. But maybe you’ll find a sliver of soul left in the snow."
+      ]]>
+    </NPCText>
+    <Option text="I’ll put him to rest." next="questIntro"/>
+    <Option text="That’s not my problem." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="helping">
+    <NPCText>
+      <![CDATA[
+      "Some say he’s alone. I say no one walks this world alone. Watch for black-cloaked figures at dusk—Minax’s whisperers feed the flames and twist the mind. If you’re clever, you’ll bring me not just the medallion, but any tokens or scrolls he carries. There’s a bounty for knowledge, too."
+      ]]>
+    </NPCText>
+    <Option text="I’ll search his remains for clues." next="questIntro"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Why not Brinna herself? -->
+  <Dialogue id="whyNotMe">
+    <NPCText>
+      <![CDATA[
+      Brinna laughs, a deep, belly sound.<BR>
+      "Me? I hunt with words, not swords. Besides, the last time I faced a Frostbrand, I ended up with a scar and a new drinking song. I leave the heroics to braver souls—and pay in gold and secrets."
+      ]]>
+    </NPCText>
+    <Option text="I’ll take the job." next="questIntro"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+  
+<Dialogue id="whoIsBrinna">
+  <NPCText>
+    <![CDATA[
+    Brinna’s grin fades into something more wistful. She swirls her mug slowly.<BR><BR>
+    "I’m the tale no bard dares sing, the shadow at the end of a story, the drunk who remembers *everything*. Once upon a desert wind, I was Brinna of Qasaria—court jester, courtesan, courier of whispers. Now I dance with frost and watch the brave die younger than they should."<BR><BR>
+    She winks suddenly.<BR>
+    "But don’t look so serious! I’ve still got wine, wits, and a few secrets left to sell."
+    ]]>
+  </NPCText>
+  <Option text="Why did you really leave Qasaria?" next="qReasons"/>
+  <Option text="You said you were close to Aelric. What happened?" next="aelricHistory"/>
+  <Option text="You don’t seem like just a storyteller…" next="spyHint"/>
+  <Option text="You’ve seen a lot. What *do* you believe in?" next="beliefs"/>
+  <Option text="Sounds like you’ve lived a dozen lives." action="AddStat:Int,5,300" next="compliment"/>
+</Dialogue>
+
+<Dialogue id="compliment">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#f5f5dc'>
+    Brinna beams, clearly enjoying the flattery.<BR>
+    "Oh, I like you. Sharp tongue, sharper eyes. Mind your compliments or I’ll make you the villain in my next story—and villains *never* get the girl."
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Do I get a story, at least?" next="stories"/>
+  <Option text="Let’s get back to business." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="qReasons">
+  <NPCText>
+    <![CDATA[
+    Brinna sets her mug down with surprising care.<BR><BR>
+    "Politics, pride, and poisoned wine. Qasaria’s merchant-princes love information more than coin, and I was very rich in both. Too rich, perhaps. One prince wanted my secrets, another wanted my silence. Aelric offered escape, and I took it… not realizing he’d fall for the ice before he fell for me."
+    ]]>
+  </NPCText>
+  <Option text="You loved him." next="aelricHistory"/>
+  <Option text="So you were a spy?" next="spyHint"/>
+  <Option text="I understand. Let’s move on." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="aelricHistory">
+  <NPCText>
+    <![CDATA[
+    She laughs, but there's a crack in her voice.<BR>
+    "Aelric? I adored him. Still do, in a way. Before the Obelisk, he laughed more than he lectured. We danced beneath crystal moons and dodged assassins together. But here? This place froze him from the inside out. Now he guards secrets like a miser hoards gold—and I’m one of them."
+    ]]>
+  </NPCText>
+  <Option text="Have you told him how you feel?" next="confession"/>
+  <Option text="Maybe you still care." condition="IsFemale" next="empathyResponse"/>
+  <Option text="He’s a fool for letting you go." condition="IsMale" next="empathyResponse"/>
+</Dialogue>
+
+<Dialogue id="confession">
+  <NPCText>
+    <![CDATA[
+    "I’ve told him in riddles and rhymes. But magic makes poor lovers. Still, I’d die to save his secrets... and kill to forget them."
+    ]]>
+  </NPCText>
+  <Option text="That’s... heavy." next="beliefs"/>
+  <Option text="You really *are* a spy, aren’t you?" next="spyHint"/>
+</Dialogue>
+
+<Dialogue id="empathyResponse">
+  <NPCText>
+    <![CDATA[
+    Brinna gives a faint smile, more grateful than playful.<BR>
+    "Careful, now. I might actually believe you. And hope is a dangerous vintage around here—it goes sour fast."
+    ]]>
+  </NPCText>
+  <Option text="Still worth sipping, maybe." action="Fame:50" next="beliefs"/>
+  <Option text="Back to business." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="spyHint">
+  <NPCText>
+    <![CDATA[
+    She raises an eyebrow, her voice suddenly sober.<BR>
+    "Spy? What a rude word. I prefer 'narrative architect.' But yes, I listen. I remember. And I pass things on—sometimes to the right people. Sometimes... not. What matters is this: I’ve kept this village alive more than once. Stories can protect more than swords."
+    ]]>
+  </NPCText>
+  <Option text="So who are you spying for *now*?" next="spyNow"/>
+  <Option text="Do the villagers know?" next="villagersKnow"/>
+  <Option text="I won’t tell. You’ve earned your secrets." action="Karma:100" next="beliefs"/>
+</Dialogue>
+
+<Dialogue id="spyNow">
+  <NPCText>
+    <![CDATA[
+    She looks you dead in the eye, all humor gone.<BR>
+    "That depends... on who asks. Qasaria still pays well. Aerilon trades favors. Even Magincia’s sent coin. But lately? I find myself spying for the poor, the broken, and the scared. Their secrets are heavier... but they’re worth more to me now."
+    ]]>
+  </NPCText>
+  <Option text="Sounds like your loyalties have changed." next="beliefs"/>
+  <Option text="I’ll be careful what I say around you." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="villagersKnow">
+  <NPCText>
+    <![CDATA[
+    Brinna shrugs.<BR>
+    "Some suspect. Lira knows. Bryndra doesn’t care as long as I don’t betray Frostmere. Aelric... he sees too much and speaks too little. But none have asked me to stop. Maybe because they know I listen even when I laugh. Maybe because I’ve warned them of dangers they didn’t see coming."
+    ]]>
+  </NPCText>
+  <Option text="You protect them, in your own way." next="beliefs"/>
+  <Option text="You must carry a lot." next="burdens"/>
+</Dialogue>
+
+<Dialogue id="burdens">
+  <NPCText>
+    <![CDATA[
+    Brinna downs the rest of her mug.<BR>
+    "I do. But the trick is: carry them in song, not silence. And if you must weep, do it when the snow falls. No one sees the tears then."
+    ]]>
+  </NPCText>
+  <Option text="You deserve a break from all this." action="AddStat:Str,3,300" next="compliment"/>
+  <Option text="I’ll be back later." action="Close"/>
+</Dialogue>
+
+<Dialogue id="beliefs">
+  <NPCText>
+    <![CDATA[
+    "What do I believe in?"<BR><BR>
+    She spins her empty mug and watches it wobble to a stop.<BR>
+    "In second chances. In laughter amid sorrow. In telling the truth slantwise so it doesn’t kill. And in the idea that one brave soul can change the ending of a tale others gave up on. That’s why I still talk. Still drink. Still hope."
+    ]]>
+  </NPCText>
+  <Option text="That’s enough truth for now. Let’s drink." action="PlaySound:0x015" next="greeting"/>
+  <Option text="I’ll remember that, Brinna." action="Fame:100" next="greeting"/>
+</Dialogue>
+
+  
+</DialogueFile>

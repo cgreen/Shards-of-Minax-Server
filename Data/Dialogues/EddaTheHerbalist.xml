@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="EddaTheHerbalist">
+
+  <!-- === root: initial greeting ============================== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#a7e46b'>
+      You find Edda the Herbalist hunched over a battered oak table, grinding violet roots into powder with her scarred hands. Her sageleaf chemise is flecked with mud, and a willow talisman dangles from her sash, softly glowing as you approach.<BR><BR>
+      She sniffs, eyeing you up and down, then flashes a crooked, knowing grin.<BR>
+      <BR>
+      "Well, now—if it isn’t another pair of muddy boots tracking in. The marsh spirits must be restless today. Unless you’ve come to sell snake oil or ask for a love charm, state your business—before the kettle boils over."<BR>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’m here to help. Is there trouble brewing?" next="trouble"/>
+    <Option text="What are you working on, Edda?" next="herbwork"/>
+    <Option text="Rumor is you know these woods better than anyone..." next="woods"/>
+    <Option text="I’m just passing through, no trouble." next="passing"/>
+  </Dialogue>
+
+  <!-- Player asks about trouble/quests -->
+  <Dialogue id="trouble">
+    <NPCText>
+      <![CDATA[
+      Edda’s eyes narrow with wry amusement.<BR>
+      "There’s always trouble, love. Eldermoor grows weeds faster than wheat—and this week, it’s an Illusionist Ettin haunting the groves east of the old stone circle. Chased my best herb gatherer up a tree and trampled my marshwort beds. Now the folk are afraid to fetch water after dusk."<BR><BR>
+      She leans in, lowering her voice.<BR>
+      "Halric wants to wall it out, Aldric wants to shoot it, and Miralda wants to pray it away. Me? I’d prefer someone with backbone and brains—maybe that’s you. What say you?"
+      ]]>
+    </NPCText>
+    <Option text="I’ll take care of your Ettin problem." next="questAccept"/>
+    <Option text="What makes this Ettin so dangerous?" next="ettinLore"/>
+    <Option text="Why not ask Thalen or Aldric?" next="whyNotThem"/>
+    <Option text="Have you seen magic like this before?" next="magicBefore"/>
+    <Option text="Maybe not today." action="Close"/>
+  </Dialogue>
+
+  <!-- Player asks about her work -->
+  <Dialogue id="herbwork">
+    <NPCText>
+      <![CDATA[
+      Edda gives a snort and gestures at jars, roots, and bundled herbs.<BR>
+      "A little of this, a pinch of that—wounds to salve, fevers to break, and secrets to keep. This marsh keeps no end of cures or curses. Folk here trust my poultices more than city prayers. Even Halric, though he’d sooner wrestle a boar than admit it."
+      <BR><BR>
+      She cocks an eyebrow.<BR>
+      "You look hale enough, but if you wake with boils, best come see me before you turn purple. Now—if you’re handy with a blade or clever with charms, I could use a favor…"
+      ]]>
+    </NPCText>
+    <Option text="What favor do you need?" next="trouble"/>
+    <Option text="What secrets do you keep?" next="secrets"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Player asks about the woods -->
+  <Dialogue id="woods">
+    <NPCText>
+      <![CDATA[
+      She chuckles, tossing a sprig of willow in her brew.<BR>
+      "They say I walk with wild spirits—nonsense, mostly. But I know every thicket and marsh between here and Cove. Sometimes the woods speak—sometimes, you’d best listen. Lately, the earth’s restless, and not just from Minax’s meddling."<BR>
+      Her gaze grows serious.<BR>
+      "I’d rather show you than tell you. Got time for a little pest control?"
+      ]]>
+    </NPCText>
+    <Option text="If it helps the village, I’m in." next="trouble"/>
+    <Option text="What’s making the earth restless?" next="restless"/>
+    <Option text="No thanks, I’ll stay out of the mud." action="Close"/>
+  </Dialogue>
+
+  <!-- Passing through -->
+  <Dialogue id="passing">
+    <NPCText>
+      <![CDATA[
+      Edda shrugs, voice softer.<BR>
+      "Then mind your boots, stranger. This place grows on you, but it bites too. If you find yourself lost in fog, look for the willow lights. The spirits favor those with an open mind."<BR>
+      She returns to her grinding, humming an old tune.
+      ]]>
+    </NPCText>
+    <Option text="On second thought, do you need help?" next="trouble"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Accepting quest -->
+  <Dialogue id="questAccept">
+    <NPCText>
+      <![CDATA[
+      Edda’s lips curl in a sly smile.<BR>
+      "There’s iron in your spine, I like that. The Illusionist Ettin isn’t just brawn—it’s taken to twisting the forest, casting glamours so you see two where there’s one, or none at all. Some say it was once a guardian beast, corrupted by Minax’s shade. Now it preys on lost children and poisons the streams."
+      <BR><BR>
+      "If you can bring me the creature’s ‘Mosaic Eye’—its magical stone, they say—it’ll prove your mettle and let me brew a charm to ward off further trickery. Don’t lose your way in the fog, and beware—sometimes what you fight isn’t what it seems."
+      ]]>
+    </NPCText>
+    <Option text="How do I find it?" next="finding"/>
+    <Option text="I’ll return with the Mosaic Eye." 
+        action="GiveItem:FactionKillQuestScroll(IllusionistEttin,1,Eldermoor,600)"
+        condition="!HasItem:FactionKillQuestScroll"
+        next="acceptFinal"/>
+    <Option text="Maybe this is too much for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptFinal">
+    <NPCText>
+      <![CDATA[
+      "Good soul. The Ettin lurks eastward at dusk, near the standing stones—listen for the sound of two voices arguing, and watch for shimmering lights in the bracken. Bring me its Mosaic Eye, and perhaps Eldermoor will sleep easy for a week or two."
+      ]]>
+    </NPCText>
+    <Option text="Wish me luck." action="Close"/>
+  </Dialogue>
+
+  <!-- Ettin lore -->
+  <Dialogue id="ettinLore">
+    <NPCText>
+      <![CDATA[
+      Edda lowers her tone.<BR>
+      "This isn’t any old brute. It’s clever—wraps itself in illusions, taunts the weak-willed, even steals children’s voices to lure folk off paths. Mira swears she heard her own laughter echoing in the woods last week, and Aldric’s dog won’t go near the stone ring."
+      <BR><BR>
+      "Some say Minax is twisting the old guardians—making them into mockeries. Either way, I want its Mosaic Eye for my brews, and the village wants peace."
+      ]]>
+    </NPCText>
+    <Option text="Then I’ll take the job." 
+        action="GiveItem:FactionKillQuestScroll(IllusionistEttin,1,Eldermoor,600)"
+        condition="!HasItem:FactionKillQuestScroll"
+        next="acceptFinal"/>
+    <Option text="This sounds risky. Why you?" next="whyNotThem"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Why not Thalen or Aldric -->
+  <Dialogue id="whyNotThem">
+    <NPCText>
+      <![CDATA[
+      Edda snorts, amused.<BR>
+      "Thalen’s more at home with hammer and anvil than he is with marsh spirits—though he’d never admit it. Aldric? That leg of his won’t heal, not with all the running he does. As for Halric—he means well, but he’d rather bash in a skull than unravel a riddle. No, what’s needed is a steady hand and a mind that sees through lies. That’s you, if you want it."
+      ]]>
+    </NPCText>
+    <Option text="I’ll help." 
+        action="GiveItem:FactionKillQuestScroll(IllusionistEttin,1,Eldermoor,600)"
+        condition="!HasItem:FactionKillQuestScroll"
+        next="acceptFinal"/>
+    <Option text="I’ll pass this time." action="Close"/>
+  </Dialogue>
+
+  <!-- Have you seen magic like this before? -->
+  <Dialogue id="magicBefore">
+    <NPCText>
+      <![CDATA[
+      She looks away, voice somber.<BR>
+      "I’ve seen Minax’s magic before, child. When I was young, before you were a spark in the stars, the old woods sheltered all manner of spirits—most harmless, some not. Now, the line between illusion and nightmare grows thin. The Verdant Tribes warn of a deeper poison. That’s why I help them, against Halric’s wishes."
+      <BR><BR>
+      She meets your gaze.<BR>
+      "You could do worse than have friends in old places. Help me with the Ettin, and maybe I’ll show you their secrets."
+      ]]>
+    </NPCText>
+    <Option text="Alright, I’m in."
+        action="GiveItem:FactionKillQuestScroll(IllusionistEttin,1,Eldermoor,600)"
+        condition="!HasItem:FactionKillQuestScroll"
+        next="acceptFinal"/>
+    <Option text="I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <!-- Secrets -->
+  <Dialogue id="secrets">
+    <NPCText>
+      <![CDATA[
+      Edda’s smile turns sly.<BR>
+      "Ask a wise woman her secrets, and you’ll get riddles in return. I keep the village’s ills quiet, help the desperate, and sometimes break the rules—better forgiveness than permission, as Halric grumbles."
+      <BR><BR>
+      "If you want a real secret—help me with this Ettin. Maybe I’ll share a charm or two from the Verdant Tribes’ lore. Fair?"
+      ]]>
+    </NPCText>
+    <Option text="Deal. I’ll hunt the Ettin."
+        action="GiveItem:FactionKillQuestScroll(IllusionistEttin,1,Eldermoor,600)"
+        condition="!HasItem:FactionKillQuestScroll"
+        next="acceptFinal"/>
+    <Option text="Not today." action="Close"/>
+  </Dialogue>
+
+  <!-- Restless earth -->
+  <Dialogue id="restless">
+    <NPCText>
+      <![CDATA[
+      Edda grows thoughtful, voice distant.<BR>
+      "Sometimes, the ground quivers before sunrise. The trees whisper of old things stirring—the sort that don’t belong, not since Minax broke the world’s order. If you’ve got the courage, walk with me after dark. There are things to see that don’t wish to be seen."
+      ]]>
+    </NPCText>
+    <Option text="I’ll walk the woods, but first—about the Ettin..." next="trouble"/>
+    <Option text="That’s unsettling. Maybe another time." action="Close"/>
+  </Dialogue>
+</DialogueFile>

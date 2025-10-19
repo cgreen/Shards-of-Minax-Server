@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="NaliSwiftseed">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#71be56'>
+      You see a young woman dusted with pollen, her eyes watery but determined. Woven garlands crown her hair, and she clutches a satchel bursting with seeds and herbs.<BR><BR>
+      "Achoo! Oh—blessings of the grove! Sorry, the wind stirs the pollen something fierce today.<BR>
+      I'm Nali Swiftseed, runner of herbs and seeds. If you aren't here to trample seedlings, maybe you can help. The paths are getting... dangerous."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="What troubles the forest paths?" next="routeTrouble"/>
+    <Option text="Who are you, Nali?" next="whoAreYou"/>
+    <Option text="What does a Seed Runner do?" next="whatDoYouDo"/>
+    <Option text="Your allergies seem rough..." next="allergyJoke"/>
+	<Option text="Tell me more about you and the Verdant way." next="personalRoots"/>
+    <Option text="I have no time for the woods." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="whoAreYou">
+    <NPCText>
+      <![CDATA[
+      She smiles weakly.<BR><BR>
+      "Born here, raised by the wild. My family has run seeds and medicine between the huts since before the tribes were many. The wind calls, so I run—no matter how much I sneeze. The spirits must find it funny."<BR>
+      Her nose twitches.<BR>
+      "Can I tempt you into helping instead?"
+      ]]>
+    </NPCText>
+    <Option text="What needs doing?" next="routeTrouble"/>
+    <Option text="Tell me about the Seed Runners." next="whatDoYouDo"/>
+    <Option text="Blessings on your journey." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="whatDoYouDo">
+    <NPCText>
+      <![CDATA[
+      "Seed Runners carry hope from hut to hut—new crops, rare medicine, stories, even gossip. I know every deer trail and secret root between here and the distant groves. If you need a shortcut, a safe crossing, or healing herbs, come to me."<BR><BR>
+      She glances nervously at the forest's edge.<BR>
+      "Though these days, even I get nervous out there."
+      ]]>
+    </NPCText>
+    <Option text="What makes the forest so dangerous now?" next="routeTrouble"/>
+    <Option text="Perhaps I can help." next="routeTrouble"/>
+    <Option text="Thanks, but I'll manage." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="allergyJoke">
+    <NPCText>
+      <![CDATA[
+      Nali rubs her nose, eyes watering.<BR>
+      "A lifetime among the flowers, and they still get the better of me! Nature's little joke, I suppose."<BR><BR>
+      "But pollen or not, someone has to keep the green alive while the rest fight or argue. Achoo!"<BR>
+      "Will you help with a delivery—or at least walk the dangerous path with me?"
+      ]]>
+    </NPCText>
+    <Option text="What's so dangerous about the path?" next="routeTrouble"/>
+    <Option text="Blessings of the wild, but not today." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="routeTrouble">
+    <NPCText>
+      <![CDATA[
+      She lowers her voice.<BR><BR>
+      "The east route to Elderheart Hollow is overrun by thorn demons—twisted vines, claws, eyes in the bark. Minax’s shadow, or so the elders say. My usual shortcuts are tangled or worse."<BR>
+      "I must reach the outpost with medicine, but alone I won’t make it. Will you come—fight if you must, sneak if you’re clever? There may be other ways to clear the path, if you look sharp."
+      ]]>
+    </NPCText>
+    <Option text="I'll fight through with you." action="GiveItem:SwiftseedDeliveryScroll(ElderheartHollow,Seed Satchel,200)" condition="!HasItem:SwiftseedDeliveryScroll" next="acceptQuest"/>
+    <Option text="I prefer stealth—any advice for sneaking?" next="stealthAdvice"/>
+    <Option text="Is there another way around?" next="secretPaths"/>
+    <Option text="Sounds risky. Maybe not today." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="stealthAdvice">
+    <NPCText>
+      <![CDATA[
+      Nali brightens.<BR>
+      "You’re wise! Thorn demons can’t see well, but they feel every vibration. Step lightly, use pollen poultices to mask your scent, and beware the red blossom traps—they burst if touched."<BR>
+      "I’ll pack a few poultices for you. Will you try to slip past with me?"
+      ]]>
+    </NPCText>
+    <Option text="Yes, let's move quietly." action="GiveItem:SwiftseedDeliveryScroll(ElderheartHollow,Seed Satchel,200)" next="acceptQuest" condition="!HasItem:SwiftseedDeliveryScroll"/>
+    <Option text="On second thought, fighting is better." next="routeTrouble"/>
+    <Option text="Not today." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="secretPaths">
+    <NPCText>
+      <![CDATA[
+      She leans close.<BR>
+      "There is a hidden root tunnel—if you can open the old druidic lock. Find three mossy stones near the old spirit totem. Press them in order: North, then East, then West. The ground will open."<BR>
+      "Or so the stories go! Shall we try it together?"
+      ]]>
+    </NPCText>
+    <Option text="Yes, show me the secret way!" action="GiveItem:SwiftseedDeliveryScroll(ElderheartHollow,Seed Satchel,200)" next="acceptQuest" condition="!HasItem:SwiftseedDeliveryScroll"/>
+    <Option text="I'll stick to the main path." next="routeTrouble"/>
+    <Option text="Maybe later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptQuest">
+    <NPCText>
+      <![CDATA[
+      Nali hands you a small satchel fragrant with herbs.<BR><BR>
+      "Take this Seed Satchel to Elderheart Hollow. Protect it—thorn demons crave the scent of what’s inside. I’ll follow your lead, whether you fight, sneak, or find the secret tunnel. Once we’re safe, the outpost will reward you, and I’ll owe you a favor."<BR>
+      She sneezes, grinning.<BR>
+      "Ready when you are!"
+      ]]>
+    </NPCText>
+    <Option text="Let's go." action="Close"/>
+    <Option text="Maybe later, once I'm prepared." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="personalRoots">
+    <NPCText>
+      <![CDATA[
+      Nali pauses, her expression softening as she runs fingers across a vine-bound bracelet.<BR><BR>
+      "The Verdant way isn't just about trees and dirt. It's about *balance*. We grow what we take, give when we can, and listen when the forest speaks."<BR>
+      "I wasn't always a runner. I used to be a weaver like my grandmother—until the storms came and the beasts rose. We all had to adapt."
+      ]]>
+    </NPCText>
+    <Option text="What kind of beasts?" next="beastHistory"/>
+    <Option text="You were a weaver? What changed?" next="weaverChange"/>
+    <Option text="What do you mean the forest speaks?" next="forestSpeaks"/>
+    <Option text="You carry that balance even with the allergies?" next="jokeRespect"/>
+    <Option text="That's interesting, but I should move on." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="beastHistory">
+    <NPCText>
+      <![CDATA[
+      She sighs, shoulders tightening.<BR><BR>
+      "When Minax's shadow first touched the earth, things began to twist. Thorn demons were just the start. Deer began screaming like wolves. Even roots snapped like jaws."<BR>
+      "That’s when I stopped weaving and started running—medicine, seeds, warnings. Movement kept us alive."
+      ]]>
+    </NPCText>
+    <Option text="You sound brave." next="acknowledgeBravery"/>
+    <Option text="How did you survive the worst of it?" next="survival"/>
+    <Option text="It must be hard to lose your old life." next="weaverChange"/>
+    <Option text="What does the forest say about Minax?" next="forestSpeaks"/>
+  </Dialogue>
+
+  <Dialogue id="weaverChange">
+    <NPCText>
+      <![CDATA[
+      Nali chuckles softly.<BR><BR>
+      "I used to spend days making tapestries of vines and pollen-thread. I’d sit by the elderfire and listen to the wind, waiting for dreams."<BR>
+      "But dreams don’t deliver medicine to wounded scouts. Threads don’t guide orphans out of thistle pits. Running became my calling."<BR><BR>
+      "Though I still carry a needle tucked in my belt—just in case the world ever slows down again."
+      ]]>
+    </NPCText>
+    <Option text="Do you ever regret it?" next="regrets"/>
+    <Option text="You could teach weaving someday." next="teachWeaving"/>
+    <Option text="Can I see your old work?" next="giftOption" condition="KarmaAtLeast:2000"/>
+    <Option text="Your spirit is strong. I admire that." action="AddKarma:100"/>
+  </Dialogue>
+
+  <Dialogue id="regrets">
+    <NPCText>
+      <![CDATA[
+      "Some nights, I miss the quiet. The smell of dyed leaves, the soft creak of a loom branch. But every herb I deliver, every life I help protect..."<BR>
+      She places a hand over her heart.<BR>
+      "That *matters* more. And so I run. Even with itchy eyes."
+      ]]>
+    </NPCText>
+    <Option text="You're stronger than most." action="AddFame:100"/>
+    <Option text="It’s noble, what you do." next="teachWeaving"/>
+  </Dialogue>
+
+  <Dialogue id="teachWeaving">
+    <NPCText>
+      <![CDATA[
+      She brightens.<BR><BR>
+      "You'd like to learn? Maybe after all this—when the woods settle and the pollen sleeps—I’ll teach you the warp and weft of spirit vines."<BR>
+      "But beware: needle-pricks sting worse than thorns!"
+      ]]>
+    </NPCText>
+    <Option text="I’ll hold you to that!" action="SendMessage:Nali smiles and nods."/>
+    <Option text="Deal." action="AddSkill:Tailoring,5,600"/> <!-- 5 pt boost for 10 mins -->
+    <Option text="Another time, perhaps." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="giftOption">
+    <NPCText>
+      <![CDATA[
+      Nali eyes you thoughtfully.<BR><BR>
+      "You've got a kind aura. Maybe it’s time this had a new home."<BR>
+      She reaches into her pouch and offers you a delicate woven charm—glowing faintly with spirit sap.
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Nali." action="GiveItem:WovenForestCharm"/>
+    <Option text="I can't accept such a gift." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="forestSpeaks">
+    <NPCText>
+      <![CDATA[
+      She crouches, fingers brushing a leaf.<BR><BR>
+      "The forest speaks in rustles and whispers, in sudden silence and unexpected bloom. The Verdant shamans read omens in moss. I read them in pollen routes."<BR>
+      "Right now? The forest is uneasy. It twists where it should grow. It *remembers* Minax."
+      ]]>
+    </NPCText>
+    <Option text="Can you teach me to read those signs?" action="AddSkill:Camping,3,600"/>
+    <Option text="Then we should act quickly." action="Karma:100"/>
+    <Option text="Spooky. I'll stick to roads." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="survival">
+    <NPCText>
+      <![CDATA[
+      Nali points to a feather charm at her belt.<BR><BR>
+      "I survived because the wind loved me. Or because I learned to listen. Or maybe just luck."<BR>
+      "We don’t always get to choose how we survive. Only what we do with it after."
+      ]]>
+    </NPCText>
+    <Option text="Well said. Let's keep surviving." action="AddStat:Dex,5,600"/>
+    <Option text="You inspire me." action="Fame:150"/>
+    <Option text="I’m heading out now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acknowledgeBravery">
+    <NPCText>
+      <![CDATA[
+      She laughs nervously.<BR><BR>
+      "Brave? I still flinch when mushrooms pop. But I keep moving. That’s all bravery is, I think—running even when you sneeze the whole way."
+      ]]>
+    </NPCText>
+    <Option text="You're braver than you know." action="AddKarma:100"/>
+    <Option text="Back to the task at hand…" next="routeTrouble"/>
+  </Dialogue>
+
+  <Dialogue id="jokeRespect">
+    <NPCText>
+      <![CDATA[
+      Nali grins mid-sneeze.<BR><BR>
+      "Balance means even the itchy parts matter! Achoo!"<BR>
+      "Besides, someone has to remind the world that stubbornness is a virtue."
+      ]]>
+    </NPCText>
+    <Option text="I’ll remember that." action="Close"/>
+    <Option text="So, about that path…" next="routeTrouble"/>
+  </Dialogue>
+
+
+</DialogueFile>

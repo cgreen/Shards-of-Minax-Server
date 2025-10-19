@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="SvalaTheHuntress">
+  <!-- ==================== Greeting ======================== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#77b5de'>
+      You see a woman of striking presence, wrapped in furs and snow-weathered leather. Her eyes are ice-bright and her posture ready, as if every muscle expects danger. At her side hangs a sleek, frost-marked bow, and the emerald sash about her waist stands out like spring against endless winter.
+      <BR><BR>
+      She studies you, neither friendly nor hostile—just assessing.<BR>
+      "Hmph. New face. Let’s see if you’re clever, or just another meal for the snowdrifts. Name’s Svala. I feed this village—when the Obelisk’s shadows let me. If you’re looking to borrow firewood or gossip, talk to Lira. If you want honest work, and you’re not afraid of bleeding, I’ll listen. Otherwise, don’t waste my time."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I came to help. Anything need doing?" next="questIntro"/>
+    <Option text="You seem wary. Have you always hunted these lands?" next="backstory"/>
+    <Option text="That’s a fine bow. What’s its story?" next="bow"/>
+    <Option text="Any advice for surviving out here?" next="advice"/>
+    <Option text="Tell me about yourself, Svala. What brought you here?" next="aboutSvala"/>	
+    <Option text="Maybe another time. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ==================== Backstory Branch =================== -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      Svala snorts, a wisp of a grin showing.<BR>
+      "Wary keeps you alive. I was born east, where forests outnumber people. Came here when the northern mages called for hunters—before the Obelisk started whispering. Some folk call me ‘the wolf’ for how I move in storms. Garrik calls me ‘a pain in his forge’—though he’d freeze without my pelts, and he knows it."
+      <BR><BR>
+      "I trust few, but I do trust the Silent Hunter. If you want to last a night out here, best learn the difference between a friend, a rival, and a hungry beast."
+      ]]>
+    </NPCText>
+    <Option text="Tell me about the Silent Hunter." next="silentHunter"/>
+    <Option text="What’s your deal with Garrik?" next="garrik"/>
+    <Option text="Enough talk. I want to help." next="questIntro"/>
+    <Option text="I’ll be on my way." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="bow">
+    <NPCText>
+      <![CDATA[
+      Svala gently runs a finger along the bowstring.<BR>
+      "This is Shiverbranch. Carved from a tree the Obelisk froze solid—won’t warp, not even in blizzards. Won it from Garrik on a bet, but I think he let me have it to keep me from flirting with his precious ores. It never misses, unless my mind wanders—and in Frostmere, your mind had better never wander."
+      ]]>
+    </NPCText>
+    <Option text="You two seem close. Or not?" next="garrik"/>
+    <Option text="Can you teach me to track like you?" next="advice"/>
+    <Option text="Maybe I can prove myself." next="questIntro"/>
+    <Option text="Thanks for the story." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="advice">
+    <NPCText>
+      <![CDATA[
+      "First: Don’t trust the snow. Second: Don’t trust your own ears—the wind lies. Third: If you see tracks that vanish, it’s either The Silent Hunter, or you should run the other way."
+      <BR><BR>
+      "Oh, and if you want to eat, earn it. Now—if you’re still listening, I might have a job fit for someone bold."
+      ]]>
+    </NPCText>
+    <Option text="I want to hear about this job." next="questIntro"/>
+    <Option text="How do you know The Silent Hunter?" next="silentHunter"/>
+    <Option text="You seem tough to impress." next="impress"/>
+    <Option text="I’ll come back later." action="Close"/>
+  </Dialogue>
+
+  <!-- ==================== Relationship Branches ============== -->
+  <Dialogue id="garrik">
+    <NPCText>
+      <![CDATA[
+      Svala rolls her eyes, hiding a smile.<BR>
+      "Garrik? He’s stubborn as a bull moose and twice as proud. Swears he’s the only smith north of Moonglow worth a damn. We butt heads, but he makes blades that won’t snap in a storm, and I bring him the furs and meat he needs to keep the forge hot. If you see him, tell him I still owe him a drink from last frost."
+      ]]>
+    </NPCText>
+    <Option text="I’ll remember that. Now, about work..." next="questIntro"/>
+    <Option text="How about The Silent Hunter?" next="silentHunter"/>
+    <Option text="That’s all for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="silentHunter">
+    <NPCText>
+      <![CDATA[
+      "Some say The Silent Hunter’s half spirit, half man. Truth is, I taught him most of what he knows. But the Obelisk changed him. He moves where the wind can’t find him and never misses a shot. If he trusts you, you’re lucky. If not—don’t try to follow him in a blizzard."
+      ]]>
+    </NPCText>
+    <Option text="Sounds like a good ally. Now, about that job..." next="questIntro"/>
+    <Option text="What about you—how do you handle the cold?" next="outfit"/>
+    <Option text="I should go." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="impress">
+    <NPCText>
+      <![CDATA[
+      "Tough to impress? No, just old enough not to waste time on talk. Out here, words melt faster than ice near the forge. Show me you can track, fight, or outwit the snow, and maybe you’ll last longer than the last city fool who tried to ‘help.’"
+      ]]>
+    </NPCText>
+    <Option text="So let me prove myself. What needs hunting?" next="questIntro"/>
+    <Option text="Maybe I’ll leave the hunting to you." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="outfit">
+    <NPCText>
+      <![CDATA[
+      "Layers, and a knack for sewing. This hood is lynx fur—‘Snowbound Lynx Hood.’ The boots? Carved from the pelt of the last Tundra Stalker I brought down. Garrik reinforced my jerkin—calls it ‘Stormhide’ for how it sheds the wind. Every stitch, every scar—earned out here."
+      ]]>
+    </NPCText>
+    <Option text="Respect. Now, what work do you have?" next="questIntro"/>
+    <Option text="Stay warm, Huntress." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================== Quest Offer ====================== -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#77b5de'>
+      Svala's eyes narrow, her voice lowering.<BR>
+      "Something’s wrong in the north ravine. FrostbiteHound’s scent everywhere—blood, ice, and fear. Beast’s clever—dodges my traps, kills elk for sport, and won’t face me directly. Even The Silent Hunter keeps his distance."
+      <BR><BR>
+      "And here’s the danger—its lair lies too close to the Obelisk. If the Hound learns to feed on its magic, there won’t be a village left to save. Garrik wants to storm in with a hammer. I say we need a tracker who won’t die before dusk. Think that’s you?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll hunt the FrostbiteHound for you."
+      action="GiveItem:FactionKillQuestScroll(FrostbiteHound,1,Frostmere,750)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Why not hunt it yourself?" next="whyNotMe"/>
+    <Option text="What’s so deadly about this beast?" next="houndInfo"/>
+    <Option text="Is this creature touched by Minax’s magic?" next="minax"/>
+    <Option text="On second thought, maybe I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Svala nods, lips set in a grim smile.<BR>
+      "Bring me its fang—left side, not right. The right one’s chipped from the last fool who tried to kill it. And if you see any fur stained blue? Don’t touch it with bare skin. That’s Obelisk magic seeping out. Take care, and if you don’t return, I’ll feed your boots to my wolves."
+      ]]>
+    </NPCText>
+    <Option text="You’ll have that fang soon." action="Close"/>
+  </Dialogue>
+
+  <!-- ============ Info about the Hound ============== -->
+  <Dialogue id="houndInfo">
+    <NPCText>
+      <![CDATA[
+      Svala leans in, voice sharp.<BR>
+      "It isn’t just a wolf. Stands taller than a man, coat white as bone with streaks of blue frost. Its breath will freeze your skin before its fangs reach you. Worse—its howl. It drives weaker minds mad. I lost two dogs and nearly my ear the last time I tracked it at night. Respect the Hound, or die fast."
+      ]]>
+    </NPCText>
+    <Option text="I’ll take the risk. Give me the details."
+      action="GiveItem:FactionKillQuestScroll(FrostbiteHound,1,Frostmere,750)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Maybe this is above my skills." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="whyNotMe">
+    <NPCText>
+      <![CDATA[
+      Svala bristles.<BR>
+      "If I fall, this village starves. Garrik’s strong, but he can’t hunt, and Lira’s good for a stew, not a wolf. The Silent Hunter would go, but last time the Hound’s howl near broke his mind. I need my wits. I need my bow. I need someone with nothing to lose to run this risk. Do you want the job or not?"
+      ]]>
+    </NPCText>
+    <Option text="Alright, I’ll do it."
+      action="GiveItem:FactionKillQuestScroll(FrostbiteHound,1,Frostmere,750)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Maybe you’re right. Another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Svala’s gaze turns icy.<BR>
+      "Minax corrupts more than men. Every season, the beasts grow stranger—more cunning, more cruel. The FrostbiteHound’s eyes… sometimes I swear they burn like emeralds. Irinya says the Obelisk keeps the worst at bay, but I’ve seen monsters walk through blizzards like ghosts. Bring back proof of the Hound, and I’ll see if Irinya can read its fate."
+      ]]>
+    </NPCText>
+    <Option text="I’ll take care of it."
+      action="GiveItem:FactionKillQuestScroll(FrostbiteHound,1,Frostmere,750)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Perhaps someone else should try." action="Close"/>
+  </Dialogue>
+  
+<Dialogue id="aboutSvala">
+  <NPCText>
+    <![CDATA[
+    Svala hesitates, glancing sidelong as if measuring your intent.<BR>
+    "Not often folk ask for a hunter’s story. Most care more for meat than for the one who brings it in from the wild. Still, maybe you’ll learn something."
+    <BR><BR>
+    She shifts her weight, voice growing more thoughtful.<BR>
+    "I was born east, where forests bury the sun and wolves sing your dreams. My mother taught me to hunt—she said survival is equal parts patience and teeth. I lost her the year the blizzard swallowed the river and Minax’s nightmares first crawled from the woods."
+    ]]>
+  </NPCText>
+  <Option text="You lost your mother to Minax’s monsters?" next="lostMother"/>
+  <Option text="Is that why you came to Frostmere?" next="cameFrostmere"/>
+  <Option text="What do you miss about those forests?" next="missForests"/>
+  <Option text="You seem more at home in the wild than with people." next="atHome"/>
+  <Option text="I’m sorry for your loss." next="sympathy"/>
+  <Option text="Tell me something you enjoy, when you’re not hunting." next="interests"/>
+  <Option text="Let’s talk about something else." next="greeting"/>
+</Dialogue>
+
+<!-- Losing her mother -->
+<Dialogue id="lostMother">
+  <NPCText>
+    <![CDATA[
+    Her jaw clenches; she busies her hands adjusting the fletching on her bow.<BR>
+    "She vanished during the first red moon—never found so much as a footprint. Some say she walked into the snow to hunt what couldn’t be hunted. Others… whisper she became something else out there. I hunt, in part, to keep those things from finding anyone else's kin."
+    ]]>
+  </NPCText>
+  <Option text="Is that why you’re so protective of Frostmere?" next="cameFrostmere"/>
+  <Option text="Have you ever found clues about her fate?" next="motherClues"/>
+  <Option text="Thank you for sharing that. What keeps you going?" next="interests"/>
+  <Option text="Let’s change the subject." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="motherClues">
+  <NPCText>
+    <![CDATA[
+    Svala shakes her head slowly.<BR>
+    "Once, I found a pendant—hers—hung in the trees where the wind howled like voices. The Silent Hunter said it was a sign, but of what, neither of us could say. I keep it close when I’m farthest from the firelight."
+    ]]>
+  </NPCText>
+  <Option text="You must be brave, to keep searching." next="brave"/>
+  <Option text="Do you think she’s truly gone?" next="gone"/>
+  <Option text="Let’s talk about something lighter." next="interests"/>
+</Dialogue>
+
+<Dialogue id="brave">
+  <NPCText>
+    <![CDATA[
+    "Bravery’s just the word for what you do when you have no better choices. You stand, or you vanish. I choose to stand."
+    ]]>
+  </NPCText>
+  <Option text="That’s admirable. So why Frostmere?" next="cameFrostmere"/>
+  <Option text="What else gives you strength?" next="interests"/>
+</Dialogue>
+
+<Dialogue id="gone">
+  <NPCText>
+    <![CDATA[
+    "Gone? Maybe. Or maybe she walks the snows, watching over lost travelers. If she’s out there, I hope she knows I never stopped hunting—for her, and for what she loved."
+    ]]>
+  </NPCText>
+  <Option text="That’s… oddly comforting." next="interests"/>
+  <Option text="Let’s talk of something else." next="greeting"/>
+</Dialogue>
+
+<!-- Why she came to Frostmere -->
+<Dialogue id="cameFrostmere">
+  <NPCText>
+    <![CDATA[
+    "Frostmere’s the last place north with any sense left in it. The mages needed someone to keep their bellies full, and I needed distance from the ghosts of the east. Irinya says the Obelisk called us, but I say we chose the cold because it’s honest. No lies in hunger or snow."
+    ]]>
+  </NPCText>
+  <Option text="So you don’t trust magic much?" next="trustMagic"/>
+  <Option text="Do you regret coming here?" next="regret"/>
+  <Option text="Who do you respect here most?" next="respect"/>
+  <Option text="Let’s talk about something else." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="trustMagic">
+  <NPCText>
+    <![CDATA[
+    Svala grunts.<BR>
+    "Magic’s a tool, like a bow or a blade. But it cuts both ways—and leaves wounds you can’t always see. I respect Irinya for fearing it, and Kaelen for chasing it. Me? I’d rather trust in arrow and wit."
+    ]]>
+  </NPCText>
+  <Option text="Fair enough. Who here do you call friend?" next="respect"/>
+  <Option text="Let’s move on." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="regret">
+  <NPCText>
+    <![CDATA[
+    "No. I regret nothing except not catching the first white wolf I ever saw here. It led me a chase for days, then vanished by the Obelisk. Some say that means I’m meant to stay. I’ll stay till I catch my wolf, or my end."
+    ]]>
+  </NPCText>
+  <Option text="May the hunt favor you." action="AddSkill:Tracking,5,120" next="interests"/>
+  <Option text="I hope you catch it." next="interests"/>
+</Dialogue>
+
+<Dialogue id="respect">
+  <NPCText>
+    <![CDATA[
+    "Garrik’s stubborn, but honest—like a river rock. The Silent Hunter is better than any blood-kin. Lira brews the only warmth worth drinking. But it’s the village itself I respect. These folk endure storms most would flee."
+    ]]>
+  </NPCText>
+  <Option text="You seem proud of this place." next="proud"/>
+  <Option text="Let’s talk about something lighter." next="interests"/>
+</Dialogue>
+
+<Dialogue id="proud">
+  <NPCText>
+    <![CDATA[
+    Svala’s eyes soften, just a touch.<BR>
+    "Proud, yes. Every meal, every night by the fire, every morning I see a child laughing in snow—I know the hunt was worth it. This village is a pack. We keep each other."
+    ]]>
+  </NPCText>
+  <Option text="Thank you for sharing all this." action="Fame:50" next="interests"/>
+  <Option text="Let’s change the subject." next="greeting"/>
+</Dialogue>
+
+<!-- What she misses -->
+<Dialogue id="missForests">
+  <NPCText>
+    <![CDATA[
+    "The silence. Not like here, where the wind howls—but the deep hush of old trees and heavy snow. The smell of pine sap. Sometimes I climb Frostmere’s ridges just to close my eyes and pretend I’m home."
+    ]]>
+  </NPCText>
+  <Option text="Maybe you’ll show me your favorite view someday." action="Karma:20" next="interests"/>
+  <Option text="Thank you for trusting me with that." next="interests"/>
+  <Option text="Let’s move on." next="greeting"/>
+</Dialogue>
+
+<!-- At home in the wild -->
+<Dialogue id="atHome">
+  <NPCText>
+    <![CDATA[
+    Svala shrugs.<BR>
+    "People lie. Wolves don’t. I like both, but I trust one more than the other. Still, you’re here, so I suppose I must be warming up to folk again."
+    ]]>
+  </NPCText>
+  <Option text="That’s good to hear." next="interests"/>
+  <Option text="I’ll let you get back to your work." next="greeting"/>
+</Dialogue>
+
+<!-- Sympathy option, gives small buff -->
+<Dialogue id="sympathy">
+  <NPCText>
+    <![CDATA[
+    Svala’s guard drops, just a little.<BR>
+    "Grief’s like the wind—it changes, but never really leaves. I appreciate your words. Most folk just want stories or stew."
+    ]]>
+  </NPCText>
+  <Option text="If you ever need someone to listen, I will." action="AddStat:Str,2,120" next="interests"/>
+  <Option text="I’d like to know what brings you joy, not just sorrow." next="interests"/>
+  <Option text="Let’s talk hunting instead." next="greeting"/>
+</Dialogue>
+
+<!-- Interests and hobbies, one can give a small reward on chance -->
+<Dialogue id="interests">
+  <NPCText>
+    <![CDATA[
+    Svala actually cracks a genuine smile.<BR>
+    "You want to know what I do for myself? I carve little animals from driftwood and leave them by the Obelisk for luck. I track rare birds just for the beauty of their feathers. And… sometimes, when no one’s watching, I sing to the moon. The wolves don’t seem to mind."
+    ]]>
+  </NPCText>
+  <Option text="You carve wood? Can I see one?" next="showCarving"/>
+  <Option text="What do you sing?" next="singing"/>
+  <Option text="Any favorite bird?" next="favoriteBird"/>
+  <Option text="That’s wonderful. Thank you for sharing." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="showCarving">
+  <NPCText>
+    <![CDATA[
+    "You really want to see? Most just laugh. Here—take this little wolf. For luck. May it remind you to be clever, quick, and loyal to your pack."
+    ]]>
+  </NPCText>
+  <Option text="Thank you, Svala." action="GiveItem:MaxxiaScroll" next="greeting"/>
+  <Option text="I’ll keep it with me." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="singing">
+  <NPCText>
+    <![CDATA[
+    Svala blushes slightly.<BR>
+    "Just old songs from home. Lullabies, mostly—though I know a few that could call the auroras if I had the voice for it. Maybe, one night by the fire, I’ll share one."
+    ]]>
+  </NPCText>
+  <Option text="I’d like that." next="greeting"/>
+  <Option text="I’ll let you keep your secrets." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="favoriteBird">
+  <NPCText>
+    <![CDATA[
+    "There’s a snow-feathered owl, so white it disappears in the storms. Only seen it twice. If you spot one, count yourself lucky—and follow it home, if you’re lost."
+    ]]>
+  </NPCText>
+  <Option text="Maybe I’ll see one someday." action="RandomChance:10,GiveGold:50" next="greeting"/>
+  <Option text="I’ll keep my eyes open." next="greeting"/>
+</Dialogue>
+  
+  
+</DialogueFile>

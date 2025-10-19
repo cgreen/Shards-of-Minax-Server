@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="SultanRafiqAlRuby">
+
+  <!-- Greeting and Introduction -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#df3436'>
+      Before you stands a tall man draped in crimson and gold, a gleaming ruby circlet upon his brow and a regal scepter in hand. He radiates both authority and fatigue, his eyes fixed on the endless bustle of the Qasarian palace.<BR><BR>
+      “Welcome, traveler, to the Shimmering Sands. I am Sultan Rafiq al-Ruby, first among equals on the Council of Jewels and commander of our desert legions.<BR>
+      Speak—do you come seeking trade, glory, or something less easily named?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek to serve Qasaria, Sultan." next="service"/>
+    <Option text="Tell me about yourself and the Council." next="aboutCouncil"/>
+    <Option text="What threat does Minax pose here?" next="minax"/>
+    <Option text="What is Qasaria’s place in this new world?" next="qasariaLore"/>
+	<Option text="Tell me of your past, Sultan." next="pastIntro"/>
+    <Option text="Just passing through, my lord." next="dismiss"/>
+  </Dialogue>
+
+  <!-- About the Council & Sultan's Life -->
+  <Dialogue id="aboutCouncil">
+    <NPCText>
+      <![CDATA[
+      Rafiq’s tone grows reflective.<BR><BR>
+      “Qasaria is ruled not by one voice, but five—each a jewel, each a peril. Safiya al-Sapphire, shrewdest merchant in the city, rivals me at every turn, her fleets hungering for more than profit.<BR>
+      Karim al-Emerald whispers to the shadows, his spies found in every tent and alley. Yasmin al-Topaz guards the arcane secrets of the sands, while Omar al-Onyx rules the arena with an iron fist. We are allies, rivals, and—when necessity bites—enemies.<BR>
+      As for myself: I was born to command, raised in the saddle amid endless wars for Qasaria’s future. Duty to my people is my only luxury. My heart is pledged to the city, though debts to the Shadowmaster Zahid of the Undermarket weigh heavy.”<BR><BR>
+      “Would you hear more of my council, or speak of other matters?”
+      ]]>
+    </NPCText>
+    <Option text="Tell me of Safiya al-Sapphire." next="safiya"/>
+    <Option text="Tell me of Karim al-Emerald." next="karim"/>
+    <Option text="Tell me of Yasmin al-Topaz." next="yasmin"/>
+    <Option text="Tell me of Omar al-Onyx." next="omar"/>
+    <Option text="How are you indebted to the Shadowmaster?" next="zahid"/>
+    <Option text="I wish to serve Qasaria." next="service"/>
+    <Option text="I’ll be going." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="safiya">
+    <NPCText>
+      <![CDATA[
+      “Safiya is as cunning as the Rubicund Fox of old legend. She rules the ports and merchant guilds, and sometimes I wonder if she rules the council entire. Our rivalry is known to all, yet I cannot ignore the wealth she brings—or the pirates she funds in Sunreach.<BR>
+      Beware her gifts: gold from Safiya is rarely free of strings.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Tell me of another council member." next="aboutCouncil"/>
+    <Option text="I wish to serve Qasaria." next="service"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="karim">
+    <NPCText>
+      <![CDATA[
+      “Karim smiles with one hand and wields a dagger with the other. If you find secrets in Qasaria, odds are they’ve already passed his ears. He claims loyalty to the council, but rumors say he bargains with Minax’s agents—and with Buccaneer’s Den.<BR>
+      He and Yasmin al-Topaz have become inseparable of late, and I do not trust the reasons.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Tell me of another council member." next="aboutCouncil"/>
+    <Option text="I wish to serve Qasaria." next="service"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="yasmin">
+    <NPCText>
+      <![CDATA[
+      “Yasmin is Mistress of the Sands, and they say the sands obey her call. Her wisdom runs as deep as the desert’s bones, and she brooks no insult to Qasaria’s ancient magic.<BR>
+      Of late, she searches for the ‘Heart of the Dunes’—an artifact that may hold this city’s fate. Help her, and you may find favor… or doom.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Tell me of another council member." next="aboutCouncil"/>
+    <Option text="I wish to serve Qasaria." next="service"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="omar">
+    <NPCText>
+      <![CDATA[
+      “Omar’s might is rivaled only by his arrogance. The arena he commands is both our pride and our shame—glory for some, death for others. Rumor claims the Undermarket funds his games to keep the city ever hungry for spectacle.<BR>
+      He is a friend in peace, a tempest in war. Challenge him only if your heart is iron.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Tell me of another council member." next="aboutCouncil"/>
+    <Option text="I wish to serve Qasaria." next="service"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="zahid">
+    <NPCText>
+      <![CDATA[
+      Rafiq lowers his gaze.<BR><BR>
+      “Qasaria’s law ends at the palace gates. Beyond them, Zahid the Shadowmaster holds court in the Undermarket. Long ago, I borrowed from his purse to pay my cavalry—without it, the city would have fallen. I paid my debt in blood, not coin, and he has not forgotten.<BR>
+      Should you wander beneath the bazaar, take care whose hand you shake.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Tell me more of your council." next="aboutCouncil"/>
+    <Option text="I wish to serve Qasaria." next="service"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Lore About Minax -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      “Minax—her name brings chill even to the heart of the desert. She seeks to reshape all worlds, and now her shadows test Qasaria’s walls. I cannot risk my riders beyond the dunes unless profit or survival demand it, but I will not see this city fall.<BR>
+      I rely on loyal hands, not empty bravado. If you have come to fight Minax’s corruption, you will find allies here—but also those who would profit from her darkness.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I wish to serve Qasaria." next="service"/>
+    <Option text="What is Qasaria’s place in the world?" next="qasariaLore"/>
+    <Option text="I’ll be going." action="Close"/>
+  </Dialogue>
+
+  <!-- City Lore -->
+  <Dialogue id="qasariaLore">
+    <NPCText>
+      <![CDATA[
+      Rafiq’s chest swells with pride.<BR><BR>
+      “Qasaria is the jewel of the southern sands, forged on the bones of the Desert Ancients. Our domes and palaces stand where lost civilizations once prayed to stars and secrets. We trade in relics and silk, in knowledge and cunning.<BR>
+      Now, with Britain adrift and Lord British vanished, the world’s gaze falls here. Some say we should rule in his place. I say: let Qasaria prove her worth by what we build, not by conquest.<BR>
+      Will you add your labor to the city’s legend?”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I would serve Qasaria’s legend." next="service"/>
+    <Option text="Tell me more of the Council." next="aboutCouncil"/>
+    <Option text="I’ll be going." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Rafiq nods, but his eyes linger.<BR><BR>
+      “Few who pass through Qasaria remain untouched by her intrigues. Should you seek purpose, return and speak your wish.”
+      ]]>
+    </NPCText>
+    <Option text="On second thought, do you have work?" next="service"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Delivery Offer -->
+  <Dialogue id="service">
+    <NPCText>
+      <![CDATA[
+      The Sultan’s tone shifts—testing, hopeful.<BR><BR>
+      “In these times, every honest hand strengthens Qasaria. I have a task fit for one bold and trustworthy:<BR><BR>
+      There is a sealed letter for the Cheese Maker of Aerilon, bound with my ruby signet. To most, it means little—but in these days, even cheese and letters are matters of life and death. Deliver it, and your loyalty will be rewarded. Should the delivery fail, neither sapphire nor gold will save you from the Undermarket’s reach.<BR><BR>
+      Will you accept this errand, knowing spies of Minax and rivals from Magincia may covet what you carry?”
+      ]]>
+    </NPCText>
+    <Option text="I will deliver the Sultan’s sealed letter to Aerilon’s Cheese Maker."
+            action="GiveItem:FactionDeliveryQuestScroll(Cheese Maker,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Why trust a stranger with such a task?" next="trust"/>
+    <Option text="What dangers lie on the road?" next="risk"/>
+    <Option text="Is this truly so important?" next="importance"/>
+    <Option text="I must decline." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      The Sultan produces a sealed scroll, stamped with a ruby-red wax seal, and offers it gravely.<BR><BR>
+      “Guard this with your life. The fate of an alliance may depend on a simple cheese. Deliver it, and return to me for a reward in gold and reputation. Fail, and Qasaria’s enemies will rejoice.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="It will reach its destination, Sultan." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="trust">
+    <NPCText>
+      <![CDATA[
+      Rafiq studies you closely.<BR><BR>
+      “Sometimes the wise trust where the proud would not. A stranger is unknown—therefore unpredictable. My rivals would expect me to send my own men, and so I do not.<BR>
+      Besides, if you fail… the cost is yours to pay, not mine.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="A fair bargain. I accept the quest." 
+            action="GiveItem:FactionDeliveryQuestScroll(Cheese Maker,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I prefer to avoid your politics." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="risk">
+    <NPCText>
+      <![CDATA[
+      The Sultan leans close, his voice a whisper.<BR><BR>
+      “There are more knives than stars between here and Aerilon. Bandits hunt for gold, Minax’s spies for chaos, and some who wear my own colors may be bought by Safiya or the Undermarket.<BR>
+      If you are attacked, trust no one but yourself. Should the letter be lost, return to me at once.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I will deliver it despite the risks." 
+            action="GiveItem:FactionDeliveryQuestScroll(Cheese Maker,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="This is not a path for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="importance">
+    <NPCText>
+      <![CDATA[
+      “Even the smallest pebble may begin an avalanche. The Cheese Maker’s craft binds more than cheese—within Aerilon’s circles, it is a sign of trust and a cipher for secret treaties. Fail to deliver it, and alliances crumble.<BR>
+      Will you take up the burden?”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I will accept your quest, Sultan." 
+            action="GiveItem:FactionDeliveryQuestScroll(Cheese Maker,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Not today." action="Close"/>
+  </Dialogue>
+
+  <!-- BACKSTORY TREE: Starts from greeting -->
+  <Dialogue id="pastIntro">
+    <NPCText>
+      <![CDATA[
+      Rafiq exhales slowly, gaze drifting toward the horizon.<BR><BR>
+      “Few ask of my past. Fewer still stay long enough to hear it.<BR>
+      I was not always a prince. I was born in the Dust Quarter, beneath the shadow of Qasaria’s west gate. My father was a stablehand. My mother, a healer of animals and children alike. Their strength taught me honor.”<BR><BR>
+      He pauses.<BR>
+      “If you truly wish to understand me, ask what drives a man raised among sand and blood to wear a ruby crown.”
+      ]]>
+    </NPCText>
+    <Option text="What drives you, Sultan?" next="ambition"/>
+    <Option text="What happened to your parents?" next="parents"/>
+    <Option text="Did you always wish to lead?" next="destiny"/>
+    <Option text="That’s enough history for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ambition">
+    <NPCText>
+      <![CDATA[
+      “I watched nobles take bribes while children starved. I watched soldiers abandon villages to raiders while councilmen drank date wine.<BR>
+      I swore I would never live as they did. If power must be taken to protect the weak, then I would take it. Not for glory—<I>for the dustwalkers</I> who had no voice.”<BR><BR>
+      His hand tightens on his scepter.<BR>
+      “That oath brought me here. But some wonder if I now resemble the very tyrants I once despised.”
+      ]]>
+    </NPCText>
+    <Option text="You carry that weight well, my lord." next="ambitionReward"/>
+    <Option text="Perhaps you *have* become like them." next="ambitionCritique"/>
+    <Option text="You walk a hard path. I respect that." next="ambitionRespect"/>
+  </Dialogue>
+
+  <Dialogue id="ambitionReward">
+    <NPCText>
+      <![CDATA[
+      Rafiq nods slowly.<BR><BR>
+      “Words of kindness are rare in this court. Take this—my thanks, and a token of Qasaria’s favor.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Sultan." action="GiveGold:500" />
+  </Dialogue>
+
+  <Dialogue id="ambitionCritique">
+    <NPCText>
+      <![CDATA[
+      The Sultan’s eyes narrow—but not with anger.<BR><BR>
+      “Honesty is a cruel mirror, but a necessary one. Perhaps you are right. Perhaps I lost something in the climb. Yet I would make the same choice again.”<BR><BR>
+      He sighs. “You may go. And thank you for the truth.”
+      ]]>
+    </NPCText>
+    <Option text="May your path lead to balance." action="Karma:-100"/>
+  </Dialogue>
+
+  <Dialogue id="ambitionRespect">
+    <NPCText>
+      <![CDATA[
+      “Respect from the brave is a finer reward than gold. Perhaps, if fate allows, you and I will ride together when the hour of Qasaria’s trial comes.”
+      ]]>
+    </NPCText>
+    <Option text="It would be my honor." action="Fame:+100"/>
+  </Dialogue>
+
+  <Dialogue id="parents">
+    <NPCText>
+      <![CDATA[
+      “My mother died of desert fever when I was twelve. I carried water for three days from the Lion’s Well just to ease her thirst.”<BR><BR>
+      He gestures to a leather bracelet hidden beneath his gauntlet.<BR>
+      “This was hers.”<BR><BR>
+      “My father died during the Ash Serpent Rebellions, shielding a noble caravan. He was not named a hero. But I remember.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="They sound like good people." next="parentsReward"/>
+    <Option text="That pain never leaves, does it?" next="parentsBond"/>
+    <Option text="I’ve lost family too…" condition="KarmaBelow:0" next="darkBond"/>
+  </Dialogue>
+
+  <Dialogue id="parentsReward">
+    <NPCText>
+      <![CDATA[
+      “They were. I owe them more than I can repay. I honor them in how I lead. Perhaps... today they would be proud.”<BR><BR>
+      He hands you a small coin stamped with the crest of the Ruby Guard.<BR>
+      “Spend it wisely—or not at all.”
+      ]]>
+    </NPCText>
+    <Option text="I will." action="GiveItem:Gold,250"/>
+  </Dialogue>
+
+  <Dialogue id="parentsBond">
+    <NPCText>
+      <![CDATA[
+      “No. But it teaches us. It makes us more than we were. You understand.”<BR>
+      He clasps your forearm briefly.<BR>
+      “Should you ever need shelter in Qasaria, mention my name. It will open doors.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Sultan." action="Fame:+50"/>
+  </Dialogue>
+
+  <Dialogue id="darkBond">
+    <NPCText>
+      <![CDATA[
+      The Sultan tilts his head, studying you.<BR><BR>
+      “Grief can forge kings—or monsters. What has it made of you, I wonder?”<BR>
+      His voice lowers.<BR>
+      “A word of warning: Minax preys upon sorrow. Guard yours well.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I’ll keep my guard up." action="AddStat:Int,5,120"/>
+  </Dialogue>
+
+  <Dialogue id="destiny">
+    <NPCText>
+      <![CDATA[
+      “I never wished to lead. I wished to live free of cruelty, to protect those I loved.”<BR>
+      A pause.<BR>
+      “But freedom is never given. It is taken, shaped, defended. So I became the sword others lacked. Destiny? No. I chose my burden.”<BR><BR>
+      “And so must you.”
+      ]]>
+    </NPCText>
+    <Option text="I choose to help shape this world." action="Karma:+100"/>
+    <Option text="The burden is too great for me." action="Karma:-50"/>
+    <Option text="Farewell, Sultan." action="Close"/>
+  </Dialogue>
+
+
+</DialogueFile>

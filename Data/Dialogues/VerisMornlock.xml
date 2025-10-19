@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="VerisMornlock">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#d3b991'>
+      The man before you is burly, grim-faced, and has the wary look of someone who counts every coin—and every blade.<BR><BR>
+      "Unless you're buying, move along. I've no time for chat, and less for charity."<BR><BR>
+      He glances at your hands and belt, appraising you like merchandise.
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Looking for work, not small talk." next="jobOffer"/>
+    <Option text="You fence weapons here, don’t you?" next="rumors"/>
+    <Option text="Who are you, exactly?" next="who"/>
+	<Option text="You seem like someone with a story." next="past"/>
+    <Option text="Never mind, I'll be going." action="Close"/>
+  </Dialogue>
+
+  <!-- Who is Veris -->
+  <Dialogue id="who">
+    <NPCText>
+      <![CDATA[
+      He snorts. "Name's Veris. I move things the guards can't trace, sell what falls off the back of a wagon, and don't ask questions unless gold's involved.<BR><BR>
+      Sunreach runs on trade and secrets. Me? I run on profit. Anything else?"
+      ]]>
+    </NPCText>
+    <Option text="What work do you have?" next="jobOffer"/>
+    <Option text="Tell me about the city guard." next="guardTalk"/>
+    <Option text="Not interested." action="Close"/>
+  </Dialogue>
+
+  <!-- Rumors / Fencing -->
+  <Dialogue id="rumors">
+    <NPCText>
+      <![CDATA[
+      He shrugs, expression flat. "Maybe I do, maybe I don't. But in Sunreach, everyone's buying from someone—and everyone owes someone. The question is: are you useful, or just curious?"
+      ]]>
+    </NPCText>
+    <Option text="Try me. Got a job?" next="jobOffer"/>
+    <Option text="Heard you cross Darius Veynar often." next="darius"/>
+    <Option text="Never mind." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="guardTalk">
+    <NPCText>
+      <![CDATA[
+      Veris lowers his voice. "City guard’s as crooked as a pirate's spine. Captain Merek plays both sides—takes bribes from the council, lets certain shipments vanish if you pay enough. I'd supply them myself if I could, but Merek blocks my deals at every turn."
+      ]]>
+    </NPCText>
+    <Option text="Want him out of the way?" next="jobOffer"/>
+    <Option text="You sound bitter. Why not join the council?" next="council"/>
+    <Option text="I'm just browsing." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="darius">
+    <NPCText>
+      <![CDATA[
+      A muscle ticks in his jaw. "Darius likes to play king with his silk and spices, but he’s not above buying my steel when the council needs it. Problem is, he also pays the guard captain to keep my crates 'lost.' Old game. Profits get smaller, knives get longer."
+      ]]>
+    </NPCText>
+    <Option text="You want Darius gone?" next="dariusDeal"/>
+    <Option text="Sounds risky. I'll pass." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dariusDeal">
+    <NPCText>
+      <![CDATA[
+      He laughs, mirthless. "If I wanted Darius dead, he'd be floating in the bay. No—business is business. I just want my fair share, and to get the guard captain off my back. That’s where you come in."
+      ]]>
+    </NPCText>
+    <Option text="What do you need?" next="jobOffer"/>
+    <Option text="I'm not getting involved." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      Veris spits. "Sit in a fancy chair, smile for the nobles, and get stabbed in the back before lunch? No thanks. I’d rather sell to them all and let ‘em fight over scraps. Money's safer than politics—most days."
+      ]]>
+    </NPCText>
+    <Option text="So what's the job?" next="jobOffer"/>
+    <Option text="Understood. Goodbye." action="Close"/>
+  </Dialogue>
+
+  <!-- Main job offer -->
+  <Dialogue id="jobOffer">
+    <NPCText>
+      <![CDATA[
+      He leans in, voice a whisper. "I want a contract with the city guard—official, above board. Problem is, Captain Merek claims I'm 'untrustworthy.' Hypocrite—he’s skimming half the armory for himself. If I had proof, the council would toss him to the sharks."<BR><BR>
+      "Bring me evidence of the guard captain’s corruption—a ledgers page, a marked crate, anything I can show the council. In return, I'll pay you well—and maybe, just maybe, Sunreach gets a bit less rotten."
+      ]]>
+    </NPCText>
+    <Option text="How do I find this evidence?" next="clues"/>
+    <Option text="What's your grudge with Merek?" next="grudge"/>
+    <Option text="What if the captain finds out?" next="danger"/>
+    <Option text="This is too risky for me." action="Close"/>
+  </Dialogue>
+
+  <!-- Branches: details about the job -->
+  <Dialogue id="clues">
+    <NPCText>
+      <![CDATA[
+      "Try the guardhouse in the western docks—look for a chest with Merek’s seal, or check his desk for a secret ledger. If he spots you, play dumb or run. And watch out: the guard's loyalists bite harder than the pirates."
+      ]]>
+    </NPCText>
+    <Option text="I'm on it. I'll return with proof." 
+            action="GiveItem:FactionInvestigationQuestScroll(MerekCorruption,Sunreach,300)"
+            condition="!HasItem:FactionInvestigationQuestScroll"
+            next="accept"/>
+    <Option text="Tell me about this ledger." next="ledger"/>
+    <Option text="What do I do after?" next="after"/>
+    <Option text="Too dangerous for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ledger">
+    <NPCText>
+      <![CDATA[
+      "Merek keeps two ledgers. The real one’s bound in black leather, marked with his signet. Names, shipments, bribes—all in code, but I know what to look for. Bring me that, and the council will have no choice but to act."
+      ]]>
+    </NPCText>
+    <Option text="Understood. I'll get the black ledger."
+            action="GiveItem:FactionInvestigationQuestScroll(MerekLedger,Sunreach,300)"
+            condition="!HasItem:FactionInvestigationQuestScroll"
+            next="accept"/>
+    <Option text="I’ll see what I can do." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="after">
+    <NPCText>
+      <![CDATA[
+      "Once you have proof, bring it here. Keep your mouth shut—guards have long memories, and so do I. Do the job right, and you'll have gold and a friend in low places. Do it wrong… well, you'll wish you hadn't."
+      ]]>
+    </NPCText>
+    <Option text="I won’t let you down." next="accept"/>
+    <Option text="On second thought, this isn't for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="grudge">
+    <NPCText>
+      <![CDATA[
+      He grimaces. "He arrested my brother once, then let him go for a sack of gold. Since then, he's blocked every deal I try to make. I don't need revenge—just want his claws off my business."
+      ]]>
+    </NPCText>
+    <Option text="Alright, I'll help." next="clues"/>
+    <Option text="Still not sure." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      Veris narrows his eyes. "If the captain suspects you, deny everything or leave Sunreach until things cool off. But if you want easy gold, you're in the wrong city."
+      ]]>
+    </NPCText>
+    <Option text="Understood. Let's talk about the evidence." next="clues"/>
+    <Option text="I’ll take my chances elsewhere." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Veris slides a sealed pouch toward you, eyes cold.<BR><BR>
+      "Bring me that proof, and you'll have your cut. Fail, and I'll deny we ever spoke. Don't get caught."
+      ]]>
+    </NPCText>
+    <Option text="I'll be back when I have what you need." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="past">
+  <NPCText>
+    <![CDATA[
+    Veris eyes you warily, then exhales through his nose.<BR><BR>
+    "Story? Nah. Just years of doing things no one wants to talk about. But if you're that curious..."
+    ]]>
+  </NPCText>
+  <Option text="I am. You weren’t always a fence, were you?" next="past1"/>
+  <Option text="Forget it. I didn’t mean to pry." action="Close"/>
+</Dialogue>
+
+<Dialogue id="past1">
+  <NPCText>
+    <![CDATA[
+    He leans back, gaze distant.<BR><BR>
+    "Used to run arms for the Jhelom militias during the Mage Riots. Got my start smuggling crossbows inside fish crates. Clever, right? Till someone found a bolt in their trout."<BR>
+    <BASEFONT COLOR='#aaaaaa'>He chuckles once, but there’s no humor in it.</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="What happened after the riots?" next="past2"/>
+  <Option text="You sound proud of it." condition="KarmaBelow:-1000" next="pastPride"/>
+  <Option text="You regret it, don’t you?" condition="KarmaAtLeast:1000" next="pastRegret"/>
+  <Option text="Interesting. But I don’t need war stories." action="Close"/>
+</Dialogue>
+
+<Dialogue id="pastPride">
+  <NPCText>
+    <![CDATA[
+    Veris grins, catching the edge in your voice.<BR><BR>
+    "Proud? No. Profitable? Absolutely. Blood soaks everything eventually—better it be someone else’s." 
+    ]]>
+  </NPCText>
+  <Option text="Fair point. Tell me the rest." next="past2"/>
+  <Option text="That's a grim outlook." next="outlook"/>
+</Dialogue>
+
+<Dialogue id="pastRegret">
+  <NPCText>
+    <![CDATA[
+    He flinches, just slightly. "Didn’t mean for it to go so far. But once the blades are moving, you either swing or get cut."<BR>
+    "I lost people. Friends. Even had someone I called ‘brother.’ Didn’t stop him from putting a dagger in my ribs when the gold dried up."
+    ]]>
+  </NPCText>
+  <Option text="He betrayed you?" next="pastBetrayal"/>
+  <Option text="So that’s why you trust no one." next="trustIssue"/>
+</Dialogue>
+
+<Dialogue id="past2">
+  <NPCText>
+    <![CDATA[
+    "When the riots died down, I ran east. Took work on caravans, sold blades in Qasaria, even fenced relics from the jungle ruins. Met good folk. Met monsters too—sometimes in the same tavern."<BR><BR>
+    "Eventually came here. Sunreach don’t ask questions if you make the coin flow. So I stayed."
+    ]]>
+  </NPCText>
+  <Option text="That explains a lot." next="finishPast"/>
+  <Option text="Sunreach fits you." action="SendMessage:‘You feel the edge behind his words… a man built on scars.’"/>
+  <Option text="You’ve survived a lot. I respect that." action="Karma:200" next="finishPast"/>
+</Dialogue>
+
+<Dialogue id="pastBetrayal">
+  <NPCText>
+    <![CDATA[
+    "Yeah. Name was Vargo. We’d split loot, share watches, bleed together. Then one job goes bad, and he cuts me loose like ballast."<BR>
+    "Took me three months to track him. Left what was left of him for the crows near Eldermoor."
+    ]]>
+  </NPCText>
+  <Option text="You killed him?" action="Karma:-200" next="finishPast"/>
+  <Option text="Sounds like he deserved worse." next="finishPast"/>
+</Dialogue>
+
+<Dialogue id="trustIssue">
+  <NPCText>
+    <![CDATA[
+    "Wouldn’t you?" he snaps. "Trust gets you dead in my world. Gold, steel, silence—those are my friends."<BR><BR>
+    He exhales slowly, voice softer.<BR>“But… maybe you’re different. Maybe not.”
+    ]]>
+  </NPCText>
+  <Option text="I’ve got your back. If you’ve got mine." next="bond"/>
+  <Option text="Let’s keep it business." next="finishPast"/>
+</Dialogue>
+
+<Dialogue id="bond">
+  <NPCText>
+    <![CDATA[
+    He studies you a long moment, then nods.<BR><BR>
+    "Alright. Maybe there’s still such a thing as loyalty in this city. But don’t make me regret it."
+    ]]>
+  </NPCText>
+  <Option text="You won’t. Now, what’s the job?" 
+          action="AttachXml:XmlFactionAffinity,VerisMornlock"
+          next="jobOffer"/>
+</Dialogue>
+
+<Dialogue id="outlook">
+  <NPCText>
+    <![CDATA[
+    "You want romance and honor? Go join the Paladins in Trinsic. I deal in steel and facts. Fact is—every honest man I ever met died poor and early."
+    ]]>
+  </NPCText>
+  <Option text="So what keeps you going?" next="finishPast"/>
+</Dialogue>
+
+<Dialogue id="finishPast">
+  <NPCText>
+    <![CDATA[
+    Veris grunts, pushing off the wall.<BR><BR>
+    "Enough memory lane. I’ve got crates to move, and you’ve got choices to make. If you're still interested, I've got work for a steady blade."
+    ]]>
+  </NPCText>
+  <Option text="Let’s talk about that job." next="jobOffer"/>
+  <Option text="Later, Veris." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

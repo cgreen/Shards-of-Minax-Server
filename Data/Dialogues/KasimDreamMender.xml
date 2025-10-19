@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="KasimDreamMender">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b1caff'>
+      A tall, thin mystic sits cross-legged amid woven rugs and trailing dream-catchers. 
+      His face is marked by old scars that glimmer faintly in the lamp-light, and his robes seem woven from the colors of forgotten twilight.<br><br>
+      He gazes at you with unnerving calm, voice a low hush—<br>
+      “The Dreamways run deep beneath Qasaria’s golden streets. You wear the dust of many paths. 
+      I am Kasim, called Dream-Mender. I have seen the fevered slumber of merchant and beggar alike.<br><br>
+      But tell me, what brings a waking soul to a den of shadows and sleep?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Are you truly a mender of dreams?" next="aboutKasim"/>
+    <Option text="I’ve heard nightmares haunt Qasaria—can you help?" next="nightmareRumor"/>
+    <Option text="You seem haunted. What happened to your face?" next="curseOrigin"/>
+    <Option text="I’m searching for guidance…or a way out of a curse." next="offeraid"/>
+	<Option text="Tell me more about yourself." next="deepDiveStart"/>
+    <Option text="I was only curious." next="curiosity"/>
+  </Dialogue>
+
+  <Dialogue id="aboutKasim">
+    <NPCText>
+      <![CDATA[
+      Kasim’s eyes cloud.<br><br>
+      “Once, I was a seeker of relics—a fool prying secrets from the bones of the Desert Ancients.
+      I found not gold, but a curse: a shadow that gnaws at the roots of sleep.<br>
+      Since then, I walk the Dreamways for others—mending torn minds, or binding that which would feast upon our souls.<br>
+      But dreams are treacherous. The child I aid now is stalked by something older than hate.”<br><br>
+      He glances at a feverish child sleeping beside a mosaic lantern.<br>
+      “Will you brave such darkness with me? Or do you seek your own answers?”
+      ]]>
+    </NPCText>
+    <Option text="Tell me of this child’s curse." next="childCurse"/>
+    <Option text="What did you see in the relic ruins?" next="relicCurse"/>
+    <Option text="I will help defend you as you dreamwalk." next="questOffer"/>
+    <Option text="I must decline, for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="nightmareRumor">
+    <NPCText>
+      <![CDATA[
+      Kasim leans closer.<br><br>
+      “Nightmares bloom across Qasaria like blood in water—merchants dreaming of asps, children of hollow-eyed queens, even soldiers shrieking Minax’s name in their sleep.<br>
+      I mend what I can, but some wounds fester from within, or are seeded by foreign magic. 
+      The Council sends scholars; the Sapphire Queen sends coin; but none walk the Dreamways with me.<br><br>
+      Will you?”
+      ]]>
+    </NPCText>
+    <Option text="Let me help you fight this shadow." next="questOffer"/>
+    <Option text="What do the Council think of your work?" next="councilRelations"/>
+    <Option text="How does Minax poison dreams?" next="minaxDreams"/>
+    <Option text="I need time to consider." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="curseOrigin">
+    <NPCText>
+      <![CDATA[
+      Kasim gently traces a luminous scar.<br><br>
+      “A lesson written in pain. In my youth, I followed Yasmin al-Topaz to the ruins beneath the Sands of Dusk, seeking a relic called the Heart of Forgotten Slumber.
+      But the Heart was cursed—when I touched it, a nightmare burrowed deep. Now, each night I walk not my own dreams, but those of others, seeking redemption or oblivion.<br><br>
+      Yet even cursed, I may serve. For in the Dreamways, knowledge lingers.”<br>
+      He grins, wryly. “And sometimes, so do shards of prophecy…”
+      ]]>
+    </NPCText>
+    <Option text="You know Yasmin al-Topaz?" next="yasmin"/>
+    <Option text="Can your curse be lifted?" next="offeraid"/>
+    <Option text="What prophecy do you speak of?" next="prophecyHook"/>
+    <Option text="I will help with the dreamwalk." next="questOffer"/>
+    <Option text="I’ll be on my way." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="offeraid">
+    <NPCText>
+      <![CDATA[
+      “All curses are doors—some open to deliverance, some to greater peril.” Kasim gives a sad smile.<br>
+      “But to mend a curse, one must first survive its shadow. Aid me in this child’s dream, and perhaps the Dreamways will offer mercy to us both.”<br>
+      He offers you a talisman woven of dreamcatcher threads.<br>
+      “Will you stand vigil while I descend into nightmare?”
+      ]]>
+    </NPCText>
+    <Option text="Yes, I will guard you." next="questOffer"/>
+    <Option text="Not right now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="curiosity">
+    <NPCText>
+      <![CDATA[
+      Kasim bows his head.<br>
+      “Curiosity is the lantern of the wise. But beware: some shadows hunger for those who gaze too long. 
+      Return if you would brave the Dreamways, or if the night brings you more than rest.”
+      ]]>
+    </NPCText>
+    <Option text="On second thought, I wish to help." next="questOffer"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Relationships and Lore Branches -->
+  <Dialogue id="councilRelations">
+    <NPCText>
+      <![CDATA[
+      “The Council of Jewels? Rafiq al-Ruby sees me as a curiosity, useful for keeping soldiers sane. Safiya al-Sapphire sent funds, hoping I’d rid her household of night-voices. 
+      Yasmin al-Topaz pities me—she understands curses, though I once blamed her for mine.<br>
+      Karim al-Emerald sends spies in their sleep to ask my secrets; I grant them riddles. Omar al-Onyx once challenged me to an arena duel—he lost, awoke screaming, and now avoids my tent.”<br>
+      He smiles, faintly. “No one trusts a dream-mender, but all need me eventually.”
+      ]]>
+    </NPCText>
+    <Option text="Yasmin and you share a past?" next="yasmin"/>
+    <Option text="Tell me about Karim al-Emerald’s interest." next="karim"/>
+    <Option text="I’ll help with your current task." next="questOffer"/>
+    <Option text="I’ll return later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="yasmin">
+    <NPCText>
+      <![CDATA[
+      “Yasmin and I have both trespassed the forbidden places. She seeks the secrets of waking life; I, the truths of sleep. 
+      It was she who led me to the Heart of Forgotten Slumber, though she warned me not to touch it.<br>
+      We are not enemies. She brings me relics to study, I bring her the dreams of the dead. Someday, we may yet find what we seek—or doom each other in the search.”
+      ]]>
+    </NPCText>
+    <Option text="What was the Heart of Forgotten Slumber?" next="relicCurse"/>
+    <Option text="I am ready to face the dream-shadow." next="questOffer"/>
+    <Option text="I must go." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="karim">
+    <NPCText>
+      <![CDATA[
+      Kasim chuckles.<br>
+      “Karim’s spies come in many guises—some wakeful, some not. They fear what prophecy may say of Qasaria’s fate, or the Council’s rivals.<br>
+      I give him fragments, never the whole. Trust is a rare coin in this city.”
+      ]]>
+    </NPCText>
+    <Option text="What prophecies have you seen?" next="prophecyHook"/>
+    <Option text="I am ready to enter the dream." next="questOffer"/>
+    <Option text="I must decline." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="minaxDreams">
+    <NPCText>
+      <![CDATA[
+      “Minax is a name of power—her whispers seep through cracks in the world and coil around sleeping minds. 
+      Some say she was the first to shape nightmares into weapons. I have felt her touch in the Dreamways—cold, patient, and ever-hungry.”<br>
+      He shivers.<br>
+      “If you see a shadow crowned in sapphires within the child’s dream, do not listen to its promises.”
+      ]]>
+    </NPCText>
+    <Option text="I will remember your warning. I am ready." next="questOffer"/>
+    <Option text="How do we fight a nightmare?" next="dreamFight"/>
+    <Option text="I must think on this." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="relicCurse">
+    <NPCText>
+      <![CDATA[
+      “The Heart of Forgotten Slumber—an ancient relic, cold as moonlit iron. It could grant visions, or unravel the mind of any who dared dream too deeply. 
+      Yasmin studied it, but I… I was careless.<br>
+      Now, every time I sleep, I hear a shadow voice—sometimes it shows me truths, sometimes only terror.<br>
+      But tonight, perhaps, prophecy stirs.”
+      ]]>
+    </NPCText>
+    <Option text="What prophecy?" next="prophecyHook"/>
+    <Option text="Let’s face the shadow together." next="questOffer"/>
+    <Option text="Enough talk for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="prophecyHook">
+    <NPCText>
+      <![CDATA[
+      Kasim’s eyes glaze over, voice becoming distant.<br>
+      “In the dunes of dream, a gem-blooded serpent coils around a pillar of light. Fragments of power slumber in lost places—one beneath a market’s shadow, one in a garden of withered roses, one deep beneath the Ash Serpents’ lair.<br>
+      If the Gem is made whole, both dream and waking world may shatter… or heal.<br>
+      Find the serpent, follow the light. The child’s dream may show you more, if you have the courage.”
+      ]]>
+    </NPCText>
+    <Option text="I accept your quest. Guide me into the dream." next="questOffer"/>
+    <Option text="I need to prepare first." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dreamFight">
+    <NPCText>
+      <![CDATA[
+      Kasim nods.<br>
+      “Nightmares thrive on fear. Stand firm, wield courage as shield and hope as sword. In the Dreamways, belief shapes reality. Should the shadow try to name you, deny it with your true name.<br>
+      Take this talisman—it will anchor you if you begin to fade.”<br>
+      He presses a dreamcatcher token into your hand.
+      ]]>
+    </NPCText>
+    <Option text="I will stand vigil and fight." next="questOffer" action="GiveItem:DreamcatcherToken(Qasaria,Kasmin,1)"/>
+    <Option text="I must think on this." action="Close"/>
+  </Dialogue>
+
+  <!-- QUEST OFFER AND ACCEPTANCE -->
+  <Dialogue id="questOffer">
+    <NPCText>
+      <![CDATA[
+      Kasim settles beside the cursed child.<br>
+      “The child’s dreams are snared by a shadow that calls itself Minax. I will enter the Dreamways and face it, but my body will be defenseless.<br>
+      Guard me here—monsters may sense my absence from waking, or Minax’s cultists may strike.<br>
+      Take this token—it will open a doorway into the dream, should you need to follow. And if you see a vision of a gem or serpent, heed it: such omens are never random.”<br>
+      <BASEFONT COLOR='#cfcf6e'>
+      <b>New Quest: Stand Vigil as Kasim Dreamwalks</b>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I accept. Give me the Dreamcatcher Token."
+            action="GiveItem:FactionDeliveryQuestScroll(Dreamwalk Guard,Qasaria,500)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="acceptQuest"/>
+    <Option text="I need more time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptQuest">
+    <NPCText>
+      <![CDATA[
+      Kasim bows solemnly, pressing a luminous token into your hand.<br>
+      “Guard well, and listen—sometimes, the greatest truths are whispered not by heroes, but by those we save.<br>
+      Return with word of victory, and I will share what I have seen of the Gem’s shards. The fate of both Qasaria and the Dreamways may hinge upon your courage.”
+      ]]>
+    </NPCText>
+    <Option text="I will keep you safe." action="Close"/>
+  </Dialogue>
+
+  <!-- Grafted onto greeting -->
+  <Dialogue id="deepDiveStart">
+    <NPCText>
+      <![CDATA[
+      Kasim tilts his head slightly, appraising your curiosity.<br>
+      “Most merely want to banish their nightmares. But you... you wish to understand. That is rare.”<br><br>
+      “Very well. Ask what you will. My soul bears more scars than my flesh.”
+      ]]>
+    </NPCText>
+    <Option text="What drove you to seek relics in the first place?" next="seekerOrigin"/>
+    <Option text="What exactly are the Dreamways?" next="dreamways"/>
+    <Option text="Do you regret touching the cursed relic?" next="regret"/>
+    <Option text="Have you ever been trapped in a dream?" next="trappedDream"/>
+    <Option text="What beauty exists in dreams?" next="beauty"/>
+    <Option text="You must carry great sorrow. Take this gift." next="playerGivesGift" condition="GoldAtLeast:500"/>
+    <Option text="That's enough for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="seekerOrigin">
+    <NPCText>
+      <![CDATA[
+      “In my youth, I was desperate to prove my worth beyond sand and coin. I believed the secrets of the Ancients would grant power, or wisdom... or immortality.”<br><br>
+      He exhales slowly. “Instead, I found silence... and a voice that should never speak.”<br>
+      “Now I listen to *other* voices—the frightened, the lost, the cursed. Perhaps that was my purpose all along.”
+      ]]>
+    </NPCText>
+    <Option text="What did the Ancients leave behind?" next="ancientsLore"/>
+    <Option text="I see. Let's continue." next="deepDiveStart"/>
+  </Dialogue>
+
+  <Dialogue id="ancientsLore">
+    <NPCText>
+      <![CDATA[
+      “The Desert Ancients were not gods—but they dreamed like them. They built temples beneath the dunes, machines that sang in sleep, and relics that fed on memory.<br><br>
+      Some say they tried to pierce the Dreamways permanently... and were devoured for their arrogance.”
+      ]]>
+    </NPCText>
+    <Option text="Their fate seems a warning." next="deepDiveStart"/>
+    <Option text="I’d risk it. That kind of power tempts me." next="warnPlayer"/>
+  </Dialogue>
+
+  <Dialogue id="warnPlayer">
+    <NPCText>
+      <![CDATA[
+      Kasim narrows his eyes.<br>
+      “You speak boldly. But beware: those who chase the flame too closely are often consumed.”<br>
+      He traces a symbol on your palm—one that tingles faintly with warmth.
+      ]]>
+    </NPCText>
+    <Option text="I will remember that." action="AddStat:Int,5,1800"/>
+  </Dialogue>
+
+  <Dialogue id="dreamways">
+    <NPCText>
+      <![CDATA[
+      “The Dreamways are rivers beneath waking thought. When we sleep, our minds drift along them. Most return. Some do not.”<br><br>
+      He leans closer.<br>
+      “Minax seeks to poison these streams. Twist them. Should she learn to control them fully, even the waking world will kneel.”<br>
+      “But there are places she cannot touch. I dwell in those places.”
+      ]]>
+    </NPCText>
+    <Option text="Teach me how to walk the Dreamways someday." next="dreamBlessing"/>
+    <Option text="Let's talk of something else." next="deepDiveStart"/>
+  </Dialogue>
+
+  <Dialogue id="dreamBlessing">
+    <NPCText>
+      <![CDATA[
+      “Few are ready for such paths. But you listen, and that is a beginning.”<br>
+      He presses his fingers to your temple. “A whisper of the Dreamways shall follow you now.”<br><br>
+      <BASEFONT COLOR='#c2ffb6'><b>You feel more attuned to dream-lore.</b></BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I feel... lighter." action="AddSkill:SpiritSpeak,10,1800"/>
+  </Dialogue>
+
+  <Dialogue id="regret">
+    <NPCText>
+      <![CDATA[
+      “Regret is a heavy chain. Yet without it, I might have never mended a single soul.”<br><br>
+      He looks toward the child. “If pain births purpose, perhaps the wound was worth it.”
+      ]]>
+    </NPCText>
+    <Option text="That is... beautiful, in a way." next="deepDiveStart"/>
+  </Dialogue>
+
+  <Dialogue id="trappedDream">
+    <NPCText>
+      <![CDATA[
+      “Yes.” His voice becomes thin. “For three days I wandered a dream of fire that could not burn, of screams with no mouths. 
+      I aged ten years in that time—inside, if not in flesh.”<br><br>
+      He meets your eyes. “But I escaped. With will... and a song my mother once sang.”
+      ]]>
+    </NPCText>
+    <Option text="A song?" next="dreamSong"/>
+  </Dialogue>
+
+  <Dialogue id="dreamSong">
+    <NPCText>
+      <![CDATA[
+      Kasim hums—a strange lullaby in a forgotten tongue. The air shimmers faintly.<br><br>
+      <BASEFONT COLOR='#dfc7ff'><b>You feel a strange calm wash over you.</b></BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="That was... comforting." action="AddStat:Str,5,1800"/>
+  </Dialogue>
+
+  <Dialogue id="beauty">
+    <NPCText>
+      <![CDATA[
+      “Ah, now you ask the right question.”<br><br>
+      “Within dreams bloom cities that never were, lovers long lost, stars that sing and sands that weep. 
+      Beauty in dreams is fleeting, but perhaps that is what makes it so potent.”<br><br>
+      He smiles wistfully. “Would you like to see one?”
+      ]]>
+    </NPCText>
+    <Option text="Yes. Show me a glimpse." next="dreamVision"/>
+    <Option text="Perhaps another time." next="deepDiveStart"/>
+  </Dialogue>
+
+  <Dialogue id="dreamVision">
+    <NPCText>
+      <![CDATA[
+      Kasim waves a hand. For a moment, a glowing image flares before your eyes: a glass garden blooming under two moons, 
+      petals shimmering like starlight. You blink, and it’s gone.<br><br>
+      <BASEFONT COLOR='#ffd6d6'><b>You are left in awe.</b></BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="...I will never forget that." action="Fame:100"/>
+  </Dialogue>
+
+  <Dialogue id="playerGivesGift">
+    <NPCText>
+      <![CDATA[
+      You offer Kasim a handful of gold in silent thanks.<br><br>
+      He bows his head. “Few think to offer the healer comfort. I accept, not for myself, but for the child whose dream I mend.”<br>
+      <BASEFONT COLOR='#ffffaa'><b>You feel your soul lighten.</b></BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="May your dreams guide you well." 
+            action="GiveGold:-500" />
+    <Option text="May this help you." 
+            action="GiveGold:-500" />
+    <Option text="I must go now." action="Close"/>
+  </Dialogue>
+
+
+</DialogueFile>

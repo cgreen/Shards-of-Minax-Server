@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="SennaGildedDust">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#e5bc76'>
+      The music of silver bells drifts through Qasaria's dusk as you approach a woman whose every gesture ripples with practiced grace.<br>
+      Her <b>Sandswept Gossamer Dress</b> shimmers in candlelight, and a <b>Veil of Whispered Secrets</b> obscures her lower face.<br>
+      Her gaze, dark and keen, sizes you up with the precision of a jeweler inspecting flawed gold.<br><br>
+      “Another curious face in Qasaria’s tide of strangers. I am Senna of the Gilded Dust, dancer for the Council’s fetes… and an ear for whispers most would rather silence.<br>
+      Will you trade stories for stories, wanderer, or have you come seeking something more dangerous?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Your dancing is legendary, but your secrets more so." next="intrigue"/>
+    <Option text="I seek work—and coin, if you offer it." next="taskOffer"/>
+    <Option text="Who do you really serve, Senna?" next="loyalties"/>
+    <Option text="Tell me about Qasaria’s council." next="council"/>
+	<Option text="Tell me your story, Senna." next="sennaBackstory"/>
+    <Option text="I’m just watching. No trouble from me." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Intrigue / Flirt Branch -->
+  <Dialogue id="intrigue">
+    <NPCText>
+      <![CDATA[
+      Senna’s eyes flash with wry amusement.<br><br>
+      “A sharper tongue than most. Secrets are a dancer’s truest audience—each step tells a story, every twirl a lie confessed. The Council’s jewels glitter, but what they fear most is what I might overhear as I spin before them.<br>
+      Karim al-Emerald taught me to read men’s faces as others read palms. Sometimes I wish I had learned a quieter trade…”<br>
+      She gestures to the <b>Cloak of Golden Dusk</b> at her shoulders.<br>
+      “Care to see what a little mischief might earn you?”</NPCText>
+    <Option text="You seem troubled. Does the council’s work weigh on you?" next="confession"/>
+    <Option text="I prefer deeds to words. What’s the job?" next="taskOffer"/>
+    <Option text="I only watch, not meddle." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Personal Confession -->
+  <Dialogue id="confession">
+    <NPCText>
+      <![CDATA[
+      She exhales, voice quiet.<br><br>
+      “Sometimes I wonder if Karim uses me as the council uses Qasaria—bright distractions hiding darker bargains. I have seen men ruined over a whispered name.<br>
+      But this city is built on secrets, and every merchant-prince pays for silence with gold or blood. I only hope the scales remain balanced.”<br><br>
+      She touches the <b>Flower Garland Circlet</b> in her hair.<br>
+      “Enough brooding. There is work, if your conscience is nimble.”
+      ]]>
+    </NPCText>
+    <Option text="I will help. What must be done?" next="taskOffer"/>
+    <Option text="I want no part of this intrigue." action="Close"/>
+  </Dialogue>
+
+  <!-- Task Offer -->
+  <Dialogue id="taskOffer">
+    <NPCText>
+      <![CDATA[
+      Senna leans close, voice little more than a hush.<br><br>
+      “Karim al-Emerald’s network is wide, but the council grows suspicious. We need new ears where gold and bribes cannot reach.<br>
+      I have these…”<br>
+      She reveals slender <b>Grasp of Silent Intent</b> gloves, palm up, holding three <i>crystalline listening stones</i> that faintly pulse with inner light.<br><br>
+      “Plant these in the private chambers of the Council of Jewels. I will show you which doors—each one locked tighter than a miser’s heart. When you return, you will have my gratitude… and Karim’s coin.<br>
+      But know this: even innocents might be overheard. There are things I’d rather not learn.”<br><br>
+      Will you help me shape the fate of Qasaria?”
+      ]]>
+    </NPCText>
+    <Option text="I’ll do it. Give me the listening stones." action="GiveItem:FactionDeliveryQuestScroll(Listening Stones,Qasaria,350)" next="accept"/>
+    <Option text="Who are the targets?" next="targets"/>
+    <Option text="What if I am caught?" next="danger"/>
+    <Option text="Why do you work for Karim?" next="loyalties"/>
+    <Option text="This is too dangerous." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      She presses the crystals into your hand, fingers lingering just a moment.<br><br>
+      “They are attuned to my signal. Place one in the chamber of Rafiq al-Ruby, another in the study of Safiya al-Sapphire, and the last in the arena antechamber of Omar al-Onyx.<br>
+      Be subtle. The council will not forgive discovery.<br><br>
+      Return when the deed is done. If your conscience aches, know that you may choose what you overhear… but choose wisely.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll be careful, Senna." action="Close"/>
+  </Dialogue>
+
+  <!-- Targets Explanation -->
+  <Dialogue id="targets">
+    <NPCText>
+      <![CDATA[
+      “Three stones, three doors.<br><br>
+      <b>Rafiq al-Ruby:</b> His command chamber, heavy with the scent of spiced steel and parchment.<br>
+      <b>Safiya al-Sapphire:</b> Her study above the Sapphire Bazaar, hidden among ledgers and silk.<br>
+      <b>Omar al-Onyx:</b> The antechamber to the arena, where gladiators whisper their fears.<br>
+      Each room is guarded. I can provide a <i>Veil of Obscurement</i> for one—choose wisely.”</NPCText>
+    <Option text="Give me the veil for Rafiq’s chamber." action="GiveItem:VeilOfObscurement(Rafiq)" next="taskOffer"/>
+    <Option text="Give me the veil for Safiya’s study." action="GiveItem:VeilOfObscurement(Safiya)" next="taskOffer"/>
+    <Option text="Give me the veil for Omar’s arena." action="GiveItem:VeilOfObscurement(Omar)" next="taskOffer"/>
+    <Option text="That’s all I needed. Give me the stones." action="GiveItem:FactionDeliveryQuestScroll(Listening Stones,Qasaria,350)" next="accept"/>
+    <Option text="This is too dangerous." action="Close"/>
+  </Dialogue>
+
+  <!-- Danger If Caught -->
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      Senna’s voice grows taut.<br><br>
+      “If you are caught, you do not know me. Karim al-Emerald never heard your name.<br>
+      The council will exile—or worse. Take this…”<br>
+      She draws the <b>Stinger of the Undermarket</b> from her hip.<br>
+      “A hidden blade. If your tongue slips, better the council finds your blood than their secrets.”</NPCText>
+    <Option text="I understand. I will be careful." action="GiveItem:StingerOfTheUndermarket" next="accept"/>
+    <Option text="This is too much for me." action="Close"/>
+  </Dialogue>
+
+  <!-- Loyalties / Backstory -->
+  <Dialogue id="loyalties">
+    <NPCText>
+      <![CDATA[
+      She lowers her veil a little, showing a bittersweet smile.<br><br>
+      “I owe Karim my life; he found me as a street urchin, taught me to read a merchant’s soul in a single glance. I have danced for every councilor in Qasaria—sometimes with a blade in my shoe.<br>
+      But loyalty is a tangled coin. I despise what some merchant-princes do to this city.<br>
+      Perhaps with the right allies, I could change the balance.”</NPCText>
+    <Option text="If I succeed, will you trust me with more?" next="intrigue"/>
+    <Option text="Maybe you are the only honest one here." next="confession"/>
+    <Option text="What about the innocents you might hurt?" next="remorse"/>
+    <Option text="I should go." action="Close"/>
+  </Dialogue>
+
+  <!-- Remorse / Player Moral Option -->
+  <Dialogue id="remorse">
+    <NPCText>
+      <![CDATA[
+      Her eyes harden, then soften.<br><br>
+      “The innocent always pay for power’s games. If you find something that should not be heard—destroy the stone. Not even Karim must know everything.<br>
+      You must choose who you serve: ambition, gold, or your own conscience.”
+      ]]>
+    </NPCText>
+    <Option text="I understand. I’ll try to do what’s right." next="taskOffer"/>
+    <Option text="This is not for me." action="Close"/>
+  </Dialogue>
+
+  <!-- Council Lore -->
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      Senna’s gaze grows distant.<br><br>
+      “The Council of Jewels—five princes and princesses, each with a blade for a tongue.<br>
+      <b>Rafiq al-Ruby:</b> Proud and quick to anger, but not without mercy.<br>
+      <b>Safiya al-Sapphire:</b> Sees profit in every shadow.<br>
+      <b>Karim al-Emerald:</b> My master, friend, and sometimes… warden.<br>
+      <b>Yasmin al-Topaz:</b> Older than the dunes, her magic is a rumor feared even by the brave.<br>
+      <b>Omar al-Onyx:</b> A brute, but loyal to those who earn it.<br>
+      They call Qasaria the Jewel of the Sands, but in truth, its heart is glass.”</NPCText>
+    <Option text="You know them well. Can I help you?" next="taskOffer"/>
+    <Option text="Thank you. I’ll be on my way." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismiss -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Senna’s eyes twinkle behind her veil.<br><br>
+      “No trouble? Then you may be the rarest gem in this city.<br>
+      But if you ever want to trade truth for gold, or gold for secrets, you’ll find me here.”
+      ]]>
+    </NPCText>
+    <Option text="On second thought, what do you need done?" next="taskOffer"/>
+    <Option text="Good evening." action="Close"/>
+  </Dialogue>
+
+  <!-- BACKSTORY & INTERESTS BRANCH -->
+  <Dialogue id="sennaBackstory">
+    <NPCText>
+      <![CDATA[
+      Senna pauses, the music in the plaza dimming as if holding its breath.<br><br>
+      “My story? That’s a dangerous thing to trade, stranger. Words are daggers in Qasaria.”<br><br>
+      Her voice lowers.<br>
+      “I was born in the Dust Quarter. My mother sold silk. My father sold illusions. I learned to dance before I could walk—but only so we might eat. Karim found me when I was thirteen, mimicking councilors behind a veil for coins. He taught me how to read people… and how to make them bleed without a blade.”<br><br>
+      “But I still dance. Not for coin. For freedom.”<br>
+      She watches your eyes carefully.<br><br>
+      “So… do you really want to know me?”
+      ]]>
+    </NPCText>
+    <Option text="I want to know who you are beneath the veil." next="sennaTrust" condition="KarmaAtLeast:0"/>
+    <Option text="I want to know what made you a spy." next="sennaSpy"/>
+    <Option text="Do you regret working for Karim?" next="sennaRegret"/>
+    <Option text="No, it’s none of my business." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="sennaTrust">
+    <NPCText>
+      <![CDATA[
+      Her fingers hover over the edge of her veil. She hesitates.<br><br>
+      “Few ask that question. Fewer survive the answers.”<br>
+      She lifts it slightly, revealing a scar near her lips—thin, old, precise.<br><br>
+      “This? A merchant prince tried to kiss me when I was sixteen. I kissed him with a blade. Karim called it ‘potential.’”<br>
+      Her gaze lingers on you.<br><br>
+      “You have kind eyes… or clever lies. Either earns my curiosity. Take this—<i>a favor, not a bribe</i>.”</NPCText>
+    <Option text="You’ve earned my respect, Senna." action="GiveGold:500" />
+    <Option text="Your secrets are safe with me." action="AddStat:Int,5,120" />
+    <Option text="That’s enough truth for one day." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="sennaSpy">
+    <NPCText>
+      <![CDATA[
+      “When you grow up watching councilors pass silk through bloodied fingers, you learn that power doesn’t speak—it whispers.”<br><br>
+      “I saw how the poor starved while jewel-throned fools danced. I learned to speak their language. Smile when they lie. Bow when they kill.”<br>
+      “Karim saw that in me. He gave me purpose. I gave him secrets.”<br><br>
+      “Do you think I did the right thing?”
+      ]]>
+    </NPCText>
+    <Option text="You survived. That is enough." next="sennaPhilosophy"/>
+    <Option text="You did what you had to. I don’t judge." action="Karma:+100" />
+    <Option text="You chose to become what you hated." action="Karma:-250" next="sennaDefensive"/>
+  </Dialogue>
+
+  <Dialogue id="sennaRegret">
+    <NPCText>
+      <![CDATA[
+      “Regret? Some nights I dream of quiet: a garden, laughter, no daggers.”<br><br>
+      “But those dreams vanish with the dawn. Karim gave me power when I had none. But power is just another kind of chain.”<br>
+      Her eyes narrow.<br>
+      “Perhaps I’ll dance my way out of it someday.”<br><br>
+      “Tell me—do you dream of escape too?”
+      ]]>
+    </NPCText>
+    <Option text="Yes. I’ve felt that same pull." action="Fame:+100" />
+    <Option text="No. I’m where I’m meant to be." next="sennaPhilosophy"/>
+    <Option text="You should run now, before it’s too late." action="SendMessage:She gives a hollow laugh." next="sennaDefensive"/>
+  </Dialogue>
+
+  <Dialogue id="sennaPhilosophy">
+    <NPCText>
+      <![CDATA[
+      “Then perhaps we are alike.”<br>
+      Her expression softens—genuinely, for once.<br><br>
+      “Everyone here wears a mask. But yours… I like the shape of it.”<br>
+      She pulls a <b>silvered coin</b> from her sash and flicks it into your palm.<br>
+      “If ever you need help, flip that under moonlight in the Dust Quarter. Someone will come.”<br><br>
+      (You feel something stir in your pack.)
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Senna. I won’t forget this." action="GiveItem:SilveredCoinOfFavor" />
+    <Option text="Until we meet again." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="sennaDefensive">
+    <NPCText>
+      <![CDATA[
+      Her eyes narrow, the warmth vanishing.<br><br>
+      “Be careful, stranger. You speak of things you do not understand.”<br>
+      “I do not need your pity. Nor your judgment.”<br><br>
+      A note of sadness flickers through her voice.<br>
+      “You see a spy. I see a survivor. We all bleed the same.”<br>
+      She turns away.
+      ]]>
+    </NPCText>
+    <Option text="I didn’t mean offense…" next="sennaPhilosophy"/>
+    <Option text="Farewell, Senna." action="Close"/>
+  </Dialogue>
+
+
+</DialogueFile>

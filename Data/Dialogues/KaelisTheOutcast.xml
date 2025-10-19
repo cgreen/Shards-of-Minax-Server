@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="KaelisTheOutcast">
+  <!-- === root ================================================= -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#76cafb'>
+      Before you shivers a wild-eyed man in a tattered azure robe, hands dancing with arcs of blue light. The air crackles as he sizes you up—equal parts curiosity and contempt.
+      <BR><BR>
+      "Well, well, another one dares the shattered edge of Aerilon’s glory. Most fear the Fractured Isle—their precious Conclave prefers it so. But you? You walk boldly into the maelstrom, risking your mind and soul. Tell me, have you come to *spy* for the archmages, *beg* for my forbidden wisdom, or do you simply seek a madman’s counsel in these desperate days?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ve come seeking knowledge, not trouble." next="seekKnowledge"/>
+    <Option text="Are you truly as mad as they say?" next="mad"/>
+    <Option text="I’m no friend of the Conclave. What’s your story?" next="kaelisStory"/>
+    <Option text="I only seek work, if you have any." next="work"/>
+	<Option text="Tell me more about your past... and what you truly seek." next="originDeepDive"/>
+    <Option text="On second thought, this place gives me chills." action="Close"/>
+  </Dialogue>
+
+  <!-- Seek Knowledge -->
+  <Dialogue id="seekKnowledge">
+    <NPCText>
+      <![CDATA[
+      Kaelis’s lips twist in a sly smile. "Knowledge? Ha! The Conclave hoards it like dragons hoard gold—only to choke on it. I once shaped the city’s levitation engines myself, before Salia betrayed me and the others grew afraid of what we discovered."
+      <BR><BR>
+      "Knowledge is a double-edged crystal, friend. Will you wield it, or let it cut you? Prove you are more than another sheep in azure’s flock. Are you ready to take risks for the *truth*?"
+      ]]>
+    </NPCText>
+    <Option text="If it leads to power or insight, yes." next="work"/>
+    <Option text="What did you discover that frightened them?" next="origins"/>
+    <Option text="No, I prefer safer pursuits." action="Close"/>
+  </Dialogue>
+
+  <!-- Are you mad? -->
+  <Dialogue id="mad">
+    <NPCText>
+      <![CDATA[
+      "Mad? Oh, yes, *beautifully* so! Sanity is a brittle vessel in Aerilon—crack it, and you might glimpse wonders. Or terrors."
+      <BR><BR>
+      "They call me dangerous, yet beg for my solutions when their precious crystals begin to sputter. Salia—pah!—forgets who first taught her to *listen* to the crystal song. Even Selara Vael, that glacial queen, owes her floating throne to my theories."
+      ]]>
+    </NPCText>
+    <Option text="You speak often of Salia and Selara. Why such bitterness?" next="grievances"/>
+    <Option text="Your madness seems laced with genius." next="work"/>
+    <Option text="I’m not sure I belong here..." action="Close"/>
+  </Dialogue>
+
+  <!-- Kaelis backstory -->
+  <Dialogue id="kaelisStory">
+    <NPCText>
+      <![CDATA[
+      "My tale? Ha! It is a cautionary song whispered by broken stones."
+      <BR><BR>
+      "Once, I stood among the Azure Conclave—a peer to Selara, a mentor to Salia. Together we pierced the secrets of the Gem Shards, built engines to make Aerilon soar. But power makes cowards of the ambitious. When I dared ask what *shouldn’t* be asked—why the city’s heart ached, why the crystals sometimes screamed—they branded me ‘heretic’ and cast me to this sundered ruin."
+      <BR><BR>
+      He gestures to the churning chaos of the Fractured Isle.
+      "Yet here, beyond their blind arrogance, I see *truths*—and dangers—unimaginable."
+      ]]>
+    </NPCText>
+    <Option text="What sort of dangers?" next="origins"/>
+    <Option text="You must be lonely, exiled like this." next="lonely"/>
+    <Option text="You still care for Aerilon, don’t you?" next="care"/>
+    <Option text="Do you have work for someone not afraid of risks?" next="work"/>
+  </Dialogue>
+
+  <!-- Grievances with others -->
+  <Dialogue id="grievances">
+    <NPCText>
+      <![CDATA[
+      "Bitter? Oh, Salia was my brightest student—until fear blinded her. She serves the Conclave now, patching their failing engines with spit and hope. As for Selara Vael, she rules with ice and silence, believing ignorance equals safety."
+      <BR><BR>
+      "They shunned me for asking why the crystals change, why shadows flicker in their light. Now, as Minax’s darkness grows, they tremble, and send spies to steal *my* findings!"
+      ]]>
+    </NPCText>
+    <Option text="Would you trust an outsider to help you?" next="work"/>
+    <Option text="Do you fear Minax’s power?" next="minax"/>
+    <Option text="What do you want from me?" next="work"/>
+  </Dialogue>
+
+  <!-- The city’s origins -->
+  <Dialogue id="origins">
+    <NPCText>
+      <![CDATA[
+      "The floating city was never meant to *last*. The Gem Shards were not ours to command. We channel power from fractures in reality itself—crystals not just mined, but *summoned* from echoing rifts. Each year the song grows stranger, and now... the shadows listen."
+      <BR><BR>
+      "If Aerilon falls, it will be pride that brings it down—unless someone dares act."
+      ]]>
+    </NPCText>
+    <Option text="I want to help prevent disaster. What must be done?" next="work"/>
+    <Option text="The shadows listen? Explain." next="shadows"/>
+    <Option text="This is more than I bargained for." action="Close"/>
+  </Dialogue>
+
+  <!-- Shadows listen -->
+  <Dialogue id="shadows">
+    <NPCText>
+      <![CDATA[
+      Kaelis lowers his voice, all jest gone. "There are entities in the Void—shadowwisps, mind-eaters, beings who feed on thought and memory. Sometimes their whispers drift through cracked crystals, sowing discord and madness."
+      <BR><BR>
+      "The Conclave dismisses this as superstition, but I have found a scholar beyond Aerilon—a Shadowwisp Scholar, who dares to catalog these beings. I must send my latest findings, but the Conclave’s spies watch me too closely. Will you carry this for me?"
+      ]]>
+    </NPCText>
+    <Option text="I will deliver your findings. Whom should I seek?" next="questIntro"/>
+    <Option text="Shadowwisps sound dangerous. Why not destroy your notes?" next="dangerousNotes"/>
+    <Option text="This is all too much for me." action="Close"/>
+  </Dialogue>
+
+  <!-- Lonely -->
+  <Dialogue id="lonely">
+    <NPCText>
+      <![CDATA[
+      Kaelis’s expression flickers—hurt, then defiant.
+      <BR><BR>
+      "Lonely? Only a fool needs constant company. The crystals sing to me, the void whispers secrets. But..."
+      <BR><BR>
+      "Some nights, when the winds tear at the island, I remember old friends—and enemies. Perhaps it is time I trusted a stranger instead."
+      ]]>
+    </NPCText>
+    <Option text="You can trust me. Give me your task." next="questIntro"/>
+    <Option text="I must go." action="Close"/>
+  </Dialogue>
+
+  <!-- Still cares for Aerilon -->
+  <Dialogue id="care">
+    <NPCText>
+      <![CDATA[
+      "Care? I bled and wept to make this city soar. No matter what the Conclave says, Aerilon is as much mine as theirs. If you truly care too—prove it. Aid me now, when few would dare."
+      ]]>
+    </NPCText>
+    <Option text="Tell me what you need done." next="questIntro"/>
+    <Option text="I cannot get involved." action="Close"/>
+  </Dialogue>
+
+  <!-- Fears Minax -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      "Minax? Hah! She is a shadow in flesh, drawn to every crack in the world’s armor. The Conclave debates, Wind cowers, Magincia plots—while Minax simply *moves*. If you value Aerilon, act before her whispers become chains."
+      ]]>
+    </NPCText>
+    <Option text="I’m ready to act. Give me your task." next="questIntro"/>
+    <Option text="I need time to prepare." action="Close"/>
+  </Dialogue>
+
+  <!-- Dangerous notes branch -->
+  <Dialogue id="dangerousNotes">
+    <NPCText>
+      <![CDATA[
+      "Destroy knowledge? Foolishness! Only by understanding the shadows can we defend against them. The Shadowwisp Scholar alone can interpret these anomalies. If you are brave, deliver my notes. If not—well, step lightly. Some secrets bite."
+      ]]>
+    </NPCText>
+    <Option text="I’ll deliver them, for Aerilon’s sake." next="questIntro"/>
+    <Option text="No, it’s too dangerous." action="Close"/>
+  </Dialogue>
+
+  <!-- Work: Quest Offer -->
+  <Dialogue id="work">
+    <NPCText>
+      <![CDATA[
+      Kaelis grins, electricity arcing between his gloved fingers.
+      <BR><BR>
+      "You are braver—or more desperate—than most. I have prepared a sealed Crystal Codex, encoded with my latest findings on shadowwisp incursions. Take it beyond Aerilon to the one called the *Shadowwisp Scholar*. Seek them where the veil thins—perhaps near the obsidian monolith in the marsh, or wherever shadowwisps gather."
+      <BR><BR>
+      "Deliver this codex. In return, you will have Aerilon’s gratitude—or at least mine. And perhaps a sliver of the city’s trust."
+      ]]>
+    </NPCText>
+    <Option text="I’ll do it. Give me the codex."
+      action="GiveItem:FactionDeliveryQuestScroll(Shadowwisp Scholar,Aerilon,350)"
+      condition="!HasItem:FactionDeliveryQuestScroll"
+      next="accept"/>
+    <Option text="How dangerous is this Shadowwisp Scholar?" next="scholarDanger"/>
+    <Option text="What will Salia or Selara think if they learn of this?" next="saliaSelara"/>
+    <Option text="On second thought, I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      Kaelis produces a crystalline tablet, glowing with symbols that slither like living shadow. "Take this Crystal Codex. The Shadowwisp Scholar alone knows how to read its true meaning. Avoid Conclave eyes—if they catch you, both our necks are forfeit."
+      <BR><BR>
+      "Succeed, and you will have more than Aerilon’s empty thanks. You will have Kaelis’s favor—a dangerous but potent thing."
+      ]]>
+    </NPCText>
+    <Option text="I’ll see it done."
+      action="GiveItem:FactionDeliveryQuestScroll(Shadowwisp Scholar,Aerilon,350)"
+      condition="!HasItem:FactionDeliveryQuestScroll"
+      next="accept"/>
+    <Option text="I have questions first." next="work"/>
+    <Option text="I can’t do this." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Kaelis hands you the codex, his gaze wild and hopeful.<BR><BR>
+      "Go swiftly, before suspicion grows. And if you see Salia—tell her Kaelis remembers her promise: that truth matters more than comfort. May the shadows fear your passing, traveler."
+      ]]>
+    </NPCText>
+    <Option text="I won’t fail you." action="Close"/>
+  </Dialogue>
+
+  <!-- Scholar danger branch -->
+  <Dialogue id="scholarDanger">
+    <NPCText>
+      <![CDATA[
+      "Dangerous? Oh, yes. The Shadowwisp Scholar lives half in shadow, half in light. They are touched by the void—sometimes they speak in riddles, sometimes not at all. But none alive know more of the shadowwisps’ secrets. If you survive their company, you may yet survive Aerilon."
+      ]]>
+    </NPCText>
+    <Option text="I’ll risk it." action="GiveItem:FactionDeliveryQuestScroll(Shadowwisp Scholar,Aerilon,350)" condition="!HasItem:FactionDeliveryQuestScroll" next="accept"/>
+    <Option text="I need to prepare." action="Close"/>
+  </Dialogue>
+
+  <!-- Salia and Selara response -->
+  <Dialogue id="saliaSelara">
+    <NPCText>
+      <![CDATA[
+      "Salia’s hands are stained with compromise; Selara’s heart, with frost. If either learns you aided me, tread carefully. Yet neither can save Aerilon without my truths. If you trust your wit and speed, the risk is yours to take."
+      ]]>
+    </NPCText>
+    <Option text="I accept the risk." action="GiveItem:FactionDeliveryQuestScroll(Shadowwisp Scholar,Aerilon,350)" condition="!HasItem:FactionDeliveryQuestScroll" next="accept"/>
+    <Option text="Too much intrigue for me." action="Close"/>
+  </Dialogue>
+  
+<Dialogue id="originDeepDive">
+  <NPCText>
+    <![CDATA[
+    Kaelis narrows his eyes, tilting his head ever so slightly. The crystal light around him dims a fraction.
+    <BR><BR>
+    "Curious, are you? Hmph. Few ask that and mean it. Most want quick spells or scandal—never the root."
+    <BR><BR>
+    He leans closer, voice dropping to a rasp.
+    "I was born in the silt-lanes of Vesper. No name, no lineage. Magic came not as a gift, but as a defense. I burned a slaver’s face with raw will before I could write my name."
+    <BR><BR>
+    "They found me, the Wind scholars. Took me in, fed me words and sigils... but kept me under glass. *Specimen.*"
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="That sounds cruel. No wonder you rebelled." next="rebelled"/>
+  <Option text="Did you ever find someone who understood you?" next="relationships"/>
+  <Option text="Wind scholars? So you were once of Wind..." next="windLore"/>
+</Dialogue>
+
+<Dialogue id="rebelled">
+  <NPCText>
+    <![CDATA[
+    He smiles bitterly. "Cruel? Perhaps. But necessary. It taught me to *see*. They feared what I could do untrained. Imagine their terror when I outpaced them."
+    <BR><BR>
+    "The Conclave welcomed me next—Selara, Salia, Corvus. I thought I’d found kin. But power always births paranoia. And when I warned them of instability in the Azure Cores... they called it sabotage."
+    <BR><BR>
+    He lifts his wand, letting it spark once, a quiet fury.
+    "And so I was cast down. But I remember every rune, every betrayal. One day, I will remind them."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="You seek vengeance, then?" next="vengeance"/>
+  <Option text="You still miss Salia, don’t you?" next="saliaSoft"/>
+</Dialogue>
+
+<Dialogue id="windLore">
+  <NPCText>
+    <![CDATA[
+    "Yes. I was of Wind once—until I asked questions they couldn’t answer."
+    <BR><BR>
+    "That city lives entombed in its own arrogance. They would rather preserve ignorance than admit the Gem’s fragments still *speak* beneath their vaults."
+    <BR><BR>
+    "Aerilon was to be the future. And I built its heart. Now they shun me because the truth isn’t pretty."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="Do you believe Aerilon can be saved?" next="saved"/>
+  <Option text="I want to hear the truth, even if it’s dangerous." next="trustTest"/>
+</Dialogue>
+
+<Dialogue id="trustTest">
+  <NPCText>
+    <![CDATA[
+    Kaelis studies you, lips curling with interest.
+    <BR><BR>
+    "Maybe you're not like the others. Would you trade a piece of your soul for a shard of truth?"
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="I can handle the truth. Show me."
+          condition="SkillAtLeast:Magery,80"
+          action="AddSkill:Magery,1,60"
+          next="revealLore"/>
+  <Option text="I’m ready. Whatever the cost."
+          condition="StatAtLeast:Int,90"
+          action="AddStat:Int,2,60"
+          next="revealLore"/>
+  <Option text="I don’t fear knowledge. Only silence."
+          condition="FameAtLeast:5000"
+          action="Karma:+500"
+          next="revealLore"/>
+  <Option text="On second thought… I’ll keep my soul intact." action="Close"/>
+</Dialogue>
+
+<Dialogue id="revealLore">
+  <NPCText>
+    <![CDATA[
+    "Then listen closely."
+    <BR><BR>
+    He taps the crystal tablet at his side, and whispers seem to coil around your ears.
+    <BR><BR>
+    "*The crystals of Aerilon are not machines—they are sentient echoes of the shattered Gem. Each city shard is a soul sliver, and Aerilon floats atop a screaming mind.*"
+    <BR><BR>
+    "If Minax awakens them—*they may awaken in HER name.*"
+    <BR><BR>
+    "Tell no one. Not Salia. Not even Selara. Unless you want a dagger in the dark."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="I will carry this burden alone." action="SendMessage:You feel the weight of Kaelis's truth settle in your mind."/>
+  <Option text="Perhaps… I’ll speak to Salia myself." action="Karma:-200" />
+  <Option text="This changes everything..." action="Close"/>
+</Dialogue>
+
+<Dialogue id="vengeance">
+  <NPCText>
+    <![CDATA[
+    "Not vengeance... not exactly. I seek clarity. Reckoning. Truth exposed like bone in the light."
+    <BR><BR>
+    "But if their towers fall in the process... well, even the sky must bleed sometimes."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="I will help you—if it means saving Aerilon." next="questIntro"/>
+  <Option text="I walk my own path. Good luck." action="Close"/>
+</Dialogue>
+
+<Dialogue id="saliaSoft">
+  <NPCText>
+    <![CDATA[
+    He goes very still. The air stills with him.
+    <BR><BR>
+    "...She spoke once of hope. Of changing the city from within. I wonder now if she still believes it—or merely survives."
+    <BR><BR>
+    "If you speak to her... remind her of the lake beneath the western platform. She’ll understand."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="I will. Maybe there’s still peace between you." action="SendMessage:You now know a secret memory Salia may respond to." />
+  <Option text="It’s not my place." action="Close"/>
+</Dialogue>
+
+  
+  
+</DialogueFile>

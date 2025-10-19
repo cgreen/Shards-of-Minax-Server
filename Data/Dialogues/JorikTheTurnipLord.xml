@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="JorikTheTurnipLord">
+  <!-- === root greeting ====================================== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#a38853'>
+      You approach a burly, ruddy-cheeked farmer in a battered tall straw hat festooned with wilted turnip leaves. His apron smells faintly of ale and root-vegetables. He waves a lumpy walking stick at you—carved, you think, into a suspiciously turnip-like shape.
+      <BR><BR>
+      "Ho there, friend! Out for a turnip, or just lost in the mud like so many city boots? Name’s Jorik—Turnip Lord, Squire of Soil, Teller of Tales, and Champion of the Noble Root!"
+      <BR>
+      He grins broadly. "Care for a pint, a tale, or a bit of honest labor? Mind the fields—rumor says one of my turnips is plotting revolution."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Why do they call you Turnip Lord?" next="turniplord"/>
+    <Option text="What’s this about a revolutionary turnip?" next="turnipeyes"/>
+    <Option text="Heard you know the best gossip in Eldermoor." next="gossip"/>
+    <Option text="Any work for a traveler?" next="work"/>
+    <Option text="Just passing through." action="Close"/>
+  </Dialogue>
+  
+  <!-- Turnip Lord branch -->
+  <Dialogue id="turniplord">
+    <NPCText>
+      <![CDATA[
+      "Why, it’s a title earned through mud, sweat, and the saving of at least six harvests by heroic application of horse manure. My father before me was Lord of Tubers, and his mother before him Queen of Mash! 
+      <BR>
+      These fields have more secrets than the Stubborn Boar’s cellar—and let me tell you, that’s saying something. Why, just ask Mira. She owes me for three lost barrels and a turnip pie."
+      ]]>
+    </NPCText>
+    <Option text="You’re a legend in your own mind." next="legend"/>
+    <Option text="What’s the real story of the ‘turnip with eyes’?" next="turnipeyes"/>
+    <Option text="So, any work for a mud-stained traveler?" next="work"/>
+    <Option text="I’ll leave you to your fields." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="legend">
+    <NPCText>
+      <![CDATA[
+      Jorik snorts ale through his nose. "Better to be a legend in mud than a nobody in the city, that’s what I say! But you’re here for a reason—spill it."
+      ]]>
+    </NPCText>
+    <Option text="I heard about your 'turnip with eyes'." next="turnipeyes"/>
+    <Option text="Got any work needing a sword or shovel?" next="work"/>
+    <Option text="Just wanted to meet a turnip enthusiast." action="Close"/>
+  </Dialogue>
+  
+  <!-- The Cursed Turnip Quest Hook -->
+  <Dialogue id="turnipeyes">
+    <NPCText>
+      <![CDATA[
+      Jorik drops his voice to a whisper, glancing around.<BR>
+      "Ah, the ‘turnip with eyes’—folk laugh, but truth is, that root’s cursed. It sprouted three dawns ago, right near the old family well. It...watches me. Sometimes it mutters. ‘Hunger, hunger, bring me the shard...’"
+      <BR>
+      He shudders, then chuckles. "Most call it drunken babble. But I’ll wager a wheel of cheese you won’t stand ten seconds near that well without hearing it whisper. Mira says it’s the ale talking. Edda swears it’s an omen."
+      ]]>
+    </NPCText>
+    <Option text="This sounds dangerous. Want me to investigate?" next="turnipquest"/>
+    <Option text="A talking turnip? Pull the other one, farmer." next="turnipjoke"/>
+    <Option text="Has anyone else seen it?" next="turnipwitnesses"/>
+    <Option text="So what’s by the old well?" next="turnipquest"/>
+    <Option text="I’ll stick to normal vegetables, thanks." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="turnipjoke">
+    <NPCText>
+      <![CDATA[
+      He roars with laughter. "Ha! Most folk think it’s just the cider speaking. Still, I’d not turn down a brave soul who’ll poke about. If you find something odd—don’t taste it! And for Virtue’s sake, show it to Edda first."
+      ]]>
+    </NPCText>
+    <Option text="Alright, I’ll look by your well." next="turnipquest"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="turnipwitnesses">
+    <NPCText>
+      <![CDATA[
+      "Well, Edda’s got herbs growing out back, and she claims the well’s always had a ‘hungry spirit.’ Aldric won’t go near it after dusk—he says it gives him chills worse than Minax’s storms. But me? I just want my well back, and my turnip harvest uneaten!"
+      ]]>
+    </NPCText>
+    <Option text="I’ll see what’s lurking by your well." next="turnipquest"/>
+    <Option text="Not my problem." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="turnipquest">
+    <NPCText>
+      <![CDATA[
+      Jorik offers you a battered old lantern and a muddy key.<BR>
+      "You want to help? Take this, and check my well out back. If you find anything unnatural—root, relic, or otherwise—bring it straight to me. But listen: If the thing whispers, don’t answer! Folk say strange words wake old curses. 
+      <BR>
+      And if you see anything that looks like an eye...well, you’ll know it. May the Virtues keep you steadier than me on cider night."
+      ]]>
+    </NPCText>
+    <Option text="I’ll check your well and bring back what I find."
+      action="GiveItem:TurnipLordWellKey"
+      next="turnipaccept"/>
+    <Option text="What kind of relic do you think it is?" next="turniprelic"/>
+    <Option text="On second thought, I’ll leave the roots alone." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="turnipaccept">
+    <NPCText>
+      <![CDATA[
+      "Good soul! If you find a root with eyes, or anything with Minax’s mark, show Edda first—she knows curses better than I know turnips. Oh, and if it bites, you didn’t get that lantern from me!"
+      ]]>
+    </NPCText>
+    <Option text="Wish me luck. I’m off." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="turniprelic">
+    <NPCText>
+      <![CDATA[
+      Jorik’s gaze turns serious.<BR>
+      "Family stories say our well hid something long ago—some kind of crystal shard. My grandfather never spoke of it, but after Minax’s war began, I started dreaming of roots wrapped round a green gem, whispering in the dark. Edda thinks it’s a fragment of some ‘Gem of Immortality’—I just want my water clean and my turnips safe."
+      ]]>
+    </NPCText>
+    <Option text="Alright, I’ll check the well for relics." next="turnipaccept"/>
+    <Option text="You might want a priest instead." action="Close"/>
+  </Dialogue>
+
+  <!-- Gossip branch -->
+  <Dialogue id="gossip">
+    <NPCText>
+      <![CDATA[
+      "Best gossip in Eldermoor? Sit a while! Mira’s planning to slip away to Sunreach—though her father’s got eyes sharper than a hawk on market day. Mayor Halric and Priestess Miralda are arguing again—Virtues or vigilance, same as every week. Thalen? That lad’s smuggling steel from Minoc—don’t tell Halric, or there’ll be hammering at midnight."
+      <BR>
+      He leans in, voice dropping. "But the strangest tale? Edda’s been seen talking with wild spirits in the woods. Folk say she can charm birds from the trees, and snakes from their holes. If you like mysteries, talk to her."
+      ]]>
+    </NPCText>
+    <Option text="Thanks, Jorik. I’ll keep an ear out." action="Close"/>
+    <Option text="Heard anything about Minax lately?" next="minaxgossip"/>
+  </Dialogue>
+  <Dialogue id="minaxgossip">
+    <NPCText>
+      <![CDATA[
+      "Minax? May the Virtues curse her name. I’ve seen fields wither overnight where her cultists pass. Aldric swears he saw her mark in the mud—twisted roots, spiraled like a snake’s eye. That’s why I trust my turnips more than most folk these days."
+      ]]>
+    </NPCText>
+    <Option text="Grim news. Anything I can do to help?" next="work"/>
+    <Option text="Sounds like you need a drink." action="Close"/>
+  </Dialogue>
+
+  <!-- Work/Quest branch -->
+  <Dialogue id="work">
+    <NPCText>
+      <![CDATA[
+      Jorik waves his turnip-stick in the air.<BR>
+      "Ah! Work, you say? My fields always need weeding, but truth is, we’ve a bigger problem. There’s an Ironclad Ogre loose on the north boundary, as stubborn as a boiled beet and twice as ugly. 
+      <BR>
+      It smashed my cart, ate half my turnip stores, and sent my best cow running for Trinsic. Thalen tried to trap it, but the brute snapped his iron net like wet grass. If you’re handy with a blade, I’d pay good silver for that beast’s head—or at least its iron jawbone."
+      <BR>
+      He eyes you up and down. "So, how about it? You up for a bit of ogre-wrangling?"
+      ]]>
+    </NPCText>
+    <Option text="I’ll hunt the Ironclad Ogre for you."
+      action="GiveItem:FactionKillQuestScroll(IroncladOgre,1,Eldermoor,500)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="ogreact"/>
+    <Option text="What makes this ogre so dangerous?" next="ogreinfo"/>
+    <Option text="Can’t Thalen or Aldric handle it?" next="ogrehelp"/>
+    <Option text="Maybe later, when I’m better prepared." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ogreact">
+    <NPCText>
+      <![CDATA[
+      "That’s the spirit! You’ll find the beast at the edge of my eastern fields, where the ground’s thick with mud and old iron bones. Bring me its iron jawbone, and I’ll see you don’t go hungry—or thirsty—tonight. And mind the turnips: some of them bite back!"
+      ]]>
+    </NPCText>
+    <Option text="Wish me luck, Turnip Lord." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ogreinfo">
+    <NPCText>
+      <![CDATA[
+      Jorik leans close, lowering his voice.<BR>
+      "They call it Ironclad because its skin’s crusted with scrap metal and broken ploughs. Thalen swears the ogre’s got a shield for a back and a smithy’s anvil for a skull. It shrugs off arrows, but folk say the thing hates loud noise—try a thunderstone if you’ve got one. 
+      <BR>
+      Just watch your footing. The ground there’s so churned you’ll lose your boots before you lose your nerve."
+      ]]>
+    </NPCText>
+    <Option text="I’ll take it down." 
+      action="GiveItem:FactionKillQuestScroll(IroncladOgre,1,Eldermoor,500)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="ogreact"/>
+    <Option text="Sounds tough. Maybe not today." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ogrehelp">
+    <NPCText>
+      <![CDATA[
+      Jorik snorts. "Thalen’s busy fixing my plough, and Aldric’s tracking something even nastier in the woods. Besides, I’d rather trust a stranger than risk Eldermoor’s last two heroes! You look like you could use a good brawl—and I can always use another tale for the tavern."
+      ]]>
+    </NPCText>
+    <Option text="Fine, I’ll take the job."
+      action="GiveItem:FactionKillQuestScroll(IroncladOgre,1,Eldermoor,500)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="ogreact"/>
+    <Option text="I’ll pass, for now." action="Close"/>
+  </Dialogue>
+
+</DialogueFile>

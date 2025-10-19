@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="HassanAlKadir">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#F4E4C1'>
+      Before you stands a dignified man in flowing desert robes, a staff etched with ancient runes resting at his side. His eyes, deep and patient, regard you with the weight of centuries.<BR><BR>
+      “Welcome, traveler, to the Archives of Sunreach. I am Hassan Al-Kadir—keeper of the city’s memory and guardian of relics the desert yields. Do you seek knowledge, wisdom… or a cause worthy of your courage?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek work that matters." next="taskIntro"/>
+    <Option text="Who are you, Hassan Al-Kadir?" next="backstory"/>
+    <Option text="Tell me about the relics you guard." next="relics"/>
+    <Option text="What do you know of Minax?" next="minax"/>
+	<Option text="I wish to understand you, not just serve you." next="deepDiveIntro"/>
+    <Option text="Just browsing, thank you." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Backstory branch -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      Hassan nods, his expression tinged with humility.<BR><BR>
+      “Once, I was a scholar of Qasaria—until ambition soured the city’s heart. I journeyed to Sunreach, where the sands conceal as much as they reveal. Here, I safeguard not only artifacts, but the fragile truths of our past.<BR>
+      In these days of upheaval, wisdom is our most precious commodity. I trust few, for the price of a single secret can be ruin or redemption.”
+      ]]>
+    </NPCText>
+    <Option text="Your task sounds important. Tell me more." next="taskIntro"/>
+    <Option text="What wisdom guides you in these times?" next="philosophy"/>
+    <Option text="I’d rather hear about relics." next="relics"/>
+    <Option text="Thank you for sharing." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Relics Lore -->
+  <Dialogue id="relics">
+    <NPCText>
+      <![CDATA[
+      “Sunreach is built upon the bones of older empires. Each grain of sand may conceal a lost crown, a cursed talisman, or a forgotten weapon. Lady Seraphine seeks the Blade of Sands—its magic as sharp as her ambition.<BR>
+      Yet relics choose their bearers, and some secrets are best left buried.” 
+      ]]>
+    </NPCText>
+    <Option text="Why keep such power hidden?" next="philosophy"/>
+    <Option text="Could I help recover an artifact?" next="taskIntro"/>
+    <Option text="I’d rather not meddle with the past." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Minax Lore -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Hassan’s brow furrows.<BR><BR>
+      “Minax is a wound upon the world, her agents seeking to unmake all order. She covets the shards of immortality and the relics beneath our feet. Beware her cultists—some pose as merchants, others as beggars, but all serve her insatiable hunger.<BR>
+      I believe alliance, not division, is our shield. Yet many in Sunreach would sell their souls for a glimpse of her power.”
+      ]]>
+    </NPCText>
+    <Option text="What can be done to stop her?" next="philosophy"/>
+    <Option text="I’d like to help resist Minax." next="taskIntro"/>
+    <Option text="Her reach is too great for me." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Philosophy -->
+  <Dialogue id="philosophy">
+    <NPCText>
+      <![CDATA[
+      Hassan’s gaze drifts to the desert beyond the city.<BR><BR>
+      “A wise traveler said: the shifting dunes teach us humility. No edifice—neither palace nor empire—can stand forever. It is not the strength of stone, but the resolve of those who remember, that preserves civilization.<BR>
+      In these times, knowledge is resistance. Will you stand with me?”
+      ]]>
+    </NPCText>
+    <Option text="I will. What must I do?" next="taskIntro"/>
+    <Option text="I need time to decide." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismiss -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Hassan bows his head.<BR><BR>
+      “May the sands guide your steps, traveler. Should you find purpose in these halls, return and speak with me again.”
+      ]]>
+    </NPCText>
+    <Option text="On second thought, do you need help?" next="taskIntro"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Introduction -->
+  <Dialogue id="taskIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#F4E4C1'>
+      Hassan lowers his voice, drawing you closer.<BR><BR>
+      “There is a relic beneath the ruins east of Sunreach—a crystal scarab, said to shield its bearer from Minax’s dark magic. My rival, Darius Veynar, would sell it to the highest bidder. Lady Seraphine would wield it to command the pirate lords.<BR><BR>
+      I need someone trustworthy to recover the scarab before it is lost to greed or corruption. It will not be unguarded—bandits and cultists skulk among the ruins. Will you undertake this task in the name of Sunreach’s future?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will find the crystal scarab." 
+            action="GiveItem:FactionRecoveryQuestScroll(CrystalScarab,Sunreach,350)"
+            condition="!HasItem:FactionRecoveryQuestScroll"
+            next="accept"/>
+    <Option text="What dangers await in the ruins?" next="danger"/>
+    <Option text="Tell me more about Darius Veynar." next="darius"/>
+    <Option text="Why trust me with such a relic?" next="trust"/>
+    <Option text="I need time to prepare." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Hassan produces a scroll, stamped with the sigil of the Archives.<BR><BR>
+      “Take this. Within the eastern ruins, seek the chamber of shifting sand. The scarab is hidden within a mosaic puzzle. Return with the relic—and beware those who would buy your loyalty. Sunreach’s fate may rest in your hands.”
+      ]]>
+    </NPCText>
+    <Option text="I will not fail you, Hassan." action="Close"/>
+  </Dialogue>
+
+  <!-- Danger Lore -->
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      “The ruins are old—crumbled by time, yet newly dangerous. Bandits lair among the collapsed halls, and rumor claims a Minax cult has awakened the ancient guardian spirits. The scarab’s chamber is protected by riddles; heed the mosaics, or you may be lost to the shifting sands.”
+      ]]>
+    </NPCText>
+    <Option text="I accept this risk." 
+            action="GiveItem:FactionRecoveryQuestScroll(CrystalScarab,Sunreach,350)"
+            condition="!HasItem:FactionRecoveryQuestScroll"
+            next="accept"/>
+    <Option text="Perhaps this is beyond me." action="Close"/>
+  </Dialogue>
+
+  <!-- Darius Veynar Lore -->
+  <Dialogue id="darius">
+    <NPCText>
+      <![CDATA[
+      “Darius is a merchant prince—brilliant, ambitious, and guided by profit above all. He would see Sunreach’s treasures auctioned to the highest bidder, heedless of their danger. We are rivals, but our struggle is also Sunreach’s: soul versus silver.”
+      ]]>
+    </NPCText>
+    <Option text="Then I must keep the scarab from his grasp." 
+            action="GiveItem:FactionRecoveryQuestScroll(CrystalScarab,Sunreach,350)"
+            condition="!HasItem:FactionRecoveryQuestScroll"
+            next="accept"/>
+    <Option text="I am not ready to oppose him." action="Close"/>
+  </Dialogue>
+
+  <!-- Trust -->
+  <Dialogue id="trust">
+    <NPCText>
+      <![CDATA[
+      Hassan looks into your eyes for a long moment.<BR><BR>
+      “Trust must be risked, or else nothing is gained. I have watched you, traveler; your deeds speak more loudly than any oath. This quest is not just for a relic—but for the hope that Sunreach can choose principle over power.”
+      ]]>
+    </NPCText>
+    <Option text="I will prove worthy of your trust." 
+            action="GiveItem:FactionRecoveryQuestScroll(CrystalScarab,Sunreach,350)"
+            condition="!HasItem:FactionRecoveryQuestScroll"
+            next="accept"/>
+    <Option text="That is a heavy burden. Perhaps another time." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="deepDiveIntro">
+  <NPCText>
+    <![CDATA[
+    Hassan’s eyes narrow, not in suspicion—but curiosity.<BR><BR>
+    “Few care to ask who I was, or what led me here. Fewer still understand that the man who guides relics once sought to destroy one.”<BR><BR>
+    He leans on his staff, voice hushed.<BR>
+    “Tell me—what is it you wish to know?”
+    ]]>
+  </NPCText>
+  <Option text="Tell me about your exile from Qasaria." next="qasaria"/>
+  <Option text="How did you come to study relics?" next="relicPath"/>
+  <Option text="You speak as though burdened by guilt." next="guilt"/>
+  <Option text="What do you believe drives Darius Veynar?" next="dariusMotives"/>
+  <Option text="Nothing more for now." action="Close"/>
+</Dialogue>
+
+<Dialogue id="qasaria">
+  <NPCText>
+    <![CDATA[
+    Hassan’s tone darkens.<BR><BR>
+    “Qasaria values wealth over wisdom. When I discovered a relic capable of disrupting Minax’s scrying, the Merchant-Princes sought to sell it to her agents.”<BR>
+    He clenches his jaw.<BR>
+    “I destroyed it. I was cast out—branded a traitor to profit.”<BR>
+    “But I kept its fragments… and my resolve.”
+    ]]>
+  </NPCText>
+  <Option text="A bold choice. Did you regret it?" next="regret"/>
+  <Option text="Is that why you founded the Archives?" next="relicPath"/>
+</Dialogue>
+
+<Dialogue id="regret">
+  <NPCText>
+    <![CDATA[
+    Hassan’s eyes soften briefly.<BR><BR>
+    “Only a fool regrets doing what’s right. But the cost… lingers.”<BR>
+    He pauses, then gives a faint smile.<BR>
+    “Still, exile gave me clarity. And purpose.”
+    ]]>
+  </NPCText>
+  <Option text="That clarity guides you still." next="relicPath"/>
+  <Option text="Let’s speak of something else." next="deepDiveIntro"/>
+</Dialogue>
+
+<Dialogue id="relicPath">
+  <NPCText>
+    <![CDATA[
+    “The desert is both graveyard and womb. It buries civilizations—and births revelations.”<BR>
+    Hassan traces a finger across a carved sandstone tablet nearby.<BR>
+    “I began collecting fragments not for power, but understanding. Each holds memory, warning… and sometimes, redemption.”<BR><BR>
+    <BASEFONT COLOR='#d4b96a'>
+    Because you ask these things, I will entrust you with a fragment I once carried from Qasaria. May it remind you that the truth is often buried beneath ash and sand.
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="I will carry it with care." 
+          action="GiveItem:CrystalFragmentRelic"
+          condition="!HasItem:CrystalFragmentRelic"
+          next="relicGift"/>
+</Dialogue>
+
+<Dialogue id="relicGift">
+  <NPCText>
+    <![CDATA[
+    Hassan hands you a shard wrapped in linen, glowing faintly.<BR><BR>
+    “Guard it well. It resonates with those who choose principle over coin.”<BR>
+    “You may find it opens doors others cannot pass.”
+    ]]>
+  </NPCText>
+  <Option text="Thank you, Hassan." next="deepDiveIntro"/>
+</Dialogue>
+
+<Dialogue id="guilt">
+  <NPCText>
+    <![CDATA[
+    Hassan sighs.<BR><BR>
+    “Sharp eyes, traveler. Yes—there are relics I failed to protect. One fell into Seraphine’s hands… she uses it to bind corsairs to her will.”<BR>
+    He hesitates.<BR>
+    “If I’d acted sooner, fewer would lie dead at sea.”<BR>
+    <BASEFONT COLOR='#e6d17d'>
+    For perceiving what others overlook, take this. A touch of insight—temporary, but earned.
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Wisdom always bears weight." 
+          action="AddSkill:DetectHidden,10,180"
+          condition="!HasAttachment:XmlDetectBuff"
+          next="detectBuff"/>
+</Dialogue>
+
+<Dialogue id="detectBuff">
+  <NPCText>
+    <![CDATA[
+    Hassan passes a silken pouch into your hand.<BR><BR>
+    “Burn the herbs within. For a time, they will sharpen your vision to that which is concealed.”<BR>
+    “Perhaps they will reveal more than just hidden foes.”
+    ]]>
+  </NPCText>
+  <Option text="I'll put them to use." next="deepDiveIntro"/>
+</Dialogue>
+
+<Dialogue id="dariusMotives">
+  <NPCText>
+    <![CDATA[
+    “Darius is not a villain—only blind.”<BR>
+    Hassan strokes his beard thoughtfully.<BR><BR>
+    “He believes wealth buys order. That trade balances all things. But in doing so, he mistakes transaction for truth.”<BR>
+    “If he ever learns to value people more than prices… he may yet be Sunreach’s salvation.”
+    ]]>
+  </NPCText>
+  <Option text="Have you tried to change his mind?" next="dariusConflict"/>
+  <Option text="He sounds dangerous in his delusion." next="dariusDanger"/>
+</Dialogue>
+
+<Dialogue id="dariusConflict">
+  <NPCText>
+    <![CDATA[
+    “We debate often. Sometimes in the Council chambers… sometimes beneath the stars with spiced wine and bitter laughter.”<BR>
+    He smiles faintly.<BR>
+    “We are two truths in conflict. I only hope he realizes before Minax gives him a ‘deal’ he cannot refuse.”
+    ]]>
+  </NPCText>
+  <Option text="Perhaps I can sway him one day." 
+          action="Karma:+250" 
+          condition="KarmaBelow:3000"
+          next="deepDiveIntro"/>
+  <Option text="Let’s speak of something else." next="deepDiveIntro"/>
+</Dialogue>
+
+<Dialogue id="dariusDanger">
+  <NPCText>
+    <![CDATA[
+    “Indeed. A man with blinders and influence is more dangerous than an honest tyrant.”<BR>
+    “If the time comes that he must be stopped—not reasoned with—I hope the choice is clear to you.”<BR><BR>
+    <BASEFONT COLOR='#ffcccc'>You feel the weight of Hassan’s words—like sand settling in your chest.</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="I will remember your warning." next="deepDiveIntro"/>
+</Dialogue>
+
+
+</DialogueFile>

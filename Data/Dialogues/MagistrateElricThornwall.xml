@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="MagistrateElricThornwall">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#e6e1c7'>
+      The magistrate’s sharp eyes flick over you, his black robes immaculate, fingers stained with ink and secrets.<BR><BR>
+      "Citizen, you stand before the law of Sunreach. Speak quickly—justice waits for no one, and neither does the Council. What is your business with the court?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I wish to serve Sunreach. Any work for a loyal subject?" next="work"/>
+    <Option text="Rumor has it justice is for sale here..." next="bribe"/>
+    <Option text="I come seeking the truth about the city’s corruption." next="truth"/>
+    <Option text="What does the magistrate truly fear?" next="fear"/>
+	<Option text="Who is Elric Thornwall, really?" next="backstory"/>
+    <Option text="Just passing through, magistrate." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Branch: Seeking work (the main quest path) -->
+  <Dialogue id="work">
+    <NPCText>
+      <![CDATA[
+      Thornwall leans forward, voice low.<BR><BR>
+      "There is a matter requiring discretion and loyalty—not to the Council, but to Sunreach’s future.<BR><BR>
+      A foul cult lurks beneath our streets, loyal to a distant queen whose name is best left unspoken. Their blood rites endanger our peace—and, I confess, my reputation. The Council cannot know how deep their rot has spread.<BR><BR>
+      If you would serve the city...root them out. Return with proof, and the law will reward you handsomely."
+      ]]>
+    </NPCText>
+    <Option text="Where do I begin this investigation?" next="bloodcult"/>
+    <Option text="Is the Council itself not corrupted?" next="council"/>
+    <Option text="What is my reward for this service?" next="reward"/>
+    <Option text="On second thought, I am not interested." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="bloodcult">
+    <NPCText>
+      <![CDATA[
+      He hands you a crumpled writ.<BR><BR>
+      "Begin in the undercity—the sewers beneath the southern docks. Seek the cult’s symbol: a red-stained hand. Bring me a token from their altar, and keep your tongue. The Council need not hear of this."<BR><BR>
+      (You have received the <BASEFONT COLOR='#e04646'>Writ of the Shadow Judge</BASEFONT>.)
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with proof—and silence." 
+            action="GiveItem:FactionKillQuestScroll(Blood Cultist,Sunreach,250)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="acceptquest"/>
+    <Option text="Any advice for surviving the cult’s wrath?" next="advice"/>
+    <Option text="If I find your name among the cultists’ ledgers?" next="threaten"/>
+    <Option text="I need more time to prepare." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="advice">
+    <NPCText>
+      <![CDATA[
+      He fixes you with a cold stare.<BR>
+      "Trust no one below. The cult’s eyes are everywhere—even among the guard. If you are caught, you never met me. Remember: evidence, not bodies, is the coin I seek."
+      ]]>
+    </NPCText>
+    <Option text="Understood. I’ll keep my wits." next="acceptquest"/>
+    <Option text="Your secrets are safe. For a price." next="bribe"/>
+  </Dialogue>
+
+  <Dialogue id="acceptquest">
+    <NPCText>
+      <![CDATA[
+      "Go now. Return with a <BASEFONT COLOR='#e04646'>Blood Cult Relic</BASEFONT> from their altar, and Sunreach’s shadows will favor you."
+      ]]>
+    </NPCText>
+    <Option text="I will see it done." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="reward">
+    <NPCText>
+      <![CDATA[
+      Thornwall smiles thinly.<BR>
+      "Gold, certainly. But more—my signature buys freedom in Sunreach, for the right hands. Do this, and I’ll write your name in the ledgers of the innocent. That is a gift worth far more than coin."
+      ]]>
+    </NPCText>
+    <Option text="I accept the task." next="bloodcult"/>
+    <Option text="I demand gold up front." next="bribe"/>
+    <Option text="On second thought, I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <!-- Branch: Player accuses/bribes -->
+  <Dialogue id="bribe">
+    <NPCText>
+      <![CDATA[
+      The magistrate’s expression never wavers.<BR>
+      "Every law has its price, citizen. Speak plainly: are you here to buy justice, or to sell secrets?"
+      ]]>
+    </NPCText>
+    <Option text="How much to overlook a pirate friend’s crime?" next="piratebribe"/>
+    <Option text="What’s it worth to keep your own name off a cult ledger?" next="blackmail"/>
+    <Option text="Never mind." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="piratebribe">
+    <NPCText>
+      <![CDATA[
+      He taps his desk impatiently.<BR>
+      "Names. Sums. I have a ledger for both."
+      ]]>
+    </NPCText>
+    <Option text="[Pay 2,500 gold] Free a pirate from custody."
+            action="GoldAtLeast:2500|GiveGold:-2500|SendMessage:The magistrate nods and signs a discreet order."
+            next="bribed"/>
+    <Option text="On second thought, I’ll handle it myself." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="bribed">
+    <NPCText>
+      <![CDATA[
+      He slips the coin into his sleeve.<BR>
+      "Done. This conversation never happened. Don’t test my patience."
+      ]]>
+    </NPCText>
+    <Option text="Your discretion is appreciated." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="blackmail">
+    <NPCText>
+      <![CDATA[
+      His hand freezes, then clenches.<BR>
+      "What do you know? Speak carefully, friend—there are ears even here. If you bring me evidence, I can be...generous. Or are you simply making threats?"
+      ]]>
+    </NPCText>
+    <Option text="Bring proof of the magistrate’s cult ties." next="proof"/>
+    <Option text="Just testing your nerves." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="proof">
+    <NPCText>
+      <![CDATA[
+      The magistrate pales, sweat on his brow.<BR>
+      "You play a dangerous game. Name your price, and forget what you saw—or share it, and Sunreach’s shadows will swallow you too."
+      ]]>
+    </NPCText>
+    <Option text="[Extort 5,000 gold] My silence isn’t cheap."
+            action="GoldAtLeast:0|GiveGold:5000|SendMessage:The magistrate empties a coffer in desperation."
+            next="bribed"/>
+    <Option text="Threaten to expose him to the Council." next="councilthreat"/>
+    <Option text="Walk away, satisfied with his fear." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="councilthreat">
+    <NPCText>
+      <![CDATA[
+      He hisses, voice trembling.<BR>
+      "Expose me, and you doom us both. The Council does not tolerate weakness—or witnesses. Be wise, friend."
+      ]]>
+    </NPCText>
+    <Option text="Perhaps we can work together instead." next="work"/>
+    <Option text="You’re right. No one needs to know." action="Close"/>
+  </Dialogue>
+
+  <!-- Branch: Player seeks the "truth" -->
+  <Dialogue id="truth">
+    <NPCText>
+      <![CDATA[
+      The magistrate’s gaze hardens.<BR>
+      "Truth is a blade with no hilt. Seek it, and you risk bleeding for others’ crimes. What truth do you pursue: the Council’s dealings, the blood cult’s secrets, or my own sins?"
+      ]]>
+    </NPCText>
+    <Option text="Tell me of the Council’s corruption." next="council"/>
+    <Option text="Who truly commands the blood cult?" next="minax"/>
+    <Option text="What skeletons hide in your closet, Elric?" next="fear"/>
+    <Option text="Perhaps I should seek truth elsewhere." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      He sighs, voice dropping to a whisper.<BR>
+      "Five Houses, five vultures. Darius Veynar buys loyalty; Lady Seraphine sells it. I walk a line between them all, but even the strongest rope frays. Serve the city, not the Council. That is all I ask."
+      ]]>
+    </NPCText>
+    <Option text="Then help me bring down the blood cult." next="bloodcult"/>
+    <Option text="Sounds like you could use an ally." next="work"/>
+    <Option text="I’ll be going now." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax branch -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      The magistrate’s face blanches at the name.<BR>
+      "Speak not of her! The cult’s high priestess answers only to Minax herself. She walks the sewers at midnight, whispering promises of immortality to fools. Root them out, and Sunreach may yet stand."
+      ]]>
+    </NPCText>
+    <Option text="I’ll find and destroy the cult’s relics." next="acceptquest"/>
+    <Option text="I want nothing to do with this darkness." action="Close"/>
+  </Dialogue>
+
+  <!-- Magistrate's fears -->
+  <Dialogue id="fear">
+    <NPCText>
+      <![CDATA[
+      A rare moment of vulnerability slips through.<BR>
+      "Fear? I have watched men hang for lesser secrets than mine. I fear only the day my power fails...or when she learns the truth I have tried so hard to bury."
+      ]]>
+    </NPCText>
+    <Option text="Who is 'she'?" next="aria"/>
+    <Option text="I will keep your secrets—if you help me." next="work"/>
+    <Option text="Enough of this. I’m leaving." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="aria">
+    <NPCText>
+      <![CDATA[
+      His hand trembles on the desk.<BR>
+      "Aria Silverhand is...different. Her eyes see through lies, even mine. If you cross her, tread carefully. If you aid her, perhaps you can do what I never could—redeem this city."
+      ]]>
+    </NPCText>
+    <Option text="Thank you for your candor. Let’s discuss work." next="work"/>
+    <Option text="I’ll seek Aria’s counsel, then." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismissal -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      He waves a hand dismissively.<BR>
+      "Then move along. Justice is busy, and mercy is in short supply."
+      ]]>
+    </NPCText>
+    <Option text="Very well, magistrate." action="Close"/>
+    <Option text="On second thought, I have business with you." next="greeting"/>
+  </Dialogue>
+
+  <!-- BACKSTORY BRANCH -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      Elric folds his hands, his voice quieter than before.<BR><BR>
+      "Few ask that question. Fewer survive the answer. But perhaps... you're not like the others. You wish to know who I was, or what I became?"
+      ]]>
+    </NPCText>
+    <Option text="Tell me about your past." next="origin"/>
+    <Option text="What drives a magistrate to such... shadows?" next="motives"/>
+    <Option text="Who do you trust in this city?" next="trust"/>
+    <Option text="I’ve heard whispers of your feelings for Aria Silverhand." condition="IsFemale" next="ariafemale"/>
+    <Option text="I’ve heard whispers of your feelings for Aria Silverhand." condition="IsMale" next="ariamale"/>
+    <Option text="Let’s speak of something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="origin">
+    <NPCText>
+      <![CDATA[
+      He exhales slowly.<BR><BR>
+      "I was once a clerk of the Court of Britain. Idealistic. Naïve. I thought the law was a sword to protect the weak. Then the Gem shattered, and Minax’s shadow fell. One by one, laws bent, people broke, and I... adapted."<BR>
+      "Sunreach offered me power. And power demands silence more than it does justice."
+      ]]>
+    </NPCText>
+    <Option text="You sound bitter." next="motives"/>
+    <Option text="What changed you most?" next="definingmoment"/>
+  </Dialogue>
+
+  <Dialogue id="definingmoment">
+    <NPCText>
+      <![CDATA[
+      His voice lowers to a whisper.<BR><BR>
+      "My predecessor was poisoned for refusing a Council bribe. I inherited the robes before his corpse was cold. I remember standing over his desk, wondering if I would die the same way.<BR><BR>
+      Now? I fear I won't die at all—not until I’ve betrayed everyone I once cared for."
+      ]]>
+    </NPCText>
+    <Option text="You still have choices left, Elric." next="trust"/>
+    <Option text="The law is just a tool to you, isn’t it?" next="motives"/>
+  </Dialogue>
+
+  <Dialogue id="motives">
+    <NPCText>
+      <![CDATA[
+      Elric's gaze sharpens.<BR><BR>
+      "Justice is a lie told to the poor to keep them docile. I maintain order because chaos invites Minax. That’s my truth."<BR><BR>
+      "But even lies have their uses, and law—bent though it is—still offers a shield for those clever enough to stand beneath it."
+      ]]>
+    </NPCText>
+    <Option text="And what do you stand beneath?" next="fear"/>
+    <Option text="I understand more than you think." action="AddStat:Int,5,300" next="trust"/>
+    <Option text="That sounds like cowardice wrapped in legalese." action="Karma:-250" next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="trust">
+    <NPCText>
+      <![CDATA[
+      He hesitates.<BR><BR>
+      "I trust very little. But Aria... she's different. Too honest to survive long here. Too smart not to see through me."<BR><BR>
+      "She’s seen what I’ve become—and still she hasn’t exposed me. Not yet."
+      ]]>
+    </NPCText>
+    <Option text="Do you love her?" next="ariaconfess"/>
+    <Option text="You’re afraid she’ll turn on you." next="ariaturn"/>
+    <Option text="Let’s move on." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="ariafemale">
+    <NPCText>
+      <![CDATA[
+      Elric stiffens, then slowly nods.<BR><BR>
+      "Aria... yes. I’ve loved her from the first moment she defied the Council in open court. But love and power do not mix. If she knew what I’ve done..."<BR>
+      His voice falters for a moment. "Tell no one. Please."
+      ]]>
+    </NPCText>
+    <Option text="Your secret is safe. For now." action="Karma:+200" next="trust"/>
+    <Option text="Perhaps I’ll speak with Aria about it." action="SendMessage:You feel his panic before he masks it." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="ariamale">
+    <NPCText>
+      <![CDATA[
+      Elric gives a mirthless chuckle.<BR><BR>
+      "So even the court’s whispers have reached your ears. Yes... Aria. Her mind is sharper than any blade, her courage foolishly noble. She is the only light left in this place. And I am the shadow she cannot see."<BR>
+      "Speak to her, if you must—but if she learns the truth of me, I fear what it will cost."
+      ]]>
+    </NPCText>
+    <Option text="I understand. I’ll keep your confidence." action="Karma:+200" next="trust"/>
+    <Option text="She deserves to know." action="Karma:-250" next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="ariaconfess">
+    <NPCText>
+      <![CDATA[
+      He closes his eyes.<BR><BR>
+      "What does it matter? I cannot protect her from this place, and she will never love the man I’ve become."<BR>
+      "Still... if anything happens to me, promise me you’ll warn her. She must leave Sunreach before it consumes her too."
+      ]]>
+    </NPCText>
+    <Option text="I promise." action="GiveItem:FactionDeliveryQuestScroll(Warn Aria,Sunreach,500)" next="greeting"/>
+    <Option text="I can’t promise anything." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ariaturn">
+    <NPCText>
+      <![CDATA[
+      A tremor passes through his hand.<BR><BR>
+      "Every day I wake expecting a dagger or a summons. She knows enough to destroy me. But she doesn’t. I don’t know why."<BR>
+      "Maybe... maybe some part of her still believes there’s a man worth saving behind this mask."
+      ]]>
+    </NPCText>
+    <Option text="Then give her a reason to keep believing." action="Karma:+250" next="trust"/>
+    <Option text="You’re past saving, Thornwall." action="Karma:-250" next="greeting"/>
+  </Dialogue>
+
+
+</DialogueFile>

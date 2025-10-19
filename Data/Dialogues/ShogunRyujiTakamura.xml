@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="ShogunRyujiTakamura">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#FFDE9C'>
+      You stand before a stern man clad in lacquered armor, his posture rigid as a drawn bow. His eyes weigh you with the discipline of a lifetime in command.<BR><BR>
+      “I am Shogun Ryuji Takamura, sworn guardian of Hinokami and the Tokuno people. State your purpose, traveler: do you come with respect, or with trouble?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I wish to aid Hinokami, Shogun." next="aidIntro"/>
+    <Option text="I bring news of the Verdant Tribes." next="tribesNews"/>
+    <Option text="Tell me of your people’s struggle." next="backstory"/>
+	<Option text="Tell me about yourself, Shogun Takamura." next="backstoryExpandedIntro"/>
+    <Option text="I come in peace, just passing through." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Introduction to Main Questline -->
+  <Dialogue id="aidIntro">
+    <NPCText>
+      <![CDATA[
+      The Shogun’s eyes narrow, searching for signs of deceit.<BR><BR>
+      “Many claim friendship in these times, but few act. Minax’s shadow creeps even here, twisting both heart and blade.<BR><BR>
+      Hinokami stands on the brink of war with the Verdant Tribes—ancient lands, now battlegrounds. If you truly wish to help, mediation or courage may be needed. Will you serve as my envoy?”
+      ]]>
+    </NPCText>
+    <Option text="I will act as your envoy." action="GiveItem:FactionDiplomacyQuestScroll(Verdant Tribes,Hinokami,250)" condition="!HasItem:FactionDiplomacyQuestScroll" next="acceptEnvoy"/>
+    <Option text="Why do the tribes oppose you?" next="tribesConflict"/>
+    <Option text="How does Minax threaten us here?" next="minaxHere"/>
+    <Option text="I need time to decide." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptEnvoy">
+    <NPCText>
+      <![CDATA[
+      The Shogun inclines his head—a rare gesture.<BR><BR>
+      “Go then. Speak with Chieftain Kaelor, but beware his wrath and pride. Seek common ground, for Minax profits from our division.<BR>
+      Return with either treaty or tidings, and Hinokami will remember your service.”
+      ]]>
+    </NPCText>
+    <Option text="I will mediate with honor." action="Close"/>
+  </Dialogue>
+
+  <!-- Verdant Tribes News Branch -->
+  <Dialogue id="tribesNews">
+    <NPCText>
+      <![CDATA[
+      The Shogun’s expression hardens.<BR><BR>
+      “Speak then—do you bring threats, pleas, or perhaps a path to peace? The tribes have raided our hunters and defiled our shrines, yet I sense greater forces at play.”
+      ]]>
+    </NPCText>
+    <Option text="They fear Hinokami’s expansion." next="tribesConflict"/>
+    <Option text="Minax cultists stir trouble among them." next="minaxAmongTribes"/>
+    <Option text="I offer myself as mediator." action="GiveItem:FactionDiplomacyQuestScroll(Verdant Tribes,Hinokami,250)" condition="!HasItem:FactionDiplomacyQuestScroll" next="acceptEnvoy"/>
+    <Option text="I cannot help at this time." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax Influence Explanation -->
+  <Dialogue id="minaxHere">
+    <NPCText>
+      <![CDATA[
+      “Minax is cunning. Her cultists whisper to the weak and desperate—tribes, exiles, even our own. Shamans dream of fire and blood. Some among my samurai have vanished, only to return with foreign eyes.<BR>
+      Our war is not just of steel, but of the spirit. If you see corruption, expose it.”
+      ]]>
+    </NPCText>
+    <Option text="How can I root out Minax’s agents?" next="spyMission"/>
+    <Option text="I wish to discuss the tribes." next="tribesConflict"/>
+    <Option text="I will stay vigilant." action="Close"/>
+  </Dialogue>
+
+  <!-- Mission: Root out Minax agents -->
+  <Dialogue id="spyMission">
+    <NPCText>
+      <![CDATA[
+      The Shogun lowers his voice.<BR><BR>
+      “A shadowed figure—Yumi, the ninja—reports a Minax cultist hidden among the shrine keepers. Find Yumi in the bamboo groves at dusk; bring evidence, and justice will follow.”
+      ]]>
+    </NPCText>
+    <Option text="I will seek out Yumi the Silent Wind." action="GiveItem:FactionInvestigationQuestScroll(Yumi,Hinokami,250)" condition="!HasItem:FactionInvestigationQuestScroll" next="acceptInvestigation"/>
+    <Option text="I am not suited for espionage." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptInvestigation">
+    <NPCText>
+      <![CDATA[
+      “Do not fail. Minax’s poison seeps deeper than the blade. Trust your wits—and return with proof, not rumor.”
+      ]]>
+    </NPCText>
+    <Option text="Understood, Shogun." action="Close"/>
+  </Dialogue>
+
+  <!-- Tribes Conflict Lore -->
+  <Dialogue id="tribesConflict">
+    <NPCText>
+      <![CDATA[
+      “Long ago, the Verdant Tribes roamed freely—before Hinokami’s founding. We claim what is needed for our survival; they see only invasion.<BR>
+      Yet, I would see peace, if the tribes will halt their attacks and respect our shrines. Mediation may yet be possible.”
+      ]]>
+    </NPCText>
+    <Option text="Let me serve as mediator." action="GiveItem:FactionDiplomacyQuestScroll(Verdant Tribes,Hinokami,250)" condition="!HasItem:FactionDiplomacyQuestScroll" next="acceptEnvoy"/>
+    <Option text="Why not crush them by force?" next="forceVsHonor"/>
+    <Option text="Isn’t Minax the greater threat?" next="minaxHere"/>
+    <Option text="I will consider this." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="forceVsHonor">
+    <NPCText>
+      <![CDATA[
+      The Shogun’s tone grows cold.<BR><BR>
+      “I have seen too much blood spilled in Tokuno’s name. Honor is not found in slaughter. Minax would rejoice if we lost our souls while gaining empty victory. Diplomacy is strength, so long as it is returned in kind.”
+      ]]>
+    </NPCText>
+    <Option text="I respect your wisdom. I will try to mediate." action="GiveItem:FactionDiplomacyQuestScroll(Verdant Tribes,Hinokami,250)" condition="!HasItem:FactionDiplomacyQuestScroll" next="acceptEnvoy"/>
+    <Option text="I still believe force is needed." next="dismissWar"/>
+    <Option text="Perhaps peace is possible." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dismissWar">
+    <NPCText>
+      <![CDATA[
+      The Shogun glares.<BR><BR>
+      “Return when you understand the cost of reckless war. Until then, keep your steel sheathed in Hinokami.”
+      ]]>
+    </NPCText>
+    <Option text="Understood." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax among Tribes -->
+  <Dialogue id="minaxAmongTribes">
+    <NPCText>
+      <![CDATA[
+      The Shogun’s jaw tightens.<BR><BR>
+      “So, my suspicions were true. If Minax twists their shamans, both our peoples are endangered. We must root out this influence—by stealth or steel.”
+      ]]>
+    </NPCText>
+    <Option text="What would you have me do?" next="spyMission"/>
+    <Option text="Let me try diplomacy first." action="GiveItem:FactionDiplomacyQuestScroll(Verdant Tribes,Hinokami,250)" condition="!HasItem:FactionDiplomacyQuestScroll" next="acceptEnvoy"/>
+    <Option text="I am not the right person." action="Close"/>
+  </Dialogue>
+
+  <!-- Shogun’s Backstory -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      “When Minax ravaged the Tokuno Isles, I led our survivors here. We built Hinokami on discipline, not conquest. My wife, Lady Aiko, tends to our people’s spirit, while I defend the body.<BR>
+      Yet our roots are fragile in this new soil, and enemies circle us. I trust in Bushido and the wisdom of allies—if they prove themselves.”
+      ]]>
+    </NPCText>
+    <Option text="I wish to help Hinokami stand strong." next="aidIntro"/>
+    <Option text="Tell me of Lady Aiko." next="aiko"/>
+    <Option text="What troubles you most now?" next="minaxHere"/>
+    <Option text="I’ll be going." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="aiko">
+    <NPCText>
+      <![CDATA[
+      “Lady Aiko keeps our traditions alive. She seeks understanding, even with the tribes. If you wish to help, speak to her—she often knows where peace may be brokered, or where Minax’s touch has sown strife.”
+      ]]>
+    </NPCText>
+    <Option text="Where can I find her?" next="aikoLocation"/>
+    <Option text="I will seek her counsel." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="aikoLocation">
+    <NPCText>
+      <![CDATA[
+      “The cherry blossom shrine. Lady Aiko will be tending the lanterns or speaking with druids. She will welcome a respectful visitor.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Shogun." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismiss Branch -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      The Shogun folds his arms.<BR>
+      “Then see you bring no trouble to my gates. Hinokami watches all who pass.”
+      ]]>
+    </NPCText>
+    <Option text="Perhaps I could help after all." next="aidIntro"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="backstoryExpandedIntro">
+    <NPCText>
+      <![CDATA[
+      The Shogun folds his arms behind his back and gazes toward the east.<BR><BR>
+      “Before I was Shogun, I was simply Ryuji of the Takamura clan. Born to a house of warriors on the Tokuno coast. I held my first blade at seven. I buried my first brother at eight—Minax’s fire saw to that.”<BR><BR>
+      He exhales slowly.<BR>
+      “Ask what you will. The past still walks with me.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me about your homeland." next="tokunoOrigin"/>
+    <Option text="You lost family to Minax?" next="familyLoss"/>
+    <Option text="What is your relationship with Lady Aiko?" next="aikoExpanded"/>
+    <Option text="What drives you now?" next="currentMotivation"/>
+    <Option text="I should not pry further." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="tokunoOrigin">
+    <NPCText>
+      <![CDATA[
+      “Tokuno was a land of balance: honor in battle, peace in art. We trained in blade and brush alike. But Minax brought nothing but ash.”<BR><BR>
+      He lowers his head briefly.<BR>
+      “We who escaped were few. We brought only what we could carry: memories, traditions... and vengeance.”<BR><BR>
+      “Hinokami is my answer to her fire.”
+      ]]>
+    </NPCText>
+    <Option text="Your people must be proud." next="currentMotivation"/>
+    <Option text="Did you ever return to Tokuno?" next="tokunoReturn"/>
+    <Option text="What does that vengeance look like now?" next="vengeance"/>
+  </Dialogue>
+
+  <Dialogue id="tokunoReturn">
+    <NPCText>
+      <![CDATA[
+      “I returned once. The land still burns in places. The spirits cry louder than the wind. It is not Tokuno—it is a scar that remembers.”<BR><BR>
+      “We must build anew, not chase ghosts.”
+      ]]>
+    </NPCText>
+    <Option text="Hinokami is your Tokuno reborn." next="currentMotivation"/>
+    <Option text="Let’s speak of the present." next="currentMotivation"/>
+  </Dialogue>
+
+  <Dialogue id="vengeance">
+    <NPCText>
+      <![CDATA[
+      “I would not shame my ancestors by seeking only blood. Vengeance through survival. Through discipline. Through the preservation of what Minax could not destroy.”<BR>
+      “But if her agents step foot in Hinokami...”<BR>
+      His voice becomes steel.<BR>
+      “Then my blade will remember.”
+      ]]>
+    </NPCText>
+    <Option text="I will help you defend your people." next="aidIntro"/>
+    <Option text="Such resolve is admirable." next="currentMotivation"/>
+  </Dialogue>
+
+  <Dialogue id="familyLoss">
+    <NPCText>
+      <![CDATA[
+      “My eldest brother, Takeshi, died defending our shrine. My younger sister, Hana, was taken—never found.”<BR>
+      His jaw clenches.<BR>
+      “I was too young to help. Too weak. That shame built the man you see now.”<BR><BR>
+      “If Minax still holds her... I would do what must be done.”
+      ]]>
+    </NPCText>
+    <Option text="You carry their memory with honor." action="AddStat:Str,5,180" />
+    <Option text="We may yet find Hana." action="SendMessage:'A new quest may someday reveal Hana’s fate...'" />
+    <Option text="I'm sorry for your loss." action="Karma:+200" />
+    <Option text="Let’s speak of something else." next="currentMotivation"/>
+  </Dialogue>
+
+  <Dialogue id="aikoExpanded">
+    <NPCText>
+      <![CDATA[
+      “Aiko was once a shrine maiden. She kept the light alive while I steeled myself in darkness.”<BR><BR>
+      He allows a rare smile.<BR>
+      “Where I lead with discipline, she leads with compassion. It is she who taught me that the blade need not sever every disagreement.”<BR>
+      “Still, she remains the stronger of us.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="You speak of her with deep respect." action="Fame:+150"/>
+    <Option text="Do you always agree on policy?" next="aikoPolicy"/>
+    <Option text="Perhaps I will visit her shrine." next="aikoVisit"/>
+  </Dialogue>
+
+  <Dialogue id="aikoPolicy">
+    <NPCText>
+      <![CDATA[
+      “Rarely. She advocates peace more than I believe wise. But when we do agree, it is because fate demands unity.”<BR><BR>
+      “She seeks a joint festival with the Verdant Tribes. I allow it—for now.”<BR>
+      He grunts.<BR>
+      “Convince me it will not be our undoing, and I will back it more fully.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll speak to her about the festival." action="SendMessage:Seek Lady Aiko at the cherry blossom shrine." />
+    <Option text="You’re right to be cautious." next="currentMotivation"/>
+  </Dialogue>
+
+  <Dialogue id="aikoVisit">
+    <NPCText>
+      <![CDATA[
+      “She welcomes all who show respect. You may find her lighting lanterns beneath the falling blossoms. Do not mistake her grace for weakness.”<BR><BR>
+      “She is fire wrapped in silk.”
+      ]]>
+    </NPCText>
+    <Option text="I will visit her soon." action="SendMessage:Lady Aiko awaits at the shrine." />
+    <Option text="Back to you, Shogun." next="currentMotivation"/>
+  </Dialogue>
+
+  <Dialogue id="currentMotivation">
+    <NPCText>
+      <![CDATA[
+      “My mission is unchanged: to preserve the Tokuno spirit, protect Hinokami, and oppose Minax wherever her shadow falls.”<BR>
+      “But I am not blind to diplomacy. If peace preserves lives, I will pursue it—blade sheathed.”<BR><BR>
+      “You now know more than most. What will you do with that knowledge?”
+      ]]>
+    </NPCText>
+    <Option text="Use it to serve Hinokami." next="aidIntro"/>
+    <Option text="Remember it, and honor your cause." action="Fame:+250"/>
+    <Option text="Nothing, I was just curious." action="Close"/>
+  </Dialogue>
+
+
+</DialogueFile>

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="OriOfTheHollowTree">
+
+  <!-- ========================================= -->
+  <!-- GREETING AND INITIAL BRANCHING            -->
+  <!-- ========================================= -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#c4b67a'>
+      In a small clearing, a figure hunched over a fallen log traces intricate runes into bone. Around them, flutes, whistles, and animal talismans dangle from branches. Ori mutters to each in turn: “Patience, little owl. Courage, wolf tooth. You’ll sing soon enough…”
+      <BR><BR>
+      Sensing you, Ori’s eyes dart up—half wary, half wild.
+      <BR><BR>
+      “Do you hear them too? The bones whisper when the wind is right. But I need a listener with living ears. What brings you beneath the hollow tree?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I heard you craft magical flutes." next="flutes"/>
+    <Option text="Who are you, really?" next="aboutOri"/>
+    <Option text="Are you talking to your... tools?" next="quirk"/>
+    <Option text="Need help with something?" next="questIntro"/>
+	<Option text="Tell me more about yourself, Ori." next="backstoryIntro"/>
+    <Option text="Just passing through." next="dismiss"/>
+  </Dialogue>
+
+  <!-- ========================================= -->
+  <!-- FLUTES AND CRAFTING LORE                  -->
+  <!-- ========================================= -->
+  <Dialogue id="flutes">
+    <NPCText>
+      <![CDATA[
+      Ori smiles, fingers tapping on a bone flute. “The right bone remembers the wind, the song of its spirit. My flutes call birds, beasts, or storms if you play true. I could carve you one, but first… the woods ask for a song I cannot play—yet.”
+      ]]>
+    </NPCText>
+    <Option text="What song do the woods want?" next="questIntro"/>
+    <Option text="How do you learn these songs?" next="learning"/>
+    <Option text="That sounds unsettling. I’ll be going." action="Close"/>
+  </Dialogue>
+
+  <!-- ========================================= -->
+  <!-- WHO IS ORI?                              -->
+  <!-- ========================================= -->
+  <Dialogue id="aboutOri">
+    <NPCText>
+      <![CDATA[
+      Ori holds up a flute, whispering, “This one says names are wind on water—gone before you grasp them. But the tribe calls me Ori. I find music in what others throw away. Bones, bark, dreams, secrets… They all sing if you listen.”
+      ]]>
+    </NPCText>
+    <Option text="Do you always talk to things?" next="quirk"/>
+    <Option text="What are you working on now?" next="questIntro"/>
+    <Option text="That’s enough riddles for me." action="Close"/>
+  </Dialogue>
+
+  <!-- ========================================= -->
+  <!-- ORI'S QUIRKY SIDE                        -->
+  <!-- ========================================= -->
+  <Dialogue id="quirk">
+    <NPCText>
+      <![CDATA[
+      Ori grins, pressing a finger to his lips. “Bones forget less than people do. Each flute remembers a beast’s last song, each knife its old hunger. Wouldn’t you talk to them, if you could?”
+      ]]>
+    </NPCText>
+    <Option text="What do your tools want today?" next="questIntro"/>
+    <Option text="You’re a strange one, Ori." next="aboutOri"/>
+    <Option text="I’ve heard enough." action="Close"/>
+  </Dialogue>
+
+  <!-- ========================================= -->
+  <!-- LEARNING SONGS OF THE FOREST              -->
+  <!-- ========================================= -->
+  <Dialogue id="learning">
+    <NPCText>
+      <![CDATA[
+      “Some say the wind brings new tunes. Others, that the roots remember everything. But the oldest music comes from the heart of lost things. That is why I seek the singing stag’s bones—its song can wake the sleeping woods.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me about this singing stag." next="questIntro"/>
+    <Option text="Roots remember? That’s poetic." next="poetry"/>
+    <Option text="This is too strange for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="poetry">
+    <NPCText>
+      <![CDATA[
+      Ori’s eyes crinkle. “Even stones hum, if you listen long enough. Roots, bones, rain—every silence is a song waiting for ears.”
+      ]]>
+    </NPCText>
+    <Option text="What silence are you listening for?" next="questIntro"/>
+    <Option text="Thank you for sharing, Ori." action="Close"/>
+  </Dialogue>
+
+  <!-- ========================================= -->
+  <!-- MAIN QUEST INTRODUCTION                   -->
+  <!-- ========================================= -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      Ori leans close, voice low. “I have carved every beast but one—the singing stag. Its bones ring with spirit-music, but the stag wanders the haunted grove. I dare not go alone; the shadows there are thick with Minax’s spite. Will you seek its resting place with me?”
+      ]]>
+    </NPCText>
+    <Option text="Yes, I’ll help you find the singing stag’s bones." 
+            condition="!HasItem:SingingStagQuestScroll" 
+            action="GiveItem:SingingStagQuestScroll" 
+            next="questAccepted"/>
+    <Option text="What dangers lurk in the haunted grove?" next="groveDanger"/>
+    <Option text="What will you do with the stag’s bones?" next="rewardInfo"/>
+    <Option text="I’m not sure I’m ready." action="Close"/>
+  </Dialogue>
+
+  <!-- ========================================= -->
+  <!-- ACCEPT QUEST                             -->
+  <!-- ========================================= -->
+  <Dialogue id="questAccepted">
+    <NPCText>
+      <![CDATA[
+      Ori’s face brightens, and he presses a rune-etched talisman into your palm. “Take this. The grove will not welcome you, but play its note and I may hear if you falter. Bring me the stag’s rib—whole, not shattered—and you will hear a song that calls even spirits from slumber.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with the stag’s bone." action="Close"/>
+    <Option text="Anything else I should know?" next="groveDanger"/>
+  </Dialogue>
+
+  <!-- ========================================= -->
+  <!-- EXPLAIN HAUNTED GROVE                    -->
+  <!-- ========================================= -->
+  <Dialogue id="groveDanger">
+    <NPCText>
+      <![CDATA[
+      Ori’s gaze darkens. “Shadows twist in the grove, wearing the faces of old friends. Some spirits hunger for what was stolen from them. If Minax’s minions linger, trust not what you see or hear. Only the flute’s note can show truth from trick.”
+      ]]>
+    </NPCText>
+    <Option text="How do I use the talisman?" next="talismanUse"/>
+    <Option text="What reward awaits for this risk?" next="rewardInfo"/>
+    <Option text="I must prepare first." action="Close"/>
+  </Dialogue>
+
+  <!-- ========================================= -->
+  <!-- TALISMAN USE                             -->
+  <!-- ========================================= -->
+  <Dialogue id="talismanUse">
+    <NPCText>
+      <![CDATA[
+      “Hold the talisman tight. When fear grips you, breathe deep and play its note. I will come if I can, or perhaps the woods will take pity. But do not break the bone—music must be whole, or all is lost.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I will be careful." action="Close"/>
+    <Option text="What if I fail?" next="failState"/>
+  </Dialogue>
+
+  <!-- ========================================= -->
+  <!-- FAILURE OR ABANDONMENT                   -->
+  <!-- ========================================= -->
+  <Dialogue id="failState">
+    <NPCText>
+      <![CDATA[
+      Ori’s voice softens, “If you break the bone, the song is lost. But every lost thing finds its way eventually. Return to me, and we’ll try again. The woods do not give up their secrets easily.”
+      ]]>
+    </NPCText>
+    <Option text="Understood. I’ll try again when I am ready." action="Close"/>
+  </Dialogue>
+
+  <!-- ========================================= -->
+  <!-- REWARD AND FINALE                        -->
+  <!-- ========================================= -->
+  <Dialogue id="rewardInfo">
+    <NPCText>
+      <![CDATA[
+      “Return with the stag’s rib, and I will carve a flute that can calm beasts or summon rain, depending on your heart’s tune. Some say it can even guide spirits—if you play it for the lost, perhaps they will find their way home.”
+      ]]>
+    </NPCText>
+    <Option text="That’s a worthy reward. I accept." 
+            condition="!HasItem:SingingStagQuestScroll" 
+            action="GiveItem:SingingStagQuestScroll"
+            next="questAccepted"/>
+    <Option text="Thank you, Ori. I’ll return soon." action="Close"/>
+  </Dialogue>
+
+  <!-- ========================================= -->
+  <!-- DISMISSAL                                -->
+  <!-- ========================================= -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Ori nods, murmuring to a line of bone flutes, “The wind brings and takes as it will. If you wish to hear the bones sing, return when you’re ready.”
+      ]]>
+    </NPCText>
+    <Option text="Maybe I will." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================== -->
+  <!-- Ori's Backstory Intro -->
+  <!-- ===================== -->
+  <Dialogue id="backstoryIntro">
+    <NPCText>
+      <![CDATA[
+      Ori gently sets down a carved flute, brushing its bone like a parent might a child’s cheek. “Ah. A curious spirit. Few ask of Ori before asking for favors. But I’ll share—if your ears don’t close to strangeness.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll listen. Tell me your story." next="story1"/>
+    <Option text="What makes you different from the others?" next="storyQuirk"/>
+    <Option text="Where did you learn to carve spirits into bone?" next="craftOrigin"/>
+    <Option text="That’s alright. I changed my mind." action="Close"/>
+  </Dialogue>
+
+  <!-- ======================= -->
+  <!-- Backstory: Childhood -->
+  <!-- ======================= -->
+  <Dialogue id="story1">
+    <NPCText>
+      <![CDATA[
+      Ori leans back against the hollow tree. “I was born during the Blackwind—when the stars fell silent and Minax’s screams echoed in the glades. My mother birthed me alone, save for the deer who circled her in quiet witness. She says they named me.”
+      ]]>
+    </NPCText>
+    <Option text="That’s beautiful… or terrifying." next="story2"/>
+    <Option text="You were named by deer?" next="deerName"/>
+  </Dialogue>
+
+  <Dialogue id="story2">
+    <NPCText>
+      <![CDATA[
+      “Terrifying things are often beautiful—if you're brave enough to look long. I survived sickness, war, even a fire that claimed half the grove. My voice didn’t come until I carved my first flute. They say I was silent for seven years.”
+      ]]>
+    </NPCText>
+    <Option text="So your flutes gave you a voice?" next="story3"/>
+    <Option text="What happened during the fire?" next="storyFire"/>
+  </Dialogue>
+
+  <Dialogue id="story3">
+    <NPCText>
+      <![CDATA[
+      “Yes. The first one was made from the leg bone of a rabbit who died in my arms. I carved it while grieving—and when I played it, I spoke aloud for the first time. Not words, but meaning. Sound that felt like home.”
+      ]]>
+    </NPCText>
+    <Option text="That’s... oddly moving." next="storyFinal"/>
+    <Option text="You’re more spirit than man, aren’t you?" next="storyFinal"/>
+  </Dialogue>
+
+  <Dialogue id="storyFinal">
+    <NPCText>
+      <![CDATA[
+      Ori smiles sadly. “Perhaps. Or perhaps I simply listen when others don't. The bones remember what we forget. I honor them, and they whisper their secrets in return.”
+      ]]>
+    </NPCText>
+    <Option text="You mentioned a fire—what happened?" next="storyFire"/>
+    <Option text="Let’s speak of something else." action="Close"/>
+  </Dialogue>
+
+  <!-- =================== -->
+  <!-- Backstory: Fire -->
+  <!-- =================== -->
+  <Dialogue id="storyFire">
+    <NPCText>
+      <![CDATA[
+      “It was the last time we saw the sun for three days. A shard-storm cracked the sky, and something dark fell into the glade. It brought with it a scream, like a dying songbird—but with teeth. I was the only survivor from my hut circle.”
+      ]]>
+    </NPCText>
+    <Option text="That sounds like Minax’s work." next="storyFire2"/>
+    <Option text="I’m sorry you lost so much." next="storyFinal"/>
+  </Dialogue>
+
+  <Dialogue id="storyFire2">
+    <NPCText>
+      <![CDATA[
+      Ori nods slowly. “Yes. Some say she hunts the notes that can undo her. I believe the singing stag knows one such note. That is why I must find it—before her silence swallows the last songs of the world.”
+      ]]>
+    </NPCText>
+    <Option text="Then I understand your quest." next="questIntro"/>
+    <Option text="I’d like to ask something else." next="backstoryIntro"/>
+  </Dialogue>
+
+  <!-- ============================= -->
+  <!-- Quirks and Ritual Habits     -->
+  <!-- ============================= -->
+  <Dialogue id="storyQuirk">
+    <NPCText>
+      <![CDATA[
+      Ori chuckles. “I sleep in trees. Speak to fire as though it were kin. And if I whisper to a feather or rock, it’s because they once whispered to me. The Verdant shamans call it madness. I call it memory.”
+      ]]>
+    </NPCText>
+    <Option text="You speak to spirits?" next="spiritSpeak"/>
+    <Option text="That sounds like wisdom, not madness." next="backstoryApproval"/>
+    <Option text="Hmm. I’ll be going now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="spiritSpeak">
+    <NPCText>
+      <![CDATA[
+      “Yes, though not with words. I carve what they remember into instruments. Every breath you play is a question. Every note—an answer from the dead.”
+      ]]>
+    </NPCText>
+    <Option text="Have you ever summoned a spirit that way?" next="summonSpirit"/>
+    <Option text="Let’s talk about something else." next="backstoryIntro"/>
+  </Dialogue>
+
+  <Dialogue id="summonSpirit">
+    <NPCText>
+      <![CDATA[
+      Ori’s eyes grow distant. “Once… I played the rib of a drowned druid. The storm answered. It struck a tree bare beside me—but I was not harmed. I think… the druid guided the lightning.”
+      ]]>
+    </NPCText>
+    <Option text="You are a lightning-touched madman, Ori." next="backstoryIntro"/>
+    <Option text="That’s incredible." next="backstoryApproval"/>
+  </Dialogue>
+
+  <Dialogue id="backstoryApproval">
+    <NPCText>
+      <![CDATA[
+      “Perhaps. Or perhaps the world is not as silent as most pretend. When you’ve carved as long as I have, you learn: the trees gossip more than any courtier.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you for trusting me with your story." action="Karma:+250"/>
+    <Option text="Back to your flute—it mentioned a task?" next="questIntro"/>
+  </Dialogue>
+
+  <!-- ============================= -->
+  <!-- Crafting Origins             -->
+  <!-- ============================= -->
+  <Dialogue id="craftOrigin">
+    <NPCText>
+      <![CDATA[
+      “An old druid named Ruun taught me. Said I was ‘too quiet not to be a carver.’ He passed on during the white frost, but I still dream of his voice. He always called me ‘his last knife.’”
+      ]]>
+    </NPCText>
+    <Option text="He must’ve been important to you." next="backstoryApproval"/>
+    <Option text="Do you still speak to him?" next="spiritSpeak"/>
+    <Option text="Let’s change topics." next="greeting"/>
+  </Dialogue>
+
+  <!-- ============================= -->
+  <!-- Optional Stat-Check Dialogue -->
+  <!-- ============================= -->
+  <Dialogue id="deerName">
+    <NPCText>
+      <![CDATA[
+      Ori nods. “The deer bowed and stood still as stone. My mother said the spirit in their eyes was older than any man. She named me ‘Ori’ for the way they stared—like I already knew the ending.”
+      ]]>
+    </NPCText>
+    <Option text="That’s... oddly fitting." condition="KarmaAtLeast:0" action="SendMessage:You feel a strange stillness settle over the glade." next="backstoryApproval"/>
+    <Option text="That’s creepy, not spiritual." condition="KarmaBelow:0" action="SendMessage:Ori frowns, pulling slightly away from you." next="backstoryIntro"/>
+  </Dialogue>
+
+
+</DialogueFile>

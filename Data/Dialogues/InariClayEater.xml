@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="InariClayEater">
+
+  <!-- ===================== -->
+  <!-- Greeting/Intro        -->
+  <!-- ===================== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#cead73'>
+      Before you, a silent youth sits cross-legged, shaping tiny clay lions beside a crude shrine. His fingers are stained ochre; traces of clay mark his cheeks and lips.<BR><BR>
+      He meets your gaze with bright, knowing eyes and gestures—tapping his chest, touching the earth, then pressing clay to his lips.<BR>
+      A scrawled note reads: <I><B>“I listen for the kami in the clay. Will you listen too?”</B></I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You eat clay? Why?" next="eatClay"/>
+    <Option text="Can you sculpt me a guardian?" next="sculptRequest"/>
+    <Option text="Are you in danger?" next="danger"/>
+    <Option text="Sit quietly with Inari and observe." next="observe"/>
+	<Option text="Tell me about yourself, Inari." next="backstory_intro"/>
+    <Option text="Leave Inari be." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================== -->
+  <!-- Clay-Eating Lore      -->
+  <!-- ===================== -->
+  <Dialogue id="eatClay">
+    <NPCText>
+      <![CDATA[
+      Inari nods solemnly. He pats a pouch of sacred earth, then presses a finger to his lips and closes his eyes.<BR>
+      On a slate, he writes: <I>“Clay remembers. The kami whisper through earth shaped by kind hands. A little taste, and I hear them better.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Isn’t that dangerous?" next="dangerous"/>
+    <Option text="What do the kami say?" next="kami"/>
+    <Option text="I would try the clay, if it is safe." next="playerEatsClay"/>
+    <Option text="That’s unusual, but I respect your ways." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="dangerous">
+    <NPCText>
+      <![CDATA[
+      Inari smiles and shakes his head, showing a charm of dried blossoms and rice hung on his belt.<BR>
+      <I>“Only sacred clay. Never common mud. Kaoru blesses it.”</I>
+      ]]>
+    </NPCText>
+    <Option text="What do you hear from the kami?" next="kami"/>
+    <Option text="Let’s talk of something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="playerEatsClay">
+    <NPCText>
+      <![CDATA[
+      Inari’s eyes widen. He carefully offers a pinch of pale clay on a leaf.<BR>
+      You taste earth—warm, strangely calming.<BR><BR>
+      For a moment, you hear distant whispers: <I>“Minax’s shadow creeps. Clay lions must wake.”</I>
+      ]]>
+    </NPCText>
+    <Option text="What was that vision?" next="kami"/>
+    <Option text="I feel strange… but in a good way." action="AddStat:Int,2,120" next="greeting"/>
+    <Option text="Maybe this isn’t for me." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="kami">
+    <NPCText>
+      <![CDATA[
+      Inari closes his eyes, shaping a lion from clay. On his slate, he writes:<BR>
+      <I>“The kami warn of evil spirits—cultists who hate my guardians. Will you help protect the shrine?”</I>
+      ]]>
+    </NPCText>
+    <Option text="Yes, I will protect you and your shrine." next="acceptQuest"/>
+    <Option text="Who are these cultists?" next="cultists"/>
+    <Option text="I’m not interested in fighting." next="greeting"/>
+  </Dialogue>
+
+  <!-- ===================== -->
+  <!-- Guardian Request      -->
+  <!-- ===================== -->
+  <Dialogue id="sculptRequest">
+    <NPCText>
+      <![CDATA[
+      Inari beams, bows deeply, and selects a lump of clay. With nimble hands, he shapes it into a guardian lion.<BR>
+      He holds it up: <I>“For protection. Place near door. But…”</I> He hesitates, glancing nervously around.<BR>
+      <I>“Some hate the kami. Bad people watch me.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Who hates the kami?" next="cultists"/>
+    <Option text="I’ll keep your secret safe." next="thankYou"/>
+    <Option text="May I have the guardian lion?" action="GiveItem:ClayLionStatue" next="lionGift"/>
+    <Option text="On second thought, maybe not." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="lionGift">
+    <NPCText>
+      <![CDATA[
+      Inari nods, pressing the small clay lion into your palm. A warm sensation fills you as you hold it.<BR>
+      <I>“Kami watch over you.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Inari." next="thankYou"/>
+    <Option text="Do the lions really work?" next="lionMagic"/>
+  </Dialogue>
+
+  <Dialogue id="lionMagic">
+    <NPCText>
+      <![CDATA[
+      Inari nods, miming fierce claws and a silent roar.<BR>
+      <I>“Keep evil away. Only if made with good heart.”</I>
+      ]]>
+    </NPCText>
+    <Option text="I will treasure it." next="thankYou"/>
+    <Option text="How can I help you?" next="kami"/>
+  </Dialogue>
+
+  <!-- ===================== -->
+  <!-- Cultists/Threat Quest -->
+  <!-- ===================== -->
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      Inari looks around, eyes wide, then writes shakily:<BR>
+      <I>“Bad people. They fear the guardians. Sometimes at night, they try to break the shrine.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Do you need protection?" next="acceptQuest"/>
+    <Option text="Who are these bad people?" next="cultists"/>
+    <Option text="I hope you stay safe." next="thankYou"/>
+  </Dialogue>
+
+  <Dialogue id="cultists">
+    <NPCText>
+      <![CDATA[
+      Inari sketches a symbol: a twisted red spiral.<BR>
+      <I>“Minax cult. Hate kami. Want darkness.”</I>
+      He hands you a small clay token: <I>“If you see this, danger is near.”</I>
+      ]]>
+    </NPCText>
+    <Option text="I will watch for the sign." action="GiveItem:ClayWarningToken" next="acceptQuest"/>
+    <Option text="Tell me more about Minax." next="minaxLore"/>
+    <Option text="I’ll keep an eye out." next="thankYou"/>
+  </Dialogue>
+
+  <Dialogue id="minaxLore">
+    <NPCText>
+      <![CDATA[
+      Inari scrawls in haste:<BR>
+      <I>“She hates harmony. Her cult breaks shrines, steals clay, silences kami.”</I><BR>
+      He bows his head, silent grief on his face.
+      ]]>
+    </NPCText>
+    <Option text="I’ll defend the shrine." next="acceptQuest"/>
+    <Option text="This is too dangerous for me." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="acceptQuest">
+    <NPCText>
+      <![CDATA[
+      Inari bows, gratitude shining in his eyes.<BR>
+      He presses a clay amulet into your hand.<BR>
+      <I>“Place by shrine at sunset. The kami will test your heart.”</I>
+      ]]>
+    </NPCText>
+    <Option text="(Begin quest: Defend the Shrine)" 
+            action="GiveItem:DefendShrineQuestScroll(Hinokami,Inari,500)" 
+            condition="!HasItem:DefendShrineQuestScroll"
+            next="questStart"/>
+    <Option text="I need time to prepare." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="questStart">
+    <NPCText>
+      <![CDATA[
+      The earth feels warmer beneath your feet.<BR>
+      A whisper echoes faintly: <I>“Protect the innocent, and the kami will remember.”</I>
+      ]]>
+    </NPCText>
+    <Option text="I will guard the shrine." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================== -->
+  <!-- Thank You/Quiet Path  -->
+  <!-- ===================== -->
+  <Dialogue id="thankYou">
+    <NPCText>
+      <![CDATA[
+      Inari offers a shy smile, returning to his clay. The sound of soft chanting and gentle shaping fills the air.
+      ]]>
+    </NPCText>
+    <Option text="Sit quietly with Inari and observe." next="observe"/>
+    <Option text="Take your leave." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="observe">
+    <NPCText>
+      <![CDATA[
+      You sit in silence. Inari molds a fresh lion, humming tunelessly.<BR>
+      For a moment, the world is peaceful, and the shrine’s lanterns seem to burn a little brighter.
+      ]]>
+    </NPCText>
+    <Option text="Stand and leave quietly." action="Close"/>
+    <Option text="Ask Inari about his clay lions." next="lionMagic"/>
+  </Dialogue>
+
+<Dialogue id="backstory_intro">
+  <NPCText>
+    <![CDATA[
+    Inari tilts his head, then draws a small figure in the dirt—childlike, alone, under a tree.<BR>
+    He points to it, then to himself.<BR><BR>
+    He scrawls: <I>"Orphan. Found after fire. Shrine ashes. Only kami spoke to me."</I>
+    ]]>
+  </NPCText>
+  <Option text="The fire… what happened?" next="backstory_fire"/>
+  <Option text="How did you come to sculpt guardians?" next="backstory_sculpt"/>
+  <Option text="Do you ever wish to speak with words?" next="backstory_mute"/>
+  <Option text="You’ve been through much. I honor your strength." next="backstory_respect"/>
+</Dialogue>
+
+<Dialogue id="backstory_fire">
+  <NPCText>
+    <![CDATA[
+    Inari draws spirals—flames, a collapsed roof, a single survivor’s mark.<BR>
+    <I>"Minax cult destroyed Tokuno shrine. Said kami were lies. I hid. Listened. Learned clay speaks."</I>
+    He touches his lips, then the ground.
+    ]]>
+  </NPCText>
+  <Option text="I’m sorry you had to endure that." next="backstory_respect"/>
+  <Option text="How did you survive?" next="backstory_survive"/>
+</Dialogue>
+
+<Dialogue id="backstory_survive">
+  <NPCText>
+    <![CDATA[
+    Inari grins faintly, taps his belly, and holds up a tiny clay bowl.<BR>
+    <I>"A shrine mouse fed me. Clay kept me warm."</I><BR>
+    He nods solemnly. <I>"Kami hide in small things."</I>
+    ]]>
+  </NPCText>
+  <Option text="That’s… beautiful." next="backstory_respect"/>
+  <Option text="Tell me more about the kami in clay." next="backstory_sculpt"/>
+</Dialogue>
+
+<Dialogue id="backstory_sculpt">
+  <NPCText>
+    <![CDATA[
+    Inari shapes a lion quickly, then a turtle, then a child’s face. He smiles, proud.<BR>
+    <I>"Each form has a soul. Not alive… but not empty."</I><BR>
+    He scribbles: <I>"When I mold with peace in my heart, they protect. When I rush, they crumble."</I>
+    ]]>
+  </NPCText>
+  <Option text="I sculpt too. (if player has high Tinkering or Carpentry)" 
+          condition="SkillAtLeast:Tinkering,80" 
+          action="SendMessage:Inari watches your hands with interest." 
+          next="backstory_crafter"/>
+  <Option text="Can you teach me to sculpt?" next="backstory_teach"/>
+  <Option text="That explains why they feel alive..." next="backstory_respect"/>
+</Dialogue>
+
+<Dialogue id="backstory_crafter">
+  <NPCText>
+    <![CDATA[
+    Inari watches your fingers, mimicking their motion. He nods eagerly.<BR>
+    <I>"Hands that shape kindly are hands that shape safely."</I><BR>
+    He gifts you a tiny unbaked lump of clay.
+    ]]>
+  </NPCText>
+  <Option text="Thank you, Inari." action="GiveItem:UnfiredGuardianClay" next="backstory_respect"/>
+</Dialogue>
+
+<Dialogue id="backstory_teach">
+  <NPCText>
+    <![CDATA[
+    Inari tilts his head, considering. Then he gestures: one hand flat, the other molding above it.<BR>
+    <I>"Sit. Watch. Then try. But first…" </I><BR>
+    He presses his hands together: <I>"Thank the kami."</I>
+    ]]>
+  </NPCText>
+  <Option text="(Begin sculpture practice)" 
+          action="AttachXml:XmlQuestTracker,GuardianClayLesson" 
+          next="lesson_start"/>
+  <Option text="Maybe later. I respect your art, though." next="backstory_respect"/>
+</Dialogue>
+
+<Dialogue id="lesson_start">
+  <NPCText>
+    <![CDATA[
+    Inari hands you a bowl of sacred clay.<BR>
+    <I>"Shape. Listen. Do not force."</I><BR>
+    (You begin learning the spirit of guardian crafting.)
+    ]]>
+  </NPCText>
+  <Option text="(End dialogue and begin practice)" action="Close"/>
+</Dialogue>
+
+<Dialogue id="backstory_mute">
+  <NPCText>
+    <![CDATA[
+    Inari places a finger gently over his lips, then shrugs, smiling with peace.<BR>
+    <I>"Words are loud. Clay is patient. I don’t need more than that."</I>
+    ]]>
+  </NPCText>
+  <Option text="You speak clearly through your hands." next="backstory_respect"/>
+  <Option text="Have you ever dreamed of speaking aloud?" next="backstory_dream"/>
+</Dialogue>
+
+<Dialogue id="backstory_dream">
+  <NPCText>
+    <![CDATA[
+    Inari gazes upward. He draws a speech bubble filled with stars.<BR>
+    <I>"Maybe in dreams. But silence lets me hear the world better."</I>
+    ]]>
+  </NPCText>
+  <Option text="That’s a powerful way to live." next="backstory_respect"/>
+  <Option text="I understand." next="backstory_respect"/>
+</Dialogue>
+
+<Dialogue id="backstory_respect">
+  <NPCText>
+    <![CDATA[
+    Inari bows deeply, then resumes sculpting with calm focus.<BR>
+    The clay in his fingers pulses faintly, as if warmed by gratitude.
+    ]]>
+  </NPCText>
+  <Option text="May the kami guide your hands." action="Karma:+100" next="greeting"/>
+  <Option text="I’ll return another time." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

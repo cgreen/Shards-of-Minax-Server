@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="ChieftainKaelorAshWalker">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#A57238'>
+      Before you stands a broad-shouldered man, his mask painted with the ashen swirl of ancient fires. His cloak smells faintly of woodsmoke and wild herbs.<BR><BR>
+      "Stranger, you walk the sacred ground of the Verdant Tribes. I am Kaelor the Ash-Walker, chieftain and protector. Speak your purpose, but know that trust is hard-won among our people."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I wish to prove myself to your tribe." next="proveSelf"/>
+    <Option text="Tell me about the Verdant Tribes." next="aboutTribe"/>
+    <Option text="What do you know of Hinokami?" next="aboutHinokami"/>
+    <Option text="Do you fear Minax?" next="minaxThreat"/>
+	<Option text="Tell me about your past, Chieftain." next="kaelorBackstory"/>
+    <Option text="I mean no harm. I will leave you in peace." action="Close"/>
+  </Dialogue>
+
+  <!-- Prove Self Branch -->
+  <Dialogue id="proveSelf">
+    <NPCText>
+      <![CDATA[
+      Kaelor’s eyes narrow, measuring you with a warrior’s gaze.<BR><BR>
+      "Words are wind. Only action earns trust here. Prove your worth—hunt the Shadowfang, a beast corrupted by Minax that stalks our groves. Or, aid my people by forging bonds with Hinokami; peace is the sharpest arrow in our quiver."
+      ]]>
+    </NPCText>
+    <Option text="Tell me about the Shadowfang hunt." next="shadowfang"/>
+    <Option text="How could I help with Hinokami?" next="hinokamiQuest"/>
+    <Option text="I’ll return when I am ready." action="Close"/>
+  </Dialogue>
+
+  <!-- About the Tribe -->
+  <Dialogue id="aboutTribe">
+    <NPCText>
+      <![CDATA[
+      "The Verdant Tribes have walked these woods long before the high towers of Britain or the cherry blossoms of Hinokami. We are children of spirit and soil, guided by the wisdom of shamans and the courage of hunters. Outsiders see us as wild. Let them—we know who we are."
+      ]]>
+    </NPCText>
+    <Option text="What dangers do your people face?" next="tribeDangers"/>
+    <Option text="How do you lead your tribe?" next="leadership"/>
+    <Option text="I want to prove myself." next="proveSelf"/>
+    <Option text="Thank you for sharing. Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="tribeDangers">
+    <NPCText>
+      <![CDATA[
+      "Danger comes as beast, blade, and dark magic. Minax sends her cultists to sow fear. Hinokami presses at our borders, ever hungry for new land. Even the wilds themselves twist against us since Lord British vanished."
+      ]]>
+    </NPCText>
+    <Option text="How can I help?" next="proveSelf"/>
+    <Option text="I understand. Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="leadership">
+    <NPCText>
+      <![CDATA[
+      "A chieftain leads with the wisdom of the council and the strength of the hunt. I do not rule by fear, but by respect earned in fire and storm. My people challenge me—so must you, if you seek a place among us."
+      ]]>
+    </NPCText>
+    <Option text="Set me a challenge, then." next="proveSelf"/>
+    <Option text="Your tribe is strong indeed. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Hinokami Branch -->
+  <Dialogue id="aboutHinokami">
+    <NPCText>
+      <![CDATA[
+      "Hinokami’s folk are disciplined, clever, and proud. They speak of honor, but their swords cut as deep as any. I respect their skill, but we quarrel over land that our ancestors once walked together. Still, I do not wish needless war while Minax grows in the shadows."
+      ]]>
+    </NPCText>
+    <Option text="Could there be peace with Hinokami?" next="hinokamiPeace"/>
+    <Option text="Do you want me to mediate?" next="hinokamiQuest"/>
+    <Option text="I prefer to hunt, not parley." next="proveSelf"/>
+    <Option text="Thank you for your honesty. Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="hinokamiPeace">
+    <NPCText>
+      <![CDATA[
+      Kaelor sighs, his posture softening.<BR><BR>
+      "Perhaps. Some among my tribe—and theirs—believe in peace. Speak with Shaman Nura, if you would walk the path of diplomacy. Or, bring me a token of Hinokami’s trust, and I will know you are true."
+      ]]>
+    </NPCText>
+    <Option text="I will speak to Shaman Nura." action="SendMessage:Seek out Nura in the spirit grove."/>
+    <Option text="What kind of token would prove trust?" next="hinokamiToken"/>
+    <Option text="I am better suited to the hunt." next="proveSelf"/>
+    <Option text="I will consider your words." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="hinokamiToken">
+    <NPCText>
+      <![CDATA[
+      "The Lantern of Peace—a sacred lantern from Hinokami’s shrine. If you can persuade their monks to share it, or win it in honest contest, I will see you as a true bridge between our peoples. But know: theft would bring only shame and fury."
+      ]]>
+    </NPCText>
+    <Option text="I accept this quest for peace." 
+            action="GiveItem:FactionDiplomacyQuestScroll(Lantern of Peace,Hinokami,250)"
+            condition="!HasItem:FactionDiplomacyQuestScroll"
+            next="acceptDiplomacy"/>
+    <Option text="That is a heavy burden. I will try." action="Close"/>
+    <Option text="No, the hunt is my calling." next="proveSelf"/>
+  </Dialogue>
+
+  <Dialogue id="acceptDiplomacy">
+    <NPCText>
+      <![CDATA[
+      "Bring the Lantern to me without bloodshed, and you will earn the trust of both tribes. Go in peace, and may the spirits guide you."
+      ]]>
+    </NPCText>
+    <Option text="I will return with the Lantern of Peace." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="hinokamiQuest">
+    <NPCText>
+      <![CDATA[
+      "Peace is a path as treacherous as any hunt. My rival, Shogun Ryuji, respects only those who prove their honor. Carry my challenge to him, or bring back a token of their goodwill. Choose your path, but do not betray the trust of either tribe."
+      ]]>
+    </NPCText>
+    <Option text="I will carry your challenge to Shogun Ryuji." action="GiveItem:FactionDiplomacyQuestScroll(Challenge Scroll,Hinokami,200)" next="acceptChallenge"/>
+    <Option text="I will look for another way." next="hinokamiPeace"/>
+    <Option text="This is not my fight." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptChallenge">
+    <NPCText>
+      <![CDATA[
+      "Take this scroll to Hinokami’s camp and deliver my words to Ryuji. Honor demands an answer. Return with his reply, and you shall have my respect."
+      ]]>
+    </NPCText>
+    <Option text="I accept." action="Close"/>
+  </Dialogue>
+
+  <!-- Shadowfang Beast Hunt -->
+  <Dialogue id="shadowfang">
+    <NPCText>
+      <![CDATA[
+      Kaelor’s grip tightens on his club.<BR><BR>
+      "The Shadowfang is no mere beast—it is Minax’s taint made flesh. Hunt it in the Cursed Grove to the north. Bring me its fanged heart as proof, and you will walk as a hunter among us."
+      ]]>
+    </NPCText>
+    <Option text="I will hunt the Shadowfang." 
+            action="GiveItem:FactionKillQuestScroll(Shadowfang,Cursed Grove,350)"
+            condition="!HasScroll:Shadowfang"
+            next="acceptHunt"/>
+    <Option text="Where can I find the Cursed Grove?" next="cursedGrove"/>
+    <Option text="Perhaps I am not ready yet." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="cursedGrove">
+    <NPCText>
+      <![CDATA[
+      "The Cursed Grove lies past the spirit stones, where the shadows grow long and silence hangs heavy. Tread carefully—Minax’s magic twists more than beasts there."
+      ]]>
+    </NPCText>
+    <Option text="I will hunt the Shadowfang." 
+            action="GiveItem:FactionKillQuestScroll(Shadowfang,Cursed Grove,350)"
+            condition="!HasScroll:Shadowfang"
+            next="acceptHunt"/>
+    <Option text="I will wait until I am ready." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptHunt">
+    <NPCText>
+      <![CDATA[
+      "Return with the Shadowfang’s heart, and you shall have my respect. Go, and let your spirit burn brighter than the ash."
+      ]]>
+    </NPCText>
+    <Option text="I will not fail you, Chieftain." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax Threat Branch -->
+  <Dialogue id="minaxThreat">
+    <NPCText>
+      <![CDATA[
+      Kaelor’s tone hardens.<BR><BR>
+      "Minax is a poison upon the land. Her shadows worm through root and blood alike. We do not fear her—we endure, we fight, and if need be, we burn the forest to save it. But even I cannot win this war alone."
+      ]]>
+    </NPCText>
+    <Option text="How can I help you resist her?" next="proveSelf"/>
+    <Option text="Have you seen her cultists here?" next="minaxCult"/>
+    <Option text="It sounds hopeless." next="hopeless"/>
+    <Option text="I wish you luck in your fight." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="minaxCult">
+    <NPCText>
+      <![CDATA[
+      "Her cultists hide among travelers, selling poison or whispering lies. If you root one out, bring me proof—an obsidian talisman or a page of her black scripture. The spirits will favor you."
+      ]]>
+    </NPCText>
+    <Option text="I will seek out her servants." action="GiveItem:FactionBountyQuestScroll(Minax Cultist,Forest,300)" next="acceptBounty"/>
+    <Option text="I will hunt another threat." next="proveSelf"/>
+    <Option text="This is not my calling." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptBounty">
+    <NPCText>
+      <![CDATA[
+      "Trust is earned with blood and courage. Return when you have dealt with her shadows."
+      ]]>
+    </NPCText>
+    <Option text="I understand." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="hopeless">
+    <NPCText>
+      <![CDATA[
+      Kaelor’s eyes flash.<BR><BR>
+      "Hope is what we make in the ashes. If you have none, seek another tribe."
+      ]]>
+    </NPCText>
+    <Option text="You are right. I will try." next="proveSelf"/>
+    <Option text="Perhaps another day." action="Close"/>
+  </Dialogue>
+
+  <!-- Backstory Branch -->
+  <Dialogue id="kaelorBackstory">
+    <NPCText>
+      <![CDATA[
+      Kaelor shifts his weight, eyes scanning the horizon before speaking.<BR><BR>
+      "Before I was chieftain, I was Kaelor of the Ash-Walkers—named for the trail of smoke my warband left in the jungles of the Southlands. We fought to protect this soil when even Britannia forgot it existed.<BR><BR>
+      But war is not just blood and fire. It is memory. It is what you pass on when the fire fades."
+      ]]>
+    </NPCText>
+    <Option text="Why do they call you Ash-Walker?" next="ashwalker"/>
+    <Option text="What made you choose leadership?" next="leadChoice"/>
+    <Option text="Do you have family?" next="kaelorFamily"/>
+    <Option text="This land must mean much to you." next="landLove"/>
+    <Option text="Thank you for sharing your story." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ashwalker">
+    <NPCText>
+      <![CDATA[
+      "Because I walked the battlefield after every raid, barefoot, into the ashes of our fallen. I burned the dead with my own hands. I remembered every face—friend and foe. It was the only way I could sleep."<BR><BR>
+      He looks at you now, voice quieter.<BR>"Would you do the same?"
+      ]]>
+    </NPCText>
+    <Option text="Yes. I honor the fallen." condition="KarmaAtLeast:0" action="Fame:50" next="ashwalkerRespect"/>
+    <Option text="No. That sounds like weakness." condition="KarmaBelow:0" action="Karma:-250" next="ashwalkerDisdain"/>
+    <Option text="I don’t know. I’ve never seen real war." next="ashwalkerNeutral"/>
+  </Dialogue>
+
+  <Dialogue id="ashwalkerRespect">
+    <NPCText>
+      <![CDATA[
+      Kaelor nods solemnly.<BR>"Then you have the heart of a Verdant warrior. Fire may cleanse, but it is memory that builds the next shelter."
+      ]]>
+    </NPCText>
+    <Option text="Tell me more of your tribe." next="aboutTribe"/>
+  </Dialogue>
+
+  <Dialogue id="ashwalkerDisdain">
+    <NPCText>
+      <![CDATA[
+      His voice hardens.<BR>"War is not a place for pride. If you cannot mourn your enemy, you will never understand yourself."
+      ]]>
+    </NPCText>
+    <Option text="Maybe I was wrong." next="ashwalkerNeutral"/>
+    <Option text="I stand by my words." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ashwalkerNeutral">
+    <NPCText>
+      <![CDATA[
+      "Then perhaps you will learn. Walk with us long enough, and the forest teaches even the hardest stone to soften in the rain."
+      ]]>
+    </NPCText>
+    <Option text="And what has the forest taught you?" next="leadChoice"/>
+  </Dialogue>
+
+  <Dialogue id="leadChoice">
+    <NPCText>
+      <![CDATA[
+      "That strength without purpose is a blade without a handle. I never sought to lead—but when the old chief fell to Minax’s curse, the spirits chose me.<BR><BR>
+      And I said yes, not because I was ready, but because my people could not wait."
+      ]]>
+    </NPCText>
+    <Option text="The spirits chose well." action="Fame:100" next="leadPraise"/>
+    <Option text="You sound reluctant." next="leadRegret"/>
+  </Dialogue>
+
+  <Dialogue id="leadPraise">
+    <NPCText>
+      <![CDATA[
+      "You have wisdom beyond your tribe. Thank you."<BR><BR>
+      He places a hand on your shoulder briefly—an uncommon gesture from the chieftain.
+      ]]>
+    </NPCText>
+    <Option text="What burdens do you carry now?" next="kaelorFamily"/>
+  </Dialogue>
+
+  <Dialogue id="leadRegret">
+    <NPCText>
+      <![CDATA[
+      "No leader begins ready. Only the arrogant think otherwise. But each season, each battle, each birth... they teach you what readiness is."<BR><BR>
+      He glances toward the central bonfire.<BR>"And what sacrifice it demands."
+      ]]>
+    </NPCText>
+    <Option text="Do you miss a simpler life?" next="kaelorFamily"/>
+  </Dialogue>
+
+  <Dialogue id="kaelorFamily">
+    <NPCText>
+      <![CDATA[
+      Kaelor's voice drops.<BR>"I had a daughter. Her name was Myari. She followed me into the wilds when she was barely ten, bow in hand. She was fearless."<BR><BR>
+      He pauses, then:<BR>"She was taken by the jungle—twisted by Minax’s rot. Now I see her face in every battle, wondering if I could’ve done more."
+      ]]>
+    </NPCText>
+    <Option text="I am sorry for your loss." action="Karma:100" next="familyKind"/>
+    <Option text="She died a warrior’s death." next="familyHonor"/>
+    <Option text="Perhaps she was weak." action="Karma:-500" next="familyAnger"/>
+  </Dialogue>
+
+  <Dialogue id="familyKind">
+    <NPCText>
+      <![CDATA[
+      "Kindness is rare, these days. Thank you. May your words shield you when blades cannot."
+      ]]>
+    </NPCText>
+    <Option text="Tell me what drives you now." next="landLove"/>
+  </Dialogue>
+
+  <Dialogue id="familyHonor">
+    <NPCText>
+      <![CDATA[
+      "Yes... she did. She fought even as the poison claimed her."<BR><BR>
+      His gaze sharpens.<BR>"Honor and sorrow are twins. Never forget that."
+      ]]>
+    </NPCText>
+    <Option text="Tell me what drives you now." next="landLove"/>
+  </Dialogue>
+
+  <Dialogue id="familyAnger">
+    <NPCText>
+      <![CDATA[
+      His voice becomes a growl.<BR>"Say that again, and I’ll show you how warriors die."<BR><BR>
+      Kaelor turns away, refusing to speak further.
+      ]]>
+    </NPCText>
+    <Option text="… I apologize." next="landLove"/>
+    <Option text="As you wish, chieftain." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="landLove">
+    <NPCText>
+      <![CDATA[
+      "This land—its roots, its wind, its silence—is all I have left. I will die before I let Minax or Hinokami take it from us."<BR><BR>
+      His jaw tightens.<BR>"But if warriors like you still walk the paths between trees, perhaps it is not lost yet."
+      ]]>
+    </NPCText>
+    <Option text="You can count on me." action="Fame:100" next="greeting"/>
+    <Option text="Your faith is misplaced." action="Karma:-200" next="greeting"/>
+    <Option text="I need time to reflect." action="Close"/>
+  </Dialogue>
+
+
+</DialogueFile>

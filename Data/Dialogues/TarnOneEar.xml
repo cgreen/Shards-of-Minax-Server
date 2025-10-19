@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="TarnOneEar">
+
+  <!-- ======== GREETING ======== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#94d163'>
+      Before you crouches a weathered man, face painted with streaks of earth and bone, one ear mangled and missing. A wolf-bone mask hangs at his side. He glances at you with animal suspicion.<BR><BR>
+      "You move like a startled rabbit. Speak your business—unless you'd rather gnaw grass in silence."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Who are you?" next="who"/>
+    <Option text="Is it true you speak with beasts?" next="beasts"/>
+    <Option text="You seem troubled. What plagues you?" next="trouble"/>
+	<Option text="Tell me your story, One-Ear." next="backstory"/>
+    <Option text="I’ll leave you to your den, wolf." action="Close"/>
+  </Dialogue>
+
+  <!-- ======== WHO ARE YOU ======== -->
+  <Dialogue id="who">
+    <NPCText>
+      <![CDATA[
+      He snorts, scratching behind his ear.<BR>
+      "I am Tarn, called One-Ear by pups and fools. Trained every wolf and bird in these woods. Animals tell no lies, unlike men. If you listen, you'll learn more from a hawk's shriek than a council of elders."
+      ]]>
+    </NPCText>
+    <Option text="Can you teach me to listen?" next="teach"/>
+    <Option text="You distrust people?" next="distrust"/>
+    <Option text="What troubles you, Tarn?" next="trouble"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ======== BEASTS ======== -->
+  <Dialogue id="beasts">
+    <NPCText>
+      <![CDATA[
+      Tarn grins, showing a chipped canine.<BR>
+      "Every beast has a voice, if you’re not too much of a crow to listen. Wolves, birds, even snakes—none gossip as much as humans. Maybe you'd learn a thing or two with mud between your toes instead of boots."
+      ]]>
+    </NPCText>
+    <Option text="Teach me the way of the wolf." next="teach"/>
+    <Option text="You seem preoccupied..." next="trouble"/>
+    <Option text="I'll be off." action="Close"/>
+  </Dialogue>
+
+  <!-- ======== DISTRUST ======== -->
+  <Dialogue id="distrust">
+    <NPCText>
+      <![CDATA[
+      "People hunt for sport. Beasts hunt to live. Which do you trust in the dark—the honest predator, or the smiling man with a knife behind his back? I’d take the fangs over the forked tongue."
+      ]]>
+    </NPCText>
+    <Option text="I see your point. What troubles you?" next="trouble"/>
+    <Option text="Not all people are like that." next="human"/>
+    <Option text="I'll leave you, then." action="Close"/>
+  </Dialogue>
+
+  <!-- ======== TEACH ======== -->
+  <Dialogue id="teach">
+    <NPCText>
+      <![CDATA[
+      Tarn tilts his head, appraising you like a wary hawk.<BR>
+      "You wish to walk among the pack? Patience, rabbit. Listen, then fetch what is needed. But first—you must prove your nose is keener than your tongue."
+      ]]>
+    </NPCText>
+    <Option text="What must I do?" next="trouble"/>
+    <Option text="I'm not interested in tests." action="Close"/>
+  </Dialogue>
+
+  <!-- ======== HUMAN ======== -->
+  <Dialogue id="human">
+    <NPCText>
+      <![CDATA[
+      He shrugs.<BR>
+      "Maybe you’re a dog among wolves. But words are only wind—deeds, not chatter, prove loyalty."
+      ]]>
+    </NPCText>
+    <Option text="What deed would prove my loyalty?" next="trouble"/>
+    <Option text="Understood. Goodbye." action="Close"/>
+  </Dialogue>
+
+  <!-- ======== QUEST TROUBLE ======== -->
+  <Dialogue id="trouble">
+    <NPCText>
+      <![CDATA[
+      Tarn’s face grows grim.<BR>
+      "One of my best—Brak, a dire wolf—has gone wild. Minax’s taint festers in his blood. Now he roams, a beast-thing, savage and lost. Brak was pack, once. Now he’s a curse stalking our groves."<BR><BR>
+      "Do you wear fangs, or speak with them? Will you help—hunt him down, heal him, or end his pain?"
+      ]]>
+    </NPCText>
+    <Option text="I will help you find Brak." next="questOffer" condition="!HasItem:BeastQuestScroll"/>
+    <Option text="What choices do I have?" next="choices"/>
+    <Option text="I'm not hunting your wolf." action="Close"/>
+  </Dialogue>
+
+  <!-- ======== CHOICES EXPLAINED ======== -->
+  <Dialogue id="choices">
+    <NPCText>
+      <![CDATA[
+      "Three paths, three hearts:<BR>
+      <BASEFONT COLOR='#94d163'>
+      • Purify: Seek root and spirit, cleanse the taint—but risk your own soul.<BR>
+      • Tame: Win Brak’s trust with wit and meat, but he’ll never be the same.<BR>
+      • Kill: End his pain, swift as a striking hawk.<BR>
+      Each path has claws, rabbit. How do you run?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Give me the tools. I'll hunt Brak." next="questOffer" condition="!HasItem:BeastQuestScroll"/>
+    <Option text="I need time to decide." action="Close"/>
+  </Dialogue>
+
+  <!-- ======== QUEST ACCEPTED: GIVES QUEST SCROLL/ITEMS ======== -->
+  <Dialogue id="questOffer">
+    <NPCText>
+      <![CDATA[
+      Tarn hands you a bundle of tokens: a twisted bone whistle, a sprig of spirit-root, and a sharpened stone knife.<BR><BR>
+      "Find Brak in the twisted grove west of camp. Choose your path—call him with the whistle (tame), use the root and ritual to purify him, or end his misery. Bring proof: a fang (if slain), a wolf-token (if tamed), or a spirit-feather (if purified)."
+      ]]>
+    </NPCText>
+    <Option text="I'll find Brak and choose his fate." 
+            action="GiveItem:BeastQuestScroll(Brak, VerdantTribe, 300)" 
+            next="questInProgress"/>
+    <Option text="Maybe I'm not the right one for this." action="Close"/>
+  </Dialogue>
+
+  <!-- ======== QUEST IN PROGRESS ======== -->
+  <Dialogue id="questInProgress">
+    <NPCText>
+      <![CDATA[
+      "The woods will watch. Return when you carry Brak’s fate on your hands. Until then, walk softly, rabbit."
+      ]]>
+    </NPCText>
+    <Option text="I'll return with news of Brak." action="Close"/>
+    <Option text="Remind me of my choices." next="choices"/>
+  </Dialogue>
+
+  <!-- ======== QUEST TURN-IN / BRANCHES BY ITEM ======== -->
+  <Dialogue id="questTurnIn">
+    <NPCText>
+      <![CDATA[
+      Tarn’s eyes narrow as you approach.<BR>
+      "You’ve the look of one changed by the wilds. Have you faced Brak? Show me what you carry."
+      ]]>
+    </NPCText>
+    <Option text="I ended Brak’s pain." next="turnInKill" condition="HasItem:BraksFang"/>
+    <Option text="I tamed Brak; he is wild, but no longer lost." next="turnInTame" condition="HasItem:WolfToken"/>
+    <Option text="I purified Brak’s spirit." next="turnInPurify" condition="HasItem:SpiritFeather"/>
+    <Option text="Not yet—I’m still searching." action="Close"/>
+  </Dialogue>
+
+  <!-- ======== KILL BRANCH ======== -->
+  <Dialogue id="turnInKill">
+    <NPCText>
+      <![CDATA[
+      Tarn bows his head, silent a long moment.<BR>
+      "Sometimes, the best hound must be loosed. You ended his pain—quick and clean. I will honor Brak’s memory.<BR>
+      Take this, and let your own spirit run free."
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Tarn." 
+            action="GiveGold:3500;Karma:-500;RemoveItem:BraksFang" 
+            next="rewardEnd"/>
+  </Dialogue>
+
+  <!-- ======== TAME BRANCH ======== -->
+  <Dialogue id="turnInTame">
+    <NPCText>
+      <![CDATA[
+      Tarn’s mouth quirks in a rare smile.<BR>
+      "You won the wild, and made a friend. Brak will not be the wolf he was—but neither are you. Take this: a token of the pack’s respect. Return, and the beasts will remember your scent."
+      ]]>
+    </NPCText>
+    <Option text="I'm honored. Farewell." 
+            action="GiveGold:2500;Karma:+250;RemoveItem:WolfToken;AttachXml:BeastFriend,Duration=3600" 
+            next="rewardEnd"/>
+  </Dialogue>
+
+  <!-- ======== PURIFY BRANCH ======== -->
+  <Dialogue id="turnInPurify">
+    <NPCText>
+      <![CDATA[
+      Tarn’s eyes glisten with pride.<BR>
+      "You risked your spirit for another’s. Brak’s howl echoes pure in the night again. You have the blessing of grove and beast alike. Take this—rare as a white stag’s step."
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Tarn." 
+            action="GiveGold:3000;Karma:+500;RemoveItem:SpiritFeather;AddStat:Int,10,3600" 
+            next="rewardEnd"/>
+  </Dialogue>
+
+  <!-- ======== END REWARD ======== -->
+  <Dialogue id="rewardEnd">
+    <NPCText>
+      <![CDATA[
+      Tarn inclines his head, wolf-like.<BR>
+      "Walk in shadow and sun, friend. May the pack watch your path."
+      ]]>
+    </NPCText>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ======== BACKSTORY ROOT ======== -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#94d163'>
+      Tarn huffs, eyes narrowing like a wolf assessing a stranger.<BR><BR>
+      "Most just want the hunt. Few ask the tale behind the scars. Fine. Sit. But know this—every word you dig up is one more root that binds you here."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="What happened to your ear?" next="ear"/>
+    <Option text="Were you always part of the Verdant Tribes?" next="origins"/>
+    <Option text="Why do you trust animals more than people?" next="trust"/>
+    <Option text="Do you have any family?" next="family"/>
+    <Option text="That’s enough for now." action="Close"/>
+  </Dialogue>
+
+  <!-- ======== EAR STORY ======== -->
+  <Dialogue id="ear">
+    <NPCText>
+      <![CDATA[
+      He taps the jagged edge of his missing ear.<BR><BR>
+      "Taken by a raven—a real one, not metaphor. Was young, full of noise and no sense. Climbed the whispering cliffs to steal a hawk’s egg. Mother bird didn’t appreciate it."<BR><BR>
+      "Lost my balance. Lost my pride. Kept the egg, though. Named him Ruk. He still flies the skies, somewhere. Smarter than me, most days."
+      ]]>
+    </NPCText>
+    <Option text="That’s a lesson few survive." action="Karma:+100" next="backstory"/>
+    <Option text="Sounds like you deserved it." action="Karma:-50" next="backstory"/>
+  </Dialogue>
+
+  <!-- ======== ORIGINS ======== -->
+  <Dialogue id="origins">
+    <NPCText>
+      <![CDATA[
+      Tarn leans back, resting his staff across his knees.<BR>
+      "Was born in the ash-shadow of a Minax-scorched grove. My kin were rootless, drifting—until the Verdant called me. I followed a spirit-lizard into the glade. The elders said it was a sign."<BR><BR>
+      "They gave me a tent and a task: learn the tongue of the beast. So I did. Still do. Every day they teach me new things—growls, hisses, silence."
+      ]]>
+    </NPCText>
+    <Option text="You were chosen by a spirit?" next="spiritLizard"/>
+    <Option text="So the Verdant took you in?" next="tribe"/>
+  </Dialogue>
+
+  <Dialogue id="spiritLizard">
+    <NPCText>
+      <![CDATA[
+      He nods solemnly.<BR>
+      "Bright green scales, eyes like polished amber. It curled around my leg, hissed once, then walked toward the trees. I followed for hours. When I stopped, I was surrounded by druids. They weren’t surprised to see me."
+      ]]>
+    </NPCText>
+    <Option text="A strange but beautiful calling." action="Karma:+50" next="backstory"/>
+    <Option text="You were hallucinating." action="Karma:-25" next="backstory"/>
+  </Dialogue>
+
+  <Dialogue id="tribe">
+    <NPCText>
+      <![CDATA[
+      "Not all tribes are born of blood. Some are chosen by claw, song, or chance. I earned my place—not by blade, but by understanding the silence between howls. That’s where real power lies."
+      ]]>
+    </NPCText>
+    <Option text="I respect your path." action="Karma:+50" next="backstory"/>
+    <Option text="It sounds like superstition." action="Karma:-25" next="backstory"/>
+  </Dialogue>
+
+  <!-- ======== TRUST IN ANIMALS ======== -->
+  <Dialogue id="trust">
+    <NPCText>
+      <![CDATA[
+      Tarn’s lip curls slightly.<BR>
+      "A hawk doesn’t stab you in the back. A wolf doesn’t promise safety, then abandon you. Beasts are honest—violent, maybe, but true."<BR><BR>
+      "Minax... she poisoned men. But no beast followed her willingly. Even they know wrongness when it walks in skin."
+      ]]>
+    </NPCText>
+    <Option text="Your instincts are sharp." action="AddSkill:AnimalLore,10,600" next="backstory"/>
+    <Option text="Still, we must work with others." next="wisdom"/>
+  </Dialogue>
+
+  <Dialogue id="wisdom">
+    <NPCText>
+      <![CDATA[
+      Tarn sighs.<BR>
+      "Yes, yes. Even a lone wolf joins the pack to eat. I don’t enjoy it, but I understand it. Just keep your fangs bared where I can see them, rabbit."
+      ]]>
+    </NPCText>
+    <Option text="Fair enough." action="Close"/>
+  </Dialogue>
+
+  <!-- ======== FAMILY ======== -->
+  <Dialogue id="family">
+    <NPCText>
+      <![CDATA[
+      His expression darkens briefly.<BR><BR>
+      "Had a mate, once. Elya. She danced with the wind and sang to frogs. Lost her to swamp-fever before the rains came. I left after that. Wandered with beasts until the world made sense again."<BR><BR>
+      "Now the pack is all I need. But sometimes… sometimes I hear her in the toadsong."
+      ]]>
+    </NPCText>
+    <Option text="I’m sorry for your loss." action="Karma:+100" next="backstory"/>
+    <Option text="That explains a lot." action="Karma:-25" next="backstory"/>
+    <Option text="Do you still speak to her?" next="spiritTalk"/>
+  </Dialogue>
+
+  <Dialogue id="spiritTalk">
+    <NPCText>
+      <![CDATA[
+      He nods, quietly.<BR>
+      "Once every season, I sit at the old roots where she danced. If the frogs sing low, I know she listens. Grief isn’t a wound. It’s a footprint. It reminds us where we’ve been."
+      ]]>
+    </NPCText>
+    <Option text="That’s… unexpectedly wise." action="AddStat:Int,5,600" next="backstory"/>
+    <Option text="You speak more poetry than I expected." next="poetry"/>
+  </Dialogue>
+
+  <Dialogue id="poetry">
+    <NPCText>
+      <![CDATA[
+      Tarn snorts.<BR>
+      "Don’t mistake my growl for ignorance. Even wolves sing, if you listen right."
+      ]]>
+    </NPCText>
+    <Option text="Thank you for sharing your story." action="Close"/>
+  </Dialogue>
+
+
+</DialogueFile>

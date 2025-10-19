@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="MasterKenjiHayabusa">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#fffacd'>
+      Before you stands a tall, proud man in immaculate samurai garb. His katana rests sheathed at his side, but his gaze is razor sharp.<BR><BR>
+      “You stand before Master Kenji Hayabusa, Swordmaster of Hinokami. State your purpose, outsider. Are you here to train, to challenge, or to waste my time?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek training in the way of the sword." next="training"/>
+    <Option text="I wish to prove myself in a duel." next="duel"/>
+    <Option text="Tell me your thoughts on the Verdant Tribes." next="verdant"/>
+    <Option text="How do you defend Hinokami from Minax?" next="minax"/>
+	<Option text="Who are you, truly, Master Hayabusa?" next="backstory_intro"/>
+    <Option text="Just looking around." next="dismiss"/>
+  </Dialogue>
+
+  <!-- TRAINING BRANCH -->
+  <Dialogue id="training">
+    <NPCText>
+      <![CDATA[
+      Kenji appraises you, unimpressed.<BR><BR>
+      “Discipline and patience—these are the stones upon which warriors are built. Are you ready to submit to the rigorous path of Bushido?”
+      ]]>
+    </NPCText>
+    <Option text="Yes, I am ready." next="trainingLevelCheck"/>
+    <Option text="What is Bushido?" next="bushido"/>
+    <Option text="Perhaps I am not ready." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="bushido">
+    <NPCText>
+      <![CDATA[
+      “Bushido is the code of the samurai. Duty, honor, and courage above all. Without these, a blade is but a tool for a butcher.<BR>
+      Prove yourself, and I may teach you secrets of our art.”
+      ]]>
+    </NPCText>
+    <Option text="Teach me the way." next="trainingLevelCheck"/>
+    <Option text="I will return when I am worthy." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="trainingLevelCheck">
+    <NPCText>
+      <![CDATA[
+      Kenji studies your stance.<BR><BR>
+      “Let us see if you have the foundation. Show me your skill.”
+      ]]>
+    </NPCText>
+    <Option text="(Demonstrate sword skill)" 
+            condition="SkillAtLeast:Swords,60"
+            next="trainingMid"/>
+    <Option text="(Demonstrate basic discipline)"
+            condition="SkillAtLeast:Swords,30"
+            next="trainingLow"/>
+    <Option text="(You barely know how to hold a blade.)" 
+            condition="SkillBelow:Swords,30"
+            next="trainingNone"/>
+  </Dialogue>
+
+  <Dialogue id="trainingMid">
+    <NPCText>
+      <![CDATA[
+      Kenji nods once.<BR>
+      “You possess potential, but it is raw. I can teach you the Kata of the Flowing Stream—if you endure.”
+      ]]>
+    </NPCText>
+    <Option text="I am ready." action="AddSkill:Swords,5,600" next="kataLesson"/>
+    <Option text="Not today." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="kataLesson">
+    <NPCText>
+      <![CDATA[
+      You spend a grueling hour under Kenji’s tutelage. Your muscles burn, but you feel your swordplay improve.<BR>
+      “Remember—true strength lies in discipline, not muscle.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Sensei." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="trainingLow">
+    <NPCText>
+      <![CDATA[
+      Kenji frowns.<BR>
+      “You are unpolished, but there is hope for you. Practice with the training dummy outside the dojo, then return to me.”
+      ]]>
+    </NPCText>
+    <Option text="I will practice and return." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="trainingNone">
+    <NPCText>
+      <![CDATA[
+      Kenji sighs in disappointment.<BR>
+      “The path is long, and you have not yet begun. Watch and learn—only then may you hope to stand among my students.”
+      ]]>
+    </NPCText>
+    <Option text="Understood, master." action="Close"/>
+  </Dialogue>
+
+  <!-- DUEL BRANCH -->
+  <Dialogue id="duel">
+    <NPCText>
+      <![CDATA[
+      Kenji’s eyes gleam with anticipation.<BR>
+      “A duel? Many boast, few deliver. Will you fight with honor, or is this mere bravado?”
+      ]]>
+    </NPCText>
+    <Option text="I wish to challenge you." next="duelConfirm"/>
+    <Option text="Perhaps I am not ready." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="duelConfirm">
+    <NPCText>
+      <![CDATA[
+      “Very well. Know that defeat brings no shame—only the chance to learn. Victory, however, earns my respect.”
+      ]]>
+    </NPCText>
+    <Option text="Let us begin." action="GiveItem:FactionDuelChallengeScroll(Hayabusa,100)" next="duelStart"/>
+    <Option text="On second thought, I will wait." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="duelStart">
+    <NPCText>
+      <![CDATA[
+      Kenji bows formally.<BR>
+      “Step into the dojo’s ring when you are ready. Win, and you shall have more than my respect—you will earn a place in Hinokami’s tale.”
+      ]]>
+    </NPCText>
+    <Option text="I accept your challenge." action="Close"/>
+  </Dialogue>
+
+  <!-- VERDANT TRIBES BRANCH -->
+  <Dialogue id="verdant">
+    <NPCText>
+      <![CDATA[
+      Kenji scowls.<BR>
+      “The Verdant Tribes fight with ambush and trickery. There is little honor in their way. Yet, some urge we set aside pride to face Minax’s threat together. What do you think?”
+      ]]>
+    </NPCText>
+    <Option text="Perhaps cooperation is wise. Minax threatens all." next="convinceKenji"/>
+    <Option text="Your code is sacred; never compromise it." next="honorFirst"/>
+    <Option text="I know little of their ways." next="verdantLore"/>
+    <Option text="This is not my concern." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="convinceKenji">
+    <NPCText>
+      <![CDATA[
+      Kenji regards you thoughtfully.<BR>
+      “Would you risk your reputation to mediate between us and the Verdant Chieftain’s warband? If you bring proof of their intent to fight Minax, I will consider alliance.”
+      ]]>
+    </NPCText>
+    <Option text="I will bring proof from the Verdant Tribes."
+            condition="!HasItem:ProofOfVerdantAlliance"
+            action="GiveItem:FactionMediationQuestScroll(VerdantTribes,Kenji,250)"
+            next="mediationQuest"/>
+    <Option text="I have proof of their willingness to fight Minax."
+            condition="HasItem:ProofOfVerdantAlliance"
+            action="SendMessage:Kenji studies the document and nods."
+            next="allianceAccepted"/>
+    <Option text="I am not ready for such responsibility." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="mediationQuest">
+    <NPCText>
+      <![CDATA[
+      Kenji gives you a measured nod.<BR>
+      “Speak to the Verdant warband. Gain their word—better yet, a token of intent. Return, and we shall see if honor and necessity may coexist.”
+      ]]>
+    </NPCText>
+    <Option text="I will return." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="allianceAccepted">
+    <NPCText>
+      <![CDATA[
+      Kenji bows, lower this time.<BR>
+      “You have done what my own pride could not. I will summon the warband leader. Together, we will strike at Minax’s agents. You have my gratitude—and Hinokami’s respect.”
+      ]]>
+    </NPCText>
+    <Option text="Glad I could help." action="Karma:500" next="reward"/>
+  </Dialogue>
+
+  <Dialogue id="reward">
+    <NPCText>
+      <![CDATA[
+      Kenji hands you a lacquered token engraved with his family crest.<BR>
+      “This will mark you as a friend to Hinokami’s warriors. Wear it with honor.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Master Hayabusa." action="GiveItem:KenjiHonorToken" />
+  </Dialogue>
+
+  <Dialogue id="honorFirst">
+    <NPCText>
+      <![CDATA[
+      Kenji inclines his head, pleased.<BR>
+      “You understand the importance of tradition. Still, even a blade must bend to avoid breaking. Remember this, should the time come.”
+      ]]>
+    </NPCText>
+    <Option text="I will remember, sensei." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="verdantLore">
+    <NPCText>
+      <![CDATA[
+      “They are guardians of forest and spirit. Fierce, cunning, and loyal—to a fault. Their ways are not ours, but they, too, resist Minax’s corruption.”
+      ]]>
+    </NPCText>
+    <Option text="Perhaps you are not so different." next="convinceKenji"/>
+    <Option text="Thank you for your insight." action="Close"/>
+  </Dialogue>
+
+  <!-- MINAX BRANCH -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Kenji’s expression hardens.<BR>
+      “Minax is a shadow upon all lands. Here, we hold the line with discipline and the edge of the blade. If you seek to fight her agents, you will find allies in Hinokami—but only if you prove your worth.”
+      ]]>
+    </NPCText>
+    <Option text="How can I help?" next="training"/>
+    <Option text="I will return when I am prepared." action="Close"/>
+  </Dialogue>
+
+  <!-- DISMISSAL -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Kenji shrugs.<BR>
+      “Return if you seek purpose, outsider. This dojo is no place for idleness.”
+      ]]>
+    </NPCText>
+    <Option text="Perhaps I will." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="backstory_intro">
+    <NPCText>
+      <![CDATA[
+      Kenji narrows his eyes slightly, considering you more seriously.<BR><BR>
+      “Most do not ask that. They see a blade, not the man who wields it. Very well. But understand—my tale is not for idle ears. Do you truly wish to know?”
+      ]]>
+    </NPCText>
+    <Option text="Yes. I wish to learn who you are beyond the sword." next="origin_story"/>
+    <Option text="No, I suppose it doesn’t matter." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="origin_story">
+    <NPCText>
+      <![CDATA[
+      Kenji’s tone lowers.<BR><BR>
+      “I was born in Tokuno, beneath the plum blossoms of Mizugawa village. My father was a swordsmith, my mother a calligrapher. I learned to temper both steel and soul.”<BR><BR>
+      “But when Minax's forces swept across the coast, our village was consumed. I joined the exodus to Britannia and swore never to wield my blade in blind vengeance.”<BR><BR>
+      He meets your gaze. “Honor keeps the wound from festering. Bushido gives it purpose.”
+      ]]>
+    </NPCText>
+    <Option text="Your discipline was forged in fire." next="loss_and_loyalty"/>
+    <Option text="What became of your family?" next="family_fate"/>
+  </Dialogue>
+
+  <Dialogue id="family_fate">
+    <NPCText>
+      <![CDATA[
+      A brief shadow crosses Kenji’s face.<BR><BR>
+      “My father died defending our forge. My mother... I never found her.”<BR><BR>
+      “Some nights, I dream she wandered into the Spirit Woods. The monks of Skara Brae say spirits guide those who die lost. Perhaps she found peace.”<BR>
+      He exhales slowly. “Perhaps.”
+      ]]>
+    </NPCText>
+    <Option text="I’m sorry, Sensei." action="Karma:100" next="loss_and_loyalty"/>
+    <Option text="That sorrow must fuel your strength." action="Fame:100" next="loss_and_loyalty"/>
+  </Dialogue>
+
+  <Dialogue id="loss_and_loyalty">
+    <NPCText>
+      <![CDATA[
+      Kenji inclines his head slightly.<BR><BR>
+      “Many warriors break from grief. I reforged myself. Now, I train others—samurai, ronin, even outsiders like you. If your spirit is unshaken, you are welcome here.”<BR><BR>
+      He pauses. “There are still those I do not trust. The Verdant Tribes live by instinct, not honor. But you… you may help shape the future between us.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about your training style." next="training_style"/>
+    <Option text="What do you enjoy beyond the blade?" next="personal_interests"/>
+    <Option text="I am honored by your trust." action="Karma:250" next="respect_granted"/>
+  </Dialogue>
+
+  <Dialogue id="training_style">
+    <NPCText>
+      <![CDATA[
+      “Technique must flow like water. I teach three forms: the Falling Stream, the Sky Fang, and the Final Ember. Most students master only one.”<BR><BR>
+      “The true path, however, lies in restraint. A blade kept sheathed shows more strength than one swung wildly.”
+      ]]>
+    </NPCText>
+    <Option text="May I learn a form one day?" condition="SkillAtLeast:Swords,70" action="AddSkill:Swords,5,300" next="form_learned"/>
+    <Option text="I still have much to learn." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="form_learned">
+    <NPCText>
+      <![CDATA[
+      “Then today, you begin the Way of the Falling Stream. Flow, adapt, and never break.”<BR>
+      You feel the memory of his lesson settle in your muscles.
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Master Hayabusa." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="personal_interests">
+    <NPCText>
+      <![CDATA[
+      Kenji raises an eyebrow.<BR><BR>
+      “A rare question. I find peace in tea ceremonies, in raking the zen gardens at dawn. I compose poetry—though I claim no great talent.”<BR><BR>
+      He recites softly:<BR>
+      <I>‘Steel in shadow sleeps,<BR>
+      Plum blossoms fall with no sound—<BR>
+      The blade waits, patient.’</I>
+      ]]>
+    </NPCText>
+    <Option text="That was beautiful. You honor your past." action="Karma:200" next="respect_granted"/>
+    <Option text="Even warriors must have softness, I see." next="respect_granted"/>
+    <Option text="Thank you for sharing that." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="respect_granted">
+    <NPCText>
+      <![CDATA[
+      Kenji bows slightly.<BR>
+      “You listen—not just with ears, but with spirit. That is rare. Should you seek my trust, know that you already walk the first steps.”
+      ]]>
+    </NPCText>
+    <Option text="I will walk that path with honor." action="Close"/>
+  </Dialogue>
+
+
+</DialogueFile>

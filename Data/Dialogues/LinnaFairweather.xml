@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="LinnaFairweather">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#c8c8ff'>
+      You see a tall woman draped in swirling grey fabrics, standing barefoot in the muddy garden beside a crooked shack. Her voice dances on the wind, melodic and dreamlike.
+      <BR><BR>
+      "Ah, traveler! The clouds told me you'd come. I am Linna Fairweather—herbalist, storm-singer, and whisperer to the winds. What troubles you, little lightning-bug?"
+      </BASEFONT>
+    ]]>
+    </NPCText>
+    <Option text="You talk to clouds?" next="clouds"/>
+    <Option text="I’ve heard you're causing storms." next="storms"/>
+    <Option text="Do you need help with anything?" next="questIntro"/>
+    <Option text="Just passing by." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="clouds">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#c8c8ff'>
+      "Talk to? No, no, silly—I *listen*. The clouds know secrets the trees dare not speak. They whisper of changes, shadows, and songs too old for mortal throats."
+      <BR><BR>
+      She narrows her eyes suddenly, the air briefly chilling.
+      <BR>
+      "And lately, they weep strange tears... poisoned by a name older than the storms. Minax. Her curse fouls the wind above Eldermoor."
+      </BASEFONT>
+    ]]>
+    </NPCText>
+    <Option text="So she really is behind the weather?" next="storms"/>
+    <Option text="Do you need help?" next="questIntro"/>
+  </Dialogue>
+
+  <Dialogue id="storms">
+    <NPCText>
+      <![CDATA[
+      "Oh, I conjure drizzle and dew, yes. Little charms, harmless things. But these gales? These roars of sky-beasts? No... they are not mine."
+      <BR><BR>
+      She plucks a charm of braided grass from her satchel.
+      <BR>
+      "Something has *anchored* the storm above the southern grove. A ‘stormcaller ettin,’ shaped of wind and mud, dances in the woods. He drums thunder with his fists."
+      </BASEFONT>
+    ]]>
+    </NPCText>
+    <Option text="What can I do?" next="questIntro"/>
+    <Option text="That sounds dangerous." next="dangerous"/>
+  </Dialogue>
+
+  <Dialogue id="dangerous">
+    <NPCText>
+      <![CDATA[
+      "Of course it’s dangerous, darling cloudlet. So is love. So is living."
+      <BR><BR>
+      She twirls once, and the wind swirls around her.
+      <BR>
+      "But if you fear danger, best you run to Thalen and beg for a helmet. Me? I need a storm broken—or bent to my will."
+      </BASEFONT>
+    ]]>
+    </NPCText>
+    <Option text="Alright, I’ll help you." next="questIntro"/>
+    <Option text="No thanks. I’ll go." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      "There’s a creature in the woods east of Edda’s garden—he has tusks like weathered tree roots, and his footsteps churn the very sky. He's bound to an ancient shard buried under a willow. A shard that… speaks to me in dreams."
+      <BR><BR>
+      Her voice dips, quiet now.
+      <BR>
+      "Kill the Stormcaller Ettin and return its ‘thunderstone heart.’ Or... perhaps... you wish to use it differently?"
+      </BASEFONT>
+    ]]>
+    </NPCText>
+    <Option text="I’ll kill the Stormcaller Ettin and bring the thunderstone."
+            action="GiveItem:FactionKillQuestScroll(StormcallerEttin,1,Thunderstone,600)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="acceptQuest"/>
+    <Option text="What happens if I keep the thunderstone?" next="alternateUse"/>
+    <Option text="What’s this about a shard speaking to you?" next="shardSecret"/>
+    <Option text="No thanks. Weather’s not my business." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptQuest">
+    <NPCText>
+      <![CDATA[
+      "Lovely! Watch the winds—they’ll change when he nears. You’ll know the Ettin by his glowing tusks and the storm that follows in his wake."
+      <BR><BR>
+      She winks mischievously.
+      <BR>
+      "And should the shard within him speak to you... do not answer. Not unless you’re ready to know your name in the language of storms."
+      </BASEFONT>
+    ]]>
+    </NPCText>
+    <Option text="I’ll find him." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="alternateUse">
+    <NPCText>
+      <![CDATA[
+      "Ahh... curious, aren’t you? The thunderstone holds power. It could *flood* the marsh and cleanse Minax’s cult from their hollow. Or... it could grant someone the power to call tempests. Imagine—storms on command."
+      <BR><BR>
+      She smiles faintly.
+      <BR>
+      "But such magic takes a toll. Even clouds weep after too much rage. Decide wisely, dear one."
+      </BASEFONT>
+    ]]>
+    </NPCText>
+    <Option text="I’ll still bring it to you." 
+            action="GiveItem:FactionKillQuestScroll(StormcallerEttin,1,Thunderstone,600)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="acceptQuest"/>
+    <Option text="I might keep it..." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="shardSecret">
+    <NPCText>
+      <![CDATA[
+      She steps closer, her eyes distant.
+      <BR><BR>
+      "One of the shards from the Gem... speaks in dreams. A voice like summer rain, locked in silence for centuries. I don’t understand it fully—but it warns of Minax's return, and something older still."
+      <BR><BR>
+      "If you hear the voice, write what it says. I’ll help translate it, if it doesn’t drive you mad first."
+      </BASEFONT>
+    ]]>
+    </NPCText>
+    <Option text="Then I’ll be careful." next="questIntro"/>
+    <Option text="I think I’ll stay away from cursed dreams." action="Close"/>
+  </Dialogue>
+
+</DialogueFile>

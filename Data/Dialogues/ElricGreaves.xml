@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="ElricGreaves">
+
+  <!-- === root/greeting ========================================= -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#8fbbd1'>
+      You find a burly, mud-spattered man balancing on the unfinished fence, his callused hands gripping a massive mallet. His straw hat sags with rain, and his stare is wary but sharp.
+      <BR><BR>
+      "Stay off the beams—unless you’re keen to find splinters where you’d rather not. Name’s Elric Greaves. I patch the holes this village pretends it doesn’t have. Folk think the palisade keeps out trouble. Truth is, it only slows it down."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="That’s an impressive fence. You built all this yourself?" next="builtIt"/>
+    <Option text="Why so grim? Trouble on your mind?" next="troubleMind"/>
+    <Option text="You always work alone out here?" next="alone"/>
+    <Option text="I’m looking for honest work, if you’ve any to spare." next="work"/>
+    <Option text="Just passing through, sorry." action="Close"/>
+  </Dialogue>
+
+  <!-- === About the fence -->
+  <Dialogue id="builtIt">
+    <NPCText>
+      <![CDATA[
+      Elric shrugs, hammer resting on his shoulder.<BR><BR>
+      "Every board, every post. After the first raid, no one else wanted the job. Most folk like walls when they’re already built, not when it’s raining sawdust in their eyes. Aldric brings me logs, Thalen sharpens my tools, and Edda keeps me awake with her herb tea—otherwise, it’s just me and the fence."
+      ]]>
+    </NPCText>
+    <Option text="What are you worried about getting in?" next="troubleMind"/>
+    <Option text="Sounds lonely." next="alone"/>
+    <Option text="I want to help. Need an extra hand?" next="work"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- === About trouble -->
+  <Dialogue id="troubleMind">
+    <NPCText>
+      <![CDATA[
+      He eyes you, then glances to the tree line.<BR><BR>
+      "Fences are only half the battle. You can patch wood, but people… that’s trickier. Something’s been nosing at the east palisade—left claw marks deep as your finger, snapped a gatepost like a twig. I’ve heard it at night: heavy, bone-crunching footsteps."
+      <BR>
+      "Most say it’s just a big ogre. But I’ve seen monsters with stranger magic than that, back in Wind. I keep quiet so’s not to panic the mayor or Miralda. But if you’re serious, maybe you’ll help before it’s too late."
+      ]]>
+    </NPCText>
+    <Option text="What exactly are we dealing with?" next="bonecrusherInfo"/>
+    <Option text="Why not ask Mayor Halric for help?" next="whyNotMayor"/>
+    <Option text="I’ll help. Just point me at it." next="questStart"/>
+    <Option text="I’ll mind my own business." action="Close"/>
+  </Dialogue>
+
+  <!-- === About working alone -->
+  <Dialogue id="alone">
+    <NPCText>
+      <![CDATA[
+      "Trust is scarce here. When you’ve seen how fast things fall apart, you learn to trust your own hammer and not much else."
+      <BR>
+      "Still, Mira brings me bread sometimes—claims it’s for the ducks, but she’s soft-hearted. Edda’s the only one who asks what I see at the edge of the woods. Thalen’s… too eager with his axe, breaks more boards than he splits. I like quiet. Fences don’t argue."
+      ]]>
+    </NPCText>
+    <Option text="Sounds like you know these woods." next="bonecrusherInfo"/>
+    <Option text="I want to help. Got any jobs?" next="work"/>
+    <Option text="Good luck with the fence." action="Close"/>
+  </Dialogue>
+
+  <!-- === About work -->
+  <Dialogue id="work">
+    <NPCText>
+      <![CDATA[
+      Elric sizes you up, lips pursed.<BR>
+      "Work’s never lacking. But real trust? That’s earned. There’s an ogre haunting the outer fence—folk call it the Bonecrusher. Too smart for its size, tears apart palings for fun, and wears a necklace of snapped boards. Scares the cattle, keeps kids indoors."
+      <BR>
+      "I’d deal with it myself, but… I’ve reasons to keep a low profile lately. I can pay you, and I might know a few tricks about magical wards if you’re curious. So? You after coin, or something else?"
+      ]]>
+    </NPCText>
+    <Option text="I’ll hunt down this Bonecrusher Ogre for you." next="questStart"/>
+    <Option text="Tell me about these magical wards." next="wards"/>
+    <Option text="Why not handle it yourself?" next="whyNotElric"/>
+    <Option text="I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <!-- === About Bonecrusher Ogre -->
+  <Dialogue id="bonecrusherInfo">
+    <NPCText>
+      <![CDATA[
+      "Big as a bull, uglier than sin. Bonecrusher’s got skin like knotted bark, and eyes that shine in the dark. Smarter than most ogres—lays traps, uses fallen logs as clubs. The last fellow who tried to scare it off wound up missing three fingers."
+      <BR>
+      "If you’re set on hunting it, look for splintered fenceposts east of town, near the old stone marker. And don’t go alone—unless you want your bones on its necklace next."
+      ]]>
+    </NPCText>
+    <Option text="Sounds dangerous, but I’ll do it." next="questStart"/>
+    <Option text="Why do you know so much about monsters?" next="whyNotElric"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- === Ask about magical wards -->
+  <Dialogue id="wards">
+    <NPCText>
+      <![CDATA[
+      Elric lowers his voice, scanning the shadows.<BR>
+      "Not the sort of thing to chat about in daylight. Back in Wind, I worked on barriers—runes, wards, the sort that keep out more than goblins. Some of what I learned… best left in the past. But lately, I’ve been etching old glyphs on the inner fence."
+      <BR>
+      "If you bring me a talisman from the Bonecrusher’s corpse—sometimes they swallow the oddest things—I can show you a trick or two. But keep it quiet. Some folks in town don’t trust magic much these days."
+      ]]>
+    </NPCText>
+    <Option text="Deal. I’ll slay the ogre and bring you what I find." next="questStart"/>
+    <Option text="Sounds risky. Why are you so cautious?" next="whyNotElric"/>
+    <Option text="I’d rather not get involved." action="Close"/>
+  </Dialogue>
+
+  <!-- === Why not handle it yourself? -->
+  <Dialogue id="whyNotElric">
+    <NPCText>
+      <![CDATA[
+      He frowns, gaze distant.<BR>
+      "Folk here wouldn’t thank me if they knew all my secrets. I kept the wrong company in Wind—helped carve wards meant to keep invaders out. Never told anyone how to break them, but the wrong ears still listen. I work quietly now. Besides, someone else needs to stand up, or this village will never last."
+      ]]>
+    </NPCText>
+    <Option text="I understand. I’ll take care of it." next="questStart"/>
+    <Option text="Maybe this is more than I bargained for." action="Close"/>
+  </Dialogue>
+
+  <!-- === Why not Mayor Halric? -->
+  <Dialogue id="whyNotMayor">
+    <NPCText>
+      <![CDATA[
+      "Halric’s got his hands full with the council. He trusts his sword more than he trusts old magic—and he’s right to. The Bonecrusher’s not like anything from his days hunting wolves. I’d rather not trouble him until I know what we’re facing."
+      ]]>
+    </NPCText>
+    <Option text="You’re being careful. I respect that. I’ll help." next="questStart"/>
+    <Option text="I’ll let him know anyway." action="Close"/>
+  </Dialogue>
+
+  <!-- === Start the Kill Quest -->
+  <Dialogue id="questStart">
+    <NPCText>
+      <![CDATA[
+      Elric finally grins—a rare sight.<BR>
+      "Good. Take this—my old bone-handled chisel. Touch it to the ogre’s body if you can. It’ll mark the kill as yours and help me track the foul magic. The beast roams near the east pasture at dusk. Find it, end it, and bring me any talisman or bone you find. You’ll have my thanks—and maybe a bit more."
+      ]]>
+    </NPCText>
+    <Option text="I’ll bring back proof." action="GiveItem:FactionKillQuestScroll(BonecrusherOgre,1,Eldermoor,600)" next="questAccepted"/>
+    <Option text="Wait, what foul magic?" next="ogreMagic"/>
+    <Option text="On second thought, I need to prepare first." action="Close"/>
+  </Dialogue>
+
+  <!-- === Ogre magic explanation -->
+  <Dialogue id="ogreMagic">
+    <NPCText>
+      <![CDATA[
+      "I’ve seen ogres eat runes, swallow shards, even choke down cursed bone just to grow strong. Sometimes they’re just hungry; sometimes… something is guiding them. With Minax loose, I don’t rule anything out. If you find a bone or rune glowing or humming, don’t touch it bare-handed—bring it to Edda or Miralda first."
+      ]]>
+    </NPCText>
+    <Option text="I understand. I’ll get it done." action="GiveItem:FactionKillQuestScroll(BonecrusherOgre,1,Eldermoor,600)" next="questAccepted"/>
+    <Option text="This is bigger than I thought. I’ll come back later." action="Close"/>
+  </Dialogue>
+
+  <!-- === Accept quest -->
+  <Dialogue id="questAccepted">
+    <NPCText>
+      <![CDATA[
+      Elric nods, gripping your arm in a rough handshake.<BR>
+      "Don’t go dying—someone needs to fix this fence. If you see Mira, tell her to keep the inn’s lights burning late tonight. I want to see you come back in one piece."
+      ]]>
+    </NPCText>
+    <Option text="I’ll return soon." action="Close"/>
+  </Dialogue>
+
+  <!-- === Quest completed (reward) -->
+  <Dialogue id="questComplete">
+    <NPCText>
+      <![CDATA[
+      Elric’s face breaks into a rare, genuine smile as he inspects the ogre’s talisman.<BR>
+      "Well done. You’ve got grit—and maybe luck, too. Here—your reward, and a lesson: this rune, carved the right way, will shield your camp from dark eyes for a night. Use it wisely. And if you ever need a wall built in a hurry… you know where to find me."
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Elric. Farewell." action="GiveGold:600" action2="GiveItem:TemporaryRuneWard" action3="Close"/>
+  </Dialogue>
+
+</DialogueFile>

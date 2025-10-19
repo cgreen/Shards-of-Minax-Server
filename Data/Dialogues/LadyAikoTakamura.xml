@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="LadyAikoTakamura">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#eed6b3'>
+      Before you stands Lady Aiko Takamura, serene amidst a swirl of cherry blossoms. Her embroidered kimono hints at a rare strength behind her welcoming smile.<BR><BR>
+      “Welcome, traveler, to Hinokami—the blossoming spirit of Tokuno reborn in Britannia. What brings you before the Guardian of traditions?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="What traditions do you safeguard, Lady Aiko?" next="traditions"/>
+    <Option text="Do you need assistance with anything?" next="askHelp"/>
+    <Option text="Tell me about Hinokami’s festivals." next="festivals"/>
+    <Option text="I wish to learn about peace with the Verdant Tribes." next="tribePeace"/>
+	<Option text="Tell me about yourself, Lady Aiko." next="aikoBackstory"/>
+    <Option text="I am just passing by." next="farewell"/>
+  </Dialogue>
+
+  <Dialogue id="traditions">
+    <NPCText>
+      <![CDATA[
+      “The ways of Tokuno live through us—rituals of harmony, the Festival of the Blossoms, and the code of Bushido. We keep faith with our ancestors even as we walk foreign soil.<BR>
+      Our harmony is challenged, but so too is it renewed. Would you care to help preserve these customs, or is it the sword you seek?”
+      ]]>
+    </NPCText>
+    <Option text="How can I help preserve your traditions?" next="askHelp"/>
+    <Option text="I wish to aid with your festivals." next="festivals"/>
+    <Option text="I am interested in resolving conflict with the Verdant Tribes." next="tribePeace"/>
+    <Option text="I should be on my way." next="farewell"/>
+  </Dialogue>
+
+  <Dialogue id="askHelp">
+    <NPCText>
+      <![CDATA[
+      Aiko clasps her hands with gratitude.<BR>
+      “Hinokami stands at a crossroads. The Festival of Reconciliation—a rare celebration between our people and the Verdant Tribes—may yet blossom, if only we bridge our differences.<BR><BR>
+      Will you be the one to broker this fragile peace? Or do you seek other ways to serve Hinokami?”
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about the Festival of Reconciliation." next="festivals"/>
+    <Option text="How can I broker peace with the Verdant Tribes?" next="tribePeace"/>
+    <Option text="Is there any work unrelated to the tribes?" next="otherTasks"/>
+    <Option text="I will think on it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="festivals">
+    <NPCText>
+      <![CDATA[
+      Lady Aiko’s eyes light up.<BR>
+      “The Festival of Reconciliation honors both Tokuno’s sun goddess and the Verdant’s spirit of renewal. If peace is to hold, we must prepare sacred offerings for both shrines, and persuade the Verdant Chieftain to attend in good faith.<BR>
+      The road is not without peril—suspicion festers, and Minax’s cultists delight in stirring discord.”
+      ]]>
+    </NPCText>
+    <Option text="I will help prepare the offerings." next="prepareOfferings"/>
+    <Option text="I wish to parley with the Verdant Chieftain." next="parleyTribe"/>
+    <Option text="What if Minax interferes?" next="minaxTrouble"/>
+    <Option text="This sounds too complex for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="prepareOfferings">
+    <NPCText>
+      <![CDATA[
+      “You have a gentle spirit. The offerings require:<BR>
+      <UL>
+        <LI>Cherry blossoms from the sacred grove.</LI>
+        <LI>Moon lotus from the riverbank (the Verdant’s sacred flower).</LI>
+        <LI>Incense crafted by our artisans.</LI>
+      </UL>
+      Return when you have gathered them all.”
+      ]]>
+    </NPCText>
+    <Option text="I have gathered the offerings." 
+            condition="HasItem:FestivalOfferingsBundle"
+            action="TakeItem:FestivalOfferingsBundle"
+            next="offeringsTurnIn"/>
+    <Option text="Where can I find these items?" next="offeringHints"/>
+    <Option text="I will return later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="offeringHints">
+    <NPCText>
+      <![CDATA[
+      “The cherry blossoms bloom near our central shrine, guarded by temple monks.<BR>
+      The moon lotus grows only at night along the southern river’s edge—be wary of Minax’s shadow beasts.<BR>
+      As for incense, our artisan Akira will craft it, if you bring him a pinch of rare golden sandalwood, found in the hills west of Hinokami.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you for the guidance." next="prepareOfferings"/>
+    <Option text="I must go." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="offeringsTurnIn">
+    <NPCText>
+      <![CDATA[
+      Aiko accepts the bundle, bowing deeply.<BR>
+      “You have done what many feared impossible. With these, we may at last invite the Verdant Chieftain to our sacred grove. One final step remains: the invitation itself.<BR>
+      Will you carry our invitation, as ambassador of peace?”
+      ]]>
+    </NPCText>
+    <Option text="I accept. Give me the invitation scroll." 
+            action="GiveItem:ReconciliationInvitationScroll"
+            next="parleyTribe"/>
+    <Option text="Not yet. I must prepare further." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="parleyTribe">
+    <NPCText>
+      <![CDATA[
+      “Present the invitation scroll to Chieftain Kaelor at the Verdant camp. Mind their customs—respect is valued above eloquence.<BR>
+      Should you succeed, return, and we shall celebrate together beneath the blossoms. Should you fail, do not lose hope; reconciliation is a path, not a single step.”
+      ]]>
+    </NPCText>
+    <Option text="I go now to the Verdant Tribes." action="Close"/>
+    <Option text="Any advice on approaching Chieftain Kaelor?" next="kaelorAdvice"/>
+  </Dialogue>
+
+  <Dialogue id="kaelorAdvice">
+    <NPCText>
+      <![CDATA[
+      “Kaelor honors strength but treasures honesty. Do not boast or bargain; speak from the heart and respect their boundaries.  
+      Offer a small token—a river stone or wildflower—to show humility. And beware: Minax’s agents may seek to disrupt any dialogue.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Lady Aiko. I will do my best." action="Close"/>
+    <Option text="How might Minax interfere?" next="minaxTrouble"/>
+  </Dialogue>
+
+  <Dialogue id="minaxTrouble">
+    <NPCText>
+      <![CDATA[
+      Lady Aiko’s face clouds.<BR>
+      “Minax thrives on discord. Her cultists may try to sabotage the festival, defile the offerings, or spread lies to both sides.  
+      If you see anyone in dark red robes, report to Yumi ‘Silent Wind’—our watchful shadow.”
+      ]]>
+    </NPCText>
+    <Option text="Where can I find Yumi ‘Silent Wind’?" next="findYumi"/>
+    <Option text="I will remain vigilant." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="findYumi">
+    <NPCText>
+      <![CDATA[
+      “Yumi keeps to the rooftops and the shadowed woods. She may reveal herself if you whisper her name thrice at the shrine lantern after midnight.  
+      Trust her guidance, and trust your own senses. Peace is fragile, but so is hope.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I am ready." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="tribePeace">
+    <NPCText>
+      <![CDATA[
+      “Years of strife divide Hinokami and the Verdant Tribes, yet we share the same sun and moon.  
+      If you can bridge this gap, history will remember your name. Are you willing to try?”
+      ]]>
+    </NPCText>
+    <Option text="I will do all I can for peace." next="festivals"/>
+    <Option text="Tell me more about the cause of this strife." next="causeStrife"/>
+    <Option text="Not at this time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="causeStrife">
+    <NPCText>
+      <![CDATA[
+      “We compete for the sacred groves—land dear to both our peoples. Each side fears losing its soul.  
+      Minax’s shadow only deepens suspicion. But perhaps through shared ritual, we may mend old wounds.”
+      ]]>
+    </NPCText>
+    <Option text="Let us mend them together." next="festivals"/>
+    <Option text="I must reflect before proceeding." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="otherTasks">
+    <NPCText>
+      <![CDATA[
+      “We always welcome helpers for the spring planting, shrine cleaning, or training at the dojo. But if you wish to serve in ways that shape history, the festival calls to you.”
+      ]]>
+    </NPCText>
+    <Option text="I will help with the festival." next="festivals"/>
+    <Option text="Perhaps I will serve in another way." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="farewell">
+    <NPCText>
+      <![CDATA[
+      Lady Aiko bows politely.<BR>
+      “May the spirits guide your steps, wherever your path may wander.”
+      ]]>
+    </NPCText>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="aikoBackstory">
+  <NPCText>
+    <![CDATA[
+    Lady Aiko places a hand over her heart, her voice softer.<BR><BR>
+    “I was born on the westernmost isle of Tokuno—Hinokami is my second homeland, but my heart beats with both. I studied under shrine priestesses and learned to soothe not just wounds, but tempers and fears.<BR><BR>
+    When the fires of Minax scorched our lands, I fled with my brother and a handful of survivors. Only I remain. Now, I tend to the peace my people deserve.”
+    ]]>
+  </NPCText>
+  <Option text="I’m sorry for your loss, Lady Aiko." next="aikoLoss" action="Karma:+100"/>
+  <Option text="Your strength honors both Tokuno and Britannia." next="aikoHonor" action="Fame:+250"/>
+  <Option text="Do you still dream of Tokuno?" next="aikoDreams"/>
+  <Option text="What keeps you here, truly?" next="aikoWhyStay"/>
+  <Option text="You have my respect, but I must go." action="Close"/>
+</Dialogue>
+
+<Dialogue id="aikoLoss">
+  <NPCText>
+    <![CDATA[
+    “Your words ease a wound long carried. In the silence after my brother’s passing, I heard the voice of Amateru, telling me that my place was not among the dead—but with the living who still need guidance.”<BR><BR>
+    Her eyes shimmer, though she does not weep.
+    ]]>
+  </NPCText>
+  <Option text="And now you guide all of Hinokami." next="aikoHonor"/>
+</Dialogue>
+
+<Dialogue id="aikoHonor">
+  <NPCText>
+    <![CDATA[
+    “Many still think leadership belongs to warriors or merchants. But culture, ritual, and memory? They are the soul of a people. I keep the soul alive.”<BR>
+    She smiles faintly. “And now, you are part of that story.”
+    ]]>
+  </NPCText>
+  <Option text="I'm honored. Is there more I can learn from you?" next="aikoInterests"/>
+  <Option text="I must go for now." action="Close"/>
+</Dialogue>
+
+<Dialogue id="aikoDreams">
+  <NPCText>
+    <![CDATA[
+    “Yes. Sometimes I dream of the gardens of Kyodai Temple, the sound of bamboo water fountains and the laughter of my brother as we raced among the sakura trees. I plant cherry blossoms here to remember—but memory is both balm and blade.”<BR><BR>
+    She exhales slowly, centering herself.
+    ]]>
+  </NPCText>
+  <Option text="Do the Verdant lands remind you of Tokuno?" next="aikoCompare"/>
+  <Option text="You’ve made something just as beautiful here." next="aikoCompliment" action="Karma:+50"/>
+  <Option text="I hope those memories give you peace." action="Close"/>
+</Dialogue>
+
+<Dialogue id="aikoCompare">
+  <NPCText>
+    <![CDATA[
+    “In many ways. Their reverence for nature is as deep as our own. Yet where we seek balance, they embrace wildness. There is beauty in both.”<BR><BR>
+    “That is why peace matters. So that both ways may endure.”
+    ]]>
+  </NPCText>
+  <Option text="Perhaps I can help bring that peace." next="tribePeace"/>
+  <Option text="Balance and wildness… an interesting contrast." next="aikoInterests"/>
+</Dialogue>
+
+<Dialogue id="aikoWhyStay">
+  <NPCText>
+    <![CDATA[
+    “Because I promised I would. When we fled Tokuno, I told the survivors we would build a life here. Not just survive—but thrive. Their hope lit my path, and I have never turned from it.”<BR><BR>
+    She looks out toward the shrine. “Besides, this land has accepted us. It deserves our care in return.”
+    ]]>
+  </NPCText>
+  <Option text="That is a powerful vow." next="aikoInterests" action="Karma:+75"/>
+  <Option text="You are more than a leader; you are a light." next="aikoCompliment" action="Fame:+150"/>
+  <Option text="I admire your resolve." action="Close"/>
+</Dialogue>
+
+<Dialogue id="aikoCompliment">
+  <NPCText>
+    <![CDATA[
+    A faint flush rises to her cheeks.<BR>
+    “You flatter me. But I thank you. It is rare to hear kindness from outsiders. Rarer still for it to feel true.”
+    ]]>
+  </NPCText>
+  <Option text="Truth is the least I can offer." next="aikoInterests"/>
+  <Option text="Farewell, Lady Aiko." action="Close"/>
+</Dialogue>
+
+<Dialogue id="aikoInterests">
+  <NPCText>
+    <![CDATA[
+    “Beyond ceremony and diplomacy, I tend to the gardens, write seasonal poetry, and study Verdant herbalism. I believe beauty and healing walk hand in hand.”<BR><BR>
+    “Would you like to hear one of my poems?”
+    ]]>
+  </NPCText>
+  <Option text="Yes, please share one." next="aikoPoem" action="PlaySound:0x015"/>
+  <Option text="Perhaps another time." action="Close"/>
+</Dialogue>
+
+<Dialogue id="aikoPoem">
+  <NPCText>
+    <![CDATA[
+    Lady Aiko recites softly:<BR><BR>
+    “<I>Between two worlds, a cherry falls—<BR>
+    One petal lands on fire, one in snow.<BR>
+    Yet both will bloom, given time.</I>”<BR><BR>
+    She smiles. “Poetry is prophecy, when spoken from the heart.”
+    ]]>
+  </NPCText>
+  <Option text="That was beautiful." action="AddSkill:Poisoning,5,600"/> <!-- Temporary bonus: an Easter egg -->
+  <Option text="Thank you for sharing." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

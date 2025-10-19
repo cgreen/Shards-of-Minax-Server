@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="TomoTheSilkenThread">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#e2adc4'>
+      You are enveloped in a fragrant swirl of jasmine and silk. Before you stands Tomo, swathed in resplendent kimono patterned with iridescent beetles. Her eyes glimmer—restless as dragonflies on a pond.<BR><BR>
+      “Ah, another wanderer upon the loom of fate! Does your thread seek color, or purpose? Every robe is a story, every dye a drop of dusk or dawn. What brings you to my humble cocoon?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek new attire—something woven with magic." next="offerSilks"/>
+    <Option text="You speak strangely. What do your metaphors mean?" next="metaphor"/>
+    <Option text="What’s with all the beetle dyes?" next="beetle"/>
+    <Option text="Rumor says your silks ward against darkness." next="ward"/>
+	<Option text="Who are you, truly, behind all the silks and riddles?" next="backstory"/>
+    <Option text="I’m just browsing." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Offer Silks Branch -->
+  <Dialogue id="offerSilks">
+    <NPCText>
+      <![CDATA[
+      Tomo’s fingers flutter like moths. “To don my silks is to vanish amid moonlit reeds. My threads are plucked from the secret heart of jungle beetles—each dye a spell in disguise.<BR><BR>
+      Would you be a crane in the mist, unseen? Or a blossom dazzling in the festival sun?”
+      ]]>
+    </NPCText>
+    <Option text="I wish for stealth—make me as the hidden moon." next="stealthSilk"/>
+    <Option text="I want to stand out—a robe to turn all eyes!" next="cosmeticSilk"/>
+    <Option text="I am neither crane nor blossom. What else?" next="uniqueSilk"/>
+    <Option text="I cannot decide yet." action="Close"/>
+  </Dialogue>
+
+  <!-- Stealth Silk Path -->
+  <Dialogue id="stealthSilk">
+    <NPCText>
+      <![CDATA[
+      Tomo smiles slyly, eyes glinting. “A river stone stirs not the current, but turns aside the shadow. I can weave you the Night-Heron’s Mantle, but beetle dyes are rare as honest politicians.<BR><BR>
+      Bring me three <B>Midnight Beetle Carapaces</B> from the jungle, and I will shroud you in shadow. Return empty-handed, and you remain a fish out of water.”
+      ]]>
+    </NPCText>
+    <Option text="Where do I find Midnight Beetles?" next="beetleHunt"/>
+    <Option text="I have the carapaces." next="carapaceCheck" condition="HasItem:MidnightBeetleCarapace,3"/>
+    <Option text="Not yet, but I will return." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="carapaceCheck">
+    <NPCText>
+      <![CDATA[
+      Tomo’s hands tremble with anticipation. “Let me see… yes! The moon’s armor, glossy as secrets. Stay while I spin silence into cloth.”
+      ]]>
+    </NPCText>
+    <Option text="(Wait patiently.)" next="grantStealthSilk" action="GiveItem:NightHeronsMantle;TakeItem:MidnightBeetleCarapace,3"/>
+  </Dialogue>
+
+  <Dialogue id="grantStealthSilk">
+    <NPCText>
+      <![CDATA[
+      With a flourish, Tomo presents a cloak that seems to drink the light.<BR>
+      “Wear this, and you are the breath between heartbeats. Shadows become your kin.”<BR><BR>
+      <I>(You receive the Night-Heron’s Mantle. Stealth skill increased when worn.)</I>
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Tomo." action="Close"/>
+  </Dialogue>
+
+  <!-- Cosmetic Silk Path -->
+  <Dialogue id="cosmeticSilk">
+    <NPCText>
+      <![CDATA[
+      “Ah! To outshine the spring peony, one must brave the sting of the jungle. I will craft you the <B>Festival Kimono of Many Dyes</B>—but you must bring me three <B>Jewel-Beetle Wings</B>.<BR>
+      Only the bold gather such radiance. Will you seize the rainbow or fade into plainness?”
+      ]]>
+    </NPCText>
+    <Option text="Where do I find Jewel-Beetles?" next="beetleHunt"/>
+    <Option text="I have the wings." next="wingCheck" condition="HasItem:JewelBeetleWing,3"/>
+    <Option text="I’ll return with the wings." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="wingCheck">
+    <NPCText>
+      <![CDATA[
+      Tomo clasps the wings, awed. “Prisms caught in amber! Wait, as I summon the spirit of festival days.”
+      ]]>
+    </NPCText>
+    <Option text="(Wait and watch her work.)" next="grantCosmeticSilk" action="GiveItem:FestivalKimonoOfManyDyes;TakeItem:JewelBeetleWing,3"/>
+  </Dialogue>
+
+  <Dialogue id="grantCosmeticSilk">
+    <NPCText>
+      <![CDATA[
+      Tomo drapes a breathtaking kimono upon you, its colors shifting with every breath.<BR>
+      “Now, walk as a rainbow at dusk. All eyes will follow.”<BR><BR>
+      <I>(You receive the Festival Kimono of Many Dyes. Unlocks new cosmetic dye options.)</I>
+      ]]>
+    </NPCText>
+    <Option text="I am dazzling! Thank you." action="Close"/>
+  </Dialogue>
+
+  <!-- Unique/Secret Silk Path -->
+  <Dialogue id="uniqueSilk">
+    <NPCText>
+      <![CDATA[
+      “Not all wish to be seen, nor to vanish—some wish to endure. For them I weave the <B>Wardweave Undergarment</B>: silk spun with secret sigils, to turn aside the night’s poison.<BR>
+      Bring me one <B>Moon-Marked Cocoon</B> and I will weave you armor against Minax’s whispers.”
+      ]]>
+    </NPCText>
+    <Option text="Where do I find a Moon-Marked Cocoon?" next="cocoonHunt"/>
+    <Option text="I have the cocoon." next="cocoonCheck" condition="HasItem:MoonMarkedCocoon"/>
+    <Option text="I will return when I have it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="cocoonCheck">
+    <NPCText>
+      <![CDATA[
+      Tomo’s eyes fill with reverence. “The moon’s promise, strong yet yielding. With this, I spin ward against the world’s venom.”
+      ]]>
+    </NPCText>
+    <Option text="(Wait reverently.)" next="grantWardweave" action="GiveItem:WardweaveUndergarment;TakeItem:MoonMarkedCocoon"/>
+  </Dialogue>
+
+  <Dialogue id="grantWardweave">
+    <NPCText>
+      <![CDATA[
+      Tomo hands you a soft, faintly glowing under-robe.<BR>
+      “Wear it beneath your armor, and Minax’s darkness shall slip past you like wind through bamboo.”<BR><BR>
+      <I>(You receive the Wardweave Undergarment. Grants resistance to curses.)</I>
+      ]]>
+    </NPCText>
+    <Option text="May your loom never tangle, Tomo." action="Close"/>
+  </Dialogue>
+
+  <!-- Metaphor explanation branch -->
+  <Dialogue id="metaphor">
+    <NPCText>
+      <![CDATA[
+      Tomo tilts her head, amused. “Words are threads; stories are the tapestry. What is a day, if not a pattern woven of shadow and light? In metaphor, we find truth hidden from Minax’s spies.”
+      ]]>
+    </NPCText>
+    <Option text="Do you ever speak plainly?" next="plainly"/>
+    <Option text="Your riddles have a beauty to them." next="compliment"/>
+    <Option text="I seek your wares, not your wisdom." next="offerSilks"/>
+  </Dialogue>
+
+  <Dialogue id="plainly">
+    <NPCText>
+      <![CDATA[
+      She laughs softly. “To speak plain is to wear rough cloth. My tongue is silk—take it as it is, or not at all!”
+      ]]>
+    </NPCText>
+    <Option text="Very well. Show me your finest silks." next="offerSilks"/>
+    <Option text="I must go." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="compliment">
+    <NPCText>
+      <![CDATA[
+      Tomo bows, pleased. “Even the crane admires its own reflection. If you have an ear for riddles, perhaps you can hear the whispers woven in my cloth.”
+      ]]>
+    </NPCText>
+    <Option text="Show me your silks." next="offerSilks"/>
+    <Option text="I should be on my way." action="Close"/>
+  </Dialogue>
+
+  <!-- Beetle dye obsession branch -->
+  <Dialogue id="beetle">
+    <NPCText>
+      <![CDATA[
+      “Beetles bear the color of dusk, the armor of kings. Each dye is a secret stolen from the heart of the jungle—dangerous to catch, but worth every sting. Minax cannot corrupt what is wild and iridescent.”
+      ]]>
+    </NPCText>
+    <Option text="Can I help collect beetles?" next="beetleQuest"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="beetleQuest">
+    <NPCText>
+      <![CDATA[
+      “If you bring me beetle carapaces or wings, I will trade you secrets, silks, or coin. Beetles thrive near moonlit pools, but beware: the jungle is woven with Minax’s traps.”
+      ]]>
+    </NPCText>
+    <Option text="I will return with beetle parts." action="Close"/>
+  </Dialogue>
+
+  <!-- Lore about wards -->
+  <Dialogue id="ward">
+    <NPCText>
+      <![CDATA[
+      Tomo draws a sigil in the air. “My warded silks are cocoon and chrysalis both. Those who wear them are not easily snared by Minax’s curses. But beware: even silk may tear, if the fate-weaver tugs too hard.”
+      ]]>
+    </NPCText>
+    <Option text="How can I earn a warded silk?" next="uniqueSilk"/>
+    <Option text="I’m interested in stealth or festival attire instead." next="offerSilks"/>
+    <Option text="I will be cautious. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Beetle hunting explanations (shared node) -->
+  <Dialogue id="beetleHunt">
+    <NPCText>
+      <![CDATA[
+      “Midnight Beetles and Jewel-Beetles haunt the shadowed jungle east of Hinokami, lured by moonlight and rotting bamboo. But beware: where beetles feast, Minax’s venomous spiders often lurk.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Tomo. I will hunt wisely." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="cocoonHunt">
+    <NPCText>
+      <![CDATA[
+      “The Moon-Marked Cocoon is spun by a rare lunar moth, high in the bamboo thickets. It glows faintly under full moons, but poachers sell fakes. Trust only those with hands unstained by greed.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Tomo. I’ll seek it out." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismissal -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      “Then wander as the leaf, but remember: every thread finds its place in the end.”
+      ]]>
+    </NPCText>
+    <Option text="Perhaps I’ll return for silk and riddles." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="backstory">
+  <NPCText>
+    <![CDATA[
+    Tomo clasps her hands behind her back, gazing out over the rooftops.<BR><BR>
+    “Once, I was but a plain thread—child of farmers beneath Tokuno’s storm-kissed skies. But the wind tore my homeland apart, and Minax scattered my family like petals in a storm.<BR>
+    I fled with nothing but a beetle-wing clasp and the memory of my mother’s loom.<BR><BR>
+    Here, in this alien soil, I weave myself anew. Silk is memory. Color is hope. And riddles... are armor.”
+    ]]>
+  </NPCText>
+  <Option text="Your metaphors shield grief, don’t they?" next="truth"/>
+  <Option text="You’ve suffered much. I’m sorry." next="softResponse" condition="KarmaAtLeast:0"/>
+  <Option text="Sounds like you're just hiding behind fancy words." next="harshResponse" condition="KarmaBelow:0"/>
+  <Option text="I understand the need to start again." next="relatable"/>
+</Dialogue>
+
+<Dialogue id="truth">
+  <NPCText>
+    <![CDATA[
+    Tomo nods slowly. “Aye. Truth cuts cleaner than steel, but rarely heals. I weave riddles to stitch the soul... and perhaps to avoid unraveling entirely.”
+    ]]>
+  </NPCText>
+  <Option text="Then tell me a truth, not a riddle." next="confession" condition="RandomChance:40"/>
+  <Option text="I’ll respect your silences, then." action="Close"/>
+</Dialogue>
+
+<Dialogue id="softResponse">
+  <NPCText>
+    <![CDATA[
+    She smiles faintly. “A kind word is worth ten yards of thread. But don’t pity me—I survived, and surviving is a sort of art.”<BR><BR>
+    She reaches into a lacquered box and offers a delicate charm.
+    ]]>
+  </NPCText>
+  <Option text="(Accept the silk charm.)" action="GiveItem:TatteredSilkCharm" next="softGift"/>
+</Dialogue>
+
+<Dialogue id="softGift">
+  <NPCText>
+    <![CDATA[
+    “Thread from my first loom. A token of a weaver's gratitude. May it catch luck and turn it your way.”<BR><BR>
+    <I>(This charm may one day be useful...)</I>
+    ]]>
+  </NPCText>
+  <Option text="Thank you, Tomo. I’ll treasure it." action="Close"/>
+</Dialogue>
+
+<Dialogue id="harshResponse">
+  <NPCText>
+    <![CDATA[
+    Tomo’s eyes narrow. “Even a worm turns when prodded. Be careful—mocking a weaver may unravel the very thread you walk upon.”
+    ]]>
+  </NPCText>
+  <Option text="Tch. You’re as dramatic as your silks." action="Karma:-250" />
+  <Option text="I meant no offense. Truly." next="forgive" condition="KarmaAtLeast:-1000"/>
+</Dialogue>
+
+<Dialogue id="forgive">
+  <NPCText>
+    <![CDATA[
+    She exhales, some tension leaving her shoulders.<BR>
+    “Words can be re-woven, if the speaker has needle and grace. Let us begin again—with silk, not swords.”
+    ]]>
+  </NPCText>
+  <Option text="Agreed. Tell me of your craft." next="offerSilks"/>
+</Dialogue>
+
+<Dialogue id="relatable">
+  <NPCText>
+    <![CDATA[
+    Her expression softens. “Then we are both stitches in the same tapestry. Perhaps I judged you too quickly.”<BR><BR>
+    She produces a folded scroll from her sleeve.
+    ]]>
+  </NPCText>
+  <Option text="What’s this?" next="trustGift"/>
+</Dialogue>
+
+<Dialogue id="trustGift">
+  <NPCText>
+    <![CDATA[
+    “A recipe. One I brought from Tokuno before the sky burned. It teaches how to treat beetle silk with ash-powder—makes it near invisible in fog.”<BR>
+    <I>(You learn a stealth-enhancing dye recipe!)</I>
+    ]]>
+  </NPCText>
+  <Option text="Thank you for sharing something sacred." 
+          action="GiveItem:AshDyeRecipe;AddSkill:Stealth,3,600" />
+</Dialogue>
+
+<Dialogue id="confession">
+  <NPCText>
+    <![CDATA[
+    Tomo whispers, “I once served a lesser mage under Minax. Before I fled. I still hear his chants in my dreams…<BR><BR>
+    That is why I hate the dark, why I weave against it. Every thread I twist is defiance.”<BR>
+    She looks up, brave and brittle.
+    ]]>
+  </NPCText>
+  <Option text="You fight her in your own way." next="respect"/>
+  <Option text="That’s why your silks resist curses?" next="ward"/>
+</Dialogue>
+
+<Dialogue id="respect">
+  <NPCText>
+    <![CDATA[
+    She inclines her head. “We all fight. Swords or silks—it’s the will that matters.”
+    ]]>
+  </NPCText>
+  <Option text="Then I’ll help you gather beetle dyes." next="beetleQuest"/>
+</Dialogue>
+
+
+</DialogueFile>

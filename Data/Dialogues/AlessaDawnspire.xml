@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="AlessaDawnspire">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ffeab6'>
+      You find a young woman in battered armor, her cloak thrown back, watching the Sunreach harbor with haunted resolve. Her voice is low, urgent.<BR><BR>
+      “If you’re here for coin or comfort, turn back. But if you wish to see Sunreach free from Minax’s shadows, then I—Alessa Dawnspire—have work only for the brave.”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I want to help Sunreach resist Minax." next="recruit"/>
+    <Option text="Who are you to challenge Minax?" next="who"/>
+    <Option text="This city seems beyond saving." next="hopeless"/>
+	<Option text="Tell me more about you, Alessa." next="aboutMeIntro"/>
+    <Option text="Sorry, I’m just passing through." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Recruitment branch -->
+  <Dialogue id="recruit">
+    <NPCText>
+      <![CDATA[
+      Alessa’s eyes brighten—hope flickers in her tired face.<BR><BR>
+      “We fight not for glory, but for tomorrow’s dawn. Minax’s cultists and their corrupt allies poison Sunreach from within. My cell—small, scattered—needs fresh courage.<BR><BR>
+      Will you help us sabotage a shipment of cursed weapons meant for the city guard? If Minax arms them, Sunreach falls for good.”
+      ]]>
+    </NPCText>
+    <Option text="What must I do?" next="questIntro"/>
+    <Option text="Sabotage the city guard? Isn’t that treason?" next="moral"/>
+    <Option text="This sounds dangerous. Who stands with you?" next="cell"/>
+    <Option text="On second thought, I cannot help." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="who">
+    <NPCText>
+      <![CDATA[
+      She draws herself up, not with arrogance but conviction.<BR><BR>
+      “I was once a squire of Trinsic, taught honor and restraint. Here, I fight for something greater—freedom. I lead a handful of rebels, though most know me only as a healer.<BR>
+      My true name is Alessa Dawnspire. If you wish to resist Minax, you’re not alone.”
+      ]]>
+    </NPCText>
+    <Option text="How can I join you?" next="recruit"/>
+    <Option text="A healer and a rebel—an odd pair." next="oddPair"/>
+    <Option text="I’m not interested in your cause." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="hopeless">
+    <NPCText>
+      <![CDATA[
+      Her gaze sharpens, wounded but defiant.<BR><BR>
+      “Sunreach is worth saving, if only for those who refuse to bow to Minax. If you will not stand with us, then step aside—for we will not falter.”
+      ]]>
+    </NPCText>
+    <Option text="I spoke too soon. How can I help?" next="recruit"/>
+    <Option text="Farewell, then." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Alessa nods curtly, returning her attention to the distant docks.<BR>
+      “Then may you find the peace we cannot. If you change your mind, seek me again—if Minax’s dogs don’t find me first.”
+      ]]>
+    </NPCText>
+    <Option text="Wait—I wish to help." next="recruit"/>
+    <Option text="Goodbye." action="Close"/>
+  </Dialogue>
+
+  <!-- Backstory & Allies -->
+  <Dialogue id="oddPair">
+    <NPCText>
+      <![CDATA[
+      Alessa manages a faint, rueful smile.<BR>
+      “When evil comes in shadows, healers must learn the sword—or perish with the gentle. I have friends who teach me both.<BR>
+      Jemel the Quick runs messages for us in the slums; Aria Silverhand guides us in secret, risking her own safety. But Captain Rhogar... he hunts us without mercy.”
+      ]]>
+    </NPCText>
+    <Option text="Why does Captain Rhogar hunt you?" next="rhogar"/>
+    <Option text="Tell me about Aria Silverhand." next="aria"/>
+    <Option text="What is Jemel’s role?" next="jemel"/>
+    <Option text="I’ll help however I can." next="questIntro"/>
+  </Dialogue>
+
+  <Dialogue id="cell">
+    <NPCText>
+      <![CDATA[
+      She lowers her voice.<BR>
+      “We are few. Jemel the Quick is our eyes and ears in the alleys. Aria Silverhand brings us word from the scholars—and hope, when mine runs low.<BR>
+      But Rhogar Blackwake... he hunts us like beasts. He’ll do anything to crush our cell.”
+      ]]>
+    </NPCText>
+    <Option text="Who is Aria Silverhand?" next="aria"/>
+    <Option text="Why is Rhogar so relentless?" next="rhogar"/>
+    <Option text="Let’s talk about your plan." next="questIntro"/>
+  </Dialogue>
+
+  <Dialogue id="aria">
+    <NPCText>
+      <![CDATA[
+      Alessa hesitates, a flush in her cheeks.<BR>
+      “Aria is... brilliant, brave, and always a step ahead. She risks everything to help us, even while spies hunt her for ancient secrets. I trust her with my life—perhaps more than I should.”<BR><BR>
+      She quickly looks away, then gathers herself.<BR>
+      “Enough. Our cause comes first. Will you help?”
+      ]]>
+    </NPCText>
+    <Option text="I see. Tell me about the sabotage." next="questIntro"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="jemel">
+    <NPCText>
+      <![CDATA[
+      “Jemel is my oldest friend—quick, clever, and hard to catch. He runs messages, scouts patrols, and knows every shadow in Sunreach.<BR>
+      Without him, we’d be lost. If he trusts you, so do I.”
+      ]]>
+    </NPCText>
+    <Option text="How can I help you now?" next="questIntro"/>
+    <Option text="Not my fight, I’m afraid." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="rhogar">
+    <NPCText>
+      <![CDATA[
+      Her voice hardens.<BR>
+      “Captain Rhogar controls the docks—and the city’s darker trades. He fears the guard will turn on him if Minax’s cursed weapons succeed. He’d see us dead before he’d lose power.”
+      ]]>
+    </NPCText>
+    <Option text="Then we must act before Rhogar finds you." next="questIntro"/>
+    <Option text="This is too dangerous for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="moral">
+    <NPCText>
+      <![CDATA[
+      Alessa’s jaw tightens.<BR>
+      “If justice serves evil, is it still justice? The guards I once admired now serve Minax’s will. Sabotage is not treason—it’s hope, reborn through fire. I’ll ask again: will you help stop these cursed blades?”
+      ]]>
+    </NPCText>
+    <Option text="Yes, I will help you." next="questIntro"/>
+    <Option text="No. Good luck, Alessa." action="Close"/>
+  </Dialogue>
+
+  <!-- QUEST OFFER -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ffeab6'>
+      Alessa glances over her shoulder, voice dropping to a whisper.<BR><BR>
+      “A ship in the west harbor brings crates of swords—each blade cursed by Minax’s black magic. The guards think them gifts; in truth, they’ll make men into monsters.<BR><BR>
+      I need someone outside my cell. Go to the shadowed warehouse by the salt market. Find the shipment, replace Minax’s talismans with these blessed charms, and slip away unseen. If you’re caught, Rhogar’s men will show no mercy.”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll sabotage the weapons." 
+            action="GiveItem:FactionSabotageQuestScroll(SunreachWeapons,Alessa,300)" 
+            condition="!HasItem:FactionSabotageQuestScroll"
+            next="accept"/>
+    <Option text="What do these charms do?" next="charms"/>
+    <Option text="What if I’m discovered?" next="risk"/>
+    <Option text="Can I trust your information?" next="trust"/>
+    <Option text="I’m not ready for this." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Alessa presses a velvet pouch into your hand.<BR>
+      “Those are holy charms, blessed in secret by Trinsic’s last true paladins. Replace every talisman you find—let no cursed blade remain. When it’s done, return to me, and you’ll have the thanks of every free soul in Sunreach.<BR>
+      May the dawn find you victorious.”
+      ]]>
+    </NPCText>
+    <Option text="I won’t let you down." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Details -->
+  <Dialogue id="charms">
+    <NPCText>
+      <![CDATA[
+      “Minax’s talismans turn men into bloodthirsty beasts. Our charms protect the bearer—and break Minax’s hold on the steel. If you see a blade wrapped in black cord, cut it free and bind one of these instead.”
+      ]]>
+    </NPCText>
+    <Option text="Understood. I’ll handle it." 
+            action="GiveItem:FactionSabotageQuestScroll(SunreachWeapons,Alessa,300)" 
+            condition="!HasItem:FactionSabotageQuestScroll"
+            next="accept"/>
+    <Option text="Too risky for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="risk">
+    <NPCText>
+      <![CDATA[
+      “Captain Rhogar’s men patrol the harbor. If they catch you, they’ll raise the alarm—if you must, use this smoke bomb. It’ll buy you a few seconds to escape, but no more.”<BR>
+      She passes you a small vial, cold to the touch.
+      ]]>
+    </NPCText>
+    <Option text="I’m ready. I’ll do it." 
+            action="GiveItem:FactionSabotageQuestScroll(SunreachWeapons,Alessa,300)"
+            condition="!HasItem:FactionSabotageQuestScroll"
+            next="accept"/>
+    <Option text="I can’t take this risk." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="trust">
+    <NPCText>
+      <![CDATA[
+      “Aria Silverhand herself brought me the details. If she is deceived, we’re all lost anyway. I trust her—and now I must trust you.”
+      ]]>
+    </NPCText>
+    <Option text="Very well. Give me the charms." 
+            action="GiveItem:FactionSabotageQuestScroll(SunreachWeapons,Alessa,300)"
+            condition="!HasItem:FactionSabotageQuestScroll"
+            next="accept"/>
+    <Option text="I’ll pass." action="Close"/>
+  </Dialogue>
+
+<!-- Backstory Expansion Branch -->
+<Dialogue id="aboutMeIntro">
+  <NPCText>
+    <![CDATA[
+    Alessa folds her arms, glancing at the sea.<BR>
+    “Few ask that. I suppose... if you walk into fire beside someone, it helps to know why they burn.”<BR><BR>
+    “What do you wish to know?”
+    ]]>
+  </NPCText>
+  <Option text="Why did you become a paladin?" next="whyPaladin"/>
+  <Option text="What does your faith mean to you?" next="faith"/>
+  <Option text="What do you think of Sunreach?" next="sunreachView"/>
+  <Option text="Tell me something personal." next="personal"/>
+  <Option text="Nothing more for now." action="Close"/>
+</Dialogue>
+
+<Dialogue id="whyPaladin">
+  <NPCText>
+    <![CDATA[
+    “Trinsic taught me to fight with discipline. But when Minax razed the outskirts, and the order stood idle, I left.”<BR><BR>
+    “Now I follow a path that feels truer—serving the people, not titles. Paladinhood isn’t armor and sermons. It’s sacrifice.”
+    ]]>
+  </NPCText>
+  <Option text="You sound disillusioned." next="disillusioned"/>
+  <Option text="That’s admirable. What keeps you going?" next="whatKeepsGoing"/>
+</Dialogue>
+
+<Dialogue id="disillusioned">
+  <NPCText>
+    <![CDATA[
+    “I believed too hard, too young. But disillusionment isn't weakness—it’s clarity. Now, I believe in people. In choices. In dawns we carve ourselves.”
+    ]]>
+  </NPCText>
+  <Option text="So why still call yourself paladin?" next="stillPaladin"/>
+</Dialogue>
+
+<Dialogue id="stillPaladin">
+  <NPCText>
+    <![CDATA[
+    “Because if I abandon the title entirely, I leave it to those who misuse it. Let the word mean something again—through action, not authority.”
+    ]]>
+  </NPCText>
+  <Option text="I respect that. Tell me about your faith." next="faith"/>
+</Dialogue>
+
+<Dialogue id="whatKeepsGoing">
+  <NPCText>
+    <![CDATA[
+    “The faces of villagers we’ve saved. The letters Jemel delivers from families reunited. And... Aria.”<BR><BR>
+    Her voice softens briefly. “She reminds me there’s beauty worth protecting.”
+    ]]>
+  </NPCText>
+  <Option text="You care for Aria, don’t you?" next="ariaFeelings" condition="IsFemale"/>
+  <Option text="You love her." next="ariaFeelings" condition="IsMale"/>
+  <Option text="That’s enough for me." action="Close"/>
+</Dialogue>
+
+<Dialogue id="ariaFeelings">
+  <NPCText>
+    <![CDATA[
+    Alessa hesitates, then smiles.<BR>
+    “Yes. I do. But my heart must wait. If we lose this fight, nothing else matters.”<BR>
+    She straightens. “Let’s speak of lighter things... for now.”
+    ]]>
+  </NPCText>
+  <Option text="What of your faith, then?" next="faith"/>
+</Dialogue>
+
+<Dialogue id="faith">
+  <NPCText>
+    <![CDATA[
+    “I believe faith is a torch. Not to blind, but to guide. I pray to no god blindly, but I hold to the Virtues. Valor. Compassion. Justice.”<BR><BR>
+    “Even if Britannia forgets them, I won’t.”
+    ]]>
+  </NPCText>
+  <Option text="Which virtue do you hold most dear?" next="favoriteVirtue"/>
+</Dialogue>
+
+<Dialogue id="favoriteVirtue">
+  <NPCText>
+    <![CDATA[
+    “Sacrifice.” She says it without hesitation.<BR><BR>
+    “It’s easy to talk of justice, harder to give everything for others. Minax offers power. I offer pain, hard roads, and hope. And still... people follow.”
+    ]]>
+  </NPCText>
+  <Option text="Your courage is rare." action="AddStat:Str,2,120"/>
+  <Option text="You’re romanticizing suffering." action="AddStat:Int,2,120"/>
+  <Option text="You inspire me." action="Karma:150"/>
+</Dialogue>
+
+<Dialogue id="sunreachView">
+  <NPCText>
+    <![CDATA[
+    “Sunreach is both miracle and monster. Built on trade, ruled by shadow. I love its energy—but loathe its apathy.”<BR>
+    “Darius counts coins. Rhogar counts blades. I count lives.”<BR><BR>
+    She pauses. “Maybe that’s foolish. Maybe not.”
+    ]]>
+  </NPCText>
+  <Option text="You’re not alone in that." action="Karma:100"/>
+  <Option text="The city’s beyond saving." action="Karma:-100"/>
+  <Option text="Let’s talk about something personal." next="personal"/>
+</Dialogue>
+
+<Dialogue id="personal">
+  <NPCText>
+    <![CDATA[
+    Alessa exhales, laughing softly.<BR>
+    “Personal? Alright.”<BR><BR>
+    “I love river songs from Yew. I once cried over a stray dog that bit me. And I’ve secretly always wanted to see Aerilon’s sky gardens.”<BR>
+    “That personal enough?”
+    ]]>
+  </NPCText>
+  <Option text="What song from Yew?" next="yewSong"/>
+  <Option text="Why Aerilon?" next="aerilonDream"/>
+  <Option text="That’s surprisingly sweet." action="SendMessage:You feel closer to Alessa."/>
+</Dialogue>
+
+<Dialogue id="yewSong">
+  <NPCText>
+    <![CDATA[
+    “There’s one about a willow tree waiting for a lost knight. It ends with her becoming the tree herself. Sad, but... peaceful.”<BR>
+    “Jemel used to hum it when we camped outside the city.”
+    ]]>
+  </NPCText>
+  <Option text="You still carry that peace?" next="faith"/>
+</Dialogue>
+
+<Dialogue id="aerilonDream">
+  <NPCText>
+    <![CDATA[
+    “I hear Aerilon’s sky gardens bloom with petals that catch the moonlight like silver. I just...”<BR>
+    “Want to see something untouched. Unscarred. A place where no blood has been spilled.”
+    ]]>
+  </NPCText>
+  <Option text="Maybe I’ll take you there someday." action="Karma:100"/>
+  <Option text="It’s just a dream." action="Karma:-50"/>
+</Dialogue>
+
+
+</DialogueFile>

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="AriaSilverhand">
+
+  <!-- Greeting -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#ddb19f'>
+      A striking woman leans over a battered map spread across a crate. Her hands are wrapped in silver-threaded gloves, dusted with sand. She glances up, quick and appraising.<BR><BR>
+      "Another seeker? Or are you one of Seraphine’s spies? Either way, Sunreach has a way of blurring the lines. I am Aria Silverhand—archaeologist, sometimes historian, sometimes... something else. State your purpose."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I heard you need skilled help in Sunreach." next="introquest"/>
+    <Option text="You seem on edge. Trouble with the Council?" next="council"/>
+    <Option text="What brings an archaeologist to a city of pirates?" next="backstory"/>
+    <Option text="Is it true you deal with Aerilon’s mages?" next="aerilon"/>
+	<Option text="Tell me more about yourself." next="deepdive"/>
+    <Option text="Just passing by." next="goodbye"/>
+  </Dialogue>
+
+  <!-- Background/Lore -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      She gives a wry smile.<BR><BR>
+      "Sunreach is a crossroads, a vault, and a grave for secrets—my kind of place. After Minax burned Moonglow’s libraries, knowledge scattered like sand. I followed the rumors here. These ruins below Sunreach? They're older than the city itself—and perhaps the key to ending Minax’s shadow."<BR><BR>
+      "But secrets have teeth. That’s why I keep my allegiances flexible."
+      ]]>
+    </NPCText>
+    <Option text="Do you seek relics to fight Minax?" next="introquest"/>
+    <Option text="Sounds dangerous. How do you survive?" next="danger"/>
+    <Option text="I’m ready for work, if you have it." next="introquest"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      Aria’s voice drops.<BR><BR>
+      "The Council is a viper’s nest. Darius wants my finds. Seraphine wants my silence. Hassan means well, but his rivals don’t care who gets trampled. You can trust everyone here—until you can’t."
+      ]]>
+    </NPCText>
+    <Option text="So you walk a dangerous line." next="danger"/>
+    <Option text="Why do you risk it?" next="motivation"/>
+    <Option text="Work is work. What do you need done?" next="introquest"/>
+  </Dialogue>
+
+  <Dialogue id="aerilon">
+    <NPCText>
+      <![CDATA[
+      She grins slyly.<BR><BR>
+      "Aerilon pays in secrets, Sunreach pays in gold. I trade both. Their mages hunger for ancient tech, and I happen to know where the bones of the world are buried. If you’re clever, you can play the cities off one another. Just don’t get caught."
+      ]]>
+    </NPCText>
+    <Option text="You sound like you need a trustworthy ally." next="trust"/>
+    <Option text="Do you have a job for me?" next="introquest"/>
+    <Option text="Perhaps I’ll visit Aerilon someday." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      "You survive by staying useful. And by never letting anyone know how much you really know. Let’s see if you’re as resourceful as you look."
+      ]]>
+    </NPCText>
+    <Option text="What’s the job?" next="introquest"/>
+    <Option text="On second thought, I’ll stay out of trouble." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="motivation">
+    <NPCText>
+      <![CDATA[
+      "I collect stories. Sometimes those stories save lives. Sometimes, they end them. I suppose I want to decide which."
+      ]]>
+    </NPCText>
+    <Option text="Let’s make history, then. What’s the task?" next="introquest"/>
+    <Option text="I’ll leave you to your stories." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="trust">
+    <NPCText>
+      <![CDATA[
+      She arches an eyebrow. "Trust? That’s a word with many meanings in Sunreach. But if you prove yourself, we can do business. Dangerous, but profitable."
+      ]]>
+    </NPCText>
+    <Option text="Test me." next="introquest"/>
+    <Option text="I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="goodbye">
+    <NPCText>
+      <![CDATA[
+      Aria returns to her map. "Suit yourself. If you ever crave adventure or coin, you know where to find me."
+      ]]>
+    </NPCText>
+    <Option text="Maybe later." action="Close"/>
+  </Dialogue>
+
+  <!-- Main Quest Branch: The Ancient Weapon -->
+
+  <Dialogue id="introquest">
+    <NPCText>
+      <![CDATA[
+      Aria lowers her voice.<BR><BR>
+      "Listen carefully. Beneath Sunreach lies a vault—a relic chamber from before Minax’s rise. I believe it holds an artifact capable of disrupting her magic: the **Aegis Shard**. Trouble is, I’m not the only one hunting for it. Minax cultists, council thugs, and pirates all want a piece."<BR><BR>
+      "I need someone *unaffiliated* to recover the Aegis Shard and bring it to me. You’ll have to outwit traps, bribe or fight your way past cultists, and avoid the council’s informers."
+      ]]>
+    </NPCText>
+    <Option text="Why trust me with something so valuable?" next="value"/>
+    <Option text="Tell me more about the Aegis Shard." next="shardlore"/>
+    <Option text="What dangers should I expect?" next="hazards"/>
+    <Option text="I’m ready. Where do I start?" next="acceptquest"/>
+    <Option text="Sounds too risky. I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="value">
+    <NPCText>
+      <![CDATA[
+      "Because I don’t trust anyone in Sunreach’s power circles. Outsiders have fewer strings attached. If you cross me, you’ll wish you hadn’t. If you deliver, you’ll earn my trust—and much more."
+      ]]>
+    </NPCText>
+    <Option text="I accept. Where is the vault?" next="acceptquest"/>
+    <Option text="I want to know more about this artifact first." next="shardlore"/>
+    <Option text="On second thought, no thanks." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="shardlore">
+    <NPCText>
+      <![CDATA[
+      "The Aegis Shard is said to be a fragment of the Gem of Immortality—before Minax began gathering the shards. It warps magic, shields against corruption, and in the wrong hands... could level cities. That’s why I want it hidden from the council—and from Minax."
+      ]]>
+    </NPCText>
+    <Option text="Let’s get to it. Where is the vault?" next="acceptquest"/>
+    <Option text="I need to prepare first." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="hazards">
+    <NPCText>
+      <![CDATA[
+      "The ruins are infested with cultists loyal to Minax, and booby-trapped by whoever built them. Some say the dead walk in those tunnels. If stealth fails, fight hard or run fast. And don’t trust anyone offering ‘guidance’ down there—they’re probably on someone’s payroll."
+      ]]>
+    </NPCText>
+    <Option text="Understood. I’m ready to descend." next="acceptquest"/>
+    <Option text="Maybe I’ll try something safer." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="acceptquest">
+    <NPCText>
+      <![CDATA[
+      Aria produces a battered map and a strange silver key.<BR><BR>
+      "This map marks the hidden entrance. The key opens the inner vault. Retrieve the Aegis Shard and return—do not hand it to anyone else, not even a council member. If you succeed, you’ll be paid in both coin and favor—perhaps even a secret or two from Aerilon."<BR><BR>
+      "But beware. If you’re caught, I’ll deny ever knowing you."
+      ]]>
+    </NPCText>
+    <Option text="I’ll bring you the Shard." action="GiveItem:FactionArtifactQuestScroll(Aegis Shard,Sunreach,500)" next="questactive"/>
+    <Option text="I changed my mind. Too dangerous." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="questactive">
+    <NPCText>
+      <![CDATA[
+      "Go swiftly—and quietly. Return only when you have the Shard. Trust no one."
+      ]]>
+    </NPCText>
+    <Option text="Understood." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="deepdive">
+    <NPCText>
+      <![CDATA[
+      Aria leans back against a crate, her silver hair catching the lantern light.<BR><BR>
+      "Curious, are we? Most here don’t bother asking. But fine—ask your questions. Just don’t expect all the answers to be true."
+      ]]>
+    </NPCText>
+    <Option text="Where were you before Sunreach?" next="deepdive_origin"/>
+    <Option text="Why do you risk so much for relics?" next="deepdive_risk"/>
+    <Option text="Do you serve Aerilon… or yourself?" next="deepdive_aerilon"/>
+    <Option text="What’s with your name—'Silverhand'?" next="deepdive_name"/>
+    <Option text="I’ve heard rumors you were once part of the Moonglow Circle." next="deepdive_rumor"/>
+    <Option text="Never mind." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="deepdive_origin">
+    <NPCText>
+      <![CDATA[
+      "Born near the Lyceum, raised on scrolls, exiled over a theory no one believed. Moonglow valued tradition—too much. I asked questions they didn't like. One day my mentor vanished, and I was told never to return.<BR><BR>
+      So I started digging—literally. The ruins beneath us speak louder than any court wizard."
+      ]]>
+    </NPCText>
+    <Option text="You sound bitter." next="deepdive_bitter"/>
+    <Option text="So you turned exile into purpose." next="deepdive_purpose"/>
+  </Dialogue>
+
+  <Dialogue id="deepdive_bitter">
+    <NPCText>
+      <![CDATA[
+      "Bitterness is for those who lost something. I gained freedom, danger, and more insight than they ever offered. But yes... I miss the stars over Moonglow."
+      ]]>
+    </NPCText>
+    <Option text="What keeps you going now?" next="deepdive_motivation"/>
+  </Dialogue>
+
+  <Dialogue id="deepdive_purpose">
+    <NPCText>
+      <![CDATA[
+      She chuckles softly.<BR><BR>
+      "Exactly. I chose motion over mourning. There's power in stories, especially the buried ones."
+      ]]>
+    </NPCText>
+    <Option text="And danger." next="deepdive_risk"/>
+  </Dialogue>
+
+  <Dialogue id="deepdive_risk">
+    <NPCText>
+      <![CDATA[
+      "Relics reshape kingdoms. One artifact in the wrong hands can doom cities. I don’t seek gold—I seek leverage."<BR><BR>
+      She leans forward. "And if I can rewrite the ending Minax has planned? That’s worth any risk."
+      ]]>
+    </NPCText>
+    <Option text="So you're a hero?" next="deepdive_hero"/>
+    <Option text="Or just playing every side." next="deepdive_double"/>
+  </Dialogue>
+
+  <Dialogue id="deepdive_hero">
+    <NPCText>
+      <![CDATA[
+      She laughs. "Hardly. I just want the world to remember who *actually* did the work when the dust settles."
+      ]]>
+    </NPCText>
+    <Option text="I respect that." next="deepdive_personal"/>
+  </Dialogue>
+
+  <Dialogue id="deepdive_double">
+    <NPCText>
+      <![CDATA[
+      "I prefer *adaptive*. If I know who’s lying, I can lie better."
+      ]]>
+    </NPCText>
+    <Option text="Fair enough." next="deepdive_personal"/>
+  </Dialogue>
+
+  <Dialogue id="deepdive_name">
+    <NPCText>
+      <![CDATA[
+      "Silverhand? That’s not birthright. It’s memory. After an expedition went wrong, I lost this arm to a sand wyrm. The replacement was forged from Aerilon alloy and Moonglow enchantments. A symbol of who I was... and who I became."
+      ]]>
+    </NPCText>
+    <Option text="Can I see it?" condition="IsMale" action="SendMessage:She flexes the fingers of her gloved hand, but keeps it mostly covered." next="deepdive_personal"/>
+    <Option text="That must have been painful." condition="IsFemale" action="SendMessage:Her silver eyes soften for a moment." next="deepdive_personal"/>
+    <Option text="Impressive craftsmanship." next="deepdive_personal"/>
+  </Dialogue>
+
+  <Dialogue id="deepdive_aerilon">
+    <NPCText>
+      <![CDATA[
+      "Aerilon pays well. But make no mistake—I serve my own interests. Their floating towers and smug archmages hide secrets too dark for even Seraphine to stomach."<BR><BR>
+      "Still... useful partners. And enemies, sometimes."
+      ]]>
+    </NPCText>
+    <Option text="So who do you trust?" next="deepdive_trust"/>
+  </Dialogue>
+
+  <Dialogue id="deepdive_rumor">
+    <NPCText>
+      <![CDATA[
+      She narrows her eyes. "Who told you that?"<BR><BR>
+      [If you're lucky, she may tell you more...]
+      ]]>
+    </NPCText>
+    <Option text="Just a rumor." condition="RandomChance:40" next="deepdive_confess"/>
+    <Option text="No one important." action="SendMessage:You feel her measuring you for lies." next="deepdive_personal"/>
+  </Dialogue>
+
+  <Dialogue id="deepdive_confess">
+    <NPCText>
+      <![CDATA[
+      She sighs.<BR><BR>
+      "Yes. I was part of the Circle of Seven for a time. I walked the Ley Paths. I even helped bind a shard once. But I saw what it cost. We thought we were immortal. We were wrong."<BR><BR>
+      "Now I work in the dirt. It's more honest."
+      ]]>
+    </NPCText>
+    <Option text="You were one of the Seven? That’s… incredible." action="AddSkill:EvaluatingIntelligence,5,120" next="deepdive_personal"/>
+  </Dialogue>
+
+  <Dialogue id="deepdive_trust">
+    <NPCText>
+      <![CDATA[
+      "People who listen more than they speak. People who run *toward* danger without pretending they're noble. People who don’t ask questions they already know the answers to."<BR><BR>
+      "You might be one of them... or you might be watching for Seraphine. Time will tell."
+      ]]>
+    </NPCText>
+    <Option text="Then let time speak for me." action="Fame:+100" next="deepdive_personal"/>
+  </Dialogue>
+
+  <Dialogue id="deepdive_motivation">
+    <NPCText>
+      <![CDATA[
+      "The ruins speak. The stars whisper. The power beneath Sunreach *trembles*. I dig to understand what broke the world—before Minax breaks it again."<BR><BR>
+      "That, and I enjoy a good puzzle."
+      ]]>
+    </NPCText>
+    <Option text="Sounds like purpose to me." next="deepdive_personal"/>
+  </Dialogue>
+
+  <Dialogue id="deepdive_personal">
+    <NPCText>
+      <![CDATA[
+      She studies you, expression unreadable.<BR><BR>
+      "You’re either wasting my time... or you're someone I can use."<BR>
+      Then, with a sudden grin: "Prove you're the latter, and I might just share a real secret next time."
+      ]]>
+    </NPCText>
+    <Option text="I won’t waste it." action="AttachXml:XmlQuestTracker,AriaBackstoryExplored" />
+    <Option text="We’ll see." action="Close"/>
+  </Dialogue>
+
+
+</DialogueFile>

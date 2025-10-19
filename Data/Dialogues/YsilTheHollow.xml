@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="YsilTheHollow">
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#88e2e8'>
+      A hollow-eyed woman stands just beyond the village’s frozen boundary. Her ragged shroud seems woven from shadows and frost. Runic scars snake up her arms and neck, pulsing with a sickly azure light.
+      <BR><BR>
+      She inclines her head as you approach, frost swirling at her feet.<BR>
+      <EM>"Ash drifts east on the midnight wind... Yet still the wolf howls, old wounds unhealed. Why does a warm-blood wander where ice bites deepest?"</EM>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Who are you? Why can’t you enter Frostmere?" next="whoareyou"/>
+    <Option text="You speak like the storm. What are you?" next="whatru"/>
+    <Option text="I come to help. Is there trouble here?" next="trouble"/>
+	<Option text="Tell me something real. What did you love, before all this?" next="realstart"/>
+    <Option text="I only seek shelter. Nothing more." next="shelter"/>
+  </Dialogue>
+
+  <!-- Who are you branch -->
+  <Dialogue id="whoareyou">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#88e2e8'>
+      Ysil traces a cracked rune on her sash.<BR>
+      <EM>"I am frost after fire, echo after scream... Once I served the Shadow Queen—Minax—until her lies froze my heart. Irinya watches me with owl’s eyes, but her trust is a distant sun." </EM>
+      <BR><BR>
+      Her gaze lingers on the village.<BR>
+      <EM>"The council marks me cursed. My scars burn at the village edge—old pacts forbid me sanctuary. Yet I see what others will not."</EM>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="What do you see, Ysil?" next="vision"/>
+    <Option text="You served Minax? Why betray her?" next="minax"/>
+    <Option text="Your scars—did Kaelen try to heal you?" next="kaelen"/>
+    <Option text="That’s enough for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="whatru">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#88e2e8'>
+      She laughs—a brittle, hollow sound.<BR>
+      <EM>"What am I? A shadow wearing old flesh. The Obelisk calls me 'rune-bound'; Minax calls me 'traitor.' Frostmere calls me 'Hollow.' Yet names are as fleeting as snow in sunlight."</EM>
+      <BR><BR>
+      Her eyes glint behind the mask.<BR>
+      <EM>"Are you here to bear burdens, or cast more shadows?"</EM>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Maybe both. Can I do anything for you?" next="trouble"/>
+    <Option text="If you’re cursed, should I trust you?" next="trust"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Trouble branch, quest offer -->
+  <Dialogue id="trouble">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#88e2e8'>
+      Ysil’s fingers curl around her runebound mempo.<BR>
+      <EM>"The cold moon gnaws at the world’s bones… but a more present fang stalks these snows. The Glacial Timberwolf. Its breath withers hope, its howl makes even Svala’s heart falter. Once, it was a simple beast. Now, twisted—tainted by the same darkness that burned my soul."</EM>
+      <BR><BR>
+      She leans closer, frost swirling from her cloak.<BR>
+      <EM>"The wolf’s corruption is my own reflected in ice. Slay it, and perhaps some fragment of my sin will shatter. Or perhaps… the ice will claim us both."</EM>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will hunt the Glacial Timberwolf for you."
+            action="GiveItem:FactionKillQuestScroll(GlacialTimberwolf,1,Frostmere,750)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="accept"/>
+    <Option text="Why does the beast trouble you personally?" next="wolfWhy"/>
+    <Option text="What if I refuse?" next="refuse"/>
+    <Option text="Tell me more about the wolf’s corruption." next="corruption"/>
+    <Option text="I need time to prepare." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#88e2e8'>
+      She bows, frost swirling up.<BR>
+      <EM>"The wolf prowls the pine-shadowed eastern ridge, where moonlight makes the snow bleed blue. It fears fire, but hungers for those marked by the Obelisk. Bring me a tuft of its glacial fur—or a fang frozen in regret. And beware—its howl can chill the marrow of your hope."</EM>
+      <BR><BR>
+      <EM>"Return, and I may share what I know of the final shard... or the shadow in Kaelen’s fate."</EM>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll bring proof of the kill." action="Close"/>
+  </Dialogue>
+
+  <!-- Wolf lore -->
+  <Dialogue id="wolfWhy">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#88e2e8'>
+      Ysil draws a spiral in the frost.<BR>
+      <EM>"The wolf was once my guide in the wild years—a silent watcher. When Minax’s magic swept north, I failed to shield it. Now it is a specter, bound to my own guilt. Its suffering is my shadow. Destroy it, and you free a piece of me—and Frostmere—from Minax’s old curse."</EM>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll accept your burden and hunt the beast."
+            action="GiveItem:FactionKillQuestScroll(GlacialTimberwolf,1,Frostmere,750)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="accept"/>
+    <Option text="I’m not sure I trust your story." next="trust"/>
+    <Option text="I’ll think about it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="corruption">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#88e2e8'>
+      She looks away, voice nearly lost.<BR>
+      <EM>"Minax’s corruption is not only of flesh, but of memory and soul. The wolf howls not for hunger, but for what it has lost—just as I do. The runes on my skin? They are a map of every oath I broke in her name. The wolf’s fur… will show you runes, if you look with frostbitten eyes."</EM>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You carry a heavy burden." next="burden"/>
+    <Option text="If that’s true, I’ll hunt it in your stead." 
+            action="GiveItem:FactionKillQuestScroll(GlacialTimberwolf,1,Frostmere,750)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="accept"/>
+    <Option text="Too much darkness for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="burden">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#88e2e8'>
+      Ysil’s eyes shimmer with tears, quickly frozen.<BR>
+      <EM>"You understand, more than most. Yet the north teaches: even the sharpest ice dulls with time, and wounds heal, if not forgotten. If you would help me, help Frostmere—hunt the wolf. Or at least… remember my story, when the snows fall silent."</EM>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will do this." 
+            action="GiveItem:FactionKillQuestScroll(GlacialTimberwolf,1,Frostmere,750)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="accept"/>
+    <Option text="Not now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="refuse">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#88e2e8'>
+      She bows her head.<BR>
+      <EM>"Then let the snows pile high, and let the wolf howl. There is always a price, even for refusal. If you return, the offer lingers, like frost on a forgotten grave."</EM>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll reconsider." next="trouble"/>
+    <Option text="Goodbye." action="Close"/>
+  </Dialogue>
+
+  <!-- Kaelen lore branch -->
+  <Dialogue id="kaelen">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#88e2e8'>
+      Ysil’s scars pulse faintly.<BR>
+      <EM>"Kaelen has a healer’s heart, but his path twists as mine once did. He tried, with fire and frost, but wounds of the soul cannot be sealed by magic alone. If you see him, tell him the Hollow still dreams—of redemption, and of forgiveness."</EM>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll tell him if I see him." next="greeting"/>
+    <Option text="You both deserve a second chance." next="burden"/>
+  </Dialogue>
+
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#88e2e8'>
+      She stiffens, voice distant.<BR>
+      <EM>"I followed Minax in youth, drawn by the promise of power and belonging. But her shadow devours all light. I turned away too late; my soul bears the frostbite of regret. Now, I seek to undo what little harm I can. But the past is a river of ice—crossed, but never forgotten."</EM>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="We all have regrets. I will help if I can." next="trouble"/>
+    <Option text="I’m not sure redemption is possible." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="trust">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#88e2e8'>
+      She shrugs, cloaked in silence.<BR>
+      <EM>"Trust is a fire seldom lit in these snows. Irinya listens, Bryndra sharpens her sword, Kaelen brings herbs—yet none see all my truths. If you would walk with wolves and exiles, you must risk frostbite."</EM>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will take the risk. Give me the quest." 
+            action="GiveItem:FactionKillQuestScroll(GlacialTimberwolf,1,Frostmere,750)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="accept"/>
+    <Option text="Not today." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="shelter">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#88e2e8'>
+      She gestures to the ever-falling snow.<BR>
+      <EM>"There is shelter in silence, and in the howl of the wind. If you seek warmth, the White Boar Inn may grant it. If you seek answers, you will find only riddles beyond this line of frost."</EM>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Perhaps I will return." action="Close"/>
+    <Option text="I am ready to help now." next="trouble"/>
+  </Dialogue>
+  
+<!-- === Real conversation branch === -->
+<Dialogue id="realstart">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#88e2e8'>
+    Ysil pauses, frost gathering on her lashes.<BR>
+    <EM>"Love? A word like dried flowers beneath glass—fragile and scented with memory. But... you ask with sincerity. Perhaps it is time I shared more than frost and riddles."</EM>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Did you have a family?" next="ysil_family"/>
+  <Option text="Did you always serve Minax?" next="ysil_minax_past"/>
+  <Option text="Did you have a hobby? Something peaceful?" next="ysil_hobby"/>
+  <Option text="What brought you north to Frostmere?" next="ysil_frostmere"/>
+  <Option text="Nevermind." action="Close"/>
+</Dialogue>
+
+<!-- Family Branch -->
+<Dialogue id="ysil_family">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#88e2e8'>
+    <EM>"A sister, once. Mira. Laughed like thunder on still water. She joined the Circle of White Flame in Moonglow… while I fell into Minax's shadow. I have not heard her name in years. If she lives still, I dare not seek her. My shame is a blizzard too thick to cross."</EM>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="She might forgive you. Have you tried?" next="ysil_family_forgiveness"/>
+  <Option text="Minax breaks more than cities. I'm sorry." action="Karma:+100" next="ysil_sadpause"/>
+  <Option text="You abandoned her. It was your choice." action="Karma:-100" next="ysil_bitter"/>
+</Dialogue>
+
+<Dialogue id="ysil_family_forgiveness">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#88e2e8'>
+    Ysil blinks back tears that freeze before falling.<BR>
+    <EM>"Hope is a dangerous kindness… but perhaps not without value. If I ever hear her name whispered by the wind, I will listen."</EM>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Let’s talk about something else." next="realstart"/>
+</Dialogue>
+
+<Dialogue id="ysil_sadpause">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#88e2e8'>
+    She bows slightly.<BR>
+    <EM>"Pity from a blade is warmer than scorn. Thank you."</EM>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Let’s talk about something else." next="realstart"/>
+</Dialogue>
+
+<Dialogue id="ysil_bitter">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#88e2e8'>
+    A harsh wind seems to rise with her words.<BR>
+    <EM>"Do not mistake brokenness for weakness. The first mistake I made was trusting the judgment of others over my own. The second... was surviving."</EM>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Let's move on." next="realstart"/>
+</Dialogue>
+
+<!-- Minax Backstory -->
+<Dialogue id="ysil_minax_past">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#88e2e8'>
+    Ysil runs her fingers along a deep rune scar.<BR>
+    <EM>"Minax found me when I was seventeen—bitter, brilliant, and burning for purpose. She offered power in exchange for silence. I gave her both. At first, I thought I was changing the world. Then… I watched it rot from the inside."</EM>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Did you kill for her?" next="ysil_confess"/>
+  <Option text="She lied to you. You were used." action="Karma:+200" next="realstart"/>
+  <Option text="And now you beg sympathy?" action="Karma:-200" next="ysil_bitter"/>
+</Dialogue>
+
+<Dialogue id="ysil_confess">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#88e2e8'>
+    A long silence. Then:<BR>
+    <EM>"Yes. But I remember every face, every whisper before the end. The Hollow is not my name—it is what was left."</EM>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Thank you for telling me." action="Fame:+100" next="realstart"/>
+</Dialogue>
+
+<!-- Hobby Branch -->
+<Dialogue id="ysil_hobby">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#88e2e8'>
+    She tilts her head, wistful.<BR>
+    <EM>"I carved sigils into ice—symbols of balance. In Wind, they said such work was frivolous. But when the wind sings and the light bends just so... the runes hum like silver bells. I still carve, sometimes. The ice remembers me."</EM>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Could you teach me one of those sigils?" next="ysil_teach"/>
+  <Option text="That sounds beautiful." action="AddSkill:Inscription,10,600" next="realstart"/>
+</Dialogue>
+
+<Dialogue id="ysil_teach">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#88e2e8'>
+    Ysil traces a rune in the air.<BR>
+    <EM>"This one is called *Teyr-an-Hem*—it means 'Shadow yields to memory.' If you draw it at dawn into frost, it may ward nightmares... or awaken old ones."</EM>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="I’ll try it, next I find untouched snow." action="SendMessage:You feel a subtle insight stir within you." next="realstart"/>
+</Dialogue>
+
+<!-- Frostmere Backstory -->
+<Dialogue id="ysil_frostmere">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#88e2e8'>
+    <EM>"After I escaped Minax, the frost welcomed me. I wandered until I found Irinya—we spoke without words. She saw the truth in my eyes, and led me here. The others do not trust me, but they don’t drive me away either. That is enough."</EM>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="You and Irinya are close?" next="ysil_irinya"/>
+  <Option text="Seems the others don’t understand you." next="realstart"/>
+</Dialogue>
+
+<Dialogue id="ysil_irinya">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#88e2e8'>
+    Ysil lowers her voice.<BR>
+    <EM>"She dreams true. She saw my fall in frost and flame long before it happened. But her eyes are older than time—they see too far, and trust too little. Still... she is the first soul who named me 'Ysil' and not 'Hollow'."</EM>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="I’ll remember that." next="realstart"/>
+</Dialogue>
+  
+  
+</DialogueFile>

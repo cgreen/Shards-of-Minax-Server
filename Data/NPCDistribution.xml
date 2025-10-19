@@ -1,0 +1,5779 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  NPCDistribution.xml  -->
+<NPCs>
+  <NPC name="Blacksmiths" weight="5">
+    <SpawnObject text="Blacksmith/Hue/1001/Name/Hank" count="1" />
+    <SpawnObject text="Blacksmith/Hue/1102/Name/Sara" count="1" />
+  </NPC>
+  <NPC name="TownGuards" weight="10">
+    <SpawnObject text="Guard/Hue/1150/Name/Sentinel" count="2" />
+  </NPC>
+  <NPC name="Beggars" weight="2">
+    <SpawnObject text="Beggar/Hue/1100/Name/Lucky" count="1" />
+    <SpawnObject text="Beggar/Hue/1101/Name/Mary" count="1" />
+  </NPC>
+  <NPC name="AbylaiKhan" weight="1">
+    <SpawnObject text="AbylaiKhan" count="1" />
+  </NPC>
+
+  <NPC name="RandomCitizen" weight="1500">
+    <SpawnObject text="RandomCitizen" count="1" />
+  </NPC>
+
+  <NPC name="AbyssalGuardian" weight="1">
+    <SpawnObject text="AbyssalGuardian" count="1" />
+  </NPC>
+
+  <NPC name="AceThunderstruck" weight="1">
+    <SpawnObject text="AceThunderstruck" count="1" />
+  </NPC>
+
+  <NPC name="AdmiralQuantumStellar" weight="1">
+    <SpawnObject text="AdmiralQuantumStellar" count="1" />
+  </NPC>
+
+  <NPC name="AdmiralStarhawk" weight="1">
+    <SpawnObject text="AdmiralStarhawk" count="1" />
+  </NPC>
+
+  <NPC name="AhmadShahDurrani" weight="1">
+    <SpawnObject text="AhmadShahDurrani" count="1" />
+  </NPC>
+
+  <NPC name="AlbertoDaVinci" weight="1">
+    <SpawnObject text="AlbertoDaVinci" count="1" />
+  </NPC>
+
+  <NPC name="AlderwoodWainwright" weight="1">
+    <SpawnObject text="AlderwoodWainwright" count="1" />
+  </NPC>
+
+  <NPC name="AlehouseBartender" weight="1">
+    <SpawnObject text="AlehouseBartender" count="1" />
+  </NPC>
+
+  <NPC name="AmilcarCabral" weight="1">
+    <SpawnObject text="AmilcarCabral" count="1" />
+  </NPC>
+
+  <NPC name="AnaDoMar" weight="1">
+    <SpawnObject text="AnaDoMar" count="1" />
+  </NPC>
+
+  <NPC name="Anarchist" weight="1">
+    <SpawnObject text="Anarchist" count="1" />
+  </NPC>
+
+  <NPC name="AnnaCouby" weight="1">
+    <SpawnObject text="AnnaCouby" count="1" />
+  </NPC>
+
+  <NPC name="AnneBonny" weight="1">
+    <SpawnObject text="AnneBonny" count="1" />
+  </NPC>
+
+  <NPC name="AntoineLumiere" weight="1">
+    <SpawnObject text="AntoineLumiere" count="1" />
+  </NPC>
+
+  <NPC name="ArcadeKing" weight="1">
+    <SpawnObject text="ArcadeKing" count="1" />
+  </NPC>
+
+  <NPC name="ArcadeMaster" weight="1">
+    <SpawnObject text="ArcadeMaster" count="1" />
+  </NPC>
+
+  <NPC name="ArcanusTheMage" weight="1">
+    <SpawnObject text="ArcanusTheMage" count="1" />
+  </NPC>
+
+  <NPC name="ArcherQuinn" weight="1">
+    <SpawnObject text="ArcherQuinn" count="1" />
+  </NPC>
+
+  <NPC name="ArtemisiaOfCaria" weight="1">
+    <SpawnObject text="ArtemisiaOfCaria" count="1" />
+  </NPC>
+
+  <NPC name="AshokaTheWise" weight="1">
+    <SpawnObject text="AshokaTheWise" count="1" />
+  </NPC>
+
+  <NPC name="AthenianScholar" weight="1">
+    <SpawnObject text="AthenianScholar" count="1" />
+  </NPC>
+
+  <NPC name="AugustoSandino" weight="1">
+    <SpawnObject text="AugustoSandino" count="1" />
+  </NPC>
+
+  <NPC name="AugustusRegalis" weight="1">
+    <SpawnObject text="AugustusRegalis" count="1" />
+  </NPC>
+
+  <NPC name="BabylonianSage" weight="1">
+    <SpawnObject text="BabylonianSage" count="1" />
+  </NPC>
+
+  <NPC name="BakerPercivalCrumb" weight="1">
+    <SpawnObject text="BakerPercivalCrumb" count="1" />
+  </NPC>
+
+  <NPC name="BaronVonHohenberg" weight="1">
+    <SpawnObject text="BaronVonHohenberg" count="1" />
+  </NPC>
+
+  <NPC name="BaronWinghart" weight="1">
+    <SpawnObject text="BaronWinghart" count="1" />
+  </NPC>
+
+  <NPC name="BaronWladyslaw" weight="1">
+    <SpawnObject text="BaronWladyslaw" count="1" />
+  </NPC>
+
+  <NPC name="BartholomewCase" weight="1">
+    <SpawnObject text="BartholomewCase" count="1" />
+  </NPC>
+
+  <NPC name="BartholomewGearwright" weight="1">
+    <SpawnObject text="BartholomewGearwright" count="1" />
+  </NPC>
+
+  <NPC name="BartlebyRichington" weight="1">
+    <SpawnObject text="BartlebyRichington" count="1" />
+  </NPC>
+
+  <NPC name="BasilGreenleaf" weight="1">
+    <SpawnObject text="BasilGreenleaf" count="1" />
+  </NPC>
+
+  <NPC name="Bayano" weight="1">
+    <SpawnObject text="Bayano" count="1" />
+  </NPC>
+
+  <NPC name="BelladonnaHexsworth" weight="1">
+    <SpawnObject text="BelladonnaHexsworth" count="1" />
+  </NPC>
+
+  <NPC name="BenjaminLibertyThatcher" weight="1">
+    <SpawnObject text="BenjaminLibertyThatcher" count="1" />
+  </NPC>
+
+  <NPC name="BetyOfBetsimisaraka" weight="1">
+    <SpawnObject text="BetyOfBetsimisaraka" count="1" />
+  </NPC>
+
+  <NPC name="BrewmasterBriscoe" weight="1">
+    <SpawnObject text="BrewmasterBriscoe" count="1" />
+  </NPC>
+
+  <NPC name="BrockSteelbridge" weight="1">
+    <SpawnObject text="BrockSteelbridge" count="1" />
+  </NPC>
+
+  <NPC name="BussaOfBarbados" weight="1">
+    <SpawnObject text="BussaOfBarbados" count="1" />
+  </NPC>
+
+  <NPC name="CaiusBrutus" weight="1">
+    <SpawnObject text="CaiusBrutus" count="1" />
+  </NPC>
+
+  <NPC name="CaptainBarnabasFlintlock" weight="1">
+    <SpawnObject text="CaptainBarnabasFlintlock" count="1" />
+  </NPC>
+
+  <NPC name="CaptainBountyMcRae" weight="1">
+    <SpawnObject text="CaptainBountyMcRae" count="1" />
+  </NPC>
+
+  <NPC name="CaptainEliasCartwright" weight="1">
+    <SpawnObject text="CaptainEliasCartwright" count="1" />
+  </NPC>
+
+  <NPC name="CaptainGrimbeard" weight="1">
+    <SpawnObject text="CaptainGrimbeard" count="1" />
+  </NPC>
+
+  <NPC name="CaptainLiberty" weight="1">
+    <SpawnObject text="CaptainLiberty" count="1" />
+  </NPC>
+
+  <NPC name="CaptainNathanielTidewater" weight="1">
+    <SpawnObject text="CaptainNathanielTidewater" count="1" />
+  </NPC>
+
+  <NPC name="CaptainNebulaStardust" weight="1">
+    <SpawnObject text="CaptainNebulaStardust" count="1" />
+  </NPC>
+
+  <NPC name="CaptainRoderick" weight="1">
+    <SpawnObject text="CaptainRoderick" count="1" />
+  </NPC>
+
+  <NPC name="CaptainSaltyTide" weight="1">
+    <SpawnObject text="CaptainSaltyTide" count="1" />
+  </NPC>
+
+  <NPC name="CaptainScurvyJack" weight="1">
+    <SpawnObject text="CaptainScurvyJack" count="1" />
+  </NPC>
+
+  <NPC name="CarmenStarlette" weight="1">
+    <SpawnObject text="CarmenStarlette" count="1" />
+  </NPC>
+
+  <NPC name="CaterinaCornaro" weight="1">
+    <SpawnObject text="CaterinaCornaro" count="1" />
+  </NPC>
+
+  <NPC name="ChesterMcRad" weight="1">
+    <SpawnObject text="ChesterMcRad" count="1" />
+  </NPC>
+
+  <NPC name="ChiefTegwa" weight="1">
+    <SpawnObject text="ChiefTegwa" count="1" />
+  </NPC>
+
+  <NPC name="CinemarFoley" weight="1">
+    <SpawnObject text="CinemarFoley" count="1" />
+  </NPC>
+
+  <NPC name="CleopatraPhaera" weight="1">
+    <SpawnObject text="CleopatraPhaera" count="1" />
+  </NPC>
+
+  <NPC name="CocoaDeMerlot" weight="1">
+    <SpawnObject text="CocoaDeMerlot" count="1" />
+  </NPC>
+
+  <NPC name="ColonelBuster" weight="1">
+    <SpawnObject text="ColonelBuster" count="1" />
+  </NPC>
+
+  <NPC name="ContessaElise" weight="1">
+    <SpawnObject text="ContessaElise" count="1" />
+  </NPC>
+
+  <NPC name="CosmoGalileo" weight="1">
+    <SpawnObject text="CosmoGalileo" count="1" />
+  </NPC>
+
+  <NPC name="CountAlbrechtVonGoldfinger" weight="1">
+    <SpawnObject text="CountAlbrechtVonGoldfinger" count="1" />
+  </NPC>
+
+  <NPC name="CountVasilyGoldov" weight="1">
+    <SpawnObject text="CountVasilyGoldov" count="1" />
+  </NPC>
+
+  <NPC name="Cuffy" weight="1">
+    <SpawnObject text="Cuffy" count="1" />
+  </NPC>
+
+  <NPC name="CyrusScepterius" weight="1">
+    <SpawnObject text="CyrusScepterius" count="1" />
+  </NPC>
+
+  <NPC name="CyrusTheGreat" weight="1">
+    <SpawnObject text="CyrusTheGreat" count="1" />
+  </NPC>
+
+  <NPC name="CzarNikolai" weight="1">
+    <SpawnObject text="CzarNikolai" count="1" />
+  </NPC>
+
+  <NPC name="DameGraceSteelheart" weight="1">
+    <SpawnObject text="DameGraceSteelheart" count="1" />
+  </NPC>
+
+  <NPC name="DexterByte" weight="1">
+    <SpawnObject text="DexterByte" count="1" />
+  </NPC>
+
+  <NPC name="DexterGoldleaf" weight="1">
+    <SpawnObject text="DexterGoldleaf" count="1" />
+  </NPC>
+
+  <NPC name="DihyaTheKahina" weight="1">
+    <SpawnObject text="DihyaTheKahina" count="1" />
+  </NPC>
+
+  <NPC name="DinerWaitress" weight="1">
+    <SpawnObject text="DinerWaitress" count="1" />
+  </NPC>
+
+  <NPC name="DiscoDave" weight="1">
+    <SpawnObject text="DiscoDave" count="1" />
+  </NPC>
+
+  <NPC name="DJRhymeJones" weight="1">
+    <SpawnObject text="DJRhymeJones" count="1" />
+  </NPC>
+
+  <NPC name="DojoMasterBruce" weight="1">
+    <SpawnObject text="DojoMasterBruce" count="1" />
+  </NPC>
+
+  <NPC name="DomPedroII" weight="1">
+    <SpawnObject text="DomPedroII" count="1" />
+  </NPC>
+
+  <NPC name="DonDiegoDelPlata" weight="1">
+    <SpawnObject text="DonDiegoDelPlata" count="1" />
+  </NPC>
+
+  <NPC name="DracoDraconis" weight="1">
+    <SpawnObject text="DracoDraconis" count="1" />
+  </NPC>
+
+  <NPC name="DrBytechrome" weight="1">
+    <SpawnObject text="DrBytechrome" count="1" />
+  </NPC>
+
+  <NPC name="DrIgnatiusBlackthorn" weight="1">
+    <SpawnObject text="DrIgnatiusBlackthorn" count="1" />
+  </NPC>
+
+  <NPC name="DrQinStone" weight="1">
+    <SpawnObject text="DrQinStone" count="1" />
+  </NPC>
+
+  <NPC name="DrShenLong" weight="1">
+    <SpawnObject text="DrShenLong" count="1" />
+  </NPC>
+
+  <NPC name="DrXeno" weight="1">
+    <SpawnObject text="DrXeno" count="1" />
+  </NPC>
+
+  <NPC name="DukeHarmonix" weight="1">
+    <SpawnObject text="DukeHarmonix" count="1" />
+  </NPC>
+
+  <NPC name="DutugemunuTheRighteous" weight="1">
+    <SpawnObject text="DutugemunuTheRighteous" count="1" />
+  </NPC>
+
+  <NPC name="EamonORiley" weight="1">
+    <SpawnObject text="EamonORiley" count="1" />
+  </NPC>
+
+  <NPC name="EinarTheFrostbound" weight="1">
+    <SpawnObject text="EinarTheFrostbound" count="1" />
+  </NPC>
+
+  <NPC name="ElaraMoonshadow" weight="1">
+    <SpawnObject text="ElaraMoonshadow" count="1" />
+  </NPC>
+
+  <NPC name="ElderBirch" weight="1">
+    <SpawnObject text="ElderBirch" count="1" />
+  </NPC>
+
+  <NPC name="EldricCuvier" weight="1">
+    <SpawnObject text="EldricCuvier" count="1" />
+  </NPC>
+
+  <NPC name="EldricTheSage" weight="1">
+    <SpawnObject text="EldricTheSage" count="1" />
+  </NPC>
+
+  <NPC name="ElectraSparkle" weight="1">
+    <SpawnObject text="ElectraSparkle" count="1" />
+  </NPC>
+
+  <NPC name="EliottChesterton" weight="1">
+    <SpawnObject text="EliottChesterton" count="1" />
+  </NPC>
+
+  <NPC name="Enheduanna" weight="1">
+    <SpawnObject text="Enheduanna" count="1" />
+  </NPC>
+
+  <NPC name="EnkiOfDilmun" weight="1">
+    <SpawnObject text="EnkiOfDilmun" count="1" />
+  </NPC>
+
+  <NPC name="ErmesindeOfLuxembourg" weight="1">
+    <SpawnObject text="ErmesindeOfLuxembourg" count="1" />
+  </NPC>
+
+  <NPC name="ErmessendaOfAndorra" weight="1">
+    <SpawnObject text="ErmessendaOfAndorra" count="1" />
+  </NPC>
+
+  <NPC name="EvelynMapes" weight="1">
+    <SpawnObject text="EvelynMapes" count="1" />
+  </NPC>
+
+  <NPC name="FaNgum" weight="1">
+    <SpawnObject text="FaNgum" count="1" />
+  </NPC>
+
+  <NPC name="FarabundoMarti" weight="1">
+    <SpawnObject text="FarabundoMarti" count="1" />
+  </NPC>
+
+  <NPC name="FelicityGlimmerwing" weight="1">
+    <SpawnObject text="FelicityGlimmerwing" count="1" />
+  </NPC>
+
+  <NPC name="FelixTradewell" weight="1">
+    <SpawnObject text="FelixTradewell" count="1" />
+  </NPC>
+
+  <NPC name="FelixWiddershins" weight="1">
+    <SpawnObject text="FelixWiddershins" count="1" />
+  </NPC>
+
+  <NPC name="FinneganOLucky" weight="1">
+    <SpawnObject text="FinneganOLucky" count="1" />
+  </NPC>
+
+  <NPC name="FionnOConor" weight="1">
+    <SpawnObject text="FionnOConor" count="1" />
+  </NPC>
+
+  <NPC name="FizzyFizzlepop" weight="1">
+    <SpawnObject text="FizzyFizzlepop" count="1" />
+  </NPC>
+
+  <NPC name="FlashyFredrick" weight="1">
+    <SpawnObject text="FlashyFredrick" count="1" />
+  </NPC>
+
+  <NPC name="FocustanBrighthelm" weight="1">
+    <SpawnObject text="FocustanBrighthelm" count="1" />
+  </NPC>
+
+  <NPC name="FrancyskSkaryna" weight="1">
+    <SpawnObject text="FrancyskSkaryna" count="1" />
+  </NPC>
+
+  <NPC name="FromageDeBrie" weight="1">
+    <SpawnObject text="FromageDeBrie" count="1" />
+  </NPC>
+
+  <NPC name="GadgeteerGentry" weight="1">
+    <SpawnObject text="GadgeteerGentry" count="1" />
+  </NPC>
+
+  <NPC name="GaiusAurus" weight="1">
+    <SpawnObject text="GaiusAurus" count="1" />
+  </NPC>
+
+  <NPC name="GajahMada" weight="1">
+    <SpawnObject text="GajahMada" count="1" />
+  </NPC>
+
+  <NPC name="GastonDeLaCroix" weight="1">
+    <SpawnObject text="GastonDeLaCroix" count="1" />
+  </NPC>
+
+  <NPC name="GawainMacGregor" weight="1">
+    <SpawnObject text="GawainMacGregor" count="1" />
+  </NPC>
+
+  <NPC name="GaziHusrevBeg" weight="1">
+    <SpawnObject text="GaziHusrevBeg" count="1" />
+  </NPC>
+
+  <NPC name="GeneralGideonLiberty" weight="1">
+    <SpawnObject text="GeneralGideonLiberty" count="1" />
+  </NPC>
+
+  <NPC name="GeneralSterlingForge" weight="1">
+    <SpawnObject text="GeneralSterlingForge" count="1" />
+  </NPC>
+
+  <NPC name="GeneralSterlingStone" weight="1">
+    <SpawnObject text="GeneralSterlingStone" count="1" />
+  </NPC>
+
+  <NPC name="GeorgeTheGeneralValor" weight="1">
+    <SpawnObject text="GeorgeTheGeneralValor" count="1" />
+  </NPC>
+
+  <NPC name="GerhardtVonStein" weight="1">
+    <SpawnObject text="GerhardtVonStein" count="1" />
+  </NPC>
+
+  <NPC name="GiovanniLario" weight="1">
+    <SpawnObject text="GiovanniLario" count="1" />
+  </NPC>
+
+  <NPC name="GordonCrumble" weight="1">
+    <SpawnObject text="GordonCrumble" count="1" />
+  </NPC>
+
+  <NPC name="GraceOMalley" weight="1">
+    <SpawnObject text="GraceOMalley" count="1" />
+  </NPC>
+
+  <NPC name="GrandDukeVladimir" weight="1">
+    <SpawnObject text="GrandDukeVladimir" count="1" />
+  </NPC>
+
+  <NPC name="GregoryTheGrand" weight="1">
+    <SpawnObject text="GregoryTheGrand" count="1" />
+  </NPC>
+
+  <NPC name="GroovyMcVibe" weight="1">
+    <SpawnObject text="GroovyMcVibe" count="1" />
+  </NPC>
+
+  <NPC name="GuardianAngel" weight="1">
+    <SpawnObject text="GuardianAngel" count="1" />
+  </NPC>
+
+  <NPC name="HananAshrawi" weight="1">
+    <SpawnObject text="HananAshrawi" count="1" />
+  </NPC>
+
+  <NPC name="HangTuah" weight="1">
+    <SpawnObject text="HangTuah" count="1" />
+  </NPC>
+
+  <NPC name="HaraldHardrada" weight="1">
+    <SpawnObject text="HaraldHardrada" count="1" />
+  </NPC>
+
+  <NPC name="HarunAlRashid" weight="1">
+    <SpawnObject text="HarunAlRashid" count="1" />
+  </NPC>
+
+  <NPC name="HatueyVoiceOfCeiba" weight="1">
+    <SpawnObject text="HatueyVoiceOfCeiba" count="1" />
+  </NPC>
+
+  <NPC name="HawoSaltRoadQueen" weight="1">
+    <SpawnObject text="HawoSaltRoadQueen" count="1" />
+  </NPC>
+
+  <NPC name="HildegardVonBingen" weight="1">
+    <SpawnObject text="HildegardVonBingen" count="1" />
+  </NPC>
+
+  <NPC name="HippocratesOathbringer" weight="1">
+    <SpawnObject text="HippocratesOathbringer" count="1" />
+  </NPC>
+
+  <NPC name="HiroshiKatana" weight="1">
+    <SpawnObject text="HiroshiKatana" count="1" />
+  </NPC>
+
+  <NPC name="HollywoodHarlan" weight="1">
+    <SpawnObject text="HollywoodHarlan" count="1" />
+  </NPC>
+
+  <NPC name="HorusAmuletus" weight="1">
+    <SpawnObject text="HorusAmuletus" count="1" />
+  </NPC>
+
+  <NPC name="HrolfTheStalwart" weight="1">
+    <SpawnObject text="HrolfTheStalwart" count="1" />
+  </NPC>
+
+  <NPC name="HypatiaOfAlexandria" weight="1">
+    <SpawnObject text="HypatiaOfAlexandria" count="1" />
+  </NPC>
+
+  <NPC name="IbedulOmid" weight="1">
+    <SpawnObject text="IbedulOmid" count="1" />
+  </NPC>
+
+  <NPC name="IgnatiusEmberbrand" weight="1">
+    <SpawnObject text="IgnatiusEmberbrand" count="1" />
+  </NPC>
+
+  <NPC name="IlonaZrinyi" weight="1">
+    <SpawnObject text="IlonaZrinyi" count="1" />
+  </NPC>
+
+  <NPC name="ImhotepSageOfTheNile" weight="1">
+    <SpawnObject text="ImhotepSageOfTheNile" count="1" />
+  </NPC>
+
+  <NPC name="JacquesDelacroix" weight="1">
+    <SpawnObject text="JacquesDelacroix" count="1" />
+  </NPC>
+
+  <NPC name="JanuszZolkiewski" weight="1">
+    <SpawnObject text="JanuszZolkiewski" count="1" />
+  </NPC>
+
+  <NPC name="JanZizka" weight="1">
+    <SpawnObject text="JanZizka" count="1" />
+  </NPC>
+
+  <NPC name="JeanDeValette" weight="1">
+    <SpawnObject text="JeanDeValette" count="1" />
+  </NPC>
+
+  <NPC name="JeanneDArc" weight="1">
+    <SpawnObject text="JeanneDArc" count="1" />
+  </NPC>
+
+  <NPC name="JediMasterAldric" weight="1">
+    <SpawnObject text="JediMasterAldric" count="1" />
+  </NPC>
+
+  <NPC name="JesterGrimly" weight="1">
+    <SpawnObject text="JesterGrimly" count="1" />
+  </NPC>
+
+  <NPC name="JesterMerriwit" weight="1">
+    <SpawnObject text="JesterMerriwit" count="1" />
+  </NPC>
+
+  <NPC name="JesterPuckery" weight="1">
+    <SpawnObject text="JesterPuckery" count="1" />
+  </NPC>
+
+  <NPC name="JesterRiddles" weight="1">
+    <SpawnObject text="JesterRiddles" count="1" />
+  </NPC>
+
+  <NPC name="JettSterling" weight="1">
+    <SpawnObject text="JettSterling" count="1" />
+  </NPC>
+
+  <NPC name="JohannSchmidt" weight="1">
+    <SpawnObject text="JohannSchmidt" count="1" />
+  </NPC>
+
+  <NPC name="JoseDeSanMartin" weight="1">
+    <SpawnObject text="JoseDeSanMartin" count="1" />
+  </NPC>
+
+  <NPC name="JudahGoldleaf" weight="1">
+    <SpawnObject text="JudahGoldleaf" count="1" />
+  </NPC>
+
+  <NPC name="JulienFedon" weight="1">
+    <SpawnObject text="JulienFedon" count="1" />
+  </NPC>
+
+  <NPC name="JustinaBasilia" weight="1">
+    <SpawnObject text="JustinaBasilia" count="1" />
+  </NPC>
+
+  <NPC name="JustusByzantios" weight="1">
+    <SpawnObject text="JustusByzantios" count="1" />
+  </NPC>
+
+  <NPC name="KageyoshiMatsumura" weight="1">
+    <SpawnObject text="KageyoshiMatsumura" count="1" />
+  </NPC>
+
+  <NPC name="KahijereKaputu" weight="1">
+    <SpawnObject text="KahijereKaputu" count="1" />
+  </NPC>
+
+  <NPC name="KarlisBarons" weight="1">
+    <SpawnObject text="KarlisBarons" count="1" />
+  </NPC>
+
+  <NPC name="KeeperOfRelics" weight="1">
+    <SpawnObject text="KeeperOfRelics" count="1" />
+  </NPC>
+
+  <NPC name="KensukeTakahashi" weight="1">
+    <SpawnObject text="KensukeTakahashi" count="1" />
+  </NPC>
+
+  <NPC name="KgosiKhamaIII" weight="1">
+    <SpawnObject text="KgosiKhamaIII" count="1" />
+  </NPC>
+
+  <NPC name="KhaledMirage" weight="1">
+    <SpawnObject text="KhaledMirage" count="1" />
+  </NPC>
+
+  <NPC name="KimSan" weight="1">
+    <SpawnObject text="KimSan" count="1" />
+  </NPC>
+
+  <NPC name="KingNjoyaOfBamum" weight="1">
+    <SpawnObject text="KingNjoyaOfBamum" count="1" />
+  </NPC>
+
+  <NPC name="KingSaoBoso" weight="1">
+    <SpawnObject text="KingSaoBoso" count="1" />
+  </NPC>
+
+  <NPC name="KofiDawuda" weight="1">
+    <SpawnObject text="KofiDawuda" count="1" />
+  </NPC>
+
+  <NPC name="KoscheiTheEternal" weight="1">
+    <SpawnObject text="KoscheiTheEternal" count="1" />
+  </NPC>
+
+  <NPC name="KurmanjanDatka" weight="1">
+    <SpawnObject text="KurmanjanDatka" count="1" />
+  </NPC>
+
+  <NPC name="KuzmanJosifovskiPitu" weight="1">
+    <SpawnObject text="KuzmanJosifovskiPitu" count="1" />
+  </NPC>
+
+  <NPC name="LabotsibeniMdluli" weight="1">
+    <SpawnObject text="LabotsibeniMdluli" count="1" />
+  </NPC>
+
+  <NPC name="LaMalinche" weight="1">
+    <SpawnObject text="LaMalinche" count="1" />
+  </NPC>
+
+  <NPC name="LauraSecord" weight="1">
+    <SpawnObject text="LauraSecord" count="1" />
+  </NPC>
+
+  <NPC name="Lempira" weight="1">
+    <SpawnObject text="Lempira" count="1" />
+  </NPC>
+
+  <NPC name="LeonardFortescue" weight="1">
+    <SpawnObject text="LeonardFortescue" count="1" />
+  </NPC>
+
+  <NPC name="LeonardoDaVinci" weight="1">
+    <SpawnObject text="LeonardoDaVinci" count="1" />
+  </NPC>
+
+  <NPC name="LeonidasAegis" weight="1">
+    <SpawnObject text="LeonidasAegis" count="1" />
+  </NPC>
+
+  <NPC name="LilyVerdant" weight="1">
+    <SpawnObject text="LilyVerdant" count="1" />
+  </NPC>
+
+  <NPC name="LindaOfEstonia" weight="1">
+    <SpawnObject text="LindaOfEstonia" count="1" />
+  </NPC>
+
+  <NPC name="LordRegalford" weight="1">
+    <SpawnObject text="LordRegalford" count="1" />
+  </NPC>
+
+  <NPC name="LordRichardVaultington" weight="1">
+    <SpawnObject text="LordRichardVaultington" count="1" />
+  </NPC>
+
+  <NPC name="LoreleiRhiannon" weight="1">
+    <SpawnObject text="LoreleiRhiannon" count="1" />
+  </NPC>
+
+  <NPC name="LuciusFervidus" weight="1">
+    <SpawnObject text="LuciusFervidus" count="1" />
+  </NPC>
+
+  <NPC name="LuciusFortunatus" weight="1">
+    <SpawnObject text="LuciusFortunatus" count="1" />
+  </NPC>
+
+  <NPC name="LuckyMcTavish" weight="1">
+    <SpawnObject text="LuckyMcTavish" count="1" />
+  </NPC>
+
+  <NPC name="LunariaStarcrest" weight="1">
+    <SpawnObject text="LunariaStarcrest" count="1" />
+  </NPC>
+
+  <NPC name="MadoxQuirk" weight="1">
+    <SpawnObject text="MadoxQuirk" count="1" />
+  </NPC>
+
+  <NPC name="MagnusByzantus" weight="1">
+    <SpawnObject text="MagnusByzantus" count="1" />
+  </NPC>
+
+  <NPC name="MajorBenjaminKnox" weight="1">
+    <SpawnObject text="MajorBenjaminKnox" count="1" />
+  </NPC>
+
+  <NPC name="MajorJameson" weight="1">
+    <SpawnObject text="MajorJameson" count="1" />
+  </NPC>
+
+  <NPC name="MalaboEfamba" weight="1">
+    <SpawnObject text="MalaboEfamba" count="1" />
+  </NPC>
+
+  <NPC name="MalikAlHarith" weight="1">
+    <SpawnObject text="MalikAlHarith" count="1" />
+  </NPC>
+
+  <NPC name="MamaHuaco" weight="1">
+    <SpawnObject text="MamaHuaco" count="1" />
+  </NPC>
+
+  <NPC name="MansaMusa" weight="1">
+    <SpawnObject text="MansaMusa" count="1" />
+  </NPC>
+
+  <NPC name="MaraSilkweaver" weight="1">
+    <SpawnObject text="MaraSilkweaver" count="1" />
+  </NPC>
+
+  <NPC name="MarcelDupont" weight="1">
+    <SpawnObject text="MarcelDupont" count="1" />
+  </NPC>
+
+  <NPC name="MarcusAureliusMaximus" weight="1">
+    <SpawnObject text="MarcusAureliusMaximus" count="1" />
+  </NPC>
+
+  <NPC name="MarkTweetson" weight="1">
+    <SpawnObject text="MarkTweetson" count="1" />
+  </NPC>
+
+  <NPC name="MarquisDuPrisme" weight="1">
+    <SpawnObject text="MarquisDuPrisme" count="1" />
+  </NPC>
+
+  <NPC name="MartinLuther" weight="1">
+    <SpawnObject text="MartinLuther" count="1" />
+  </NPC>
+
+  <NPC name="MauPiailug" weight="1">
+    <SpawnObject text="MauPiailug" count="1" />
+  </NPC>
+
+  <NPC name="MaximusBlackstone" weight="1">
+    <SpawnObject text="MaximusBlackstone" count="1" />
+  </NPC>
+
+  <NPC name="MaximusPravda" weight="1">
+    <SpawnObject text="MaximusPravda" count="1" />
+  </NPC>
+
+  <NPC name="MekatililiWaMenza" weight="1">
+    <SpawnObject text="MekatililiWaMenza" count="1" />
+  </NPC>
+
+  <NPC name="MelodyJazzington" weight="1">
+    <SpawnObject text="MelodyJazzington" count="1" />
+  </NPC>
+
+  <NPC name="MerlinMystocles" weight="1">
+    <SpawnObject text="MerlinMystocles" count="1" />
+  </NPC>
+
+  <NPC name="MohammadAliJinnah" weight="1">
+    <SpawnObject text="MohammadAliJinnah" count="1" />
+  </NPC>
+
+  <NPC name="Moshoeshoe" weight="1">
+    <SpawnObject text="Moshoeshoe" count="1" />
+  </NPC>
+
+  <NPC name="MwamiMweziGisabo" weight="1">
+    <SpawnObject text="MwamiMweziGisabo" count="1" />
+  </NPC>
+
+  <NPC name="MysticElowen" weight="1">
+    <SpawnObject text="MysticElowen" count="1" />
+  </NPC>
+
+  <NPC name="NannyOfTheMaroons" weight="1">
+    <SpawnObject text="NannyOfTheMaroons" count="1" />
+  </NPC>
+
+  <NPC name="NathanTrailblazer" weight="1">
+    <SpawnObject text="NathanTrailblazer" count="1" />
+  </NPC>
+
+  <NPC name="NedKelly" weight="1">
+    <SpawnObject text="NedKelly" count="1" />
+  </NPC>
+
+  <NPC name="NeiTewetaTabuki" weight="1">
+    <SpawnObject text="NeiTewetaTabuki" count="1" />
+  </NPC>
+
+  <NPC name="Ngungunyane" weight="1">
+    <SpawnObject text="Ngungunyane" count="1" />
+  </NPC>
+
+  <NPC name="NikolaiIvanovich" weight="1">
+    <SpawnObject text="NikolaiIvanovich" count="1" />
+  </NPC>
+
+  <NPC name="NimrodDreamweaver" weight="1">
+    <SpawnObject text="NimrodDreamweaver" count="1" />
+  </NPC>
+
+  <NPC name="Njegos" weight="1">
+    <SpawnObject text="Njegos" count="1" />
+  </NPC>
+
+  <NPC name="NobleKage" weight="1">
+    <SpawnObject text="NobleKage" count="1" />
+  </NPC>
+
+  <NPC name="NyatsimbaMutota" weight="1">
+    <SpawnObject text="NyatsimbaMutota" count="1" />
+  </NPC>
+
+  <NPC name="ObaEwuare" weight="1">
+    <SpawnObject text="ObaEwuare" count="1" />
+  </NPC>
+
+  <NPC name="OrinMystweaver" weight="1">
+    <SpawnObject text="OrinMystweaver" count="1" />
+  </NPC>
+
+  <NPC name="OttoVonChesterton" weight="1">
+    <SpawnObject text="OttoVonChesterton" count="1" />
+  </NPC>
+
+  <NPC name="OttoVonFumble" weight="1">
+    <SpawnObject text="OttoVonFumble" count="1" />
+  </NPC>
+
+  <NPC name="PabloPresbere" weight="1">
+    <SpawnObject text="PabloPresbere" count="1" />
+  </NPC>
+
+  <NPC name="PattyMelt" weight="1">
+    <SpawnObject text="PattyMelt" count="1" />
+  </NPC>
+
+  <NPC name="PercivalCacheford" weight="1">
+    <SpawnObject text="PercivalCacheford" count="1" />
+  </NPC>
+
+  <NPC name="PercivalTreasuresmith" weight="1">
+    <SpawnObject text="PercivalTreasuresmith" count="1" />
+  </NPC>
+
+  <NPC name="PetalBloomingdale" weight="1">
+    <SpawnObject text="PetalBloomingdale" count="1" />
+  </NPC>
+
+  <NPC name="PetarZoranic" weight="1">
+    <SpawnObject text="PetarZoranic" count="1" />
+  </NPC>
+
+  <NPC name="PharaohRamenhotep" weight="1">
+    <SpawnObject text="PharaohRamenhotep" count="1" />
+  </NPC>
+
+  <NPC name="PierreFurmont" weight="1">
+    <SpawnObject text="PierreFurmont" count="1" />
+  </NPC>
+
+  <NPC name="PixelatedPete" weight="1">
+    <SpawnObject text="PixelatedPete" count="1" />
+  </NPC>
+
+  <NPC name="PrinceKlaas" weight="1">
+    <SpawnObject text="PrinceKlaas" count="1" />
+  </NPC>
+
+  <NPC name="PrinceSeokjin" weight="1">
+    <SpawnObject text="PrinceSeokjin" count="1" />
+  </NPC>
+
+  <NPC name="PrincessElisabeth" weight="1">
+    <SpawnObject text="PrincessElisabeth" count="1" />
+  </NPC>
+
+  <NPC name="ProfessorArchibaldQuill" weight="1">
+    <SpawnObject text="ProfessorArchibaldQuill" count="1" />
+  </NPC>
+
+  <NPC name="ProfessorDraconis" weight="1">
+    <SpawnObject text="ProfessorDraconis" count="1" />
+  </NPC>
+
+  <NPC name="ProfessorDroidicus" weight="1">
+    <SpawnObject text="ProfessorDroidicus" count="1" />
+  </NPC>
+
+  <NPC name="ProfessorFloraThornveil" weight="1">
+    <SpawnObject text="ProfessorFloraThornveil" count="1" />
+  </NPC>
+
+  <NPC name="ProfessorPlumberston" weight="1">
+    <SpawnObject text="ProfessorPlumberston" count="1" />
+  </NPC>
+
+  <NPC name="ProfessorPoke" weight="1">
+    <SpawnObject text="ProfessorPoke" count="1" />
+  </NPC>
+
+  <NPC name="ProfessorSandyDunes" weight="1">
+    <SpawnObject text="ProfessorSandyDunes" count="1" />
+  </NPC>
+
+  <NPC name="ProfessorTimewell" weight="1">
+    <SpawnObject text="ProfessorTimewell" count="1" />
+  </NPC>
+
+  <NPC name="ProspectorPatGoldrush" weight="1">
+    <SpawnObject text="ProspectorPatGoldrush" count="1" />
+  </NPC>
+
+  <NPC name="PuckWillowspindle" weight="1">
+    <SpawnObject text="PuckWillowspindle" count="1" />
+  </NPC>
+
+  <NPC name="QueenAmina" weight="1">
+    <SpawnObject text="QueenAmina" count="1" />
+  </NPC>
+
+  <NPC name="QueenAminaOfZazzau" weight="1">
+    <SpawnObject text="QueenAminaOfZazzau" count="1" />
+  </NPC>
+
+  <NPC name="QueenAraethea" weight="1">
+    <SpawnObject text="QueenAraethea" count="1" />
+  </NPC>
+
+  <NPC name="QueenGualbina" weight="1">
+    <SpawnObject text="QueenGualbina" count="1" />
+  </NPC>
+
+  <NPC name="QueenMakeda" weight="1">
+    <SpawnObject text="QueenMakeda" count="1" />
+  </NPC>
+
+  <NPC name="QueenNzinga" weight="1">
+    <SpawnObject text="QueenNzinga" count="1" />
+  </NPC>
+
+  <NPC name="QueenNzingaMpongwe" weight="1">
+    <SpawnObject text="QueenNzingaMpongwe" count="1" />
+  </NPC>
+
+  <NPC name="QueenNzingaOfGuinea" weight="1">
+    <SpawnObject text="QueenNzingaOfGuinea" count="1" />
+  </NPC>
+
+  <NPC name="QueenPokou" weight="1">
+    <SpawnObject text="QueenPokou" count="1" />
+  </NPC>
+
+  <NPC name="QueenSaba" weight="1">
+    <SpawnObject text="QueenSaba" count="1" />
+  </NPC>
+
+  <NPC name="QueenTamarTheGreat" weight="1">
+    <SpawnObject text="QueenTamarTheGreat" count="1" />
+  </NPC>
+
+  <NPC name="QueenYambaitok" weight="1">
+    <SpawnObject text="QueenYambaitok" count="1" />
+  </NPC>
+
+  <NPC name="QueenZenobia" weight="1">
+    <SpawnObject text="QueenZenobia" count="1" />
+  </NPC>
+
+  <NPC name="QuincyGoldsmith" weight="1">
+    <SpawnObject text="QuincyGoldsmith" count="1" />
+  </NPC>
+
+  <NPC name="RafeRiverstone" weight="1">
+    <SpawnObject text="RafeRiverstone" count="1" />
+  </NPC>
+
+  <NPC name="RajendraLaxmi" weight="1">
+    <SpawnObject text="RajendraLaxmi" count="1" />
+  </NPC>
+
+  <NPC name="RajeshNarayan" weight="1">
+    <SpawnObject text="RajeshNarayan" count="1" />
+  </NPC>
+
+  <NPC name="RaKhemut" weight="1">
+    <SpawnObject text="RaKhemut" count="1" />
+  </NPC>
+
+  <NPC name="RaniLakshmibai" weight="1">
+    <SpawnObject text="RaniLakshmibai" count="1" />
+  </NPC>
+
+  <NPC name="ReelMcCarter" weight="1">
+    <SpawnObject text="ReelMcCarter" count="1" />
+  </NPC>
+
+  <NPC name="ReggieSilverstone" weight="1">
+    <SpawnObject text="ReggieSilverstone" count="1" />
+  </NPC>
+
+  <NPC name="ReginaldArcana" weight="1">
+    <SpawnObject text="ReginaldArcana" count="1" />
+  </NPC>
+
+  <NPC name="ReginaldHastings" weight="1">
+    <SpawnObject text="ReginaldHastings" count="1" />
+  </NPC>
+
+  <NPC name="RevolvusMarx" weight="1">
+    <SpawnObject text="RevolvusMarx" count="1" />
+  </NPC>
+
+  <NPC name="RexMalcontent" weight="1">
+    <SpawnObject text="RexMalcontent" count="1" />
+  </NPC>
+
+  <NPC name="RickySkaterWheelz" weight="1">
+    <SpawnObject text="RickySkaterWheelz" count="1" />
+  </NPC>
+
+  <NPC name="RiotTurner" weight="1">
+    <SpawnObject text="RiotTurner" count="1" />
+  </NPC>
+
+  <NPC name="RockinRandy" weight="1">
+    <SpawnObject text="RockinRandy" count="1" />
+  </NPC>
+
+  <NPC name="RockStarRoxy" weight="1">
+    <SpawnObject text="RockStarRoxy" count="1" />
+  </NPC>
+
+  <NPC name="RockwellStarcaster" weight="1">
+    <SpawnObject text="RockwellStarcaster" count="1" />
+  </NPC>
+
+  <NPC name="RoderickNightshade" weight="1">
+    <SpawnObject text="RoderickNightshade" count="1" />
+  </NPC>
+
+  <NPC name="RoderickTricky" weight="1">
+    <SpawnObject text="RoderickTricky" count="1" />
+  </NPC>
+
+  <NPC name="SageWillow" weight="1">
+    <SpawnObject text="SageWillow" count="1" />
+  </NPC>
+
+  <NPC name="SageWuLin" weight="1">
+    <SpawnObject text="SageWuLin" count="1" />
+  </NPC>
+
+  <NPC name="SaitoKurin" weight="1">
+    <SpawnObject text="SaitoKurin" count="1" />
+  </NPC>
+
+  <NPC name="Scheherazade" weight="1">
+    <SpawnObject text="Scheherazade" count="1" />
+  </NPC>
+
+  <NPC name="SeraphinaGrimwald" weight="1">
+    <SpawnObject text="SeraphinaGrimwald" count="1" />
+  </NPC>
+
+  <NPC name="ShadowyAssassin" weight="1">
+    <SpawnObject text="ShadowyAssassin" count="1" />
+  </NPC>
+
+  <NPC name="ShahIsmailKhatai" weight="1">
+    <SpawnObject text="ShahIsmailKhatai" count="1" />
+  </NPC>
+
+  <NPC name="SheikhMubarakTheWise" weight="1">
+    <SpawnObject text="SheikhMubarakTheWise" count="1" />
+  </NPC>
+
+  <NPC name="ShinSaimdang" weight="1">
+    <SpawnObject text="ShinSaimdang" count="1" />
+  </NPC>
+
+  <NPC name="ShurikoShadowstep" weight="1">
+    <SpawnObject text="ShurikoShadowstep" count="1" />
+  </NPC>
+
+  <NPC name="SimonBolivar" weight="1">
+    <SpawnObject text="SimonBolivar" count="1" />
+  </NPC>
+
+  <NPC name="SirBenjaminLiberty" weight="1">
+    <SpawnObject text="SirBenjaminLiberty" count="1" />
+  </NPC>
+
+  <NPC name="SirCantaloupe" weight="1">
+    <SpawnObject text="SirCantaloupe" count="1" />
+  </NPC>
+
+  <NPC name="SirCedricBladeheart" weight="1">
+    <SpawnObject text="SirCedricBladeheart" count="1" />
+  </NPC>
+
+  <NPC name="SirCoralTreasurebottom" weight="1">
+    <SpawnObject text="SirCoralTreasurebottom" count="1" />
+  </NPC>
+
+  <NPC name="SirGoldsworth" weight="1">
+    <SpawnObject text="SirGoldsworth" count="1" />
+  </NPC>
+
+  <NPC name="SirLancelotBladeheart" weight="1">
+    <SpawnObject text="SirLancelotBladeheart" count="1" />
+  </NPC>
+
+  <NPC name="SirMaceaLot" weight="1">
+    <SpawnObject text="SirMaceaLot" count="1" />
+  </NPC>
+
+  <NPC name="SirPercivalParrymore" weight="1">
+    <SpawnObject text="SirPercivalParrymore" count="1" />
+  </NPC>
+
+  <NPC name="SirReginaldBastille" weight="1">
+    <SpawnObject text="SirReginaldBastille" count="1" />
+  </NPC>
+
+  <NPC name="SirReginaldCavalier" weight="1">
+    <SpawnObject text="SirReginaldCavalier" count="1" />
+  </NPC>
+
+  <NPC name="SirReginaldChesterton" weight="1">
+    <SpawnObject text="SirReginaldChesterton" count="1" />
+  </NPC>
+
+  <NPC name="SirReginaldOfChesterton" weight="1">
+    <SpawnObject text="SirReginaldOfChesterton" count="1" />
+  </NPC>
+
+  <NPC name="SirReginaldTaffy" weight="1">
+    <SpawnObject text="SirReginaldTaffy" count="1" />
+  </NPC>
+
+  <NPC name="SirReginaldTudor" weight="1">
+    <SpawnObject text="SirReginaldTudor" count="1" />
+  </NPC>
+
+  <NPC name="SirReginaldValor" weight="1">
+    <SpawnObject text="SirReginaldValor" count="1" />
+  </NPC>
+
+  <NPC name="SirReginaldValorheart" weight="1">
+    <SpawnObject text="SirReginaldValorheart" count="1" />
+  </NPC>
+
+  <NPC name="SirVirtusValor" weight="1">
+    <SpawnObject text="SirVirtusValor" count="1" />
+  </NPC>
+
+  <NPC name="SirWandertonGlobetrotter" weight="1">
+    <SpawnObject text="SirWandertonGlobetrotter" count="1" />
+  </NPC>
+
+  <NPC name="SirWyrmstone" weight="1">
+    <SpawnObject text="SirWyrmstone" count="1" />
+  </NPC>
+
+  <NPC name="SolariusBrighthand" weight="1">
+    <SpawnObject text="SolariusBrighthand" count="1" />
+  </NPC>
+
+  <NPC name="SorghaghtaniBeki" weight="1">
+    <SpawnObject text="SorghaghtaniBeki" count="1" />
+  </NPC>
+
+  <NPC name="StephenTheGreat" weight="1">
+    <SpawnObject text="StephenTheGreat" count="1" />
+  </NPC>
+
+  <NPC name="SultanBolkiah" weight="1">
+    <SpawnObject text="SultanBolkiah" count="1" />
+  </NPC>
+
+  <NPC name="SultanSaidAli" weight="1">
+    <SpawnObject text="SultanSaidAli" count="1" />
+  </NPC>
+
+  <NPC name="TecunUman" weight="1">
+    <SpawnObject text="TecunUman" count="1" />
+  </NPC>
+
+  <NPC name="TeRauparaha" weight="1">
+    <SpawnObject text="TeRauparaha" count="1" />
+  </NPC>
+
+  <NPC name="ThalionSilverleaf" weight="1">
+    <SpawnObject text="ThalionSilverleaf" count="1" />
+  </NPC>
+
+  <NPC name="TheophilusMirage" weight="1">
+    <SpawnObject text="TheophilusMirage" count="1" />
+  </NPC>
+
+  <NPC name="ThomasEdison" weight="1">
+    <SpawnObject text="ThomasEdison" count="1" />
+  </NPC>
+
+  <NPC name="ThomasPotts" weight="1">
+    <SpawnObject text="ThomasPotts" count="1" />
+  </NPC>
+
+  <NPC name="ThorneEldergrove" weight="1">
+    <SpawnObject text="ThorneEldergrove" count="1" />
+  </NPC>
+
+  <NPC name="TiberiusAlaric" weight="1">
+    <SpawnObject text="TiberiusAlaric" count="1" />
+  </NPC>
+
+  <NPC name="TidalSage" weight="1">
+    <SpawnObject text="TidalSage" count="1" />
+  </NPC>
+
+  <NPC name="TigranesTheGreat" weight="1">
+    <SpawnObject text="TigranesTheGreat" count="1" />
+  </NPC>
+
+  <NPC name="TinHinan" weight="1">
+    <SpawnObject text="TinHinan" count="1" />
+  </NPC>
+
+  <NPC name="TinHinann" weight="1">
+    <SpawnObject text="TinHinann" count="1" />
+  </NPC>
+
+  <NPC name="TomoShigenori" weight="1">
+    <SpawnObject text="TomoShigenori" count="1" />
+  </NPC>
+
+  <NPC name="ToussaintLouverture" weight="1">
+    <SpawnObject text="ToussaintLouverture" count="1" />
+  </NPC>
+
+  <NPC name="TupacKatari" weight="1">
+    <SpawnObject text="TupacKatari" count="1" />
+  </NPC>
+
+  <NPC name="Vainamoinen" weight="1">
+    <SpawnObject text="Vainamoinen" count="1" />
+  </NPC>
+
+  <NPC name="VerenaEisenfaust" weight="1">
+    <SpawnObject text="VerenaEisenfaust" count="1" />
+  </NPC>
+
+  <NPC name="VictorHarmon" weight="1">
+    <SpawnObject text="VictorHarmon" count="1" />
+  </NPC>
+
+  <NPC name="VincentVintage" weight="1">
+    <SpawnObject text="VincentVintage" count="1" />
+  </NPC>
+
+  <NPC name="ViriathusWolfKing" weight="1">
+    <SpawnObject text="ViriathusWolfKing" count="1" />
+  </NPC>
+
+  <NPC name="VladimirPochor" weight="1">
+    <SpawnObject text="VladimirPochor" count="1" />
+  </NPC>
+
+  <NPC name="VladimirReddov" weight="1">
+    <SpawnObject text="VladimirReddov" count="1" />
+  </NPC>
+
+  <NPC name="VladislavVolkov" weight="1">
+    <SpawnObject text="VladislavVolkov" count="1" />
+  </NPC>
+
+  <NPC name="VytautasTheGreat" weight="1">
+    <SpawnObject text="VytautasTheGreat" count="1" />
+  </NPC>
+
+  <NPC name="WarrenState" weight="1">
+    <SpawnObject text="WarrenState" count="1" />
+  </NPC>
+
+  <NPC name="XenonTheAlien" weight="1">
+    <SpawnObject text="XenonTheAlien" count="1" />
+  </NPC>
+
+  <NPC name="ZenobiaOfBaalbek" weight="1">
+    <SpawnObject text="ZenobiaOfBaalbek" count="1" />
+  </NPC>
+
+  <NPC name="ZenobiaOfPalmyra" weight="1">
+    <SpawnObject text="ZenobiaOfPalmyra" count="1" />
+  </NPC>
+
+  <NPC name="ZhengHe" weight="1">
+    <SpawnObject text="ZhengHe" count="1" />
+  </NPC>
+
+  <NPC name="ZhenHuan" weight="1">
+    <SpawnObject text="ZhenHuan" count="1" />
+  </NPC>
+
+  <NPC name="Zorgon" weight="1">
+    <SpawnObject text="Zorgon" count="1" />
+  </NPC>
+
+  <NPC name="Adria" weight="1">
+    <SpawnObject text="Adria" count="1" />
+  </NPC>
+
+  <NPC name="AlexanderGrahamBell" weight="1">
+    <SpawnObject text="AlexanderGrahamBell" count="1" />
+  </NPC>
+
+  <NPC name="AlienAmbassadorZark" weight="1">
+    <SpawnObject text="AlienAmbassadorZark" count="1" />
+  </NPC>
+
+  <NPC name="Alva" weight="1">
+    <SpawnObject text="Alva" count="1" />
+  </NPC>
+
+  <NPC name="AnneBoleyn" weight="1">
+    <SpawnObject text="AnneBoleyn" count="1" />
+  </NPC>
+
+  <NPC name="ArcanistNylara" weight="1">
+    <SpawnObject text="ArcanistNylara" count="1" />
+  </NPC>
+
+  <NPC name="AriaTheLuminalDancer" weight="1">
+    <SpawnObject text="AriaTheLuminalDancer" count="1" />
+  </NPC>
+
+  <NPC name="AristotleTheWise" weight="1">
+    <SpawnObject text="AristotleTheWise" count="1" />
+  </NPC>
+
+  <NPC name="AstridTheStarGazer" weight="1">
+    <SpawnObject text="AstridTheStarGazer" count="1" />
+  </NPC>
+
+  <NPC name="AstronomerStella" weight="1">
+    <SpawnObject text="AstronomerStella" count="1" />
+  </NPC>
+
+  <NPC name="AuraTheAlchemist" weight="1">
+    <SpawnObject text="AuraTheAlchemist" count="1" />
+  </NPC>
+
+  <NPC name="AuroraTheFair" weight="1">
+    <SpawnObject text="AuroraTheFair" count="1" />
+  </NPC>
+
+  <NPC name="BabaYaga" weight="1">
+    <SpawnObject text="BabaYaga" count="1" />
+  </NPC>
+
+  <NPC name="BackstabBob" weight="1">
+    <SpawnObject text="BackstabBob" count="1" />
+  </NPC>
+
+  <NPC name="BaelorTheSharpEyed" weight="1">
+    <SpawnObject text="BaelorTheSharpEyed" count="1" />
+  </NPC>
+
+  <NPC name="BakerBob" weight="1">
+    <SpawnObject text="BakerBob" count="1" />
+  </NPC>
+
+  <NPC name="BalladBen" weight="1">
+    <SpawnObject text="BalladBen" count="1" />
+  </NPC>
+
+  <NPC name="BasilII" weight="1">
+    <SpawnObject text="BasilII" count="1" />
+  </NPC>
+
+  <NPC name="BeastmasterBella" weight="1">
+    <SpawnObject text="BeastmasterBella" count="1" />
+  </NPC>
+
+  <NPC name="BeggarBob" weight="1">
+    <SpawnObject text="BeggarBob" count="1" />
+  </NPC>
+
+  <NPC name="Belisarius" weight="1">
+    <SpawnObject text="Belisarius" count="1" />
+  </NPC>
+
+  <NPC name="BelleTheBubbly" weight="1">
+    <SpawnObject text="BelleTheBubbly" count="1" />
+  </NPC>
+
+  <NPC name="BewitchingBella" weight="1">
+    <SpawnObject text="BewitchingBella" count="1" />
+  </NPC>
+
+  <NPC name="BewitchingBellad" weight="1">
+    <SpawnObject text="BewitchingBellad" count="1" />
+  </NPC>
+
+  <NPC name="BlackRanger" weight="1">
+    <SpawnObject text="BlackRanger" count="1" />
+  </NPC>
+
+  <NPC name="BlueRanger" weight="1">
+    <SpawnObject text="BlueRanger" count="1" />
+  </NPC>
+
+  <NPC name="BobTheBaker" weight="1">
+    <SpawnObject text="BobTheBaker" count="1" />
+  </NPC>
+
+  <NPC name="BrawnTheWrestler" weight="1">
+    <SpawnObject text="BrawnTheWrestler" count="1" />
+  </NPC>
+
+  <NPC name="BrawnyBart" weight="1">
+    <SpawnObject text="BrawnyBart" count="1" />
+  </NPC>
+
+  <NPC name="BrewmasterBarlin" weight="1">
+    <SpawnObject text="BrewmasterBarlin" count="1" />
+  </NPC>
+
+  <NPC name="BrutalBen" weight="1">
+    <SpawnObject text="BrutalBen" count="1" />
+  </NPC>
+
+  <NPC name="BunnyBob" weight="1">
+    <SpawnObject text="BunnyBob" count="1" />
+  </NPC>
+
+  <NPC name="CaoCao" weight="1">
+    <SpawnObject text="CaoCao" count="1" />
+  </NPC>
+
+  <NPC name="CaptainBloodbeard" weight="1">
+    <SpawnObject text="CaptainBloodbeard" count="1" />
+  </NPC>
+
+  <NPC name="CaptainDemetrius" weight="1">
+    <SpawnObject text="CaptainDemetrius" count="1" />
+  </NPC>
+
+  <NPC name="CarmenTheCrimson" weight="1">
+    <SpawnObject text="CarmenTheCrimson" count="1" />
+  </NPC>
+
+  <NPC name="Cassandra" weight="1">
+    <SpawnObject text="Cassandra" count="1" />
+  </NPC>
+
+  <NPC name="CelesChere" weight="1">
+    <SpawnObject text="CelesChere" count="1" />
+  </NPC>
+
+  <NPC name="CharmingCharles" weight="1">
+    <SpawnObject text="CharmingCharles" count="1" />
+  </NPC>
+
+  <NPC name="ChartingCharlene" weight="1">
+    <SpawnObject text="ChartingCharlene" count="1" />
+  </NPC>
+
+  <NPC name="ChefSamantha" weight="1">
+    <SpawnObject text="ChefSamantha" count="1" />
+  </NPC>
+
+  <NPC name="CheGuevara" weight="1">
+    <SpawnObject text="CheGuevara" count="1" />
+  </NPC>
+
+  <NPC name="ChorusClara" weight="1">
+    <SpawnObject text="ChorusClara" count="1" />
+  </NPC>
+
+  <NPC name="Circe" weight="1">
+    <SpawnObject text="Circe" count="1" />
+  </NPC>
+
+  <NPC name="CloakCharlie" weight="1">
+    <SpawnObject text="CloakCharlie" count="1" />
+  </NPC>
+
+  <NPC name="CocoChanel" weight="1">
+    <SpawnObject text="CocoChanel" count="1" />
+  </NPC>
+
+  <NPC name="CompassClyde" weight="1">
+    <SpawnObject text="CompassClyde" count="1" />
+  </NPC>
+
+  <NPC name="Confucius" weight="1">
+    <SpawnObject text="Confucius" count="1" />
+  </NPC>
+
+  <NPC name="CowboyBill" weight="1">
+    <SpawnObject text="CowboyBill" count="1" />
+  </NPC>
+
+  <NPC name="CowgirlAnnie" weight="1">
+    <SpawnObject text="CowgirlAnnie" count="1" />
+  </NPC>
+
+  <NPC name="CulinaryCatherine" weight="1">
+    <SpawnObject text="CulinaryCatherine" count="1" />
+  </NPC>
+
+  <NPC name="CyberEngineerElla" weight="1">
+    <SpawnObject text="CyberEngineerElla" count="1" />
+  </NPC>
+
+  <NPC name="Cypher" weight="1">
+    <SpawnObject text="Cypher" count="1" />
+  </NPC>
+
+  <NPC name="DandyDan" weight="1">
+    <SpawnObject text="DandyDan" count="1" />
+  </NPC>
+
+  <NPC name="DaneTheHawkEyed" weight="1">
+    <SpawnObject text="DaneTheHawkEyed" count="1" />
+  </NPC>
+
+  <NPC name="DarkshadeTheCursed" weight="1">
+    <SpawnObject text="DarkshadeTheCursed" count="1" />
+  </NPC>
+
+  <NPC name="DashingDante" weight="1">
+    <SpawnObject text="DashingDante" count="1" />
+  </NPC>
+
+  <NPC name="DeadlyDiana" weight="1">
+    <SpawnObject text="DeadlyDiana" count="1" />
+  </NPC>
+
+  <NPC name="DeckardCain" weight="1">
+    <SpawnObject text="DeckardCain" count="1" />
+  </NPC>
+
+  <NPC name="DiogenesTheCynic" weight="1">
+    <SpawnObject text="DiogenesTheCynic" count="1" />
+  </NPC>
+
+  <NPC name="DobbinTheJester" weight="1">
+    <SpawnObject text="DobbinTheJester" count="1" />
+  </NPC>
+
+  <NPC name="DrElara" weight="1">
+    <SpawnObject text="DrElara" count="1" />
+  </NPC>
+
+  <NPC name="DrLovelace" weight="1">
+    <SpawnObject text="DrLovelace" count="1" />
+  </NPC>
+
+  <NPC name="DrNewton" weight="1">
+    <SpawnObject text="DrNewton" count="1" />
+  </NPC>
+
+  <NPC name="DrZappa" weight="1">
+    <SpawnObject text="DrZappa" count="1" />
+  </NPC>
+
+  <NPC name="DurinStoneforge" weight="1">
+    <SpawnObject text="DurinStoneforge" count="1" />
+  </NPC>
+
+  <NPC name="EdgarRoniFigaro" weight="1">
+    <SpawnObject text="EdgarRoniFigaro" count="1" />
+  </NPC>
+
+  <NPC name="Edge" weight="1">
+    <SpawnObject text="Edge" count="1" />
+  </NPC>
+
+  <NPC name="Einhar" weight="1">
+    <SpawnObject text="Einhar" count="1" />
+  </NPC>
+
+  <NPC name="ElaraSwiftwind" weight="1">
+    <SpawnObject text="ElaraSwiftwind" count="1" />
+  </NPC>
+
+  <NPC name="ElbowEllie" weight="1">
+    <SpawnObject text="ElbowEllie" count="1" />
+  </NPC>
+
+  <NPC name="EmperorAlexios" weight="1">
+    <SpawnObject text="EmperorAlexios" count="1" />
+  </NPC>
+
+  <NPC name="EmperorAugustus" weight="1">
+    <SpawnObject text="EmperorAugustus" count="1" />
+  </NPC>
+
+  <NPC name="EmperorClaudius" weight="1">
+    <SpawnObject text="EmperorClaudius" count="1" />
+  </NPC>
+
+  <NPC name="EmperorJulius" weight="1">
+    <SpawnObject text="EmperorJulius" count="1" />
+  </NPC>
+
+  <NPC name="EmperorMarcus" weight="1">
+    <SpawnObject text="EmperorMarcus" count="1" />
+  </NPC>
+
+  <NPC name="EmperorNero" weight="1">
+    <SpawnObject text="EmperorNero" count="1" />
+  </NPC>
+
+  <NPC name="EmperorNeron" weight="1">
+    <SpawnObject text="EmperorNeron" count="1" />
+  </NPC>
+
+  <NPC name="EmpressVictoria" weight="1">
+    <SpawnObject text="EmpressVictoria" count="1" />
+  </NPC>
+
+  <NPC name="EnchanterGalen" weight="1">
+    <SpawnObject text="EnchanterGalen" count="1" />
+  </NPC>
+
+  <NPC name="EngineerLeo" weight="1">
+    <SpawnObject text="EngineerLeo" count="1" />
+  </NPC>
+
+  <NPC name="FancyFaye" weight="1">
+    <SpawnObject text="FancyFaye" count="1" />
+  </NPC>
+
+  <NPC name="Farnham" weight="1">
+    <SpawnObject text="Farnham" count="1" />
+  </NPC>
+
+  <NPC name="FayeThePixie" weight="1">
+    <SpawnObject text="FayeThePixie" count="1" />
+  </NPC>
+
+  <NPC name="FeralFred" weight="1">
+    <SpawnObject text="FeralFred" count="1" />
+  </NPC>
+
+  <NPC name="FinneganTheJester" weight="1">
+    <SpawnObject text="FinneganTheJester" count="1" />
+  </NPC>
+
+  <NPC name="FizzloTheFunny" weight="1">
+    <SpawnObject text="FizzloTheFunny" count="1" />
+  </NPC>
+
+  <NPC name="FlippyFiona" weight="1">
+    <SpawnObject text="FlippyFiona" count="1" />
+  </NPC>
+
+  <NPC name="FlorenceNightingale" weight="1">
+    <SpawnObject text="FlorenceNightingale" count="1" />
+  </NPC>
+
+  <NPC name="FoxyFiona" weight="1">
+    <SpawnObject text="FoxyFiona" count="1" />
+  </NPC>
+
+  <NPC name="GhastlyGregor" weight="1">
+    <SpawnObject text="GhastlyGregor" count="1" />
+  </NPC>
+
+  <NPC name="Gillian" weight="1">
+    <SpawnObject text="Gillian" count="1" />
+  </NPC>
+
+  <NPC name="GimbleTheGnome" weight="1">
+    <SpawnObject text="GimbleTheGnome" count="1" />
+  </NPC>
+
+  <NPC name="Golbez" weight="1">
+    <SpawnObject text="Golbez" count="1" />
+  </NPC>
+
+  <NPC name="GorokTheStoneheart" weight="1">
+    <SpawnObject text="GorokTheStoneheart" count="1" />
+  </NPC>
+
+  <NPC name="GralkTheStonehide" weight="1">
+    <SpawnObject text="GralkTheStonehide" count="1" />
+  </NPC>
+
+  <NPC name="GrannyWeatherwax" weight="1">
+    <SpawnObject text="GrannyWeatherwax" count="1" />
+  </NPC>
+
+  <NPC name="GrapploTheMighty" weight="1">
+    <SpawnObject text="GrapploTheMighty" count="1" />
+  </NPC>
+
+  <NPC name="Gravemold" weight="1">
+    <SpawnObject text="Gravemold" count="1" />
+  </NPC>
+
+  <NPC name="GraxThePhaseShifter" weight="1">
+    <SpawnObject text="GraxThePhaseShifter" count="1" />
+  </NPC>
+
+  <NPC name="GrillmasterGary" weight="1">
+    <SpawnObject text="GrillmasterGary" count="1" />
+  </NPC>
+
+  <NPC name="GripGareth" weight="1">
+    <SpawnObject text="GripGareth" count="1" />
+  </NPC>
+
+  <NPC name="Griswold" weight="1">
+    <SpawnObject text="Griswold" count="1" />
+  </NPC>
+
+  <NPC name="GrokTheGoblin" weight="1">
+    <SpawnObject text="GrokTheGoblin" count="1" />
+  </NPC>
+
+  <NPC name="GrukTheOrc" weight="1">
+    <SpawnObject text="GrukTheOrc" count="1" />
+  </NPC>
+
+  <NPC name="GuardianBasil" weight="1">
+    <SpawnObject text="GuardianBasil" count="1" />
+  </NPC>
+
+  <NPC name="HarmoniousHarry" weight="1">
+    <SpawnObject text="HarmoniousHarry" count="1" />
+  </NPC>
+
+  <NPC name="HookHandHarry" weight="1">
+    <SpawnObject text="HookHandHarry" count="1" />
+  </NPC>
+
+  <NPC name="HuaMulan" weight="1">
+    <SpawnObject text="HuaMulan" count="1" />
+  </NPC>
+
+  <NPC name="HypatiaTheMathematician" weight="1">
+    <SpawnObject text="HypatiaTheMathematician" count="1" />
+  </NPC>
+
+  <NPC name="IreneOfAthens" weight="1">
+    <SpawnObject text="IreneOfAthens" count="1" />
+  </NPC>
+
+  <NPC name="JesterJangle" weight="1">
+    <SpawnObject text="JesterJangle" count="1" />
+  </NPC>
+
+  <NPC name="JesterJest" weight="1">
+    <SpawnObject text="JesterJest" count="1" />
+  </NPC>
+
+  <NPC name="JesterJibe" weight="1">
+    <SpawnObject text="JesterJibe" count="1" />
+  </NPC>
+
+  <NPC name="JesterJolly" weight="1">
+    <SpawnObject text="JesterJolly" count="1" />
+  </NPC>
+
+  <NPC name="JesterJoyful" weight="1">
+    <SpawnObject text="JesterJoyful" count="1" />
+  </NPC>
+
+  <NPC name="JoanOfArc" weight="1">
+    <SpawnObject text="JoanOfArc" count="1" />
+  </NPC>
+
+  <NPC name="JokomoTheJolly" weight="1">
+    <SpawnObject text="JokomoTheJolly" count="1" />
+  </NPC>
+
+  <NPC name="JollyJana" weight="1">
+    <SpawnObject text="JollyJana" count="1" />
+  </NPC>
+
+  <NPC name="JovialJester" weight="1">
+    <SpawnObject text="JovialJester" count="1" />
+  </NPC>
+
+  <NPC name="Junny" weight="1">
+    <SpawnObject text="Junny" count="1" />
+  </NPC>
+
+  <NPC name="KaelThunderarrow" weight="1">
+    <SpawnObject text="KaelThunderarrow" count="1" />
+  </NPC>
+
+  <NPC name="Kain" weight="1">
+    <SpawnObject text="Kain" count="1" />
+  </NPC>
+
+  <NPC name="KaiTheWild" weight="1">
+    <SpawnObject text="KaiTheWild" count="1" />
+  </NPC>
+
+  <NPC name="KarlMarx" weight="1">
+    <SpawnObject text="KarlMarx" count="1" />
+  </NPC>
+
+  <NPC name="KingArthur" weight="1">
+    <SpawnObject text="KingArthur" count="1" />
+  </NPC>
+
+  <NPC name="KingCedric" weight="1">
+    <SpawnObject text="KingCedric" count="1" />
+  </NPC>
+
+  <NPC name="KingEdmund" weight="1">
+    <SpawnObject text="KingEdmund" count="1" />
+  </NPC>
+
+  <NPC name="KingGregory" weight="1">
+    <SpawnObject text="KingGregory" count="1" />
+  </NPC>
+
+  <NPC name="KingLeopold" weight="1">
+    <SpawnObject text="KingLeopold" count="1" />
+  </NPC>
+
+  <NPC name="LadyEleanor" weight="1">
+    <SpawnObject text="LadyEleanor" count="1" />
+  </NPC>
+
+  <NPC name="LadyFibonacci" weight="1">
+    <SpawnObject text="LadyFibonacci" count="1" />
+  </NPC>
+
+  <NPC name="LadyGsolde" weight="1">
+    <SpawnObject text="LadyGsolde" count="1" />
+  </NPC>
+
+  <NPC name="LadyGuinevere" weight="1">
+    <SpawnObject text="LadyGuinevere" count="1" />
+  </NPC>
+
+  <NPC name="LadyIsolde" weight="1">
+    <SpawnObject text="LadyIsolde" count="1" />
+  </NPC>
+
+  <NPC name="LadyJoanOfArc" weight="1">
+    <SpawnObject text="LadyJoanOfArc" count="1" />
+  </NPC>
+
+  <NPC name="LadyLethal" weight="1">
+    <SpawnObject text="LadyLethal" count="1" />
+  </NPC>
+
+  <NPC name="LadyLila" weight="1">
+    <SpawnObject text="LadyLila" count="1" />
+  </NPC>
+
+  <NPC name="LadyMorgana" weight="1">
+    <SpawnObject text="LadyMorgana" count="1" />
+  </NPC>
+
+  <NPC name="LadyScarlet" weight="1">
+    <SpawnObject text="LadyScarlet" count="1" />
+  </NPC>
+
+  <NPC name="LadyTheodora" weight="1">
+    <SpawnObject text="LadyTheodora" count="1" />
+  </NPC>
+
+  <NPC name="LadyTrini" weight="1">
+    <SpawnObject text="LadyTrini" count="1" />
+  </NPC>
+
+  <NPC name="LaraTheHealer" weight="1">
+    <SpawnObject text="LaraTheHealer" count="1" />
+  </NPC>
+
+  <NPC name="LarkTheMerry" weight="1">
+    <SpawnObject text="LarkTheMerry" count="1" />
+  </NPC>
+
+  <NPC name="LarkTheMerry2" weight="1">
+    <SpawnObject text="LarkTheMerry2" count="1" />
+  </NPC>
+
+  <NPC name="LauraSecord" weight="1">
+    <SpawnObject text="LauraSecord" count="1" />
+  </NPC>
+
+  <NPC name="LethalLucy" weight="1">
+    <SpawnObject text="LethalLucy" count="1" />
+  </NPC>
+
+  <NPC name="LianaTheLively" weight="1">
+    <SpawnObject text="LianaTheLively" count="1" />
+  </NPC>
+
+  <NPC name="LilaTheExplorer" weight="1">
+    <SpawnObject text="LilaTheExplorer" count="1" />
+  </NPC>
+
+  <NPC name="LilaTheSwift" weight="1">
+    <SpawnObject text="LilaTheSwift" count="1" />
+  </NPC>
+
+  <NPC name="LilithTheDeathweaver" weight="1">
+    <SpawnObject text="LilithTheDeathweaver" count="1" />
+  </NPC>
+
+  <NPC name="LilithTheRevenant" weight="1">
+    <SpawnObject text="LilithTheRevenant" count="1" />
+  </NPC>
+
+  <NPC name="LilyTheLost" weight="1">
+    <SpawnObject text="LilyTheLost" count="1" />
+  </NPC>
+
+  <NPC name="LilyTheLovelyCook" weight="1">
+    <SpawnObject text="LilyTheLovelyCook" count="1" />
+  </NPC>
+
+  <NPC name="LockeCole" weight="1">
+    <SpawnObject text="LockeCole" count="1" />
+  </NPC>
+
+  <NPC name="LongitudeLarry" weight="1">
+    <SpawnObject text="LongitudeLarry" count="1" />
+  </NPC>
+
+  <NPC name="LordByron" weight="1">
+    <SpawnObject text="LordByron" count="1" />
+  </NPC>
+
+  <NPC name="LordHavoc" weight="1">
+    <SpawnObject text="LordHavoc" count="1" />
+  </NPC>
+
+  <NPC name="LorenzoTheLorekeeper" weight="1">
+    <SpawnObject text="LorenzoTheLorekeeper" count="1" />
+  </NPC>
+
+  <NPC name="LorenzoTheLyrical" weight="1">
+    <SpawnObject text="LorenzoTheLyrical" count="1" />
+  </NPC>
+
+  <NPC name="LouisRiel" weight="1">
+    <SpawnObject text="LouisRiel" count="1" />
+  </NPC>
+
+  <NPC name="LouisXIV" weight="1">
+    <SpawnObject text="LouisXIV" count="1" />
+  </NPC>
+
+  <NPC name="LunaTheLoyalTamer" weight="1">
+    <SpawnObject text="LunaTheLoyalTamer" count="1" />
+  </NPC>
+
+  <NPC name="LusciousLila" weight="1">
+    <SpawnObject text="LusciousLila" count="1" />
+  </NPC>
+
+  <NPC name="LyraTheElf" weight="1">
+    <SpawnObject text="LyraTheElf" count="1" />
+  </NPC>
+
+  <NPC name="LyriaShadowsong" weight="1">
+    <SpawnObject text="LyriaShadowsong" count="1" />
+  </NPC>
+
+  <NPC name="LyriaTheCelestialSeer" weight="1">
+    <SpawnObject text="LyriaTheCelestialSeer" count="1" />
+  </NPC>
+
+  <NPC name="LyriaTheGalewind" weight="1">
+    <SpawnObject text="LyriaTheGalewind" count="1" />
+  </NPC>
+
+  <NPC name="LyriaTheHealer" weight="1">
+    <SpawnObject text="LyriaTheHealer" count="1" />
+  </NPC>
+
+  <NPC name="LyriaTheShadowdancer" weight="1">
+    <SpawnObject text="LyriaTheShadowdancer" count="1" />
+  </NPC>
+
+  <NPC name="LyricLila" weight="1">
+    <SpawnObject text="LyricLila" count="1" />
+  </NPC>
+
+  <NPC name="MajorZeta" weight="1">
+    <SpawnObject text="MajorZeta" count="1" />
+  </NPC>
+
+  <NPC name="MaoZedong" weight="1">
+    <SpawnObject text="MaoZedong" count="1" />
+  </NPC>
+
+  <NPC name="MarcoTheNavigator" weight="1">
+    <SpawnObject text="MarcoTheNavigator" count="1" />
+  </NPC>
+
+  <NPC name="MarieAntoinette" weight="1">
+    <SpawnObject text="MarieAntoinette" count="1" />
+  </NPC>
+
+  <NPC name="MarieCurie" weight="1">
+    <SpawnObject text="MarieCurie" count="1" />
+  </NPC>
+
+  <NPC name="MarinaTheMapper" weight="1">
+    <SpawnObject text="MarinaTheMapper" count="1" />
+  </NPC>
+
+  <NPC name="MasterGauss" weight="1">
+    <SpawnObject text="MasterGauss" count="1" />
+  </NPC>
+
+  <NPC name="MasterZalazar" weight="1">
+    <SpawnObject text="MasterZalazar" count="1" />
+  </NPC>
+
+  <NPC name="MelodicMelinda" weight="1">
+    <SpawnObject text="MelodicMelinda" count="1" />
+  </NPC>
+
+  <NPC name="MelodyTheHarpist" weight="1">
+    <SpawnObject text="MelodyTheHarpist" count="1" />
+  </NPC>
+
+  <NPC name="MelodyTheSiren" weight="1">
+    <SpawnObject text="MelodyTheSiren" count="1" />
+  </NPC>
+
+  <NPC name="MerlinP" weight="1">
+    <SpawnObject text="MerlinP" count="1" />
+  </NPC>
+
+  <NPC name="MerryTheJester" weight="1">
+    <SpawnObject text="MerryTheJester" count="1" />
+  </NPC>
+
+  <NPC name="MerryTheMischievous" weight="1">
+    <SpawnObject text="MerryTheMischievous" count="1" />
+  </NPC>
+
+  <NPC name="MichaelPsellus" weight="1">
+    <SpawnObject text="MichaelPsellus" count="1" />
+  </NPC>
+
+  <NPC name="MiraTheMagnificent" weight="1">
+    <SpawnObject text="MiraTheMagnificent" count="1" />
+  </NPC>
+
+  <NPC name="MissNixie" weight="1">
+    <SpawnObject text="MissNixie" count="1" />
+  </NPC>
+
+  <NPC name="MissPythagoras" weight="1">
+    <SpawnObject text="MissPythagoras" count="1" />
+  </NPC>
+
+  <NPC name="MistressMira" weight="1">
+    <SpawnObject text="MistressMira" count="1" />
+  </NPC>
+
+  <NPC name="MistressViper" weight="1">
+    <SpawnObject text="MistressViper" count="1" />
+  </NPC>
+
+  <NPC name="MorganLeFay" weight="1">
+    <SpawnObject text="MorganLeFay" count="1" />
+  </NPC>
+
+  <NPC name="MorosTheBonecaller" weight="1">
+    <SpawnObject text="MorosTheBonecaller" count="1" />
+  </NPC>
+
+  <NPC name="MrLancealot" weight="1">
+    <SpawnObject text="MrLancealot" count="1" />
+  </NPC>
+
+  <NPC name="MsEclipse" weight="1">
+    <SpawnObject text="MsEclipse" count="1" />
+  </NPC>
+
+  <NPC name="Mulan" weight="1">
+    <SpawnObject text="Mulan" count="1" />
+  </NPC>
+
+  <NPC name="MysticElara" weight="1">
+    <SpawnObject text="MysticElara" count="1" />
+  </NPC>
+
+  <NPC name="MysticMiro" weight="1">
+    <SpawnObject text="MysticMiro" count="1" />
+  </NPC>
+
+  <NPC name="NaelaTheMistweaver" weight="1">
+    <SpawnObject text="NaelaTheMistweaver" count="1" />
+  </NPC>
+
+  <NPC name="NapoleonBonaparte" weight="1">
+    <SpawnObject text="NapoleonBonaparte" count="1" />
+  </NPC>
+
+  <NPC name="NapoleonBone" weight="1">
+    <SpawnObject text="NapoleonBone" count="1" />
+  </NPC>
+
+  <NPC name="NecroNina" weight="1">
+    <SpawnObject text="NecroNina" count="1" />
+  </NPC>
+
+  <NPC name="NellieMcClung" weight="1">
+    <SpawnObject text="NellieMcClung" count="1" />
+  </NPC>
+
+  <NPC name="Niko" weight="1">
+    <SpawnObject text="Niko" count="1" />
+  </NPC>
+
+  <NPC name="NoxNora" weight="1">
+    <SpawnObject text="NoxNora" count="1" />
+  </NPC>
+
+  <NPC name="OcelotOliver" weight="1">
+    <SpawnObject text="OcelotOliver" count="1" />
+  </NPC>
+
+  <NPC name="OldLadyLynne" weight="1">
+    <SpawnObject text="OldLadyLynne" count="1" />
+  </NPC>
+
+  <NPC name="OldmanOmric" weight="1">
+    <SpawnObject text="OldmanOmric" count="1" />
+  </NPC>
+
+  <NPC name="OldPete" weight="1">
+    <SpawnObject text="OldPete" count="1" />
+  </NPC>
+
+  <NPC name="OrglokTheMystic" weight="1">
+    <SpawnObject text="OrglokTheMystic" count="1" />
+  </NPC>
+
+  <NPC name="OutlawDaisy" weight="1">
+    <SpawnObject text="OutlawDaisy" count="1" />
+  </NPC>
+
+  <NPC name="PandaPatty" weight="1">
+    <SpawnObject text="PandaPatty" count="1" />
+  </NPC>
+
+  <NPC name="PatchThePirate" weight="1">
+    <SpawnObject text="PatchThePirate" count="1" />
+  </NPC>
+
+  <NPC name="PathfinderPenelope" weight="1">
+    <SpawnObject text="PathfinderPenelope" count="1" />
+  </NPC>
+
+  <NPC name="PegLegPete" weight="1">
+    <SpawnObject text="PegLegPete" count="1" />
+  </NPC>
+
+  <NPC name="PennylessPete" weight="1">
+    <SpawnObject text="PennylessPete" count="1" />
+  </NPC>
+
+  <NPC name="Pepin" weight="1">
+    <SpawnObject text="Pepin" count="1" />
+  </NPC>
+
+  <NPC name="PinkRanger" weight="1">
+    <SpawnObject text="PinkRanger" count="1" />
+  </NPC>
+
+  <NPC name="PizzaioloPaolo" weight="1">
+    <SpawnObject text="PizzaioloPaolo" count="1" />
+  </NPC>
+
+  <NPC name="PlatoTheIdealist" weight="1">
+    <SpawnObject text="PlatoTheIdealist" count="1" />
+  </NPC>
+
+  <NPC name="PolarPete" weight="1">
+    <SpawnObject text="PolarPete" count="1" />
+  </NPC>
+
+  <NPC name="PotionmasterPia" weight="1">
+    <SpawnObject text="PotionmasterPia" count="1" />
+  </NPC>
+
+  <NPC name="PriestessIsidora" weight="1">
+    <SpawnObject text="PriestessIsidora" count="1" />
+  </NPC>
+
+  <NPC name="ProfCurie" weight="1">
+    <SpawnObject text="ProfCurie" count="1" />
+  </NPC>
+
+  <NPC name="ProfessorEuclid" weight="1">
+    <SpawnObject text="ProfessorEuclid" count="1" />
+  </NPC>
+
+  <NPC name="ProfessorOrion" weight="1">
+    <SpawnObject text="ProfessorOrion" count="1" />
+  </NPC>
+
+  <NPC name="QinShiHuang" weight="1">
+    <SpawnObject text="QinShiHuang" count="1" />
+  </NPC>
+
+  <NPC name="QueenElizabethI" weight="1">
+    <SpawnObject text="QueenElizabethI" count="1" />
+  </NPC>
+
+  <NPC name="RaggedRonny" weight="1">
+    <SpawnObject text="RaggedRonny" count="1" />
+  </NPC>
+
+  <NPC name="RagnarTheBold" weight="1">
+    <SpawnObject text="RagnarTheBold" count="1" />
+  </NPC>
+
+  <NPC name="RancherLuke" weight="1">
+    <SpawnObject text="RancherLuke" count="1" />
+  </NPC>
+
+  <NPC name="RavenTheShade" weight="1">
+    <SpawnObject text="RavenTheShade" count="1" />
+  </NPC>
+
+  <NPC name="RavishingRosa" weight="1">
+    <SpawnObject text="RavishingRosa" count="1" />
+  </NPC>
+
+  <NPC name="RazorRina" weight="1">
+    <SpawnObject text="RazorRina" count="1" />
+  </NPC>
+
+  <NPC name="RebelScoutArya" weight="1">
+    <SpawnObject text="RebelScoutArya" count="1" />
+  </NPC>
+
+  <NPC name="RedRanger" weight="1">
+    <SpawnObject text="RedRanger" count="1" />
+  </NPC>
+
+  <NPC name="RemyTheRogue" weight="1">
+    <SpawnObject text="RemyTheRogue" count="1" />
+  </NPC>
+
+  <NPC name="ResearcherLuna" weight="1">
+    <SpawnObject text="ResearcherLuna" count="1" />
+  </NPC>
+
+  <NPC name="RexTheReptoid" weight="1">
+    <SpawnObject text="RexTheReptoid" count="1" />
+  </NPC>
+
+  <NPC name="Rexxar" weight="1">
+    <SpawnObject text="Rexxar" count="1" />
+  </NPC>
+
+  <NPC name="RobinHood" weight="1">
+    <SpawnObject text="RobinHood" count="1" />
+  </NPC>
+
+  <NPC name="RobotOverlordLana" weight="1">
+    <SpawnObject text="RobotOverlordLana" count="1" />
+  </NPC>
+
+  <NPC name="Rosa" weight="1">
+    <SpawnObject text="Rosa" count="1" />
+  </NPC>
+
+  <NPC name="RosaLuxemburg" weight="1">
+    <SpawnObject text="RosaLuxemburg" count="1" />
+  </NPC>
+
+  <NPC name="Rydia" weight="1">
+    <SpawnObject text="Rydia" count="1" />
+  </NPC>
+
+  <NPC name="SableTheSoulstealer" weight="1">
+    <SpawnObject text="SableTheSoulstealer" count="1" />
+  </NPC>
+
+  <NPC name="SageThandor" weight="1">
+    <SpawnObject text="SageThandor" count="1" />
+  </NPC>
+
+  <NPC name="SamuelDeChamplain" weight="1">
+    <SpawnObject text="SamuelDeChamplain" count="1" />
+  </NPC>
+
+  <NPC name="SassySelena" weight="1">
+    <SpawnObject text="SassySelena" count="1" />
+  </NPC>
+
+  <NPC name="ScallywagSteve" weight="1">
+    <SpawnObject text="ScallywagSteve" count="1" />
+  </NPC>
+
+  <NPC name="ScientistGalileo" weight="1">
+    <SpawnObject text="ScientistGalileo" count="1" />
+  </NPC>
+
+  <NPC name="ScientistTesla" weight="1">
+    <SpawnObject text="ScientistTesla" count="1" />
+  </NPC>
+
+  <NPC name="SeleneTheNightshade" weight="1">
+    <SpawnObject text="SeleneTheNightshade" count="1" />
+  </NPC>
+
+  <NPC name="Shadow" weight="1">
+    <SpawnObject text="Shadow" count="1" />
+  </NPC>
+
+  <NPC name="ShadowSam" weight="1">
+    <SpawnObject text="ShadowSam" count="1" />
+  </NPC>
+
+  <NPC name="ShepherdessAnna" weight="1">
+    <SpawnObject text="ShepherdessAnna" count="1" />
+  </NPC>
+
+  <NPC name="ShepherdessMary" weight="1">
+    <SpawnObject text="ShepherdessMary" count="1" />
+  </NPC>
+
+  <NPC name="ShepherdessMaury" weight="1">
+    <SpawnObject text="ShepherdessMaury" count="1" />
+  </NPC>
+
+  <NPC name="ShepherdJohn" weight="1">
+    <SpawnObject text="ShepherdJohn" count="1" />
+  </NPC>
+
+  <NPC name="ShepherdLuke" weight="1">
+    <SpawnObject text="ShepherdLuke" count="1" />
+  </NPC>
+
+  <NPC name="ShepherdTom" weight="1">
+    <SpawnObject text="ShepherdTom" count="1" />
+  </NPC>
+
+  <NPC name="SheriffJohn" weight="1">
+    <SpawnObject text="SheriffJohn" count="1" />
+  </NPC>
+
+  <NPC name="SilentSarah" weight="1">
+    <SpawnObject text="SilentSarah" count="1" />
+  </NPC>
+
+  <NPC name="SirBrutus" weight="1">
+    <SpawnObject text="SirBrutus" count="1" />
+  </NPC>
+
+  <NPC name="SirFrancisDrake" weight="1">
+    <SpawnObject text="SirFrancisDrake" count="1" />
+  </NPC>
+
+  <NPC name="SirGalahad" weight="1">
+    <SpawnObject text="SirGalahad" count="1" />
+  </NPC>
+
+  <NPC name="SirGawain" weight="1">
+    <SpawnObject text="SirGawain" count="1" />
+  </NPC>
+
+  <NPC name="SirJason" weight="1">
+    <SpawnObject text="SirJason" count="1" />
+  </NPC>
+
+  <NPC name="SirLancealot" weight="1">
+    <SpawnObject text="SirLancealot" count="1" />
+  </NPC>
+
+  <NPC name="SirLancelot" weight="1">
+    <SpawnObject text="SirLancelot" count="1" />
+  </NPC>
+
+  <NPC name="SirMorgar" weight="1">
+    <SpawnObject text="SirMorgar" count="1" />
+  </NPC>
+
+  <NPC name="SirNewton" weight="1">
+    <SpawnObject text="SirNewton" count="1" />
+  </NPC>
+
+  <NPC name="SirPercival" weight="1">
+    <SpawnObject text="SirPercival" count="1" />
+  </NPC>
+
+  <NPC name="SirReginald" weight="1">
+    <SpawnObject text="SirReginald" count="1" />
+  </NPC>
+
+  <NPC name="SirRobinHood" weight="1">
+    <SpawnObject text="SirRobinHood" count="1" />
+  </NPC>
+
+  <NPC name="SirRoland" weight="1">
+    <SpawnObject text="SirRoland" count="1" />
+  </NPC>
+
+  <NPC name="SirTristan" weight="1">
+    <SpawnObject text="SirTristan" count="1" />
+  </NPC>
+
+  <NPC name="SlamsonTheBold" weight="1">
+    <SpawnObject text="SlamsonTheBold" count="1" />
+  </NPC>
+
+  <NPC name="SlitheTheWarrior" weight="1">
+    <SpawnObject text="SlitheTheWarrior" count="1" />
+  </NPC>
+
+  <NPC name="SlySylvi" weight="1">
+    <SpawnObject text="SlySylvi" count="1" />
+  </NPC>
+
+  <NPC name="SmashinSlammo" weight="1">
+    <SpawnObject text="SmashinSlammo" count="1" />
+  </NPC>
+
+  <NPC name="SocratesTheQuestioner" weight="1">
+    <SpawnObject text="SocratesTheQuestioner" count="1" />
+  </NPC>
+
+  <NPC name="SorceressLirea" weight="1">
+    <SpawnObject text="SorceressLirea" count="1" />
+  </NPC>
+
+  <NPC name="SpectralSarah" weight="1">
+    <SpawnObject text="SpectralSarah" count="1" />
+  </NPC>
+
+  <NPC name="StabbySteve" weight="1">
+    <SpawnObject text="StabbySteve" count="1" />
+  </NPC>
+
+  <NPC name="StarExplorerLeo" weight="1">
+    <SpawnObject text="StarExplorerLeo" count="1" />
+  </NPC>
+
+  <NPC name="SultrySally" weight="1">
+    <SpawnObject text="SultrySally" count="1" />
+  </NPC>
+
+  <NPC name="SunTzu" weight="1">
+    <SpawnObject text="SunTzu" count="1" />
+  </NPC>
+
+  <NPC name="SwashbucklingSally" weight="1">
+    <SpawnObject text="SwashbucklingSally" count="1" />
+  </NPC>
+
+  <NPC name="TalorTheTameless" weight="1">
+    <SpawnObject text="TalorTheTameless" count="1" />
+  </NPC>
+
+  <NPC name="TatteredTina" weight="1">
+    <SpawnObject text="TatteredTina" count="1" />
+  </NPC>
+
+  <NPC name="Tecumseh" weight="1">
+    <SpawnObject text="Tecumseh" count="1" />
+  </NPC>
+
+  <NPC name="TemptingTina" weight="1">
+    <SpawnObject text="TemptingTina" count="1" />
+  </NPC>
+
+  <NPC name="TerraBranford" weight="1">
+    <SpawnObject text="TerraBranford" count="1" />
+  </NPC>
+
+  <NPC name="TharnTheEmberEye" weight="1">
+    <SpawnObject text="TharnTheEmberEye" count="1" />
+  </NPC>
+
+  <NPC name="ThrexTheVoidPredator" weight="1">
+    <SpawnObject text="ThrexTheVoidPredator" count="1" />
+  </NPC>
+
+  <NPC name="Tommy" weight="1">
+    <SpawnObject text="Tommy" count="1" />
+  </NPC>
+
+  <NPC name="TorkTheThundercaller" weight="1">
+    <SpawnObject text="TorkTheThundercaller" count="1" />
+  </NPC>
+
+  <NPC name="TreasureSeekingTina" weight="1">
+    <SpawnObject text="TreasureSeekingTina" count="1" />
+  </NPC>
+
+  <NPC name="TwinkoTheTricky" weight="1">
+    <SpawnObject text="TwinkoTheTricky" count="1" />
+  </NPC>
+
+  <NPC name="TwisterTerry" weight="1">
+    <SpawnObject text="TwisterTerry" count="1" />
+  </NPC>
+
+  <NPC name="UlfTheFrostborn" weight="1">
+    <SpawnObject text="UlfTheFrostborn" count="1" />
+  </NPC>
+
+  <NPC name="VireliaTheSwampWhisperer" weight="1">
+    <SpawnObject text="VireliaTheSwampWhisperer" count="1" />
+  </NPC>
+
+  <NPC name="VladimirLenin" weight="1">
+    <SpawnObject text="VladimirLenin" count="1" />
+  </NPC>
+
+  <NPC name="WhisperingWillow" weight="1">
+    <SpawnObject text="WhisperingWillow" count="1" />
+  </NPC>
+
+  <NPC name="WhiteWitch" weight="1">
+    <SpawnObject text="WhiteWitch" count="1" />
+  </NPC>
+
+  <NPC name="WilliamTheConqueror" weight="1">
+    <SpawnObject text="WilliamTheConqueror" count="1" />
+  </NPC>
+
+  <NPC name="Wirt" weight="1">
+    <SpawnObject text="Wirt" count="1" />
+  </NPC>
+
+  <NPC name="WuZetian" weight="1">
+    <SpawnObject text="WuZetian" count="1" />
+  </NPC>
+
+  <NPC name="YellowRanger" weight="1">
+    <SpawnObject text="YellowRanger" count="1" />
+  </NPC>
+
+  <NPC name="Zana" weight="1">
+    <SpawnObject text="Zana" count="1" />
+  </NPC>
+
+  <NPC name="ZaraTheFlameWhisperer" weight="1">
+    <SpawnObject text="ZaraTheFlameWhisperer" count="1" />
+  </NPC>
+
+  <NPC name="ZaraTheStarborn" weight="1">
+    <SpawnObject text="ZaraTheStarborn" count="1" />
+  </NPC>
+
+  <NPC name="ZarthTheStarWanderer" weight="1">
+    <SpawnObject text="ZarthTheStarWanderer" count="1" />
+  </NPC>
+
+  <NPC name="ZhugeLiang" weight="1">
+    <SpawnObject text="ZhugeLiang" count="1" />
+  </NPC>
+
+  <NPC name="ZoePorphyrogenita" weight="1">
+    <SpawnObject text="ZoePorphyrogenita" count="1" />
+  </NPC>
+
+  <NPC name="AedricMastersonTheCollector" weight="1">
+    <SpawnObject text="AedricMastersonTheCollector" count="1" />
+  </NPC>
+
+  <NPC name="AelricTheWanderer" weight="1">
+    <SpawnObject text="AelricTheWanderer" count="1" />
+  </NPC>
+
+  <NPC name="AlaricTheCollector" weight="1">
+    <SpawnObject text="AlaricTheCollector" count="1" />
+  </NPC>
+
+  <NPC name="AlchemistLucilla" weight="1">
+    <SpawnObject text="AlchemistLucilla" count="1" />
+  </NPC>
+
+  <NPC name="AleeraTheBard" weight="1">
+    <SpawnObject text="AleeraTheBard" count="1" />
+  </NPC>
+
+  <NPC name="ArcadiaTheArtisan" weight="1">
+    <SpawnObject text="ArcadiaTheArtisan" count="1" />
+  </NPC>
+
+  <NPC name="AriannaTheCartographer" weight="1">
+    <SpawnObject text="AriannaTheCartographer" count="1" />
+  </NPC>
+
+  <NPC name="AriaTheGardenAlchemist" weight="1">
+    <SpawnObject text="AriaTheGardenAlchemist" count="1" />
+  </NPC>
+
+  <NPC name="AriettaTheWispWhisperer" weight="1">
+    <SpawnObject text="AriettaTheWispWhisperer" count="1" />
+  </NPC>
+
+  <NPC name="ArinTheCollector" weight="1">
+    <SpawnObject text="ArinTheCollector" count="1" />
+  </NPC>
+
+  <NPC name="AsherahWildwood" weight="1">
+    <SpawnObject text="AsherahWildwood" count="1" />
+  </NPC>
+
+  <NPC name="AstelTheHerbalist" weight="1">
+    <SpawnObject text="AstelTheHerbalist" count="1" />
+  </NPC>
+
+  <NPC name="AstroliaTheStargazer" weight="1">
+    <SpawnObject text="AstroliaTheStargazer" count="1" />
+  </NPC>
+
+  <NPC name="AuroraTheFlorist" weight="1">
+    <SpawnObject text="AuroraTheFlorist" count="1" />
+  </NPC>
+
+  <NPC name="BrynjaTheSnowSculptor" weight="1">
+    <SpawnObject text="BrynjaTheSnowSculptor" count="1" />
+  </NPC>
+
+  <NPC name="CadeTheGravekeeper" weight="1">
+    <SpawnObject text="CadeTheGravekeeper" count="1" />
+  </NPC>
+
+  <NPC name="CaelumTheWanderer" weight="1">
+    <SpawnObject text="CaelumTheWanderer" count="1" />
+  </NPC>
+
+  <NPC name="CaiusTheCollector" weight="1">
+    <SpawnObject text="CaiusTheCollector" count="1" />
+  </NPC>
+
+  <NPC name="CalderTheGlazier" weight="1">
+    <SpawnObject text="CalderTheGlazier" count="1" />
+  </NPC>
+
+  <NPC name="CaptainRhogarTheWily" weight="1">
+    <SpawnObject text="CaptainRhogarTheWily" count="1" />
+  </NPC>
+
+  <NPC name="CaptainSeabreeze" weight="1">
+    <SpawnObject text="CaptainSeabreeze" count="1" />
+  </NPC>
+
+  <NPC name="CaptainViridian" weight="1">
+    <SpawnObject text="CaptainViridian" count="1" />
+  </NPC>
+
+  <NPC name="CaspianTheStargazer" weight="1">
+    <SpawnObject text="CaspianTheStargazer" count="1" />
+  </NPC>
+
+  <NPC name="CassianTheWanderer" weight="1">
+    <SpawnObject text="CassianTheWanderer" count="1" />
+  </NPC>
+
+  <NPC name="CeciliaTheShardKeeper" weight="1">
+    <SpawnObject text="CeciliaTheShardKeeper" count="1" />
+  </NPC>
+
+  <NPC name="ClementineTheWeaver" weight="1">
+    <SpawnObject text="ClementineTheWeaver" count="1" />
+  </NPC>
+
+  <NPC name="CoralineTheChemist" weight="1">
+    <SpawnObject text="CoralineTheChemist" count="1" />
+  </NPC>
+
+  <NPC name="DarianTheOccultist" weight="1">
+    <SpawnObject text="DarianTheOccultist" count="1" />
+  </NPC>
+
+  <NPC name="DariusTheApothecary" weight="1">
+    <SpawnObject text="DariusTheApothecary" count="1" />
+  </NPC>
+
+  <NPC name="DrakovTheAlchemist" weight="1">
+    <SpawnObject text="DrakovTheAlchemist" count="1" />
+  </NPC>
+
+  <NPC name="DravikTheTinker" weight="1">
+    <SpawnObject text="DravikTheTinker" count="1" />
+  </NPC>
+
+  <NPC name="ElaraTheCuriousAlchemist" weight="1">
+    <SpawnObject text="ElaraTheCuriousAlchemist" count="1" />
+  </NPC>
+
+  <NPC name="ElaraTheMystic" weight="1">
+    <SpawnObject text="ElaraTheMystic" count="1" />
+  </NPC>
+
+  <NPC name="EldaraTheEnigmatic" weight="1">
+    <SpawnObject text="EldaraTheEnigmatic" count="1" />
+  </NPC>
+
+  <NPC name="EldricTheMysteriousBotanist" weight="1">
+    <SpawnObject text="EldricTheMysteriousBotanist" count="1" />
+  </NPC>
+
+  <NPC name="EldricTheWardenOfFlames" weight="1">
+    <SpawnObject text="EldricTheWardenOfFlames" count="1" />
+  </NPC>
+
+  <NPC name="EldrinTheAlchemicalArtisan" weight="1">
+    <SpawnObject text="EldrinTheAlchemicalArtisan" count="1" />
+  </NPC>
+
+  <NPC name="EliraTheStarSeer" weight="1">
+    <SpawnObject text="EliraTheStarSeer" count="1" />
+  </NPC>
+
+  <NPC name="ElizaTheCollector" weight="1">
+    <SpawnObject text="ElizaTheCollector" count="1" />
+  </NPC>
+
+  <NPC name="EllaraTheTinkerer" weight="1">
+    <SpawnObject text="EllaraTheTinkerer" count="1" />
+  </NPC>
+
+  <NPC name="ElowenTheEnigmatic" weight="1">
+    <SpawnObject text="ElowenTheEnigmatic" count="1" />
+  </NPC>
+
+  <NPC name="ElricTheOddTradesman" weight="1">
+    <SpawnObject text="ElricTheOddTradesman" count="1" />
+  </NPC>
+
+  <NPC name="EphraimTheBeekeeper" weight="1">
+    <SpawnObject text="EphraimTheBeekeeper" count="1" />
+  </NPC>
+
+  <NPC name="EsmaraldaTheKeeper" weight="1">
+    <SpawnObject text="EsmaraldaTheKeeper" count="1" />
+  </NPC>
+
+  <NPC name="EsmeraldaTheFashionista" weight="1">
+    <SpawnObject text="EsmeraldaTheFashionista" count="1" />
+  </NPC>
+
+  <NPC name="EzrienTheWanderingMinstrel" weight="1">
+    <SpawnObject text="EzrienTheWanderingMinstrel" count="1" />
+  </NPC>
+
+  <NPC name="FarrokhTheWanderer" weight="1">
+    <SpawnObject text="FarrokhTheWanderer" count="1" />
+  </NPC>
+
+  <NPC name="FeldenTheTinkerer" weight="1">
+    <SpawnObject text="FeldenTheTinkerer" count="1" />
+  </NPC>
+
+  <NPC name="FeyrinTheArtisan" weight="1">
+    <SpawnObject text="FeyrinTheArtisan" count="1" />
+  </NPC>
+
+  <NPC name="FiniTheBotanist" weight="1">
+    <SpawnObject text="FiniTheBotanist" count="1" />
+  </NPC>
+
+  <NPC name="FinnianTheTreasureSeeker" weight="1">
+    <SpawnObject text="FinnianTheTreasureSeeker" count="1" />
+  </NPC>
+
+  <NPC name="FinniaTheSeeker" weight="1">
+    <SpawnObject text="FinniaTheSeeker" count="1" />
+  </NPC>
+
+  <NPC name="FionaTheAlchemist" weight="1">
+    <SpawnObject text="FionaTheAlchemist" count="1" />
+  </NPC>
+
+  <NPC name="FioraTheMysticMerchant" weight="1">
+    <SpawnObject text="FioraTheMysticMerchant" count="1" />
+  </NPC>
+
+  <NPC name="FrostbiteTrader" weight="1">
+    <SpawnObject text="FrostbiteTrader" count="1" />
+  </NPC>
+
+  <NPC name="FrostwyndTheArcaneSeeker" weight="1">
+    <SpawnObject text="FrostwyndTheArcaneSeeker" count="1" />
+  </NPC>
+
+  <NPC name="FumTheBotanist" weight="1">
+    <SpawnObject text="FumTheBotanist" count="1" />
+  </NPC>
+
+  <NPC name="GarrickTheExplorer" weight="1">
+    <SpawnObject text="GarrickTheExplorer" count="1" />
+  </NPC>
+
+  <NPC name="GorimTheScavenger" weight="1">
+    <SpawnObject text="GorimTheScavenger" count="1" />
+  </NPC>
+
+  <NPC name="GruntharTheCollector" weight="1">
+    <SpawnObject text="GruntharTheCollector" count="1" />
+  </NPC>
+
+  <NPC name="HalstenTheLightkeeper" weight="1">
+    <SpawnObject text="HalstenTheLightkeeper" count="1" />
+  </NPC>
+
+  <NPC name="HexiaTheWitch" weight="1">
+    <SpawnObject text="HexiaTheWitch" count="1" />
+  </NPC>
+
+  <NPC name="IantheTheBloomingAlchemist" weight="1">
+    <SpawnObject text="IantheTheBloomingAlchemist" count="1" />
+  </NPC>
+
+  <NPC name="IlyanaTheFrostbound" weight="1">
+    <SpawnObject text="IlyanaTheFrostbound" count="1" />
+  </NPC>
+
+  <NPC name="InnelTheLostScholar" weight="1">
+    <SpawnObject text="InnelTheLostScholar" count="1" />
+  </NPC>
+
+  <NPC name="JasperTheGambler" weight="1">
+    <SpawnObject text="JasperTheGambler" count="1" />
+  </NPC>
+
+  <NPC name="JaxonTheStoneKeeper" weight="1">
+    <SpawnObject text="JaxonTheStoneKeeper" count="1" />
+  </NPC>
+
+  <NPC name="KaelTheHoarder" weight="1">
+    <SpawnObject text="KaelTheHoarder" count="1" />
+  </NPC>
+
+  <NPC name="KalidorTheTrickster" weight="1">
+    <SpawnObject text="KalidorTheTrickster" count="1" />
+  </NPC>
+
+  <NPC name="KalimTheWanderingAlchemist" weight="1">
+    <SpawnObject text="KalimTheWanderingAlchemist" count="1" />
+  </NPC>
+
+  <NPC name="KallistaTheAlchemist" weight="1">
+    <SpawnObject text="KallistaTheAlchemist" count="1" />
+  </NPC>
+
+  <NPC name="KeeperOfTheLost" weight="1">
+    <SpawnObject text="KeeperOfTheLost" count="1" />
+  </NPC>
+
+  <NPC name="KyraTheArchivist" weight="1">
+    <SpawnObject text="KyraTheArchivist" count="1" />
+  </NPC>
+
+  <NPC name="LanoraTheHarvestWitch" weight="1">
+    <SpawnObject text="LanoraTheHarvestWitch" count="1" />
+  </NPC>
+
+  <NPC name="LazloTheExplorer" weight="1">
+    <SpawnObject text="LazloTheExplorer" count="1" />
+  </NPC>
+
+  <NPC name="LeonardTheCartographer" weight="1">
+    <SpawnObject text="LeonardTheCartographer" count="1" />
+  </NPC>
+
+  <NPC name="LianaThePotionmaster" weight="1">
+    <SpawnObject text="LianaThePotionmaster" count="1" />
+  </NPC>
+
+  <NPC name="LioraTheBotanist" weight="1">
+    <SpawnObject text="LioraTheBotanist" count="1" />
+  </NPC>
+
+  <NPC name="LioraTheTapestryWeaver" weight="1">
+    <SpawnObject text="LioraTheTapestryWeaver" count="1" />
+  </NPC>
+
+  <NPC name="LorithTheVeilSeeker" weight="1">
+    <SpawnObject text="LorithTheVeilSeeker" count="1" />
+  </NPC>
+
+  <NPC name="LucianTheCuriousAlchemist" weight="1">
+    <SpawnObject text="LucianTheCuriousAlchemist" count="1" />
+  </NPC>
+
+  <NPC name="LutherTheCryptKeeper" weight="1">
+    <SpawnObject text="LutherTheCryptKeeper" count="1" />
+  </NPC>
+
+  <NPC name="MadameMaris" weight="1">
+    <SpawnObject text="MadameMaris" count="1" />
+  </NPC>
+
+  <NPC name="MaelrikTheMysticTrader" weight="1">
+    <SpawnObject text="MaelrikTheMysticTrader" count="1" />
+  </NPC>
+
+  <NPC name="MalachiTheRelicSeeker" weight="1">
+    <SpawnObject text="MalachiTheRelicSeeker" count="1" />
+  </NPC>
+
+  <NPC name="MarcellusTheHistorian" weight="1">
+    <SpawnObject text="MarcellusTheHistorian" count="1" />
+  </NPC>
+
+  <NPC name="MarcusTheSmuggler" weight="1">
+    <SpawnObject text="MarcusTheSmuggler" count="1" />
+  </NPC>
+
+  <NPC name="MarekTheTrader" weight="1">
+    <SpawnObject text="MarekTheTrader" count="1" />
+  </NPC>
+
+  <NPC name="MavinaTheAlchemist" weight="1">
+    <SpawnObject text="MavinaTheAlchemist" count="1" />
+  </NPC>
+
+  <NPC name="MaximusTheRelicTrader" weight="1">
+    <SpawnObject text="MaximusTheRelicTrader" count="1" />
+  </NPC>
+
+  <NPC name="MerrickTheWanderingSage" weight="1">
+    <SpawnObject text="MerrickTheWanderingSage" count="1" />
+  </NPC>
+
+  <NPC name="MiloTheSpiritSeeker" weight="1">
+    <SpawnObject text="MiloTheSpiritSeeker" count="1" />
+  </NPC>
+
+  <NPC name="MiraTheShardSeeker" weight="1">
+    <SpawnObject text="MiraTheShardSeeker" count="1" />
+  </NPC>
+
+  <NPC name="MiriaTheRelicKeeper" weight="1">
+    <SpawnObject text="MiriaTheRelicKeeper" count="1" />
+  </NPC>
+
+  <NPC name="MordraTheMystweaver" weight="1">
+    <SpawnObject text="MordraTheMystweaver" count="1" />
+  </NPC>
+
+  <NPC name="MystanTheAlchemist" weight="1">
+    <SpawnObject text="MystanTheAlchemist" count="1" />
+  </NPC>
+
+  <NPC name="MysticMilos" weight="1">
+    <SpawnObject text="MysticMilos" count="1" />
+  </NPC>
+
+  <NPC name="MythrilTheMaskCollector" weight="1">
+    <SpawnObject text="MythrilTheMaskCollector" count="1" />
+  </NPC>
+
+  <NPC name="NavioTheMariner" weight="1">
+    <SpawnObject text="NavioTheMariner" count="1" />
+  </NPC>
+
+  <NPC name="NerrisTheTrader" weight="1">
+    <SpawnObject text="NerrisTheTrader" count="1" />
+  </NPC>
+
+  <NPC name="NerynTheRelicSeeker" weight="1">
+    <SpawnObject text="NerynTheRelicSeeker" count="1" />
+  </NPC>
+
+  <NPC name="NikolaiThePotionmaster" weight="1">
+    <SpawnObject text="NikolaiThePotionmaster" count="1" />
+  </NPC>
+
+  <NPC name="NolaraTheWanderer" weight="1">
+    <SpawnObject text="NolaraTheWanderer" count="1" />
+  </NPC>
+
+  <NPC name="NozomiTheForlornJester" weight="1">
+    <SpawnObject text="NozomiTheForlornJester" count="1" />
+  </NPC>
+
+  <NPC name="NylaraTheFrostfisher" weight="1">
+    <SpawnObject text="NylaraTheFrostfisher" count="1" />
+  </NPC>
+
+  <NPC name="NyssaTheMysticCook" weight="1">
+    <SpawnObject text="NyssaTheMysticCook" count="1" />
+  </NPC>
+
+  <NPC name="OlwynTheExoticBotanist" weight="1">
+    <SpawnObject text="OlwynTheExoticBotanist" count="1" />
+  </NPC>
+
+  <NPC name="OrionTheWanderingSoothsayer" weight="1">
+    <SpawnObject text="OrionTheWanderingSoothsayer" count="1" />
+  </NPC>
+
+  <NPC name="OrlinTheEccentricBotanist" weight="1">
+    <SpawnObject text="OrlinTheEccentricBotanist" count="1" />
+  </NPC>
+
+  <NPC name="RalinaTheWeaver" weight="1">
+    <SpawnObject text="RalinaTheWeaver" count="1" />
+  </NPC>
+
+  <NPC name="RanzorTheAlchemicalTinkerer" weight="1">
+    <SpawnObject text="RanzorTheAlchemicalTinkerer" count="1" />
+  </NPC>
+
+  <NPC name="RazielTheCollector" weight="1">
+    <SpawnObject text="RazielTheCollector" count="1" />
+  </NPC>
+
+  <NPC name="RivanTheAlchemist" weight="1">
+    <SpawnObject text="RivanTheAlchemist" count="1" />
+  </NPC>
+
+  <NPC name="RosewoodTheWanderer" weight="1">
+    <SpawnObject text="RosewoodTheWanderer" count="1" />
+  </NPC>
+
+  <NPC name="RufusTheCollector" weight="1">
+    <SpawnObject text="RufusTheCollector" count="1" />
+  </NPC>
+
+  <NPC name="RulvynTheRustedCollector" weight="1">
+    <SpawnObject text="RulvynTheRustedCollector" count="1" />
+  </NPC>
+
+  <NPC name="RumTheSnowSculptor" weight="1">
+    <SpawnObject text="RumTheSnowSculptor" count="1" />
+  </NPC>
+
+  <NPC name="SeleneTheResinCollector" weight="1">
+    <SpawnObject text="SeleneTheResinCollector" count="1" />
+  </NPC>
+
+  <NPC name="SeraphinaTheWanderingBrewer" weight="1">
+    <SpawnObject text="SeraphinaTheWanderingBrewer" count="1" />
+  </NPC>
+
+  <NPC name="SeraphineTheMysticWeaver" weight="1">
+    <SpawnObject text="SeraphineTheMysticWeaver" count="1" />
+  </NPC>
+
+  <NPC name="SerenaTheMystic" weight="1">
+    <SpawnObject text="SerenaTheMystic" count="1" />
+  </NPC>
+
+  <NPC name="SerenaTheWineTrader" weight="1">
+    <SpawnObject text="SerenaTheWineTrader" count="1" />
+  </NPC>
+
+  <NPC name="SilasTheWeaver" weight="1">
+    <SpawnObject text="SilasTheWeaver" count="1" />
+  </NPC>
+
+  <NPC name="SolaraTheMystic" weight="1">
+    <SpawnObject text="SolaraTheMystic" count="1" />
+  </NPC>
+
+  <NPC name="SprocketTheTinkerer" weight="1">
+    <SpawnObject text="SprocketTheTinkerer" count="1" />
+  </NPC>
+
+  <NPC name="SylasTheRecluse" weight="1">
+    <SpawnObject text="SylasTheRecluse" count="1" />
+  </NPC>
+
+  <NPC name="SylasTheTimekeeper" weight="1">
+    <SpawnObject text="SylasTheTimekeeper" count="1" />
+  </NPC>
+
+  <NPC name="SylvaraTheScholar" weight="1">
+    <SpawnObject text="SylvaraTheScholar" count="1" />
+  </NPC>
+
+  <NPC name="SyraTheFletcher" weight="1">
+    <SpawnObject text="SyraTheFletcher" count="1" />
+  </NPC>
+
+  <NPC name="TalaTheSeafarer" weight="1">
+    <SpawnObject text="TalaTheSeafarer" count="1" />
+  </NPC>
+
+  <NPC name="TaliaTheEnchantress" weight="1">
+    <SpawnObject text="TaliaTheEnchantress" count="1" />
+  </NPC>
+
+  <NPC name="TaliaTheStargazer" weight="1">
+    <SpawnObject text="TaliaTheStargazer" count="1" />
+  </NPC>
+
+  <NPC name="TalwynTheGourmand" weight="1">
+    <SpawnObject text="TalwynTheGourmand" count="1" />
+  </NPC>
+
+  <NPC name="TarekTheTinkerer" weight="1">
+    <SpawnObject text="TarekTheTinkerer" count="1" />
+  </NPC>
+
+  <NPC name="TavaraTheMystic" weight="1">
+    <SpawnObject text="TavaraTheMystic" count="1" />
+  </NPC>
+
+  <NPC name="TazrinTheHermit" weight="1">
+    <SpawnObject text="TazrinTheHermit" count="1" />
+  </NPC>
+
+  <NPC name="ThaddeusTheWanderingHistorian" weight="1">
+    <SpawnObject text="ThaddeusTheWanderingHistorian" count="1" />
+  </NPC>
+
+  <NPC name="ThaddiusTheMinstrel" weight="1">
+    <SpawnObject text="ThaddiusTheMinstrel" count="1" />
+  </NPC>
+
+  <NPC name="ThaldriaTheGourmetTrader" weight="1">
+    <SpawnObject text="ThaldriaTheGourmetTrader" count="1" />
+  </NPC>
+
+  <NPC name="ThaliaKeeperOfTales" weight="1">
+    <SpawnObject text="ThaliaKeeperOfTales" count="1" />
+  </NPC>
+
+  <NPC name="ThaliaTheDreamWeaver" weight="1">
+    <SpawnObject text="ThaliaTheDreamWeaver" count="1" />
+  </NPC>
+
+  <NPC name="ThaliaTheEnchantress" weight="1">
+    <SpawnObject text="ThaliaTheEnchantress" count="1" />
+  </NPC>
+
+  <NPC name="ThaliaTheWeaver" weight="1">
+    <SpawnObject text="ThaliaTheWeaver" count="1" />
+  </NPC>
+
+  <NPC name="ThalionTheCrabwise" weight="1">
+    <SpawnObject text="ThalionTheCrabwise" count="1" />
+  </NPC>
+
+  <NPC name="ThalionTheCursedGambler" weight="1">
+    <SpawnObject text="ThalionTheCursedGambler" count="1" />
+  </NPC>
+
+  <NPC name="ThandorTheSeeker" weight="1">
+    <SpawnObject text="ThandorTheSeeker" count="1" />
+  </NPC>
+
+  <NPC name="TheodricTheTinkerer" weight="1">
+    <SpawnObject text="TheodricTheTinkerer" count="1" />
+  </NPC>
+
+  <NPC name="TheodricTheWanderingTinkerer" weight="1">
+    <SpawnObject text="TheodricTheWanderingTinkerer" count="1" />
+  </NPC>
+
+  <NPC name="ThistleTheCollector" weight="1">
+    <SpawnObject text="ThistleTheCollector" count="1" />
+  </NPC>
+
+  <NPC name="ThrixisTheMaxxiaGuardian" weight="1">
+    <SpawnObject text="ThrixisTheMaxxiaGuardian" count="1" />
+  </NPC>
+
+  <NPC name="TiberiusTheAntiquarian" weight="1">
+    <SpawnObject text="TiberiusTheAntiquarian" count="1" />
+  </NPC>
+
+  <NPC name="TiberiusTheTraveler" weight="1">
+    <SpawnObject text="TiberiusTheTraveler" count="1" />
+  </NPC>
+
+  <NPC name="TinkerbellCogsworth" weight="1">
+    <SpawnObject text="TinkerbellCogsworth" count="1" />
+  </NPC>
+
+  <NPC name="TiroTheLamplighter" weight="1">
+    <SpawnObject text="TiroTheLamplighter" count="1" />
+  </NPC>
+
+  <NPC name="TitaniaTheForestSeeker" weight="1">
+    <SpawnObject text="TitaniaTheForestSeeker" count="1" />
+  </NPC>
+
+  <NPC name="ValenTheSeeker" weight="1">
+    <SpawnObject text="ValenTheSeeker" count="1" />
+  </NPC>
+
+  <NPC name="ValenTheTimekeeper" weight="1">
+    <SpawnObject text="ValenTheTimekeeper" count="1" />
+  </NPC>
+
+  <NPC name="ValeriaTheCollector" weight="1">
+    <SpawnObject text="ValeriaTheCollector" count="1" />
+  </NPC>
+
+  <NPC name="ValeriaTheGemCollector" weight="1">
+    <SpawnObject text="ValeriaTheGemCollector" count="1" />
+  </NPC>
+
+  <NPC name="ValyriaTheWaterSeeker" weight="1">
+    <SpawnObject text="ValyriaTheWaterSeeker" count="1" />
+  </NPC>
+
+  <NPC name="VarlaTheNomadicTrader" weight="1">
+    <SpawnObject text="VarlaTheNomadicTrader" count="1" />
+  </NPC>
+
+  <NPC name="VelmaTheCollector" weight="1">
+    <SpawnObject text="VelmaTheCollector" count="1" />
+  </NPC>
+
+  <NPC name="VesperaTheStargazer" weight="1">
+    <SpawnObject text="VesperaTheStargazer" count="1" />
+  </NPC>
+
+  <NPC name="XantheTheStarborn" weight="1">
+    <SpawnObject text="XantheTheStarborn" count="1" />
+  </NPC>
+
+  <NPC name="XyaraTheArtifactCollector" weight="1">
+    <SpawnObject text="XyaraTheArtifactCollector" count="1" />
+  </NPC>
+
+  <NPC name="YorickTheAlchemist" weight="1">
+    <SpawnObject text="YorickTheAlchemist" count="1" />
+  </NPC>
+
+  <NPC name="ZanthalTheHauntedCollector" weight="1">
+    <SpawnObject text="ZanthalTheHauntedCollector" count="1" />
+  </NPC>
+
+  <NPC name="ZaraTheAlchemist" weight="1">
+    <SpawnObject text="ZaraTheAlchemist" count="1" />
+  </NPC>
+
+  <NPC name="ZaraTheWanderweaver" weight="1">
+    <SpawnObject text="ZaraTheWanderweaver" count="1" />
+  </NPC>
+
+  <NPC name="ZaraTheWeaver" weight="1">
+    <SpawnObject text="ZaraTheWeaver" count="1" />
+  </NPC>
+
+  <NPC name="ZarekTheAntiquarian" weight="1">
+    <SpawnObject text="ZarekTheAntiquarian" count="1" />
+  </NPC>
+
+  <NPC name="ZarosTheTinkerer" weight="1">
+    <SpawnObject text="ZarosTheTinkerer" count="1" />
+  </NPC>
+
+  <NPC name="ZelaraTheWebWeaver" weight="1">
+    <SpawnObject text="ZelaraTheWebWeaver" count="1" />
+  </NPC>
+
+  <NPC name="ZephyrWindwhisperer" weight="1">
+    <SpawnObject text="ZephyrWindwhisperer" count="1" />
+  </NPC>
+
+  <NPC name="ZoggarTheCollector" weight="1">
+    <SpawnObject text="ZoggarTheCollector" count="1" />
+  </NPC>
+
+  <NPC name="ZolaTheUnpredictable" weight="1">
+    <SpawnObject text="ZolaTheUnpredictable" count="1" />
+  </NPC>
+
+  <NPC name="ZoltarTheCuriousAlchemist" weight="1">
+    <SpawnObject text="ZoltarTheCuriousAlchemist" count="1" />
+  </NPC>
+
+  <NPC name="ZoranaFearbinder" weight="1">
+    <SpawnObject text="ZoranaFearbinder" count="1" />
+  </NPC>
+
+  <NPC name="ZoraTheSeaTeller" weight="1">
+    <SpawnObject text="ZoraTheSeaTeller" count="1" />
+  </NPC>
+
+  <NPC name="MonsterContractDealer" weight="1">
+    <SpawnObject text="MonsterContractDealer" count="1" />
+  </NPC>
+
+  <NPC name="DoomArtifactBuyer" weight="1">
+    <SpawnObject text="DoomArtifactBuyer" count="1" />
+  </NPC>
+
+  <NPC name="MinorArtifactBuyer" weight="1">
+    <SpawnObject text="MinorArtifactBuyer" count="1" />
+  </NPC>
+
+  <NPC name="ArtyDealer" weight="1">
+    <SpawnObject text="ArtyDealer" count="1" />
+  </NPC>
+
+  <NPC name="Barber" weight="1">
+    <SpawnObject text="Barber" count="1" />
+  </NPC>
+
+  <NPC name="CheeseMaker" weight="1">
+    <SpawnObject text="CheeseMaker" count="1" />
+  </NPC>
+
+  <NPC name="PowerscrollBuyer" weight="1">
+    <SpawnObject text="PowerscrollBuyer" count="1" />
+  </NPC>
+
+  <NPC name="StatScrollBuyer" weight="1">
+    <SpawnObject text="StatScrollBuyer" count="1" />
+  </NPC>
+
+  <NPC name="RugMerchant" weight="1">
+    <SpawnObject text="RugMerchant" count="1" />
+  </NPC>
+
+  <NPC name="SecurityGuard" weight="1">
+    <SpawnObject text="SecurityGuard" count="1" />
+  </NPC>
+
+  <NPC name="DrugDealer" weight="1">
+    <SpawnObject text="DrugDealer" count="1" />
+  </NPC>
+
+  <NPC name="ItemCollectionDealer" weight="1">
+    <SpawnObject text="ItemCollectionDealer" count="1" />
+  </NPC>
+
+  <NPC name="ArtifactGamblerMobile" weight="1">
+    <SpawnObject text="ArtifactGamblerMobile" count="1" />
+  </NPC>
+
+  <NPC name="BookGambleMobile" weight="1">
+    <SpawnObject text="BookGambleMobile" count="1" />
+  </NPC>
+
+  <NPC name="DeedGamblerMobile" weight="1">
+    <SpawnObject text="DeedGamblerMobile" count="1" />
+  </NPC>
+
+  <NPC name="RareGambleMobile" weight="1">
+    <SpawnObject text="RareGambleMobile" count="1" />
+  </NPC>
+
+  <NPC name="SeedGamblerMobile" weight="1">
+    <SpawnObject text="SeedGamblerMobile" count="1" />
+  </NPC>
+
+  <NPC name="SpecialVendorMobile" weight="1">
+    <SpawnObject text="SpecialVendorMobile" count="1" />
+  </NPC>
+
+  <NPC name="TreasureGamblerMobile" weight="1">
+    <SpawnObject text="TreasureGamblerMobile" count="1" />
+  </NPC>
+
+  <NPC name="LegendaryMaster" weight="1">
+    <SpawnObject text="LegendaryMaster" count="1" />
+  </NPC>
+
+  <NPC name="QuestGiver" weight="1">
+    <SpawnObject text="QuestGiver" count="1" />
+  </NPC>
+
+  <NPC name="GenericItemVendor" weight="1">
+    <SpawnObject text="GenericItemVendor" count="1" />
+  </NPC>
+
+  <NPC name="GrandMasterSkillTrainer" weight="1">
+    <SpawnObject text="GrandMasterSkillTrainer" count="1" />
+  </NPC>
+
+  <NPC name="JourneymanSkillTrainer" weight="1">
+    <SpawnObject text="JourneymanSkillTrainer" count="1" />
+  </NPC>
+
+  <NPC name="MasterSkillTrainer" weight="1">
+    <SpawnObject text="MasterSkillTrainer" count="1" />
+  </NPC>
+
+  <NPC name="RoyalVendor" weight="1">
+    <SpawnObject text="RoyalVendor" count="1" />
+  </NPC>
+
+  <NPC name="TamingQuestDealer" weight="1">
+    <SpawnObject text="TamingQuestDealer" count="1" />
+  </NPC>
+
+  <NPC name="Spymaster" weight="1">
+    <SpawnObject text="Spymaster" count="1" />
+  </NPC>
+
+  <NPC name="AnneTheAlchemist" weight="1">
+    <SpawnObject text="AnneTheAlchemist" count="1" />
+  </NPC>
+
+  <NPC name="DialogueMan" weight="1">
+    <SpawnObject text="DialogueMan" count="1" />
+  </NPC>
+
+  <NPC name="MarlaTheViper" weight="1">
+    <SpawnObject text="MarlaTheViper" count="1" />
+  </NPC>
+
+  <NPC name="SuiblexTheSlimePrincess" weight="1">
+    <SpawnObject text="SuiblexTheSlimePrincess" count="1" />
+  </NPC>
+
+  <NPC name="Arachne" weight="1">
+    <SpawnObject text="Arachne" count="1" />
+  </NPC>
+
+  <NPC name="Arakhne" weight="1">
+    <SpawnObject text="Arakhne" count="1" />
+  </NPC>
+
+  <NPC name="Beatrix" weight="1">
+    <SpawnObject text="Beatrix" count="1" />
+  </NPC>
+
+  <NPC name="BeornQuest" weight="1">
+    <SpawnObject text="BeornQuest" count="1" />
+  </NPC>
+
+  <NPC name="Bongo" weight="1">
+    <SpawnObject text="Bongo" count="1" />
+  </NPC>
+
+  <NPC name="Bragguk" weight="1">
+    <SpawnObject text="Bragguk" count="1" />
+  </NPC>
+
+  <NPC name="BrughorTheTamer" weight="1">
+    <SpawnObject text="BrughorTheTamer" count="1" />
+  </NPC>
+
+  <NPC name="Brumgar" weight="1">
+    <SpawnObject text="Brumgar" count="1" />
+  </NPC>
+
+  <NPC name="CaptainNeriah" weight="1">
+    <SpawnObject text="CaptainNeriah" count="1" />
+  </NPC>
+
+  <NPC name="Derrick" weight="1">
+    <SpawnObject text="Derrick" count="1" />
+  </NPC>
+
+  <NPC name="Ethel" weight="1">
+    <SpawnObject text="Ethel" count="1" />
+  </NPC>
+
+  <NPC name="Gorlok" weight="1">
+    <SpawnObject text="Gorlok" count="1" />
+  </NPC>
+
+  <NPC name="Grobnar" weight="1">
+    <SpawnObject text="Grobnar" count="1" />
+  </NPC>
+
+  <NPC name="Grubnak" weight="1">
+    <SpawnObject text="Grubnak" count="1" />
+  </NPC>
+
+  <NPC name="HikariQuest" weight="1">
+    <SpawnObject text="HikariQuest" count="1" />
+  </NPC>
+
+  <NPC name="Ignar" weight="1">
+    <SpawnObject text="Ignar" count="1" />
+  </NPC>
+
+  <NPC name="Kaelthar" weight="1">
+    <SpawnObject text="Kaelthar" count="1" />
+  </NPC>
+
+  <NPC name="Kaeltharon" weight="1">
+    <SpawnObject text="Kaeltharon" count="1" />
+  </NPC>
+
+  <NPC name="KaelthasTheWatcher" weight="1">
+    <SpawnObject text="KaelthasTheWatcher" count="1" />
+  </NPC>
+
+  <NPC name="Kashti" weight="1">
+    <SpawnObject text="Kashti" count="1" />
+  </NPC>
+
+  <NPC name="Kazuo" weight="1">
+    <SpawnObject text="Kazuo" count="1" />
+  </NPC>
+
+  <NPC name="Kazuro" weight="1">
+    <SpawnObject text="Kazuro" count="1" />
+  </NPC>
+
+  <NPC name="LegolasQuest" weight="1">
+    <SpawnObject text="LegolasQuest" count="1" />
+  </NPC>
+
+  <NPC name="MalgrimTheSoultaker" weight="1">
+    <SpawnObject text="MalgrimTheSoultaker" count="1" />
+  </NPC>
+
+  <NPC name="Malrik" weight="1">
+    <SpawnObject text="Malrik" count="1" />
+  </NPC>
+
+  <NPC name="Marion" weight="1">
+    <SpawnObject text="Marion" count="1" />
+  </NPC>
+
+  <NPC name="Murkwade" weight="1">
+    <SpawnObject text="Murkwade" count="1" />
+  </NPC>
+
+  <NPC name="NyaraTheSkycaller" weight="1">
+    <SpawnObject text="NyaraTheSkycaller" count="1" />
+  </NPC>
+
+  <NPC name="Nyra" weight="1">
+    <SpawnObject text="Nyra" count="1" />
+  </NPC>
+
+  <NPC name="Nyx" weight="1">
+    <SpawnObject text="Nyx" count="1" />
+  </NPC>
+
+  <NPC name="QuillanTheGoatherd" weight="1">
+    <SpawnObject text="QuillanTheGoatherd" count="1" />
+  </NPC>
+
+  <NPC name="Rokhan" weight="1">
+    <SpawnObject text="Rokhan" count="1" />
+  </NPC>
+
+  <NPC name="Rowan" weight="1">
+    <SpawnObject text="Rowan" count="1" />
+  </NPC>
+
+  <NPC name="Saruun" weight="1">
+    <SpawnObject text="Saruun" count="1" />
+  </NPC>
+
+  <NPC name="Selanar" weight="1">
+    <SpawnObject text="Selanar" count="1" />
+  </NPC>
+
+  <NPC name="Ssilthar" weight="1">
+    <SpawnObject text="Ssilthar" count="1" />
+  </NPC>
+
+  <NPC name="Sszhar" weight="1">
+    <SpawnObject text="Sszhar" count="1" />
+  </NPC>
+
+  <NPC name="Tahlira" weight="1">
+    <SpawnObject text="Tahlira" count="1" />
+  </NPC>
+
+  <NPC name="Tareth" weight="1">
+    <SpawnObject text="Tareth" count="1" />
+  </NPC>
+
+  <NPC name="Thaddeus" weight="1">
+    <SpawnObject text="Thaddeus" count="1" />
+  </NPC>
+
+  <NPC name="Thaldrin" weight="1">
+    <SpawnObject text="Thaldrin" count="1" />
+  </NPC>
+
+  <NPC name="ThalosBloodbane" weight="1">
+    <SpawnObject text="ThalosBloodbane" count="1" />
+  </NPC>
+
+  <NPC name="Thargos" weight="1">
+    <SpawnObject text="Thargos" count="1" />
+  </NPC>
+
+  <NPC name="Tharkum" weight="1">
+    <SpawnObject text="Tharkum" count="1" />
+  </NPC>
+
+  <NPC name="TharnocEarthcaller" weight="1">
+    <SpawnObject text="TharnocEarthcaller" count="1" />
+  </NPC>
+
+  <NPC name="Tharnok" weight="1">
+    <SpawnObject text="Tharnok" count="1" />
+  </NPC>
+
+  <NPC name="Thavik" weight="1">
+    <SpawnObject text="Thavik" count="1" />
+  </NPC>
+
+  <NPC name="Thromek" weight="1">
+    <SpawnObject text="Thromek" count="1" />
+  </NPC>
+
+  <NPC name="Ulthar" weight="1">
+    <SpawnObject text="Ulthar" count="1" />
+  </NPC>
+
+  <NPC name="Velra" weight="1">
+    <SpawnObject text="Velra" count="1" />
+  </NPC>
+
+  <NPC name="Xalvador" weight="1">
+    <SpawnObject text="Xalvador" count="1" />
+  </NPC>
+
+  <NPC name="XelArak" weight="1">
+    <SpawnObject text="XelArak" count="1" />
+  </NPC>
+
+  <NPC name="Xerxes" weight="1">
+    <SpawnObject text="Xerxes" count="1" />
+  </NPC>
+
+  <NPC name="Zareth" weight="1">
+    <SpawnObject text="Zareth" count="1" />
+  </NPC>
+
+  <NPC name="Zarnak" weight="1">
+    <SpawnObject text="Zarnak" count="1" />
+  </NPC>
+
+  <NPC name="Zarrel" weight="1">
+    <SpawnObject text="Zarrel" count="1" />
+  </NPC>
+
+  <NPC name="Zassith" weight="1">
+    <SpawnObject text="Zassith" count="1" />
+  </NPC>
+
+  <NPC name="Zephyros" weight="1">
+    <SpawnObject text="Zephyros" count="1" />
+  </NPC>
+
+  <NPC name="AgapiteCollector" weight="1">
+    <SpawnObject text="AgapiteCollector" count="1" />
+  </NPC>
+
+  <NPC name="AmberCollector" weight="1">
+    <SpawnObject text="AmberCollector" count="1" />
+  </NPC>
+
+  <NPC name="AmethystCollector" weight="1">
+    <SpawnObject text="AmethystCollector" count="1" />
+  </NPC>
+
+  <NPC name="BronzeIngotCollector" weight="1">
+    <SpawnObject text="BronzeIngotCollector" count="1" />
+  </NPC>
+
+  <NPC name="CitrineCollector" weight="1">
+    <SpawnObject text="CitrineCollector" count="1" />
+  </NPC>
+
+  <NPC name="CopperIngotCollector" weight="1">
+    <SpawnObject text="CopperIngotCollector" count="1" />
+  </NPC>
+
+  <NPC name="DiamondCollector" weight="1">
+    <SpawnObject text="DiamondCollector" count="1" />
+  </NPC>
+
+  <NPC name="DullCopperCollector" weight="1">
+    <SpawnObject text="DullCopperCollector" count="1" />
+  </NPC>
+
+  <NPC name="EmeraldCollector" weight="1">
+    <SpawnObject text="EmeraldCollector" count="1" />
+  </NPC>
+
+  <NPC name="GoldIngotCollector" weight="1">
+    <SpawnObject text="GoldIngotCollector" count="1" />
+  </NPC>
+
+  <NPC name="HideCollector" weight="1">
+    <SpawnObject text="HideCollector" count="1" />
+  </NPC>
+
+  <NPC name="HornedHideCollector" weight="1">
+    <SpawnObject text="HornedHideCollector" count="1" />
+  </NPC>
+
+  <NPC name="IronCollector" weight="1">
+    <SpawnObject text="IronCollector" count="1" />
+  </NPC>
+
+  <NPC name="LogCollector" weight="1">
+    <SpawnObject text="LogCollector" count="1" />
+  </NPC>
+
+  <NPC name="RubyCollector" weight="1">
+    <SpawnObject text="RubyCollector" count="1" />
+  </NPC>
+
+  <NPC name="SapphireCollector" weight="1">
+    <SpawnObject text="SapphireCollector" count="1" />
+  </NPC>
+
+  <NPC name="ShadowIronCollector" weight="1">
+    <SpawnObject text="ShadowIronCollector" count="1" />
+  </NPC>
+
+  <NPC name="SpinedHideCollector" weight="1">
+    <SpawnObject text="SpinedHideCollector" count="1" />
+  </NPC>
+
+  <NPC name="StarSapphireCollector" weight="1">
+    <SpawnObject text="StarSapphireCollector" count="1" />
+  </NPC>
+
+  <NPC name="TourmalineCollector" weight="1">
+    <SpawnObject text="TourmalineCollector" count="1" />
+  </NPC>
+
+  <NPC name="ValoriteCollector" weight="1">
+    <SpawnObject text="ValoriteCollector" count="1" />
+  </NPC>
+
+  <NPC name="VeriteCollector" weight="1">
+    <SpawnObject text="VeriteCollector" count="1" />
+  </NPC>
+
+  <NPC name="ClockmakerFelix" weight="1">
+    <SpawnObject text="ClockmakerFelix" count="1" />
+  </NPC>
+
+  <NPC name="EccentricGearMakerGizmo" weight="1">
+    <SpawnObject text="EccentricGearMakerGizmo" count="1" />
+  </NPC>
+
+  <NPC name="ArachnorQuest" weight="1">
+    <SpawnObject text="ArachnorQuest" count="1" />
+  </NPC>
+
+  <NPC name="AstrologosStarfallQuest" weight="1">
+    <SpawnObject text="AstrologosStarfallQuest" count="1" />
+  </NPC>
+
+  <NPC name="BalthazarBeastyQuest" weight="1">
+    <SpawnObject text="BalthazarBeastyQuest" count="1" />
+  </NPC>
+
+  <NPC name="BeastiariusSnarlsworthQuest" weight="1">
+    <SpawnObject text="BeastiariusSnarlsworthQuest" count="1" />
+  </NPC>
+
+  <NPC name="BeastlyWobblepawsQuest" weight="1">
+    <SpawnObject text="BeastlyWobblepawsQuest" count="1" />
+  </NPC>
+
+  <NPC name="BeastMasterQuest" weight="1">
+    <SpawnObject text="BeastMasterQuest" count="1" />
+  </NPC>
+
+  <NPC name="BeatrixFelineQuest" weight="1">
+    <SpawnObject text="BeatrixFelineQuest" count="1" />
+  </NPC>
+
+  <NPC name="BenedictBramblepawsQuest" weight="1">
+    <SpawnObject text="BenedictBramblepawsQuest" count="1" />
+  </NPC>
+
+  <NPC name="BongoTheBizarreQuest" weight="1">
+    <SpawnObject text="BongoTheBizarreQuest" count="1" />
+  </NPC>
+
+  <NPC name="BotanicusThornfieldQuest" weight="1">
+    <SpawnObject text="BotanicusThornfieldQuest" count="1" />
+  </NPC>
+
+  <NPC name="BrambleHoofQuest" weight="1">
+    <SpawnObject text="BrambleHoofQuest" count="1" />
+  </NPC>
+
+  <NPC name="BruinTheBearologistQuest" weight="1">
+    <SpawnObject text="BruinTheBearologistQuest" count="1" />
+  </NPC>
+
+  <NPC name="BrumblefootQuest" weight="1">
+    <SpawnObject text="BrumblefootQuest" count="1" />
+  </NPC>
+
+  <NPC name="CluckmasterCromwellQuest" weight="1">
+    <SpawnObject text="CluckmasterCromwellQuest" count="1" />
+  </NPC>
+
+  <NPC name="CrabbertCrustaceanQuest" weight="1">
+    <SpawnObject text="CrabbertCrustaceanQuest" count="1" />
+  </NPC>
+
+  <NPC name="DraconisScorchQuest" weight="1">
+    <SpawnObject text="DraconisScorchQuest" count="1" />
+  </NPC>
+
+  <NPC name="DrakeBeastbaneQuest" weight="1">
+    <SpawnObject text="DrakeBeastbaneQuest" count="1" />
+  </NPC>
+
+  <NPC name="DrakorGrimshadeQuest" weight="1">
+    <SpawnObject text="DrakorGrimshadeQuest" count="1" />
+  </NPC>
+
+  <NPC name="DrVerminsteinQuest" weight="1">
+    <SpawnObject text="DrVerminsteinQuest" count="1" />
+  </NPC>
+
+  <NPC name="FarmerMoolinQuest" weight="1">
+    <SpawnObject text="FarmerMoolinQuest" count="1" />
+  </NPC>
+
+  <NPC name="FerdinandTheFlusteredQuest" weight="1">
+    <SpawnObject text="FerdinandTheFlusteredQuest" count="1" />
+  </NPC>
+
+  <NPC name="FerrociousFuzzleQuest" weight="1">
+    <SpawnObject text="FerrociousFuzzleQuest" count="1" />
+  </NPC>
+
+  <NPC name="FizzlewickQuest" weight="1">
+    <SpawnObject text="FizzlewickQuest" count="1" />
+  </NPC>
+
+  <NPC name="FlareonBlazeQuest" weight="1">
+    <SpawnObject text="FlareonBlazeQuest" count="1" />
+  </NPC>
+
+  <NPC name="FrostyHowlQuest" weight="1">
+    <SpawnObject text="FrostyHowlQuest" count="1" />
+  </NPC>
+
+  <NPC name="GadgetronGeargrindQuest" weight="1">
+    <SpawnObject text="GadgetronGeargrindQuest" count="1" />
+  </NPC>
+
+  <NPC name="GatorMcScalesQuest" weight="1">
+    <SpawnObject text="GatorMcScalesQuest" count="1" />
+  </NPC>
+
+  <NPC name="GnarleGrumbletoothQuest" weight="1">
+    <SpawnObject text="GnarleGrumbletoothQuest" count="1" />
+  </NPC>
+
+  <NPC name="GolemGarrisonQuest" weight="1">
+    <SpawnObject text="GolemGarrisonQuest" count="1" />
+  </NPC>
+
+  <NPC name="GorwinBeestherdQuest" weight="1">
+    <SpawnObject text="GorwinBeestherdQuest" count="1" />
+  </NPC>
+
+  <NPC name="LlamaLeclairQuest" weight="1">
+    <SpawnObject text="LlamaLeclairQuest" count="1" />
+  </NPC>
+
+  <NPC name="MalidrexQuest" weight="1">
+    <SpawnObject text="MalidrexQuest" count="1" />
+  </NPC>
+
+  <NPC name="MechanoGrimQuest" weight="1">
+    <SpawnObject text="MechanoGrimQuest" count="1" />
+  </NPC>
+
+  <NPC name="MucusMaximusQuest" weight="1">
+    <SpawnObject text="MucusMaximusQuest" count="1" />
+  </NPC>
+
+  <NPC name="NefariousGrimshadeQuest" weight="1">
+    <SpawnObject text="NefariousGrimshadeQuest" count="1" />
+  </NPC>
+
+  <NPC name="NefertinaQuest" weight="1">
+    <SpawnObject text="NefertinaQuest" count="1" />
+  </NPC>
+
+  <NPC name="OgreonBlunderboreQuest" weight="1">
+    <SpawnObject text="OgreonBlunderboreQuest" count="1" />
+  </NPC>
+
+  <NPC name="OrenShadowthornQuest" weight="1">
+    <SpawnObject text="OrenShadowthornQuest" count="1" />
+  </NPC>
+
+  <NPC name="PorkiusTruffleQuest" weight="1">
+    <SpawnObject text="PorkiusTruffleQuest" count="1" />
+  </NPC>
+
+  <NPC name="SatyrMasterQuest" weight="1">
+    <SpawnObject text="SatyrMasterQuest" count="1" />
+  </NPC>
+
+  <NPC name="SpawnScroll" weight="1">
+    <SpawnObject text="SpawnScroll" count="1" />
+  </NPC>
+
+  <NPC name="SqueakusFuzzlestoneQuest" weight="1">
+    <SpawnObject text="SqueakusFuzzlestoneQuest" count="1" />
+  </NPC>
+
+  <NPC name="SweetsworthLollypopQuest" weight="1">
+    <SpawnObject text="SweetsworthLollypopQuest" count="1" />
+  </NPC>
+
+  <NPC name="TempestusGaleQuest" weight="1">
+    <SpawnObject text="TempestusGaleQuest" count="1" />
+  </NPC>
+
+  <NPC name="ToadstoneQuest" weight="1">
+    <SpawnObject text="ToadstoneQuest" count="1" />
+  </NPC>
+
+  <NPC name="VenomousBobQuest" weight="1">
+    <SpawnObject text="VenomousBobQuest" count="1" />
+  </NPC>
+
+  <NPC name="WhiskersMcFurballQuest" weight="1">
+    <SpawnObject text="WhiskersMcFurballQuest" count="1" />
+  </NPC>
+
+  <NPC name="ZodiacusGrizzlebeardQuest" weight="1">
+    <SpawnObject text="ZodiacusGrizzlebeardQuest" count="1" />
+  </NPC>
+
+  <NPC name="ChaosWyrmHuntsmanQuest" weight="1">
+    <SpawnObject text="ChaosWyrmHuntsmanQuest" count="1" />
+  </NPC>
+
+  <NPC name="LegendaryHuntsmanChaosLordQuest" weight="1">
+    <SpawnObject text="LegendaryHuntsmanChaosLordQuest" count="1" />
+  </NPC>
+
+  <NPC name="LegendaryHuntsmanDraconicusQuest" weight="1">
+    <SpawnObject text="LegendaryHuntsmanDraconicusQuest" count="1" />
+  </NPC>
+
+  <NPC name="LegendaryHuntsmanDreadlordQuest" weight="1">
+    <SpawnObject text="LegendaryHuntsmanDreadlordQuest" count="1" />
+  </NPC>
+
+  <NPC name="LegendaryHuntsmanFRQuest" weight="1">
+    <SpawnObject text="LegendaryHuntsmanFRQuest" count="1" />
+  </NPC>
+
+  <NPC name="LegendaryHuntsmanJesterQuest" weight="1">
+    <SpawnObject text="LegendaryHuntsmanJesterQuest" count="1" />
+  </NPC>
+
+  <NPC name="LegendaryHuntsmanNPCFel" weight="1">
+    <SpawnObject text="LegendaryHuntsmanNPCFel" count="1" />
+  </NPC>
+
+  <NPC name="LegendaryHuntsmanPDQuest" weight="1">
+    <SpawnObject text="LegendaryHuntsmanPDQuest" count="1" />
+  </NPC>
+
+  <NPC name="LegendaryHuntsmanPPDQuest" weight="1">
+    <SpawnObject text="LegendaryHuntsmanPPDQuest" count="1" />
+  </NPC>
+
+  <NPC name="LegendaryHuntsmanQuestChronos" weight="1">
+    <SpawnObject text="LegendaryHuntsmanQuestChronos" count="1" />
+  </NPC>
+
+  <NPC name="LegendaryHuntsmanSDQuest" weight="1">
+    <SpawnObject text="LegendaryHuntsmanSDQuest" count="1" />
+  </NPC>
+
+  <NPC name="LegendaryHuntsmanSEQuest" weight="1">
+    <SpawnObject text="LegendaryHuntsmanSEQuest" count="1" />
+  </NPC>
+
+  <NPC name="LegendaryHuntsmanSPQuest" weight="1">
+    <SpawnObject text="LegendaryHuntsmanSPQuest" count="1" />
+  </NPC>
+
+  <NPC name="LegendaryHuntsmanSWQuest" weight="1">
+    <SpawnObject text="LegendaryHuntsmanSWQuest" count="1" />
+  </NPC>
+
+  <NPC name="CompassionQuestGiver" weight="1">
+    <SpawnObject text="CompassionQuestGiver" count="1" />
+  </NPC>
+
+  <NPC name="HonestyQuestGiver" weight="1">
+    <SpawnObject text="HonestyQuestGiver" count="1" />
+  </NPC>
+
+  <NPC name="HonorQuestGiver" weight="1">
+    <SpawnObject text="HonorQuestGiver" count="1" />
+  </NPC>
+
+  <NPC name="HumilityQuestGiver" weight="1">
+    <SpawnObject text="HumilityQuestGiver" count="1" />
+  </NPC>
+
+  <NPC name="JusticeQuestGiver" weight="1">
+    <SpawnObject text="JusticeQuestGiver" count="1" />
+  </NPC>
+
+  <NPC name="LordofVirtue" weight="1">
+    <SpawnObject text="LordofVirtue" count="1" />
+  </NPC>
+
+  <NPC name="SacrificeQuestGiver" weight="1">
+    <SpawnObject text="SacrificeQuestGiver" count="1" />
+  </NPC>
+
+  <NPC name="SpiritualQuestGiver" weight="1">
+    <SpawnObject text="SpiritualQuestGiver" count="1" />
+  </NPC>
+
+  <NPC name="ValorQuestGiver" weight="1">
+    <SpawnObject text="ValorQuestGiver" count="1" />
+  </NPC>
+
+  <NPC name="UltimateAlchemyMaster" weight="1">
+    <SpawnObject text="UltimateAlchemyMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateAnimalLoreMaster" weight="1">
+    <SpawnObject text="UltimateAnimalLoreMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateAnimalTamingMaster" weight="1">
+    <SpawnObject text="UltimateAnimalTamingMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateBlacksmithMaster" weight="1">
+    <SpawnObject text="UltimateBlacksmithMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateCampingMaster" weight="1">
+    <SpawnObject text="UltimateCampingMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateCarpentryMaster" weight="1">
+    <SpawnObject text="UltimateCarpentryMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateCartographyMaster" weight="1">
+    <SpawnObject text="UltimateCartographyMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateCookingMaster" weight="1">
+    <SpawnObject text="UltimateCookingMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateFishingMaster" weight="1">
+    <SpawnObject text="UltimateFishingMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateFletchingMaster" weight="1">
+    <SpawnObject text="UltimateFletchingMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateHealingMaster" weight="1">
+    <SpawnObject text="UltimateHealingMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateHerdingMaster" weight="1">
+    <SpawnObject text="UltimateHerdingMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateImbuingMaster" weight="1">
+    <SpawnObject text="UltimateImbuingMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateInscribeMaster" weight="1">
+    <SpawnObject text="UltimateInscribeMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateItemIDMaster" weight="1">
+    <SpawnObject text="UltimateItemIDMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateLockpickingMaster" weight="1">
+    <SpawnObject text="UltimateLockpickingMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateLumberjackingMaster" weight="1">
+    <SpawnObject text="UltimateLumberjackingMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateMiningMaster" weight="1">
+    <SpawnObject text="UltimateMiningMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateSnoopingMaster" weight="1">
+    <SpawnObject text="UltimateSnoopingMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateStealingMaster" weight="1">
+    <SpawnObject text="UltimateStealingMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateTailoringMaster" weight="1">
+    <SpawnObject text="UltimateTailoringMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateTasteIDMaster" weight="1">
+    <SpawnObject text="UltimateTasteIDMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateTinkeringMaster" weight="1">
+    <SpawnObject text="UltimateTinkeringMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateTrackingMaster" weight="1">
+    <SpawnObject text="UltimateTrackingMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateVeterinaryMaster" weight="1">
+    <SpawnObject text="UltimateVeterinaryMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateArcheryMaster" weight="1">
+    <SpawnObject text="UltimateArcheryMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateBushidoMaster" weight="1">
+    <SpawnObject text="UltimateBushidoMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateChivalryMaster" weight="1">
+    <SpawnObject text="UltimateChivalryMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateDetectHiddenMaster" weight="1">
+    <SpawnObject text="UltimateDetectHiddenMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateDiscordanceMaster" weight="1">
+    <SpawnObject text="UltimateDiscordanceMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateEvalIntMaster" weight="1">
+    <SpawnObject text="UltimateEvalIntMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateFencingMaster" weight="1">
+    <SpawnObject text="UltimateFencingMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateFocusMaster" weight="1">
+    <SpawnObject text="UltimateFocusMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateForensicsMaster" weight="1">
+    <SpawnObject text="UltimateForensicsMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateHidingMaster" weight="1">
+    <SpawnObject text="UltimateHidingMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateMacingMaster" weight="1">
+    <SpawnObject text="UltimateMacingMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateMageryMaster" weight="1">
+    <SpawnObject text="UltimateMageryMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateMagicResistMaster" weight="1">
+    <SpawnObject text="UltimateMagicResistMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateMeditationMaster" weight="1">
+    <SpawnObject text="UltimateMeditationMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateMusicianshipMaster" weight="1">
+    <SpawnObject text="UltimateMusicianshipMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateMysticismMaster" weight="1">
+    <SpawnObject text="UltimateMysticismMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateNecromancyMaster" weight="1">
+    <SpawnObject text="UltimateNecromancyMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateNinjitsuMaster" weight="1">
+    <SpawnObject text="UltimateNinjitsuMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateParryMaster" weight="1">
+    <SpawnObject text="UltimateParryMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimatePeacemakingMaster" weight="1">
+    <SpawnObject text="UltimatePeacemakingMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimatePoisoningMaster" weight="1">
+    <SpawnObject text="UltimatePoisoningMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateProvocationMaster" weight="1">
+    <SpawnObject text="UltimateProvocationMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateRemoveTrapMaster" weight="1">
+    <SpawnObject text="UltimateRemoveTrapMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateSpellweavingMaster" weight="1">
+    <SpawnObject text="UltimateSpellweavingMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateSpiritSpeakMaster" weight="1">
+    <SpawnObject text="UltimateSpiritSpeakMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateStealthMaster" weight="1">
+    <SpawnObject text="UltimateStealthMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateSwordsMaster" weight="1">
+    <SpawnObject text="UltimateSwordsMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateTacticsMaster" weight="1">
+    <SpawnObject text="UltimateTacticsMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateThrowingMaster" weight="1">
+    <SpawnObject text="UltimateThrowingMaster" count="1" />
+  </NPC>
+
+  <NPC name="UltimateWrestlingMaster" weight="1">
+    <SpawnObject text="UltimateWrestlingMaster" count="1" />
+  </NPC>
+
+  <NPC name="Abbein" weight="1">
+    <SpawnObject text="Abbein" count="1" />
+  </NPC>
+
+  <NPC name="Acob" weight="1">
+    <SpawnObject text="Acob" count="1" />
+  </NPC>
+
+  <NPC name="Actor" weight="1">
+    <SpawnObject text="Actor" count="1" />
+  </NPC>
+
+  <NPC name="Aelorn" weight="1">
+    <SpawnObject text="Aelorn" count="1" />
+  </NPC>
+
+  <NPC name="Aeluva" weight="1">
+    <SpawnObject text="Aeluva" count="1" />
+  </NPC>
+
+  <NPC name="Aernya" weight="1">
+    <SpawnObject text="Aernya" count="1" />
+  </NPC>
+
+  <NPC name="Agralem" weight="1">
+    <SpawnObject text="Agralem" count="1" />
+  </NPC>
+
+  <NPC name="Ahie" weight="1">
+    <SpawnObject text="Ahie" count="1" />
+  </NPC>
+
+  <NPC name="AlbertaGiacco" weight="1">
+    <SpawnObject text="AlbertaGiacco" count="1" />
+  </NPC>
+
+  <NPC name="Alchemist" weight="1">
+    <SpawnObject text="Alchemist" count="1" />
+  </NPC>
+
+  <NPC name="AldenArmstrong" weight="1">
+    <SpawnObject text="AldenArmstrong" count="1" />
+  </NPC>
+
+  <NPC name="Alefian" weight="1">
+    <SpawnObject text="Alefian" count="1" />
+  </NPC>
+
+  <NPC name="Alejaha" weight="1">
+    <SpawnObject text="Alejaha" count="1" />
+  </NPC>
+
+  <NPC name="AlelleTheAborist" weight="1">
+    <SpawnObject text="AlelleTheAborist" count="1" />
+  </NPC>
+
+  <NPC name="Alethanian" weight="1">
+    <SpawnObject text="Alethanian" count="1" />
+  </NPC>
+
+  <NPC name="Aliabeth" weight="1">
+    <SpawnObject text="Aliabeth" count="1" />
+  </NPC>
+
+  <NPC name="AluniolTheHealer" weight="1">
+    <SpawnObject text="AluniolTheHealer" count="1" />
+  </NPC>
+
+  <NPC name="AmbitiousSolenQueen" weight="1">
+    <SpawnObject text="AmbitiousSolenQueen" count="1" />
+  </NPC>
+
+  <NPC name="Amelia" weight="1">
+    <SpawnObject text="Amelia" count="1" />
+  </NPC>
+
+  <NPC name="Aminia" weight="1">
+    <SpawnObject text="Aminia" count="1" />
+  </NPC>
+
+  <NPC name="AndreasVesalius" weight="1">
+    <SpawnObject text="AndreasVesalius" count="1" />
+  </NPC>
+
+  <NPC name="Andric" weight="1">
+    <SpawnObject text="Andric" count="1" />
+  </NPC>
+
+  <NPC name="Andros" weight="1">
+    <SpawnObject text="Andros" count="1" />
+  </NPC>
+
+  <NPC name="Aneen" weight="1">
+    <SpawnObject text="Aneen" count="1" />
+  </NPC>
+
+  <NPC name="Aniel" weight="1">
+    <SpawnObject text="Aniel" count="1" />
+  </NPC>
+
+  <NPC name="AnimalTrainer" weight="1">
+    <SpawnObject text="AnimalTrainer" count="1" />
+  </NPC>
+
+  <NPC name="Anolly" weight="1">
+    <SpawnObject text="Anolly" count="1" />
+  </NPC>
+
+  <NPC name="AnsellaGryen" weight="1">
+    <SpawnObject text="AnsellaGryen" count="1" />
+  </NPC>
+
+  <NPC name="Ansikart" weight="1">
+    <SpawnObject text="Ansikart" count="1" />
+  </NPC>
+
+  <NPC name="Arabella" weight="1">
+    <SpawnObject text="Arabella" count="1" />
+  </NPC>
+
+  <NPC name="ArcherGuard" weight="1">
+    <SpawnObject text="ArcherGuard" count="1" />
+  </NPC>
+
+  <NPC name="Architect" weight="1">
+    <SpawnObject text="Architect" count="1" />
+  </NPC>
+
+  <NPC name="Arielle" weight="1">
+    <SpawnObject text="Arielle" count="1" />
+  </NPC>
+
+  <NPC name="AriellesBauble" weight="1">
+    <SpawnObject text="AriellesBauble" count="1" />
+  </NPC>
+
+  <NPC name="Armorer" weight="1">
+    <SpawnObject text="Armorer" count="1" />
+  </NPC>
+
+  <NPC name="Artist" weight="1">
+    <SpawnObject text="Artist" count="1" />
+  </NPC>
+
+  <NPC name="Asandos" weight="1">
+    <SpawnObject text="Asandos" count="1" />
+  </NPC>
+
+  <NPC name="Athialon" weight="1">
+    <SpawnObject text="Athialon" count="1" />
+  </NPC>
+
+  <NPC name="AttendantFortuneTeller" weight="1">
+    <SpawnObject text="AttendantFortuneTeller" count="1" />
+  </NPC>
+
+  <NPC name="AttendantGuide" weight="1">
+    <SpawnObject text="AttendantGuide" count="1" />
+  </NPC>
+
+  <NPC name="AttendantHerald" weight="1">
+    <SpawnObject text="AttendantHerald" count="1" />
+  </NPC>
+
+  <NPC name="AttendantLuckyDealer" weight="1">
+    <SpawnObject text="AttendantLuckyDealer" count="1" />
+  </NPC>
+
+  <NPC name="Aulan" weight="1">
+    <SpawnObject text="Aulan" count="1" />
+  </NPC>
+
+  <NPC name="Aurelia" weight="1">
+    <SpawnObject text="Aurelia" count="1" />
+  </NPC>
+
+  <NPC name="Aurvidlem" weight="1">
+    <SpawnObject text="Aurvidlem" count="1" />
+  </NPC>
+
+  <NPC name="Avicenna" weight="1">
+    <SpawnObject text="Avicenna" count="1" />
+  </NPC>
+
+  <NPC name="Axem" weight="1">
+    <SpawnObject text="Axem" count="1" />
+  </NPC>
+
+  <NPC name="Baker" weight="1">
+    <SpawnObject text="Baker" count="1" />
+  </NPC>
+
+  <NPC name="Banker" weight="1">
+    <SpawnObject text="Banker" count="1" />
+  </NPC>
+
+  <NPC name="Bard" weight="1">
+    <SpawnObject text="Bard" count="1" />
+  </NPC>
+
+  <NPC name="BardGuildmaster" weight="1">
+    <SpawnObject text="BardGuildmaster" count="1" />
+  </NPC>
+
+  <NPC name="Barkeeper" weight="1">
+    <SpawnObject text="Barkeeper" count="1" />
+  </NPC>
+
+  <NPC name="Barreraak" weight="1">
+    <SpawnObject text="Barreraak" count="1" />
+  </NPC>
+
+  <NPC name="BaseEscortable" weight="1">
+    <SpawnObject text="BaseEscortable" count="1" />
+  </NPC>
+
+  <NPC name="BaseGuard" weight="1">
+    <SpawnObject text="BaseGuard" count="1" />
+  </NPC>
+
+  <NPC name="BaseGuildmaster" weight="1">
+    <SpawnObject text="BaseGuildmaster" count="1" />
+  </NPC>
+
+  <NPC name="BaseHealer" weight="1">
+    <SpawnObject text="BaseHealer" count="1" />
+  </NPC>
+
+  <NPC name="BaseHire" weight="1">
+    <SpawnObject text="BaseHire" count="1" />
+  </NPC>
+
+  <NPC name="BaseShieldGuard" weight="1">
+    <SpawnObject text="BaseShieldGuard" count="1" />
+  </NPC>
+
+  <NPC name="BaseTurnInMobile" weight="1">
+    <SpawnObject text="BaseTurnInMobile" count="1" />
+  </NPC>
+
+  <NPC name="BaseVendor" weight="1">
+    <SpawnObject text="BaseVendor" count="1" />
+  </NPC>
+
+  <NPC name="Beekeeper" weight="1">
+    <SpawnObject text="Beekeeper" count="1" />
+  </NPC>
+
+  <NPC name="Belulah" weight="1">
+    <SpawnObject text="Belulah" count="1" />
+  </NPC>
+
+  <NPC name="Ben" weight="1">
+    <SpawnObject text="Ben" count="1" />
+  </NPC>
+
+  <NPC name="Beninort" weight="1">
+    <SpawnObject text="Beninort" count="1" />
+  </NPC>
+
+  <NPC name="Beotham" weight="1">
+    <SpawnObject text="Beotham" count="1" />
+  </NPC>
+
+  <NPC name="Blackheart" weight="1">
+    <SpawnObject text="Blackheart" count="1" />
+  </NPC>
+
+  <NPC name="Blacksmith" weight="1">
+    <SpawnObject text="Blacksmith" count="1" />
+  </NPC>
+
+  <NPC name="BlacksmithGuildmaster" weight="1">
+    <SpawnObject text="BlacksmithGuildmaster" count="1" />
+  </NPC>
+
+  <NPC name="Bolaevin" weight="1">
+    <SpawnObject text="Bolaevin" count="1" />
+  </NPC>
+
+  <NPC name="Bonnie" weight="1">
+    <SpawnObject text="Bonnie" count="1" />
+  </NPC>
+
+  <NPC name="Bowyer" weight="1">
+    <SpawnObject text="Bowyer" count="1" />
+  </NPC>
+
+  <NPC name="Brae" weight="1">
+    <SpawnObject text="Brae" count="1" />
+  </NPC>
+
+  <NPC name="Braen" weight="1">
+    <SpawnObject text="Braen" count="1" />
+  </NPC>
+
+  <NPC name="Bravehorn" weight="1">
+    <SpawnObject text="Bravehorn" count="1" />
+  </NPC>
+
+  <NPC name="BrideGroom" weight="1">
+    <SpawnObject text="BrideGroom" count="1" />
+  </NPC>
+
+  <NPC name="Brinnae" weight="1">
+    <SpawnObject text="Brinnae" count="1" />
+  </NPC>
+
+  <NPC name="Broolol" weight="1">
+    <SpawnObject text="Broolol" count="1" />
+  </NPC>
+
+  <NPC name="Butcher" weight="1">
+    <SpawnObject text="Butcher" count="1" />
+  </NPC>
+
+  <NPC name="Caelas" weight="1">
+    <SpawnObject text="Caelas" count="1" />
+  </NPC>
+
+  <NPC name="Cailla" weight="1">
+    <SpawnObject text="Cailla" count="1" />
+  </NPC>
+
+  <NPC name="Calendor" weight="1">
+    <SpawnObject text="Calendor" count="1" />
+  </NPC>
+
+  <NPC name="Canir" weight="1">
+    <SpawnObject text="Canir" count="1" />
+  </NPC>
+
+  <NPC name="Carpenter" weight="1">
+    <SpawnObject text="Carpenter" count="1" />
+  </NPC>
+
+  <NPC name="ChaosGuard" weight="1">
+    <SpawnObject text="ChaosGuard" count="1" />
+  </NPC>
+
+  <NPC name="Chiyo" weight="1">
+    <SpawnObject text="Chiyo" count="1" />
+  </NPC>
+
+  <NPC name="Churchill" weight="1">
+    <SpawnObject text="Churchill" count="1" />
+  </NPC>
+
+  <NPC name="Chyloth" weight="1">
+    <SpawnObject text="Chyloth" count="1" />
+  </NPC>
+
+  <NPC name="Ciala" weight="1">
+    <SpawnObject text="Ciala" count="1" />
+  </NPC>
+
+  <NPC name="Cillitha" weight="1">
+    <SpawnObject text="Cillitha" count="1" />
+  </NPC>
+
+  <NPC name="Clairesse" weight="1">
+    <SpawnObject text="Clairesse" count="1" />
+  </NPC>
+
+  <NPC name="Clehin" weight="1">
+    <SpawnObject text="Clehin" count="1" />
+  </NPC>
+
+  <NPC name="Cloorne" weight="1">
+    <SpawnObject text="Cloorne" count="1" />
+  </NPC>
+
+  <NPC name="Cobbler" weight="1">
+    <SpawnObject text="Cobbler" count="1" />
+  </NPC>
+
+  <NPC name="Cohenn" weight="1">
+    <SpawnObject text="Cohenn" count="1" />
+  </NPC>
+
+  <NPC name="CommissionPlayerVendor" weight="1">
+    <SpawnObject text="CommissionPlayerVendor" count="1" />
+  </NPC>
+
+  <NPC name="Cook" weight="1">
+    <SpawnObject text="Cook" count="1" />
+  </NPC>
+
+  <NPC name="Corey" weight="1">
+    <SpawnObject text="Corey" count="1" />
+  </NPC>
+
+  <NPC name="CrateForSledge" weight="1">
+    <SpawnObject text="CrateForSledge" count="1" />
+  </NPC>
+
+  <NPC name="CustomHairstylist" weight="1">
+    <SpawnObject text="CustomHairstylist" count="1" />
+  </NPC>
+
+  <NPC name="Daelas" weight="1">
+    <SpawnObject text="Daelas" count="1" />
+  </NPC>
+
+  <NPC name="Dallid" weight="1">
+    <SpawnObject text="Dallid" count="1" />
+  </NPC>
+
+  <NPC name="Danoel" weight="1">
+    <SpawnObject text="Danoel" count="1" />
+  </NPC>
+
+  <NPC name="Darius" weight="1">
+    <SpawnObject text="Darius" count="1" />
+  </NPC>
+
+  <NPC name="DenthesJournal" weight="1">
+    <SpawnObject text="DenthesJournal" count="1" />
+  </NPC>
+
+  <NPC name="Dimethro" weight="1">
+    <SpawnObject text="Dimethro" count="1" />
+  </NPC>
+
+  <NPC name="Drithen" weight="1">
+    <SpawnObject text="Drithen" count="1" />
+  </NPC>
+
+  <NPC name="Dryad" weight="1">
+    <SpawnObject text="Dryad" count="1" />
+  </NPC>
+
+  <NPC name="Dugan" weight="1">
+    <SpawnObject text="Dugan" count="1" />
+  </NPC>
+
+  <NPC name="Egwexem" weight="1">
+    <SpawnObject text="Egwexem" count="1" />
+  </NPC>
+
+  <NPC name="ElwoodMcCarrin" weight="1">
+    <SpawnObject text="ElwoodMcCarrin" count="1" />
+  </NPC>
+
+  <NPC name="Emerillo" weight="1">
+    <SpawnObject text="Emerillo" count="1" />
+  </NPC>
+
+  <NPC name="Emilio" weight="1">
+    <SpawnObject text="Emilio" count="1" />
+  </NPC>
+
+  <NPC name="Emino" weight="1">
+    <SpawnObject text="Emino" count="1" />
+  </NPC>
+
+  <NPC name="Enigma" weight="1">
+    <SpawnObject text="Enigma" count="1" />
+  </NPC>
+
+  <NPC name="Enrico" weight="1">
+    <SpawnObject text="Enrico" count="1" />
+  </NPC>
+
+  <NPC name="EnshroudedFigure" weight="1">
+    <SpawnObject text="EnshroudedFigure" count="1" />
+  </NPC>
+
+  <NPC name="EscortableMage" weight="1">
+    <SpawnObject text="EscortableMage" count="1" />
+  </NPC>
+
+  <NPC name="Escortables" weight="1">
+    <SpawnObject text="Escortables" count="1" />
+  </NPC>
+
+  <NPC name="Evan" weight="1">
+    <SpawnObject text="Evan" count="1" />
+  </NPC>
+
+  <NPC name="EvilHealer" weight="1">
+    <SpawnObject text="EvilHealer" count="1" />
+  </NPC>
+
+  <NPC name="EvilWanderingHealer" weight="1">
+    <SpawnObject text="EvilWanderingHealer" count="1" />
+  </NPC>
+
+  <NPC name="Fabrizio" weight="1">
+    <SpawnObject text="Fabrizio" count="1" />
+  </NPC>
+
+  <NPC name="Farmer" weight="1">
+    <SpawnObject text="Farmer" count="1" />
+  </NPC>
+
+  <NPC name="FarmerNash" weight="1">
+    <SpawnObject text="FarmerNash" count="1" />
+  </NPC>
+
+  <NPC name="Filbert" weight="1">
+    <SpawnObject text="Filbert" count="1" />
+  </NPC>
+
+  <NPC name="FisherGuildmaster" weight="1">
+    <SpawnObject text="FisherGuildmaster" count="1" />
+  </NPC>
+
+  <NPC name="Fisherman" weight="1">
+    <SpawnObject text="Fisherman" count="1" />
+  </NPC>
+
+  <NPC name="Frazer" weight="1">
+    <SpawnObject text="Frazer" count="1" />
+  </NPC>
+
+  <NPC name="Frederic" weight="1">
+    <SpawnObject text="Frederic" count="1" />
+  </NPC>
+
+  <NPC name="FrightenedDryad" weight="1">
+    <SpawnObject text="FrightenedDryad" count="1" />
+  </NPC>
+
+  <NPC name="Furtrader" weight="1">
+    <SpawnObject text="Furtrader" count="1" />
+  </NPC>
+
+  <NPC name="GabrielPiete" weight="1">
+    <SpawnObject text="GabrielPiete" count="1" />
+  </NPC>
+
+  <NPC name="Garamon" weight="1">
+    <SpawnObject text="Garamon" count="1" />
+  </NPC>
+
+  <NPC name="Gardener" weight="1">
+    <SpawnObject text="Gardener" count="1" />
+  </NPC>
+
+  <NPC name="GargishNoble" weight="1">
+    <SpawnObject text="GargishNoble" count="1" />
+  </NPC>
+
+  <NPC name="GargishRefugee" weight="1">
+    <SpawnObject text="GargishRefugee" count="1" />
+  </NPC>
+
+  <NPC name="GargishWanderingHealer" weight="1">
+    <SpawnObject text="GargishWanderingHealer" count="1" />
+  </NPC>
+
+  <NPC name="GargishWarrior" weight="1">
+    <SpawnObject text="GargishWarrior" count="1" />
+  </NPC>
+
+  <NPC name="GeorgeHephaestus" weight="1">
+    <SpawnObject text="GeorgeHephaestus" count="1" />
+  </NPC>
+
+  <NPC name="Gervis" weight="1">
+    <SpawnObject text="Gervis" count="1" />
+  </NPC>
+
+  <NPC name="Glassblower" weight="1">
+    <SpawnObject text="Glassblower" count="1" />
+  </NPC>
+
+  <NPC name="Gnosos" weight="1">
+    <SpawnObject text="Gnosos" count="1" />
+  </NPC>
+
+  <NPC name="GolemCrafter" weight="1">
+    <SpawnObject text="GolemCrafter" count="1" />
+  </NPC>
+
+  <NPC name="Gorrow" weight="1">
+    <SpawnObject text="Gorrow" count="1" />
+  </NPC>
+
+  <NPC name="GrandpaCharley" weight="1">
+    <SpawnObject text="GrandpaCharley" count="1" />
+  </NPC>
+
+  <NPC name="Gretchen" weight="1">
+    <SpawnObject text="Gretchen" count="1" />
+  </NPC>
+
+  <NPC name="Grizelda" weight="1">
+    <SpawnObject text="Grizelda" count="1" />
+  </NPC>
+
+  <NPC name="Gustar" weight="1">
+    <SpawnObject text="Gustar" count="1" />
+  </NPC>
+
+  <NPC name="Gypsy" weight="1">
+    <SpawnObject text="Gypsy" count="1" />
+  </NPC>
+
+  <NPC name="GypsyAnimalTrainer" weight="1">
+    <SpawnObject text="GypsyAnimalTrainer" count="1" />
+  </NPC>
+
+  <NPC name="GypsyBanker" weight="1">
+    <SpawnObject text="GypsyBanker" count="1" />
+  </NPC>
+
+  <NPC name="GypsyFortuneTeller" weight="1">
+    <SpawnObject text="GypsyFortuneTeller" count="1" />
+  </NPC>
+
+  <NPC name="GypsyMaiden" weight="1">
+    <SpawnObject text="GypsyMaiden" count="1" />
+  </NPC>
+
+  <NPC name="HairStylist" weight="1">
+    <SpawnObject text="HairStylist" count="1" />
+  </NPC>
+
+  <NPC name="Hamato" weight="1">
+    <SpawnObject text="Hamato" count="1" />
+  </NPC>
+
+  <NPC name="Haochi" weight="1">
+    <SpawnObject text="Haochi" count="1" />
+  </NPC>
+
+  <NPC name="HaochisGuardsman" weight="1">
+    <SpawnObject text="HaochisGuardsman" count="1" />
+  </NPC>
+
+  <NPC name="HarborMaster" weight="1">
+    <SpawnObject text="HarborMaster" count="1" />
+  </NPC>
+
+  <NPC name="Hargrove" weight="1">
+    <SpawnObject text="Hargrove" count="1" />
+  </NPC>
+
+  <NPC name="Healer" weight="1">
+    <SpawnObject text="Healer" count="1" />
+  </NPC>
+
+  <NPC name="HealerGuildmaster" weight="1">
+    <SpawnObject text="HealerGuildmaster" count="1" />
+  </NPC>
+
+  <NPC name="Henchman" weight="1">
+    <SpawnObject text="Henchman" count="1" />
+  </NPC>
+
+  <NPC name="Herbalist" weight="1">
+    <SpawnObject text="Herbalist" count="1" />
+  </NPC>
+
+  <NPC name="HiddenFigure" weight="1">
+    <SpawnObject text="HiddenFigure" count="1" />
+  </NPC>
+
+  <NPC name="HireBard" weight="1">
+    <SpawnObject text="HireBard" count="1" />
+  </NPC>
+
+  <NPC name="HireBardArcher" weight="1">
+    <SpawnObject text="HireBardArcher" count="1" />
+  </NPC>
+
+  <NPC name="HireBeggar" weight="1">
+    <SpawnObject text="HireBeggar" count="1" />
+  </NPC>
+
+  <NPC name="HireFighter" weight="1">
+    <SpawnObject text="HireFighter" count="1" />
+  </NPC>
+
+  <NPC name="HireMage" weight="1">
+    <SpawnObject text="HireMage" count="1" />
+  </NPC>
+
+  <NPC name="HirePaladin" weight="1">
+    <SpawnObject text="HirePaladin" count="1" />
+  </NPC>
+
+  <NPC name="HirePeasant" weight="1">
+    <SpawnObject text="HirePeasant" count="1" />
+  </NPC>
+
+  <NPC name="HireRanger" weight="1">
+    <SpawnObject text="HireRanger" count="1" />
+  </NPC>
+
+  <NPC name="HireRangerArcher" weight="1">
+    <SpawnObject text="HireRangerArcher" count="1" />
+  </NPC>
+
+  <NPC name="HireSailor" weight="1">
+    <SpawnObject text="HireSailor" count="1" />
+  </NPC>
+
+  <NPC name="HireThief" weight="1">
+    <SpawnObject text="HireThief" count="1" />
+  </NPC>
+
+  <NPC name="HolyMage" weight="1">
+    <SpawnObject text="HolyMage" count="1" />
+  </NPC>
+
+  <NPC name="Horus" weight="1">
+    <SpawnObject text="Horus" count="1" />
+  </NPC>
+
+  <NPC name="Huntsman" weight="1">
+    <SpawnObject text="Huntsman" count="1" />
+  </NPC>
+
+  <NPC name="Impresario" weight="1">
+    <SpawnObject text="Impresario" count="1" />
+  </NPC>
+
+  <NPC name="InnKeeper" weight="1">
+    <SpawnObject text="InnKeeper" count="1" />
+  </NPC>
+
+  <NPC name="Ioseph" weight="1">
+    <SpawnObject text="Ioseph" count="1" />
+  </NPC>
+
+  <NPC name="IronWorker" weight="1">
+    <SpawnObject text="IronWorker" count="1" />
+  </NPC>
+
+  <NPC name="Jaacar" weight="1">
+    <SpawnObject text="Jaacar" count="1" />
+  </NPC>
+
+  <NPC name="Jacob" weight="1">
+    <SpawnObject text="Jacob" count="1" />
+  </NPC>
+
+  <NPC name="Jamal" weight="1">
+    <SpawnObject text="Jamal" count="1" />
+  </NPC>
+
+  <NPC name="JedahEntille" weight="1">
+    <SpawnObject text="JedahEntille" count="1" />
+  </NPC>
+
+  <NPC name="Jelrice" weight="1">
+    <SpawnObject text="Jelrice" count="1" />
+  </NPC>
+
+  <NPC name="Jeweler" weight="1">
+    <SpawnObject text="Jeweler" count="1" />
+  </NPC>
+
+  <NPC name="Jillian" weight="1">
+    <SpawnObject text="Jillian" count="1" />
+  </NPC>
+
+  <NPC name="Jockles" weight="1">
+    <SpawnObject text="Jockles" count="1" />
+  </NPC>
+
+  <NPC name="Jothan" weight="1">
+    <SpawnObject text="Jothan" count="1" />
+  </NPC>
+
+  <NPC name="Joy" weight="1">
+    <SpawnObject text="Joy" count="1" />
+  </NPC>
+
+  <NPC name="Jun" weight="1">
+    <SpawnObject text="Jun" count="1" />
+  </NPC>
+
+  <NPC name="Jusae" weight="1">
+    <SpawnObject text="Jusae" count="1" />
+  </NPC>
+
+  <NPC name="Kaelynna" weight="1">
+    <SpawnObject text="Kaelynna" count="1" />
+  </NPC>
+
+  <NPC name="Kashiel" weight="1">
+    <SpawnObject text="Kashiel" count="1" />
+  </NPC>
+
+  <NPC name="KeeperOfChivalry" weight="1">
+    <SpawnObject text="KeeperOfChivalry" count="1" />
+  </NPC>
+
+  <NPC name="Kia" weight="1">
+    <SpawnObject text="Kia" count="1" />
+  </NPC>
+
+  <NPC name="Kodar" weight="1">
+    <SpawnObject text="Kodar" count="1" />
+  </NPC>
+
+  <NPC name="Koole" weight="1">
+    <SpawnObject text="Koole" count="1" />
+  </NPC>
+
+  <NPC name="Laifem" weight="1">
+    <SpawnObject text="Laifem" count="1" />
+  </NPC>
+
+  <NPC name="Landy" weight="1">
+    <SpawnObject text="Landy" count="1" />
+  </NPC>
+
+  <NPC name="LeatherWorker" weight="1">
+    <SpawnObject text="LeatherWorker" count="1" />
+  </NPC>
+
+  <NPC name="Lefty" weight="1">
+    <SpawnObject text="Lefty" count="1" />
+  </NPC>
+
+  <NPC name="Lenley" weight="1">
+    <SpawnObject text="Lenley" count="1" />
+  </NPC>
+
+  <NPC name="Leon" weight="1">
+    <SpawnObject text="Leon" count="1" />
+  </NPC>
+
+  <NPC name="Lissbet" weight="1">
+    <SpawnObject text="Lissbet" count="1" />
+  </NPC>
+
+  <NPC name="Lohn" weight="1">
+    <SpawnObject text="Lohn" count="1" />
+  </NPC>
+
+  <NPC name="Lowel" weight="1">
+    <SpawnObject text="Lowel" count="1" />
+  </NPC>
+
+  <NPC name="Lucius" weight="1">
+    <SpawnObject text="Lucius" count="1" />
+  </NPC>
+
+  <NPC name="Lyle" weight="1">
+    <SpawnObject text="Lyle" count="1" />
+  </NPC>
+
+  <NPC name="Maabus" weight="1">
+    <SpawnObject text="Maabus" count="1" />
+  </NPC>
+
+  <NPC name="Mage" weight="1">
+    <SpawnObject text="Mage" count="1" />
+  </NPC>
+
+  <NPC name="MageGuildmaster" weight="1">
+    <SpawnObject text="MageGuildmaster" count="1" />
+  </NPC>
+
+  <NPC name="Mallew" weight="1">
+    <SpawnObject text="Mallew" count="1" />
+  </NPC>
+
+  <NPC name="MansionGuard" weight="1">
+    <SpawnObject text="MansionGuard" count="1" />
+  </NPC>
+
+  <NPC name="Mapmaker" weight="1">
+    <SpawnObject text="Mapmaker" count="1" />
+  </NPC>
+
+  <NPC name="Mardoth" weight="1">
+    <SpawnObject text="Mardoth" count="1" />
+  </NPC>
+
+  <NPC name="Margo" weight="1">
+    <SpawnObject text="Margo" count="1" />
+  </NPC>
+
+  <NPC name="Maul" weight="1">
+    <SpawnObject text="Maul" count="1" />
+  </NPC>
+
+  <NPC name="Merchant" weight="1">
+    <SpawnObject text="Merchant" count="1" />
+  </NPC>
+
+  <NPC name="MerchantGuildmaster" weight="1">
+    <SpawnObject text="MerchantGuildmaster" count="1" />
+  </NPC>
+
+  <NPC name="Messenger" weight="1">
+    <SpawnObject text="Messenger" count="1" />
+  </NPC>
+
+  <NPC name="Mielan" weight="1">
+    <SpawnObject text="Mielan" count="1" />
+  </NPC>
+
+  <NPC name="MilitiaCanoneer" weight="1">
+    <SpawnObject text="MilitiaCanoneer" count="1" />
+  </NPC>
+
+  <NPC name="Miller" weight="1">
+    <SpawnObject text="Miller" count="1" />
+  </NPC>
+
+  <NPC name="Miner" weight="1">
+    <SpawnObject text="Miner" count="1" />
+  </NPC>
+
+  <NPC name="MinerGuildmaster" weight="1">
+    <SpawnObject text="MinerGuildmaster" count="1" />
+  </NPC>
+
+  <NPC name="Minter" weight="1">
+    <SpawnObject text="Minter" count="1" />
+  </NPC>
+
+  <NPC name="Mithneral" weight="1">
+    <SpawnObject text="Mithneral" count="1" />
+  </NPC>
+
+  <NPC name="Monk" weight="1">
+    <SpawnObject text="Monk" count="1" />
+  </NPC>
+
+  <NPC name="Morganna" weight="1">
+    <SpawnObject text="Morganna" count="1" />
+  </NPC>
+
+  <NPC name="Mugg" weight="1">
+    <SpawnObject text="Mugg" count="1" />
+  </NPC>
+
+  <NPC name="Mulcivikh" weight="1">
+    <SpawnObject text="Mulcivikh" count="1" />
+  </NPC>
+
+  <NPC name="MysteriousWisp" weight="1">
+    <SpawnObject text="MysteriousWisp" count="1" />
+  </NPC>
+
+  <NPC name="Mystic" weight="1">
+    <SpawnObject text="Mystic" count="1" />
+  </NPC>
+
+  <NPC name="Natalie" weight="1">
+    <SpawnObject text="Natalie" count="1" />
+  </NPC>
+
+  <NPC name="Naturalist" weight="1">
+    <SpawnObject text="Naturalist" count="1" />
+  </NPC>
+
+  <NPC name="Naxatillor" weight="1">
+    <SpawnObject text="Naxatillor" count="1" />
+  </NPC>
+
+  <NPC name="Necromancer" weight="1">
+    <SpawnObject text="Necromancer" count="1" />
+  </NPC>
+
+  <NPC name="Nedrick" weight="1">
+    <SpawnObject text="Nedrick" count="1" />
+  </NPC>
+
+  <NPC name="Neil" weight="1">
+    <SpawnObject text="Neil" count="1" />
+  </NPC>
+
+  <NPC name="Neville" weight="1">
+    <SpawnObject text="Neville" count="1" />
+  </NPC>
+
+  <NPC name="Nibbet" weight="1">
+    <SpawnObject text="Nibbet" count="1" />
+  </NPC>
+
+  <NPC name="Nillaen" weight="1">
+    <SpawnObject text="Nillaen" count="1" />
+  </NPC>
+
+  <NPC name="Ninja" weight="1">
+    <SpawnObject text="Ninja" count="1" />
+  </NPC>
+
+  <NPC name="Noble" weight="1">
+    <SpawnObject text="Noble" count="1" />
+  </NPC>
+
+  <NPC name="Norton" weight="1">
+    <SpawnObject text="Norton" count="1" />
+  </NPC>
+
+  <NPC name="Nythalia" weight="1">
+    <SpawnObject text="Nythalia" count="1" />
+  </NPC>
+
+  <NPC name="Odell" weight="1">
+    <SpawnObject text="Odell" count="1" />
+  </NPC>
+
+  <NPC name="Olaeni" weight="1">
+    <SpawnObject text="Olaeni" count="1" />
+  </NPC>
+
+  <NPC name="Olla" weight="1">
+    <SpawnObject text="Olla" count="1" />
+  </NPC>
+
+  <NPC name="Onallan" weight="1">
+    <SpawnObject text="Onallan" count="1" />
+  </NPC>
+
+  <NPC name="Oolua" weight="1">
+    <SpawnObject text="Oolua" count="1" />
+  </NPC>
+
+  <NPC name="OrderGuard" weight="1">
+    <SpawnObject text="OrderGuard" count="1" />
+  </NPC>
+
+  <NPC name="Paladin" weight="1">
+    <SpawnObject text="Paladin" count="1" />
+  </NPC>
+
+  <NPC name="Patricus" weight="1">
+    <SpawnObject text="Patricus" count="1" />
+  </NPC>
+
+  <NPC name="Peasant" weight="1">
+    <SpawnObject text="Peasant" count="1" />
+  </NPC>
+
+  <NPC name="Percolem" weight="1">
+    <SpawnObject text="Percolem" count="1" />
+  </NPC>
+
+  <NPC name="PersonalAttendant" weight="1">
+    <SpawnObject text="PersonalAttendant" count="1" />
+  </NPC>
+
+  <NPC name="Petrus" weight="1">
+    <SpawnObject text="Petrus" count="1" />
+  </NPC>
+
+  <NPC name="PlayerBarkeeper" weight="1">
+    <SpawnObject text="PlayerBarkeeper" count="1" />
+  </NPC>
+
+  <NPC name="PlayerVendor" weight="1">
+    <SpawnObject text="PlayerVendor" count="1" />
+  </NPC>
+
+  <NPC name="PricedHealer" weight="1">
+    <SpawnObject text="PricedHealer" count="1" />
+  </NPC>
+
+  <NPC name="Provisioner" weight="1">
+    <SpawnObject text="Provisioner" count="1" />
+  </NPC>
+
+  <NPC name="QuartermasterFlint" weight="1">
+    <SpawnObject text="QuartermasterFlint" count="1" />
+  </NPC>
+
+  <NPC name="Rancher" weight="1">
+    <SpawnObject text="Rancher" count="1" />
+  </NPC>
+
+  <NPC name="Ranger" weight="1">
+    <SpawnObject text="Ranger" count="1" />
+  </NPC>
+
+  <NPC name="RangerGuildmaster" weight="1">
+    <SpawnObject text="RangerGuildmaster" count="1" />
+  </NPC>
+
+  <NPC name="RealEstateBroker" weight="1">
+    <SpawnObject text="RealEstateBroker" count="1" />
+  </NPC>
+
+  <NPC name="Rebinil" weight="1">
+    <SpawnObject text="Rebinil" count="1" />
+  </NPC>
+
+  <NPC name="Recaro" weight="1">
+    <SpawnObject text="Recaro" count="1" />
+  </NPC>
+
+  <NPC name="Regina" weight="1">
+    <SpawnObject text="Regina" count="1" />
+  </NPC>
+
+  <NPC name="Relnia" weight="1">
+    <SpawnObject text="Relnia" count="1" />
+  </NPC>
+
+  <NPC name="RentedVendor" weight="1">
+    <SpawnObject text="RentedVendor" count="1" />
+  </NPC>
+
+  <NPC name="Robyn" weight="1">
+    <SpawnObject text="Robyn" count="1" />
+  </NPC>
+
+  <NPC name="Rollarn" weight="1">
+    <SpawnObject text="Rollarn" count="1" />
+  </NPC>
+
+  <NPC name="Ryal" weight="1">
+    <SpawnObject text="Ryal" count="1" />
+  </NPC>
+
+  <NPC name="Ryuichi" weight="1">
+    <SpawnObject text="Ryuichi" count="1" />
+  </NPC>
+
+  <NPC name="Sadrah" weight="1">
+    <SpawnObject text="Sadrah" count="1" />
+  </NPC>
+
+  <NPC name="Salaenih" weight="1">
+    <SpawnObject text="Salaenih" count="1" />
+  </NPC>
+
+  <NPC name="Sam" weight="1">
+    <SpawnObject text="Sam" count="1" />
+  </NPC>
+
+  <NPC name="Samurai" weight="1">
+    <SpawnObject text="Samurai" count="1" />
+  </NPC>
+
+  <NPC name="Sarakki" weight="1">
+    <SpawnObject text="Sarakki" count="1" />
+  </NPC>
+
+  <NPC name="Saril" weight="1">
+    <SpawnObject text="Saril" count="1" />
+  </NPC>
+
+  <NPC name="SarsmeaSmythe" weight="1">
+    <SpawnObject text="SarsmeaSmythe" count="1" />
+  </NPC>
+
+  <NPC name="Schmendrick" weight="1">
+    <SpawnObject text="Schmendrick" count="1" />
+  </NPC>
+
+  <NPC name="Scribe" weight="1">
+    <SpawnObject text="Scribe" count="1" />
+  </NPC>
+
+  <NPC name="Sculptor" weight="1">
+    <SpawnObject text="Sculptor" count="1" />
+  </NPC>
+
+  <NPC name="SeekerOfAdventure" weight="1">
+    <SpawnObject text="SeekerOfAdventure" count="1" />
+  </NPC>
+
+  <NPC name="Shipwright" weight="1">
+    <SpawnObject text="Shipwright" count="1" />
+  </NPC>
+
+  <NPC name="ShrineHealer" weight="1">
+    <SpawnObject text="ShrineHealer" count="1" />
+  </NPC>
+
+  <NPC name="Siarra" weight="1">
+    <SpawnObject text="Siarra" count="1" />
+  </NPC>
+
+  <NPC name="Sledge" weight="1">
+    <SpawnObject text="Sledge" count="1" />
+  </NPC>
+
+  <NPC name="Sleen" weight="1">
+    <SpawnObject text="Sleen" count="1" />
+  </NPC>
+
+  <NPC name="Sliem" weight="1">
+    <SpawnObject text="Sliem" count="1" />
+  </NPC>
+
+  <NPC name="SolenMatriarch" weight="1">
+    <SpawnObject text="SolenMatriarch" count="1" />
+  </NPC>
+
+  <NPC name="SosariaSap" weight="1">
+    <SpawnObject text="SosariaSap" count="1" />
+  </NPC>
+
+  <NPC name="StoneCrafter" weight="1">
+    <SpawnObject text="StoneCrafter" count="1" />
+  </NPC>
+
+  <NPC name="Strongroot" weight="1">
+    <SpawnObject text="Strongroot" count="1" />
+  </NPC>
+
+  <NPC name="Synaeva" weight="1">
+    <SpawnObject text="Synaeva" count="1" />
+  </NPC>
+
+  <NPC name="Szandor" weight="1">
+    <SpawnObject text="Szandor" count="1" />
+  </NPC>
+
+  <NPC name="Taellia" weight="1">
+    <SpawnObject text="Taellia" count="1" />
+  </NPC>
+
+  <NPC name="Tailor" weight="1">
+    <SpawnObject text="Tailor" count="1" />
+  </NPC>
+
+  <NPC name="TailorGuildmaster" weight="1">
+    <SpawnObject text="TailorGuildmaster" count="1" />
+  </NPC>
+
+  <NPC name="Talbart" weight="1">
+    <SpawnObject text="Talbart" count="1" />
+  </NPC>
+
+  <NPC name="Tallinin" weight="1">
+    <SpawnObject text="Tallinin" count="1" />
+  </NPC>
+
+  <NPC name="Tamm" weight="1">
+    <SpawnObject text="Tamm" count="1" />
+  </NPC>
+
+  <NPC name="Tanner" weight="1">
+    <SpawnObject text="Tanner" count="1" />
+  </NPC>
+
+  <NPC name="TavernKeeper" weight="1">
+    <SpawnObject text="TavernKeeper" count="1" />
+  </NPC>
+
+  <NPC name="Thalia" weight="1">
+    <SpawnObject text="Thalia" count="1" />
+  </NPC>
+
+  <NPC name="Thallary" weight="1">
+    <SpawnObject text="Thallary" count="1" />
+  </NPC>
+
+  <NPC name="Thepem" weight="1">
+    <SpawnObject text="Thepem" count="1" />
+  </NPC>
+
+  <NPC name="Thief" weight="1">
+    <SpawnObject text="Thief" count="1" />
+  </NPC>
+
+  <NPC name="ThiefGuildmaster" weight="1">
+    <SpawnObject text="ThiefGuildmaster" count="1" />
+  </NPC>
+
+  <NPC name="Tholef" weight="1">
+    <SpawnObject text="Tholef" count="1" />
+  </NPC>
+
+  <NPC name="Tiana" weight="1">
+    <SpawnObject text="Tiana" count="1" />
+  </NPC>
+
+  <NPC name="Tillanil" weight="1">
+    <SpawnObject text="Tillanil" count="1" />
+  </NPC>
+
+  <NPC name="Tinker" weight="1">
+    <SpawnObject text="Tinker" count="1" />
+  </NPC>
+
+  <NPC name="TinkerGuildmaster" weight="1">
+    <SpawnObject text="TinkerGuildmaster" count="1" />
+  </NPC>
+
+  <NPC name="Tobin" weight="1">
+    <SpawnObject text="Tobin" count="1" />
+  </NPC>
+
+  <NPC name="TomasONeerlan" weight="1">
+    <SpawnObject text="TomasONeerlan" count="1" />
+  </NPC>
+
+  <NPC name="TownCrier" weight="1">
+    <SpawnObject text="TownCrier" count="1" />
+  </NPC>
+
+  <NPC name="TylAriadne" weight="1">
+    <SpawnObject text="TylAriadne" count="1" />
+  </NPC>
+
+  <NPC name="Tyleelor" weight="1">
+    <SpawnObject text="Tyleelor" count="1" />
+  </NPC>
+
+  <NPC name="Unoelil" weight="1">
+    <SpawnObject text="Unoelil" count="1" />
+  </NPC>
+
+  <NPC name="Uzeraan" weight="1">
+    <SpawnObject text="Uzeraan" count="1" />
+  </NPC>
+
+  <NPC name="Vagabond" weight="1">
+    <SpawnObject text="Vagabond" count="1" />
+  </NPC>
+
+  <NPC name="VarietyDealer" weight="1">
+    <SpawnObject text="VarietyDealer" count="1" />
+  </NPC>
+
+  <NPC name="Verity" weight="1">
+    <SpawnObject text="Verity" count="1" />
+  </NPC>
+
+  <NPC name="Veterinarian" weight="1">
+    <SpawnObject text="Veterinarian" count="1" />
+  </NPC>
+
+  <NPC name="Vicaie" weight="1">
+    <SpawnObject text="Vicaie" count="1" />
+  </NPC>
+
+  <NPC name="Victoria" weight="1">
+    <SpawnObject text="Victoria" count="1" />
+  </NPC>
+
+  <NPC name="Vilo" weight="1">
+    <SpawnObject text="Vilo" count="1" />
+  </NPC>
+
+  <NPC name="Vollem" weight="1">
+    <SpawnObject text="Vollem" count="1" />
+  </NPC>
+
+  <NPC name="Vrulkax" weight="1">
+    <SpawnObject text="Vrulkax" count="1" />
+  </NPC>
+
+  <NPC name="Waelian" weight="1">
+    <SpawnObject text="Waelian" count="1" />
+  </NPC>
+
+  <NPC name="Waiter" weight="1">
+    <SpawnObject text="Waiter" count="1" />
+  </NPC>
+
+  <NPC name="Walker" weight="1">
+    <SpawnObject text="Walker" count="1" />
+  </NPC>
+
+  <NPC name="WanderingHealer" weight="1">
+    <SpawnObject text="WanderingHealer" count="1" />
+  </NPC>
+
+  <NPC name="WanderingShaman" weight="1">
+    <SpawnObject text="WanderingShaman" count="1" />
+  </NPC>
+
+  <NPC name="WarriorGuard" weight="1">
+    <SpawnObject text="WarriorGuard" count="1" />
+  </NPC>
+
+  <NPC name="WarriorGuildmaster" weight="1">
+    <SpawnObject text="WarriorGuildmaster" count="1" />
+  </NPC>
+
+  <NPC name="Weaponsmith" weight="1">
+    <SpawnObject text="Weaponsmith" count="1" />
+  </NPC>
+
+  <NPC name="Weaver" weight="1">
+    <SpawnObject text="Weaver" count="1" />
+  </NPC>
+
+  <NPC name="Xanthe" weight="1">
+    <SpawnObject text="Xanthe" count="1" />
+  </NPC>
+
+  <NPC name="Xenrr" weight="1">
+    <SpawnObject text="Xenrr" count="1" />
+  </NPC>
+
+  <NPC name="Yellienir" weight="1">
+    <SpawnObject text="Yellienir" count="1" />
+  </NPC>
+
+  <NPC name="Yorus" weight="1">
+    <SpawnObject text="Yorus" count="1" />
+  </NPC>
+
+  <NPC name="Zeefzorpul" weight="1">
+    <SpawnObject text="Zeefzorpul" count="1" />
+  </NPC>
+
+  <NPC name="Zhah" weight="1">
+    <SpawnObject text="Zhah" count="1" />
+  </NPC>
+
+  <NPC name="Zoel" weight="1">
+    <SpawnObject text="Zoel" count="1" />
+  </NPC>
+
+  <NPC name="Zorda" weight="1">
+    <SpawnObject text="Zorda" count="1" />
+  </NPC>
+
+  <NPC name="Zosilem" weight="1">
+    <SpawnObject text="Zosilem" count="1" />
+  </NPC>  
+  <!-- Add as many as you want! -->
+</NPCs>

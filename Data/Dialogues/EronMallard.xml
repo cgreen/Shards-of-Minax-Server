@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="EronMallard">
+  <!-- === Greeting (root) === -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#72def7'>
+      You find a man perched atop a driftwood bench, chiseling a chunk of azure crystal. <br>
+      His right leg—paralyzed—rests on a peculiar contraption: snow-skates that hover above the frost, humming quietly. His shirt shimmers with tiny beads of frost, and a pointed blue hat sits askew on his wild, salt-and-pepper hair.<br><br>
+      As he looks up, a ghost of a rogue’s smile flickers across his face.<br><br>
+      "Ah, greetings, traveler! Don’t mind the mess, mind the mirrors. A single slip and you’ll see more of yourself than you’d like, eh? Eron Mallard, artisan, reformed thief, purveyor of snowglass and secrets. To what do I owe the pleasure? A glimpse at your soul’s true shape? Or perhaps you’re after something more... practical?"</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You’re Eron Mallard? I heard stories about your past." next="past"/>
+    <Option text="What are these snowglass mirrors you make?" next="mirrors"/>
+    <Option text="Know of any work for a capable adventurer?" next="questIntro"/>
+	<Option text="You mentioned being a thief and an artist—how does that happen?" next="backstoryRoot"/>
+    <Option text="Just admiring your craft. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- === Branch: Past Life === -->
+  <Dialogue id="past">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#72def7'>
+      Eron gives a self-deprecating chuckle.<br><br>
+      "Depends which story you heard. Lira tells it straight: I was a thief in Sunreach, running wild with her and a pack of fools. Stole trinkets, hearts, a royal cheese wheel or two. Then came Minax’s shadow—cost me friends and the use of this leg. Life’s too short to stay bitter, so now I steal glances and trade in reflected truths." <br><br>
+      He gestures to a frosted mirror. "People think thieves are cowards. But it takes courage to face what the glass shows, yes?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Are you still in touch with Lira Snowbrew?" next="lira"/>
+    <Option text="What made you come to Frostmere?" next="whyFrostmere"/>
+    <Option text="That’s quite a turn. Tell me about your craft." next="mirrors"/>
+    <Option text="Enough reminiscing—got any work?" next="questIntro"/>
+  </Dialogue>
+
+  <!-- === Branch: Lira Connection === -->
+  <Dialogue id="lira">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#72def7'>
+      "Lira? Oh, she keeps me honest—or tries. Her ale is better than her judgment, but I wouldn’t trade her loyalty for all the gold in the world. If you ever need a warm meal or a colder truth, seek her out at the White Boar. Just don't let her tell you stories about my so-called 'heroic' last heist. Embarrassing."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="What brought you to this icy place?" next="whyFrostmere"/>
+    <Option text="Let’s talk about your mirrors." next="mirrors"/>
+    <Option text="Any odd jobs needing doing?" next="questIntro"/>
+    <Option text="I should go." action="Close"/>
+  </Dialogue>
+
+  <!-- === Branch: Why Frostmere? === -->
+  <Dialogue id="whyFrostmere">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#72def7'>
+      He sighs, frost curling from his lips.<br><br>
+      "After Sunreach burned, I wandered north. Irinya said the ice here holds memories, and I—well, I have memories that needed freezing. Elder Aelric gave me a chance. I found beauty in the cold and the cracks. There’s honesty here, even if the cold bites harder than old rivals." <br>
+      He nudges his snow-skates. "Besides, where else can a crippled thief out-race a charging snowbear?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="About your craft..." next="mirrors"/>
+    <Option text="Is there work for adventurers here?" next="questIntro"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- === Branch: Mirrors and Magic === -->
+  <Dialogue id="mirrors">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#72def7'>
+      "Snowglass is no ordinary glass, friend. Each pane is born from frost, flame, and a little of my own regret. Hold one up, and it shows you truths—sometimes ones you’d rather not see. Nolgrim commissions the strangest pieces—he wants a mirror that can remember secrets better than a scribe. Dangerous work." <br><br>
+      He lowers his voice. "One mirror I crafted shows Lord British—not dead, but adrift in the clouds above Aerilon. I dare not sell it, lest the wrong eyes see. Still... if you ever need a glimpse beyond the veil, you know where to find me."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="That sounds dangerous. Who else seeks your work?" next="clients"/>
+    <Option text="Is the Lord British vision real?" next="british"/>
+    <Option text="Enough talk—have any jobs?" next="questIntro"/>
+    <Option text="I’ll come back another time." action="Close"/>
+  </Dialogue>
+
+  <!-- === Branch: Clients and Connections === -->
+  <Dialogue id="clients">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#72def7'>
+      "Nolgrim’s vault is filled with my mirrors—he claims they keep nightmares at bay, but I suspect he uses them to spy. Irinya, on the other hand, wants nothing to do with my glass—says it 'reflects more than faces.' Even Svala wants me to craft a spyglass to see through blizzards. Everyone wants a piece of themselves revealed. Few like what they find."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Can I see the Lord British mirror?" next="british"/>
+    <Option text="Let’s change the subject—work for an adventurer?" next="questIntro"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- === Branch: Lord British Mirror === -->
+  <Dialogue id="british">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#72def7'>
+      Eron leans in, whispering:<br><br>
+      "I only glance at it by moonlight. It shows a man with a lion’s signet, trapped in a palace that floats above storm-tossed waters. If it’s a trick of the glass, then it’s a cruel one—because he speaks, but no sound escapes. If you’re truly brave, perhaps you could earn a glimpse. But I don’t part with such treasures lightly." 
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Maybe another time. What work is there?" next="questIntro"/>
+    <Option text="That’s haunting. I’ll be going." action="Close"/>
+  </Dialogue>
+
+  <!-- === Branch: Quest Offer === -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#72def7'>
+      Eron winces, glancing out his snowglass window.<br><br>
+      "Actually, there *is* something a brave soul could help with, if you’ve the spine for it. My last shipment of frost-shards—crucial for snowglass—never arrived. The couriers vanished near the ice quarry. Locals whisper of a Glacial Construct, a towering thing of living ice and ancient rage. It’s begun stalking the outer paths, smashing sleds and scaring my customers half to death." <br><br>
+      He taps his snow-skates anxiously. "I can’t hunt it myself, not with this leg and these hands grown soft with age. Captain Bryndra wants to torch the quarry, but that’s no good to anyone. If you can destroy the Glacial Construct and bring me its frozen core, not only will I reward you, I’ll let you glimpse the Lord British mirror. Do we have an accord?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll hunt the Glacial Construct for you."
+      action="GiveItem:FactionKillQuestScroll(GlacialConstruct,1,Frostmere,750)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Why does the Construct attack your shipments?" next="constructWhy"/>
+    <Option text="What does Captain Bryndra think of this?" next="bryndra"/>
+    <Option text="Not interested in ice monsters." action="Close"/>
+  </Dialogue>
+
+  <!-- === Quest Acceptance === -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#72def7'>
+      "Excellent! You’ll find the quarry southeast of town, past Widow Corla’s ice-fishing shack. The Construct is cunning for a brute—lures prey with false echoes, hides in swirling frost. Smash its core and return with proof, and the snowglass will reflect your name for generations. Oh, and if you see Lira, tell her I still owe her two bottles of winterberry cordial. Good luck!"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with the frozen core." action="Close"/>
+  </Dialogue>
+
+  <!-- === Construct Lore === -->
+  <Dialogue id="constructWhy">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#72def7'>
+      "It’s old, that Construct—older than Frostmere. Some say it’s a remnant of the Obelisk’s magic, gone mad from centuries alone. It draws power from shattered mirrors and seeks to reforge itself. My couriers carried enchanted shards, so it stalked them. Destroy it, and perhaps the quarry—and my trade—will be safe again."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Alright, I’ll take the job."
+      action="GiveItem:FactionKillQuestScroll(GlacialConstruct,1,Frostmere,750)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="I’ll leave that to someone braver." action="Close"/>
+  </Dialogue>
+
+  <!-- === Captain Bryndra Branch === -->
+  <Dialogue id="bryndra">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#72def7'>
+      "Bryndra? She’d sooner smash every mirror in town than trust magic. She wants to torch the quarry, drive out every shadow, but she doesn’t understand: you can’t fight reflection with fire. Still, she keeps the town safe—and me humble. If you succeed, she might finally stop blaming my ‘strange arts’ for every mishap."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll deal with the Construct for you."
+      action="GiveItem:FactionKillQuestScroll(GlacialConstruct,1,Frostmere,750)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="This isn’t for me." action="Close"/>
+  </Dialogue>
+  
+<Dialogue id="backstoryRoot">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#72def7'>
+    Eron grins, smoothing the edge of a half-cut snowglass shard.<br><br>
+    "A fair question. They say thievery is an art. In my case, art became the redemption of thievery. I used to slip through Sunreach's mansions like a shadow in velvet—took coins, heirlooms, hearts. And regrets."<br><br>
+    He looks at you, suddenly serious.<br>
+    "But people change. Or they break, and grow into something else. What would you like to know?"
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Why did you stop stealing?" next="whyStop"/>
+  <Option text="What kind of thief were you?" next="thiefLife"/>
+  <Option text="Tell me about your art—why mirrors?" next="whyMirrors"/>
+  <Option text="Ever regret your old life?" next="regret"/>
+  <Option text="Sounds like a long story. Maybe another time." action="Close"/>
+</Dialogue>
+
+<Dialogue id="whyStop">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#72def7'>
+    He gently lifts his snow-skates, showing the engraved brace on his paralyzed leg.<br><br>
+    "Minax’s hounds came to Sunreach. I stayed to help Lira escape. I didn't run fast enough. A burst of voidflame from one of her cultists caught me mid-vault. Burned my nerves to dust."<br><br>
+    He chuckles without mirth.<br>
+    "That fall gave me new eyes. Can’t steal much when you can’t run. But I could still shape glass. And glass became my voice."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="That must have been painful." next="regret"/>
+  <Option text="So you and Lira go way back, then?" next="liraMore"/>
+  <Option text="How did you get into mirror-making?" next="whyMirrors"/>
+</Dialogue>
+
+<Dialogue id="thiefLife">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#72def7'>
+    "Ahhh, the thrill of shadow and silk!" he laughs, eyes sparkling.<br><br>
+    "I was a ghost among locks. Quick with my hands, quicker with my charm. I never hurt anyone who didn't deserve it—but I stole from more nobles than I care to count. My favorite trick? Replacing stolen jewelry with snowglass copies. They’d wear them for weeks before realizing."<br><br>
+    He leans in.<br>
+    "And some still wore them after they knew. Because illusions—well, sometimes they’re more beautiful than truth."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="You sound proud of your old self." next="regret"/>
+  <Option text="Did you ever get caught?" next="caught"/>
+</Dialogue>
+
+<Dialogue id="caught">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#72def7'>
+    He shrugs.<br><br>
+    "Once. Got thrown in a desert cell in Qasaria. Spent three weeks chatting with scorpions and memorizing guard patterns. Escaped using a mirror, some frost powder, and a honey-glazed apple. Never underestimate the power of dessert, my friend."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="Well played. Tell me more about your mirrors." next="whyMirrors"/>
+</Dialogue>
+
+<Dialogue id="whyMirrors">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#72def7'>
+    He holds up a snowglass mirror, letting it catch the moonlight.<br><br>
+    "Glass is honest. It doesn’t flatter. It reflects. It remembers." <br><br>
+    He exhales, watching the frost curl from his breath. <br>
+    "And snowglass... it’s born of stillness. Of frozen truth. My mirrors show what lies beneath—fears, memories, hopes. Sometimes even fragments of time. I carve what people won't say aloud. I make them face themselves."<br><br>
+    He pauses, watching your reaction.
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="Sounds like magic." next="mirrorMagic"/>
+  <Option text="Sounds dangerous." next="mirrorDanger"/>
+  <Option text="Sounds beautiful." condition="IsFemale" action="Fame:+100" next="mirrorFlirt"/>
+</Dialogue>
+
+<Dialogue id="mirrorMagic">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#72def7'>
+    "It is... a kind of magic. But not spellbooks and circles. It’s the kind that comes from memory, grief, love. I call it soulcrafting. The Obelisk in Frostmere hums with the same resonance. Perhaps that’s why I was drawn here."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="This Obelisk... do you think it's watching us?" next="british"/>
+  <Option text="I want to see more of your work." next="mirrors"/>
+</Dialogue>
+
+<Dialogue id="mirrorDanger">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#72def7'>
+    "Dangerous? Yes. Not everyone can face their reflection without shattering. Nolgrim once saw his past in a shard and wept for hours. Still... people crave truth, even if it cuts."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="I’d like to try one someday." action="Karma:+100" next="mirrorMagic"/>
+</Dialogue>
+
+<Dialogue id="mirrorFlirt">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#72def7'>
+    Eron smiles warmly, his tone softening.<br><br>
+    "Then you, my dear, understand more than most. When beauty reflects itself, it becomes truth."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="That’s poetic. Let’s keep talking." action="PlaySound:0x015" next="whyStop"/>
+</Dialogue>
+
+<Dialogue id="regret">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#72def7'>
+    Eron sighs, face clouding.<br><br>
+    "Sometimes. I’ve stolen years from others and wasted too many of my own. But regrets are like frostbite—you learn from the burn, or you lose the limb." <br><br>
+    He taps his frozen boot.<br>
+    "Now, I build instead of break. Not redemption, maybe. But it’s a start."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="Thank you for sharing that." action="Karma:+100" next="mirrorMagic"/>
+  <Option text="Everyone’s made mistakes. You’re not alone." condition="KarmaAtLeast:0" action="Fame:+50" next="mirrorMagic"/>
+</Dialogue>
+
+<Dialogue id="liraMore">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#72def7'>
+    "Lira was my lookout. My partner. My occasional rival. She knew the streets better than I knew my tools. When we both walked away from that life, we didn’t say goodbye—we just drifted north. She brews peace now, in potions and in beer."<br><br>
+    He smiles faintly. "Still sends me cordial notes... and threats if I forget her birthday."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="You’ve lived a remarkable life." next="regret"/>
+  <Option text="Thank you for opening up." action="Karma:+100" next="greeting"/>
+</Dialogue>
+  
+  
+</DialogueFile>

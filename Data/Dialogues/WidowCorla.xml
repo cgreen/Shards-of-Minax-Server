@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="WidowCorla">
+  <!-- === root (greeting) ================================================== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#d7e9f7'>
+      Before you stands a thin woman draped in a misty shroud, her eyes pale as ice-fog. Silver fish bones dangle from her apron, and a battered lantern flickers softly in her hands. She hums a mournful tune as she places a fresh trout atop a frost-bitten grave.
+      <BR><BR>
+      <I>
+      "Fish for the lost, sleep beneath the frost,<BR>
+      Spirits fed, the living dread,<BR>
+      But Corla keeps the watch."<BR><BR>
+      </I>
+      She regards you with a wry, knowing smile.<BR>
+      "Come for omens? For gossip, or for grief? Or do you come, as Irinya does, to hear what the lake ice whispers tonight?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Why do you feed fish to the dead?" next="fish"/>
+    <Option text="What omens do you see tonight, Corla?" next="omens"/>
+    <Option text="You and Irinya—are you friends?" next="irinya"/>
+    <Option text="Bryndra doesn’t like you here, does she?" next="bryndra"/>
+    <Option text="Do you need help, Widow Corla?" next="questIntro"/>
+	<Option text="Who were you before Frostmere, Corla?" next="backstoryIntro"/>
+    <Option text="I’m just passing by, excuse me." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Fish Ritual Explanation ====================================== -->
+  <Dialogue id="fish">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#d7e9f7'>
+      She traces a spiral in the snow with a fish bone.<BR>
+      "All things hunger, even in death. In Frostmere, we feed the lost so they won’t gnaw on the living. The dead beneath the ice grow restless in years like these, when the lake sings and the snow tastes of salt. The fish bring dreams, not nightmares."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Is it true the dead whisper to you?" next="omens"/>
+    <Option text="That sounds lonely, Corla." next="lonely"/>
+    <Option text="Can I help you in your rites?" next="questIntro"/>
+    <Option text="I should go." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Omens ======================================================= -->
+  <Dialogue id="omens">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#d7e9f7'>
+      Corla’s eyes glaze as she listens to something distant.<BR>
+      <I>
+      "Tonight the lake cracks like ribs in the dark.<BR>
+      Beneath the graves, something stirs—a spark.<BR>
+      When ice begins to weep and groan,<BR>
+      The hungry dead won’t rest alone."<BR>
+      </I>
+      She glances at you.<BR>
+      "Will you help a poor widow keep her peace, or will you turn away as so many have?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Tell me what troubles you, Corla." next="questIntro"/>
+    <Option text="That’s… unsettling. How do you sleep?" next="sleep"/>
+    <Option text="I’m not the hero you need." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Irinya Friendship ============================================ -->
+  <Dialogue id="irinya">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#d7e9f7'>
+      She grins, showing a missing tooth.<BR>
+      "Irinya is kin of the spirit, not of blood. She listens when others mock my rites. She brings me crow feathers and frost lilies—gifts from the dreaming world. We argue, aye, but she knows what walks beneath the snow better than any warrior."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="And what of Bryndra, then?" next="bryndra"/>
+    <Option text="You seem wise, Corla. How can I help?" next="questIntro"/>
+    <Option text="You must have many stories." next="stories"/>
+    <Option text="I’ll leave you to your prayers." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Bryndra Tension ============================================== -->
+  <Dialogue id="bryndra">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#d7e9f7'>
+      Corla’s smile fades.<BR>
+      "Bryndra would plant every corpse in neat lines, guard them with swords and laws. But ghosts have no respect for fences. She fears what she cannot see—she fears me, too, though she’d never admit it. Yet when her own mother died, whose lantern led the way to the grave? Not Bryndra’s militia. Mine."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You care for everyone here, don’t you?" next="care"/>
+    <Option text="What do the spirits say about Bryndra?" next="bryndraOmens"/>
+    <Option text="Do you need any help, Widow?" next="questIntro"/>
+    <Option text="Farewell, Corla." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="care">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#d7e9f7'>
+      Corla shrugs, shoulders slumped.<BR>
+      "We’re all bones beneath the snow, sooner or later. I care for them in life and in death, though both forget to thank me. But I hear their thanks in the crackle of ice and the flapping of fish-tails."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Let me ease your burdens. What needs doing?" next="questIntro"/>
+    <Option text="I’ll remember you, Corla." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="bryndraOmens">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#d7e9f7'>
+      She leans close, voice a croak.<BR>
+      <I>
+      "Steel-hearted Bryndra, strong and stern,<BR>
+      But frost may shatter what fire can’t burn.<BR>
+      She walks the edge, but the edge is thin—<BR>
+      Pray she never falls within."<BR>
+      </I>
+      She straightens.<BR>
+      "Tell her I said so. Or don’t—she’d only scowl."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Do you need any help, Widow?" next="questIntro"/>
+    <Option text="I’ll remember you, Corla." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Lonely Branch ================================================ -->
+  <Dialogue id="lonely">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#d7e9f7'>
+      Corla sighs, setting her lantern atop a half-buried tombstone.<BR>
+      "Lonely? The dead make fine company, if you know how to listen. The living are the noisy ones—full of wants, never satisfied. But the lake tells secrets, and secrets are never lonely."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Is there a secret you want to share?" next="omens"/>
+    <Option text="I’ll leave you with your thoughts." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="stories">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#d7e9f7'>
+      "Stories? Aye, I have more than most. Some so sad the ice weeps, some so wicked the fish won’t bite. But stories are for long nights and warm fires. If you wish to hear them, prove you’re a friend to the dead."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="What must I do to prove myself?" next="questIntro"/>
+    <Option text="Perhaps another night, Corla." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="sleep">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#d7e9f7'>
+      "Sleep? Oh, I doze when the lake is silent, and wake when it weeps. I dream in blue and white. Sometimes, the dead sing me lullabies. Sometimes, they scream."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Tell me how I can help you rest easy." next="questIntro"/>
+    <Option text="I hope you dream of peace, Widow." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Main Quest Offer ============================================= -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b7f7e9'>
+      Corla’s tone turns serious, lantern raised between you.<BR>
+      <I>
+      "The ice will soon sing and melt,<BR>
+      With hunger not seen nor felt.<BR>
+      A construct of frost, with a heart of stone,<BR>
+      Shatters the rest of flesh and bone.<BR>
+      It haunts the graves, it breaks the peace,<BR>
+      Only steel and courage will bring release."<BR>
+      </I>
+      She fixes you with a pleading gaze.<BR>
+      "A Glacial Construct stalks our resting ground, its heavy steps splitting the ice and setting the dead adrift. The bones are angry. My fish cannot feed them now. If you have a hero’s heart, strike down this beast. Bring me the <B>Heartshard Core</B> it carries—then I can calm the lost souls once more."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll defeat the Glacial Construct and bring you its core."
+      action="GiveItem:FactionKillQuestScroll(GlacialConstruct,1,Frostmere,750)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="What is a Glacial Construct? I’ve never heard of one." next="constructExplain"/>
+    <Option text="Why do the dead grow restless now?" next="restless"/>
+    <Option text="Can Irinya not help you?" next="irinyaQuest"/>
+    <Option text="This task sounds grim. Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Quest Accept ================================================= -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b7f7e9'>
+      "Thank you, brave soul. The Construct is drawn to moonlight and fresh graves—seek it near the water’s edge at midnight, when the lake groans loudest. Take care: its heart is colder than Minax’s own. Return with the Heartshard Core, and I will grant you a blessing the living and dead both respect."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll return soon, Widow Corla." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Construct Explanation ======================================== -->
+  <Dialogue id="constructExplain">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b7f7e9'>
+      "The Glacial Construct is no beast of flesh, but a thing built—old magic, twisted by grief and winter’s spite. The Obelisk of Veyra once kept such things asleep, but now Minax’s shadow stirs them. Some say it was made by exiles from Moonglow, others that it is the graveyard’s own spirit, enraged. Strike true, or it will make you a monument to fear."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will accept this task and return with the core."
+      action="GiveItem:FactionKillQuestScroll(GlacialConstruct,1,Frostmere,750)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="I need more time to prepare." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Why are the dead restless ==================================== -->
+  <Dialogue id="restless">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b7f7e9'>
+      "When Lord British vanished, the land grew thin between here and the next world. The living forget their dead, the dead forget their sleep. Minax’s corruption seeps through cracks in the ice. I do what I can, but one old widow is no match for such darkness."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Then let me help you drive back the darkness." next="questIntro"/>
+    <Option text="I hope things grow brighter soon." action="Close"/>
+  </Dialogue>
+
+  <!-- ======= Can Irinya not help? ========================================= -->
+  <Dialogue id="irinyaQuest">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b7f7e9'>
+      Corla shrugs, voice sad.<BR>
+      "Irinya’s eyes see farther than mine, but her path is prophecy, not action. She guides, I tend, but neither can fight the Glacial Construct as you might. Help me, and you help us both—and perhaps all of Frostmere."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Then I’ll do it." next="accept"/>
+    <Option text="I wish you both luck." action="Close"/>
+  </Dialogue>
+
+<!-- === Backstory Branch ==================================================== -->
+
+<Dialogue id="backstoryIntro">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#d7e9f7'>
+    Corla smiles faintly, brushing frost from her lantern.<BR>
+    "Before the ice claimed my name? I was Corla of Gallow’s Reach—a sailor’s wife, a midwife, and a decent fisher when I could stomach the seas. We lived where the cliffs met the gulls, and our nights were filled with song."<BR><BR>
+    Her eyes cloud.<BR>
+    "Then came the red tide. A whisper on the wind... and no more boats came home."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="I’m sorry. Did Minax cause it?" next="minaxTide"/>
+  <Option text="You were a midwife?" next="midwife"/>
+  <Option text="Did you have children?" next="children"/>
+  <Option text="Do you still fish here?" next="fishing"/>
+  <Option text="How did you end up in Frostmere?" next="howHere"/>
+</Dialogue>
+
+<Dialogue id="minaxTide">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#d7e9f7'>
+    "They say it was Minax. Some say plague. But I heard laughter on the wind—high, cruel, and full of teeth. The water turned red for a week. My husband’s ship never returned. I buried an empty box... and the sea took my voice for a season."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="You must carry great pain." next="howHere"/>
+  <Option text="What brought you to Frostmere?" next="howHere"/>
+</Dialogue>
+
+<Dialogue id="midwife">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#d7e9f7'>
+    Corla chuckles, and the sound is like thawing icicles tapping stone.<BR>
+    "Aye. I brought life into the world before I began laying it to rest. I've helped pull breath from wet lungs and light from cold eyes. Life and death, like tides—they’re more alike than folk admit."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="How did that change you?" next="howHere"/>
+  <Option text="You still help with births here?" next="births"/>
+</Dialogue>
+
+<Dialogue id="births">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#d7e9f7'>
+    She nods slowly.<BR>
+    "Once or twice, aye. Irinya sends for me when the babe’s fate is fogged. Some call me unlucky, but others say I see what no one else dares. I do not smile for births anymore—but I make sure they arrive."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="Thank you for sharing that." next="howHere"/>
+</Dialogue>
+
+<Dialogue id="children">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#d7e9f7'>
+    She turns away.<BR>
+    "I bore two sons. They went with their father that day. One was barely grown, the other not yet named. I gave them to the sea... and the sea gave me silence."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="I'm so sorry, Corla." next="howHere"/>
+  <Option text="Is that why you listen to the dead?" next="howHere"/>
+</Dialogue>
+
+<Dialogue id="fishing">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#d7e9f7'>
+    "Aye, I fish—but not for food. I catch memory. The lake gives me bones, feathers, teeth. I carve stories in them, small truths too sharp for most ears."<BR><BR>
+    <I>(If your <B>Camping</B> skill is 50 or higher, she notices your hands)</I>
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="Show her your carved totem (Camping ≥ 50)" 
+          condition="SkillAtLeast:Camping,50"
+          action="SendMessage:She takes your totem and nods with respect."
+          next="respectArt"/>
+  <Option text="That’s an eerie kind of fishing." next="howHere"/>
+</Dialogue>
+
+<Dialogue id="respectArt">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#d7e9f7'>
+    "You’ve carved spirit into wood. I see it. Not just marks, but intent. You understand the rhythm of living grain and what waits inside. You honor what you shape—this is rare."<BR><BR>
+    She hands you a charm made of fishbone and woven grass.
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="Thank you. I will treasure it."
+          action="GiveItem:FishboneCharm"
+          next="howHere"/>
+</Dialogue>
+
+<Dialogue id="howHere">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#d7e9f7'>
+    "When I could no longer speak to the sea, I followed the whisper of wind and wound up here. The Obelisk called to me. I don’t know why. But the ice sings now, and it knows my name. Frostmere keeps me... until it doesn't."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="You’re part of this place now." next="interests"/>
+  <Option text="What do you do when you’re not tending graves?" next="interests"/>
+  <Option text="Thank you, Corla. That was beautiful." action="Close"/>
+</Dialogue>
+
+<Dialogue id="interests">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#d7e9f7'>
+    She tilts her head thoughtfully.<BR>
+    "I dreamwalk through fogbanks, brew tinctures from moss, write riddles in fish scales. I listen to broken instruments. I dance when no one is watching. And sometimes, I play bones like flutes."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="You're a mystery, Widow Corla." 
+          condition="RandomChance:20"
+          action="SendMessage:She smiles and disappears for a moment—was she ever there?" 
+          next="fadeMystery"/>
+  <Option text="I'd like to learn more from you someday." 
+          action="Karma:+100"
+          next="blessing"/>
+  <Option text="You're quite strange... but I like it." next="strangeBlessing"/>
+</Dialogue>
+
+<Dialogue id="fadeMystery">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#d7e9f7'>
+    You blink, and for a moment, she seems farther away. Her lantern glows from behind a gravestone... then she's back in front of you, smiling.<BR><BR>
+    "Stranger things have lived and died in Frostmere, child. Keep your eyes open. Some of us only speak when unseen."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="...Right. I’ll remember that." action="Close"/>
+</Dialogue>
+
+<Dialogue id="blessing">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#d7e9f7'>
+    She nods, placing a fishscale in your palm.<BR>
+    "Come back when the moon weeps and the lanterns flicker. I’ll show you what lies beneath breath and bone. Until then, walk softly, and feed the lake."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="I’ll return when the time is right." action="Close"/>
+</Dialogue>
+
+<Dialogue id="strangeBlessing">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#d7e9f7'>
+    She lets out a raspy chuckle.<BR>
+    "Strange? Good. Only strange folk live long in places like this. The world’s breaking, child—best be broken before it is. Now go. The spirits have heard your name, and they approve."
+    </BASEFONT>
+  ]]>
+  </NPCText>
+  <Option text="May we both survive the winter." 
+          action="Fame:+250" />
+  <Option text="Farewell." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

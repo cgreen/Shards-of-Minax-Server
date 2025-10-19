@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="VuraTwinTongue">
+
+  <!-- ===== GREETING ===== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#2fc47e'>
+      You find a sly-eyed woman draped in colorful garb, a tribal mask half-hiding her grin. She twirls a coin between nimble fingers, voice lilting in a sing-song riddle:<BR><BR>
+      “Stranger from forest or foreign sand,<BR>
+      Do you seek truth, trade… or a trick at my hand?”<BR><BR>
+      Her eyes glint, studying your every twitch.<BR>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Are you Vura Twin-Tongue, the tribe’s trader?" next="introWho"/>
+    <Option text="What do you trade in these woods?" next="introTrade"/>
+    <Option text="Heard you’re in trouble. Assassins?" next="threatIntro"/>
+	<Option text="Tell me about yourself, Vura." next="about1"/>
+    <Option text="I only wish to pass by." next="dismiss"/>
+  </Dialogue>
+
+  <!-- ===== INTRO: WHO ARE YOU ===== -->
+  <Dialogue id="introWho">
+    <NPCText>
+      <![CDATA[
+      The mask dips, and her smile widens.<BR><BR>
+      “Vura, yes—called Twin-Tongue by friend and foe alike. I spin bargains with Buccaneers, parley with Hinokami, and never say the same thing twice. Or do I?”<BR>
+      “But who are you, wanderer? A hand of mercy, a knife for hire, or merely hungry for secrets?”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Tell me what you’re selling." next="introTrade"/>
+    <Option text="I hear you have a price on your head." next="threatIntro"/>
+    <Option text="Just curious." next="idle"/>
+  </Dialogue>
+
+  <!-- ===== INTRO: WHAT DO YOU TRADE ===== -->
+  <Dialogue id="introTrade">
+    <NPCText>
+      <![CDATA[
+      “All things worth carrying, all things worth hiding—herbs to make you dream, poisons to make you forget, tokens carved from bone and gold.<BR>
+      Some things for coin, some for secrets, some only for a smile. But beware—sometimes the thing you *don’t* buy is the greatest bargain.”<BR>
+      Her fingers tap a coded rhythm on the hilt of a hidden dagger.<BR>
+      ]]>
+    </NPCText>
+    <Option text="Any rare wares for me?" next="specials"/>
+    <Option text="I heard you crossed Buccaneers and Hinokami." next="threatIntro"/>
+    <Option text="What’s your trick, Twin-Tongue?" next="riddle"/>
+    <Option text="Enough riddles. Goodbye." action="Close"/>
+  </Dialogue>
+
+  <!-- ===== IDLE/CURIOUS ===== -->
+  <Dialogue id="idle">
+    <NPCText>
+      <![CDATA[
+      “The curious are welcome, but the dull are doomed. Watch where you walk, and beware the roots—they trip the careless, and feed the clever.”<BR>
+      She gestures you onward, mask inscrutable.<BR>
+      ]]>
+    </NPCText>
+    <Option text="You seem wary. What’s troubling you?" next="threatIntro"/>
+    <Option text="I’ll leave you to your dealings." action="Close"/>
+  </Dialogue>
+
+  <!-- ===== DISMISS ===== -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Vura laughs softly, a musical sound.<BR><BR>
+      “All pass, all part, all return in time. If you seek stories, bargains, or danger, look for the mask with two tongues.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Perhaps I will." action="Close"/>
+  </Dialogue>
+
+  <!-- ===== SPECIALS/RARE WARES ===== -->
+  <Dialogue id="specials">
+    <NPCText>
+      <![CDATA[
+      “Special? Oh, I have poisonberries from the haunted groves, runestones carved by Verdant shamans, and an amulet that will make your lies sound sweeter.”<BR>
+      She winks. “But which would you dare take—and at what price?”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Show me the poisonberries." action="GiveItem:Poisonberries" next="offerPoisonberries"/>
+    <Option text="I’d like the runestone." action="GiveItem:VerdantShamanRunestone" next="offerRunestone"/>
+    <Option text="The amulet of lies sounds useful." action="GiveItem:AmuletOfSweetLies" next="offerAmulet"/>
+    <Option text="I’ve changed my mind." next="introTrade"/>
+  </Dialogue>
+
+  <!-- ===== OFFER RESPONSES ===== -->
+  <Dialogue id="offerPoisonberries">
+    <NPCText>
+      <![CDATA[
+      She drops a handful of dark berries into your palm, her gaze unreadable.<BR>
+      “Handle with care. Eat with caution. Gift with mischief.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Thanks... I think." next="introTrade"/>
+  </Dialogue>
+  <Dialogue id="offerRunestone">
+    <NPCText>
+      <![CDATA[
+      The runestone is warm, pulsing faintly.<BR>
+      “For luck, for love, for passage unseen. Use it well, or not at all.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="What does it actually do?" next="riddle"/>
+    <Option text="I'll keep it safe." next="introTrade"/>
+  </Dialogue>
+  <Dialogue id="offerAmulet">
+    <NPCText>
+      <![CDATA[
+      She fastens a twisted pendant around your neck.<BR>
+      “Speak, and the world will want to believe you… at least for a while.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Let’s hope it works!" next="introTrade"/>
+  </Dialogue>
+
+  <!-- ===== RIDDLE/TRICK ===== -->
+  <Dialogue id="riddle">
+    <NPCText>
+      <![CDATA[
+      Vura’s voice lowers.<BR>
+      “Here’s a trick: The truth is a dance, the lie a song. Step wrongly and you’ll trip on both. Ask me what you will, but every answer comes with a price.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="What price do you mean?" next="dealPrice"/>
+    <Option text="Let’s talk about your troubles instead." next="threatIntro"/>
+    <Option text="I’m done for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dealPrice">
+    <NPCText>
+      <![CDATA[
+      “Perhaps a secret, perhaps a favor owed. Or perhaps…”<BR>
+      She leans close, eyes glittering.<BR>
+      “A promise you don’t yet know you’ve made. Pay now, pay later—the deal is done.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="You really do speak in riddles." next="introTrade"/>
+    <Option text="Fine. Let’s talk business." next="introTrade"/>
+    <Option text="Let’s talk about danger. Are you in trouble?" next="threatIntro"/>
+  </Dialogue>
+
+  <!-- ===== THREAT/ASSASSIN QUEST INTRO ===== -->
+  <Dialogue id="threatIntro">
+    <NPCText>
+      <![CDATA[
+      The mask’s smile sharpens.<BR>
+      “Twin trades, twin debts. Buccaneers want their cut, Hinokami their silence. Now, a knife waits in every shadow. Help me, and I’ll owe you more than coin. Betray me, and perhaps a mask will hide your face next.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="How can I help you with the assassins?" next="threatQuest"/>
+    <Option text="Why should I trust you?" next="trust"/>
+    <Option text="Maybe I should turn you in for a reward." next="betray1"/>
+    <Option text="Dangerous games—good luck, trader." action="Close"/>
+  </Dialogue>
+
+  <!-- ===== QUEST OFFER: PROTECT OR EXPOSE ===== -->
+  <Dialogue id="threatQuest">
+    <NPCText>
+      <![CDATA[
+      “Simple: Find who’s sent the knives—Buccaneer, samurai, or a third shadow? Protect me until midnight’s moon, or bring proof of my end to my rivals. My fate, your fortune.”<BR><BR>
+      Will you guard the liar, or profit from betrayal?
+      ]]>
+    </NPCText>
+    <Option text="I’ll protect you until the danger passes." 
+            action="AttachXml:XmlQuestTracker,VuraProtection,Expires=Midnight" 
+            condition="!HasAttachment:XmlQuestTracker(VuraProtection)"
+            next="acceptProtect"/>
+    <Option text="Who do you suspect sent the killers?" next="suspect"/>
+    <Option text="I’d rather sell you out." next="betray1"/>
+    <Option text="Let me think on this." action="Close"/>
+  </Dialogue>
+
+  <!-- ===== PROTECT QUEST ACCEPT ===== -->
+  <Dialogue id="acceptProtect">
+    <NPCText>
+      <![CDATA[
+      She inclines her head, genuinely grateful—for once.<BR>
+      “Trust is the rarest coin. Guard me, and the tribe will whisper your name with respect… and maybe fear.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I’ll stay alert." action="Close"/>
+  </Dialogue>
+
+  <!-- ===== SUSPECTS BRANCH ===== -->
+  <Dialogue id="suspect">
+    <NPCText>
+      <![CDATA[
+      “All have reason. Buccaneers say I hid gold; Hinokami think I whispered secrets. Or perhaps… it is Minax, who likes the taste of chaos. Follow the trail: look for the mark of a twin serpent.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I’ll investigate the assassins." 
+            action="AttachXml:XmlQuestTracker,VuraAssassinInvestigation"
+            condition="!HasAttachment:XmlQuestTracker(VuraAssassinInvestigation)"
+            next="acceptInvestigation"/>
+    <Option text="Maybe I’ll just protect you." next="acceptProtect"/>
+    <Option text="No thanks." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptInvestigation">
+    <NPCText>
+      <![CDATA[
+      “Good. The first clue waits near the twisted willow by the river’s bend. But beware—some riddles bite.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I’m on it." action="Close"/>
+  </Dialogue>
+
+  <!-- ===== BETRAYAL PATH ===== -->
+  <Dialogue id="betray1">
+    <NPCText>
+      <![CDATA[
+      Vura’s laughter is cold, hollow.<BR>
+      “So, you show your true mask. Find proof of my dealings and take it to the Hinokami or the Buccaneers—see what reward you get. But beware, many who trade in betrayal find their own shadow grows teeth.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="How do I prove your guilt?" next="betray2"/>
+    <Option text="On second thought, maybe we can work together." next="threatQuest"/>
+    <Option text="I don’t want to get involved." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="betray2">
+    <NPCText>
+      <![CDATA[
+      “Seek the hidden ledger, buried beneath the stone owl outside my tent. Bring it to those who hunt me, and they’ll pay—at least for a little while. Remember, a secret’s value is measured by the cost of silence.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I’ll find your ledger." action="AttachXml:XmlQuestTracker,VuraBetrayalPath" 
+            condition="!HasAttachment:XmlQuestTracker(VuraBetrayalPath)"
+            next="acceptBetrayal"/>
+    <Option text="Maybe protecting you is wiser." next="acceptProtect"/>
+    <Option text="I want no part of this." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptBetrayal">
+    <NPCText>
+      <![CDATA[
+      “Trust no one. And if you take my secret, guard your own. The tribes remember those who profit from betrayal.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="We’re done here." action="Close"/>
+  </Dialogue>
+
+  <!-- ===== TRUST DIALOGUE ===== -->
+  <Dialogue id="trust">
+    <NPCText>
+      <![CDATA[
+      “You shouldn’t. Not fully. Not ever. But even liars keep their promises—when their life depends on it.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="All right. How do I help you?" next="threatQuest"/>
+    <Option text="That’s all I needed to know." action="Close"/>
+  </Dialogue>
+
+  <!-- ===== BACKSTORY / INTERESTS BRANCH ===== -->
+  <Dialogue id="about1">
+    <NPCText>
+      <![CDATA[
+      Vura tips her mask, eyes glinting with amusement.<BR>
+      “My story? It’s a river that twists, a vine that climbs. I was born beneath thunder, raised among roots and whispers. Learned to lie before I learned to walk. But every tale is true—if you want it enough.”<BR><BR>
+      “What do you wish to know, wanderer? My past, my passions… or my secrets?”<BR>
+      ]]>
+    </NPCText>
+    <Option text="How did you become the tribe's trader?" next="about2"/>
+    <Option text="What do you truly love?" next="about3"/>
+    <Option text="Why do you lie so much?" next="about4"/>
+    <Option text="Do you have any regrets?" next="about5"/>
+    <Option text="Share a secret with me." next="aboutSecret"/>
+    <Option text="That's enough about you." action="Close"/>
+  </Dialogue>
+
+  <!-- HOW SHE BECAME THE TRADER -->
+  <Dialogue id="about2">
+    <NPCText>
+      <![CDATA[
+      “Trade is survival, here or anywhere. My mother bartered stories for bread, my father swapped courage for coin. When the storms came, I became a bridge—between Verdant, pirates, strangers. I learned the price of everything, and the value of nothing—except freedom.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Do you trust anyone?" next="about2a"/>
+    <Option text="And now you trade with Buccaneers and Hinokami?" next="about2b"/>
+    <Option text="Tell me something you won't trade." next="about3"/>
+    <Option text="Enough about trade." next="about1"/>
+  </Dialogue>
+
+  <Dialogue id="about2a">
+    <NPCText>
+      <![CDATA[
+      She hesitates, mask tilting.<BR>
+      “Trust? Like rain—rare, and gone before you taste it. But sometimes, a bargain is struck on faith alone. Maybe you and I will find out, yes?”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Maybe we will." next="about1"/>
+    <Option text="Do you miss your family?" next="about5"/>
+  </Dialogue>
+
+  <Dialogue id="about2b">
+    <NPCText>
+      <![CDATA[
+      “Of course! I speak the tongue of every tribe—sometimes two at once. Pirates crave chaos, Hinokami respect order. I bring them what they desire, and take what they do not see. That's the trick: know the market, know the heart.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="What does your own heart desire?" next="about3"/>
+    <Option text="Sounds lonely." next="about5"/>
+  </Dialogue>
+
+  <!-- PASSIONS -->
+  <Dialogue id="about3">
+    <NPCText>
+      <![CDATA[
+      She grins, softer now.<BR>
+      “I love riddles, wild places, and storms that break the silence. The laughter of children. The thrill when a plan unfolds—especially if it surprises even me.”<BR>
+      “But above all, I love to win a game that everyone else thinks is unwinnable.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="What game are you playing now?" next="about3a"/>
+    <Option text="Why do you like storms?" next="about3b"/>
+    <Option text="That’s all I wanted to know." next="about1"/>
+  </Dialogue>
+
+  <Dialogue id="about3a">
+    <NPCText>
+      <![CDATA[
+      “Survival is always the first game. But perhaps now, I play for more: for the tribe, for a future beyond war, for a mask that does not need to hide. Or maybe I just want to see who dares play with me.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I’ll play, if the prize is right." action="SendMessage:She laughs—a genuine sound, for once." next="about1"/>
+    <Option text="Maybe another time." next="about1"/>
+  </Dialogue>
+
+  <Dialogue id="about3b">
+    <NPCText>
+      <![CDATA[
+      “Storms don’t lie. They roar and break, and leave the air clean. When thunder shakes the world, even the oldest secrets crawl out to dance in the rain.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Are you hiding any secrets from me?" next="aboutSecret"/>
+    <Option text="Back to you, Vura." next="about1"/>
+  </Dialogue>
+
+  <!-- WHY SHE LIES -->
+  <Dialogue id="about4">
+    <NPCText>
+      <![CDATA[
+      Vura’s eyes glimmer behind her mask.<BR>
+      “Truth is brittle; lies bend and flow. Each lie I tell is a shield, a test, a gift, or a trap. Sometimes a lie is the only kindness I have left.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Has a lie ever cost you dearly?" next="about5"/>
+    <Option text="Can you ever be honest?" next="about4a"/>
+    <Option text="I see. That’s enough." next="about1"/>
+  </Dialogue>
+
+  <Dialogue id="about4a">
+    <NPCText>
+      <![CDATA[
+      She leans close.<BR>
+      “Only once, when it truly matters. And that moment is never what you expect.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Would you be honest with me?" next="aboutSecret"/>
+    <Option text="Let’s move on." next="about1"/>
+  </Dialogue>
+
+  <!-- REGRETS -->
+  <Dialogue id="about5">
+    <NPCText>
+      <![CDATA[
+      For a moment, her mask slips. There’s pain there.<BR>
+      “Regret is the shadow cast by every step. I regret the friend I betrayed to save myself. I regret bargains made for safety, when I could have chosen bravery.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="You can still make things right." next="about5a"/>
+    <Option text="That’s a heavy burden." next="about1"/>
+    <Option text="Is that why you help the tribe?" next="about3"/>
+  </Dialogue>
+
+  <Dialogue id="about5a">
+    <NPCText>
+      <![CDATA[
+      “Perhaps. Or perhaps I just hope my story ends better than it began.”<BR>
+      She offers you a small token, pressing it into your palm.<BR>
+      ]]>
+    </NPCText>
+    <Option text="Thank you." 
+            action="GiveItem:VurasToken" 
+            condition="!HasItem:VurasToken"
+            next="about1"/>
+    <Option text="I already have your token." next="about1"/>
+  </Dialogue>
+
+  <!-- SHARE A SECRET (special action if high karma, otherwise a riddle) -->
+  <Dialogue id="aboutSecret">
+    <NPCText>
+      <![CDATA[
+      She studies you, considering.<BR>
+      ]]>
+    </NPCText>
+    <Option text="Share your secret." 
+            condition="KarmaAtLeast:0"
+            next="aboutSecretReveal"/>
+    <Option text="Share your secret." 
+            condition="KarmaBelow:0"
+            next="aboutSecretRiddle"/>
+    <Option text="On second thought, keep it." next="about1"/>
+  </Dialogue>
+
+  <Dialogue id="aboutSecretReveal">
+    <NPCText>
+      <![CDATA[
+      Vura’s voice drops to a whisper.<BR>
+      “I have a brother among the Hinokami—he thinks me dead. If you ever find a samurai with eyes like mine, tell him: ‘Vura remembers the moonlit pond.’ Only then will he know you speak truth.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="That’s a powerful secret. I’ll remember it." next="about1"/>
+    <Option text="Can you trust me with more?" action="Karma:500" next="about1"/>
+  </Dialogue>
+
+  <Dialogue id="aboutSecretRiddle">
+    <NPCText>
+      <![CDATA[
+      She chuckles, shaking her head.<BR>
+      “Trust is hard-earned, shadow-walker. Here’s a riddle instead:<BR>
+      ‘I speak without a tongue, run without legs, and can be trusted by none. What am I?’”<BR>
+      ]]>
+    </NPCText>
+    <Option text="A rumor." action="GiveGold:100" next="about1"/>
+    <Option text="A river?" next="aboutSecretWrong"/>
+    <Option text="I don’t know." next="about1"/>
+  </Dialogue>
+
+  <Dialogue id="aboutSecretWrong">
+    <NPCText>
+      <![CDATA[
+      “Clever, but not quite. Try again another day.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Back to your story." next="about1"/>
+  </Dialogue>
+
+
+</DialogueFile>

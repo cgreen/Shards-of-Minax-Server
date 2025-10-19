@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="CorrenTheShardTouched">
+
+  <!-- === root ================================================= -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#a8d9e6'>
+      You find a ragged man crouched beside the ruined altar of an ancient gem. His robe glimmers faintly in the dusk, and a crystal shard flickers above his brow. He stares at his hands, mumbling. As you draw near, he looks up—his eyes gleam with shifting colors, old and young at once.
+      <BR><BR>
+      "Is it you? No—wait. You have the smell of wildflowers, and the memory of broken oaths. Did I know you, once? Or will I know you—soon?"
+      <BR>
+      Corren’s voice flutters between hope, fear, and sudden clarity.
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Who are you? Are you hurt?" next="whoareyou"/>
+    <Option text="You’re Corren, yes? The townsfolk say you’re... not quite right." next="rumors"/>
+    <Option text="What is this place? Why are you by the altar?" next="altar"/>
+    <Option text="I’m searching for work. Can you help?" next="questEntry"/>
+    <Option text="I’ll leave you be." action="Close"/>
+  </Dialogue>
+
+  <!-- Who Are You Branch -->
+  <Dialogue id="whoareyou">
+    <NPCText>
+      <![CDATA[
+      Corren blinks slowly. "Corren... Yes. They call me Corren, though I remember little before the storm and the screaming stones. I awoke here, clutching a piece of the sky in my fist. <BR>
+      <BR>
+      Sometimes I see things—faces, names, places I’ve never walked. Aldric brings me bread. Mira brings me stories. Edda says I am a riddle the gods forgot to finish."
+      ]]>
+    </NPCText>
+    <Option text="Do you know why you’re here?" next="altar"/>
+    <Option text="You say you see things? What do you see in me?" next="visions"/>
+    <Option text="Perhaps I can help you remember." next="remember"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Rumors Branch -->
+  <Dialogue id="rumors">
+    <NPCText>
+      <![CDATA[
+      Corren laughs—an odd, brittle sound. "Not quite right, not quite wrong. I am a jar with holes, leaking memories that aren’t mine. The innkeeper, Brenvar, fears my dreams will bring bad luck. Thalen won’t meet my eyes. But Miralda prays for my soul, and Halric... he thinks I’m a sign. Or a warning."
+      <BR>
+      "Yet, I am useful. I hear whispers. I see threads. Sometimes, I even know where monsters sleep."
+      ]]>
+    </NPCText>
+    <Option text="What do you know about the FrostOgre?" next="ogreIntro"/>
+    <Option text="Why do you think you have these visions?" next="shardVision"/>
+    <Option text="Perhaps I can help you remember." next="remember"/>
+    <Option text="Goodbye." action="Close"/>
+  </Dialogue>
+
+  <!-- Altar Branch -->
+  <Dialogue id="altar">
+    <NPCText>
+      <![CDATA[
+      Corren touches the altar’s cold stone, wincing. "It hurts to look at it. I remember... breaking. Not just myself—something larger. A world. A gem that held everything, and everyone. Now, I pick at the shards, trying to remember what was lost."
+      <BR>
+      "This altar hums in my bones, especially when Minax’s shadows grow long. If she finds the shards, she will unmake us all."
+      ]]>
+    </NPCText>
+    <Option text="Can you sense where any shards are now?" next="shardVision"/>
+    <Option text="Tell me about Minax." next="minax"/>
+    <Option text="I’ll leave you to your thoughts." action="Close"/>
+  </Dialogue>
+
+  <!-- Visions Branch -->
+  <Dialogue id="visions">
+    <NPCText>
+      <![CDATA[
+      Corren fixes you with a piercing, faraway stare. "You lost someone in the marsh—no, not lost. Given up, to save another. Your hands are stained with frost and hope. I see a silver blade. I see... a beast of ice and sorrow, gnawing at the roots of this village."
+      <BR>
+      "The FrostOgre hungers. If it is not stopped, others will follow."
+      ]]>
+    </NPCText>
+    <Option text="You see the FrostOgre? Where is it?" next="ogreIntro"/>
+    <Option text="That’s impossible... but what do you want from me?" next="questEntry"/>
+    <Option text="I’m not sure what you mean. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Remember Branch -->
+  <Dialogue id="remember">
+    <NPCText>
+      <![CDATA[
+      Corren’s hand goes to his circlet. "Some memories are like broken glass. I remember voices—Edda scolding, Mira singing, Aldric humming old marching songs. I remember pain. But if I could recall more... perhaps I could help you, and Eldermoor."
+      <BR>
+      "Maybe a deed done for the village would jog something free. Would you help us?"
+      ]]>
+    </NPCText>
+    <Option text="What must be done?" next="questEntry"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax Lore -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Corren’s body shudders as if chilled. "Minax... her name is thunder in my skull. She gathers the lost pieces—the shards—like a child with a puzzle, but hers is a puzzle of nightmares. Every beast twisted, every man corrupted, draws her closer."
+      <BR>
+      "If you would stop her, you must heal what is broken—starting here."
+      ]]>
+    </NPCText>
+    <Option text="What do you mean? How do I help?" next="questEntry"/>
+    <Option text="Tell me more about these shards." next="shardVision"/>
+    <Option text="Enough of this. Goodbye." action="Close"/>
+  </Dialogue>
+
+  <!-- Shard Vision -->
+  <Dialogue id="shardVision">
+    <NPCText>
+      <![CDATA[
+      Corren’s gaze turns glassy. "I see fragments scattered—one in fire, one in ice, one in tears, and one... one here, hidden beneath old bones. The FrostOgre gnaws at it, feeding on memory and cold. If you free it, I will remember. And perhaps so will you."
+      ]]>
+    </NPCText>
+    <Option text="I’ll face the FrostOgre for you." next="ogreIntro"/>
+    <Option text="So this is all about the Ogre?" next="ogreExplain"/>
+    <Option text="Another time, perhaps." action="Close"/>
+  </Dialogue>
+
+  <!-- Ogre Quest Intro -->
+  <Dialogue id="ogreIntro">
+    <NPCText>
+      <![CDATA[
+      Corren grips his runic amulet, eyes flickering with fevered light.<BR>
+      "It comes down from the frozen hills by night, blue as a corpse, cold as regret. It shattered Mira’s lamp, ruined Halric’s winter stores, and left Edda’s herbs in icy ruin. Worse—it mutters in the dark, words not its own, as if another soul rides behind its eyes."
+      <BR>
+      "If you slay it, bring back its <b>Frostbitten Heart</b>. Only then can I see what it guards, and what memories may return."
+      ]]>
+    </NPCText>
+    <Option text="I’ll hunt the FrostOgre and return." 
+      action="GiveItem:FactionKillQuestScroll(FrostOgre,1,Eldermoor,600)" 
+      condition="!HasItem:FactionKillQuestScroll"
+      next="ogreAccept"/>
+    <Option text="What makes this FrostOgre different from others?" next="ogreExplain"/>
+    <Option text="Why not ask Aldric or Thalen to handle it?" next="ogreWho"/>
+    <Option text="This seems dangerous. I need to prepare." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ogreAccept">
+    <NPCText>
+      <![CDATA[
+      Corren nods, trembling. "You have courage, or perhaps only the right kind of madness. The Ogre stalks the frozen grove at the edge of the old marsh, where the moonlight turns the ice blue. Beware its breath—it burns with winter’s hate."
+      <BR>
+      "Return with its heart. Only then may the truth surface, for us both."
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with the Frostbitten Heart." action="Close"/>
+  </Dialogue>
+
+  <!-- Ogre Explain -->
+  <Dialogue id="ogreExplain">
+    <NPCText>
+      <![CDATA[
+      "Ordinary ogres are brutes. This one is... wrong. Its skin glitters like hoarfrost, and its shadow bends the air. I hear it speaking sometimes, in a voice like cracking ice—sometimes my own voice, sometimes Miralda’s. It is as if part of me, or of this village, is trapped inside it."
+      ]]>
+    </NPCText>
+    <Option text="That sounds dire. I’ll take the quest." 
+      action="GiveItem:FactionKillQuestScroll(FrostOgre,1,Eldermoor,600)" 
+      condition="!HasItem:FactionKillQuestScroll"
+      next="ogreAccept"/>
+    <Option text="Why hasn’t anyone else faced it?" next="ogreWho"/>
+    <Option text="I’ll think on this." action="Close"/>
+  </Dialogue>
+
+  <!-- Ogre Who -->
+  <Dialogue id="ogreWho">
+    <NPCText>
+      <![CDATA[
+      Corren shrugs, lost and sad. "Aldric hunts in the shadows—his leg is stiff and old grief slows him. Thalen is brave, but he guards the forge, and Mira says he fears the cold more than death. Halric trusts his walls, not his blade. And Edda... she says the ogre’s soul is ‘unquiet’, and no arrow can cure that."
+      <BR>
+      "So, it falls to you, or to no one."
+      ]]>
+    </NPCText>
+    <Option text="Then I will do it."
+      action="GiveItem:FactionKillQuestScroll(FrostOgre,1,Eldermoor,600)" 
+      condition="!HasItem:FactionKillQuestScroll"
+      next="ogreAccept"/>
+    <Option text="I’ll walk another path." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Entry (direct, from “I’m looking for work”) -->
+  <Dialogue id="questEntry">
+    <NPCText>
+      <![CDATA[
+      Corren’s eyes go distant, then sharp. "Yes, yes—something must be done. The FrostOgre haunts the marsh’s edge, turning fields to glass. If you can slay it, bring its heart to me. In return... perhaps I will remember who I am. And perhaps you will find what you seek."
+      ]]>
+    </NPCText>
+    <Option text="I accept your quest."
+      action="GiveItem:FactionKillQuestScroll(FrostOgre,1,Eldermoor,600)" 
+      condition="!HasItem:FactionKillQuestScroll"
+      next="ogreAccept"/>
+    <Option text="Tell me more about this FrostOgre." next="ogreExplain"/>
+    <Option text="Maybe later." action="Close"/>
+  </Dialogue>
+
+</DialogueFile>

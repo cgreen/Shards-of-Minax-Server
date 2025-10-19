@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="SilentHunter">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6eb8db'>
+      Before you, half-lost in the swirling snow, stands a hooded figure wrapped in the eerie blue-black folds of a Glacier Shroud. Pale eyes flicker, reflecting the distant shimmer of the Obelisk of Veyra. He does not speak at first—only nods, then gestures with a gloved hand to the icy wastes.<br><br>
+      After a silence that stretches, a low, gravelly voice finally emerges.<br><br>
+      "<i>Another soul braving the cold. You walk with purpose... or are you simply lost?</i>"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I'm here to help. Do you need anything done?" next="needHelp"/>
+    <Option text="Are you always out here alone?" next="outAlone"/>
+    <Option text="Why do you follow Irinya?" next="irinya"/>
+    <Option text="Your crossbow... I've never seen one like it." next="crossbow"/>
+	<Option text="Who were you... before Frostmere?" next="originIntro"/>
+    <Option text="I'll be going now." action="Close"/>
+  </Dialogue>
+
+  <!-- I'm here to help -->
+  <Dialogue id="needHelp">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6eb8db'>
+      He tilts his head, a thin smile flickering.<br><br>
+      "<i>Help. Few offer, fewer mean it.</i><br>
+      The tundra is never still. Now, something stirs that even the Frostguard avoid.<br>
+      A FrostbittenSteed—once a wild mount, now twisted by Minax's cold shadow—haunts the northern pass. It tears through our traps, tramples our food stores, drives prey from the land.<br><br>
+      I have tracked it for days. Yet even I cannot be everywhere."<br><br>
+      He gestures at a crude map etched in ice at his feet.
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about this Steed." next="steedMore"/>
+    <Option text="Why hasn't the militia dealt with it?" next="militia"/>
+    <Option text="Why do you care so much?" next="whyCare"/>
+    <Option text="I'll take care of the FrostbittenSteed." next="questOffer"/>
+    <Option text="I'm not interested." action="Close"/>
+  </Dialogue>
+
+  <!-- Steed info -->
+  <Dialogue id="steedMore">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6eb8db'>
+      "Fur like blue fire, hooves rimed in ice, breath that freezes water in the air.<br>
+      It was a spirit of the north once, legend to the old tribes. Now—" his voice darkens, "<i>now it runs mad with Minax's malice. It bites, tramples, leaves frostbite with every hoofprint.</i><br>
+      If it is not stopped, others will turn. The Obelisk can only protect so much. We are not as safe as we pretend."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I'll hunt the Steed for you." next="questOffer"/>
+    <Option text="Why hasn't anyone else tried?" next="militia"/>
+    <Option text="Sounds dangerous. How did it get corrupted?" next="corrupted"/>
+    <Option text="I've changed my mind. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Why not the militia? -->
+  <Dialogue id="militia">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6eb8db'>
+      "Bryndra's Frostguard are brave... but they fight what they see, not what they feel. The Steed is ghost-fast and clever. Steel alone won't catch it. Irinya says only one touched by the Obelisk—or willing to risk the freezing winds—can match its cunning.<br>
+      And Kaelen? Kaelen would chase it until he froze, if I let him."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You sound protective of Kaelen." next="kaelen"/>
+    <Option text="How can I track the Steed?" next="trackingTips"/>
+    <Option text="I'm ready. Where do I start?" next="questOffer"/>
+    <Option text="I'll pass." action="Close"/>
+  </Dialogue>
+
+  <!-- Why do you care so much? -->
+  <Dialogue id="whyCare">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6eb8db'>
+      The Hunter's hand tightens around his Icebark Crossbow.<br><br>
+      "<i>This land... was my sister's. She vanished when the Steed first turned. Some say she ran south; Irinya claims the Obelisk took her spirit. I keep watch for her, and for the rest who go missing in the snow.<br>
+      We cannot lose more. Not to beasts, nor to Minax.</i>"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will help you. Give me the trail." next="questOffer"/>
+    <Option text="That's a heavy burden. Why stay in Frostmere?" next="whyStay"/>
+    <Option text="I hope you find peace." action="Close"/>
+  </Dialogue>
+
+  <!-- Why stay in Frostmere -->
+  <Dialogue id="whyStay">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6eb8db'>
+      "Frostmere is the last refuge for those the world forgets.<br>
+      Irinya says the Obelisk calls to all who are lost. Perhaps she is right. Or perhaps I am simply too stubborn to leave."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="All right. I will hunt the Steed." next="questOffer"/>
+    <Option text="I'll be on my way." action="Close"/>
+  </Dialogue>
+
+  <!-- Irinya relationship -->
+  <Dialogue id="irinya">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6eb8db'>
+      "Irinya hears the wind's true voice. She saw my path before I took it—warned me the Obelisk's touch would never fully leave me. I owe her my life. When the blizzards howl, I listen for her counsel... even when it frightens me."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="She sounds wise." next="wisdom"/>
+    <Option text="Do you ever disagree?" next="disagree"/>
+    <Option text="Thank you for sharing." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="wisdom">
+    <NPCText>
+      <![CDATA[
+      "Wisdom is a rare coin in Frostmere. Spend it where you can."
+      ]]>
+    </NPCText>
+    <Option text="Back to the hunt." next="needHelp"/>
+  </Dialogue>
+
+  <Dialogue id="disagree">
+    <NPCText>
+      <![CDATA[
+      "Often. But we both watch for what lurks beyond the edge of reason. Sometimes, that is enough."
+      ]]>
+    </NPCText>
+    <Option text="Let's talk about the Steed." next="needHelp"/>
+  </Dialogue>
+
+  <!-- Crossbow -->
+  <Dialogue id="crossbow">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6eb8db'>
+      The Hunter caresses the wood and bone of his crossbow.<br><br>
+      "Icebark and iron. Forged by Garrik, tempered by Irinya's spells. Never misses in moonlight, sometimes refuses to fire if the quarry is unworthy.<br>
+      Many things in Frostmere are stranger than they seem."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Back to the hunt." next="needHelp"/>
+    <Option text="Could I commission a weapon?" next="commission"/>
+  </Dialogue>
+
+  <Dialogue id="commission">
+    <NPCText>
+      <![CDATA[
+      "If you return alive and prove your worth, perhaps Garrik and I will teach you. Survive first."
+      ]]>
+    </NPCText>
+    <Option text="Understood." next="needHelp"/>
+  </Dialogue>
+
+  <!-- Kaelen relationship -->
+  <Dialogue id="kaelen">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6eb8db'>
+      "Kaelen is hope in frost and folly. I save him when I can. He reminds me of who I was before the snows changed me.<br>
+      If you see him, remind him—he owes me a flask of Lira's firebrew for every frostbite I kept him from."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I'll let him know." next="needHelp"/>
+  </Dialogue>
+
+  <!-- Steed tracking tips -->
+  <Dialogue id="trackingTips">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6eb8db'>
+      "The Steed leaves ice-burned grass and bloodless bones. It fears fire, avoids the southern watchfires. At dusk, it haunts the Ruined Outpost, north ridge. Move quietly; it spooks at loud steps.<br>
+      If you corner it, aim for the frost-spined mane—the heart lies beneath."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will bring proof of the kill." next="questOffer"/>
+    <Option text="Is there a reward?" next="reward"/>
+  </Dialogue>
+
+  <Dialogue id="reward">
+    <NPCText>
+      <![CDATA[
+      "Bring me its Frostbitten Mane. You'll have earned more than coin—perhaps a place among Frostmere's defenders."
+      ]]>
+    </NPCText>
+    <Option text="I'll do it." next="questOffer"/>
+    <Option text="I need to think." action="Close"/>
+  </Dialogue>
+
+  <!-- Corrupted steed -->
+  <Dialogue id="corrupted">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6eb8db'>
+      "Minax's power seeps through cracks in the world. Some spirits are drawn to it, others are twisted by it.<br>
+      The Steed fought off a pack of corrupted wolves two moons past—after that, it changed.<br>
+      If you find tokens or runes on its body, bring them to Irinya. Some curses cling like shadows."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I understand. I'll hunt it." next="questOffer"/>
+    <Option text="Too dangerous for me." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest offer -->
+  <Dialogue id="questOffer">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6eb8db'>
+      The Hunter nods with rare approval.<br><br>
+      "<i>North. Follow the wind's edge until the sky grows pale and the pines thin. The Steed circles the old Ruined Outpost at dusk.<br>
+      Move in silence. Bring me its Frostbitten Mane, and you will have the gratitude of Frostmere—and of one who seldom trusts.</i>"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will return with its mane."
+            action="GiveItem:FactionKillQuestScroll(FrostbittenSteed,1,Frostmere,600)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="accept"/>
+    <Option text="How will I recognize the Steed?" next="steedMore"/>
+    <Option text="What dangers lie at the outpost?" next="outpostDangers"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6eb8db'>
+      "<i>The ice remembers footsteps, even those lost in storm. Return, and the shroud will lift a little.</i>"<br><br>
+      He vanishes into the swirling snow, as silent as his name.
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="To the hunt." action="Close"/>
+  </Dialogue>
+
+  <!-- Dangers at the Outpost -->
+  <Dialogue id="outpostDangers">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#6eb8db'>
+      "The Ruined Outpost is older than Frostmere. Spirits linger there—echoes of warriors who froze in Minax's first winter. Watch for ice wraiths, and for hidden pits in the snow. If the Steed flees, do not follow into the deep rift. Few return."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I'll keep my wits about me." next="questOffer"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="originIntro">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6eb8db'>
+    The Hunter doesn't answer right away.<br><br>
+    Instead, he walks to a snow-covered ridge, staring into the frozen expanse.<br><br>
+    "<i>I was born under a different name. But names drift like smoke in the wind. The tundra... took mine.</i>"
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="You don’t remember your name?" next="originMemory"/>
+  <Option text="You don’t *want* to remember, do you?" next="originAvoid"/>
+  <Option text="Have you always been able to survive out here?" next="originSurvival"/>
+</Dialogue>
+
+<Dialogue id="originMemory">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6eb8db'>
+    He touches the leather cord around his neck, where no pendant hangs.<br><br>
+    "<i>Not forgotten. Just... not mine anymore. The Obelisk gives and takes. Some hear words. I heard silence—and in it, I found peace.</i>"
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Did Irinya know you before you changed?" next="originIrinya"/>
+  <Option text="That sounds like a curse." next="originCurse"/>
+</Dialogue>
+
+<Dialogue id="originAvoid">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6eb8db'>
+    The Hunter’s expression hardens—but it’s not anger you see. It’s pain.<br><br>
+    "<i>You’ve sharp eyes. The snow covers much, but not all. What I lost... cannot be dug up like ice ore.</i>"
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="I understand. Forgive me." next="originForgiven"/>
+  <Option text="Still... I'd like to know your story." next="originDeeper"/>
+</Dialogue>
+
+<Dialogue id="originForgiven">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6eb8db'>
+    He nods, slow and respectful.<br>
+    "<i>It is rare, for someone to speak from heart. The cold has not taken yours—yet.</i>"
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Thank you." action="AddKarma:50"/>
+  <Option text="Back to more pressing matters." next="needHelp"/>
+</Dialogue>
+
+<Dialogue id="originSurvival">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6eb8db'>
+    He chuckles quietly—like snow cracking beneath boots.<br><br>
+    "<i>No one is born ready for this cold. You either learn to hear it whisper, or you become part of the ice. I listened... and it taught me things no blade can.</i>"
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Like what?" next="originTaught"/>
+</Dialogue>
+
+<Dialogue id="originTaught">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6eb8db'>
+    "<i>How to move without sound. How to read the snow like scripture. How to vanish. How to kill only when needed—and how to *not* kill, when that matters more.</i>"<br><br>
+    He finally turns to look you in the eyes.<br>
+    "<i>If you keep walking in this land, you'll learn too. Or you won’t come back.</i>"
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="I’d like to learn. Can you teach me?" condition="SkillAtLeast:SpiritSpeak,60" next="originTeach"/>
+  <Option text="Let’s speak of something else." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="originTeach">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6eb8db'>
+    "Spirit touches spirit. Yours still stirs with flame, but there is wind in your soul too.<br>
+    I can show you how to listen better—to the Obelisk, to the world, to yourself."<br><br>
+    You feel a subtle warmth enter your mind, as if a silent presence had just acknowledged you.
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="(You feel more attuned to the Obelisk.)" action="AddSkill:SpiritSpeak,5,300"/>
+  <Option text="Thank you. I’ll use it well." action="SendMessage:The Obelisk stirs faintly within you."/>
+  <Option text="Let’s talk about the FrostbittenSteed now." next="needHelp"/>
+</Dialogue>
+
+<Dialogue id="originCurse">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6eb8db'>
+    He shrugs. "Perhaps. But if it is a curse, it is one I chose when I stayed behind.<br>
+    When others fled south after the Blizzard War, I remained. I heard the wind's voice. It told me: <i>'You are not done.'</i>"
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Did Irinya hear it too?" next="originIrinya"/>
+  <Option text="That sounds like prophecy." condition="KarmaAtLeast:2000" next="originProphecy"/>
+</Dialogue>
+
+<Dialogue id="originIrinya">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6eb8db'>
+    "She heard more than I. Irinya... she *felt* the Obelisk’s pulse before it ever called to me.<br>
+    I follow her not because she commands, but because she sees—what is, and what *may be*."
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="You admire her." next="originFeelings"/>
+</Dialogue>
+
+<Dialogue id="originFeelings">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6eb8db'>
+    A pause.<br>
+    "<i>Yes. I would walk into the storm for her, though she’d tell me not to. But we speak little of such things. In Frostmere, survival comes first. Always.</i>"
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="That’s all I needed to hear." next="greeting"/>
+</Dialogue>
+
+<Dialogue id="originProphecy">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6eb8db'>
+    The Hunter's gaze sharpens.<br><br>
+    "<i>You know. Or at least, you suspect.</i><br>
+    The Gem of Immortality shattered more than the world. It broke fate. Every shard bears a path. The Obelisk is... one such path."<br><br>
+    A cold wind rushes by you—but your skin prickles not from chill, but from awareness.
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="What does it want from you?" next="originShard"/>
+</Dialogue>
+
+<Dialogue id="originShard">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#6eb8db'>
+    "<i>To witness. To walk. To endure. Perhaps to warn others... or to stop something before it awakens again.</i><br>
+    Maybe I’m not the hunter. Maybe I’m the bait."
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="That’s heavy..." action="AddStat:Int,5,120"/>
+  <Option text="Let’s move on. Tell me about the FrostbittenSteed." next="needHelp"/>
+</Dialogue>
+
+
+
+</DialogueFile>

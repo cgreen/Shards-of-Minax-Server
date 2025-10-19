@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="NolgrimTheScribe">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#65a2ff'>
+      You find a thin, hunched man wrapped in a hooded shroud, his gloved fingers nervously twisting a blackened quill. Arcane glyphs stain his sleeves and the corners of his eyes dart to shadowed corners.<BR><BR>
+      He leans in, whispering, as if even the walls might listen.<BR>
+      "Quiet! Tread softly… the words here have ears, and the ink is always watching. Nolgrim, Archivist—at your peril. If you seek tales, be sure they don’t seek you in return…"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You seem nervous. Is something wrong?" next="nervous"/>
+    <Option text="Archivist of what, exactly?" next="archivist"/>
+    <Option text="Have you always lived in Frostmere?" next="origin"/>
+    <Option text="I only wanted to browse your collection." next="browse"/>
+	<Option text="Tell me more about your life before Frostmere." next="backstory_root"/>
+    <Option text="I’ll leave you to your books." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="nervous">
+    <NPCText>
+      <![CDATA[
+      Nolgrim’s gloved hands flutter.<BR><BR>
+      "Wrong? Hah! Wrong is the normal here. Between Kaelen’s reckless scribbling, Irinya’s dream-thieving, and the Obelisk humming secrets to itself, this whole place is a library on the edge of burning.<BR><BR>
+      I catch words crawling under doors, see sentences rearrange when my back is turned. Trust nothing written after midnight, and never trust a mage with cold hands."
+      ]]>
+    </NPCText>
+    <Option text="Why do you distrust Kaelen and Irinya?" next="relationships"/>
+    <Option text="Maybe you need some assistance?" next="questIntro"/>
+    <Option text="Are your books actually dangerous?" next="dangerous"/>
+    <Option text="I’ll come back another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="archivist">
+    <NPCText>
+      <![CDATA[
+      "Archivist of… everything best left forgotten. Forbidden grimoires, ice-etched prophecy, relics that hunger for readers. You want farming tips, go to Svala. You want secrets that shatter minds, ask Nolgrim… if you’re certain you’ll want the answers."
+      ]]>
+    </NPCText>
+    <Option text="What’s the rarest book you keep?" next="rarestBook"/>
+    <Option text="Is any text missing from your vault?" next="questIntro"/>
+    <Option text="I should go." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="origin">
+    <NPCText>
+      <![CDATA[
+      He shifts uncomfortably, glancing at the shadows.<BR>
+      "Moonglow cast me out, said I was obsessed with ‘malignant lore’—fools, all of them. I know more about magical ink than any Archmage alive. When the sky burned and Minax’s beasts swept through the Isles, I took my books and my gloves and I ran. Frostmere welcomed the desperate—now I’m the only thing keeping this village’s past from swallowing its future."
+      ]]>
+    </NPCText>
+    <Option text="Do you get along with the others here?" next="relationships"/>
+    <Option text="You seem to know a lot about magical dangers." next="questIntro"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="browse">
+    <NPCText>
+      <![CDATA[
+      Nolgrim glares suspiciously.<BR>
+      "Nothing here is for idle eyes. Half the books bite, and the rest would sooner convince you to set them free. If you must read, read the sky. It’s safer."
+      ]]>
+    </NPCText>
+    <Option text="Is something missing from your collection?" next="questIntro"/>
+    <Option text="Very well, I’ll go." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="relationships">
+    <NPCText>
+      <![CDATA[
+      His voice drops to a bitter hiss.<BR>
+      "Kaelen is a hazard with a quill—brilliant, yes, but one day he’ll freeze the words right off the page. I watch him closely, copy his journals in secret, just in case.<BR>
+      And Irinya? She… erases. Not with fire, nor frost—she just *dreams* whole histories away. Pages go blank after she visits. I padlock my shelves at night, but I still hear the scratching in my sleep…"
+      ]]>
+    </NPCText>
+    <Option text="Is there anything I could do to help protect your vault?" next="questIntro"/>
+    <Option text="You sound troubled by both. Why stay?" next="stay"/>
+    <Option text="I’ll leave you to your work." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="stay">
+    <NPCText>
+      <![CDATA[
+      Nolgrim shrugs, looking almost proud.<BR>
+      "Because someone must remember, even if the remembering hurts. And because, in the end, knowledge is its own armor—unless it eats you first."
+      ]]>
+    </NPCText>
+    <Option text="Maybe I can help guard your knowledge." next="questIntro"/>
+    <Option text="I wish you luck, Nolgrim." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="dangerous">
+    <NPCText>
+      <![CDATA[
+      "Are the books dangerous? Are wolves dangerous? At least wolves don’t whisper promises in your ear.<BR><BR>
+      I have bound tomes with living ink, texts that feed on memory, scrolls written by the hand of Minax herself. Most I keep locked in cold iron, but one…<BR><BR>
+      One escaped. Or rather, was stolen—by a thing of frost and hate."
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about this thief." next="questIntro"/>
+    <Option text="Sounds risky—I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="rarestBook">
+    <NPCText>
+      <![CDATA[
+      Nolgrim leans in, eyes bright.<BR>
+      "The ‘Lexicon Frigidus’—a grimoire bound in winter wolf hide, written in runes that shimmer and crawl. Only opens beneath aurora light. If you ever find a page torn from it, bring it to me… I’ll reward you well. But never read it. Not unless you want your soul to shiver for a century."
+      ]]>
+    </NPCText>
+    <Option text="Is this book connected to your missing volume?" next="questIntro"/>
+    <Option text="Understood. No reading forbidden books." next="nod"/>
+    <Option text="Goodbye." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="nod">
+    <NPCText>
+      <![CDATA[
+      Nolgrim gives a curt nod, his fingers unconsciously tracing arcane sigils in the air.
+      ]]>
+    </NPCText>
+    <Option text="Do you need help recovering anything?" next="questIntro"/>
+    <Option text="I’ll leave now." action="Close"/>
+  </Dialogue>
+
+  <!-- QUEST INTRO BRANCH -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      Nolgrim’s whisper grows urgent.<BR>
+      "Yes—help. The vault is no longer whole. The Frostwoven Mage—wretched traitor, spawn of Minax’s snowbound horrors—broke in two nights past, right through the warding glyphs.<BR>
+      He stole a tome: ‘Codex of Veins and Vapors.’ Not just any book—this one writes itself, feeding on the blood of anyone who dares carry it.<BR>
+      The Mage haunts the ice cliffs northeast of here, conjuring storms and sending living paragraphs to attack my scouts.<BR>
+      If you kill him, and bring me back the Codex… and proof of his demise…<BR>
+      I will reward you as only a true Archivist can. But be wary. Even a single page may try to slip into your thoughts, or your dreams."
+      ]]>
+    </NPCText>
+    <Option text="I’ll hunt the Frostwoven Mage and retrieve your Codex."
+      action="GiveItem:FactionKillQuestScroll(FrostwovenMage,1,Frostmere,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="What does this Codex actually do?" next="codexInfo"/>
+    <Option text="Why did the Mage want it?" next="mageMotive"/>
+    <Option text="Are you sure it’s safe for me to handle?" next="safe"/>
+    <Option text="Maybe this is above my skill. Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Nolgrim’s eyes narrow with hope—and fear.<BR>
+      "Good. The cliffs northeast, near the old frozen runes. Beware illusions—the Mage will use your own memories against you.<BR>
+      If you see pages fluttering through the snow, burn them, do not read them.<BR>
+      Return with the Codex and something of the Mage—his staff, his heartstone, anything.<BR>
+      …And do not listen if the book whispers your name."
+      ]]>
+    </NPCText>
+    <Option text="I’ll return soon—with the Codex." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="codexInfo">
+    <NPCText>
+      <![CDATA[
+      "The Codex of Veins and Vapors is not a book—it is a *leech*. It records secrets in blood, and whoever carries it will feel their thoughts slipping onto the page. It can be read only once before the words rearrange themselves. In the wrong hands—especially Minax’s—it becomes a weapon. Or a curse."
+      ]]>
+    </NPCText>
+    <Option text="I’ll recover it and be careful." 
+      action="GiveItem:FactionKillQuestScroll(FrostwovenMage,1,Frostmere,600)" 
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Why would the Frostwoven Mage want it?" next="mageMotive"/>
+    <Option text="On second thought, I’ll leave it alone." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="mageMotive">
+    <NPCText>
+      <![CDATA[
+      Nolgrim shudders.<BR>
+      "That Mage was once one of us—a scholar, seduced by promises of power from beyond the ice. Minax’s agents lure the weak with new spells, forbidden histories, things mortals should not know.<BR>
+      With the Codex, he could scribe his own spells directly into flesh—create monsters, or perhaps rewrite his own fate. He must be stopped."
+      ]]>
+    </NPCText>
+    <Option text="You have my word—I’ll stop him."
+      action="GiveItem:FactionKillQuestScroll(FrostwovenMage,1,Frostmere,600)" 
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Best leave this to someone else." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="safe">
+    <NPCText>
+      <![CDATA[
+      Nolgrim’s lips twitch, grimly amused.<BR>
+      "Safe? No book worth reading is ever truly safe. But if you keep it closed and do not let the ink touch your skin, you should return with your mind intact.<BR>
+      Bring it swiftly, and I’ll reward you. Let it linger, and it may learn your name."
+      ]]>
+    </NPCText>
+    <Option text="Then I’ll act quickly."
+      action="GiveItem:FactionKillQuestScroll(FrostwovenMage,1,Frostmere,600)" 
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="I need to think this over." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="backstory_root">
+  <NPCText>
+    <![CDATA[
+    Nolgrim’s eyes grow distant, voice dropping to a wistful whisper.<BR>
+    "Before all this frost and fear? I was Nolgrim of Moonglow—the apprentice who read what others wouldn’t. I copied scrolls by candlelight, listened to professors drone, and dreamt of scripting spells that would outlive us all.<BR><BR>
+    But curiosity is dangerous, here as anywhere. I… pushed too far. Perhaps you wish to hear which doors I opened that should have stayed shut?"
+    ]]>
+  </NPCText>
+  <Option text="What did you discover that got you exiled?" next="backstory_exile"/>
+  <Option text="What drew you to study living ink and cursed tomes?" next="backstory_obsession"/>
+  <Option text="What hobbies or joys do you have, beyond books?" next="backstory_hobbies"/>
+  <Option text="How did you meet Kaelen and Irinya?" next="backstory_others"/>
+  <Option text="That’s enough history for now." next="backstory_done"/>
+</Dialogue>
+
+<Dialogue id="backstory_exile">
+  <NPCText>
+    <![CDATA[
+    Nolgrim’s hands tremble.<BR>
+    "In Moonglow, there are vaults under the Lyceum—the kind that even Archmages fear. I was tasked to transcribe a text called the ‘Ossuary Canticle.’<BR>
+    It… whispered back. I tried to warn them, but when pages began to move on their own and ink stained the Dean’s eyes, I was blamed. Banished. And the Canticle…? Still hungry, I wager."
+    ]]>
+  </NPCText>
+  <Option text="Did you keep any forbidden knowledge?" next="backstory_secret"/>
+  <Option text="No wonder you’re so careful here." next="backstory_trust"/>
+</Dialogue>
+
+<Dialogue id="backstory_secret">
+  <NPCText>
+    <![CDATA[
+    He lowers his voice.<BR>
+    "I salvaged a single page, sewn into my shirt hem—still have it, though I dare not read it. When the wind howls from the east, it tries to wriggle free. If you possess SkillAtLeast:Magery,90, you might sense its power."
+    ]]>
+  </NPCText>
+  <Option text="(If Magery ≥ 90) Examine the secret page." condition="SkillAtLeast:Magery,90" action="SendMessage:The page shivers in your grasp, and a faint blue glyph glows beneath your fingertips." next="backstory_magevision"/>
+  <Option text="(If Magery < 90) Leave the secrets alone." condition="SkillBelow:Magery,90" next="backstory_done"/>
+  <Option text="That’s dangerous magic. Keep it hidden." next="backstory_done"/>
+</Dialogue>
+
+<Dialogue id="backstory_magevision">
+  <NPCText>
+    <![CDATA[
+    As you touch the page, a whisper curls through your mind: <I>“The frost preserves, the ink remembers.”</I><BR>
+    Nolgrim snatches it back with shaking hands.<BR>
+    "Enough! Even now, the ink listens for weakness. You have talent—use it with care."
+    ]]>
+  </NPCText>
+  <Option text="Thank you for the warning." next="backstory_done"/>
+</Dialogue>
+
+<Dialogue id="backstory_trust">
+  <NPCText>
+    <![CDATA[
+    Nolgrim nods.<BR>
+    "Once burned, twice the scholar. Frostmere gave me a second chance, if not exactly a warm welcome. Here, at least, my paranoia is useful."
+    ]]>
+  </NPCText>
+  <Option text="Do you trust anyone here?" next="backstory_trustwho"/>
+  <Option text="Let’s talk about something lighter." next="backstory_hobbies"/>
+</Dialogue>
+
+<Dialogue id="backstory_trustwho">
+  <NPCText>
+    <![CDATA[
+    He ponders.<BR>
+    "Trust? I trust Svala not to read my mail, Garrik to fix my hinges, and Irinya… to unsettle me. But true trust? That’s as rare as an unwritten page in this village."
+    ]]>
+  </NPCText>
+  <Option text="Understood. Let’s change the subject." next="backstory_done"/>
+</Dialogue>
+
+<Dialogue id="backstory_obsession">
+  <NPCText>
+    <![CDATA[
+    "The world is built from words as much as stone or bone. Living ink… it fascinated me from the moment I saw a rune pulse on its own. Some call it obsession; I call it survival.<BR>
+    Besides, who wouldn’t want their story to live forever—provided it doesn’t write back?"
+    ]]>
+  </NPCText>
+  <Option text="Do you ever regret your path?" next="backstory_regret"/>
+  <Option text="That’s why you’re so wary of Kaelen, isn’t it?" next="backstory_kaelen"/>
+</Dialogue>
+
+<Dialogue id="backstory_regret">
+  <NPCText>
+    <![CDATA[
+    He considers, then shakes his head.<BR>
+    "Regret is for poets and parents. I made my bed of runes; now I sleep in it. At least here, the dangers are honest—cold, hunger, and books with teeth."
+    ]]>
+  </NPCText>
+  <Option text="You have a point." next="backstory_done"/>
+</Dialogue>
+
+<Dialogue id="backstory_kaelen">
+  <NPCText>
+    <![CDATA[
+    Nolgrim sighs.<BR>
+    "Kaelen is young. He dreams of taming the unknown, but the unknown bites. I copy his notes because I fear what he might unleash—and so I might remember him, if he ever vanishes like so many before."
+    ]]>
+  </NPCText>
+  <Option text="Let’s talk about your interests outside the vault." next="backstory_hobbies"/>
+  <Option text="Thank you for your honesty." next="backstory_done"/>
+</Dialogue>
+
+<Dialogue id="backstory_hobbies">
+  <NPCText>
+    <![CDATA[
+    A flicker of humor crosses his features.<BR>
+    "Even a scribe needs distractions. I carve puzzle boxes from driftwood, brew the best frostberry tea north of Minoc, and play—badly—the hammered dulcimer. Some say my music frightens away snow wolves. I call that a perk."
+    ]]>
+  </NPCText>
+  <Option text="Could you play for me?" next="backstory_music"/>
+  <Option text="What’s your favorite puzzle you’ve made?" next="backstory_puzzle"/>
+  <Option text="That’s a relief—didn’t take you for a musician." next="backstory_done"/>
+</Dialogue>
+
+<Dialogue id="backstory_music">
+  <NPCText>
+    <![CDATA[
+    Nolgrim hesitates, then draws a tiny dulcimer from a leather satchel. He taps a dissonant but oddly beautiful tune. The vault seems warmer for a moment.<BR>
+    (You feel your spirits rise.)
+    ]]>
+  </NPCText>
+  <Option text="Enjoy the moment." action="PlaySound:0x015" />
+  <Option text="That was lovely, thank you." next="backstory_done"/>
+</Dialogue>
+
+<Dialogue id="backstory_puzzle">
+  <NPCText>
+    <![CDATA[
+    His eyes light up.<BR>
+    "Ah, the ‘Runic Box of Ten Locks’—unsolved by all but Svala, who then used it to trap a snow vole. I keep meaning to make another… if you’re clever, maybe you’d like to try?"<BR>
+    (If Int ≥ 90, you may attempt.)
+    ]]>
+  </NPCText>
+  <Option text="(If Int ≥ 90) Attempt to solve the puzzle." condition="StatAtLeast:Int,90" action="AddStat:Int,5,180" next="backstory_puzzlewin"/>
+  <Option text="I’ll leave that for Svala." next="backstory_done"/>
+</Dialogue>
+
+<Dialogue id="backstory_puzzlewin">
+  <NPCText>
+    <![CDATA[
+    You deftly unlock the final catch. Nolgrim beams.<BR>
+    "Well! A mind as sharp as your sword. Take this token—a carved glyph for luck."<BR>
+    (You receive a Runic Luck Token.)
+    ]]>
+  </NPCText>
+  <Option text="Thank you." action="GiveItem:RunicLuckToken" next="backstory_done"/>
+</Dialogue>
+
+<Dialogue id="backstory_others">
+  <NPCText>
+    <![CDATA[
+    "Kaelen found me first, half-starved in a blizzard, and dragged me here—then pestered me for magical lessons. Irinya drifted in a few weeks later, full of riddles and wind. The three of us have little in common, except a fondness for secrets… and an inability to leave well enough alone."
+    ]]>
+  </NPCText>
+  <Option text="Do you work well together?" next="backstory_dynamic"/>
+  <Option text="They both seem complicated." next="backstory_done"/>
+</Dialogue>
+
+<Dialogue id="backstory_dynamic">
+  <NPCText>
+    <![CDATA[
+    Nolgrim smirks.<BR>
+    "Work well? Sometimes. More often, we argue, then save each other’s lives, then argue again. A family, of sorts—just with fewer holidays."
+    ]]>
+  </NPCText>
+  <Option text="Thank you for sharing your story." next="backstory_done"/>
+</Dialogue>
+
+<Dialogue id="backstory_done">
+  <NPCText>
+    <![CDATA[
+    Nolgrim pulls his shroud tighter.<BR>
+    "Enough of my history for now. There are still pages to guard, and secrets that bite. If you have other questions, or business in the vault, speak up before the shadows get restless."
+    ]]>
+  </NPCText>
+  <Option text="Let’s talk about something else." next="greeting"/>
+  <Option text="Farewell for now." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

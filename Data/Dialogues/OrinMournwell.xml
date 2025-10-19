@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="OrinMournwell">
+
+  <!-- =================== GREETING =================== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b7b7b7'>
+      In the chill shade of Sunreach’s graveyard, a gaunt figure in tattered robes tends the crooked stones. His sunken eyes glance up—gray as old ash.<BR><BR>
+      “You tread where silence reigns, stranger. I am Orin Mournwell, keeper of these graves... and of secrets that linger after the flesh is dust.<BR><BR>
+      What do you seek among the dead? Rest, answers... or perhaps a task shunned by the living?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You seem troubled. What haunts you, gravekeeper?" next="troubled"/>
+    <Option text="I heard you know secrets beyond the grave." next="secrets"/>
+    <Option text="Do you have any work for me?" next="questIntro"/>
+	<Option text="Tell me about yourself, Orin." next="orinBackstory"/>
+    <Option text="Just passing by. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- =================== TROUBLED BRANCH =================== -->
+  <Dialogue id="troubled">
+    <NPCText>
+      <![CDATA[
+      Orin’s fingers tighten on his staff.<BR><BR>
+      “The dead do not rest easy in these days. Their whispers twist on the desert wind—warning, begging, sometimes plotting. But I must heed them, for only the dead speak truths unclouded by politics or coin.<BR><BR>
+      I search for the means to pierce their silence. There are herbs—rare, bitter things—that grow only where sand swallows the sun. With them, the veil lifts, and their counsel becomes clear.”
+      ]]>
+    </NPCText>
+    <Option text="These desert herbs… what are they for?" next="herbs"/>
+    <Option text="You seem to court dangerous arts." next="danger"/>
+    <Option text="I’ll leave you to your vigil." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      A sad smile flickers on Orin’s lips.<BR><BR>
+      “All wisdom comes at a cost. The living cling to ignorance; I seek what lies beyond. Minax’s cultists promised me forbidden rites in return for service. Yet I serve no master—not truly. Death is the only constant, and she keeps her own council.”
+      ]]>
+    </NPCText>
+    <Option text="Who do you truly serve, then?" next="herbs"/>
+    <Option text="Have you ever aided the living?" next="aided"/>
+    <Option text="I wish to hear more of your work." next="questIntro"/>
+    <Option text="I should go." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="aided">
+    <NPCText>
+      <![CDATA[
+      Orin glances away.<BR><BR>
+      “Sometimes. I have traded knowledge with Aria Silverhand, the city’s restless historian. She values the secrets I glean from beyond... though her heart is not yet ready for their price.<BR>
+      Do you wish to carry such burdens yourself?”
+      ]]>
+    </NPCText>
+    <Option text="Yes. I want to aid you—tell me what you need." next="questIntro"/>
+    <Option text="Not now." action="Close"/>
+  </Dialogue>
+
+  <!-- =================== SECRETS BRANCH =================== -->
+  <Dialogue id="secrets">
+    <NPCText>
+      <![CDATA[
+      Orin’s eyes glimmer.<BR><BR>
+      “Whispers reach me from both sides of the grave, traveler. In Sunreach, all secrets are for sale—but mine must be earned. Fetch me what I require, and the dead themselves may answer your questions.<BR>
+      Will you brave the desert’s thirst for a gravekeeper’s favor?”
+      ]]>
+    </NPCText>
+    <Option text="What must I find for you?" next="herbs"/>
+    <Option text="I am not ready to traffic with the dead." action="Close"/>
+  </Dialogue>
+
+  <!-- =================== HERBS/QUEST SETUP =================== -->
+  <Dialogue id="herbs">
+    <NPCText>
+      <![CDATA[
+      “Seek for me the <b>Ghostblossom</b>—a pale flower found only where the desert touches ancient ruin, and the <b>Wormwood Root</b>, bitter as memory. With these, I can rouse the dead without their wrath.<BR>
+      Bring both to me, and I shall offer you what the living cannot.”
+      ]]>
+    </NPCText>
+    <Option text="I will find these herbs." 
+            action="GiveItem:HerbQuestScroll(OrinMournwell,Sunreach,250)"
+            condition="!HasItem:HerbQuestScroll"
+            next="questIntro"/>
+    <Option text="Why risk such forbidden rites?" next="danger"/>
+    <Option text="I need time to think." action="Close"/>
+  </Dialogue>
+
+  <!-- =================== QUEST INTRODUCTION =================== -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      Orin’s voice drops to a rasp.<BR><BR>
+      “Few dare what I ask. The <b>Ghostblossom</b> blooms in the haunted shadows of Qasaria’s old necropolis. The <b>Wormwood Root</b> grows where the ground is freshly turned by mourners—often in Sunreach’s own graveyard.<BR><BR>
+      Find these two, and bring them here. But beware: Minax’s followers crave these herbs for rituals darker than mine. Should you fail, the dead will go unheeded… and perhaps grow restless.”
+      ]]>
+    </NPCText>
+    <Option text="I accept your quest. I will return with both herbs." 
+            action="GiveItem:HerbQuestScroll(OrinMournwell,Sunreach,250)"
+            condition="!HasItem:HerbQuestScroll"
+            next="accept"/>
+    <Option text="Tell me more of the dangers." next="dangers"/>
+    <Option text="I am not ready for this task." action="Close"/>
+  </Dialogue>
+
+  <!-- =================== ACCEPT QUEST =================== -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      “Good. Take this scroll—it marks what I require and where whispers say they grow.<BR>
+      Return only when you carry both Ghostblossom and Wormwood Root. The dead do not wait forever, nor do I.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with the herbs." action="Close"/>
+  </Dialogue>
+
+  <!-- =================== DANGERS EXPLAINED =================== -->
+  <Dialogue id="dangers">
+    <NPCText>
+      <![CDATA[
+      Orin’s eyes glint, hollow and sharp.<BR><BR>
+      “The old necropolis beyond Qasaria is a den of wraiths and cultists. Ghostblossom blooms only where grief lingers. Wormwood Root is guarded by those who would rather join the dead than let go of the past.<BR>
+      Worse still, Minax’s spies covet both for their own rites. If you are caught, do not speak my name.”
+      ]]>
+    </NPCText>
+    <Option text="Understood. I’ll be careful." 
+            action="GiveItem:HerbQuestScroll(OrinMournwell,Sunreach,250)"
+            condition="!HasItem:HerbQuestScroll"
+            next="accept"/>
+    <Option text="Perhaps this is too perilous." action="Close"/>
+  </Dialogue>
+
+  <!-- =================== TURN-IN BRANCH (EXAMPLE) =================== -->
+  <Dialogue id="turnin">
+    <NPCText>
+      <![CDATA[
+      Orin inspects the herbs, reverent.<BR><BR>
+      “You have done what few dared. With these, I shall pierce the veil—and grant you the boon of the dead. Listen well: not all answers bring peace.”<BR>
+      He murmurs words in a forgotten tongue, shadows coiling at his feet.<BR>
+      <i>You feel the chill of old secrets settle on your bones.</i>
+      ]]>
+    </NPCText>
+    <Option text="What have I earned?" next="reward"/>
+  </Dialogue>
+
+  <!-- =================== REWARD BRANCH (EXAMPLE) =================== -->
+  <Dialogue id="reward">
+    <NPCText>
+      <![CDATA[
+      Orin presents you with a small black talisman.<BR>
+      “This is the <b>Gravebound Token</b>. It will let you commune once with the spirit of any fallen soul in Sunreach’s earth—or banish a minor undead who threatens the living.<BR>
+      You have my gratitude, and perhaps the gratitude of the restless dead.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Orin." 
+            action="GiveItem:GraveboundToken"
+            next="end"/>
+  </Dialogue>
+
+  <Dialogue id="end">
+    <NPCText>
+      <![CDATA[
+      Orin nods silently and returns to his vigil, already half-absorbed in the world beyond.
+      ]]>
+    </NPCText>
+    <Option text="(Leave)" action="Close"/>
+  </Dialogue>
+
+<Dialogue id="orinBackstory">
+  <NPCText>
+    <![CDATA[
+    Orin’s gaze turns inward, voice hollow.<BR><BR>
+    “You would know me? Few ask. Fewer still stay to hear. But if you're willing…”<BR>
+    He pauses, studying you. “Very well. Ask, and I will offer truth. As much as the dead remember.”
+    ]]>
+  </NPCText>
+  <Option text="Were you always a gravekeeper?" next="orinOrigins"/>
+  <Option text="Why do you consort with the dead?" next="orinNecromancy"/>
+  <Option text="What ties you to Sunreach?" next="orinSunreach"/>
+  <Option text="I’ve heard whispers of your past with Minax..." next="orinMinax"/>
+  <Option text="That is enough for now." action="Close"/>
+</Dialogue>
+
+<Dialogue id="orinOrigins">
+  <NPCText>
+    <![CDATA[
+    “I once studied in Moonglow—when I still had warmth in my hands, and color in my dreams. But knowledge was gated, truth was hoarded, and death... death was ignored.”<BR><BR>
+    “I left. Dug deeper. I buried my shame in the graveyards I came to tend. I found solace in silence, and... voices in the dark.”<BR><BR>
+    He gives you a curious look.
+    ]]>
+  </NPCText>
+  <Option text="Did you lose someone to death?" next="orinLoss"/>
+  <Option text="Your story sounds like regret." next="orinRegret"/>
+  <Option text="What did you learn from the dead?" next="orinNecromancy"/>
+</Dialogue>
+
+<Dialogue id="orinLoss">
+  <NPCText>
+    <![CDATA[
+    Orin’s voice drops to a whisper.<BR><BR>
+    “My sister. Alinwe. Struck down by fever. I tried everything. Charms, potions, incantations beyond my skill. When I failed, I swore: never again would death take without answer.”<BR><BR>
+    <i>You feel the weight of his vow press through the graveyard fog.</i>
+    ]]>
+  </NPCText>
+  <Option text="Your pain is great… I respect your vow." 
+          condition="KarmaAtLeast:0"
+          action="AddSkill:SpiritSpeak,5,1800"
+          next="orinSympathy"/>
+  <Option text="Loss drives many mad. Have you considered this?" 
+          condition="KarmaBelow:0"
+          action="SendMessage:Orin’s eyes narrow, but he says nothing."
+          next="orinDismissive"/>
+</Dialogue>
+
+<Dialogue id="orinSympathy">
+  <NPCText>
+    <![CDATA[
+    He nods once, slowly.<BR><BR>
+    “Few understand. Fewer still listen. Thank you.”<BR><BR>
+    A faint aura surrounds you, and a forgotten word settles into your memory.
+    ]]>
+  </NPCText>
+  <Option text="You honor her with your work." next="orinNecromancy"/>
+</Dialogue>
+
+<Dialogue id="orinDismissive">
+  <NPCText>
+    <![CDATA[
+    “Madness… or clarity few dare accept?” he rasps. “Go on, speak with ghosts before you call me broken.”<BR><BR>
+    “Still, I will answer your questions. Curiosity is not a sin—yet.”
+    ]]>
+  </NPCText>
+  <Option text="Very well. Tell me what you've learned from the dead." next="orinNecromancy"/>
+</Dialogue>
+
+<Dialogue id="orinRegret">
+  <NPCText>
+    <![CDATA[
+    “All wisdom is born of regret. But mine is not paralyzing—it is purpose.”<BR>
+    “The living fear death. I... speak with her.”<BR><BR>
+    He offers you a wry smile. “And sometimes, she answers.”
+    ]]>
+  </NPCText>
+  <Option text="You're more philosopher than necromancer." next="orinNecromancy"/>
+</Dialogue>
+
+<Dialogue id="orinNecromancy">
+  <NPCText>
+    <![CDATA[
+    “Necromancy is but a name. The art I practice is <i>listening</i>. Each corpse is a vessel. Each grave a library.”<BR><BR>
+    “Most see only rot and ruin. I see patterns, secrets, regrets. Even spells lost to time, waiting to be heard.”<BR>
+    “I collect them. Not for power. For memory.”
+    ]]>
+  </NPCText>
+  <Option text="Have you shared these secrets?" next="orinSharing"/>
+  <Option text="What’s the most dangerous thing the dead ever told you?" next="orinWarning"/>
+</Dialogue>
+
+<Dialogue id="orinSharing">
+  <NPCText>
+    <![CDATA[
+    “To Aria Silverhand, yes. She knows how to listen, even if she doesn’t always like what she hears.”<BR>
+    “To others? No. Secrets are safest with the dead.”
+    ]]>
+  </NPCText>
+  <Option text="What secret do you guard most closely?" next="orinSecret"/>
+</Dialogue>
+
+<Dialogue id="orinWarning">
+  <NPCText>
+    <![CDATA[
+    “They spoke of a cult beneath Sunreach. A circle of blood-bound priests who called Minax ‘Mother of Rebirth’. They prepare something... a ritual to shatter the soul itself.”<BR><BR>
+    He grabs your arm.<BR>
+    “If you ever hear the phrase <b>‘Ash returns to ash’</b>, run. Or kill them first.”
+    ]]>
+  </NPCText>
+  <Option text="I'll remember that." action="AddStat:Int,2,600"/>
+</Dialogue>
+
+<Dialogue id="orinSecret">
+  <NPCText>
+    <![CDATA[
+    He leans in, voice barely audible.<BR><BR>
+    “There is a spirit buried in the noble crypts—one who knew Lord British before he vanished. The soul is bound, afraid. If I could free it…”<BR>
+    “But the Council forbids me. Even death bows to politics.”
+    ]]>
+  </NPCText>
+  <Option text="Perhaps I can help you someday." next="orinHope"/>
+</Dialogue>
+
+<Dialogue id="orinHope">
+  <NPCText>
+    <![CDATA[
+    “Then perhaps not all in Sunreach are blind. If you ever hear the vault beneath House Veynar open... come find me. I will show you what lies forgotten.”<BR><BR>
+    Orin straightens. “Enough stories for now. Thank you for listening.”
+    ]]>
+  </NPCText>
+  <Option text="Thank you for sharing, Orin." action="Close"/>
+</Dialogue>
+
+<Dialogue id="orinSunreach">
+  <NPCText>
+    <![CDATA[
+    “Sunreach is full of graves and secrets—and not all are beneath the ground.”<BR>
+    “I stay because the city’s rot needs watching. If the dead ever rise... someone must remember their names.”
+    ]]>
+  </NPCText>
+  <Option text="You seem more protector than necromancer." next="orinNecromancy"/>
+</Dialogue>
+
+<Dialogue id="orinMinax">
+  <NPCText>
+    <![CDATA[
+    “Minax offered me forbidden rites. I accepted. But not her chains.”<BR><BR>
+    “I took her knowledge. Gave her lies. And in return, I learned that even the Queen of Destruction fears the final silence.”<BR>
+    Orin chuckles. “Would you believe... she has dreams?”
+    ]]>
+  </NPCText>
+  <Option text="Minax dreams? Of what?" next="orinDream"/>
+</Dialogue>
+
+<Dialogue id="orinDream">
+  <NPCText>
+    <![CDATA[
+    “Of a time before the Gem shattered. Of being mortal. Of losing something she cannot name.”<BR><BR>
+    “The dead whisper it: even immortals grieve.”
+    ]]>
+  </NPCText>
+  <Option text="Thank you for your truth, Orin." action="Close"/>
+</Dialogue>
+  
+  
+</DialogueFile>

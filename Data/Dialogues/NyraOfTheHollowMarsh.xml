@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="NyraOfTheHollowMarsh">
+  <!-- === GREETING === -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#a1ffba'>
+      You find a woman standing ankle-deep in the veiled waters of the Hollow Marsh. Her eyes shine with pale green light, her moss-colored hair tumbling from beneath a hood woven with night-blooming flowers. Her robes ripple with the faint glow of willow-wisps, and you feel an eerie peace—or perhaps a subtle, ancient danger.
+      <BR><BR>
+      She speaks, voice barely a whisper, but it seems to echo inside your skull.<BR><BR>
+      "You have come far to find the edge of Eldermoor, stranger. Few seek the marsh, fewer still return unchanged. Are you lost, or are you seeking?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Who are you? I’ve not seen you near Eldermoor before." next="aboutnyra"/>
+    <Option text="I heard there are dangers in the marsh. Do you know anything of them?" next="ogreIntro"/>
+    <Option text="Are you with the Verdant Tribes?" next="tribes"/>
+    <Option text="What do you want from me?" next="whatWant"/>
+    <Option text="Just passing through the mist." action="Close"/>
+  </Dialogue>
+
+  <!-- === About Nyra === -->
+  <Dialogue id="aboutnyra">
+    <NPCText>
+      <![CDATA[
+      She tilts her head, studying you with luminous eyes.<BR><BR>
+      "I am called Nyra. Once I bore another name, before the world was shattered and the forests burned. I have walked these lands since the age of King Wolf, before Eldermoor’s first palisade was raised. The marsh keeps me, and I keep its secrets. The villagers fear what lives beyond the fields, so I live between—never truly within nor wholly without."
+      <BR><BR>
+      "Eldermoor’s folk whisper of me, but only Edda visits now. The others forget how many times I’ve watched their crops wither, their kin vanish, their hopes drift away on the fog."
+      ]]>
+    </NPCText>
+    <Option text="Edda? The village herbalist? Are you friends?" next="aboutEdda"/>
+    <Option text="You say you keep secrets. Will you share any?" next="secrets"/>
+    <Option text="Do you help the people of Eldermoor?" next="helpEldermoor"/>
+    <Option text="I’m curious about the marsh itself." next="marsh"/>
+  </Dialogue>
+
+  <Dialogue id="aboutEdda">
+    <NPCText>
+      <![CDATA[
+      A gentle smile tugs at her lips.<BR><BR>
+      "Edda has always listened to the old songs and stories, even when her neighbors called her odd. She brings me wild roots and news from the world that forgets me. Sometimes, I guide her hands to the right plants—or keep her safe when she wanders too deep. She has a wildness that cannot be taught, only inherited."
+      <BR><BR>
+      "If you wish to walk between worlds, speak gently to her."
+      ]]>
+    </NPCText>
+    <Option text="Do you ever visit Eldermoor’s shrine?" next="aboutShrine"/>
+    <Option text="Tell me about the marsh spirits." next="marsh"/>
+    <Option text="I heard there’s an ogre causing trouble near here." next="ogreIntro"/>
+    <Option text="I should go." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="aboutShrine">
+    <NPCText>
+      <![CDATA[
+      She grows quiet.<BR><BR>
+      "The shrine of Compassion is tended well by Miralda, but the Virtues are not enough to tame what lies in the deep marsh. Some prayers echo, unanswered, among the reeds. Still, I respect her devotion. Miralda fears me, but she should fear the things that walk under Minax’s shadow far more."
+      ]]>
+    </NPCText>
+    <Option text="Can you teach me about marsh magic?" next="secrets"/>
+    <Option text="The ogre—what do you know of it?" next="ogreIntro"/>
+  </Dialogue>
+
+  <!-- === Marsh and Secrets Branches === -->
+  <Dialogue id="marsh">
+    <NPCText>
+      <![CDATA[
+      "This marsh remembers all who pass through. The roots drink memory as they drink water. Ghost-lights flit where hope and sorrow are strongest, and the old trees guard secrets beneath their bark. If you listen, you may hear the Verdant Tribes' drums, or the croak of things older than language."
+      ]]>
+    </NPCText>
+    <Option text="Can you show me something of its power?" next="secrets"/>
+    <Option text="I heard the ogre’s lair is near here..." next="ogreIntro"/>
+  </Dialogue>
+
+  <Dialogue id="secrets">
+    <NPCText>
+      <![CDATA[
+      Nyra’s eyes glint.<BR><BR>
+      "If you wish to learn, you must first act. Bring me a shard of living wood—wood that bleeds, taken from the deep roots beneath the marsh. Only then can you hear the ancestral voices, and perhaps walk among the Verdant Tribes as more than a stranger."
+      <BR><BR>
+      "But beware. The roots are guarded by an ancient thing—more beast than spirit. If you are wise, you will not seek it alone."
+      ]]>
+    </NPCText>
+    <Option text="Where can I find this living wood?" next="woodLocation"/>
+    <Option text="I’ll try. Any advice?" next="woodAdvice"/>
+    <Option text="I have other matters right now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="woodLocation">
+    <NPCText>
+      <![CDATA[
+      "In the heart of the Hollow Marsh stands an old willow called Griefwound, scarred by flame but never felled. Its roots reach the deepest places, where water meets ancient magic. Sometimes, the marsh gives up a branch that bleeds if cut—this is living wood. But be warned: the ogre FleshEater guards its shadow, drawn by hunger and darker things."
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about this FleshEater ogre." next="ogreIntro"/>
+    <Option text="I will bring the living wood if I can." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="woodAdvice">
+    <NPCText>
+      <![CDATA[
+      "Go at dawn, when the mists are thick and light is uncertain. Move quietly—do not break more branches than you must, and never mock the willows. If the ogre finds you, it will not care for words or bargains."
+      ]]>
+    </NPCText>
+    <Option text="I will be careful. Now, about the ogre..." next="ogreIntro"/>
+    <Option text="Thank you for your wisdom." action="Close"/>
+  </Dialogue>
+
+  <!-- === Ogre Kill Quest Branch === -->
+  <Dialogue id="ogreIntro">
+    <NPCText>
+      <![CDATA[
+      Nyra’s gaze darkens, and she draws runes in the water with her staff.<BR><BR>
+      "The FleshEater comes from the western deeps, lured by blood and magic gone wrong. It is no mere ogre—it has feasted on corrupted things, grown huge and clever with hunger. The townsfolk call it monster, but it is only one sickness among many in this age."
+      <BR><BR>
+      "I have seen it shatter shields and swallow deer whole. It hoards the bones of the dead near Griefwound. If you would earn the marsh’s trust—and my gratitude—drive the FleshEater back into shadow. Bring me a tooth or a shred of its hide, and I shall grant you a gift older than the Virtues."
+      ]]>
+    </NPCText>
+    <Option text="How did it become so monstrous?" next="ogreOrigin"/>
+    <Option text="What reward do you offer?" next="reward"/>
+    <Option text="I will hunt the FleshEater for you."
+      action="GiveItem:FactionKillQuestScroll(FleshEaterOgre,1,HollowMarsh,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="acceptQuest"/>
+    <Option text="This seems too dangerous for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ogreOrigin">
+    <NPCText>
+      <![CDATA[
+      "It was once but a brute—until Minax’s shadow seeped into the roots and water. Now it feeds on more than flesh; it hungers for pain, for fear, for magic itself. Sometimes I hear it speak in broken dreams, promising feasts of sorrow. It must be ended, or it will only grow bolder."
+      ]]>
+    </NPCText>
+    <Option text="Very well. I’ll face the ogre."
+      action="GiveItem:FactionKillQuestScroll(FleshEaterOgre,1,HollowMarsh,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="acceptQuest"/>
+    <Option text="Another time, perhaps." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="reward">
+    <NPCText>
+      <![CDATA[
+      "Some crave gold, others fame, but the marsh trades in older coin. Should you return with proof of your deed, I will give you a branch of hollowroot—use it wisely, and the spirits may walk with you for a time. Or perhaps… you wish to know something forgotten, a secret woven into the land. I will let you choose."
+      ]]>
+    </NPCText>
+    <Option text="A hollowroot branch would suit me." next="acceptQuest"/>
+    <Option text="I seek knowledge—tell me something forgotten." next="acceptQuest"/>
+    <Option text="I’m not sure I want any reward." next="acceptQuest"/>
+  </Dialogue>
+
+  <Dialogue id="acceptQuest">
+    <NPCText>
+      <![CDATA[
+      Nyra nods, a thin smile curving her lips.<BR><BR>
+      "So be it. The marsh watches. Find the FleshEater and end its hunger. When you return, the mists will part for you… or they will claim you as one of their own."
+      ]]>
+    </NPCText>
+    <Option text="I will return, or not at all." action="Close"/>
+  </Dialogue>
+
+  <!-- === Tribes Branch === -->
+  <Dialogue id="tribes">
+    <NPCText>
+      <![CDATA[
+      "Once, I walked among the Verdant Tribes—before the world was sundered and greed crept into every root. Now, I am exile and bridge both. The tribes trust few, for even Hinokami’s folk have stolen from their sacred groves. But if you show respect—by deed, not word—you may yet learn their ways."
+      ]]>
+    </NPCText>
+    <Option text="What do you mean by 'bridge'?" next="bridge"/>
+    <Option text="Is there a way to make peace?" next="peace"/>
+    <Option text="I am interested in the living wood quest." next="secrets"/>
+    <Option text="I must be on my way." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="bridge">
+    <NPCText>
+      <![CDATA[
+      "Neither tribe nor townsfolk claim me fully. I carry wounds from both sides. Sometimes I bring warnings, sometimes I heal hurts that cannot be named. It is a lonely path, but the marsh keeps me alive—and ageless—for reasons of its own."
+      ]]>
+    </NPCText>
+    <Option text="Do you ever wish to return?" next="return"/>
+    <Option text="The ogre—can it be redeemed?" next="ogreIntro"/>
+  </Dialogue>
+
+  <Dialogue id="peace">
+    <NPCText>
+      <![CDATA[
+      "Peace is grown, not forced. Aid the Verdant Tribes, do not steal from their forests, and protect what is sacred. Their shamans may test you, but if you return the living wood to their altar, the spirits will remember your name."
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I will remember this." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="return">
+    <NPCText>
+      <![CDATA[
+      She sighs, the sound like wind over water.<BR><BR>
+      "One day, perhaps. For now, I am bound to the marsh. When it no longer needs me, perhaps I will walk beyond its mists for the last time."
+      ]]>
+    </NPCText>
+    <Option text="May the spirits watch over you." action="Close"/>
+  </Dialogue>
+
+  <!-- === What do you want? === -->
+  <Dialogue id="whatWant">
+    <NPCText>
+      <![CDATA[
+      "Want is a word for younger souls. I wish only to see the balance restored—to feel the roots heal and the rivers run clear once more. If you seek fortune, I have little. But if you seek meaning, or a place in the old songs, the marsh is always listening."
+      ]]>
+    </NPCText>
+    <Option text="I wish to help, if I can." next="ogreIntro"/>
+    <Option text="I will seek my fortune elsewhere." action="Close"/>
+  </Dialogue>
+</DialogueFile>

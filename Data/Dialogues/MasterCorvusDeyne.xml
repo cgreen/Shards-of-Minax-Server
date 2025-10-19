@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="MasterCorvusDeyne">
+
+  <!-- ====== Root Greeting ====== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#4682B4'>
+      You behold Master Corvus Deyne—tall, hawk-eyed, and draped in a swirling azure mantle. His gaze is like cold lightning.<br><br>
+      "Well, well... a groundling dares the heights of Aerilon. I am Master Corvus Deyne, the Conclave's war-bringer, though lesser minds might call me 'reckless.' Tell me, do you seek wisdom, power, or merely a place to be useful?"<br>
+      His staff crackles faintly with pent-up energy.<br>
+      "Choose your words. I abhor wasting time."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I want to prove my worth to Aerilon." next="prove"/>
+    <Option text="What exactly do you do for the Conclave?" next="whatdo"/>
+    <Option text="What do you think of Selara Vael’s leadership?" next="selara"/>
+    <Option text="You seem tense. What troubles you?" next="trouble"/>
+	<Option text="You speak like someone who’s seen more than war. What shaped you?" next="backstory_start"/>
+    <Option text="I have no business with you." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Prove Worth ====== -->
+  <Dialogue id="prove">
+    <NPCText>
+      <![CDATA[
+      Corvus’s eyes narrow, assessing you.<br><br>
+      "You have ambition. Good. Most in this city lack the spine to act, content to bask in Selara’s radiance or dither with their crystal calculations."<br>
+      He leans in, voice low and conspiratorial.<br>
+      "Aerilon thrives not by standing still, but by acting boldly. There are tasks for those who seek to rise—dangerous tasks, requiring discretion and nerve. Would you carry out a delivery on the Conclave’s behalf?"
+      ]]>
+    </NPCText>
+    <Option text="Name the task, and I’ll see it done." next="delivery"/>
+    <Option text="Depends who I’m delivering to." next="whodeliver"/>
+    <Option text="I serve only the city, not your schemes." next="pride"/>
+    <Option text="No thanks." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Delivery Offer ====== -->
+  <Dialogue id="delivery">
+    <NPCText>
+      <![CDATA[
+      Corvus produces a small, rune-etched reliquary. Frosty vapors seep from its seams.<br><br>
+      "This is a Phylactery of Shattered Fates, its contents... sensitive. I need it delivered to a scholar outside Aerilon—one with the 'Skeletal Cat Scholar' trait. They possess knowledge Selara and her ilk would bury in archives. Time is short, and discretion is paramount."<br>
+      He fixes you with an electric stare.<br>
+      "Do this, and I will see your name sung in the halls of power. Fail, and I shall forget you ever existed."
+      ]]>
+    </NPCText>
+    <Option text="I accept. Where do I find this Skeletal Cat Scholar?" next="whoscholar"/>
+    <Option text="A phylactery? Are you trafficking with necromancers?" next="necromancer"/>
+    <Option text="What if Selara finds out?" next="selaracatch"/>
+    <Option text="I need more information before I accept." next="details"/>
+    <Option text="I must refuse." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Who to Deliver ====== -->
+  <Dialogue id="whodeliver">
+    <NPCText>
+      <![CDATA[
+      "You are wise to ask. I will not have this reliquary fall into just any paws. The recipient is marked by their unique trait: the Skeletal Cat Scholar. Seek out one so attuned—if you have the wit to recognize them. Their name is not for open lips."
+      ]]>
+    </NPCText>
+    <Option text="Very well, I accept the task." next="delivery"/>
+    <Option text="I don’t traffic in secrets." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Delivery Details ====== -->
+  <Dialogue id="details">
+    <NPCText>
+      <![CDATA[
+      "Cautious. Good. The Skeletal Cat Scholar dwells in exile—rumors place them near the frost-ridden outposts or buried libraries. Approach them openly and you’ll gain nothing; use the phrase, 'Azure storms break silent bones,' and they will trust you."<br>
+      He smirks. "And yes, the phylactery is warded. Do not open it—unless you wish to join the city's exiles in the Fractured Isle."
+      ]]>
+    </NPCText>
+    <Option text="Understood. Give me the phylactery." next="givequest"/>
+    <Option text="Tell me more about this scholar." next="scholardetail"/>
+    <Option text="This is too risky." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Scholar Details ====== -->
+  <Dialogue id="scholardetail">
+    <NPCText>
+      <![CDATA[
+      "They once served as a historian in Moonglow—before exile for 'unorthodox' pursuits. Some say they commune with the dead; others say they catalog the end of worlds. Judge them not by appearance, but by intellect. If you return, perhaps I’ll share why I keep such company."
+      ]]>
+    </NPCText>
+    <Option text="I’ll take the risk. Give me the phylactery." next="givequest"/>
+    <Option text="On second thought, no." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Necromancer Inquiry ====== -->
+  <Dialogue id="necromancer">
+    <NPCText>
+      <![CDATA[
+      Corvus sneers.<br><br>
+      "Words like 'necromancer' are for cowards. I deal in results, not superstitions. This phylactery contains knowledge that could turn the tide against Minax—or doom us, if left unused. Will you help, or do you fear a little darkness beneath the light?"
+      ]]>
+    </NPCText>
+    <Option text="I’ll deliver your phylactery." next="givequest"/>
+    <Option text="I’ll have no part in this." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Selara Find Out? ====== -->
+  <Dialogue id="selaracatch">
+    <NPCText>
+      <![CDATA[
+      Corvus’s lips curl in a thin, humorless smile.<br><br>
+      "Let Selara Vael waste her days in cautious silence. She lacks the will to act, and that will be her undoing. If you fear reprisal, remember—history favors the bold. Aerilon must not fall to indecision."
+      ]]>
+    </NPCText>
+    <Option text="I’m ready. Give me the phylactery." next="givequest"/>
+    <Option text="I’ll have to refuse." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Give Quest ====== -->
+  <Dialogue id="givequest">
+    <NPCText>
+      <![CDATA[
+      Corvus presses the cold reliquary into your palm. The runes flicker, almost alive.<br><br>
+      "Deliver this to the one with the Skeletal Cat Scholar trait. Say the phrase: 'Azure storms break silent bones.' Return when the deed is done, and Aerilon will remember your loyalty."<br>
+      He leans close.<br>
+      "And remember—trust no one. Especially not the Archivist."
+      ]]>
+    </NPCText>
+    <Option text="I will deliver it discreetly."
+      action="GiveItem:FactionDeliveryQuestScroll(SkeletalCatScholar,Aerilon,250)"
+      condition="!HasItem:FactionDeliveryQuestScroll"
+      next="accept"/>
+    <Option text="Wait, you warned me about the Archivist—why?" next="archivist"/>
+  </Dialogue>
+
+  <!-- ====== Accept Quest ====== -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Corvus nods curtly.<br><br>
+      "Go now, and do not tarry. The city’s fate may hinge on whispers, not wars."
+      ]]>
+    </NPCText>
+    <Option text="I won’t fail you." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Archivist Warning ====== -->
+  <Dialogue id="archivist">
+    <NPCText>
+      <![CDATA[
+      Corvus’s expression darkens.<br><br>
+      "Eryndil the Archivist listens too closely, speaks too little, and forgets nothing. His allegiances are a web—Selara trusts him, but I do not. Complete this task before word reaches his ears, and your reward will be doubled."
+      ]]>
+    </NPCText>
+    <Option text="Understood. I’ll deliver the phylactery at once."
+      action="GiveItem:FactionDeliveryQuestScroll(SkeletalCatScholar,Aerilon,250)"
+      condition="!HasItem:FactionDeliveryQuestScroll"
+      next="accept"/>
+    <Option text="On second thought, I’m not getting involved." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== What Do You Do? ====== -->
+  <Dialogue id="whatdo">
+    <NPCText>
+      <![CDATA[
+      "I keep Aerilon alive while others bicker over philosophy. War is coming, and I prepare the only defense that matters: overwhelming force."<br>
+      He gestures to his staff.<br>
+      "Mages like Veyra are my legacy. She could be great—if she would stop second-guessing herself."
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about Veyra." next="veyra"/>
+    <Option text="So you favor action over debate?" next="action"/>
+    <Option text="I’d like to serve Aerilon. Any tasks?" next="prove"/>
+    <Option text="I’m done here." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Veyra Branch ====== -->
+  <Dialogue id="veyra">
+    <NPCText>
+      <![CDATA[
+      "Veyra is young, but fierce. I have pushed her harder than most. Some call it cruelty—I call it necessary. In these times, only the relentless survive."<br>
+      He scowls.<br>
+      "Selara would coddle her, but I see the strength within. If you wish to impress me, show loyalty—not to her, but to Aerilon’s future."
+      ]]>
+    </NPCText>
+    <Option text="Understood. Any assignments?" next="prove"/>
+    <Option text="Sounds like you have a rivalry with Selara." next="selara"/>
+    <Option text="I’ve heard enough." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Action Over Debate ====== -->
+  <Dialogue id="action">
+    <NPCText>
+      <![CDATA[
+      "Debate is the graveyard of empires. If Aerilon hesitates, Minax will devour us all. I intend to act before the storm breaks. Will you help, or will you stand idle?"
+      ]]>
+    </NPCText>
+    <Option text="I’ll help." next="prove"/>
+    <Option text="I will stand aside." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Selara Branch ====== -->
+  <Dialogue id="selara">
+    <NPCText>
+      <![CDATA[
+      Corvus’s eyes glint coldly.<br><br>
+      "Selara Vael is brilliant—some say too brilliant for her own good. She binds Aerilon with rules and secrets, but refuses to grasp the power within reach. We were once allies, now she fears the cost of victory."<br>
+      He taps his staff.<br>
+      "History will judge which of us is right. Until then, I act in Aerilon’s interest. And you—what side will you take?"
+      ]]>
+    </NPCText>
+    <Option text="I’m with you. Aerilon’s strength comes first." next="prove"/>
+    <Option text="Selara has her reasons. I stand neutral." next="neutral"/>
+    <Option text="I’d rather not choose sides." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Neutral Branch ====== -->
+  <Dialogue id="neutral">
+    <NPCText>
+      <![CDATA[
+      "Neutrality is a luxury for those who don’t fear consequences. Remember that when the city trembles."
+      ]]>
+    </NPCText>
+    <Option text="I’ll consider my choices." action="Close"/>
+    <Option text="Perhaps I can help Aerilon after all." next="prove"/>
+  </Dialogue>
+
+  <!-- ====== Trouble Branch ====== -->
+  <Dialogue id="trouble">
+    <NPCText>
+      <![CDATA[
+      Corvus’s expression turns briefly grim.<br><br>
+      "I sense betrayal in the air. Minax’s agents prowl, Selara's spies whisper, and even the crystals tremble with unrest. Trust is a blade to be handled carefully. If you wish to help, take this delivery—prove yourself, and perhaps I’ll trust you more than the rest."
+      ]]>
+    </NPCText>
+    <Option text="Give me the task." next="delivery"/>
+    <Option text="What do you mean, the crystals tremble?" next="crystals"/>
+    <Option text="Not my concern." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== Crystals Branch ====== -->
+  <Dialogue id="crystals">
+    <NPCText>
+      <![CDATA[
+      "Sabotage, perhaps. Or simple wear. Salia Moontide frets over their stability, but I suspect more than faulty craftsmanship. If the crystals fail, Aerilon will fall—literally and politically."
+      ]]>
+    </NPCText>
+    <Option text="That sounds urgent. I’ll help with your task." next="delivery"/>
+    <Option text="Let Salia handle it. I’m done here." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="backstory_start">
+  <NPCText>
+    <![CDATA[
+    Corvus arches a brow, caught off guard by your curiosity.<br><br>
+    "Hmph. Few care for the past anymore—too busy scuttling through the present like rats avoiding floodwater."<br>
+    He folds his hands behind his back, voice lowering.<br>
+    "Very well. I was born in Wind, among towers and tomes. Son of Archivist Deyne—yes, *that* Deyne, from the Circle of Forty Scrolls. My mother died birthing me; my father raised me as a living thesis. I mastered destruction magic before I could grow a proper beard. But I asked the wrong questions..."
+    ]]>
+  </NPCText>
+  <Option text="What questions got you exiled?" next="backstory_questions"/>
+  <Option text="Your father sounds... intense." next="backstory_father"/>
+  <Option text="So Wind cast you out? Why?" next="backstory_exile"/>
+  <Option text="This sounds like trauma masked with pride." condition="StatAtLeast:Int,90" next="backstory_psych"/>
+  <Option text="Sounds rough. Want a drink?" condition="RandomChance:25" next="drink_joke"/>
+</Dialogue>
+
+<!-- Trauma Mask -->
+<Dialogue id="backstory_psych">
+  <NPCText>
+    <![CDATA[
+    He freezes for a beat, then laughs darkly.<br><br>
+    "You're sharper than most crystal diviners. Yes—perhaps there’s pain beneath the armor. But pain forged purpose. The question is: will *you* wield pain as blade or chain?"
+    ]]>
+  </NPCText>
+  <Option text="Maybe I can learn from your example." next="backstory_continue"/>
+  <Option text="Pain isn't always power." next="backstory_moral"/>
+</Dialogue>
+
+<Dialogue id="backstory_moral">
+  <NPCText>
+    <![CDATA[
+    Corvus scoffs.<br><br>
+    "And flowers bloom in ash? I deal in truths, not sentiment. But… I won’t mock you for hope. Hope is the last spell we cast before silence."
+    ]]>
+  </NPCText>
+  <Option text="Let’s get back to your story." next="backstory_continue"/>
+</Dialogue>
+
+<!-- Drink Joke -->
+<Dialogue id="drink_joke">
+  <NPCText>
+    <![CDATA[
+    Corvus blinks, then chuckles under his breath.<br><br>
+    "You jest, and yet... a sip of Frostbrew might do more for diplomacy than all our spells. Perhaps after you’ve earned your keep, groundling."
+    ]]>
+  </NPCText>
+  <Option text="Deal. Continue your tale." next="backstory_continue"/>
+</Dialogue>
+
+<!-- Backstory Path: Questions -->
+<Dialogue id="backstory_questions">
+  <NPCText>
+    <![CDATA[
+    "I asked why the Conclave hoarded knowledge, why forbidden magic was ‘forbidden’—who decided what truths the people deserved."<br>
+    He sighs.<br>
+    "They said I grew arrogant. I said they grew stagnant. They exiled me the next day and sealed the vault I’d nearly unlocked."
+    ]]>
+  </NPCText>
+  <Option text="What was in that vault?" next="vault"/>
+  <Option text="You’ve carried that fire ever since." next="backstory_continue"/>
+</Dialogue>
+
+<Dialogue id="vault">
+  <NPCText>
+    <![CDATA[
+    Corvus narrows his eyes.<br><br>
+    "I never saw beyond its second seal, but I heard it whisper. Ancient Aeon runes, a spell schema shaped like a sigil of Minax—but older."<br>
+    He touches his staff.<br>
+    "It changed me. Made me aware of how deep the Well of Power truly is. And how shallow Wind truly is."
+    ]]>
+  </NPCText>
+  <Option text="Do you believe Minax seeks that same power?" next="minaxparallel"/>
+  <Option text="You fear Wind’s stagnation more than Minax?" next="fearchoice"/>
+</Dialogue>
+
+<Dialogue id="minaxparallel">
+  <NPCText>
+    <![CDATA[
+    "Minax desires the Gem. She wishes to *control* fate. I… seek to *understand* it. That is the difference between tyranny and transcendence."
+    ]]>
+  </NPCText>
+  <Option text="Let’s return to your tale." next="backstory_continue"/>
+</Dialogue>
+
+<Dialogue id="fearchoice">
+  <NPCText>
+    <![CDATA[
+    "Yes. Minax is an enemy. Wind is a rot that spreads beneath marble halls. One can fight evil with strength—but stagnation… it lulls you into chains."
+    ]]>
+  </NPCText>
+  <Option text="You’re no stranger to sharp truths." next="backstory_continue"/>
+</Dialogue>
+
+<!-- Backstory: Father -->
+<Dialogue id="backstory_father">
+  <NPCText>
+    <![CDATA[
+    "He measured love in lessons and affection in footnotes. Cold? Yes. But without him, I’d be some hedge wizard mumbling fireballs in Trinsic taverns."<br>
+    He almost smiles.<br>
+    "I do not miss him, yet I carry his ghost in every spell I cast."
+    ]]>
+  </NPCText>
+  <Option text="You became more than he ever intended." next="backstory_continue"/>
+  <Option text="What would he say of you now?" next="father_now"/>
+</Dialogue>
+
+<Dialogue id="father_now">
+  <NPCText>
+    <![CDATA[
+    Corvus gazes skyward.<br><br>
+    "He’d say I lost discipline and let emotion guide me. He’d be wrong, of course. Emotion *drives* discipline. Passion *fuels* progress. That, he never understood."
+    ]]>
+  </NPCText>
+  <Option text="You’ve forged your own truth." next="backstory_continue"/>
+</Dialogue>
+
+<!-- Backstory: Exile -->
+<Dialogue id="backstory_exile">
+  <NPCText>
+    <![CDATA[
+    "I wasn’t *cast* out. I walked. They held a trial—I laughed through it. Said my ambition made me unfit for Wind. So I found another wind... one that lifted cities."<br>
+    He gestures to the horizon.<br>
+    "Aerilon rose from defiance. And I carved the first rune of the spell that keeps it afloat."
+    ]]>
+  </NPCText>
+  <Option text="You helped build Aerilon?" next="backstory_continue"/>
+</Dialogue>
+
+<!-- Continue -->
+<Dialogue id="backstory_continue">
+  <NPCText>
+    <![CDATA[
+    "Enough of memory. The past informs, but the present demands. You’ve seen my truth, stranger. I do not fear the dark, and I will not bow to those who wrap chains in banners."<br><br>
+    He leans closer.<br>
+    "I ask again—will you stand with me when the storm breaks, or hide beneath Selara’s skirts?"
+    ]]>
+  </NPCText>
+  <Option text="You have my loyalty. I seek strength." next="prove"/>
+  <Option text="I respect you, but I won’t follow blindly." next="respectneutral"/>
+  <Option text="I prefer my own path." action="Close"/>
+</Dialogue>
+
+<Dialogue id="respectneutral">
+  <NPCText>
+    <![CDATA[
+    "A fair stance. Just don’t let independence become isolation. When Minax strikes, the sky won’t care who you answered to."
+    ]]>
+  </NPCText>
+  <Option text="Then I’d best make myself useful." next="prove"/>
+  <Option text="Farewell, Archmage." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

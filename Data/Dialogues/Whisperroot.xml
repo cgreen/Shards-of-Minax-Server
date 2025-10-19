@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="Whisperroot">
+
+  <!-- ===== Root: Only accessible after druidic rite (condition check is in script) ===== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#8ec47b'>
+      You stand before a colossal tree, its bark veined with shimmering green and amber. As you approach, the air chills and the wind hushes.<BR><BR>
+      The tree’s roots shift, and two glowing amber eyes open in the trunk. A voice as old as mountains rustles through your mind:<BR><BR>
+      <I>“You who have honored the Old Ways, I know your footsteps. I am called Whisperroot, last witness of the Elderwood. In ages past, I sang with the dawn… Now, I mourn beneath broken stars.”</I><BR><BR>
+      A deep sadness settles in the glade, tinged with wary hope.<BR><BR>
+      <I>“Why have you come to trouble ancient roots?”</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek your wisdom, Whisperroot." next="wisdom"/>
+    <Option text="Edda sent me—she spoke of corruption in the woods." next="eddaSent"/>
+    <Option text="Who are you, truly?" next="whoAreYou"/>
+    <Option text="(Remain silent and listen...)" next="silence"/>
+    <Option text="I mean no harm. I will go." action="Close"/>
+  </Dialogue>
+
+  <!-- === Wisdom Path === -->
+  <Dialogue id="wisdom">
+    <NPCText>
+      <![CDATA[
+      <I>“Wisdom… is a burden, little leaf. Once, I shaped the paths of clouds and saw the world unbroken. Now, my memory is twisted with sorrow and sap.”</I><BR><BR>
+      The tree sighs, scattering a flurry of golden leaves.<BR>
+      <I>“Yet, if you would bear the weight, I shall share my pain. The forest withers—Minax’s shadow poisons earth and spirit alike. Will you cut away the rot, or let it feast?”</I>
+      ]]>
+    </NPCText>
+    <Option text="I will help. Tell me what must be done." next="questOffer"/>
+    <Option text="What is this corruption?" next="corruption"/>
+    <Option text="Your sorrow runs deep… Tell me of the world before." next="beforeGem"/>
+    <Option text="I need time to think." action="Close"/>
+  </Dialogue>
+
+  <!-- === Edda Path === -->
+  <Dialogue id="eddaSent">
+    <NPCText>
+      <![CDATA[
+      <I>“The one called Edda tends wounded roots and broken souls—she remembers the old songs. Her trust is not lightly given. If you have earned it, then perhaps I shall trust you as well.”</I><BR>
+      The tree bows ever so slightly.<BR>
+      <I>“Darkness festers near—a StormOgre, warped by Minax’s hand, now serves as the corruption’s herald. If you would aid us, drive it from the Elderwood. Bring me the Ogre’s heartstone as proof.”</I>
+      ]]>
+    </NPCText>
+    <Option text="I will hunt the StormOgre and return with its heartstone." action="GiveItem:FactionKillQuestScroll(StormOgre,1,Elderwood,750)" condition="!HasItem:FactionKillQuestScroll" next="questAccept"/>
+    <Option text="Why does Minax seek this place?" next="whyMinax"/>
+    <Option text="Tell me more of Edda." next="eddaBack"/>
+    <Option text="This task may be beyond me." action="Close"/>
+  </Dialogue>
+
+  <!-- === Who Are You? Path === -->
+  <Dialogue id="whoAreYou">
+    <NPCText>
+      <![CDATA[
+      <I>“I am Whisperroot, child of the first forests. I drank the light before men tilled fields, before the Virtues had names. Once, I whispered to druids and monarchs—now, I watch as the world grows brittle, forgetting its roots.”</I><BR><BR>
+      There is a slow, rustling breath.<BR>
+      <I>“If you would know true history, seek the memory hidden in my sap. But beware—knowledge can wound deeper than any blade.”</I>
+      ]]>
+    </NPCText>
+    <Option text="I wish to know what you remember before the Gem was shattered." next="beforeGem"/>
+    <Option text="I am here to help. What is needed?" next="questOffer"/>
+    <Option text="Perhaps I am not ready." action="Close"/>
+  </Dialogue>
+
+  <!-- === Listen/Silence Path === -->
+  <Dialogue id="silence">
+    <NPCText>
+      <![CDATA[
+      The tree is silent for a long moment. Petals and motes swirl about you in an unseen breeze.<BR>
+      <I>“Few mortals know when to hush their tongues. I remember Edda, as a child, resting at my roots—she would listen, and the forest listened back.”</I><BR><BR>
+      <I>“If you would do the same, perhaps the Elderwood shall reveal its secrets. But first, will you drive out the rot that festers in my shade?”</I>
+      ]]>
+    </NPCText>
+    <Option text="Yes, I will cleanse the woods." next="questOffer"/>
+    <Option text="Tell me more of Edda." next="eddaBack"/>
+    <Option text="I will leave you in peace." action="Close"/>
+  </Dialogue>
+
+  <!-- === Quest Offer Node === -->
+  <Dialogue id="questOffer">
+    <NPCText>
+      <![CDATA[
+      <I>“Beneath the shadow of withered boughs, a StormOgre now tramples ancient roots—once a beast of the hills, now warped by Minax’s venom. Its thunder shatters saplings, its breath stirs unnatural winds. Strike it down, sever the corruption, and bring me the heartstone torn from its breast.”</I><BR><BR>
+      The tree’s branches creak in a gust of unnatural wind.<BR>
+      <I>“But take care: the StormOgre is no mindless brute. It remembers pain, and hungers for vengeance against all who walk beneath the sun. Should you fall, the forest will mourn another lost friend.”</I>
+      ]]>
+    </NPCText>
+    <Option text="I will hunt this creature and return with proof." action="GiveItem:FactionKillQuestScroll(StormOgre,1,Elderwood,750)" condition="!HasItem:FactionKillQuestScroll" next="questAccept"/>
+    <Option text="Is there any wisdom to aid me in the fight?" next="wisdom2"/>
+    <Option text="Why does Minax corrupt even beasts?" next="whyMinax"/>
+    <Option text="I must prepare before I go." action="Close"/>
+  </Dialogue>
+
+  <!-- === Quest Accept Node === -->
+  <Dialogue id="questAccept">
+    <NPCText>
+      <![CDATA[
+      <I>“The StormOgre dwells in the broken hollow to the east, where the thunder never sleeps. Seek it at twilight, when the sky bruises and the wind grows wild.”</I><BR><BR>
+      “Bring me its heartstone. And, traveler—tread with humility. The Elderwood’s memory is long, and mercy is never wasted.”<BR>
+      The branches seem to bow as you depart.
+      ]]>
+    </NPCText>
+    <Option text="I will return when the deed is done." action="Close"/>
+  </Dialogue>
+
+  <!-- === What is Corruption? === -->
+  <Dialogue id="corruption">
+    <NPCText>
+      <![CDATA[
+      <I>“The forest aches. Roots curl with fever, streams run bitter, and wild things howl in pain. Minax’s magic is a blight—her cultists plant seeds of malice, twisting beast and bough alike. Only fire or courage can purge such rot. Will you bear the blade?”</I>
+      ]]>
+    </NPCText>
+    <Option text="I will do what must be done." next="questOffer"/>
+    <Option text="Is there another way, besides violence?" next="otherWay"/>
+    <Option text="I must refuse." action="Close"/>
+  </Dialogue>
+
+  <!-- === Is There Another Way? === -->
+  <Dialogue id="otherWay">
+    <NPCText>
+      <![CDATA[
+      <I>“All healing is pain, little leaf. Sometimes, the rot must be cut for the tree to live. Yet, if you can find the root of corruption and cleanse it with druidic flame, perhaps life may return where death was sown. Speak with Edda or the Verdant shamans—they may know such lore.”</I>
+      ]]>
+    </NPCText>
+    <Option text="I will seek their wisdom." action="Close"/>
+    <Option text="I will fight the ogre instead." next="questOffer"/>
+  </Dialogue>
+
+  <!-- === Before the Gem Was Shattered === -->
+  <Dialogue id="beforeGem">
+    <NPCText>
+      <![CDATA[
+      The tree’s voice deepens, its amber eyes glowing brighter.<BR>
+      <I>“Before the world was sundered, all lands were as one. The Gem of Immortality shone, its facets holding every possibility—every dream, every sorrow.”</I><BR>
+      <I>“When it shattered, a thousand worlds bled from its heart. I remember rivers running in reverse, mountains uprooted, forests dancing in the sky. I remember Lord British’s voice, and Minax’s tears. You walk now among the fragments of old glory, seeking what cannot be remade.”</I><BR><BR>
+      A single golden tear slides down the bark.<BR>
+      <I>“Remember, child: even broken roots may bloom again, if tended with care.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Thank you for this memory, Whisperroot." next="afterLore"/>
+    <Option text="Will you tell me more of Lord British?" next="british"/>
+    <Option text="I must go." action="Close"/>
+  </Dialogue>
+
+  <!-- === After Lore Path === -->
+  <Dialogue id="afterLore">
+    <NPCText>
+      <![CDATA[
+      <I>“Go, now. The world remembers those who remember it in turn.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- === Lord British Memory === -->
+  <Dialogue id="british">
+    <NPCText>
+      <![CDATA[
+      <I>“Lord British was both root and leaf—steadfast, but ever reaching skyward. His presence calmed storms and called forth new growth. When he vanished, all things mourned in silence.”</I><BR>
+      <I>“Should you find him, tell him the Elderwood endures—and waits.”</I>
+      ]]>
+    </NPCText>
+    <Option text="I will carry your message, old friend." next="afterLore"/>
+    <Option text="Thank you for your words." next="afterLore"/>
+  </Dialogue>
+
+  <!-- === Edda Backstory Path === -->
+  <Dialogue id="eddaBack">
+    <NPCText>
+      <![CDATA[
+      <I>“Edda grew from sapling to wise root, her hands gentle with herbs, her voice fierce against darkness. She knows the ways of leaf and shadow—and she listens, even when others do not.”</I><BR>
+      <I>“She bears the forest’s hope now. Cherish her friendship, for it is rare as sunlight in winter.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I will remember her kindness." next="questOffer"/>
+    <Option text="Is she in danger?" next="eddaDanger"/>
+  </Dialogue>
+
+  <Dialogue id="eddaDanger">
+    <NPCText>
+      <![CDATA[
+      <I>“All who defy Minax are in danger. Yet Edda’s spirit burns bright—too bright, perhaps, for the shadows she faces. Protect her if you can, but do not stand in her way. The forest has chosen its champion.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Understood. I will help where I can." next="questOffer"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- === Why Minax? === -->
+  <Dialogue id="whyMinax">
+    <NPCText>
+      <![CDATA[
+      <I>“Minax hates what endures—she would see every root torn, every memory scattered. She was not always thus; once, she wandered these woods as a lost child, seeking shelter. The Gem’s shattering twisted more than worlds… it warped hearts, too.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Can Minax be saved?" next="minaxSave"/>
+    <Option text="I will stop her, if I can." next="questOffer"/>
+    <Option text="That is a heavy tale. Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="minaxSave">
+    <NPCText>
+      <![CDATA[
+      <I>“I do not know. Some wounds run too deep, yet the forest forgives all in time. Perhaps, should you mend what was broken, even Minax may find peace. But do not lose yourself in pity—roots must be strong to weather the storm.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I will remember your words." next="questOffer"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- === Additional Dialogue Branches or Rewards can be added as needed === -->
+
+</DialogueFile>

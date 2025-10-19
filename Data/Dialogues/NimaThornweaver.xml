@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="NimaThornweaver">
+
+  <!-- ========== ROOT: Greeting ========== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#89ce6c'>
+      Before you, a lean woman weaves living vines into a complex trap. Her mask—fashioned from bark and thorns—gives her an almost inhuman air. Tiny thorns and animal teeth hang from her sash.<BR><BR>
+      She glances up, sharp eyes glinting. "Careful! One wrong step and you’ll be hugging brambles for the rest of the moon. What brings you to the heart of the Verdant wilds?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Who are you?" next="who"/>
+    <Option text="What are you making?" next="whatMaking"/>
+    <Option text="Do you need any help?" next="helpOffer"/>
+	<Option text="Tell me about yourself, Nima." next="backstoryIntro"/>
+    <Option text="I’m just passing through." next="dismiss"/>
+  </Dialogue>
+
+  <!-- ========== Who Are You Branch ========== -->
+  <Dialogue id="who">
+    <NPCText>
+      <![CDATA[
+      She straightens, proudly tapping her sash of thorns.<BR>
+      "I am Nima, Thornweaver and guardian of these groves. Every thorn here was plucked from an enemy—or a mistake. The forest remembers all." 
+      ]]>
+    </NPCText>
+    <Option text="What’s with the thorns?" next="thorns"/>
+    <Option text="What are you making?" next="whatMaking"/>
+    <Option text="Can I help?" next="helpOffer"/>
+    <Option text="Goodbye." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== Thorns Lore ========== -->
+  <Dialogue id="thorns">
+    <NPCText>
+      <![CDATA[
+      She fingers a thorn on her belt.<BR>
+      "Each thorn marks a foe defeated or a lesson hard-learned. Some say it’s morbid; I say it’s honest. If you listen close, you can hear their stories at dusk."
+      ]]>
+    </NPCText>
+    <Option text="Tell me a thorn’s story." next="thornStory"/>
+    <Option text="What are you making?" next="whatMaking"/>
+    <Option text="Can I help with anything?" next="helpOffer"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== Thorn Story ========== -->
+  <Dialogue id="thornStory">
+    <NPCText>
+      <![CDATA[
+      Nima plucks a blackened thorn.<BR>
+      "This one came from a corrupted wolf, driven mad by Minax’s magic. It taught me not all threats wear a human face.<BR>
+      If you see any beasts acting strange—tell me."
+      ]]>
+    </NPCText>
+    <Option text="I’ll watch for strange beasts." action="SendMessage:I will let Nima know if I find anything odd."/>
+    <Option text="What about your current work?" next="whatMaking"/>
+    <Option text="Goodbye for now." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== What Are You Making ========== -->
+  <Dialogue id="whatMaking">
+    <NPCText>
+      <![CDATA[
+      She gestures to the twisting vines.<BR>
+      "Living traps—grown, not built. They tangle only those who bring harm. Or so they’re meant to. But one snare caught something else…something sacred. I sense the forest’s pain."
+      ]]>
+    </NPCText>
+    <Option text="What did you catch?" next="caught"/>
+    <Option text="How do you make living traps?" next="trapLore"/>
+    <Option text="Need help untangling it?" next="helpOffer"/>
+    <Option text="I should leave you to your work." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== Trap Lore ========== -->
+  <Dialogue id="trapLore">
+    <NPCText>
+      <![CDATA[
+      "A secret of the Verdant: with the right rites and whispers, vines heed our call. But sometimes…they get hungry for spirit instead of blood.<BR>
+      That’s the trouble now."
+      ]]>
+    </NPCText>
+    <Option text="What spirit did you trap?" next="caught"/>
+    <Option text="Can I help?" next="helpOffer"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== What Did You Catch ========== -->
+  <Dialogue id="caught">
+    <NPCText>
+      <![CDATA[
+      Her voice lowers, troubled.<BR>
+      "A forest spirit—a guardian older than the tribe. My snare holds it fast, and its pain bleeds through the roots. If we do not free it, rot may spread through the groves."
+      ]]>
+    </NPCText>
+    <Option text="I’ll help you free the spirit." next="helpOffer"/>
+    <Option text="How can we do that?" next="freeSpirit"/>
+    <Option text="That sounds risky. Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== Free Spirit ========== -->
+  <Dialogue id="freeSpirit">
+    <NPCText>
+      <![CDATA[
+      She nods, urgency in her tone.<BR>
+      "We must weave a spirit-ward, strong enough to calm both vines and spirit. For that, I’ll need ghost-thistle from the southern fen, and a stone blessed at our oldest shrine."
+      ]]>
+    </NPCText>
+    <Option text="I’ll gather ghost-thistle and a blessed stone."
+            action="GiveItem:ThornweaverSpiritQuestScroll(Nima, VerdantTribes, 250)"
+            condition="!HasItem:ThornweaverSpiritQuestScroll"
+            next="questGiven"/>
+    <Option text="Where do I find these items?" next="questHelp"/>
+    <Option text="Maybe I’m not ready for this." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== Quest Offered ========== -->
+  <Dialogue id="helpOffer">
+    <NPCText>
+      <![CDATA[
+      She eyes you up and down.<BR>
+      "If your hands are steady and your heart not brittle, I could use help freeing the spirit. Are you willing to face the brambles?"
+      ]]>
+    </NPCText>
+    <Option text="Yes. What must I do?"
+            action="GiveItem:ThornweaverSpiritQuestScroll(Nima, VerdantTribes, 250)"
+            condition="!HasItem:ThornweaverSpiritQuestScroll"
+            next="questGiven"/>
+    <Option text="What’s involved in the task?" next="freeSpirit"/>
+    <Option text="Not right now." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== Quest Details & Acceptance ========== -->
+  <Dialogue id="questGiven">
+    <NPCText>
+      <![CDATA[
+      Nima hands you a satchel woven from willow bark.<BR>
+      "Return with ghost-thistle and the blessed stone. Beware: spirits in the fen may test your resolve, and the shrine is watched by wary shamans.<BR>
+      When you return, we’ll attempt the rite. Fail, and the forest may never forgive us."
+      ]]>
+    </NPCText>
+    <Option text="I’ll return as soon as I can." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== Quest Help (Hints) ========== -->
+  <Dialogue id="questHelp">
+    <NPCText>
+      <![CDATA[
+      She gives practical advice:<BR>
+      "Ghost-thistle glows pale blue by moonlight—look near marshy water south of the village. The oldest shrine sits beneath the twin oaks west of our council fire. Bring the items back safely."
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I’ll be careful." action="Close"/>
+    <Option text="Remind me what you need?" next="freeSpirit"/>
+  </Dialogue>
+
+  <!-- ========== Dismiss ========== -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Nima shrugs and turns back to her work.<BR>
+      "Watch your step, outsider. The thorns do not sleep."
+      ]]>
+    </NPCText>
+    <Option text="Goodbye." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== Backstory Entry Point ========== -->
+  <Dialogue id="backstoryIntro">
+    <NPCText>
+      <![CDATA[
+      Nima’s hands still, and her gaze softens just a little.<BR>
+      "Few care for the roots, only the fruit. But you ask the right way, and that means something."<BR><BR>
+      She dusts a smear of sap from her gloves. "I wasn't born a Thornweaver. I was born a shadow."
+      ]]>
+    </NPCText>
+    <Option text="A shadow? What do you mean?" next="shadow"/>
+    <Option text="Where did you grow up?" next="origin"/>
+    <Option text="What led you to the Verdant Tribes?" next="joinTribe"/>
+    <Option text="You’re not like the other warriors." next="philosophy"/>
+    <Option text="That’s enough for now." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== "I was born a shadow." ========== -->
+  <Dialogue id="shadow">
+    <NPCText>
+      <![CDATA[
+      "Before the forests, I lived with blades and ash. My family was… not noble. Raiders from the fringes. I was trained to kill, not think."<BR><BR>
+      Her voice darkens. "But I ran. I hid beneath the roots of an old tree—and the forest whispered a second chance."<BR>
+      "The Thornmother found me. Took me in. Gave me purpose."<BR>
+      <BASEFONT COLOR='#89ce6c'>[You feel her words echo through the leaves around you.]</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You carry regret." next="regret"/>
+    <Option text="You were forged in fire, like a true survivor." next="respectedPast"/>
+    <Option text="Let’s talk of something else." next="backstoryRedirect"/>
+  </Dialogue>
+
+  <!-- ========== Regret Branch ========== -->
+  <Dialogue id="regret">
+    <NPCText>
+      <![CDATA[
+      She nods slowly.<BR>
+      "I don’t hide it. Regret reminds me what not to become. My traps are not just to stop invaders… they’re to remind me what I must never unleash again."
+      ]]>
+    </NPCText>
+    <Option text="I respect that honesty." next="bonding"/>
+    <Option text="So... you were a killer?" next="darkReveal"/>
+  </Dialogue>
+
+  <!-- ========== Respected Past Branch ========== -->
+  <Dialogue id="respectedPast">
+    <NPCText>
+      <![CDATA[
+      Her brow arches.<BR>
+      "Spoken like a warrior. But even warriors must know when to sheathe the blade, lest it sheath in them." She smirks faintly. "Still, I like your edge."
+      ]]>
+    </NPCText>
+    <Option text="Do you still fight like that?" next="darkReveal"/>
+    <Option text="The edge cuts both ways." next="bonding"/>
+  </Dialogue>
+
+  <!-- ========== Origin Node ========== -->
+  <Dialogue id="origin">
+    <NPCText>
+      <![CDATA[
+      "Nowhere worth naming. My first memories are of mud, smoke, and fear. But the Verdant taught me names for the stars, not just scars."<BR>
+      "I don’t look back unless the wind blows me that way."
+      ]]>
+    </NPCText>
+    <Option text="Then let’s talk about what you love now." next="interests"/>
+    <Option text="Do you ever go back?" next="noReturn"/>
+    <Option text="Let’s change the subject." next="backstoryRedirect"/>
+  </Dialogue>
+
+  <!-- ========== How She Joined Verdant Tribes ========== -->
+  <Dialogue id="joinTribe">
+    <NPCText>
+      <![CDATA[
+      "By bleeding in the right places, and listening when others wouldn’t. They made me prove myself. The shamans tested my will; the roots tested my patience."<BR>
+      "I passed, barely. And now, I trap things that once trapped me."
+      ]]>
+    </NPCText>
+    <Option text="Did you have to fight for acceptance?" next="ritualCombat"/>
+    <Option text="They sound like a true family." next="bonding"/>
+  </Dialogue>
+
+  <!-- ========== Ritual Combat ========== -->
+  <Dialogue id="ritualCombat">
+    <NPCText>
+      <![CDATA[
+      "I fought a druid. Not to kill—just to prove I could lose without hatred. That’s harder than it sounds."<BR>
+      She chuckles. "Still have the scar, and the lesson."
+      ]]>
+    </NPCText>
+    <Option text="I’d fight beside you any day."
+            condition="IsMale"
+            action="SendMessage:Nima glances at you with respect."
+            next="bonding"/>
+    <Option text="Sounds like a lesson I could use."
+            condition="IsFemale"
+            action="SendMessage:Nima’s gaze lingers on you, thoughtful."
+            next="bonding"/>
+    <Option text="Enough stories. Let’s get back to the forest." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== Interests Branch ========== -->
+  <Dialogue id="interests">
+    <NPCText>
+      <![CDATA[
+      "I love silence between bird calls. I love wind pushing leaves in spirals. I love that vines can kill without malice."<BR>
+      "Oh, and I play the moss-flute. Poorly." She smirks. "You?"
+      ]]>
+    </NPCText>
+    <Option text="I study magic." next="interestMagic"/>
+    <Option text="I live for the fight." next="interestFight"/>
+    <Option text="I wander, mostly." next="interestWander"/>
+  </Dialogue>
+
+  <!-- ========== Interest Responses ========== -->
+  <Dialogue id="interestMagic">
+    <NPCText>
+      <![CDATA[
+      "Then you know nature has its own spellbook. And not every spell needs a word."<BR>
+      She leans in. "Come back with something from the grove—a feather, a whisper, a shadow. I’ll read it."
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with something unusual." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="interestFight">
+    <NPCText>
+      <![CDATA[
+      She grins. "Then we are kin of the old bark. Just don’t pick a fight with my traps—you’ll lose."
+      ]]>
+    </NPCText>
+    <Option text="I might test them one day." next="trapTease"/>
+    <Option text="No worries, I prefer the front line." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="interestWander">
+    <NPCText>
+      <![CDATA[
+      "Wandering is sacred. Just don’t forget which direction the roots point."<BR>
+      She gestures to the horizon. "When your path circles back, come find me again."
+      ]]>
+    </NPCText>
+    <Option text="I will." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== Light Banter and Bonding ========== -->
+  <Dialogue id="trapTease">
+    <NPCText>
+      <![CDATA[
+      She laughs—a rare sound.<BR>
+      "I’ll carve your name on a leaf, so the grove knows who got snared with a smirk."<BR>
+      She seems a little warmer now.
+      ]]>
+    </NPCText>
+    <Option text="That was almost a compliment." next="bonding"/>
+    <Option text="Goodbye, Nima." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== No Return Branch ========== -->
+  <Dialogue id="noReturn">
+    <NPCText>
+      <![CDATA[
+      "Even rot must stay buried. Some memories are best left beneath the moss."<BR>
+      She exhales. "Thanks for asking, though. Most don’t."
+      ]]>
+    </NPCText>
+    <Option text="You’re stronger than your past." next="bonding"/>
+    <Option text="Fair enough." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== Dark Reveal (Player Leans In) ========== -->
+  <Dialogue id="darkReveal">
+    <NPCText>
+      <![CDATA[
+      She studies you quietly.<BR>
+      "Yes. I was. That truth lives here." She taps her thorn sash.<BR>
+      "But so does every choice since. What you are now—that matters most."
+      ]]>
+    </NPCText>
+    <Option text="I agree. We all change." next="bonding"/>
+    <Option text="I’ll be careful around you." action="SendMessage:Nima’s eyes narrow slightly." />
+  </Dialogue>
+
+  <!-- ========== Philosophy ========== -->
+  <Dialogue id="philosophy">
+    <NPCText>
+      <![CDATA[
+      "The others swing spears and shout names of ancestors. I listen. Trap. Wait. Then act."<BR>
+      "Patience is a weapon. Few use it well."
+      ]]>
+    </NPCText>
+    <Option text="You’re like a spirit in the vines." next="bonding"/>
+    <Option text="That’s a lonely way to fight." next="bonding"/>
+  </Dialogue>
+
+  <!-- ========== Bonding Node (Optional Buff) ========== -->
+  <Dialogue id="bonding">
+    <NPCText>
+      <![CDATA[
+      She nods slowly, almost fondly.<BR>
+      "The forest likes you. Or maybe just doesn’t hate you."<BR>
+      "Here… a token. For walking gently."
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Nima."
+            condition="KarmaAtLeast:0"
+            action="GiveItem:LeafTalisman()"
+            next="gifted"/>
+    <Option text="I’ll remember this." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== Gift Node ========== -->
+  <Dialogue id="gifted">
+    <NPCText>
+      <![CDATA[
+      She hands you a carved talisman bound in leaf and twine.<BR>
+      "Wear it near the groves. It might make the vines hesitate… once."
+      ]]>
+    </NPCText>
+    <Option text="I’ll wear it with care." action="Close"/>
+  </Dialogue>
+
+  <!-- ========== Redirect Utility ========== -->
+  <Dialogue id="backstoryRedirect">
+    <NPCText>
+      <![CDATA[
+      Nima shrugs lightly. "Back to roots or blades—whichever path you walk."
+      ]]>
+    </NPCText>
+    <Option text="Let’s talk about something else." next="greeting"/>
+  </Dialogue>
+  
+  
+</DialogueFile>

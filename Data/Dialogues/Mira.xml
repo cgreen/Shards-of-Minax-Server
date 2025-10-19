@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="Mira">
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b6d3f4'>
+      You see a young woman bustling between tables, sunlight catching on the wildflower garland in her hair. Despite the constant hum of the Stubborn Boar Inn, Mira pauses to greet you with a bright, weary smile.<br><br>
+      "Oh! A new face—welcome to Eldermoor’s only inn and, well, probably the only place you’ll find a dry seat and a hot meal for miles. I’m Mira, Brenvar’s daughter. If you’re here for a tale or trouble, I’m afraid we’ve plenty of both these days."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="You look busy. Need any help?" next="busy"/>
+    <Option text="Heard you know all the village gossip." next="gossip"/>
+    <Option text="You ever think of leaving Eldermoor?" next="leaving"/>
+    <Option text="Just passing through, thanks." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="busy">
+    <NPCText>
+      <![CDATA[
+      Mira tucks a stray lock of hair behind her ear, glancing over the crowded room.<br><br>
+      "Busy’s one word for it! My da, Brenvar, swears I was born balancing tankards. I keep the place running—cooking, cleaning, listening to Thalen grumble about his forge, and keeping Aldric from drinking too much on lonely nights. Sometimes I wonder if the walls would crumble if I stopped moving.<br><br>
+      Still, you look like someone with sturdy boots and a sharp blade. Maybe you’re just who I need…"
+      ]]>
+    </NPCText>
+    <Option text="What’s got you worried?" next="questIntro"/>
+    <Option text="Tell me about Thalen and Aldric." next="boys"/>
+    <Option text="Let me guess: another monster in the fields?" next="questIntro"/>
+    <Option text="I’ll let you get back to work." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="gossip">
+    <NPCText>
+      <![CDATA[
+      She grins conspiratorially.<br><br>
+      "Gossip? You’ve no idea! Half the news in Eldermoor comes through these doors. Old Edda says I know more secrets than the moon, but I just listen—folk need that sometimes. Of course, the best gossip these days is about the stranger who braved the swamps…"<br><br>
+      She gives you a wink.
+      ]]>
+    </NPCText>
+    <Option text="What sort of trouble finds Eldermoor?" next="questIntro"/>
+    <Option text="Any secrets you can share?" next="secrets"/>
+    <Option text="I’m no stranger to secrets myself." next="secrets"/>
+    <Option text="I’ll take my leave." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="leaving">
+    <NPCText>
+      <![CDATA[
+      Mira sighs, casting a wistful glance out the window.<br><br>
+      "Sometimes, when the lanterns are all out and the guests have gone, I dream of following the road to Sunreach or even sailing out past Buccaneer’s Den. But Da needs me here, and Eldermoor—well, it’s not easy to abandon folk you grew up with, even if your heart wants more. Thalen says I’m daft, but Aldric just nods—he understands the call of the horizon."<br><br>
+      She blushes, then quickly changes the subject.
+      ]]>
+    </NPCText>
+    <Option text="What’s keeping you here?" next="questIntro"/>
+    <Option text="Maybe I can help with something, first?" next="questIntro"/>
+    <Option text="Tell me about Thalen and Aldric." next="boys"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="boys">
+    <NPCText>
+      <![CDATA[
+      Mira laughs, a little shyly.<br><br>
+      "Oh, you’ve met them? Thalen’s all fire and iron—fiercely loyal but quick to temper, especially if you mention Trinsic’s smiths. He means well, but sometimes I wish he’d see the world’s bigger than his anvil.<br><br>
+      Aldric… he’s quiet, gentle in his way. Lost a lot in the wars—more than he lets on. He’s always looking out for me, though he’s just as likely to disappear into the woods for days on end. Between the two of them, sometimes I wonder if I’m the only one with sense around here!"<br><br>
+      She looks at you more seriously.<br>
+      "But enough about village boys. There’s real trouble brewing—if you’re willing?"
+      ]]>
+    </NPCText>
+    <Option text="What sort of trouble?" next="questIntro"/>
+    <Option text="Tell me more about your dreams of leaving." next="leaving"/>
+    <Option text="Maybe later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="secrets">
+    <NPCText>
+      <![CDATA[
+      She leans in, lowering her voice.<br><br>
+      "Well, if you must know, Edda’s been slipping off to the marsh with strange bundles, and Priestess Miralda’s been burning incense that smells nothing like any prayer I know. As for the mayor, Halric? He’s been meeting with a cloaked stranger after midnight. Folk talk of Minax’s spies, but it’s the secrets of friends that weigh heavier."<br><br>
+      She draws back, studying you.<br>
+      "But you didn’t come for gossip. Are you here to help?"
+      ]]>
+    </NPCText>
+    <Option text="Depends—what do you need?" next="questIntro"/>
+    <Option text="I’ll mind my own business." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Branch: The FlameWardenEttin -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      Mira lowers her voice, worry flickering in her eyes.<br><br>
+      "There’s something *wrong* out there in the western groves. Folk call it a FlameWardenEttin—twice the size of any troll, head like a cracked skull full of pulsing eyes. It’s clever, too—last week it snatched one of Da’s best customers straight off the road and left nothing but a trail of strange runes burned into the dirt.<br><br>
+      Thalen wants to hunt it, but he’s no match alone. Aldric’s been tracking it, but every time he gets close, the beast whispers things in his mind—says it knows his secrets, his shames. Folk are scared, and truth is, so am I. If the monster isn’t stopped, no one will be left to share stories at my hearth. Will you help us?"
+      ]]>
+    </NPCText>
+    <Option text="I’ll hunt the FlameWardenEttin for you."
+      action="GiveItem:FactionKillQuestScroll(FlameWardenEttin,1,Eldermoor,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="What do you know about this FlameWardenEttin?" next="ettinInfo"/>
+    <Option text="Why can’t Thalen or Aldric handle it?" next="helpWhyNot"/>
+    <Option text="This sounds like Minax’s magic at work." next="minax"/>
+    <Option text="Sorry, that’s too much for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Mira beams, relief softening her features.<br><br>
+      "Thank you! Folk say the monster’s lair is west, near the old standing stones—where the trees grow too thick for sunlight. Watch for odd markings on the trunks, and listen for voices that aren’t yours. The Ettin collects secrets—don’t let it twist your mind.<br><br>
+      Bring me proof you’ve slain it—a brainstone or its fetid heart—and I’ll see you rewarded. And if you find anything… strange, like a keepsake or a name whispered in your head, please bring it to Edda or Priestess Miralda. They know more about these magics than they let on."
+      ]]>
+    </NPCText>
+    <Option text="I’ll return once the FlameWardenEttin is slain." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ettinInfo">
+    <NPCText>
+      <![CDATA[
+      Mira shivers.<br><br>
+      "It’s not just a beast. They say the FlameWardenEttin remembers every thought it devours. Some travelers come back lost, mumbling secrets they never told a soul. Others—well, they don’t come back at all. Thalen says its hide is thick as iron, but Aldric’s sure it’s the mind-magic that makes it dangerous. No sword or arrow protects you from your own fears."
+      ]]>
+    </NPCText>
+    <Option text="I’ll face it anyway."
+      action="GiveItem:FactionKillQuestScroll(FlameWardenEttin,1,Eldermoor,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Perhaps someone else is better suited." next="mock"/>
+  </Dialogue>
+
+  <Dialogue id="helpWhyNot">
+    <NPCText>
+      <![CDATA[
+      Mira’s voice turns sad.<br><br>
+      "Thalen talks brave, but he’s all bluster—he’d charge in headlong and get himself killed, and I… I couldn’t bear it. Aldric’s the best tracker in Eldermoor, but that monster haunts his mind with memories of the war. He hasn’t slept three nights straight since the beast arrived. No, we need someone new—someone whose mind isn’t full of Eldermoor’s scars."
+      ]]>
+    </NPCText>
+    <Option text="Then I’ll do it."
+      action="GiveItem:FactionKillQuestScroll(FlameWardenEttin,1,Eldermoor,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="It’s too dangerous for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Mira lowers her voice, casting a glance around the room.<br><br>
+      "I’d not speak her name too loudly, but… Edda says the monster’s eyes glow with a sickly green, and Priestess Miralda thinks someone—or something—is guiding it. Some say Minax’s cultists feed her their secrets, and the beast carries them all, waiting to use them against us.<br><br>
+      Whatever it is, it’s not just nature gone wrong. It’s evil—clever and cruel. But maybe if we face it, folk will remember what courage looks like."
+      ]]>
+    </NPCText>
+    <Option text="All the more reason to end it."
+      action="GiveItem:FactionKillQuestScroll(FlameWardenEttin,1,Eldermoor,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="I’ll think about it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="mock">
+    <NPCText>
+      <![CDATA[
+      Mira shrugs, trying to smile.<br><br>
+      "I understand—not everyone’s called to fight monsters. Still, if you hear anything strange, or see Thalen or Aldric acting odd, please let me know. I worry about them more than I’d ever admit."
+      ]]>
+    </NPCText>
+    <Option text="On second thought, I’ll try." next="questIntro"/>
+    <Option text="I should go." action="Close"/>
+  </Dialogue>
+</DialogueFile>

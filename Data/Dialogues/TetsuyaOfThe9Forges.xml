@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="TetsuyaOfThe9Forges">
+
+  <!-- Greeting -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#dbd488'>
+      You behold a broad-shouldered smith, his hands blackened by years of toil. His eyes shine with keen intelligence.<BR><BR>
+      He bows, then intones in haiku:<BR><BR>
+      <I>Smoke curls in night air,<BR>
+      Steel sings beneath moonlit forge.<BR>
+      What brings you, seeker?</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek your legendary craft, Tetsuya." next="seekCraft"/>
+    <Option text="Tell me of the sword that drinks moonlight." next="moonlightSword"/>
+    <Option text="Who are you, smith of haiku?" next="who"/>
+    <Option text="I have rare ore from Frostmere." condition="HasItem:FrostmereOre" next="hasOre"/>
+	<Option text="Tell me of your life before Hinokami." next="backstoryIntro"/>
+    <Option text="Never mind." action="Close"/>
+  </Dialogue>
+
+  <!-- Who are you -->
+  <Dialogue id="who">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#dbd488'>
+      <I>
+      Hammer shapes the soul.<BR>
+      Iron remembers all pain.<BR>
+      I am Tetsuya.</I><BR><BR>
+      Nine forges I tend,<BR>
+      Each flame guards a secret past.<BR>
+      What is it you seek?
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Teach me your art." next="seekCraft"/>
+    <Option text="Your sword of moonlight... is it real?" next="moonlightSword"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Sword lore -->
+  <Dialogue id="moonlightSword">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#dbd488'>
+      <I>
+      Once, in silent dusk,<BR>
+      Blade caught falling moon’s shimmer.<BR>
+      Its thirst never quenched.<BR><BR>
+      Only those who solve<BR>
+      the riddle in winter’s heart<BR>
+      may hold such a blade.</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Set me your riddle, smith." next="riddleIntro"/>
+    <Option text="Perhaps another day." action="Close"/>
+  </Dialogue>
+
+  <!-- Seek craft -->
+  <Dialogue id="seekCraft">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#dbd488'>
+      <I>
+      Iron bends for gold,<BR>
+      Yet my fire bows only<BR>
+      To wisdom or ice.</I><BR><BR>
+      Bring me what frost hides,<BR>
+      Or answer what the wind asks.<BR>
+      Are you prepared, child?</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Test me with your riddle." next="riddleIntro"/>
+    <Option text="I bring you Frostmere Ore." condition="HasItem:FrostmereOre" next="hasOre"/>
+    <Option text="Not today." action="Close"/>
+  </Dialogue>
+
+  <!-- Riddle Introduction -->
+  <Dialogue id="riddleIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#dbd488'>
+      <I>
+      In Frostmere’s still heart,<BR>
+      When silence devours the dawn,<BR>
+      What glimmers unseen?
+      </I>
+      <BR><BR>
+      Answer true, and the forge opens.
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Moonlight upon ice." next="riddleCorrect"/>
+    <Option text="Lost spirits wander." next="riddleWrong"/>
+    <Option text="Crimson flame flickers." next="riddleWrong"/>
+    <Option text="Frozen memories." next="riddleWrong"/>
+    <Option text="I do not know." action="Close"/>
+  </Dialogue>
+
+  <!-- Correct Riddle -->
+  <Dialogue id="riddleCorrect">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#dbd488'>
+      Tetsuya bows deeply, lips parting in a rare smile.<BR><BR>
+      <I>
+      Wisdom in moon’s dance.<BR>
+      Frost reveals what eyes cannot.<BR>
+      You honor the blade.</I><BR><BR>
+      Bring me ore of frost—<BR>
+      or should you have it already, I shall begin your forging.
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Here is Frostmere Ore." condition="HasItem:FrostmereOre" next="hasOre"/>
+    <Option text="I will return with the ore." action="Close"/>
+  </Dialogue>
+
+  <!-- Wrong Riddle -->
+  <Dialogue id="riddleWrong">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#dbd488'>
+      Tetsuya shakes his head, voice soft as snowfall.<BR><BR>
+      <I>
+      The wind carries tales<BR>
+      But not all snow hides the truth.<BR>
+      Return—try again.</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Try the riddle again." next="riddleIntro"/>
+    <Option text="I will return later." action="Close"/>
+  </Dialogue>
+
+  <!-- Has Ore (Final Reward) -->
+  <Dialogue id="hasOre">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#dbd488'>
+      With silent reverence, Tetsuya accepts the ore.<BR><BR>
+      <I>
+      Metal cold as sleep,<BR>
+      Shaped by moon and memory.<BR>
+      Now the blade shall wake.</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Accept the Moonlight Blade." 
+            action="GiveItem:MoonlightBlade"
+            action="SendMessage:The sword feels cool and alive in your hands."
+            action="Close"/>
+  </Dialogue>
+
+<!-- =========================== -->
+<!-- BACKSTORY DIALOGUE BRANCH  -->
+<!-- =========================== -->
+
+<Dialogue id="backstoryIntro">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#dbd488'>
+    Tetsuya steps closer, voice softer now.<BR><BR>
+    <I>
+    Long before the flame,<BR>
+    I shaped steel beneath the stars—<BR>
+    in lands torn by war.</I><BR><BR>
+    Ask what you would know.
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="What was your homeland like?" next="homeland"/>
+  <Option text="Why do you speak only in haiku?" next="haikuWhy"/>
+  <Option text="What are the 9 Forges?" next="nineForges"/>
+  <Option text="Have you lost anything to Minax?" next="minaxLoss"/>
+  <Option text="You seem lonely, Tetsuya." condition="RandomChance:25" next="lonely"/>
+  <Option text="I will ask more later." action="Close"/>
+</Dialogue>
+
+<!-- Homeland -->
+<Dialogue id="homeland">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#dbd488'>
+    <I>
+    On Tokuno shores,<BR>
+    cherry blossoms wept ash gray—<BR>
+    as blades met for gold.</I><BR><BR>
+    War lords wanted swords.<BR>
+    I forged for peace... but found none.<BR>
+    Hinokami called.
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="So you left to seek peace?" next="forgePeace"/>
+  <Option text="And yet you still forge weapons?" next="contradiction"/>
+</Dialogue>
+
+<!-- Haiku Reason -->
+<Dialogue id="haikuWhy">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#dbd488'>
+    <I>
+    Words weigh more in fire.<BR>
+    Brevity is the hammer.<BR>
+    Haiku holds the truth.</I><BR><BR>
+    So I shape my speech,<BR>
+    as I shape steel—with silence,<BR>
+    rhythm, and meaning.
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="That is... beautiful." action="Karma:+250" />
+  <Option text="Odd choice, but fair." action="Close"/>
+</Dialogue>
+
+<!-- What are the 9 Forges? -->
+<Dialogue id="nineForges">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#dbd488'>
+    <I>
+    Each forge, a lesson:<BR>
+    One for heat, one for timing,<BR>
+    one for loss endured.</I><BR><BR>
+    I built nine for strength—<BR>
+    not for arms alone, but soul.<BR>
+    Few pass all their flames.
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Could I be tested by your forges?" condition="StatAtLeast:Str,80" next="testForges"/>
+  <Option text="What happens when all are passed?" next="forgeRevelation"/>
+  <Option text="I’ll remember your teaching." action="Karma:+150"/>
+</Dialogue>
+
+<!-- Forge Peace -->
+<Dialogue id="forgePeace">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#dbd488'>
+    <I>
+    Peace is tempered steel—<BR>
+    not the absence of the blade,<BR>
+    but the hand that sheaths.</I>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="You still carry that hope?" next="hope"/>
+</Dialogue>
+
+<Dialogue id="hope">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#dbd488'>
+    <I>
+    Hope fades with the dusk.<BR>
+    Still, I forge beneath starlight—<BR>
+    perhaps one will shine.</I>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Then I’ll carry one spark for you." action="Karma:+300"/>
+</Dialogue>
+
+<!-- Contradiction -->
+<Dialogue id="contradiction">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#dbd488'>
+    <I>
+    The blade is not war.<BR>
+    It reflects the heart behind—<BR>
+    slayer or savior?</I>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="You make weapons of wisdom." action="Fame:+100"/>
+</Dialogue>
+
+<!-- Has he lost to Minax? -->
+<Dialogue id="minaxLoss">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#dbd488'>
+    Tetsuya stiffens, his voice cold as iron.<BR><BR>
+    <I>
+    Her shadow took her—<BR>
+    Aiko, my moonlit lantern.<BR>
+    She forged no hatred.</I><BR><BR>
+    Do not speak her name,<BR>
+    unless your heart bears the will<BR>
+    to undo her work.
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="I vow to resist Minax’s darkness." action="Karma:+500"/>
+  <Option text="Forgive me. I meant no offense." action="Close"/>
+</Dialogue>
+
+<!-- Hidden loneliness (random chance) -->
+<Dialogue id="lonely">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#dbd488'>
+    Tetsuya exhales slowly, eyes distant.<BR><BR>
+    <I>
+    Steel hums when struck well.<BR>
+    The forge, when empty, echoes.<BR>
+    I hear silence now.</I>
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Then let my visit break silence." action="Karma:+100"/>
+  <Option text="Goodbye, Master Tetsuya." action="Close"/>
+</Dialogue>
+
+<!-- Forge Test (Stat-gated interaction) -->
+<Dialogue id="testForges">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#dbd488'>
+    Tetsuya nods with gravity.<BR><BR>
+    <I>
+    The fifth forge waits cold.<BR>
+    Prove your strength, then your stillness.<BR>
+    Return with no flame.</I><BR><BR>
+    Seek the Shrine of Ash—<BR>
+    burn no foe, raise no weapon.<BR>
+    Only then return.
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="I accept this trial of restraint." action="AttachXml:XmlQuestTracker,FifthForgeTrial"/>
+  <Option text="Another time, perhaps." action="Close"/>
+</Dialogue>
+
+<!-- What happens if all forges are passed? -->
+<Dialogue id="forgeRevelation">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#dbd488'>
+    <I>
+    When all forges burn,<BR>
+    one blade shall awaken deep—<BR>
+    flame that does not burn.</I><BR><BR>
+    Few have walked that path.<BR>
+    Will you be the one who does?<BR>
+    We shall see in time.
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="I will earn that blade." action="Fame:+200"/>
+  <Option text="A worthy goal for another day." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

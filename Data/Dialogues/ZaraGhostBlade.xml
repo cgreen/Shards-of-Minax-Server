@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="ZaraGhostBlade">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#f2f2f2'>
+      A tall, spectral woman stands before you, wrapped in shadowy silks and ancient leather. A cloak like faded midnight shrouds her shoulders; her eyes, pale as desert ghosts, miss nothing.<BR><BR>
+      Her voice is soft, edged with the memory of war:<BR><BR>
+      “You tread Qasaria’s golden dust, stranger, yet your steps sound hollow. I am Zara, once called the Ghost Blade. Some say I have no nation, no master—only scars and stories.”<BR><BR>
+      She rests her gloved hand on a sheathed dagger whose metal seems to shimmer with spirit-light.<BR><BR>
+      “So. What is it you want from the blade that serves no banner?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Are you truly the legendary Ghost Blade of the Sands?" next="backstory"/>
+    <Option text="I heard you fought Minax’s knight and lived." next="minaxduel"/>
+    <Option text="Do you have work for a mercenary?" next="questIntro"/>
+    <Option text="Why do you linger in Qasaria, not at war?" next="qasariaOpinion"/>
+	<Option text="Tell me more about yourself, Zara." next="deepBackstory"/>
+    <Option text="Just passing by. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Backstory Branch -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      Zara’s lips twitch in a half-smile.<BR><BR>
+      “Once, the name ‘Ghost Blade’ drew fear from Trinsic to Wind. I served in a hundred armies, none for long. In battle, all blood runs the same color.<BR>
+      Here in Qasaria, I find neither glory nor cause—only secrets. And old blades... like mine, lost and restless.”<BR><BR>
+      “If you seek tales, I can share those. But steel and spirits are dearer to me.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me your greatest victory." next="warStories"/>
+    <Option text="What blade did you lose?" next="lostBlade"/>
+    <Option text="Do you know the Council of Jewels?" next="council"/>
+    <Option text="Do you have work for me?" next="questIntro"/>
+    <Option text="I should go." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="warStories">
+    <NPCText>
+      <![CDATA[
+      She leans against a ruined pillar, eyes far away.<BR><BR>
+      “I once crossed blades with the Shadowspawn—Minax’s knight, a thing of void and pain, who killed for pleasure alone. It was beneath the moons at Skara Brae. We fought from dusk to dawn. In the end, I did not kill him, but I made him bleed. He carries the mark still, I am told.<BR>
+      Since then, Minax’s servants have hunted me. I live, but not for vengeance.”<BR><BR>
+      “Battle is memory, nothing more.”
+      ]]>
+    </NPCText>
+    <Option text="What blade did you lose?" next="lostBlade"/>
+    <Option text="Do you know the Council of Jewels?" next="council"/>
+    <Option text="Do you have work for me?" next="questIntro"/>
+    <Option text="Enough stories for now." action="Close"/>
+  </Dialogue>
+
+  <!-- Lost Blade Quest Setup -->
+  <Dialogue id="lostBlade">
+    <NPCText>
+      <![CDATA[
+      Her eyes grow colder.<BR><BR>
+      “I seek a sword named *Dust-Eater*. Spirit-forged in the time of the Desert Ancients, quenched in the tears of ghosts. It is no ordinary weapon—it drinks sorrow, and sings only in honest hands.<BR><BR>
+      I lost it beneath Qasaria’s oldest tomb, fleeing Minax’s cultists and the Ash Serpents. I left a piece of my soul there. I have scoured every ruin, but dark magic clouds the path.”<BR><BR>
+      “If you are bold—or foolish—enough, bring it to me. The sword chooses its bearer.”
+      ]]>
+    </NPCText>
+    <Option text="Where is the tomb?" next="tombDetails"/>
+    <Option text="What dangers wait below?" next="tombDangers"/>
+    <Option text="What’s in it for me if I return Dust-Eater?" next="reward"/>
+    <Option text="Let’s talk of something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="tombDetails">
+    <NPCText>
+      <![CDATA[
+      Zara nods grimly.<BR><BR>
+      “Seek the Obsidian Descent, at the city’s edge—an old catacomb where the dead of Qasaria’s first kings sleep. The sword lies deep, behind three sealed gates: one of sand, one of spirits, one of sorrow. Only the worthy pass.<BR>
+      Beware the Ash Serpents—they serve no master but chaos.”<BR><BR>
+      “If you find Dust-Eater, do not draw it without cause.”
+      ]]>
+    </NPCText>
+    <Option text="What dangers guard the sword?" next="tombDangers"/>
+    <Option text="What do I gain for this?" next="reward"/>
+    <Option text="I’ll return when I have Dust-Eater." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="tombDangers">
+    <NPCText>
+      <![CDATA[
+      Her voice turns cold.<BR><BR>
+      “The tomb is haunted by the **Ash Serpents**, nomads twisted by Minax’s magic. They burn what they cannot steal, worshiping dust and flame. Worse still, the tomb’s spirits hunger for the living. I fought them, once. They nearly took me.”<BR><BR>
+      “If you face them, do not show fear—or they will taste it.”
+      ]]>
+    </NPCText>
+    <Option text="What do I gain for this?" next="reward"/>
+    <Option text="Tell me of the Council of Jewels." next="council"/>
+    <Option text="I will seek the blade." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="reward">
+    <NPCText>
+      <![CDATA[
+      Zara’s gaze sharpens.<BR><BR>
+      “Bring me Dust-Eater, and you may claim coin, lore, or the Ghost Blade’s service. I do not serve for long, but my blade has changed fates before.<BR>
+      Fail me—or betray me—and I become your shadow. Few survive being hunted by Zara.”<BR><BR>
+      “Make your choice. I do not offer twice.”
+      ]]>
+    </NPCText>
+    <Option text="I want your loyalty—become my companion." action="SetFlag:ZaraCompanion" next="companionConfirm"/>
+    <Option text="I want gold and secrets." action="GiveGold:2000" next="loreReward"/>
+    <Option text="I want the Dust-Eater for myself." action="SetFlag:ZaraEnemy" next="enemyWarning"/>
+    <Option text="I’ll decide later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="companionConfirm">
+    <NPCText>
+      <![CDATA[
+      She draws a faint line on her palm, blood mixing with spirit-light.<BR><BR>
+      “Then it is sworn. Until fate parts us, the Ghost Blade is yours to command. But know this—my loyalty is to honor, not orders. Betray me, and you’ll see why ghosts never rest.”<BR>
+      <BASEFONT COLOR='#80ff80'>[Zara the Ghost Blade may now join you as a companion.]</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Let’s hunt together, Zara." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="loreReward">
+    <NPCText>
+      <![CDATA[
+      She tosses a heavy pouch of coins, eyes gleaming.<BR><BR>
+      “Spend it wisely. As for secrets: the Council of Jewels is not what it seems. Watch Karim al-Emerald—he plays a long, deadly game with Minax and the Undermarket. Trust no shadows in Qasaria.”<BR>
+      <BASEFONT COLOR='#ffe066'>[You have earned gold and forbidden lore!]</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Thank you. Farewell, Ghost Blade." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="enemyWarning">
+    <NPCText>
+      <![CDATA[
+      Her eyes turn to ice.<BR><BR>
+      “Then we are foes. I will take back what is mine, by shadow or steel. Pray our paths never cross in darkness.”<BR>
+      <BASEFONT COLOR='#ff3333'>[Zara will hunt you as a deadly bounty hunter!]</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I accept the risk." action="Close"/>
+  </Dialogue>
+
+  <!-- Qasaria Lore and Council -->
+  <Dialogue id="qasariaOpinion">
+    <NPCText>
+      <![CDATA[
+      “Qasaria is a city of masks. The Council of Jewels glitter in public, but draw knives in the dark. I trust none of them. Rafiq al-Ruby boasts of honor, but sells his sword for secrets. Safiya al-Sapphire would trade her own shadow for profit. Karim al-Emerald—watch him. He smiles with poison.<BR><BR>
+      I remain because the city is old, restless. There is war here, hidden beneath the gold.”
+      ]]>
+    </NPCText>
+    <Option text="Do you know the Council of Jewels?" next="council"/>
+    <Option text="What blade did you lose?" next="lostBlade"/>
+    <Option text="Is there work for me?" next="questIntro"/>
+    <Option text="I must go." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      “I have crossed paths with each. Fought for Rafiq, guarded Safiya’s caravans, even spied for Karim in darker times. None own my loyalty, nor do I seek their favor.<BR>
+      If you wish to survive Qasaria, play the Council against each other. But never let them play you.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about Rafiq." next="rafiq"/>
+    <Option text="What of Safiya al-Sapphire?" next="safiya"/>
+    <Option text="Tell me of Karim al-Emerald." next="karim"/>
+    <Option text="Enough politics. What of your quest?" next="lostBlade"/>
+    <Option text="I’ll be on my way." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="rafiq">
+    <NPCText>
+      <![CDATA[
+      “Rafiq was once a true warlord—his honor outweighed his ambition. Now? He worries more for Qasaria’s wealth than her soul. Still, if you need steel, his cavalry answer. For a price.”
+      ]]>
+    </NPCText>
+    <Option text="What of Safiya al-Sapphire?" next="safiya"/>
+    <Option text="Tell me of Karim al-Emerald." next="karim"/>
+    <Option text="Back to your quest." next="lostBlade"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="safiya">
+    <NPCText>
+      <![CDATA[
+      “Safiya would sell sand in the desert and water in a flood. She loves profit and hates rivals. If you cross her, beware her spies—and her gold. I have guarded her caravans, but never her secrets.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me of Karim al-Emerald." next="karim"/>
+    <Option text="Back to your quest." next="lostBlade"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="karim">
+    <NPCText>
+      <![CDATA[
+      Zara’s tone darkens.<BR>
+      “Karim is more shadow than man. He knows too much—about the Undermarket, Minax, even me. If you value your life, never bargain with him unless you know the blade at your own throat.”<BR>
+      “He is dangerous. As am I.”
+      ]]>
+    </NPCText>
+    <Option text="Back to your quest." next="lostBlade"/>
+    <Option text="Enough talk for now." action="Close"/>
+  </Dialogue>
+
+  <!-- Generic Quest Hook -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      “I have little use for hired swords, but much for bold souls. Find my spirit-forged blade—*Dust-Eater*—in the tombs beneath Qasaria. Return it, and I will reward you beyond gold.<BR>
+      Or… if you wish a simpler coin-task, I know Qasaria’s underworld needs a message delivered. Choose your path.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me more of the Dust-Eater quest." next="lostBlade"/>
+    <Option text="I’ll take the delivery job." action="GiveItem:FactionDeliveryQuestScroll(Undermarket, Qasaria, 150)" next="delivery"/>
+    <Option text="I’ll return later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="delivery">
+    <NPCText>
+      <![CDATA[
+      “Deliver this sealed scroll to the Undermarket’s Shadowmaster. Say nothing, and take no coin until it’s done. Return with proof and I’ll pay double.”<BR>
+      <BASEFONT COLOR='#c2ffb5'>[You have received a Faction Delivery Quest!]</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I understand. I’ll be back." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="deepBackstory">
+    <NPCText>
+      <![CDATA[
+      Zara shifts slightly, her eyes narrowing—not with hostility, but with the weight of remembering.<BR><BR>
+      “You want to know the Ghost Blade?” She chuckles dryly. “Few ask. Fewer survive the answers. But if you’ve the spine for ghosts and grit, then ask.”<BR><BR>
+      She leans forward. “Choose a thread, and I’ll unspool it.”
+      ]]>
+    </NPCText>
+    <Option text="Where were you born?" next="origin"/>
+    <Option text="Have you ever loved?" condition="IsFemale" next="loveFemale"/>
+    <Option text="Have you ever loved?" condition="IsMale" next="loveMale"/>
+    <Option text="What do you believe in?" next="beliefs"/>
+    <Option text="What's the most dangerous thing you've done?" next="danger"/>
+    <Option text="I'd like to ask something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="origin">
+    <NPCText>
+      <![CDATA[
+      “A tent, a dagger, and a fire. That was my cradle. I was born in the dunes of a dead province now swallowed by the Ash Serpents. My people were blades-for-hire, even before I could walk.<BR><BR>
+      I was blooded at twelve. My first kill was a man who tried to ransom my sister. I kept the ransom coin and the knife.”<BR><BR>
+      She tosses a dull silver coin into your hand.<BR>
+      <BASEFONT COLOR='#ffa07a'>[You have received a Coin of Ghost Memory.]</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="That’s brutal." next="originResponse1"/>
+    <Option text="You did what had to be done." next="originResponse2"/>
+    <Option text="Thanks for sharing that." action="GiveItem:GoldCoin(1)"/>
+    <Option text="Tell me another story." next="deepBackstory"/>
+  </Dialogue>
+
+  <Dialogue id="originResponse1">
+    <NPCText>
+      <![CDATA[
+      Zara shrugs.<BR>
+      “So is war. So is love. So is Qasaria in summer.”<BR><BR>
+      “What else do you burn to know?”
+      ]]>
+    </NPCText>
+    <Option text="Tell me another story." next="deepBackstory"/>
+  </Dialogue>
+
+  <Dialogue id="originResponse2">
+    <NPCText>
+      <![CDATA[
+      She nods approvingly.<BR>
+      “You understand. The knife was cleaner than what he planned. And the coin... I kept to remember how small death can be.”<BR><BR>
+      “What else do you burn to know?”
+      ]]>
+    </NPCText>
+    <Option text="Tell me another story." next="deepBackstory"/>
+  </Dialogue>
+
+  <Dialogue id="loveFemale">
+    <NPCText>
+      <![CDATA[
+      A rare softness flickers in her expression.<BR><BR>
+      “I once loved a sword-dancer from Skara Brae. Her name was Elire. We trained together, fought together… even defied the council of Trinsic together. But war doesn’t love us back.<BR><BR>
+      She died to a shadowcurse meant for me.”<BR>
+      Zara exhales, steadying herself. “Every time I kill a servant of Minax, I whisper Elire’s name.”
+      ]]>
+    </NPCText>
+    <Option text="That’s... beautiful and tragic." action="Karma:+100"/>
+    <Option text="She must have been worth remembering." next="deepBackstory"/>
+    <Option text="Let’s speak of something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="loveMale">
+    <NPCText>
+      <![CDATA[
+      Zara studies you for a moment, then nods.<BR><BR>
+      “His name was Kael, a mercenary like me. He taught me to dance with a blade and sing like a bird. He died like a fool—charging a fireball with nothing but honor in his heart.<BR><BR>
+      I’ve hated him for that. And missed him every battle since.”<BR>
+      She chuckles. “I still wear his ring... but never on my sword hand.”
+      ]]>
+    </NPCText>
+    <Option text="You still love him." action="Karma:+100"/>
+    <Option text="That’s the price of loving warriors." next="deepBackstory"/>
+    <Option text="Let’s speak of something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="beliefs">
+    <NPCText>
+      <![CDATA[
+      Zara sits on a broken marble bench, eyes drifting toward the Qasarian skyline.<BR><BR>
+      “I believe in honor without allegiance. I believe in keeping your word, even when no one's watching. I believe that blades sing truth louder than banners.<BR><BR>
+      And I believe Minax must be broken—not just beaten, but unmade, her name forgotten even by ghosts.”
+      ]]>
+    </NPCText>
+    <Option text="Then we are aligned in purpose." action="Fame:+250"/>
+    <Option text="Beliefs like that get you killed." next="beliefResponse"/>
+    <Option text="Let’s speak of something else." next="deepBackstory"/>
+  </Dialogue>
+
+  <Dialogue id="beliefResponse">
+    <NPCText>
+      <![CDATA[
+      “Perhaps. But I’d rather die for my code than live for someone else’s cowardice.”<BR><BR>
+      “What else do you want to know?”
+      ]]>
+    </NPCText>
+    <Option text="Tell me another story." next="deepBackstory"/>
+  </Dialogue>
+
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      Zara’s smile returns, sharp and dangerous.<BR><BR>
+      “I once infiltrated a Minax fortress by pretending to be one of her acolytes. Drank poison, wore ash robes, chanted nonsense for two days. Stole her map of the shattered Gem before their high priest noticed I was breathing properly.”<BR><BR>
+      She grins. “Still have the map... but I’d only share it with someone I trust.”
+      ]]>
+    </NPCText>
+    <Option text="I’ve proven my worth, haven’t I?" condition="SkillAtLeast:Snooping,80" next="mapReward"/>
+    <Option text="What would it take to earn that trust?" next="trustTest"/>
+    <Option text="Let’s speak of something else." next="deepBackstory"/>
+  </Dialogue>
+
+  <Dialogue id="mapReward">
+    <NPCText>
+      <![CDATA[
+      Zara eyes your fingers. “Hmm. Nimble enough. You’d have slipped it without a ripple.”<BR><BR>
+      She hands you a rolled scrap sealed with a silver rune.<BR>
+      <BASEFONT COLOR='#ffffcc'>[You have received: Fragment of Minax's Shard Map]</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I’ll guard it well." action="GiveItem:ShardMapFragment(1)"/>
+    <Option text="Let’s speak of something else." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="trustTest">
+    <NPCText>
+      <![CDATA[
+      Zara’s eyes glint mischievously.<BR><BR>
+      “Trust is earned blade-first. Bring me the *Bandit Emblem* from the Ash Serpents’ hideout north of the Tomb of Sorrow. It marks their elite. Bring me that, and I’ll share the map.”<BR><BR>
+      <BASEFONT COLOR='#ffc0cb'>[New Quest Objective: Slay an Ash Serpent Captain and retrieve the Bandit Emblem.]</BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with the emblem." action="AttachXml:XmlQuestTracker,ZaraBanditProof"/>
+    <Option text="That’s too dangerous for now." action="Close"/>
+  </Dialogue>
+
+
+</DialogueFile>

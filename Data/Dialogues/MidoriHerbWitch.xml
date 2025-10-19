@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="MidoriHerbWitch">
+
+  <!-- ==== Greeting ==== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#3FAF2A'>
+      You find a woman crouched among twisted roots, her kimono earth-stained, stringing pungent herbs while a fat, beady-eyed tanuki perches on a nearby stump, tail twitching.<BR><BR>
+      She looks up, green eyes glinting with humor and suspicion.<BR>
+      <I>“Careful, outsider. Step too close and you’ll trip my mushroom wards—or worse, rouse Chibi here. Speak your need, or share a tale for a cup of something strong.”</I><BR><BR>
+      The tanuki cackles. “Midori’s brews taste better than her threats! Well, sometimes.”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I need healing herbs or a cure." next="herbRequest"/>
+    <Option text="Your brews have a reputation..." next="brewReputation"/>
+    <Option text="Who are you and what’s with the tanuki?" next="aboutMidori"/>
+	<Option text="Tell me your story, Midori." next="midoriBackstoryIntro"/>
+    <Option text="I’m just passing through." next="dismiss"/>
+  </Dialogue>
+
+  <!-- ==== Ask for Healing/Cure ==== -->
+  <Dialogue id="herbRequest">
+    <NPCText>
+      <![CDATA[
+      Midori eyes you with a sly grin.<BR>
+      <I>“Ah, you seek medicine! All good things come with a cost, friend. Coin, a favor, or a secret… Or do you have a sample for me to study?”</I><BR>
+      The tanuki rubs his paws. “Or bring her mushrooms. The weird ones. She likes those.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I can pay in gold." next="goldCure" condition="GoldAtLeast:1000"/>
+    <Option text="Do you need any ingredients gathered?" next="ingredientFavor"/>
+    <Option text="I can share a secret for your silence." next="shareSecret"/>
+    <Option text="I have rare mushrooms!" next="giveMushrooms" condition="HasItem:RareMushroom"/>
+    <Option text="Never mind." action="Close"/>
+  </Dialogue>
+
+  <!-- ==== Gold Exchange ==== -->
+  <Dialogue id="goldCure">
+    <NPCText>
+      <![CDATA[
+      Midori flicks her hand and a swirl of petals dances around your wounds.<BR>
+      <I>“A fair trade. May the spirits favor your health.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Thank you." action="Heal:50;GiveItem:MidoriHerbalPoultice;GiveGold:-1000;SendMessage:Midori gives you a fragrant poultice for your wounds."/>
+  </Dialogue>
+
+  <!-- ==== Ingredient Gathering ==== -->
+  <Dialogue id="ingredientFavor">
+    <NPCText>
+      <![CDATA[
+      Midori nods approvingly.<BR>
+      <I>“There’s hope for you yet. Bring me a handful of starroot bulbs and a pinch of dusk fern—grow wild by the river, but watch for biting spirits. Return and I’ll brew what you need.”</I><BR>
+      Chibi whispers, “They say the river spirits nibble toes…”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I’ll find them and return." action="GiveItem:MidoriIngredientQuestScroll"/>
+    <Option text="That sounds risky. Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- ==== Secret Exchange ==== -->
+  <Dialogue id="shareSecret">
+    <NPCText>
+      <![CDATA[
+      Midori leans forward, curiosity piqued.<BR>
+      <I>“Tell me something I don’t know—about the elders, or perhaps your own shadow. No lies, or Chibi will know!”</I>
+      ]]>
+    </NPCText>
+    <Option text="(Confess a dark secret…)" next="acceptSecret"/>
+    <Option text="On second thought, never mind." action="Close"/>
+  </Dialogue>
+  <Dialogue id="acceptSecret">
+    <NPCText>
+      <![CDATA[
+      Midori grins, eyes dancing. “Delicious. I trade you this cure, but your secret’s mine to savor.”<BR>
+      Chibi snickers: “Hope you didn’t mention me!”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Deal." action="Heal:50;GiveItem:MidoriHerbalPoultice;Karma:-100;SendMessage:You feel slightly uneasy as Midori gives you a cure..."/>
+  </Dialogue>
+
+  <!-- ==== Give Mushrooms ==== -->
+  <Dialogue id="giveMushrooms">
+    <NPCText>
+      <![CDATA[
+      Midori’s face lights up. “Exquisite! You know how to please a witch. Here—take this salve and a talisman. The spirits will remember your kindness.”<BR>
+      The tanuki licks his lips. “Lucky! She gives the good stuff to fungus-bringers.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you!" action="Heal:100;GiveItem:MidoriTalisman;SendMessage:Midori rewards your rare mushrooms with potent gifts.;RemoveItem:RareMushroom"/>
+  </Dialogue>
+
+  <!-- ==== Her Brew’s Reputation ==== -->
+  <Dialogue id="brewReputation">
+    <NPCText>
+      <![CDATA[
+      Midori cackles, swirling a bubbling flask.<BR>
+      <I>“Aye, some say my tonics restore a bear’s courage—others say they’ll make you see spirits for a week. All true, none false. I brew for those bold enough to try, but never for cowards or petty elders.”</I><BR>
+      Chibi pipes up, “Except old Takeo, who drank two… and sprouted moss!”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Can I try one of your legendary brews?" next="brewOffer"/>
+    <Option text="Why do the elders distrust you?" next="elders"/>
+    <Option text="Maybe later." action="Close"/>
+  </Dialogue>
+
+  <!-- ==== Brew Offer ==== -->
+  <Dialogue id="brewOffer">
+    <NPCText>
+      <![CDATA[
+      Midori raises a gourd. “For the brave: a choice. Would you be <U>fortified</U>, <U>invisible</U>, or <U>poisonous</U> to foes? Choose carefully—effects may surprise!”<BR>
+      Chibi winks: “Try two for double the trouble…”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Fortified, please." next="brewFortify"/>
+    <Option text="Invisible, sounds fun!" next="brewInvis"/>
+    <Option text="Poison, for my enemies." next="brewPoison"/>
+    <Option text="...Maybe not right now." action="Close"/>
+  </Dialogue>
+  <Dialogue id="brewFortify">
+    <NPCText>
+      <![CDATA[
+      Midori chants and hands you a steaming brew. “May your strength never falter!”<BR>
+      ]]>
+    </NPCText>
+    <Option text="(Drink the Fortification Brew)" action="AddStat:Str,10,600;GiveItem:MidoriFortificationBrew;SendMessage:You feel power surge through your body!"/>
+  </Dialogue>
+  <Dialogue id="brewInvis">
+    <NPCText>
+      <![CDATA[
+      Midori offers a flask that shimmers like morning dew. “Now you see yourself, now you don’t.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="(Drink the Invisibility Brew)" action="CastSpell:Invisibility;GiveItem:MidoriInvisibilityBrew;SendMessage:You fade from sight!"/>
+  </Dialogue>
+  <Dialogue id="brewPoison">
+    <NPCText>
+      <![CDATA[
+      Midori grins wickedly. “Just a drop will make your blade sing with venom.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="(Accept the Poison Brew)" action="GiveItem:MidoriPoisonBrew;SendMessage:Your next attack will poison your foe!"/>
+  </Dialogue>
+
+  <!-- ==== Why the Elders Distrust Her ==== -->
+  <Dialogue id="elders">
+    <NPCText>
+      <![CDATA[
+      Midori’s eyes narrow.<BR>
+      <I>“They fear what they cannot control. My roots run deeper than their rules—my cures, my curses. Some come to beg my help in secret; others call for my exile in daylight. But I’ll never leave these woods while a single soul needs my gifts.”</I>
+      ]]>
+    </NPCText>
+    <Option text="Will you stay if Hinokami needs you against Minax?" next="minaxHelp"/>
+    <Option text="You have my support, witch or not." action="Karma:+100;SendMessage:Midori nods in quiet gratitude."/>
+    <Option text="That sounds dangerous. Farewell." action="Close"/>
+  </Dialogue>
+  <Dialogue id="minaxHelp">
+    <NPCText>
+      <![CDATA[
+      Midori looks grave.<BR>
+      <I>“Minax’s shadows creep even here. If you seek my brews for the battle, bring me a token from a defeated cultist—something personal. Only then will I mix you a true witch’s potion.”</I>
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with a cultist’s token." action="GiveItem:MidoriMinaxQuestScroll"/>
+    <Option text="That’s too grim for me." action="Close"/>
+  </Dialogue>
+
+  <!-- ==== About Midori and the Tanuki ==== -->
+  <Dialogue id="aboutMidori">
+    <NPCText>
+      <![CDATA[
+      The tanuki puffs up, bowing low. “I am Chibi, spirit of root and rain—her oldest, hungriest friend!”<BR>
+      Midori snorts. “Ignore his tales. I’m Midori, keeper of herbs, walker-between-worlds. I mend, I mix, I meddle. The old ones want me gone; the wise still come. My brews can heal, curse, or open your mind—if you trust a witch.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="Can Chibi talk to other spirits?" next="chibiTalk"/>
+    <Option text="How did you two meet?" next="chibiOrigin"/>
+    <Option text="I’d like to buy a potion." next="herbRequest"/>
+    <Option text="That’s all I needed, thank you." action="Close"/>
+  </Dialogue>
+  <Dialogue id="chibiTalk">
+    <NPCText>
+      <![CDATA[
+      Chibi chatters, “Spirits gossip more than mortals! Sometimes I tell Midori, sometimes I just eat their snacks.”<BR>
+      Midori winks: “If you have a message for the dead or the forest spirits, Chibi can carry it… for a price.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I have a message for the spirits." action="GiveItem:ChibiSpiritMessageScroll"/>
+    <Option text="Maybe next time." action="Close"/>
+  </Dialogue>
+  <Dialogue id="chibiOrigin">
+    <NPCText>
+      <![CDATA[
+      Midori sighs fondly. “He stole my lunch. I caught him in a trap of bluebells, but he bit me. We’ve been together ever since.”<BR>
+      Chibi preens: “Best trap I ever chewed.”<BR>
+      ]]>
+    </NPCText>
+    <Option text="You two make a good team." next="herbRequest"/>
+    <Option text="That’s all for now." action="Close"/>
+  </Dialogue>
+
+  <!-- ==== Dismiss ==== -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Midori shrugs, turning back to her herbs.<BR>
+      <I>“Careful where you wander. My wards aren’t picky about trespassers.”</I><BR>
+      Chibi waves. “Come back if you get poisoned, cursed, or just bored!”<BR>
+      ]]>
+    </NPCText>
+    <Option text="I’ll keep that in mind." action="Close"/>
+  </Dialogue>
+
+<!-- ==== Backstory Intro ==== -->
+<Dialogue id="midoriBackstoryIntro">
+  <NPCText>
+    <![CDATA[
+    Midori sits back on her heels, fingers brushing a sprig of starroot.<BR>
+    <I>“You wish to know the tale of the witch who lives too near your tidy town?”</I> she says, smiling faintly.<BR>
+    Chibi groans. “Oh no, it’s story time.”<BR><BR>
+    <I>“I was not always 'Midori'. I once trained at the Temple of Jade Blossoms, west of Mount Tokuko. I learned chants, herb-lore, and discipline… until I broke a vow. I saved a life I was told to let go. That life was Chibi’s.”</I>
+    ]]>
+  </NPCText>
+  <Option text="So you were a temple healer?" next="midoriTemple"/>
+  <Option text="Why save a tanuki?" next="midoriChibiChoice"/>
+  <Option text="Do you miss the temple life?" next="midoriNostalgia"/>
+</Dialogue>
+
+<!-- ==== Her Life as a Temple Healer ==== -->
+<Dialogue id="midoriTemple">
+  <NPCText>
+    <![CDATA[
+    Midori nods. “A healer, yes—but also a silent observer. We were meant to treat, not interfere. But when the High Abbot let a wounded spirit die for ‘balance’… I refused.<BR>
+    I was cast out with nothing but a blade of rivergrass and my own name stripped. So I took a new one—<B>Midori</B>, after the color of stubborn life.”<BR>
+    Chibi burps. “I thought it meant ‘tastes like moss’.”<BR>
+    ]]>
+  </NPCText>
+  <Option text="Sounds like you defied injustice." action="Karma:+150;SendMessage:You feel a swell of respect for Midori."/>
+  <Option text="Seems reckless to defy a sacred order." action="Karma:-50;SendMessage:Midori frowns slightly at your tone."/>
+  <Option text="Let’s talk about something else." next="greeting"/>
+</Dialogue>
+
+<!-- ==== Why She Saved Chibi ==== -->
+<Dialogue id="midoriChibiChoice">
+  <NPCText>
+    <![CDATA[
+    Midori chuckles. “Because he begged. With words. And with eyes so full of spirit, I couldn’t bear to let him die. Tanuki are tricksters, yes—but also guardians. He was young, foolish, and nearly drowned by poachers.”<BR>
+    Chibi huffs. “I still say I slipped on purpose.”<BR><BR>
+    <I>“In saving him, I broke temple law. But I gained a companion... and a bridge to the spirit world.”</I>
+    ]]>
+  </NPCText>
+  <Option text="Do you speak with spirits often?" next="midoriSpiritTalk"/>
+  <Option text="What does Chibi guard, exactly?" next="midoriChibiRole"/>
+</Dialogue>
+
+<!-- ==== Spirit Communication ==== -->
+<Dialogue id="midoriSpiritTalk">
+  <NPCText>
+    <![CDATA[
+    “Every herb has a whisper. Every breeze carries old sorrow. I listen—sometimes too well.”<BR>
+    She hands you a charm made of woven grass and fox fur.<BR>
+    <I>“This charm may help you hear one too, if your heart is still enough.”</I>
+    ]]>
+  </NPCText>
+  <Option text="Thank you for the charm." action="GiveItem:MidoriSpiritCharm;Karma:+50;SendMessage:You feel a faint vibration from the charm in your hand."/>
+</Dialogue>
+
+<!-- ==== Chibi’s True Role ==== -->
+<Dialogue id="midoriChibiRole">
+  <NPCText>
+    <![CDATA[
+    Chibi puffs up. “I am her guide, her gossip, and her glutton. I know every root that sings and every fox that lies.”<BR>
+    Midori smiles. “He grounds me in laughter. And wards me from losing too much of myself to the veil between worlds.”<BR>
+    ]]>
+  </NPCText>
+  <Option text="You're a good pair, mischief and mercy." action="Fame:+50;SendMessage:Chibi gives a theatrical bow."/>
+</Dialogue>
+
+<!-- ==== Nostalgia for Temple Life ==== -->
+<Dialogue id="midoriNostalgia">
+  <NPCText>
+    <![CDATA[
+    Her gaze grows distant. “Sometimes. The scent of sandalwood. The sound of temple bells. But I was never meant to serve in silence.”<BR>
+    She looks at you intently.<BR>
+    <I>“Do you obey every command… even when your soul says no?”</I>
+    ]]>
+  </NPCText>
+  <Option text="I follow orders. It's the right way." action="Karma:-100;SendMessage:Midori sighs and looks away."/>
+  <Option text="I follow what I believe is right." action="Karma:+150;SendMessage:Midori’s eyes brighten with approval."/>
+  <Option text="Depends who's asking." condition="RandomChance:50" action="Karma:+25;SendMessage:Midori laughs. 'A true survivor’s answer.'"/>
+</Dialogue>
+
+
+</DialogueFile>

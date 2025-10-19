@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="TildaMurn">
+  <!-- === root greeting === -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#c2b280'>
+      You see an elderly woman standing amidst a herd of bleating goats. Her patched cloak is speckled with hay and her bonnet sits askew, revealing wiry grey hair. She glares at you over a battered staff carved with arcane runes and goat heads.<BR><BR>
+      "By the muddy gods of the fen! Don’t stand there gawking—close the gate, or do you want every last goat to vanish too? Speak up, whelp. Tilda Murn’s got chores and not much patience for dawdlers. What brings you to my end of the village?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I heard your goats are missing. Need help finding them?" next="missingGoats"/>
+    <Option text="Who are you, exactly?" next="whoAreYou"/>
+    <Option text="That’s quite a flock you have. How do you keep them safe?" next="flockSafe"/>
+    <Option text="I’m just passing by." next="justPassing"/>
+  </Dialogue>
+
+  <!-- Missing goats hook -->
+  <Dialogue id="missingGoats">
+    <NPCText>
+      <![CDATA[
+      Tilda’s face softens—barely.<BR><BR>
+      "Eh? You’re sharper than most of this mud-brained lot. Yes, my goats are vanishing! And not by tooth or claw, neither. Minax’s shadows flit in the night. She don’t eat meat—she takes minds! My old horn-brown Matilda is out there somewhere, and the rest are trembling like greenhorns at a full moon. Worse yet, one’s started talking to me—in dreams! Goat dreams!"<BR><BR>
+      She squints at you. "Still want to help, or are you frightened off by goat-witchery?"
+      ]]>
+    </NPCText>
+    <Option text="Goat dreams? Tell me more." next="goatDreams"/>
+    <Option text="I’m not afraid. Where should I start looking?" next="whereToLook"/>
+    <Option text="This sounds a bit mad, Tilda..." next="goatMad"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Who are you branch -->
+  <Dialogue id="whoAreYou">
+    <NPCText>
+      <![CDATA[
+      Tilda thrusts her staff at you.<BR><BR>
+      "Who am I? Only woman with enough sense to keep a goat from drowning in its own piss in this village. Tilda Murn, once of Magincia’s court—before the great ruin, when your grandparents were still in swaddles. Now I herd goats, and I do it better than any gold-braided mayor, let me tell you. Folk say I talk to beasts. Folk say a lot—most of it’s true." <BR><BR>
+      She smirks. "Miralda’s got her shrine, Halric his palisades. I’ve got my goats, and they’re smarter than either."
+      ]]>
+    </NPCText>
+    <Option text="Why stay out here alone?" next="stayAlone"/>
+    <Option text="Did you really live in Magincia?" next="magincia"/>
+    <Option text="Back to your goats—what’s troubling them?" next="missingGoats"/>
+    <Option text="I’ll leave you to your herd." action="Close"/>
+  </Dialogue>
+
+  <!-- Flock safety branch -->
+  <Dialogue id="flockSafe">
+    <NPCText>
+      <![CDATA[
+      Tilda cackles.<BR><BR>
+      "Keep them safe? Hah! I have the temper of an ogre and the staff to match, that’s how! Aldric the hunter knows better than to steal my milkers. Even the mayor keeps his distance—unless he wants cheese for his supper."<BR>
+      She lowers her voice.<BR>
+      "Truth is, something’s been spooking the flock. Not wolves. Not bandits. They look past me, at the woods—like something’s calling them, promising… well, goats are foolish, but not that foolish. I need a set of legs younger than mine to check the old willow glen and the stone circle. I’d go myself, but… arthritis and ghosts don’t mix."
+      ]]>
+    </NPCText>
+    <Option text="I’ll check those places for you." next="goatQuest"/>
+    <Option text="Sounds risky. Why not ask Aldric?" next="aldric"/>
+    <Option text="You ever lose a goat before?" next="loseGoat"/>
+    <Option text="Thanks for the warning." action="Close"/>
+  </Dialogue>
+
+  <!-- Passing by branch -->
+  <Dialogue id="justPassing">
+    <NPCText>
+      <![CDATA[
+      Tilda rolls her eyes.<BR><BR>
+      "Then walk careful, and watch your pockets. One of my goats likes shiny things and you look the type to lose a ring. If you change your mind about honest work, come back with mud on your boots and we’ll talk."
+      ]]>
+    </NPCText>
+    <Option text="I might return for work." next="greeting"/>
+    <Option text="Farewell, Goat-Matron." action="Close"/>
+  </Dialogue>
+
+  <!-- Goat dreams branch -->
+  <Dialogue id="goatDreams">
+    <NPCText>
+      <![CDATA[
+      Tilda drops her voice to a whisper.<BR><BR>
+      "Ever have a goat speak to you in a dream, traveler? No? Lucky you. Mine bleats riddles and smells of wildflowers. The last dream, she told me: ‘The stone remembers what the grass forgets.’ Old court phrase—means magic’s about. I suspect my Matilda’s been enchanted, or worse, polymorphed—there’s more human behind those eyes than most realize. Find her and you might find more than a missing goat. Maybe a lost soul or two, if you’ve the wits to look."
+      ]]>
+    </NPCText>
+    <Option text="I’ll find Matilda for you." next="goatQuest"/>
+    <Option text="What should I do if the goat talks to me?" next="goatAdvice"/>
+    <Option text="Maybe you need rest, Tilda." next="goatMad"/>
+  </Dialogue>
+
+  <Dialogue id="goatAdvice">
+    <NPCText>
+      <![CDATA[
+      She grins, revealing a gold tooth.<BR><BR>
+      "Talk back! Never let a goat get the last word. If Matilda speaks sense, listen close and remember what she says. If she starts reciting ancient law or prophecy, run for Priestess Miralda—or bring me a bottle of plum brandy, I’ll sort her out myself."
+      ]]>
+    </NPCText>
+    <Option text="Got it. I’ll try to speak with Matilda." next="goatQuest"/>
+    <Option text="Sounds too strange for me." action="Close"/>
+  </Dialogue>
+
+  <!-- Where to look -->
+  <Dialogue id="whereToLook">
+    <NPCText>
+      <![CDATA[
+      Tilda nods sharply.<BR><BR>
+      "Check the willow glen by the creek and the old stone circle east of the pastures. Matilda was last seen near the standing stones—sometimes I think they call to folk and beasts alike. If you spot glowing eyes or hear strange whispers, don’t panic. Unless you see two heads on one body—then panic. That’ll be the TwinTerrorEttin, not my goats."
+      ]]>
+    </NPCText>
+    <Option text="Wait—two heads? What’s a TwinTerrorEttin?" next="ettinIntro"/>
+    <Option text="I’ll start my search." action="GiveItem:FactionKillQuestScroll(TwinTerrorEttin,1,Eldermoor,600)" next="questAccepted"/>
+    <Option text="I might pass on this." action="Close"/>
+  </Dialogue>
+
+  <!-- Goat mad branch -->
+  <Dialogue id="goatMad">
+    <NPCText>
+      <![CDATA[
+      Tilda snorts.<BR><BR>
+      "Plenty have called me mad, but I still have my herd, don’t I? More than most can say since Minax’s devils came. If you’re too timid for goat-magic, go bother Halric or the innkeeper—maybe they’ll pay you in stale bread and bad ale."
+      ]]>
+    </NPCText>
+    <Option text="No offense. I’ll help if you’ll have me." next="goatQuest"/>
+    <Option text="I’ll take my leave." action="Close"/>
+  </Dialogue>
+
+  <!-- Stay alone branch -->
+  <Dialogue id="stayAlone">
+    <NPCText>
+      <![CDATA[
+      "Why not? No one here trusts a woman with talking goats and a Magincian accent. My first kin’s bones lie beneath the marble towers of Magincia—before Minax made ash of them. This village? It tolerates me. But my goats, they remember my real name. If you can keep their secrets, you’re welcome at my fire."
+      ]]>
+    </NPCText>
+    <Option text="What secrets do your goats know?" next="goatDreams"/>
+    <Option text="Sorry for your losses, Tilda." next="magincia"/>
+    <Option text="Thank you for your honesty." next="greeting"/>
+  </Dialogue>
+
+  <!-- Magincia branch -->
+  <Dialogue id="magincia">
+    <NPCText>
+      <![CDATA[
+      Tilda sighs, a rare flicker of sadness.<BR><BR>
+      "Aye, I was a familiar once—a shapechanger for a great mage. Learned the old words and saw the city’s pride crumble. Now I keep my talents to myself. Sometimes I wonder if a few goats in Eldermoor aren’t folk like me, hiding from fate. You’d do well to be wary—magic runs thick in these parts."
+      ]]>
+    </NPCText>
+    <Option text="Did you lose any friends to Minax?" next="minaxSad"/>
+    <Option text="Let’s talk about the missing goats again." next="missingGoats"/>
+    <Option text="That’s enough memories for now." next="greeting"/>
+  </Dialogue>
+
+  <Dialogue id="minaxSad">
+    <NPCText>
+      <![CDATA[
+      She nods, voice rough.<BR><BR>
+      "Too many. Minax burns everything she touches, but some folk—like Miralda, like Edda—try to mend what’s left. That’s why I stay out here. Harder for the shadows to sneak up when you’re watching for hoofprints in the dark."
+      ]]>
+    </NPCText>
+    <Option text="I’ll help you watch for shadows." next="missingGoats"/>
+    <Option text="Let’s change the subject." next="greeting"/>
+  </Dialogue>
+
+  <!-- Goat quest offer -->
+  <Dialogue id="goatQuest">
+    <NPCText>
+      <![CDATA[
+      Tilda hands you a tuft of coarse, silvery goat hair.<BR><BR>
+      "Here, take this. Matilda’s hair—smells of elderflowers and secrets. The goats know you now; maybe you’ll find what I can’t. If you stumble on the TwinTerrorEttin in the stone circle, don’t try to reason with it—bash its heads or run. If you bring back proof, I’ll see you’re rewarded with the best cheese in Eldermoor, and maybe a secret or two."
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with news of Matilda and the Ettin."
+            action="GiveItem:FactionKillQuestScroll(TwinTerrorEttin,1,Eldermoor,600)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="questAccepted"/>
+    <Option text="On second thought, this sounds dangerous." action="Close"/>
+  </Dialogue>
+
+  <!-- Ettin introduction -->
+  <Dialogue id="ettinIntro">
+    <NPCText>
+      <![CDATA[
+      "TwinTerrorEttin—nasty, hungry, and twice as ugly as your worst nightmare. Two heads, both mean, both talk in riddles. Tramples goats, eats fences, and howls at the moon. Even Halric gives it a wide berth. If you want to impress me, or just keep your legs attached, slay that brute. Bring me one of its tusks or whatever passes for a trophy."
+      ]]>
+    </NPCText>
+    <Option text="Alright, I’ll handle it for you."
+            action="GiveItem:FactionKillQuestScroll(TwinTerrorEttin,1,Eldermoor,600)"
+            condition="!HasItem:FactionKillQuestScroll"
+            next="questAccepted"/>
+    <Option text="I’ll think about it." action="Close"/>
+  </Dialogue>
+
+  <!-- Ask Aldric branch -->
+  <Dialogue id="aldric">
+    <NPCText>
+      <![CDATA[
+      Tilda snorts.<BR><BR>
+      "Aldric’s got a soft spot for my cheese, but he’s been limping since that last boar hunt. Besides, the goats trust me—and Edda more than any hunter. If you see Edda, tell her Tilda sent you; she knows the woods and might brew you something for the ghosts."
+      ]]>
+    </NPCText>
+    <Option text="I’ll seek Edda’s wisdom if I need it." next="goatQuest"/>
+    <Option text="Thanks. I’ll be careful." next="goatQuest"/>
+  </Dialogue>
+
+  <!-- Ever lose a goat before -->
+  <Dialogue id="loseGoat">
+    <NPCText>
+      <![CDATA[
+      "Lose a goat? Not on your life. Unless you count that druid from Yew, but that’s another story. My goats come when called, unless magic’s involved. If you see hoofprints that glow or seem to walk in circles, follow them. You might find more than you bargained for."
+      ]]>
+    </NPCText>
+    <Option text="I’ll keep an eye out for magic." next="goatQuest"/>
+    <Option text="Good advice. Thank you." next="greeting"/>
+  </Dialogue>
+
+  <!-- Quest accepted branch -->
+  <Dialogue id="questAccepted">
+    <NPCText>
+      <![CDATA[
+      Tilda leans on her staff, finally approving.<BR><BR>
+      "Good. Mind you—if a goat starts reciting poetry or offers you a riddle, humor her. She might be my cousin from the old days. And if you bring back the Ettin’s tusk and find Matilda safe, I’ll teach you how to call a goat from half a league away. Useful skill for cityfolk, or so I hear. Off with you, then. My knees ache just thinking about that stone circle."
+      ]]>
+    </NPCText>
+    <Option text="Wish me luck, Tilda." action="Close"/>
+  </Dialogue>
+
+</DialogueFile>

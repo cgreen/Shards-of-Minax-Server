@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="DurnHollowtooth">
+
+  <!-- === root ================================================= -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#aee5ff'>
+      A massive, black-furred figure crouches by the village edge, hunched in the snow. He wears a horned mask, a kilt of thick wool, and a frost-encrusted cloak that stirs in the wind.<br>
+      As you approach, he tosses a smooth pebble into the air, catching it with a calloused paw. His blue eyes regard you with gentle intelligence.<br><br>
+      He says nothing, but nods—then draws a series of symbols in the snow at your feet.<br><br>
+      <i>Durn Hollowtooth is mute. He communicates by gesture, stones, and the sign language taught by Irinya, the Ice Seer.</i>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Try to communicate in simple signs." next="signs"/>
+    <Option text="Wait and see what he does." next="wait"/>
+    <Option text="You’re Durn Hollowtooth, right? Irinya speaks highly of you." next="irinya"/>
+    <Option text="Study his outfit and mask." next="outfit"/>
+	<Option text="Gesture to learn more about him." next="durnBackstoryStart"/>
+    <Option text="Leave quietly." action="Close"/>
+  </Dialogue>
+
+  <!-- Signs Branch -->
+  <Dialogue id="signs">
+    <NPCText>
+      <![CDATA[
+      Durn grins, flashing broad white teeth. He taps his heart, points at you, then makes a wide circle over his head.<br>
+      With deliberate care, he arranges three pebbles in a triangle, and places a fourth at the triangle’s edge—then gestures northeast, toward the frozen wilds.<br><br>
+      <i>He seems to be inviting you to listen, or perhaps to follow him…</i>
+      ]]>
+    </NPCText>
+    <Option text="Nod and gesture for him to continue." next="dreams"/>
+    <Option text="Attempt to mimic his gesture, placing a pebble as he did." next="mimic"/>
+    <Option text="Ask about the triangle and pebble." next="triangle"/>
+    <Option text="Step back, uncertain." next="wait"/>
+  </Dialogue>
+
+  <!-- Wait Branch -->
+  <Dialogue id="wait">
+    <NPCText>
+      <![CDATA[
+      Durn watches you for a long, silent moment.<br>
+      Then, gently, he offers you a cold, perfectly round stone. When you take it, a sudden chill stirs in your mind—a fleeting vision of a distant shrine, buried beneath blue ice, and the song of a woman's laughter echoing through the storm.<br><br>
+      <i>Durn points toward the vision, his hand trembling, then pounds his chest and points to you. He needs help.</i>
+      ]]>
+    </NPCText>
+    <Option text="Accept the quest to investigate the vision." next="questIntro"/>
+    <Option text="Try to ask what the vision means." next="vision"/>
+    <Option text="Thank him and depart." action="Close"/>
+  </Dialogue>
+
+  <!-- Irinya Branch -->
+  <Dialogue id="irinya">
+    <NPCText>
+      <![CDATA[
+      Durn’s eyes brighten, and he taps his horned mask. He points to the sky, then mimes listening, then makes a swirling motion—perhaps suggesting he hears the “whispers” of the wind, as Irinya does.<br>
+      He traces a symbol on the snow—two intersecting spirals, the sign Irinya uses for “destiny.”<br>
+      Then, quietly, he holds up a pebble, showing it to you. It’s etched with a single rune: <b>“Danger”</b>.<br>
+      ]]>
+    </NPCText>
+    <Option text="What danger?" next="danger"/>
+    <Option text="Ask if Irinya has sent him." next="sent"/>
+    <Option text="Change the subject." next="outfit"/>
+  </Dialogue>
+
+  <!-- Outfit Branch -->
+  <Dialogue id="outfit">
+    <NPCText>
+      <![CDATA[
+      Durn notices your interest in his garb. He bows slightly, spreading his arms.<br>
+      He taps the fur cloak: <b>Mantle of Shaggy Silence</b>—then pulls at his kilt: <b>Tundra Hunter’s Kilt</b>. He lifts one enormous foot and waggles it—<b>Frostbite Hide Boots</b>. Finally, he points to his horned mask, holding it up so you glimpse the inside: blue runes glowing faintly.<br><br>
+      Each piece seems to have a story. Durn traces a crescent on his armguard—perhaps a trophy from a battle, or a memory of his lost kin.<br>
+      ]]>
+    </NPCText>
+    <Option text="Gesture admiration." next="admire"/>
+    <Option text="Ask about his family." next="family"/>
+    <Option text="Move the conversation back to his purpose." next="dreams"/>
+    <Option text="Thank him and leave." action="Close"/>
+  </Dialogue>
+
+  <!-- Admire branch -->
+  <Dialogue id="admire">
+    <NPCText>
+      <![CDATA[
+      Durn smiles, a bashful gleam in his eyes. He offers you a stone—this one painted with blue swirls.<br>
+      He taps his chest, then draws a heart in the snow, and points to the village.<br>
+      <i>His gratitude is genuine, and it’s clear he loves Frostmere and its people deeply.</i>
+      ]]>
+    </NPCText>
+    <Option text="You seem very loyal to this place." next="loyal"/>
+    <Option text="Return to his reason for seeking you out." next="dreams"/>
+    <Option text="Take your leave." action="Close"/>
+  </Dialogue>
+
+  <!-- Family branch -->
+  <Dialogue id="family">
+    <NPCText>
+      <![CDATA[
+      Durn’s mood darkens. He holds up two fingers, then snaps one off and drops it, letting it vanish in the snow.<br>
+      He then points to the mask, touches his heart, and then gestures toward the central lodge of Frostmere.<br>
+      <i>He may have lost family, but has found new kin here—likely Irinya, and perhaps the Silent Hunter.</i>
+      ]]>
+    </NPCText>
+    <Option text="Express sympathy." next="sympathy"/>
+    <Option text="Change topic." next="dreams"/>
+    <Option text="End conversation." action="Close"/>
+  </Dialogue>
+
+  <!-- Sympathy branch -->
+  <Dialogue id="sympathy">
+    <NPCText>
+      <![CDATA[
+      Durn gives a solemn nod, then offers a comforting gesture—a warm, bear-like pat on your shoulder.<br>
+      Then, with renewed resolve, he points northeast, clearly eager to guide you onward.
+      ]]>
+    </NPCText>
+    <Option text="Ready to listen." next="dreams"/>
+    <Option text="Not right now." action="Close"/>
+  </Dialogue>
+
+  <!-- Dreams/Quest Intro Branch -->
+  <Dialogue id="dreams">
+    <NPCText>
+      <![CDATA[
+      Durn crouches, sketching a crude shrine in the snow—an arch of blue stones, with a spiraling path.<br>
+      He then mimes sleep, and makes a gesture of fright—clutching his head, then spreading his arms as if to show a monster looming.<br>
+      Next, he draws a female figure with a long, swirling tail and wild hair. He taps it with a pebble, then shudders.<br>
+      <i>You recognize the signs: a vision of the <b>Frosted Seductress</b>, a cold-hearted spirit that haunts the old ice shrine and lures hunters to their doom.</i>
+      ]]>
+    </NPCText>
+    <Option text="Is she threatening the village?" next="seductress"/>
+    <Option text="How did you see her?" next="howsee"/>
+    <Option text="I will help—tell me what you need." next="questIntro"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Seductress branch -->
+  <Dialogue id="seductress">
+    <NPCText>
+      <![CDATA[
+      Durn nods grimly, then draws the village in the snow, with little stones for houses. He moves the “female” pebble closer, then knocks over two of the house-stones.<br>
+      He mimes villagers falling asleep, then shivering and gasping for air.<br>
+      <i>The Frosted Seductress is not just haunting the shrine—she is draining the life and warmth from Frostmere itself.</i>
+      ]]>
+    </NPCText>
+    <Option text="Then she must be stopped." next="questIntro"/>
+    <Option text="Does Irinya know?" next="irinyaWarn"/>
+    <Option text="Is there a way to protect the villagers?" next="protect"/>
+  </Dialogue>
+
+  <!-- How did you see her? -->
+  <Dialogue id="howsee">
+    <NPCText>
+      <![CDATA[
+      Durn pantomimes sleep, then jerks awake, eyes wide.<br>
+      He taps his head, then points at his heart, then at you.<br>
+      He gives you another stone—this one icy cold, with a small spiral etched on it.<br>
+      <i>Durn’s dreams are visions—warnings meant for those with the will to act. He trusts you to help.</i>
+      ]]>
+    </NPCText>
+    <Option text="I will help you." next="questIntro"/>
+    <Option text="Why trust me?" next="trust"/>
+  </Dialogue>
+
+  <!-- Quest Offer Main Node -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      Durn looks relieved. He presses his hands together in gratitude, then points northeast—toward the wild ice fields.<br>
+      He draws a jagged path in the snow, placing a pebble at its end.<br>
+      He then offers you a small pouch of frost-dusted stones—his “tokens of trust.”<br>
+      <i>You understand: Durn wants you to seek out and destroy the <b>Frosted Seductress</b> haunting the Forgotten Shrine beyond Frostmere, and bring back proof of her demise.</i>
+      ]]>
+    </NPCText>
+    <Option text="Accept the quest. (Hunt the Frosted Seductress)"
+      action="GiveItem:FactionKillQuestScroll(FrostedSeductress,1,Frostmere,600)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Where can I find her?" next="where"/>
+    <Option text="What proof do you need?" next="proof"/>
+    <Option text="Is she truly a spirit, or something worse?" next="spirit"/>
+    <Option text="No thanks." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Durn offers a strong, silent handshake, then draws a spiral over your palm with a cold pebble.<br>
+      He points northeast, then mimes you walking cautiously, and finally pantomimes striking a victory pose.<br>
+      <i>He will wait for your return, hoping for good news.</i>
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with proof." action="Close"/>
+  </Dialogue>
+
+  <!-- Where is she? -->
+  <Dialogue id="where">
+    <NPCText>
+      <![CDATA[
+      Durn sketches a rough map: Frostmere at the center, the Obelisk of Veyra to the north, and a spiral path leading to a half-ruined shrine on the edge of a frozen lake.<br>
+      He taps the map three times—at dusk, midnight, and dawn.<br>
+      <i>The Frosted Seductress is most active when the sky shimmers, and her lair is near the frozen falls northeast of the Obelisk.</i>
+      ]]>
+    </NPCText>
+    <Option text="Understood. I will find her." next="accept"/>
+    <Option text="Anything else I should know?" next="spirit"/>
+  </Dialogue>
+
+  <!-- Proof -->
+  <Dialogue id="proof">
+    <NPCText>
+      <![CDATA[
+      Durn withdraws a tiny frost-lotus from his pouch and mimes breathing in the icy scent.<br>
+      He then mimes plucking a lock of hair and wraps it around the flower.<br>
+      <i>He seeks the Seductress’s <b>Frozen Tress</b>—a lock of her enchanted hair, proof you have truly faced her and survived her charms.</i>
+      ]]>
+    </NPCText>
+    <Option text="I will bring you the Frozen Tress." next="accept"/>
+    <Option text="Is it dangerous to touch?" next="dangerous"/>
+  </Dialogue>
+
+  <!-- Spirit or worse -->
+  <Dialogue id="spirit">
+    <NPCText>
+      <![CDATA[
+      Durn shivers, wraps his cloak tighter, and mimes his own heart stopping.<br>
+      He then makes the sign Irinya uses for “curse,” and draws the Obelisk in the snow, shadowed by a swirling spirit.<br>
+      <i>He believes the Seductress is not a true spirit, but a corruption—perhaps a fragment of Minax’s magic twisted by the shrine’s power.</i>
+      ]]>
+    </NPCText>
+    <Option text="I will be cautious." next="accept"/>
+    <Option text="Can Irinya protect me?" next="irinyaProtect"/>
+  </Dialogue>
+
+  <!-- Irinya warn/protect branches -->
+  <Dialogue id="irinyaWarn">
+    <NPCText>
+      <![CDATA[
+     Durn nods slowly, tapping his head, then drawing a spiral and a shield.<br>
+<i>Irinya knows. She prepares wards against the Seductress even now—but they may not be ready in time.</i>
+]]>
+</NPCText>
+<Option text="Then I must act quickly." next="accept"/>
+<Option text="I will speak to her first." action="Close"/>
+</Dialogue>
+
+<!-- === Deeper Backstory Root === -->
+<Dialogue id="durnBackstoryStart">
+  <NPCText>
+    <![CDATA[
+    Durn tilts his head, curious. He places a hand to his chest, then slowly draws a line in the snow—starting from a small stick-figure and ending at the large horned mask he wears.<br>
+    He then gestures to you: <i>Do you wish to know how he became who he is?</i>
+    ]]>
+  </NPCText>
+  <Option text="Yes. I want to understand your path." next="durnRaised"/>
+  <Option text="Maybe later." action="Close"/>
+</Dialogue>
+
+<Dialogue id="durnRaised">
+  <NPCText>
+    <![CDATA[
+    Durn draws two small figures in the snow—one with a tall staff (Irinya), and one childlike, hunched and horned.<br>
+    He traces waves between them, then taps the sky and his heart.<br>
+    <i>He was found wandering the tundra by Irinya. She claimed his soul echoed the Obelisk’s song. She raised him like a son—part beast, part boy, part prophet.</i><br>
+    He scratches a symbol: ❄, then crosses it out. A lost tribe? A vanished past?
+    ]]>
+  </NPCText>
+  <Option text="You remember your real family?" next="durnTribe"/>
+  <Option text="Irinya saw something in you..." next="durnIrinya"/>
+  <Option text="What about the Obelisk?" next="durnObeliskIntro"/>
+</Dialogue>
+
+<Dialogue id="durnTribe">
+  <NPCText>
+    <![CDATA[
+    Durn nods slowly.<br>
+    He places five stones in a circle, then removes them one by one, burying them in snow. The last one he gives to you—<i>frost-chilled, carved with a spiral and claw-mark.</i><br>
+    <i>You sense it’s a relic of his people—now gone, devoured by cold or corruption.</i>
+    ]]>
+  </NPCText>
+  <Option text="Accept the stone." action="GiveItem:IceTribeStone" next="tribeGift"/>
+  <Option text="Thank him, but decline." next="tribeDecline"/>
+</Dialogue>
+
+<Dialogue id="tribeGift">
+  <NPCText>
+    <![CDATA[
+    Durn clasps your shoulder with surprising tenderness.<br>
+    <i>He shares this with very few. You are now part of his memory. His tribe lives on, in part, through you.</i>
+    ]]>
+  </NPCText>
+  <Option text="(You feel honored.)" action="Fame:250" next="durnIrinya"/>
+</Dialogue>
+
+<Dialogue id="tribeDecline">
+  <NPCText>
+    <![CDATA[
+    Durn respectfully bows, then buries the stone in the snow, pressing it down like a grave marker.<br>
+    <i>Some burdens are not meant to be shared. But he holds no grudge.</i>
+    ]]>
+  </NPCText>
+  <Option text="Tell me about Irinya." next="durnIrinya"/>
+</Dialogue>
+
+<Dialogue id="durnIrinya">
+  <NPCText>
+    <![CDATA[
+    Durn mimes a stern woman waving a staff—then pantomimes laughter, then tears.<br>
+    He taps his mask, points to the air, and draws two spirals—<i>“She taught me to hear the ice winds. To read the whispers of the stone.”</i><br>
+    Then, he gives you a blue pebble, cool and shimmering slightly.
+    ]]>
+  </NPCText>
+  <Option text="Accept it." action="GiveItem:WhisperingPebble" next="durnObeliskIntro"/>
+  <Option text="Why do the stones whisper to you?" next="durnObeliskIntro"/>
+</Dialogue>
+
+<Dialogue id="durnObeliskIntro">
+  <NPCText>
+    <![CDATA[
+    Durn crouches and draws the Obelisk of Veyra—a towering spire of jagged runes.<br>
+    He places your pebble at its base, and gestures reverently.<br>
+    He taps his temple, then points to the center of the village—then down—<i>“The Obelisk sings to those who listen. Sometimes it warns. Sometimes... it screams.”</i>
+    ]]>
+  </NPCText>
+  <Option text="What does it say to you?" next="durnObeliskVoice"/>
+  <Option text="Has Minax corrupted it?" next="durnMinaxObelisk"/>
+</Dialogue>
+
+<Dialogue id="durnObeliskVoice">
+  <NPCText>
+    <![CDATA[
+    Durn picks up a handful of snow, then crushes it.<br>
+    He then draws a series of runes, each glowing faintly.<br>
+    He touches one, and you suddenly hear the wind howl louder for a moment... or was it just your mind?<br>
+    <i>You feel momentarily attuned to the Obelisk’s pulse.</i>
+    ]]>
+  </NPCText>
+  <Option text="(You feel the cold within deepen.)" action="AddStat:Int,5,120" next="durnMinaxObelisk"/>
+</Dialogue>
+
+<Dialogue id="durnMinaxObelisk">
+  <NPCText>
+    <![CDATA[
+    Durn’s eyes narrow. He points north—where the air thickens—and draws a red spiral into the snow, streaked with claw marks.<br>
+    He pantomimes shadow spreading across the Obelisk.<br>
+    Then he offers you two stones:<br>
+    A bright white one… and a dark jagged shard.
+    ]]>
+  </NPCText>
+  <Option text="Take the white one." action="Karma:200" next="alignmentLight"/>
+  <Option text="Take the dark shard." action="Karma:-200" next="alignmentDark"/>
+  <Option text="Refuse both." next="alignmentNeutral"/>
+</Dialogue>
+
+<Dialogue id="alignmentLight">
+  <NPCText>
+    <![CDATA[
+    Durn nods solemnly and presses his forehead to yours.<br>
+    <i>Your heart grows colder—but purer. The frost accepts your decision.</i>
+    ]]>
+  </NPCText>
+  <Option text="(Your standing with Irinya improves.)" action="SendMessage:Irinya will remember this."/>
+</Dialogue>
+
+<Dialogue id="alignmentDark">
+  <NPCText>
+    <![CDATA[
+    Durn frowns... but does not stop you.<br>
+    <i>The shard pulses in your hand. Somewhere far off, the wind carries your name... but not kindly.</i>
+    ]]>
+  </NPCText>
+  <Option text="(You feel the Obelisk’s attention.)" action="SendMessage:The Obelisk is watching..."/>
+</Dialogue>
+
+<Dialogue id="alignmentNeutral">
+  <NPCText>
+    <![CDATA[
+    Durn grins and pats your shoulder.<br>
+    <i>Balance is its own strength. Perhaps you’ll walk a path of your own.</i>
+    ]]>
+  </NPCText>
+  <Option text="(Frostmere respects your independence.)" action="Fame:100"/>
+</Dialogue>
+
+
+
+</DialogueFile>

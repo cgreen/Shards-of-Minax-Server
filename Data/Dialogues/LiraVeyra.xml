@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="LiraVeyra">
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99c0ff'>
+      The air crackles faintly as a tall woman in gleaming azure attire turns to you. Her staff is gripped with the easy confidence of a seasoned battlemage, yet her eyes flicker between defiance and fatigue.
+      <BR><BR>
+      "You stand in the Court of Currents, high above the sea. I am Lira Veyra, sentinel of Aerilon and guide to those who would defend our floating haven—or at least try."
+      <BR><BR>
+      She glances at the pulsing blue veins in the levitation crystals overhead, then back at you with a lopsided, wary grin.
+      <BR>
+      "So... are you here for training, news, or something more peculiar?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek work that earns Aerilon’s trust." next="earnTrust"/>
+    <Option text="Training? Are you the one teaching battle magic here?" next="train"/>
+    <Option text="You look restless. Trouble in paradise?" next="trouble"/>
+	<Option text="Tell me more about yourself—how did you become Aerilon’s battle mage?" next="backstoryEntry"/>
+    <Option text="Just a visitor. Curious city, this." next="curious"/>
+    <Option text="I must be going." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="earnTrust">
+    <NPCText>
+      <![CDATA[
+      Lira studies you for a long moment, weighing your measure.<BR><BR>
+      "Trust, here? Hard to win, harder to keep. Especially with spies slithering through every cloud and Conclave politics twisting every decision."
+      <BR><BR>
+      She lowers her staff, voice softening.<BR>
+      "I owe much to Aerilon, though my heart is torn. Selara Vael, our leader, believes I’m too bold for my own good. Corvus Deyne—the man who once taught me every spell I know—now courts Minax’s shadow. And Tolan Drift... well, he says I worry too much, but I’ve seen what happens when vigilance falters."
+      <BR><BR>
+      "Still—if you want Aerilon’s trust, actions speak. I have an errand fit for someone resourceful, and perhaps... less entangled than I."
+      ]]>
+    </NPCText>
+    <Option text="Name the task. I’ll prove myself." next="questOffer"/>
+    <Option text="You’re torn between your mentors? Why stay?" next="mentorConflict"/>
+    <Option text="What would Tolan say to all this?" next="tolan"/>
+    <Option text="I’ve changed my mind." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="mentorConflict">
+    <NPCText>
+      <![CDATA[
+      She looks away, expression shadowed.<BR><BR>
+      "Selara Vael leads with icy reason, demanding that Aerilon stand apart from the world’s chaos. Corvus, on the other hand, is all fire—dangerous, ambitious, and lately... too friendly with forbidden magics."
+      <BR>
+      "Once, Corvus inspired me. Now, I fear his path leads to ruin—or worse, subservience to Minax. But I still owe him much. And Selara, for all her severity, is the only hope for Aerilon’s future I see."
+      <BR><BR>
+      "My own heart? It splits in three—between loyalty, fear, and what little hope I have left."
+      ]]>
+    </NPCText>
+    <Option text="Perhaps your path is your own. About that errand?" next="questOffer"/>
+    <Option text="I understand. It can’t be easy." next="understand"/>
+    <Option text="If you don’t trust your mentors, who do you trust?" next="whoTrust"/>
+  </Dialogue>
+
+  <Dialogue id="whoTrust">
+    <NPCText>
+      <![CDATA[
+      She laughs, but it’s a brittle sound.<BR><BR>
+      "Eryndil the Archivist, perhaps. He knows too many secrets to ever truly betray Aerilon. Or Tolan, my beloved, who keeps his heart skybound and free from intrigue."
+      <BR>
+      "But most days? I trust my own two hands—and the recruits I train. Now, about that task..."
+      ]]>
+    </NPCText>
+    <Option text="I’m ready. Tell me the task." next="questOffer"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="tolan">
+    <NPCText>
+      <![CDATA[
+      For a moment, her stern mask slips and she smiles genuinely.<BR><BR>
+      "Tolan would say I’m brooding again. He claims there’s always a way through, as long as you keep moving. He’s reckless, but he keeps me... human."
+      <BR>
+      "If you see him, tell him to stop bartering with those pirates from Buccaneer’s Den. He’ll get himself exiled at this rate."
+      <BR><BR>
+      "But back to business. I need a courier—one with no allegiance to Minax. Are you willing?"
+      ]]>
+    </NPCText>
+    <Option text="I’ll take your errand." next="questOffer"/>
+    <Option text="Maybe later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="understand">
+    <NPCText>
+      <![CDATA[
+      She nods, a rare softness in her expression.<BR><BR>
+      "Thank you. But let’s not drown in melancholy. Action, not agony, is how Aerilon survives."
+      <BR>
+      "So. I need a courier. Will you help me?"
+      ]]>
+    </NPCText>
+    <Option text="I will. What’s the job?" next="questOffer"/>
+    <Option text="I need to think." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="train">
+    <NPCText>
+      <![CDATA[
+      She grins, straightening her cloak with pride.<BR><BR>
+      "Indeed. I run the Skyguard training circuit—the only reason half this city’s not plummeting into the sea is the discipline I demand from my recruits."
+      <BR>
+      "But these days? Even the best sword-arm is no match for betrayal from within."
+      ]]>
+    </NPCText>
+    <Option text="If you need a courier, I volunteer." next="questOffer"/>
+    <Option text="Are your trainees reliable?" next="trainees"/>
+    <Option text="What happened to the last recruit?" next="lastRecruit"/>
+  </Dialogue>
+
+  <Dialogue id="trainees">
+    <NPCText>
+      <![CDATA[
+      Lira shrugs.<BR><BR>
+      "Some are as sharp as Wind’s blades, others still stare at their own boots when spells fly. But loyalty? That I can train—if the city’s politics don’t snare them first."
+      <BR>
+      "Now, what about you? Will you run an errand for Aerilon’s future?"
+      ]]>
+    </NPCText>
+    <Option text="Tell me the errand." next="questOffer"/>
+    <Option text="Not right now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="lastRecruit">
+    <NPCText>
+      <![CDATA[
+      Her expression darkens.<BR><BR>
+      "Jirra Voss—bright, brave, and now missing. Last seen speaking with a Shadowwyrm Scholar. I fear she was lured by promises of forbidden knowledge. If you hear word of her beyond the city, let me know."
+      <BR>
+      "But that’s not why you’re here. Let’s speak of your task."
+      ]]>
+    </NPCText>
+    <Option text="I’ll help. What do you need delivered?" next="questOffer"/>
+    <Option text="That sounds dangerous. Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="curious">
+    <NPCText>
+      <![CDATA[
+      She offers a courteous nod.<BR><BR>
+      "Curiosity built Aerilon, or so the scholars claim. Just don’t let it get you thrown from a platform—or worse, drawn into the Conclave’s games."
+      <BR>
+      "Still, if you want to leave your mark here, I do have a task for a bold soul."
+      ]]>
+    </NPCText>
+    <Option text="I’m interested. What task?" next="questOffer"/>
+    <Option text="No thanks, just looking." action="Close"/>
+  </Dialogue>
+
+  <!-- MAIN QUEST OFFER NODE -->
+  <Dialogue id="questOffer">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#99c0ff'>
+      Lira draws a folded parchment from her sash, wax-sealed and marked with the crest of Aerilon’s Azure Conclave.<BR><BR>
+      "This is a treatise—encoded, of course—on the resonance between our city’s crystals and the so-called Shadowwyrm essence. The Conclave believes a Shadowwyrm Scholar somewhere below—likely in the sunless archives of Wind, or perhaps among Qasaria’s night-markets—can decipher the cryptic script and return insight crucial to our defenses."
+      <BR><BR>
+      "I cannot leave my post, nor trust this to any mage loyal to Corvus Deyne. He’d see this knowledge twisted to serve Minax, or sell it outright."
+      <BR><BR>
+      She fixes you with a grave, earnest look.<BR>
+      "Deliver this to a recognized Shadowwyrm Scholar outside Aerilon. In return, you will earn Aerilon’s trust and a measure of reputation. The fate of a city may hang on secrets such as these."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I accept this charge."
+      action="GiveItem:FactionDeliveryQuestScroll(ShadowwyrmScholar,Aerilon,250)"
+      condition="!HasItem:FactionDeliveryQuestScroll"
+      next="accept"/>
+    <Option text="What if Corvus Deyne finds out?" next="corvus"/>
+    <Option text="Why does the Conclave trust a stranger?" next="conclaveTrust"/>
+    <Option text="Tell me more about these Shadowwyrm Scholars." next="shadowwyrm"/>
+    <Option text="I’m not interested in city politics." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Lira’s eyes warm with genuine gratitude.<BR><BR>
+      "You have my thanks, and Aerilon’s hope. Beware: Shadowwyrm Scholars are a reclusive, eccentric lot—some say they converse with dragons in their sleep. Find one, deliver the treatise, and return here for your reward and the Conclave’s favor."
+      <BR><BR>
+      "And if you glimpse any sign of Jirra Voss, let me know. The city forgets its fallen too quickly."
+      ]]>
+    </NPCText>
+    <Option text="I’ll seek the Shadowwyrm Scholar." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="corvus">
+    <NPCText>
+      <![CDATA[
+      Her gaze hardens.<BR><BR>
+      "If Corvus learns of this, he’ll do everything in his power to intercept the message—or you. Move quickly, trust no one bearing his sigil, and do not tarry in places where his loyalists gather."
+      <BR>
+      "When in doubt, look for the sign of the Crescent Azure—my mark. Only those who bear it are to be trusted with Aerilon’s secrets."
+      ]]>
+    </NPCText>
+    <Option text="I’ll be cautious. I accept the task."
+      action="GiveItem:FactionDeliveryQuestScroll(ShadowwyrmScholar,Aerilon,250)"
+      condition="!HasItem:FactionDeliveryQuestScroll"
+      next="accept"/>
+    <Option text="On second thought, this is too risky." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="conclaveTrust">
+    <NPCText>
+      <![CDATA[
+      She smiles with a wry, self-deprecating humor.<BR><BR>
+      "Truthfully? The Conclave trusts almost no one. But desperate times bend old rules. I have watched you—your actions, your manner. Sometimes, it is the eyes of an outsider that spot danger within."
+      <BR>
+      "If you return alive, with the task complete, you will find Aerilon’s doors more welcoming. Fail... and we all risk falling."
+      ]]>
+    </NPCText>
+    <Option text="Understood. I’ll do it."
+      action="GiveItem:FactionDeliveryQuestScroll(ShadowwyrmScholar,Aerilon,250)"
+      condition="!HasItem:FactionDeliveryQuestScroll"
+      next="accept"/>
+    <Option text="I’m not sure I want this responsibility." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="shadowwyrm">
+    <NPCText>
+      <![CDATA[
+      She seems relieved by your curiosity.<BR><BR>
+      "Shadowwyrm Scholars are an odd breed—arcane researchers obsessed with the intersection of dragon lore, magical resonance, and shadow. Most keep to the depths: the lost halls beneath Wind, or dusty enclaves where the sun never shines."
+      <BR>
+      "Their knowledge is dangerous. Some say Minax seeks them as well. But our city’s life hangs by a thread of magic—if we can’t strengthen it, we may fall into the sea."
+      ]]>
+    </NPCText>
+    <Option text="I’ll take your treatise."
+      action="GiveItem:FactionDeliveryQuestScroll(ShadowwyrmScholar,Aerilon,250)"
+      condition="!HasItem:FactionDeliveryQuestScroll"
+      next="accept"/>
+    <Option text="I’ll pass on meddling with shadow magic." action="Close"/>
+  </Dialogue>
+  
+<Dialogue id="backstoryEntry">
+  <NPCText>
+    <![CDATA[
+    Lira narrows her eyes, then gives a faint smile.<BR><BR>
+    "Few ask that. Fewer still care. But you're persistent—or foolish. Perhaps both."<BR><BR>
+    She traces a finger along a glowing rune on her staff.<BR>
+    "I was born in Wind, where every breath you take must be earned in silence and study. My parents were scribes to the Archmages. I read my first grimoires at five... cast my first real spell at nine."<BR><BR>
+    "But I craved more than dusty books. More than hiding underground like frightened rodents. I wanted to fight. To change things. Corvus Deyne saw that—and offered me a path."
+    ]]>
+  </NPCText>
+  <Option text="You studied under Corvus? What was he like... before Minax?" next="corvusEarly"/>
+  <Option text="And what about Wind? Do you ever miss it?" next="windMemories"/>
+  <Option text="Did you always want to become a battle mage?" next="battleMageOrigin"/>
+  <Option text="I see. Thank you for sharing." next="backstoryExit"/>
+</Dialogue>
+
+<Dialogue id="corvusEarly">
+  <NPCText>
+    <![CDATA[
+    Her voice is quiet now.<BR><BR>
+    "Corvus was brilliant. Unyielding, terrifying, but brilliant. He taught with fire—literally and figuratively. Every failed lesson came with a burn... but he lit my path nonetheless."<BR><BR>
+    "He once told me that discipline was the only true magic, and chaos was merely will unshaped. He wasn't wrong. But now? Now, his fire has turned black."<BR>
+    She shakes her head.<BR>
+    "Still... there are nights I wonder if I abandoned him, or he abandoned us."
+    ]]>
+  </NPCText>
+  <Option text="Do you regret leaving him?" next="regret"/>
+  <Option text="You chose the right path." action="Karma:+200" next="backstoryExit"/>
+</Dialogue>
+
+<Dialogue id="regret">
+  <NPCText>
+    <![CDATA[
+    "I regret not seeing it sooner. I could have warned the Conclave—exposed his dealings before he sank too deep into Minax’s coils."<BR><BR>
+    She breathes deeply, collecting herself.<BR>
+    "But I did what I could. And I fight for Aerilon now, not ghosts."
+    ]]>
+  </NPCText>
+  <Option text="You fight for something better. That counts." action="Fame:+150" next="backstoryExit"/>
+</Dialogue>
+
+<Dialogue id="windMemories">
+  <NPCText>
+    <![CDATA[
+    "Sometimes," she admits, her voice wistful.<BR><BR>
+    "The endless libraries. The silent halls. There was a peace in Wind... before the paranoia, before the suspicion that every book hid a rebellion."<BR>
+    "But peace without freedom is a prison, even if it's gilded in knowledge."
+    ]]>
+  </NPCText>
+  <Option text="You traded it for freedom. A worthy exchange." next="backstoryExit"/>
+  <Option text="Knowledge is power, though. Was it worth it?" next="questionPower"/>
+</Dialogue>
+
+<Dialogue id="questionPower">
+  <NPCText>
+    <![CDATA[
+    She eyes you sharply.<BR><BR>
+    "Power without purpose is ash in the wind. The knowledge I kept—the spells I memorized—have saved lives here."<BR>
+    "But yes, I miss the texts. I miss knowing things others didn’t even dream to question."
+    ]]>
+  </NPCText>
+  <Option text="Perhaps you'll find that balance again." next="backstoryExit"/>
+  <Option text="If I studied in Wind, would you share some of that lore?" condition="SkillAtLeast:Magery,80" next="arcaneOffer"/>
+</Dialogue>
+
+<Dialogue id="arcaneOffer">
+  <NPCText>
+    <![CDATA[
+    Her expression changes—curious, then impressed.<BR><BR>
+    "So, you're not just another sword-for-hire. You’ve walked the leylines too. Very well. Here—"<BR>
+    She taps your forehead lightly with her staff. You feel a spark of insight ignite behind your eyes.
+    ]]>
+  </NPCText>
+  <Option text="What was that?" action="AddSkill:Magery,5,600" next="arcaneGift"/>
+</Dialogue>
+
+<Dialogue id="arcaneGift">
+  <NPCText>
+    <![CDATA[
+    "A memory. A fragment of forgotten formulae I preserved from Wind's Vault of Quiet Flame. May it serve you better than it served me."<BR><BR>
+    She smiles faintly. "But don’t tell the Conclave. They’d call it contraband."
+    ]]>
+  </NPCText>
+  <Option text="My thanks, Veyra. I’ll keep your secret." next="backstoryExit"/>
+</Dialogue>
+
+<Dialogue id="battleMageOrigin">
+  <NPCText>
+    <![CDATA[
+    "Not at first. I wanted to be a Lorekeeper, like Eryndil. I spent years mastering silent invocation, glyph-binding, sigil weaving..."<BR><BR>
+    She chuckles.<BR>
+    "Then one day I caught a rogue mage hurling fireballs near a fuel crystal chamber. I tackled him. No spells—just instinct. That's when I knew: I was born for battle, not scrolls."<BR>
+    "I trained under Corvus from then on. And the rest, as they say, is dust and sparks."
+    ]]>
+  </NPCText>
+  <Option text="Eryndil must still value you, though." next="eryndil"/>
+  <Option text="You made the right choice." action="Fame:+100" next="backstoryExit"/>
+</Dialogue>
+
+<Dialogue id="eryndil">
+  <NPCText>
+    <![CDATA[
+    "He does. Eryndil and I meet occasionally—usually when I’ve done something that makes the Conclave nervous."<BR><BR>
+    "He never says it, but I think he’s proud of me. Still calls me 'the prodigy who wouldn’t sit still.'"
+    ]]>
+  </NPCText>
+  <Option text="Sounds like he respects you deeply." next="backstoryExit"/>
+</Dialogue>
+
+<Dialogue id="backstoryExit">
+  <NPCText>
+    <![CDATA[
+    Lira straightens, the moment of openness fading.<BR><BR>
+    "Enough memory. The wind shifts, and duties call. If you still want work—or truth—you’ll find it here among the clouds."
+    ]]>
+  </NPCText>
+  <Option text="I’d like to help Aerilon." next="earnTrust"/>
+  <Option text="Until next time." action="Close"/>
+</Dialogue>
+  
+  
+</DialogueFile>

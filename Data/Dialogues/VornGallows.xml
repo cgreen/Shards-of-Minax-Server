@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="VornGallows">
+
+  <!-- === root: Greeting === -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#778899'>
+      You find a tall, stooped man lingering by Eldermoor’s misty graveyard. His soil-dark robe is splattered with old clay, and a faded shroud casts his face in gloom. He leans on a crooked staff, one hand absentmindedly clutching a ring of ancient keys.
+      <BR><BR>
+      He regards you with haunted eyes, voice a rasp over the moaning wind:
+      <BR><BR>
+      "Are you here for the living, or the dead? Speak plain. I've no patience for gawkers or tomb-plunderers. My name’s Vorn Gallows. I tend the quiet folk—the ones who don't complain… unless they have cause."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="What brings you out here, Vorn?" next="whyhere"/>
+    <Option text="The dead don’t rest easy these days?" next="uneasy"/>
+    <Option text="You look like a man with worries. Need help?" next="questIntro"/>
+    <Option text="Just passing by the graves, don’t mind me." next="passby"/>
+  </Dialogue>
+
+  <Dialogue id="passby">
+    <NPCText>
+      <![CDATA[
+      Vorn shrugs, gaze lingering on the graves.<BR>
+      "Mind your step, then. The ground’s unsettled of late—and not only by my shovel."
+      ]]>
+    </NPCText>
+    <Option text="Actually, is something wrong here?" next="whyhere"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Why out here? -->
+  <Dialogue id="whyhere">
+    <NPCText>
+      <![CDATA[
+      Vorn leans on his staff, voice growing softer.<BR>
+      "I was a soldier, once. Dug more trenches than I care to count. Found peace with a spade, and made friends with silence. Folk don’t think much of gravediggers—except when they need one. But lately, the dead are less restful. I swear some graves murmur at night, and shadows flicker where there should be none."
+      ]]>
+    </NPCText>
+    <Option text="That sounds troubling. Do you suspect foul magic?" next="uneasy"/>
+    <Option text="You seem… weighed down. Is there someone you miss among the dead?" next="longing"/>
+    <Option text="Who else in Eldermoor do you trust?" next="relationships"/>
+  </Dialogue>
+
+  <!-- The dead don’t rest -->
+  <Dialogue id="uneasy">
+    <NPCText>
+      <![CDATA[
+      Vorn glances toward a mossy crypt at the edge of the yard.<BR>
+      "It began a week past. Graves cracking, whispers on the breeze—sometimes I see pale figures wandering between headstones. Folk think I’m mad, but I know the old tomb sealed by Lord British’s own kin is stirring. Something inside it calls to me… or to her."
+      ]]>
+    </NPCText>
+    <Option text="Who is 'her'? Someone you lost?" next="longing"/>
+    <Option text="Could Minax be behind these hauntings?" next="minax"/>
+    <Option text="What do you want me to do?" next="questIntro"/>
+  </Dialogue>
+
+  <!-- Relationship question -->
+  <Dialogue id="relationships">
+    <NPCText>
+      <![CDATA[
+      He snorts.<BR>
+      "Trust? Not a plentiful crop in Eldermoor. Still… Edda the herbalist brings herbs for the restless, and Priestess Miralda prays for their souls. Thalen hammers my broken gate, and even Aldric leaves offerings for the lost. Mira? She leaves flowers for her mother every week, braver than she knows."
+      <BR><BR>
+      "But it’s the dead who keep my secrets."
+      ]]>
+    </NPCText>
+    <Option text="Secrets? I don’t judge, Vorn." next="longing"/>
+    <Option text="Let’s talk of more practical things." next="questIntro"/>
+  </Dialogue>
+
+  <!-- Vorn’s lost love -->
+  <Dialogue id="longing">
+    <NPCText>
+      <![CDATA[
+      For a moment, his hands tremble on the staff.<BR>
+      "Aye. My heart’s buried here, beneath this sod. Her name was Linya—a sweet voice and a sharper wit than any blade. But her grave isn’t silent, not anymore. I find old love letters returned to my door, and sometimes I see her shade, staring from the crypt."
+      <BR><BR>
+      "If she’s risen, it is not by her own will. I would see her set free, or truly laid to rest."
+      ]]>
+    </NPCText>
+    <Option text="If I find her, I’ll do what must be done." next="questIntro"/>
+    <Option text="This is beyond me. I’m sorry." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax influence -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      "Minax’s shadow seeps into every grave. The old magics that bind the dead grow thin—her cultists skulk among the stones at night. Edda says the soil’s gone sour. Miralda fears the shrines are losing their light. Even Mayor Halric comes to the fence at dusk, but he fears what he cannot fight."
+      <BR><BR>
+      "If you have steel or spells, I beg you—help me keep the dead where they belong."
+      ]]>
+    </NPCText>
+    <Option text="Tell me what to do." next="questIntro"/>
+    <Option text="I’ll not meddle in such matters." action="Close"/>
+  </Dialogue>
+
+  <!-- QUEST OFFER: Tidal Ettin -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#778899'>
+      Vorn gestures with his staff toward the marsh beyond the graveyard.<BR><BR>
+      "There’s another matter—the marsh has grown restless, and a Tidal Ettin lumbers from the brackish pools at night. Its footsteps churn graves and send bones to the surface. Some say it feeds on drowned souls, others that Minax has warped it into something worse."
+      <BR><BR>
+      "The beast has smashed crypt doors, scattered the dead, and left mourners terrified. I’m but one man, and the Mayor says it’s not worth risking others. But if you have the heart, slay the Tidal Ettin that haunts our graveyard. Bring me proof—the brine-stained tusk it wears—and I will reward you with what little I have. More than that, you’ll have my gratitude… and the peace of Eldermoor’s dead."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll deal with the Tidal Ettin for you."
+      action="GiveItem:FactionKillQuestScroll(TidalEttin,1,Eldermoor,500)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Is the beast truly magical, or just hungry?" next="ettinLore"/>
+    <Option text="What will you do if Linya is among the risen?" next="linyaChoice"/>
+    <Option text="I can’t take this job. Sorry." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Vorn’s eyes flash with gratitude.<BR><BR>
+      "Be wary—the Tidal Ettin’s lair lies where the marsh drowns the old willow. It comes at dusk, drawn by bell toll or grave-earth. Do not let its brine touch your wounds, and beware its voice—it calls the drowned."
+      <BR><BR>
+      "Return with its tusk, and you’ll find me waiting among the stones."
+      ]]>
+    </NPCText>
+    <Option text="I’ll return when the deed is done." action="Close"/>
+  </Dialogue>
+
+  <!-- Lore about the Ettin -->
+  <Dialogue id="ettinLore">
+    <NPCText>
+      <![CDATA[
+      Vorn shivers.<BR>
+      "Old tales say Ettins are born of rock and river, but this one reeks of the sea. Its skin is slick as eel-hide, eyes like pale lanterns. I’ve seen it bend grave-iron and toss coffins like driftwood. Edda claims the marsh is cursed; I think the curse has found a vessel."
+      ]]>
+    </NPCText>
+    <Option text="All the more reason to end it. I accept."
+      action="GiveItem:FactionKillQuestScroll(TidalEttin,1,Eldermoor,500)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="That’s too much for me." action="Close"/>
+  </Dialogue>
+
+  <!-- Linya branching choice -->
+  <Dialogue id="linyaChoice">
+    <NPCText>
+      <![CDATA[
+      Vorn’s jaw clenches, but he doesn’t avert his gaze.<BR>
+      "If Linya walks again, I ask this: do what mercy allows. Lay her spirit to rest. I’d rather see her gone than shackled by dark magic. Bring me her locket—buried with her, golden with an amber stone. I’ll know you found her, and reward you with all I have."
+      ]]>
+    </NPCText>
+    <Option text="I promise. I’ll bring peace if I can." action="Close"/>
+    <Option text="That’s not a burden I can bear." action="Close"/>
+  </Dialogue>
+
+</DialogueFile>

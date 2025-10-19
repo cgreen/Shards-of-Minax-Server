@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="ShadowmasterZahid">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#c7b88c'>
+      In the torch-lit depths beneath Qasaria’s bazaar, a slender man in midnight silks surveys you with a sly smile. His eyes, dark as obsidian, glint with both amusement and threat.<BR><BR>
+      "Welcome to the Undermarket, friend. I am <B>Shadowmaster Zahid</B>, keeper of secrets and broker of all things forbidden. Tread carefully—every shadow here has ears, and most are loyal only to coin... or me.<BR><BR>
+      Tell me, what brings a surface-walker into my den of whispers?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek opportunity, not trouble." next="opportunity"/>
+    <Option text="Who truly rules Qasaria—the Council, or you?" next="power"/>
+    <Option text="I want to know about the Undermarket." next="undermarket"/>
+    <Option text="I’ve heard of your right hand, Nadia the Dagger." next="nadiaIntro"/>
+    <Option text="Just passing through..." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Opportunity Path -->
+  <Dialogue id="opportunity">
+    <NPCText>
+      <![CDATA[
+      Zahid’s smile widens as he steeples his gloved fingers.<BR><BR>
+      "Opportunity, indeed. Few above dare admit it, but all fortunes in Qasaria pass through my hands. I know where the guards turn a blind eye and which merchant-prince hungers for more than gold.<BR><BR>
+      For the right price, I can offer you tasks—some bold, some quiet. Tell me, do you favor risk, subtlety, or loyalty?"
+      ]]>
+    </NPCText>
+    <Option text="I prefer risky work—high reward." next="riskyTask"/>
+    <Option text="I’m better with subtlety." next="subtleTask"/>
+    <Option text="I value loyalty above all." next="loyaltyTask"/>
+    <Option text="What do you get out of this?" next="motive"/>
+    <Option text="I want to know about your rivals." next="rivals"/>
+  </Dialogue>
+
+  <!-- Power in Qasaria -->
+  <Dialogue id="power">
+    <NPCText>
+      <![CDATA[
+      Zahid laughs softly, glancing toward the stone ceiling.<BR><BR>
+      "The Council of Jewels? Oh, they shine brightly… but even the finest gem is worthless without shadows to protect it.<BR>
+      Rafiq al-Ruby keeps the guard busy, but half his soldiers trade secrets here at night. Safiya al-Sapphire thinks her coins can buy loyalty, but even her caravans require my routes. Karim al-Emerald? He and I share a fondness for secrets, though I trust him little.<BR><BR>
+      In the end, Qasaria is ruled by the one who knows the most—and that, friend, is always me."
+      ]]>
+    </NPCText>
+    <Option text="And Nadia? Where does she fit in?" next="nadiaIntro"/>
+    <Option text="Are you allied with any of them?" next="alliances"/>
+    <Option text="Give me work. I want to earn your trust." next="subtleTask"/>
+    <Option text="You sound lonely for a kingpin." next="lonely"/>
+  </Dialogue>
+
+  <!-- About the Undermarket -->
+  <Dialogue id="undermarket">
+    <NPCText>
+      <![CDATA[
+      Zahid sweeps an arm around.<BR><BR>
+      "Above us, merchants shout. Down here, only whispers matter. The Undermarket trades in what the Council cannot—relics, forbidden books, even glimpses of the past the Desert Ancients meant to stay buried.<BR>
+      My people are outcasts, magicians gone rogue, ex-gladiators, and those who trust shadow over sun. The rules here are simple: No violence without cause. No secrets leave these walls. All debts are paid—in coin or blood."
+      ]]>
+    </NPCText>
+    <Option text="Is Nadia the Dagger your enforcer?" next="nadiaIntro"/>
+    <Option text="What about Minax? Do her agents walk your halls?" next="minax"/>
+    <Option text="What would it cost to buy your silence?" next="price"/>
+    <Option text="I’m looking for illicit work." next="riskyTask"/>
+  </Dialogue>
+
+  <!-- About Nadia the Dagger -->
+  <Dialogue id="nadiaIntro">
+    <NPCText>
+      <![CDATA[
+      Zahid’s eyes flicker to a woman lurking in the shadows behind him. She steps forward—tall, lean, clad in black leathers etched with red sigils. A curved blade rests at her hip, glimmering with a faint green sheen.<BR><BR>
+      "Nadia the Dagger. Some call her my blade, others, my insurance against betrayal.<BR>
+      Nadia, greet our guest."<BR><BR>
+      Nadia’s voice is quiet but edged:<BR>
+      "Don’t cross the Shadowmaster. I move faster than your regrets."<BR><BR>
+      Zahid: "She was once a slave in the Sapphire caravans—now she chooses her own masters. Her loyalty is to gold and… perhaps, a grudging respect for my cause."
+      ]]>
+    </NPCText>
+    <Option text="Do you trust her?" next="trustNadia"/>
+    <Option text="Nadia, why serve Zahid?" next="nadiaVoice"/>
+    <Option text="Is she for hire?" next="forHire"/>
+    <Option text="Let’s talk business." next="subtleTask"/>
+    <Option text="I’ll be careful." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Trust in Nadia -->
+  <Dialogue id="trustNadia">
+    <NPCText>
+      <![CDATA[
+      Zahid’s lips twitch in amusement.<BR><BR>
+      "Trust? In the Undermarket, trust is weighed, not given. Nadia has saved my life more than once—though she’s also threatened to end it twice as many times.<BR>
+      I pay her well. And if she ever goes missing, I’ll know someone more dangerous than me has arrived in Qasaria."
+      ]]>
+    </NPCText>
+    <Option text="Nadia, what keeps you here?" next="nadiaVoice"/>
+    <Option text="Let’s get to the point. Any work for me?" next="riskyTask"/>
+  </Dialogue>
+
+  <!-- Nadia Speaks -->
+  <Dialogue id="nadiaVoice">
+    <NPCText>
+      <![CDATA[
+      Nadia steps closer, her eyes narrowing.<BR><BR>
+      "I’ve served tyrants and fools. Zahid is neither.<BR>
+      He offers respect, gold, and a cause worth bleeding for—sometimes. When he doesn’t, I take what I need from the next highest bidder. If you want my blade, you’d better make it worth my while."<BR><BR>
+      Zahid grins: "She’s a shark in these waters. Hire her at your own risk."
+      ]]>
+    </NPCText>
+    <Option text="Are you for hire?" next="forHire"/>
+    <Option text="Thank you, Nadia. Back to business." next="subtleTask"/>
+  </Dialogue>
+
+  <!-- Nadia for Hire -->
+  <Dialogue id="forHire">
+    <NPCText>
+      <![CDATA[
+      Nadia studies you coolly.<BR>
+      "Assassinations, protection, intimidation. I do not come cheap, and I don’t do love letters. If you want a job done, talk to Zahid. If he approves, I’ll listen."<BR><BR>
+      Zahid: "Convince me you’re useful, and perhaps Nadia will shadow you for a time. Or, should you cross me, she’ll do so for someone else."
+      ]]>
+    </NPCText>
+    <Option text="I’m ready for work—dangerous or otherwise." next="riskyTask"/>
+    <Option text="On second thought, perhaps not." action="Close"/>
+  </Dialogue>
+
+  <!-- Rival Factions & Politics -->
+  <Dialogue id="rivals">
+    <NPCText>
+      <![CDATA[
+      Zahid leans back.<BR>
+      "Safiya al-Sapphire despises my trade—unless she profits from it. Rafiq wants order, but chaos lines my pockets. Karim? We’re two spiders in the same web, spinning lies and truths as needed.<BR>
+      If you play your cards right, you could set them against each other. Or play both sides, if you’re bold—and lucky."
+      ]]>
+    </NPCText>
+    <Option text="How can I play both sides?" next="playBoth"/>
+    <Option text="Let’s stick to the shadows. Give me subtle work." next="subtleTask"/>
+    <Option text="What do you gain from all this?" next="motive"/>
+  </Dialogue>
+
+  <!-- Zahid's Motive -->
+  <Dialogue id="motive">
+    <NPCText>
+      <![CDATA[
+      Zahid’s expression sobers.<BR>
+      "Once, I was a street rat, watched the Council’s games from the gutter. Power is freedom. Secrets are the only currency that never loses value.<BR>
+      What do I gain? Survival. Influence. And the pleasure of knowing that, in Qasaria, even the mighty depend on those they despise."
+      ]]>
+    </NPCText>
+    <Option text="Enough talk. Give me a job." next="subtleTask"/>
+    <Option text="I respect that. Perhaps we can work together." next="subtleTask"/>
+  </Dialogue>
+
+  <!-- Lonely Kingpin -->
+  <Dialogue id="lonely">
+    <NPCText>
+      <![CDATA[
+      Zahid laughs, not unkindly.<BR>
+      "A kingpin is never lonely—merely surrounded by people he cannot trust. But you amuse me, so I’ll make an exception.<BR>
+      Tell me, what sort of trouble do you seek?"
+      ]]>
+    </NPCText>
+    <Option text="Let’s get to business." next="subtleTask"/>
+  </Dialogue>
+
+  <!-- Minax Path -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Zahid’s face darkens.<BR><BR>
+      "Minax’s shadow creeps everywhere. Some fools here worship her for promises of immortality—or just an edge over rivals. I deal with her agents if it serves my interests, but never trust them.<BR>
+      Still, their coin is good, and sometimes, information from the enemy is the most valuable of all."
+      ]]>
+    </NPCText>
+    <Option text="Have you ever betrayed Minax’s followers?" next="betrayMinax"/>
+    <Option text="I’ll be wary. Do you have work for me?" next="subtleTask"/>
+  </Dialogue>
+
+  <!-- Betraying Minax -->
+  <Dialogue id="betrayMinax">
+    <NPCText>
+      <![CDATA[
+      Zahid smirks.<BR>
+      "I betray everyone, eventually. It’s just a matter of timing. If you cross Minax in my halls, do it quietly—and don’t expect me to save you if things go sour."
+      ]]>
+    </NPCText>
+    <Option text="Understood. Give me a job." next="riskyTask"/>
+    <Option text="I’ll keep to the safer trades." action="Close"/>
+  </Dialogue>
+
+  <!-- Price for Silence -->
+  <Dialogue id="price">
+    <NPCText>
+      <![CDATA[
+      Zahid shrugs.<BR>
+      "My silence costs more than you can pay, unless you offer a secret of equal value. Care to trade a name? A plan? Or perhaps something more... dangerous?"
+      ]]>
+    </NPCText>
+    <Option text="I have a secret to share." next="shareSecret"/>
+    <Option text="I’d rather earn your trust with work." next="subtleTask"/>
+  </Dialogue>
+
+  <!-- Share Secret (Branch) -->
+  <Dialogue id="shareSecret">
+    <NPCText>
+      <![CDATA[
+      Zahid leans forward eagerly.<BR>
+      "Speak your secret, and I’ll weigh its worth."
+      ]]>
+    </NPCText>
+    <Option text="Reveal a rival’s plan." action="Karma:-100" next="rewardSecret"/>
+    <Option text="Share a hidden route through Qasaria." action="GiveGold:2000" next="rewardSecret"/>
+    <Option text="On second thought, nevermind." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="rewardSecret">
+    <NPCText>
+      <![CDATA[
+      Zahid grins.<BR>
+      "A fine offering. Remember, in Qasaria, secrets are power. You may yet prosper here."
+      ]]>
+    </NPCText>
+    <Option text="Thank you. Now, about that job..." next="subtleTask"/>
+  </Dialogue>
+
+  <!-- Work Paths -->
+  <Dialogue id="riskyTask">
+    <NPCText>
+      <![CDATA[
+      Zahid hands you a sealed parchment, stamped with a midnight seal.<BR>
+      "Deliver this unmarked parcel to the Cheese Maker’s cellar in Aerilon. Don’t open it. Don’t ask what’s inside.<BR>
+      There are eyes everywhere—especially Minax’s. If you are caught, I’ll deny ever knowing you."<BR><BR>
+      Nadia: "I’ll shadow your steps for a time. If you betray us, you won’t see me coming."<BR><BR>
+      Are you ready?"
+      ]]>
+    </NPCText>
+    <Option text="I’m ready. Hand it over."
+            action="GiveItem:FactionDeliveryQuestScroll(Cheese Maker,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="acceptJob"/>
+    <Option text="Who will I be dealing with on the way?" next="jobObstacles"/>
+    <Option text="On second thought, I decline." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="subtleTask">
+    <NPCText>
+      <![CDATA[
+      Zahid produces a slim letter, sealed in emerald wax.<BR>
+      "Take this message to Karim al-Emerald in the Jewel Hall. If intercepted, burn it immediately—there are eyes everywhere.<BR>
+      Should you succeed, I’ll consider you for more delicate tasks. Fail, and Nadia will ensure your debts are paid."<BR><BR>
+      Will you accept?"
+      ]]>
+    </NPCText>
+    <Option text="I accept the letter." 
+            action="GiveItem:FactionDeliveryQuestScroll(Karim al-Emerald,Qasaria,300)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="acceptJob"/>
+    <Option text="Is this a test?" next="testTask"/>
+    <Option text="Too risky for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="loyaltyTask">
+    <NPCText>
+      <![CDATA[
+      Zahid studies you.<BR>
+      "Loyalty is rare—and valuable. I need someone to watch Nadia’s back as she investigates a traitor among my thieves. You’ll answer to her, and trust me: she does not tolerate cowards."
+      ]]>
+    </NPCText>
+    <Option text="I accept. Where do we begin?" 
+            action="GiveItem:FactionDeliveryQuestScroll(Nadia the Dagger,Qasaria,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="acceptJob"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Job Response -->
+  <Dialogue id="acceptJob">
+    <NPCText>
+      <![CDATA[
+      Zahid nods approvingly.<BR>
+      "Good. Do not fail me, and the Undermarket may yet open more doors to you. Nadia will be watching."<BR><BR>
+      Nadia slips into the crowd with barely a whisper, her eyes lingering on you for a moment.<BR>
+      "We’ll see what you’re made of, little mouse."
+      ]]>
+    </NPCText>
+    <Option text="Understood. I won’t let you down." action="Close"/>
+  </Dialogue>
+
+  <!-- Task Questions -->
+  <Dialogue id="jobObstacles">
+    <NPCText>
+      <![CDATA[
+      Zahid lowers his voice.<BR>
+      "Guards loyal to Rafiq prowl the tunnels. Safiya’s agents want the parcel for their own ends. And then there are Minax cultists, greedy for any leverage.<BR>
+      Nadia will keep you alive—unless you betray us."<BR><BR>
+      Will you proceed?"
+      ]]>
+    </NPCText>
+    <Option text="I’ll take my chances." 
+            action="GiveItem:FactionDeliveryQuestScroll(Cheese Maker,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="acceptJob"/>
+    <Option text="On second thought, not today." action="Close"/>
+  </Dialogue>
+
+  <!-- Is it a test? -->
+  <Dialogue id="testTask">
+    <NPCText>
+      <![CDATA[
+      Zahid shrugs.<BR>
+      "Everything is a test in the Undermarket. Succeed, and you’ll have more than work—you’ll have a place in the true heart of Qasaria’s power."
+      ]]>
+    </NPCText>
+    <Option text="Then I accept." 
+            action="GiveItem:FactionDeliveryQuestScroll(Karim al-Emerald,Qasaria,300)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="acceptJob"/>
+    <Option text="I’ll leave it for now." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismiss -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Zahid’s gaze cools.<BR>
+      "No one leaves the Undermarket unchanged, surface-walker. Return if you desire coin, danger, or a cause. If not—stay out of the shadows."
+      ]]>
+    </NPCText>
+    <Option text="Perhaps I will return." action="Close"/>
+  </Dialogue>
+
+  <!-- Play both sides -->
+  <Dialogue id="playBoth">
+    <NPCText>
+      <![CDATA[
+      Zahid gives a dangerous smile.<BR>
+      "Be clever, and both Safiya and Karim will think you serve only them. Be foolish, and you’ll serve as a warning to others. In this city, betrayal is only a matter of timing."
+      ]]>
+    </NPCText>
+    <Option text="I’ll take my chances. Give me a job." next="subtleTask"/>
+    <Option text="I think I’ll stay neutral." action="Close"/>
+  </Dialogue>
+
+  <!-- Zahid's Backstory Root -->
+  <Dialogue id="backstoryRoot">
+    <NPCText>
+      <![CDATA[
+      Zahid exhales slowly, his smile fading into something distant.<BR><BR>
+      "Curious, are you? Most who ask about my past end up either dead... or working for me.<BR>
+      But you asked with respect, and I value that. What do you want to know?"
+      ]]>
+    </NPCText>
+    <Option text="Where did you come from?" next="zahidOrigins"/>
+    <Option text="Why build the Undermarket?" next="undermarketOrigins"/>
+    <Option text="What do you believe in, if anything?" next="zahidBeliefs"/>
+    <Option text="What binds you and Nadia?" next="nadiaBond"/>
+    <Option text="I was just curious. Let's talk business." next="subtleTask"/>
+  </Dialogue>
+
+  <!-- Zahid's Origins -->
+  <Dialogue id="zahidOrigins">
+    <NPCText>
+      <![CDATA[
+      "I was born in the gutter outside the Topaz Temple," Zahid murmurs.<BR>
+      "My mother was a caravan cook, my father a gambler who lost her in a bet. I stole my first coin before I could walk straight.<BR><BR>
+      Eventually, I grew tired of groveling. So I watched. I learned. I poisoned a slaver with his own wine and sold his routes to Safiya for my freedom."<BR><BR>
+      His smile sharpens.<BR>
+      "In Qasaria, bloodlines mean less than brilliance. I had neither. So I made my own path, one shadow at a time."
+      ]]>
+    </NPCText>
+    <Option text="Sounds like you earned your place." next="zahidBeliefs"/>
+    <Option text="Let’s move to something else." next="backstoryRoot"/>
+  </Dialogue>
+
+  <!-- Undermarket Origins -->
+  <Dialogue id="undermarketOrigins">
+    <NPCText>
+      <![CDATA[
+      Zahid gestures around.<BR>
+      "This place? It was a drainage canal once. Rotting with trash, ignored by the merchant-princes.<BR>
+      I made deals. Paid off guards. Gave sanctuary to those too dangerous or too clever to be above.<BR><BR>
+      Now? The Undermarket speaks louder than any gemstone throne."<BR>
+      He taps his temple.<BR>
+      "Control the secrets, and the towers above are just puppets on strings."
+      ]]>
+    </NPCText>
+    <Option text="Do you ever regret this path?" next="zahidBeliefs"/>
+    <Option text="Let’s return to your story." next="backstoryRoot"/>
+  </Dialogue>
+
+  <!-- Zahid's Beliefs -->
+  <Dialogue id="zahidBeliefs">
+    <NPCText>
+      <![CDATA[
+      Zahid leans in.<BR><BR>
+      "Power. Leverage. Information. Not gods, not titles. Everything else is noise.<BR>
+      But... I do believe in one thing."<BR>
+      He raises a finger.<BR>
+      "Choice. Everyone deserves the right to choose their path—even if it’s dark, or damned."<BR><BR>
+      <I>You feel a faint tug on your soul...</I>
+      ]]>
+    </NPCText>
+    <Option text="That's respectable." action="Karma:50" next="backstoryRoot"/>
+    <Option text="Sounds like selfish nonsense." action="Karma:-100" next="backstoryRoot"/>
+    <Option text="It’s true. The powerful shape their own destiny." action="Fame:100" next="backstoryRoot"/>
+  </Dialogue>
+
+  <!-- Zahid & Nadia Bond -->
+  <Dialogue id="nadiaBond">
+    <NPCText>
+      <![CDATA[
+      Zahid's expression tightens subtly.<BR><BR>
+      "Nadia was a weapon in someone else’s hand when I found her. The Sapphire caravans used her for 'problem solving'—paid well, but not with respect.<BR>
+      I offered her freedom. Not kindness. Not safety. Just the truth."<BR><BR>
+      He glances to the shadows, where Nadia likely listens.<BR>
+      "She stays because she chooses to. If ever she chooses otherwise, I’ll respect that too—even if it’s the last thing I do."
+      ]]>
+    </NPCText>
+    <Option text="Would you kill her if she betrayed you?" next="betrayalPath"/>
+    <Option text="Sounds like the two of you trust each other deeply." next="trustBond"/>
+    <Option text="Interesting... Let’s talk about something else." next="backstoryRoot"/>
+  </Dialogue>
+
+  <!-- Zahid on Betrayal -->
+  <Dialogue id="betrayalPath">
+    <NPCText>
+      <![CDATA[
+      Zahid’s smile fades completely.<BR><BR>
+      "I would not kill her. I would let her kill me, if she earned the right."<BR>
+      His tone is quiet.<BR>
+      "Some bonds are forged not from love or duty, but shared understanding. Nadia knows where I’ve buried the worst of me—and she’s walked away from worse."<BR><BR>
+      Nadia’s voice cuts in from the dark:<BR>
+      "If I betray him, it’s because he taught me how."<BR><BR>
+      Zahid smirks. "So you see? It’s mutual."
+      ]]>
+    </NPCText>
+    <Option text="That’s intense. I respect it." next="backstoryRoot"/>
+    <Option text="Your bond sounds dangerous." action="Karma:-50" next="backstoryRoot"/>
+  </Dialogue>
+
+  <!-- Trust and Bond -->
+  <Dialogue id="trustBond">
+    <NPCText>
+      <![CDATA[
+      Zahid nods, slowly.<BR><BR>
+      "Trust... maybe. But it’s not the trust of saints or lovers. It’s the trust between two predators who understand the rules of survival.<BR><BR>
+      Still, I’d rather walk through fire with her than dine with most princes."<BR>
+      He chuckles.<BR>
+      "She’d likely set the fire herself."
+      ]]>
+    </NPCText>
+    <Option text="Let’s talk business." next="subtleTask"/>
+    <Option text="One more question about your past." next="backstoryRoot"/>
+  </Dialogue>
+
+
+</DialogueFile>

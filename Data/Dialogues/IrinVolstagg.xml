@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="IrinVolstagg">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#daecff'>
+      Before you stands a wild-eyed man in wind-stained gear, a bandana knotted over tousled copper hair. Shard-glass glitters on his diving shirt, and his boots are dusted with the blue of crystal powder.<BR><BR>
+      He grins, cocky and fearless, as if he's never met a ledge he wouldn't leap from.<BR><BR>
+      "Heh! Don’t tell me you came up here for the view—folk like us live for the drop, not the sunrise. Name’s <B>Irin Volstagg</B>, crystal diver and certified fool according to Tolan Drift. And who might you be? Looking for a taste of real risk, or just lost in the clouds?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Are you the famous diver they talk about in the markets?" next="brag"/>
+    <Option text="I’m here for work—dangerous work, if you’ve got it." next="jobIntro"/>
+    <Option text="You know Tolan Drift?" next="tolan"/>
+    <Option text="What’s with that sash? Looks like it belonged to someone important." next="kaelis"/>
+	<Option text="Tell me more about your past, Irin." next="irinBackstory"/>
+    <Option text="Just passing by, thanks." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Irin Bragging -->
+  <Dialogue id="brag">
+    <NPCText>
+      <![CDATA[
+      Irin puffs up, clearly delighted.<BR><BR>
+      "Famous, infamous—call it what you will. I’ve snatched relics from the fractured isles, danced with windspirits, even beat Tolan in a race from Spire to sea. Don’t ask who paid for my last resurrection, though…"<BR><BR>
+      He winks.<BR><BR>
+      "But listen, if you’re truly daring, I do have a little errand—hazard pay, no questions asked."
+      ]]>
+    </NPCText>
+    <Option text="What’s the job?" next="jobIntro"/>
+    <Option text="Tell me about that race with Tolan." next="tolan"/>
+    <Option text="You seem to enjoy near-death." next="nearDeath"/>
+    <Option text="Not today, thanks." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="nearDeath">
+    <NPCText>
+      <![CDATA[
+      "Enjoy it? I collect it. Every close call's a new story—and a fresh scar. Want a look?"<BR>
+      He grins, rolling up his sleeve to reveal a tapestry of old wounds.<BR><BR>
+      "But hey, you learn more from a fall than a featherbed. The trick is knowing which ledges to trust and which will drop you right into Minax’s claws."
+      ]]>
+    </NPCText>
+    <Option text="Does Minax really send her agents up here?" next="minax"/>
+    <Option text="Give me the job. I’ll take my chances." next="jobIntro"/>
+    <Option text="I’ll leave the falling to you, friend." action="Close"/>
+  </Dialogue>
+
+  <!-- Tolan Relationship -->
+  <Dialogue id="tolan">
+    <NPCText>
+      <![CDATA[
+      Irin laughs.<BR>
+      "You know Tolan Drift? Skyfleet’s finest, by the book, but even he admits: nobody dives like Volstagg. We’re rivals, friends, sometimes both. He once pulled me out of a cloud well when my line snapped. I’ve covered for his little… detours to Buccaneer’s Den. But between you and me, he worries too much about rules, not enough about the wind."<BR><BR>
+      "That said, if you see Tolan, tell him I still owe him for that lost airhook. And the barrel of sapphirewine he drank."
+      ]]>
+    </NPCText>
+    <Option text="What do you do up here, really?" next="jobIntro"/>
+    <Option text="Sapphirewine? Sounds expensive." next="sapphirewine"/>
+    <Option text="Maybe I’ll stick to the ground after all." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="sapphirewine">
+    <NPCText>
+      <![CDATA[
+      Irin winks.<BR>
+      "Best drink in Aerilon—if you can afford it, or if you know how to win a wager. Maybe I’ll buy you a cup after this errand. That is, if you come back in one piece."
+      ]]>
+    </NPCText>
+    <Option text="Alright, what’s this errand?" next="jobIntro"/>
+    <Option text="I’ll leave the sky-drinking to you." action="Close"/>
+  </Dialogue>
+
+  <!-- Kaelis Lore -->
+  <Dialogue id="kaelis">
+    <NPCText>
+      <![CDATA[
+      Irin sobers, fingering the blue sash at his waist.<BR>
+      "Sharp eyes. Kaelis gave me this, back when we still talked. I owe him my life, even if the Conclave calls him mad. Thing is, sometimes the best minds are the ones closest to the edge."<BR>
+      He lowers his voice.<BR>
+      "Kaelis knows more about corrupted crystals than anyone up here. If you ever find yourself on the Fractured Isle, trust his warnings. Or don’t—and learn the hard way."
+      ]]>
+    </NPCText>
+    <Option text="Are you and Kaelis still friends?" next="kaelisFriends"/>
+    <Option text="Enough history. Got any work?" next="jobIntro"/>
+    <Option text="You seem conflicted about Kaelis." next="kaelisConflict"/>
+    <Option text="I’ll be careful if I meet him." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="kaelisFriends">
+    <NPCText>
+      <![CDATA[
+      "Friends? Depends on the day. Kaelis saved me, but he also nearly got me killed with one of his ‘harmless’ experiments. These days, he keeps to the shattered islands. I toss him supplies when I can. Who knows, maybe he’ll save Aerilon yet—or blow us all to fragments."
+      ]]>
+    </NPCText>
+    <Option text="Let’s talk about the job." next="jobIntro"/>
+    <Option text="Dangerous man, sounds like." next="kaelisConflict"/>
+  </Dialogue>
+
+  <Dialogue id="kaelisConflict">
+    <NPCText>
+      <![CDATA[
+      "Conflicted? Maybe. I trust his heart, not always his mind. The Conclave hates him, Tolan thinks he’s a risk. Me? I say every sky needs a storm. Just watch your back if he offers you a ‘gift’."
+      ]]>
+    </NPCText>
+    <Option text="Alright, enough stories. Any work for me?" next="jobIntro"/>
+    <Option text="No thanks, I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <!-- Job/Quest Offer -->
+  <Dialogue id="jobIntro">
+    <NPCText>
+      <![CDATA[
+      Irin leans in, voice dropping to a conspiratorial hush.<BR><BR>
+      "Here’s the deal, skywalker: a chunk of floating shard broke loose last night, destabilized by corrupted crystal. Half the Conclave wants to study it, the other half wants it blown to dust. Me? I say there’s treasure lost inside—arcane relics, maybe even one of Kaelis’ old notes.<BR><BR>
+      But the place is crawling with twisted scuttlers—crystal-tainted things, venomous as a scholar’s tongue. That’s why I need a runner with the ‘Scorpion Scholar’ trait—someone sharp, sneaky, and quick on the uptake. You’ll deliver this *Sealed Skybound Parcel* to my contact on the surface. She’s an old academic, exiled from Moonglow. Brings the stuff right back to me, no questions.<BR><BR>
+      Bring it back intact, and I’ll vouch for you with the Conclave. Maybe even get you a dive pass to the lower platforms."
+      ]]>
+    </NPCText>
+    <Option text="Give me the parcel. I’ll deliver it for you."
+            action="GiveItem:FactionDeliveryQuestScroll(Scorpion Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Why only a ‘Scorpion Scholar’?" next="whyScorpion"/>
+    <Option text="Is this related to Minax?" next="minax"/>
+    <Option text="What are the risks?" next="risks"/>
+    <Option text="Let me think it over." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Irin passes you a tightly wrapped, rune-sealed box, its surface inscribed with warning glyphs.<BR><BR>
+      "Guard that with your life. The academic you’re looking for answers to ‘Professor Liraen’. Don’t open it, don’t ask. There are things in there that bite harder than a sand scorpion.<BR><BR>
+      Return with proof of delivery, and you’ll find Aerilon a little less cold. Fail, and well… you’ll probably end up like the last runner—still floating, somewhere, in pieces."
+      ]]>
+    </NPCText>
+    <Option text="You’ll see me back soon—whole and smiling." action="Close"/>
+  </Dialogue>
+
+  <!-- Why Scorpion Scholar? -->
+  <Dialogue id="whyScorpion">
+    <NPCText>
+      <![CDATA[
+      Irin grins.<BR>
+      "You ever try to sneak past a nest of venom-crabs with nothing but a torch and your wits? You’ll want a mind sharp as a scorpion’s sting. The parcel’s warded for those who know the old scholarly tricks—only a ‘Scorpion Scholar’ can handle it without setting off the traps."<BR>
+      "Besides, Professor Liraen won’t trust just anyone. She’s got more enemies than Kaelis has loose screws."
+      ]]>
+    </NPCText>
+    <Option text="Alright, I’m ready for the job."
+            action="GiveItem:FactionDeliveryQuestScroll(Scorpion Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Sounds tricky. Maybe not today." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax Lore -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Irin’s grin fades.<BR>
+      "Everything up here’s related to Minax, if you ask me. Some say she’s trying to poison the shards, twist the floating cities into her own. Kaelis warned me that corrupted crystals answer to her—maybe that’s why these scuttlers keep showing up."<BR>
+      "Just keep your wits sharp and your boots laced. You never know who’s working for her."
+      ]]>
+    </NPCText>
+    <Option text="Now I’m definitely taking the job." 
+            action="GiveItem:FactionDeliveryQuestScroll(Scorpion Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I’m not ready to cross Minax." action="Close"/>
+  </Dialogue>
+
+  <!-- Risks Explanation -->
+  <Dialogue id="risks">
+    <NPCText>
+      <![CDATA[
+      Irin flashes all his teeth.<BR>
+      "Risks? Only all of ‘em. Shardstorms, corrupted scuttlers, jealous rival divers… and that’s before you even reach the ground. But hey, what’s the point of living up here if you’re afraid of falling?"<BR>
+      "The parcel’s warded, but if you open it—don’t say I didn’t warn you."
+      ]]>
+    </NPCText>
+    <Option text="Give me the job. I live for danger."
+            action="GiveItem:FactionDeliveryQuestScroll(Scorpion Scholar,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="On second thought, I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismiss -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Irin shrugs.<BR>
+      "Hey, not everyone’s built for the brink. If you change your mind, you know where to find me—just follow the sound of falling rocks and cursing."
+      ]]>
+    </NPCText>
+    <Option text="Wait, tell me about the job." next="jobIntro"/>
+    <Option text="See you around, Volstagg." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="irinBackstory">
+  <NPCText>
+    <![CDATA[
+    Irin leans back against a support beam, arms folded.<BR><BR>
+    "Most folks think I was born with a grappling hook in one hand and a death wish in the other. Truth is, I used to be a student in Wind—yep, the hermit-mage city."<BR><BR>
+    "I was on track to be a theorist, working on arcane harmonics. But they hated curiosity more than corruption. I asked one question too many and—"<BR>
+    He mimics a dramatic explosion with his hands.<BR>
+    "Boom. Expelled. Literally."
+    ]]>
+  </NPCText>
+  <Option text="They *exploded* you out of Wind?" next="expulsion"/>
+  <Option text="So you were once a scholar?" next="scholarPath"/>
+  <Option text="That explains your gear—it’s half academic, half adventurer." next="interests"/>
+</Dialogue>
+
+<Dialogue id="expulsion">
+  <NPCText>
+    <![CDATA[
+    "It was more of a... magical discharge." Irin chuckles.<BR>
+    "Turns out when you probe too deeply into the crystal frequency anchoring the city, it resonates through your lab. And your eyebrows. Took weeks to grow ‘em back."<BR><BR>
+    "After that, I figured, if the sky wants to kill me, I might as well meet it halfway."
+    ]]>
+  </NPCText>
+  <Option text="Is that when you started diving shards?" next="firstDive"/>
+  <Option text="That sounds incredibly dangerous." next="danger"/>
+</Dialogue>
+
+<Dialogue id="scholarPath">
+  <NPCText>
+    <![CDATA[
+    Irin nods thoughtfully.<BR>
+    "I wasn’t bad at it. Theoretical constructs, spell layering, chronomantic pressure nodes—you name it. But I wanted to *test* them. Wind didn’t. They wanted theory. I wanted risk."<BR><BR>
+    He pauses.<BR>
+    "Aerilon gave me that. Here, ideas fall or fly—literally. That’s more honest than any scroll."
+    ]]>
+  </NPCText>
+  <Option text="Do you ever miss the lab work?" next="missLab"/>
+  <Option text="That sounds like Kaelis’ mindset too." next="kaelisConnection"/>
+</Dialogue>
+
+<Dialogue id="firstDive">
+  <NPCText>
+    <![CDATA[
+    "My first dive? Hah! Barely survived it. Used a repurposed tether line and an enchanted umbrella—don’t ask. But I pulled up a shard crystal no one thought existed."<BR><BR>
+    He lowers his voice.<BR>
+    "Selara took notice. Gave me a guild contract. That’s when I started wearing Kaelis’ sash. He warned me the crystals talk back, if you listen too long."<BR><BR>
+    He taps his temple. "Not all of us came back sane."
+    ]]>
+  </NPCText>
+  <Option text="Do you hear them now?" next="whispers"/>
+  <Option text="You’re not the first to go mad in Aerilon." next="madness"/>
+</Dialogue>
+
+<Dialogue id="interests">
+  <NPCText>
+    <![CDATA[
+    "Good eye!" Irin claps approvingly.<BR>
+    "Most folks miss that my belt has runes from the Order of 11, or that this boot was once part of a floating dock in Vesper. Everything I wear has a story—it’s protection, memory, and style."<BR><BR>
+    "I like poetry too, weirdly. And old mechanical puzzles. Guess I’m still a scholar at heart. Just one who enjoys falling very fast."
+    ]]>
+  </NPCText>
+  <Option text="I wouldn’t have guessed. Got a favorite poem?" next="poetry"/>
+  <Option text="You’re full of surprises, Irin." next="compliment"/>
+</Dialogue>
+
+<Dialogue id="poetry">
+  <NPCText>
+    <![CDATA[
+    He grins, then recites quietly:<BR><BR>
+    <I>"The sky does not wait / For those afraid to fall / Leap, or the wind forgets you."</I><BR><BR>
+    "Wrote that myself after a storm nearly threw me into the void. Dumb luck—or a whisper from Kaelis’ damned crystals—saved me that day."
+    ]]>
+  </NPCText>
+  <Option text="That’s actually… beautiful." action="AddStat:Int,2,300" next="poetryGift"/>
+  <Option text="Let’s get back to business." next="jobIntro"/>
+</Dialogue>
+
+<Dialogue id="poetryGift">
+  <NPCText>
+    <![CDATA[
+    Irin nods in surprise.<BR>
+    "Didn’t think you’d say that. Most just laugh."<BR>
+    <B>You feel something spark in your mind—clarity, brief and bright. (+2 Int for 5 minutes)</B>
+    ]]>
+  </NPCText>
+  <Option text="You’re more than just a thrill-seeker, Irin." next="finalThought"/>
+  <Option text="Back to that job you mentioned..." next="jobIntro"/>
+</Dialogue>
+
+<Dialogue id="compliment">
+  <NPCText>
+    <![CDATA[
+    "Heh, you should see me juggle skyfish while blindfolded."<BR>
+    He winks.<BR>
+    "But seriously—thanks. Most folk just want my loot stories or directions to the next airship port. You? You ask good questions. Dangerous ones, maybe, but good."
+    ]]>
+  </NPCText>
+  <Option text="I’m drawn to dangerous knowledge." next="firstDive"/>
+  <Option text="Let’s talk jobs." next="jobIntro"/>
+</Dialogue>
+
+<Dialogue id="whispers">
+  <NPCText>
+    <![CDATA[
+    "Only when I’m close to certain crystals. Kaelis says it’s ‘resonant memory leakage’. I call it spooky nonsense."<BR>
+    He pauses.<BR>
+    "But sometimes I wake up with words in languages I never learned. Sometimes I write them down. Sometimes... they write back."
+    ]]>
+  </NPCText>
+  <Option text="That’s... disturbing." next="madness"/>
+  <Option text="Can I see one?" next="scribble"/>
+</Dialogue>
+
+<Dialogue id="scribble">
+  <NPCText>
+    <![CDATA[
+    Irin produces a small slip of parchment. The symbols shimmer and rearrange as you look.<BR>
+    <I><BASEFONT COLOR='#dd88ff'>We are the echoes of gravity’s failure.</BASEFONT></I><BR><BR>
+    He takes it back quickly.<BR>
+    "It changes when you're not watching. I don't keep them long."
+    ]]>
+  </NPCText>
+  <Option text="You’re walking a fine line, friend." next="madness"/>
+  <Option text="You may be more mage than you know." action="AddSkill:Magery,2,300" next="mageBuff"/>
+</Dialogue>
+
+<Dialogue id="mageBuff">
+  <NPCText>
+    <![CDATA[
+    You feel a subtle pulse in the air, like invisible ley lines just acknowledged your presence.<BR>
+    <B>(+2 Magery for 5 minutes)</B><BR><BR>
+    Irin stares a moment.<BR>
+    "Well now. Maybe the crystals like you."
+    ]]>
+  </NPCText>
+  <Option text="Let’s get to the job you offered." next="jobIntro"/>
+  <Option text="I have more questions first." next="irinBackstory"/>
+</Dialogue>
+
+<Dialogue id="madness">
+  <NPCText>
+    <![CDATA[
+    "Mad? Maybe. Maybe the city's mad and I'm just fluent in it."<BR>
+    He chuckles darkly.<BR>
+    "Aerilon doesn’t let you keep secrets forever. Sooner or later, the wind carries them up to the Conclave—or throws them over the edge."
+    ]]>
+  </NPCText>
+  <Option text="Let’s get back to work." next="jobIntro"/>
+  <Option text="I’ll be careful what I share." next="finalThought"/>
+</Dialogue>
+
+<Dialogue id="finalThought">
+  <NPCText>
+    <![CDATA[
+    Irin’s gaze lingers on the horizon for a moment.<BR>
+    "If you’re planning to stay in Aerilon long, learn this: It’s not the fall that kills you. It’s forgetting what you climbed for."<BR>
+    He smiles, softer than before.<BR>
+    "Now then. Shall we talk business?"
+    ]]>
+  </NPCText>
+  <Option text="Yes, I’m ready." next="jobIntro"/>
+  <Option text="Not today. But I’ll remember your words." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

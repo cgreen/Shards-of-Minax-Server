@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="HalimTheStoryteller">
+
+  <!-- ====== GREETING ====== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#fdcf70'>
+      Before you is a tall, bronzed man swathed in colorful silks, plucking at a harp of desert crystal. His feathered hat catches the sunlight, and his clever eyes dance with unspoken stories.<BR><BR>
+      “Ah! A new audience, a fresh canvas for old tales and new secrets. I am Halim, spinner of legend, seller of rumors, and sometimes—just sometimes—a deliverer of destinies.<BR><BR>
+      Will you sit and listen to a tale of Minax and the Gem of Immortality, or do you seek something more... actionable?”<BR>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Tell me your best tale of Minax and the Gem." next="minaxLegend"/>
+    <Option text="Who are you, really, Halim?" next="backstory"/>
+    <Option text="What is Qasaria to you?" next="qasaria"/>
+    <Option text="Do you know anyone on the Council of Jewels?" next="council"/>
+    <Option text="I seek work, not words." next="questIntro"/>
+	<Option text="Tell me more about yourself, Halim." next="halimDeepDive"/>
+    <Option text="I'm just passing by." next="dismiss"/>
+  </Dialogue>
+
+  <!-- ====== MINAX LEGEND ====== -->
+  <Dialogue id="minaxLegend">
+    <NPCText>
+      <![CDATA[
+      Halim’s harp hums a melancholy chord.<BR><BR>
+      “Minax, the Shadow Sorceress, once shattered the world with a single desire: to rule immortality itself. They say when the Gem of Immortality broke, the world splintered into countless shards—each a memory, each a battleground.<BR><BR>
+      Now she gathers the pieces again, sending her cultists and agents to all corners, from frost-choked Frostmere to the sunlit domes of Qasaria. Some believe the Heart of the Dunes, slumbering beneath our city, is one such shard.<BR><BR>
+      But that, dear friend, is a tale best left unfinished—unless you wish to help write its ending?”
+      ]]>
+    </NPCText>
+    <Option text="You weave a fine story. Tell me another." next="qasaria"/>
+    <Option text="What do you know of the Heart of the Dunes?" next="relic"/>
+    <Option text="What would you have me do?" next="questIntro"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== BACKSTORY ====== -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      Halim winks slyly.<BR><BR>
+      “Me? I am many things. A humble bard, yes—but also a son of Qasaria’s sand and secrets. Once, I was a page in the House of Topaz, taught to read ancient glyphs and sing to sleeping gods. I played for gladiators in Omar al-Onyx’s arena, and I’ve dined with thieves in the Undermarket’s shadow.<BR><BR>
+      These days, I serve my own muse… and sometimes, those with heavier purses and sharper intentions.”<BR>
+      He leans closer.<BR>
+      “Every song has a hidden verse. Sometimes, I sing it for Karim al-Emerald—though you must never tell.”
+      ]]>
+    </NPCText>
+    <Option text="You know Karim al-Emerald? Tell me of him." next="karim"/>
+    <Option text="What secrets do you trade in the Undermarket?" next="undermarket"/>
+    <Option text="Can you help me earn the Council’s favor?" next="questIntro"/>
+    <Option text="That’s enough history for now." next="greeting"/>
+  </Dialogue>
+
+  <!-- ====== QASARIA LORE ====== -->
+  <Dialogue id="qasaria">
+    <NPCText>
+      <![CDATA[
+      Halim gestures grandly, his silks fluttering.<BR><BR>
+      “Qasaria, the golden city of shifting alliances, where every shadow has a story and every jewel has a price. The Council of Jewels—five princes and princesses—rule from gilded towers, but beneath their feet runs a river of secrets and sand.<BR><BR>
+      The desert outside is dangerous, yet nothing is more perilous than Qasaria’s politics. Friendships can turn to feuds with a whisper, and fortunes rise or fall on a single rumor.”<BR>
+      He smiles knowingly.<BR>
+      “Would you like a tale about one of our mighty Council?”
+      ]]>
+    </NPCText>
+    <Option text="Tell me about Safiya al-Sapphire." next="safiya"/>
+    <Option text="What of Sultan Rafiq al-Ruby?" next="rafiq"/>
+    <Option text="What do you know of Yasmin al-Topaz?" next="yasmin"/>
+    <Option text="Who is Omar al-Onyx?" next="omar"/>
+    <Option text="I’ve heard enough. Give me work." next="questIntro"/>
+    <Option text="Return to your stories." next="greeting"/>
+  </Dialogue>
+
+  <!-- ====== COUNCIL RELATIONSHIPS ====== -->
+  <Dialogue id="council">
+    <NPCText>
+      <![CDATA[
+      Halim grins.<BR><BR>
+      “In Qasaria, everyone knows someone, but only the wise know when to keep silent.<BR>
+      Safiya al-Sapphire will buy any story that boosts her coffers. Yasmin al-Topaz trades in prophecy and relics, but beware her gaze—it’s said to pierce both sand and soul.<BR>
+      Rafiq al-Ruby is too honorable for his own good, and Omar al-Onyx? He pays well, but for a price in blood.<BR>
+      As for Karim al-Emerald… ah, but that tale is reserved for those who prove their discretion.”
+      ]]>
+    </NPCText>
+    <Option text="Let me earn your trust, then." next="questIntro"/>
+    <Option text="Tell me about the Undermarket." next="undermarket"/>
+    <Option text="I want to hear about Yasmin al-Topaz." next="yasmin"/>
+    <Option text="I am ready for work." next="questIntro"/>
+  </Dialogue>
+
+  <Dialogue id="safiya">
+    <NPCText>
+      <![CDATA[
+      “Safiya al-Sapphire, the Merchant-Queen, rules the docks and markets with a smile as sharp as a dagger’s edge. She has more ships than Rafiq has swords, and she’ll make deals with Minax herself if the price is right.<BR>
+      It’s rumored she finances pirates in Sunreach, and her spies are everywhere—even here, perhaps?”<BR>
+      Halim glances at the nearest merchant stall with a smirk.
+      ]]>
+    </NPCText>
+    <Option text="What of her rivalry with Rafiq?" next="rafiq"/>
+    <Option text="Do you work for her?" next="backstory"/>
+    <Option text="Enough gossip. Got a job for me?" next="questIntro"/>
+  </Dialogue>
+
+  <Dialogue id="rafiq">
+    <NPCText>
+      <![CDATA[
+      “Sultan Rafiq al-Ruby is the official leader of the council, though Safiya might disagree. An honorable man, but his debts to the Undermarket could cost him everything.<BR>
+      He would unite Qasaria against Minax if he could, but his rivals plot at every turn. I sang once at his palace, saw the worry beneath his crown.”<BR>
+      Halim’s expression grows wistful.
+      ]]>
+    </NPCText>
+    <Option text="Is he in danger?" next="undermarket"/>
+    <Option text="Tell me of Yasmin al-Topaz." next="yasmin"/>
+    <Option text="Do you have work for me?" next="questIntro"/>
+  </Dialogue>
+
+  <Dialogue id="yasmin">
+    <NPCText>
+      <![CDATA[
+      “Yasmin al-Topaz, the Mistress of the Sands, is the council’s oldest secret. Some say she’s as ancient as the dunes. Her scholars unearth relics beneath the city, and her knowledge is rivaled only by her ambition.<BR>
+      Rumor is she seeks a relic called the Heart of the Dunes—perhaps you will be the one to find it for her?”<BR>
+      Halim’s eyes gleam, testing your interest.
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about this relic." next="relic"/>
+    <Option text="Do you work for Yasmin?" next="backstory"/>
+    <Option text="I want to help." next="questIntro"/>
+  </Dialogue>
+
+  <Dialogue id="omar">
+    <NPCText>
+      <![CDATA[
+      “Omar al-Onyx commands the Sands of Blood Arena. He believes glory is won with steel and sweat, not subtlety. I’ve sung many a dirge for his fallen gladiators.<BR>
+      If you crave danger—or have gold to bet—Omar is your man.”<BR>
+      Halim’s fingers dance across his harp, mimicking a battle’s rhythm.
+      ]]>
+    </NPCText>
+    <Option text="Is Omar involved with the Undermarket?" next="undermarket"/>
+    <Option text="Do you ever perform in the arena?" next="backstory"/>
+    <Option text="Let’s talk business." next="questIntro"/>
+  </Dialogue>
+
+  <!-- ====== UNDERMARKET ====== -->
+  <Dialogue id="undermarket">
+    <NPCText>
+      <![CDATA[
+      Halim lowers his voice.<BR><BR>
+      “The Undermarket is the true heart of Qasaria—where secrets are bought, sold, and sometimes stolen. The Shadowmaster Zahid rules it from below, and his agents have eyes in every alley.<BR>
+      I… owe a few favors there, but then, who doesn’t? Just mind your coin purse, and your tongue.”
+      ]]>
+    </NPCText>
+    <Option text="Are you Zahid’s agent?" next="backstory"/>
+    <Option text="Is the Undermarket working with Minax?" next="minaxInfluence"/>
+    <Option text="How can I prove my loyalty?" next="questIntro"/>
+  </Dialogue>
+
+  <Dialogue id="minaxInfluence">
+    <NPCText>
+      <![CDATA[
+      “Minax’s gold spends as well as any other. Zahid claims neutrality, but rumors swirl of dark bargains. I’ve heard her cultists slip through the catacombs at night, searching for relics—or for easy prey.<BR>
+      If you wish to make your mark, perhaps you should keep your eyes open too.”<BR>
+      Halim offers a knowing nod.
+      ]]>
+    </NPCText>
+    <Option text="I want to help Qasaria resist Minax." next="questIntro"/>
+    <Option text="Thanks for the warning." next="greeting"/>
+  </Dialogue>
+
+  <!-- ====== HEART OF THE DUNES RELIC ====== -->
+  <Dialogue id="relic">
+    <NPCText>
+      <![CDATA[
+      “They say the Heart of the Dunes is a fragment of the Gem of Immortality, able to heal or harm entire cities. Yasmin wants it to stabilize Qasaria’s wards. Minax’s followers want it to shatter them. And me? I want a front-row seat to history.”<BR>
+      Halim grins.<BR>
+      “If you’re bold, I know someone who could use your help… and who rewards those who walk between legend and shadow.”
+      ]]>
+    </NPCText>
+    <Option text="Set me on this path. I want to hunt the relic." next="questIntro"/>
+    <Option text="This sounds too dangerous." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== QUEST HOOK/DELIVERY ====== -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      Halim glances about, then leans closer.<BR><BR>
+      “You wish to prove yourself? Qasaria is a city of secrets—and so is the Council of Jewels.<BR>
+      Karim al-Emerald seeks a courier of discretion and wit. There are whispers of Minax’s spies among the spice caravans and a sealed message that must reach the House of Emerald, untouched by rival hands.<BR><BR>
+      Will you deliver this letter for me? Or would you prefer… a little side business with the Undermarket, instead?”
+      ]]>
+    </NPCText>
+    <Option text="I will deliver Karim’s letter safely."
+            action="GiveItem:FactionDeliveryQuestScroll(Council Courier,Qasaria,400)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="acceptLetter"/>
+    <Option text="Tell me more of the Undermarket job." next="undermarketQuest"/>
+    <Option text="I need time to decide." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptLetter">
+    <NPCText>
+      <![CDATA[
+      Halim produces a sealed scroll, pressed with the emerald sigil.<BR>
+      “Deliver this directly to the steward of the House of Emerald—no detours, no questions. Beware agents of Safiya and Minax along the way; they would pay dearly for a glimpse at Karim’s secrets.<BR><BR>
+      Return to me with proof of delivery, and Karim’s gratitude—and perhaps a touch of mine—shall be yours.”<BR>
+      He bows dramatically.
+      ]]>
+    </NPCText>
+    <Option text="I will see it done, storyteller." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="undermarketQuest">
+    <NPCText>
+      <![CDATA[
+      “If you prefer shadow to sun, Zahid seeks someone brave—or desperate—to track a rumored Minax cultist through the catacombs beneath Qasaria. The job pays well, and the tale may even top one of my own.<BR><BR>
+      Are you interested in this more… hazardous employment?”
+      ]]>
+    </NPCText>
+    <Option text="Yes, I’ll take the Undermarket contract."
+            action="GiveItem:FactionDeliveryQuestScroll(UndermarketCatacomb,Qasaria,400)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="acceptUndermarket"/>
+    <Option text="No, I’ll stick with the letter." next="questIntro"/>
+    <Option text="On second thought, I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="acceptUndermarket">
+    <NPCText>
+      <![CDATA[
+      Halim hands you a blood-red token, marked with Zahid’s sign.<BR>
+      “Take this to the catacomb entrance at nightfall. Seek out Nadia the Dagger—she’ll know you by this token. But be warned: the Undermarket rewards, and consumes, in equal measure.”<BR>
+      His harp sounds a discordant note.
+      ]]>
+    </NPCText>
+    <Option text="I’m ready for the challenge." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== DISMISS ====== -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Halim strums a farewell on his harp.<BR>
+      “Safe travels, friend. May your feet find fortune—and may your story, when next we meet, be worth the telling.”
+      ]]>
+    </NPCText>
+    <Option text="Farewell, Halim." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="halimDeepDive">
+  <NPCText>
+    <![CDATA[
+    Halim flashes a grin and strums his harp, a faint chord humming in the air.<BR><BR>
+    “A wise question. So many chase stories, but never ask the teller's own. You truly wish to know me? Then choose your thread.”<BR>
+    He tilts his head like a performer selecting his act.
+    ]]>
+  </NPCText>
+  <Option text="Where were you born, storyteller?" next="halimOrigins"/>
+  <Option text="Have you always been a bard?" next="halimSecrets"/>
+  <Option text="What does your music mean to you?" next="halimMusic"/>
+  <Option text="Actually, nevermind." action="Close"/>
+</Dialogue>
+<Dialogue id="halimOrigins">
+  <NPCText>
+    <![CDATA[
+    Halim's voice softens, a nostalgic gleam in his eye.<BR><BR>
+    “I was born beneath the bronze awnings of the Low Market, where merchants shout louder than priests. My mother wove silks for Safiya’s caravans; my father gambled away those same silks before they could be sold.<BR><BR>
+    I learned to lie before I learned to walk—and to sing before I could read.”<BR>
+    He chuckles.<BR>
+    “The market raised me more than any family. That’s why I can charm a merchant, confuse a thief, and sweet-talk a snake.”
+    ]]>
+  </NPCText>
+  <Option text="Sounds like a difficult childhood." next="halimSecrets"/>
+  <Option text="So you were a street performer?" next="halimMusic"/>
+  <Option text="That explains your flair." action="SendMessage:Your respect for Halim grows slightly." />
+  <Option text="Back to your other tales." next="greeting"/>
+</Dialogue>
+<Dialogue id="halimSecrets">
+  <NPCText>
+    <![CDATA[
+    Halim smirks, then looks around conspiratorially.<BR><BR>
+    “A bard, yes—but not always an innocent one. I trained for a time in the House of Emerald, Karim’s spies cloaked as scholars. They taught me how to listen without being heard, and speak without revealing truth.<BR><BR>
+    A good tale misleads, a better one reveals—but never fully. That's what makes them art.”<BR>
+    <BASEFONT COLOR='#999999'>He leans in and whispers a verse:<BR>
+    ‘Truth rides a lie’s shadow / and sings in broken rhyme.’</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Are you still loyal to Karim?" next="halimPlayerResponse"/>
+  <Option text="Sounds like you know dangerous things." next="halimMusic"/>
+  <Option text="What secrets have you kept from me?" action="SendMessage:You sense there is more he’s not saying." />
+</Dialogue>
+<Dialogue id="halimMusic">
+  <NPCText>
+    <![CDATA[
+    Halim’s fingers dance across the harp strings, the notes warm and wistful.<BR><BR>
+    “Music is memory. A melody can hold sorrow longer than a tomb, and joy brighter than any gem. My songs carry secrets, buried between verses and tied to each note like knots in silk.”<BR><BR>
+    <BASEFONT COLOR='#e0b0ff'>*He plays a quick trill*</BASEFONT> <ACTION:PlaySound:0x015 /><BR>
+    “That one? A coded signal. Used it to warn Karim once when a Sapphire agent came too close to his tower.”<BR>
+    He laughs. “They clapped. Thought it was a love ballad.”
+    ]]>
+  </NPCText>
+  <Option text="Music as weapon. I like that." next="halimPlayerResponse"/>
+  <Option text="Teach me a coded tune sometime." condition="SkillAtLeast:Musicianship,80" action="SendMessage:He nods. 'You have the hands for it.'" />
+  <Option text="I'm not one for riddles and rhymes." action="SendMessage:He shrugs, unbothered." />
+</Dialogue>
+<Dialogue id="halimPlayerResponse">
+  <NPCText>
+    <![CDATA[
+    Halim studies you closely now, amusement fading to curiosity.<BR><BR>
+    “You ask real questions, stranger. Rare in this city. Most want coin or tales to seduce a crowd. You? You want something deeper.”<BR><BR>
+    <BASEFONT COLOR='#9999ff'>[He studies your face, then smiles.]</BASEFONT><BR>
+    “If you ever grow tired of sword and scroll, come find me again. There’s more I could share—if your ears remain open.”<BR>
+    <BASEFONT COLOR='#ffffff'>You feel like Halim may offer you something rare if you earn his full trust…</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="I look forward to that, storyteller." action="AddStat:Int,5,600"/>
+  <Option text="I prefer action to riddles." action="AddStat:Str,5,600"/>
+  <Option text="Wisdom is in the questions we ask." action="Karma:250"/>
+  <Option text="That’s enough for now." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

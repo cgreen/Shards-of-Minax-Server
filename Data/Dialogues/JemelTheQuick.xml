@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="JemelTheQuick">
+
+  <!-- ====== GREETING ====== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#edc865'>
+      A wiry, sharp-eyed boy darts from shadow, eyes glinting with streetwise cunning. He flashes a quick, gap-toothed grin.<BR><BR>
+      "Oi, stranger! Sunreach ain't safe for lone wanderers—less you got sharp eyes and quick fingers. Name's Jemel. Jemel the Quick. I run things down here for the gutter-folk. You want news, coin, or trouble, I can sell you all three. But... I got bigger worries today."<BR><BR>
+      He looks you up and down, appraising.<BR>
+      "You look clever. Maybe you can help a desperate kid. You after business, gossip, or a good deed?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="What trouble? You look worried." next="sisterIntro"/>
+    <Option text="Got any work for someone handy?" next="offerRumors"/>
+    <Option text="Tell me about Sunreach's streets." next="aboutSunreach"/>
+	<Option text="Tell me about yourself, Jemel." next="backstoryIntro"/>
+    <Option text="I’m just passing through." next="dismiss"/>
+  </Dialogue>
+
+  <!-- ====== SISTER QUEST INTRO ====== -->
+  <Dialogue id="sisterIntro">
+    <NPCText>
+      <![CDATA[
+      Jemel's grin fades. For a moment, you glimpse fear beneath his bravado.<BR><BR>
+      "It's my sister, Nali. She got nabbed by some slavers—bastards working for one of Darius Veynar’s rivals. Took her out the city gates last night. I’d run after, but the streets need me. If someone helped, well… the gutter-kids remember their friends. We got eyes everywhere. What do you say—will you help find Nali?"
+      ]]>
+    </NPCText>
+    <Option text="Of course. Tell me where she was taken." next="questDetails"/>
+    <Option text="Why target your sister?" next="whySister"/>
+    <Option text="Who are these slavers?" next="slaverInfo"/>
+    <Option text="I’m sorry, I can’t get involved." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== QUEST DETAILS ====== -->
+  <Dialogue id="questDetails">
+    <NPCText>
+      <![CDATA[
+      Jemel nods, hope flickering.<BR><BR>
+      "They dragged her east, out the Smuggler’s Gate. Rumor is, they hole up at the old salt warehouse past the docks—guarded, but not impossible to sneak in if you’re clever."<BR><BR>
+      He slips you a crudely drawn map and a coin with a rat symbol.<BR>
+      "Show that coin to any street urchin. My crew will help—distract guards, pass messages, whatever. Save Nali, and the gutters will owe you big."<BR><BR>
+      [**Quest Started: Find Nali**]
+      ]]>
+    </NPCText>
+    <Option text="I’ll bring her back, Jemel. Count on it." action="GiveItem:NaliRescueQuestScroll(SaltWarehouse,Sunreach,1)" next="questAccepted"/>
+    <Option text="How do I get past the slavers?" next="sneakTips"/>
+    <Option text="Tell me more about your network." next="gutterKids"/>
+    <Option text="Maybe this is too risky..." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="questAccepted">
+    <NPCText>
+      <![CDATA[
+      Jemel clasps your wrist, urgent.<BR>
+      "You do this, you got friends for life. Watch the rooftops—my crew will send up a black rag if slavers return. Bring Nali to me alive. And, uh… don’t trust grown-ups near the salt warehouse. Most got silver from the slavers."<BR>
+      He melts back into the alley, watching, waiting.
+      ]]>
+    </NPCText>
+    <Option text="(Leave)" action="Close"/>
+  </Dialogue>
+
+  <!-- ====== BRANCHES: INFO / LORE ====== -->
+  <Dialogue id="whySister">
+    <NPCText>
+      <![CDATA[
+      Jemel’s jaw clenches.<BR>
+      "We don't have coin, but Nali’s smart—she saw something. Heard a name. Slavers want her quiet, and maybe Veynar’s rivals want leverage. I can’t let them hurt her."<BR>
+      "Will you help me?"
+      ]]>
+    </NPCText>
+    <Option text="Yes. Tell me where to start." next="questDetails"/>
+    <Option text="I can’t, sorry." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="slaverInfo">
+    <NPCText>
+      <![CDATA[
+      Jemel spits.<BR>
+      "Call themselves the ‘Black Band’. Run by a brute named Karvos, takes gold from the merchant houses—mostly rivals of Darius Veynar. They move folk through the old salt warehouse, sell them up the coast."<BR>
+      "That’s all I know, but my crew is watching. What do you say?"
+      ]]>
+    </NPCText>
+    <Option text="I’ll help. Where do I start?" next="questDetails"/>
+    <Option text="This isn’t for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="sneakTips">
+    <NPCText>
+      <![CDATA[
+      Jemel grins.<BR>
+      "Best to go at dusk. Two guards by the front, but the side window’s always loose. Or… bribe the fishmonger, Old Mags—she owes me a favor, and can distract Karvos if you ask nice. Watch out for dogs. They bite."<BR>
+      "Anything else you need?"
+      ]]>
+    </NPCText>
+    <Option text="No, that’s enough. I’ll do this." action="GiveItem:NaliRescueQuestScroll(SaltWarehouse,Sunreach,1)" next="questAccepted"/>
+    <Option text="How do I signal your crew for help?" next="gutterKids"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="gutterKids">
+    <NPCText>
+      <![CDATA[
+      Jemel whispers, proud.<BR>
+      "Gutter-kids run half the alleys. Pass the rat coin, and they’ll help—throw pebbles, shout warnings, even lead you through secret ways. We keep to shadows, but we’re everywhere. Folks overlook us. Their mistake."<BR>
+      "Ready to help Nali?"
+      ]]>
+    </NPCText>
+    <Option text="Yes, let’s save her." next="questDetails"/>
+    <Option text="Not today." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== RUMORS / OPTIONAL CONTENT ====== -->
+  <Dialogue id="offerRumors">
+    <NPCText>
+      <![CDATA[
+      Jemel winks.<BR>
+      "I know things—what ships carry real gold, which houses squabble, who’s got Minax fever. Cassira pays silver for my whispers, but maybe I’ll share… for a price."
+      ]]>
+    </NPCText>
+    <Option text="Got any rumors about Darius Veynar?" next="rumorVeynar"/>
+    <Option text="What’s new in Sunreach?" next="rumorSunreach"/>
+    <Option text="Heard anything about Minax cultists?" next="rumorMinax"/>
+    <Option text="I’ll come back later." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="rumorVeynar">
+    <NPCText>
+      <![CDATA[
+      Jemel leans close.<BR>
+      "Veynar’s got a shipment coming in—midnight, pier seven. Not all silk, I hear. Some say it’s spellbound steel. Don’t get caught sniffing around his guards, or you’ll lose more than your purse."
+      ]]>
+    </NPCText>
+    <Option text="Thanks. Any other rumors?" next="offerRumors"/>
+    <Option text="That’s enough for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="rumorSunreach">
+    <NPCText>
+      <![CDATA[
+      "Sunreach ain’t what she was. New faces everywhere, and the magistrate’s got strange visitors in the night. Some say the docks are cursed—folk vanish at sea, return… wrong. Keep your blade sharp, friend."
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about the docks." next="rumorDocks"/>
+    <Option text="Enough. Thanks." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="rumorDocks">
+    <NPCText>
+      <![CDATA[
+      Jemel lowers his voice.<BR>
+      "Saw Aria Silverhand herself poking around the old lighthouse ruins—she never goes anywhere without reason. If you’re brave, might be worth a look… or a chat."
+      ]]>
+    </NPCText>
+    <Option text="Back to other rumors." next="offerRumors"/>
+    <Option text="I’m done for now." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="rumorMinax">
+    <NPCText>
+      <![CDATA[
+      Jemel shivers.<BR>
+      "Heard tell of a rat-masked man handing out black coins in the alleys. Minax cult, sure as rain. My kids keep clear. If you see odd marks near the old sewers, beware—folks who go down there don’t come back right."
+      ]]>
+    </NPCText>
+    <Option text="Any more news?" next="offerRumors"/>
+    <Option text="That’s enough for now." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== SUNREACH LORE ====== -->
+  <Dialogue id="aboutSunreach">
+    <NPCText>
+      <![CDATA[
+      Jemel smirks.<BR>
+      "Sunreach shines for the fat cats and pirates, but the gutters see all. Council’s got five Houses, each thinks they run things. Truth is, it’s folk like me and my crew who know where the real power hides."<BR>
+      "If you want to get things done, never trust a House member… or do, and keep a blade behind your back."
+      ]]>
+    </NPCText>
+    <Option text="Thanks, Jemel. Need any help?" next="sisterIntro"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ====== DISMISS ====== -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Jemel shrugs, mischief returning to his eyes.<BR>
+      "All right, wanderer. Watch your purse—and if you see a street kid, toss a copper or two. You never know who’s watching."
+      ]]>
+    </NPCText>
+    <Option text="(Leave)" action="Close"/>
+  </Dialogue>
+
+<!-- ====== PERSONAL BACKSTORY ROOT ====== -->
+<Dialogue id="backstoryIntro">
+  <NPCText>
+    <![CDATA[
+    Jemel scratches behind his ear, giving you a crooked grin.<BR><BR>
+    "Me? Not much to tell that won’t get someone in trouble. But I guess if you’re askin’, you’ve earned a peek behind the hood."<BR>
+    "What do you want to know? I’ll talk—but you best not laugh."
+    ]]>
+  </NPCText>
+  <Option text="Where are your parents?" next="parents"/>
+  <Option text="How did you become a thief?" next="thiefLife"/>
+  <Option text="What’s your biggest dream?" next="dreams"/>
+  <Option text="Why do you look up to Aria Silverhand?" next="ariaHero"/>
+  <Option text="Actually, never mind." action="Close"/>
+</Dialogue>
+
+<!-- ====== PARENTS ====== -->
+<Dialogue id="parents">
+  <NPCText>
+    <![CDATA[
+    Jemel shrugs, a little too fast.<BR><BR>
+    "No clue. Ma dropped us in a crate near the spice market when I was four. Nali was just a baby then. Some say she was a servant… or worse. I never cared. We made do."<BR>
+    "The streets taught us faster than any school. The gutter don’t lie."
+    ]]>
+  </NPCText>
+  <Option text="That’s rough. You’re strong to have survived." action="Karma:+250" next="backstoryIntro"/>
+  <Option text="Sounds like every urchin tale I’ve heard." action="Karma:-250" next="backstoryIntro"/>
+</Dialogue>
+
+<!-- ====== THIEF ORIGIN ====== -->
+<Dialogue id="thiefLife">
+  <NPCText>
+    <![CDATA[
+    Jemel perks up.<BR><BR>
+    "Now *that’s* a story! I stole my first apple at five—got chased by a fishmonger through three alleys and over a canal. Beat him, too!"<BR>
+    "By seven, I had a crew of kids pickin’ pockets and sellin’ trinkets to Cassira's contacts. It ain’t honest, but it’s survival."<BR>
+    He smirks. "Besides, sometimes we pinch from the rich bastards who’d never miss it. That’s fair play, right?"
+    ]]>
+  </NPCText>
+  <Option text="I agree. Thieves of justice!" action="Karma:+100" next="backstoryIntro"/>
+  <Option text="Stealing is stealing, kid." action="Karma:-100" next="backstoryIntro"/>
+</Dialogue>
+
+<!-- ====== DREAMS ====== -->
+<Dialogue id="dreams">
+  <NPCText>
+    <![CDATA[
+    Jemel pauses, voice quieter.<BR><BR>
+    "Someday, I wanna run a real guild. Not just urchins. Traders, smugglers, spies—even mages. A network that answers to no council, no lords. Just us."<BR>
+    "A place where gutter-folk eat good, sleep safe, and never get sold to slavers again."<BR>
+    He straightens. "And Nali would run the books. She’s smart like that."
+    ]]>
+  </NPCText>
+  <Option text="You’ve got ambition. I respect that." action="Fame:+250" next="backstoryIntro"/>
+  <Option text="Dangerous dream, kid. Power corrupts." action="Fame:-100" next="backstoryIntro"/>
+</Dialogue>
+
+<!-- ====== ARIA ADMIRATION ====== -->
+<Dialogue id="ariaHero">
+  <NPCText>
+    <![CDATA[
+    Jemel’s eyes light up.<BR><BR>
+    "Aria? She’s the best. Smarter than any scholar, braver than any knight. She helped me once—didn’t even know my name."<BR>
+    "I’d stolen a merchant’s ledger, right? Turned out it was proof of slave trade. Aria showed up, torched the papers *and* the bastard’s ship. Then just... vanished."<BR>
+    "Since then, I’ve tried to be like her. Fast. Clever. Dangerous to bad folk. Someday, she’ll know my name, I swear."
+    ]]>
+  </NPCText>
+  <Option text="She’d be proud, Jemel." action="SendMessage:You feel the fire of youthful purpose ignite in him." next="backstoryIntro"/>
+  <Option text="Don’t model yourself too closely after anyone." next="backstoryIntro"/>
+</Dialogue>
+
+
+</DialogueFile>

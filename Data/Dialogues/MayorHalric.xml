@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="MayorHalric">
+  <!-- ========================================================= -->
+  <!-- Each <Dialogue id=""> is a node. <Option> elements         -->
+  <!-- define the clickable answers. Attributes:                 -->
+  <!--   text="caption"                                          -->
+  <!--   next="nextDialogueId"      (optional)                   -->
+  <!--   action="verb:arg"          (optional)                   -->
+  <!--   condition="expr"           (optional)                   -->
+  <!-- ========================================================= -->
+
+  <!-- === root ================================================= -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#bda574'>
+      You see a broad-shouldered man with muddy boots and a sharp, suspicious gaze. He nods gruffly as you approach, leaning on a heavy wooden staff. The lines in his face speak of many hard years keeping Eldermoor safe.
+      <BR><BR>
+      "Well then, another stranger. Hope you’re not looking for handouts, nor trouble. Name’s Halric—Mayor, though around here it just means I get the least sleep and the most complaints. So, what brings you wandering to our palisades?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’m here to help. Is there work needing done?" next="questIntro"/>
+    <Option text="Heard this town’s run by stubborn folk. That true?" next="stubborn"/>
+    <Option text="What’s your story, Halric? Always wanted to be mayor?" next="backstory"/>
+    <Option text="I’m just passing through." next="passing"/>
+  </Dialogue>
+
+  <!-- Stubborn folk branch -->
+  <Dialogue id="stubborn">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#bda574'>
+      Halric grunts, unimpressed.<BR><BR>
+      "Aye, stubborn as old tree roots and twice as tangled. If we weren’t, we’d be another ash heap like so many southern farms. We take care of our own—though a willing sword or sharp wit is sometimes welcome."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="So, what’s the biggest problem Eldermoor faces now?" next="questIntro"/>
+    <Option text="Sounds like you don’t trust outsiders." next="trust"/>
+  </Dialogue>
+
+  <Dialogue id="trust">
+    <NPCText>
+      <![CDATA[
+      "Trust is earned, not handed out like bread at a feast. Too many travelers are spies for Minax, or just cityfolk looking to sell us some fool’s hope. Still, you’ve got a look of someone who’s seen a bit. Prove yourself useful and we might talk trust."
+      ]]>
+    </NPCText>
+    <Option text="Fair enough. Anything need doing?" next="questIntro"/>
+    <Option text="Maybe I’ll move along." action="Close"/>
+  </Dialogue>
+
+  <!-- Backstory branch -->
+  <Dialogue id="backstory">
+    <NPCText>
+      <![CDATA[
+      "Bah, nothing so grand. I was a farmhand and a hunter once. Lost my own kin when Minax’s filth swept through the marsh. When Lord British vanished and Britain’s guards ran off, someone had to keep order. So I built these palisades, got folk working together, and somehow ended up with this blasted ‘mayor’ title. I do what I must, not what I like."
+      <BR><BR>
+      He looks off toward the fields.<BR>
+      "Wouldn’t mind a little less politics and a little more quiet, to tell the truth. But until that day, I’ll keep this place standing."
+      ]]>
+    </NPCText>
+    <Option text="What keeps you up at night these days?" next="questIntro"/>
+    <Option text="You sound like you carry a heavy load." next="heavy"/>
+  </Dialogue>
+
+  <Dialogue id="heavy">
+    <NPCText>
+      <![CDATA[
+      He shrugs, but there’s a glint of gratitude.<BR><BR>
+      "Everyone here’s got burdens. You talk to Edda, she’ll tell you mine aren’t so special. I just carry them a bit louder. If you want to make my load lighter, there is something needs doing..."
+      ]]>
+    </NPCText>
+    <Option text="What is it?" next="questIntro"/>
+  </Dialogue>
+
+  <!-- Passing through branch -->
+  <Dialogue id="passing">
+    <NPCText>
+      <![CDATA[
+      Halric nods curtly. "Mind your step, then. Woods aren’t as safe as they look, and neither are strangers. But—if you change your mind and fancy doing some good, you know where to find me."
+      ]]>
+    </NPCText>
+    <Option text="On second thought, need any help?" next="questIntro"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Quest Offer Main Node -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#bda574'>
+      Halric scowls, voice dropping to a grumble.<BR><BR>
+      "We’ve a real mess in the far pasture—an Earthquake Ettin, as big as an ox-cart and twice as foul, keeps stomping through our fields. Broke Aldric’s fence, scared half our livestock witless, and trampled Edda’s herb patch last night. That thing’s more than a nuisance—it’s a threat. And the last time we sent a hunting party, two men came back with broken bones."
+      <BR><BR>
+      He leans in, voice hushed.<BR>
+      "City guards won’t help. Trinsic’s too busy with their own problems, and Britain? Pah. We stand alone. If you can bring me proof the beast’s dead—its tusk or the boulder it wears on its back—I’ll see you properly thanked. Eldermoor remembers its friends."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ll handle the Ettin for you."
+      action="GiveItem:FactionKillQuestScroll(EarthquakeEttin,1,Eldermoor,500)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="What’s so dangerous about this Ettin?" next="ettinInfo"/>
+    <Option text="Why not ask Thalen or Aldric for help?" next="helpWhyNot"/>
+    <Option text="Is this tied to Minax’s magic?" next="minax"/>
+    <Option text="Not interested. Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Halric nods, finally approving.<BR><BR>
+      "Good. Ettin wanders near the old stone circle at dusk, east of the main marsh. Watch your step—the beast has a temper and the ground’s soft. Bring me its tusk or proof, and I’ll make sure the town hears your name. And if you see Aldric the hunter, tell him to stay out of your way for once!"
+      ]]>
+    </NPCText>
+    <Option text="I’ll return with proof." action="Close"/>
+  </Dialogue>
+
+  <!-- Ettin Info Branch -->
+  <Dialogue id="ettinInfo">
+    <NPCText>
+      <![CDATA[
+      Halric’s jaw tightens.<BR><BR>
+      "It’s not just the size. The beast can shake the ground when it stomps—makes the earth buckle, fenceposts splinter, and puts folk flat on their backs. Last week, it tossed a haycart clean over the creek. Some say it’s twisted by Minax’s magic—eyes glowing in the dusk, skin hard as granite. I’d sooner have ten goblins than one of these brutes."
+      ]]>
+    </NPCText>
+    <Option text="Alright, I’ll take care of it."
+      action="GiveItem:FactionKillQuestScroll(EarthquakeEttin,1,Eldermoor,500)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="ettinAccept"/>
+    <Option text="Maybe someone else should handle it." next="ettinMock"/>
+  </Dialogue>
+
+  <Dialogue id="ettinAccept">
+    <NPCText>
+      <![CDATA[
+      "Best of luck, then. Don’t try to fight it in open ground—lure it under the old willow if you’re smart. I’d send Thalen, but I need him fixing what’s left of the blacksmith’s roof. Come back in one piece."
+      ]]>
+    </NPCText>
+    <Option text="Understood. I’m off." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="ettinMock">
+    <NPCText>
+      <![CDATA[
+      Halric snorts. "And who would that be? Aldric’s got a limp, Thalen’s too hot-headed, and Miralda says violence ‘invites darkness.’ So, if not you, then nobody. But I won’t force your hand."
+      ]]>
+    </NPCText>
+    <Option text="You’re right. I’ll do it."
+      action="GiveItem:FactionKillQuestScroll(EarthquakeEttin,1,Eldermoor,500)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="mockAccept"/>
+    <Option text="I’ll pass." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="mockAccept">
+    <NPCText>
+      <![CDATA[
+      "There’s more spine in you than most. Be careful, and don’t let the thing bury you in mud."
+      ]]>
+    </NPCText>
+    <Option text="I’ll be back." action="Close"/>
+  </Dialogue>
+
+  <!-- Help why not -->
+  <Dialogue id="helpWhyNot">
+    <NPCText>
+      <![CDATA[
+      "Thalen’s my nephew, and too valuable to risk—he’s our smith, and our forges won’t run themselves. Besides, his temper matches that Ettin’s some days. Aldric’s leg isn’t what it was after the last hunt, though he’d try anyway if I let him. Mira? She’s got the heart, but she’s too clever to go monster-bashing. No, this job calls for a fresh blade and clear head. You game?"
+      ]]>
+    </NPCText>
+    <Option text="I’ll take the job."
+      action="GiveItem:FactionKillQuestScroll(EarthquakeEttin,1,Eldermoor,500)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="helpAccept"/>
+    <Option text="Not for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="helpAccept">
+    <NPCText>
+      <![CDATA[
+      "That’s what I like to hear. Watch for the ground trembling—that’s the only warning you’ll get. Good luck."
+      ]]>
+    </NPCText>
+    <Option text="Wish me luck." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax Lore -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      Halric’s eyes narrow.<BR><BR>
+      "Maybe. Edda says she’s felt the earth whispering, and Aldric’s tracked footprints glowing with a sickly green light after dark. Could be Minax’s cultists twisting the old beasts, or just a bad omen. Either way, I don’t plan on letting the thing run wild. You want answers, you might find them in the Ettin’s lair—if you live that long."
+      ]]>
+    </NPCText>
+    <Option text="All the more reason to deal with it."
+      action="GiveItem:FactionKillQuestScroll(EarthquakeEttin,1,Eldermoor,500)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="minaxAccept"/>
+    <Option text="Sounds dangerous. I’ll think about it." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="minaxAccept">
+    <NPCText>
+      <![CDATA[
+      "Keep your wits sharp. If you find anything strange on the Ettin—tokens, runes, bones—bring them to Edda or Miralda before you toss them. The last thing we need is cursed trinkets in town."
+      ]]>
+    </NPCText>
+    <Option text="Understood. I’ll see to it." action="Close"/>
+  </Dialogue>
+
+</DialogueFile>

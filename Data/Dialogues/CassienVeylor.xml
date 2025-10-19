@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="CassienVeylor">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#c0d8f0'>
+      A tall, severe man stands before you, clad in deep blue judicial robes. His cowl is stitched with silver runes, and a wand—almost a scepter—rests in his gloved hand. His eyes, pale as glacial quartz, sweep over you with unyielding scrutiny.<BR><BR>
+      “Halt. This is no place for idle wandering. I am Cassien Veylor, Inquisitor of Aerilon’s Arcane Tribunal. Here, all who wield magic are judged—by law, not whim. Speak. Are you here in earnest, or do you seek to test the patience of the Tribunal?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek work, Inquisitor." next="workIntro"/>
+    <Option text="What is the Arcane Tribunal?" next="tribunal"/>
+    <Option text="What gives you the right to judge others?" next="authority"/>
+	<Option text="Tell me of your past, Inquisitor." next="backstoryRoot"/>
+    <Option text="I’m just a traveler, nothing more." next="dismiss"/>
+  </Dialogue>
+
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      “Then do not linger. This city’s peace is maintained through vigilance—and consequences. Remember that.”
+      ]]>
+    </NPCText>
+    <Option text="Understood. Farewell." action="Close"/>
+    <Option text="On second thought, perhaps I might serve Aerilon." next="workIntro"/>
+  </Dialogue>
+
+  <Dialogue id="tribunal">
+    <NPCText>
+      <![CDATA[
+      “The Arcane Tribunal is the shield and the sword of Aerilon’s order. We judge crimes of magic, maintain records of arcane conduct, and ensure that ambition does not become annihilation. In a city of mages, such law is the only bulwark against chaos.”<BR><BR>
+      He studies you as if weighing every word.<BR>
+      “My methods are strict, but necessary. Kaelis—whose name you may know—refused restraint, and now poisons the Fractured Isle with his heresies. I exiled him, and I regret only that exile was not enough.”
+      ]]>
+    </NPCText>
+    <Option text="Why such severity?" next="severity"/>
+    <Option text="What if the Tribunal errs?" next="conspiracy"/>
+    <Option text="I see you do not trust lightly." next="workIntro"/>
+    <Option text="Thank you for the lesson. Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="authority">
+    <NPCText>
+      <![CDATA[
+      Cassien’s voice is ice.<BR>
+      “Authority here is earned. I have outlasted conspirators, survived six assassination attempts, and possess the records of every Conclave member—should justice demand leverage. The Tribunal judges me as it does all. There is no immunity, only scrutiny.”
+      ]]>
+    </NPCText>
+    <Option text="And yet you stand alone." next="loneliness"/>
+    <Option text="It sounds a heavy burden." next="workIntro"/>
+    <Option text="Do you ever doubt your own judgments?" next="doubt"/>
+    <Option text="I must go." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="loneliness">
+    <NPCText>
+      <![CDATA[
+      “A judge’s circle is always narrow. My only confidant was my sister—until Kaelis seduced her to his reckless cause. Now I trust the law, and little else. Even Archmage Selara’s justice is clouded by politics. I am not loved, but I am necessary.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me about Kaelis’s exile." next="kaelis"/>
+    <Option text="Would you have me serve as an agent of the Tribunal?" next="workIntro"/>
+    <Option text="I respect your devotion. Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="kaelis">
+    <NPCText>
+      <![CDATA[
+      “Kaelis was once the most promising mind in Aerilon—before hubris devoured reason. He breached the Fractured Isle with forbidden rituals, twisting azure crystals beyond recall. I presided at his trial; none wept harder than my own kin. If you cross him, beware his words. They ensnare, as surely as his spells.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you for your candor. Is there work to be done?" next="workIntro"/>
+    <Option text="Would you have me judge others, too?" next="judgement"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="doubt">
+    <NPCText>
+      <![CDATA[
+      Cassien pauses, something like sorrow flickering behind the glacial mask.<BR>
+      “All judgment invites doubt. That is why records are kept. Every verdict, every sentence—documented, scrutinized, available for review. If I am wrong, let history hold me to account. But inaction, in a city of such power, is a greater crime.”
+      ]]>
+    </NPCText>
+    <Option text="You are more just than most, Inquisitor." next="workIntro"/>
+    <Option text="I will not question you further." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="severity">
+    <NPCText>
+      <![CDATA[
+      “Magic corrupts as surely as it elevates. The line between genius and catastrophe is thinner than parchment. My severity is all that has kept Aerilon from shattering under its own ambition.”
+      ]]>
+    </NPCText>
+    <Option text="If you need an agent, I am willing." next="workIntro"/>
+    <Option text="Thank you. Farewell." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="conspiracy">
+    <NPCText>
+      <![CDATA[
+      Cassien leans in, voice low.<BR>
+      “You are astute. Even the Tribunal is not immune to intrigue. Evidence of tampering—spells gone missing, records erased—has surfaced. I suspect a conspiracy within our own ranks, perhaps reaching as high as the Conclave. But justice requires proof, not suspicion.”
+      ]]>
+    </NPCText>
+    <Option text="Would you trust me with an investigation?" next="investigation"/>
+    <Option text="I will stay clear of such politics." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="investigation">
+    <NPCText>
+      <![CDATA[
+      “Prove your discretion, and doors may open. Aerilon does not reward loyalty lightly—but it never forgets a debt. For now, a test of reliability: a delivery for the Tribunal, trusted only to a ShadowDweller Savant. Will you accept this charge?”
+      ]]>
+    </NPCText>
+    <Option text="What is required of me?" next="greeting"/>
+    <Option text="Not at this time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="judgement">
+    <NPCText>
+      <![CDATA[
+      “Judgment is not a privilege. It is a burden—one I would not wish on any lightly. Yet sometimes, the Tribunal requires agents to act where official eyes are blind. Perhaps, in time, you may serve in this way.”
+      ]]>
+    </NPCText>
+    <Option text="What task could I begin with?" next="greeting"/>
+    <Option text="That is not for me." action="Close"/>
+  </Dialogue>
+
+  <!-- QUEST BEGIN -->
+  <Dialogue id="workIntro">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#c0d8f0'>
+      “Aerilon’s peace relies on law—and on those willing to act outside the gaze of the Conclave. We have identified a ShadowDweller Savant outside the city. This individual is to receive a sealed packet of Tribunal records—encoded, arcane, and proof against tampering. Deliver this to them, unbroken, and you will earn the Tribunal’s regard.<BR><BR>
+      But heed this: others would pay dearly for these secrets. Kaelis’s agents, Wind’s spies, even Minax herself. You must not fail.”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="What is in these records?" next="recordLore"/>
+    <Option text="Why trust a ShadowDweller Savant?" next="whyShadowDweller"/>
+    <Option text="I am ready for this task." 
+            action="GiveItem:FactionDeliveryQuestScroll(ShadowDweller Savant,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="This seems above my abilities." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="recordLore">
+    <NPCText>
+      <![CDATA[
+      “Encrypted transcripts of magical trials. Names, charges, and—most importantly—the locations of artifacts confiscated for dangerous misuse. This is the law’s ledger, not a common missive. In the wrong hands, it would be weaponized against us all.”
+      ]]>
+    </NPCText>
+    <Option text="I will deliver them with utmost care."
+            action="GiveItem:FactionDeliveryQuestScroll(ShadowDweller Savant,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="That is too dangerous for me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="whyShadowDweller">
+    <NPCText>
+      <![CDATA[
+      “ShadowDwellers are expert in secrecy and the neutral transfer of sensitive knowledge. The Savant I trust is beyond Aerilon’s reach—untouched by our politics. Their discretion is beyond reproach, and they owe me a favor from old debts. That is all you need know.”
+      ]]>
+    </NPCText>
+    <Option text="Very well. I will deliver the records."
+            action="GiveItem:FactionDeliveryQuestScroll(ShadowDweller Savant,Aerilon,250)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I do not trust this." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Cassien produces a heavy packet sealed in black wax, the Tribunal’s sigil glimmering faintly.<BR>
+      “Guard this with your life. If any attempt to wrest it from you, the seal will burn the thief—once. Return with proof of delivery, and your loyalty will be rewarded.”<BR><BR>
+      His gaze softens just a hair.<BR>
+      “You do not answer to me. You answer to the law. Let your actions speak for you.”
+      ]]>
+    </NPCText>
+    <Option text="I will not fail you, Inquisitor." action="Close"/>
+    <Option text="On reflection, perhaps another time." action="Close"/>
+  </Dialogue>
+  
+<Dialogue id="backstoryRoot">
+  <NPCText>
+    <![CDATA[
+    Cassien folds his arms, studying you anew.<BR><BR>
+    “You’re curious. Few are. Most see only the robes, the wand, the gavel. Very well—if you truly wish to know, then listen. But understand: my life is not a tale of glory. It is a ledger of mistakes, carefully itemized and still unpaid.”<BR><BR>
+    He taps his wand once—more a habit than a threat.<BR>
+    “Where would you begin?”
+    ]]>
+  </NPCText>
+  <Option text="Why did you choose law, instead of greater magical power?" next="origin"/>
+  <Option text="You mentioned a sister. What happened to her?" next="sister"/>
+  <Option text="Tell me of your rivalry with Kaelis." next="kaelisDeep"/>
+  <Option text="Have you ever regretted a verdict?" next="regret"/>
+  <Option text="I’ve heard rumors you hold secrets on the Conclave..." next="blackmail" condition="SkillAtLeast:DetectHidden,50"/>
+  <Option text="That’s enough for now." action="Close"/>
+</Dialogue>
+
+<Dialogue id="origin">
+  <NPCText>
+    <![CDATA[
+    “I was a battlemage once,” Cassien says, tone dry. “Not a good one. Too focused. Too precise. War needs chaos. I needed structure. When the Tribunal offered me an apprenticeship, I took it like a drowning man takes air.”<BR><BR>
+    He pauses.<BR>
+    “Some seek power. I sought control—of myself, of magic, of consequence. The law gave me that. It still does.”
+    ]]>
+  </NPCText>
+  <Option text="A different kind of strength." next="backstoryRoot"/>
+  <Option text="Sounds like you ran from something." next="sister" condition="KarmaBelow:0"/>
+</Dialogue>
+
+<Dialogue id="sister">
+  <NPCText>
+    <![CDATA[
+    For the first time, Cassien falters.<BR>
+    “Her name was Maren. She was gentler than I deserved. A healer. When Kaelis rose in the Fractured Isle, she begged me to show mercy. I did not.”<BR><BR>
+    His voice hardens.<BR>
+    “She followed him into exile. I’ve not seen her since. I pray she lives—but I would not know what to say.”
+    ]]>
+  </NPCText>
+  <Option text="That loss still weighs on you." next="sisterGift" condition="KarmaAtLeast:0"/>
+  <Option text="Your duty came first. That’s admirable." next="backstoryRoot" condition="KarmaBelow:0"/>
+  <Option text="I'm sorry for your loss." next="backstoryRoot"/>
+</Dialogue>
+
+<Dialogue id="sisterGift">
+  <NPCText>
+    <![CDATA[
+    Cassien looks at you more gently now.<BR>
+    “You are... unusual. Most who listen to my story seek leverage. You offer understanding. Take this boon—not from the Tribunal, but from a brother who wishes he’d said it sooner.”<BR><BR>
+    <BASEFONT COLOR='#a2fca3'>You feel a sense of serenity pass through you.</BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="Thank you, Inquisitor." action="AddStat:Int,2,600" />
+</Dialogue>
+
+<Dialogue id="kaelisDeep">
+  <NPCText>
+    <![CDATA[
+    “Kaelis and I debated law for a decade before I exiled him. He believed magic should be free—unburdened by record or restraint. I believed in accountability. Our final argument cracked an entire floor of the Scholar’s District.”<BR><BR>
+    He exhales slowly.<BR>
+    “He was right about one thing. The Conclave fears open discussion. They fear dissent, even now. Kaelis wanted freedom. I gave him exile.”
+    ]]>
+  </NPCText>
+  <Option text="Perhaps he’ll return to challenge you." next="challenge"/>
+  <Option text="Sounds like you miss him." next="emotion" condition="RandomChance:40"/>
+  <Option text="You did what was required." next="backstoryRoot"/>
+</Dialogue>
+
+<Dialogue id="challenge">
+  <NPCText>
+    <![CDATA[
+    “Let him come,” Cassien says, jaw tight. “I keep his name at the ready on every verdict I pass. Not out of hatred—out of readiness. I will not underestimate him again.”
+    ]]>
+  </NPCText>
+  <Option text="Let’s move on." next="backstoryRoot"/>
+</Dialogue>
+
+<Dialogue id="emotion">
+  <NPCText>
+    <![CDATA[
+    Cassien doesn’t respond at first.<BR><BR>
+    “He was my closest rival. Perhaps the only one who ever understood me. That’s a kind of kinship—however bitter. But don’t mistake memory for forgiveness.”
+    ]]>
+  </NPCText>
+  <Option text="I won’t. Let’s continue." next="backstoryRoot"/>
+</Dialogue>
+
+<Dialogue id="regret">
+  <NPCText>
+    <![CDATA[
+    “Every sentence passed is a wound. Some deeper than others.”<BR>
+    Cassien clenches his gloves.<BR>
+    “I once sentenced a young mage to memory-wipe for unauthorized necromancy. He meant no harm—only to speak with his dead mother. I followed precedent. I erased him. That night, I heard her crying in my dreams.”<BR><BR>
+    He looks away.<BR>
+    “I haven’t slept well since.”
+    ]]>
+  </NPCText>
+  <Option text="You carry your verdicts like chains." next="backstoryRoot"/>
+  <Option text="Even judges bleed, it seems." next="backstoryRoot"/>
+</Dialogue>
+
+<Dialogue id="blackmail">
+  <NPCText>
+    <![CDATA[
+    Cassien’s eyes narrow. “Careful. That is a question with consequences.”<BR>
+    He steps closer.<BR>
+    “Yes, I keep dossiers on every Conclave member. Selara hides her past with Wind. Corvus dabbles with forbidden artifacts. Even Eryndil has skeletons—some literal.”<BR><BR>
+    “But knowledge is not exploitation. I use it to keep them honest. If I did not, who would?”<BR>
+    He smiles thinly.<BR>
+    “Now tell me—how did you know to ask?”
+    ]]>
+  </NPCText>
+  <Option text="Let’s just say I see what others miss." action="AddSkill:DetectHidden,1,900"/>
+  <Option text="Your secrets are safe with me." next="backstoryRoot"/>
+  <Option text="I should not have asked." action="Close"/>
+</Dialogue>
+  
+  
+</DialogueFile>

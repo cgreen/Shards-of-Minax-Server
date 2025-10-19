@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="TolanDrift">
+  <!-- === root ================================================= -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#63aaff'>
+      You find yourself facing a tall, wind-burnished man clad in swirling azure silks and a cloud-patterned cloak, a wizard’s hat tipped rakishly over eyes that have seen both storm and starlight. At his side hangs an ornate skyship compass, and the faint scent of ozone follows him. He looks you up and down with a hint of a smile—a practiced air of confidence masking an undercurrent of worry.<BR><BR>
+      "Ahoy there, traveler. Not many make it up to the spires without good reason—or a good deal of coin. I am Captain Tolan Drift of the Aerilon Airfleet. These skies are my home, though as of late... well, let’s just say the clouds aren’t as friendly as they once were. What brings you to the city above the clouds?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’ve heard tales of your skyships. You really rule the clouds?" next="clouds"/>
+    <Option text="You look troubled. Is something wrong?" next="troubled"/>
+    <Option text="I’m seeking work. Anything needing doing?" next="work"/>
+	<Option text="Tell me about your past—before Aerilon." next="tolanBackstoryIntro"/>
+    <Option text="Just sightseeing, Captain." next="sightseeing"/>
+  </Dialogue>
+
+  <!-- === Clouds branch === -->
+  <Dialogue id="clouds">
+    <NPCText>
+      <![CDATA[
+      Tolan laughs, his cloak rippling in an unseen breeze.<BR><BR>
+      "Rule? Ha! No one rules the skies, friend. We just borrow them, and hope the winds—or the politics—don’t turn against us. Still, it’s true: my fleet ferries everything Aerilon needs. Minerals from the clouds, rare herbs from mountaintops, and sometimes, messages best kept from the Conclave’s eyes. Dangerous work, especially with Minax’s raiders prowling the upper drafts."<BR><BR>
+      "You a sky-dreamer, or looking for trouble?"
+      ]]>
+    </NPCText>
+    <Option text="Both, perhaps. Heard you’ve work for those willing." next="work"/>
+    <Option text="I’m no sky sailor, but I can handle danger." next="work"/>
+    <Option text="Actually, I’m just curious." next="curious"/>
+  </Dialogue>
+
+  <!-- === Troubled branch === -->
+  <Dialogue id="troubled">
+    <NPCText>
+      <![CDATA[
+      The smile fades; Tolan’s fingers tighten on his compass.<BR><BR>
+      "I suppose I do look a shade storm-tossed, don’t I? Aerilon’s air is thin, but rumors travel thick. My fleet’s run more evasive flights in the last month than in three years. Minax’s minions have learned to fly, or worse, corrupt the very winds. My lover, Lira Veyra—she fights at the city’s edge nightly. I worry for her, and for my engineers below. Too many people depending on a few tired souls."<BR><BR>
+      He sighs, masking it with bravado.<BR>
+      "But you didn’t come for my woes, did you? Unless you fancy earning Aerilon’s trust—and a touch of danger pay."
+      ]]>
+    </NPCText>
+    <Option text="I’d like to help. What’s the job?" next="questIntro"/>
+    <Option text="Tell me more about Lira." next="lira"/>
+    <Option text="I’ll be on my way, then." action="Close"/>
+  </Dialogue>
+
+  <!-- === Work branch === -->
+  <Dialogue id="work">
+    <NPCText>
+      <![CDATA[
+      Tolan grins, hope flickering in his eyes.<BR><BR>
+      "You’re the bold sort, aren’t you? Most folk balk at a bit of risk. Here’s the wind’s truth: Aerilon keeps floating because of people willing to do what others won’t. There is a delivery, delicate and urgent. Not gold or gems, but... well, you’ll see. If you’re ready to prove yourself, say the word."<BR><BR>
+      "And mind—this isn’t the sort of errand you mention to the Conclave, nor to any skyship rival who might have Minax’s ear."
+      ]]>
+    </NPCText>
+    <Option text="I’m ready. What’s the job?" next="questIntro"/>
+    <Option text="Who am I delivering to?" next="deliveryWho"/>
+    <Option text="You seem to trust me awfully quick, Captain." next="trust"/>
+    <Option text="I’m not interested in secrets." action="Close"/>
+  </Dialogue>
+
+  <!-- === Lira info branch === -->
+  <Dialogue id="lira">
+    <NPCText>
+      <![CDATA[
+      "Lira Veyra... fierce as a thunderhead and twice as bright. She was once apprentice to Corvus Deyne—before the war changed us all. Now she stands at the city’s edge, training new mages, holding back whatever Minax throws our way. We don’t always see eye to eye—her loyalty to the Conclave is iron—but the sky is lonelier without her. I trust her with my life, and sometimes, even my heart."<BR><BR>
+      Tolan’s gaze grows distant.<BR>
+      "If you see her, tell her to come home before the sun sets. I’d sooner brave a hurricane than her anger, mind you."
+      ]]>
+    </NPCText>
+    <Option text="Sounds like you care deeply for her." next="work"/>
+    <Option text="I’ll let her know if I see her." action="Close"/>
+    <Option text="Back to business—what’s this job?" next="questIntro"/>
+  </Dialogue>
+
+  <!-- === Sightseeing branch === -->
+  <Dialogue id="sightseeing">
+    <NPCText>
+      <![CDATA[
+      Tolan winks.<BR><BR>
+      "Just sightseeing? Don’t lean too far over the rail—these platforms have claimed more than a few gawkers! But if you decide the ground’s too dull, come find me. There’s always work for those with courage and a steady hand."
+      ]]>
+    </NPCText>
+    <Option text="On second thought, got any work?" next="work"/>
+    <Option text="Enjoy the winds, Captain." action="Close"/>
+  </Dialogue>
+
+  <!-- === Curious branch === -->
+  <Dialogue id="curious">
+    <NPCText>
+      <![CDATA[
+      "Curiosity’s what built this city—question enough rules and you might find yourself in the clouds. Me, I was once a dockhand in Vesper, dreaming of the sky. Now, I’ve a fleet of ships and the worry-lines to prove it. If your curiosity leans toward adventure, I have a job fit for you."
+      ]]>
+    </NPCText>
+    <Option text="I’m in. Tell me more about this job." next="questIntro"/>
+    <Option text="Maybe another time." action="Close"/>
+  </Dialogue>
+
+  <!-- === Trust branch === -->
+  <Dialogue id="trust">
+    <NPCText>
+      <![CDATA[
+      Tolan shrugs, amusement in his eyes.<BR><BR>
+      "Trust is a rare coin in Aerilon. But you’ve got the look of someone who’s walked through storm and lived. Besides, I’m fresh out of options—and my rivals are fresh out of scruples. If you can get this parcel to the right hands, you’ll earn Aerilon’s thanks, and mine."
+      ]]>
+    </NPCText>
+    <Option text="I’ll do it. Who is the recipient?" next="deliveryWho"/>
+    <Option text="Tell me the details." next="questIntro"/>
+  </Dialogue>
+
+  <!-- === DeliveryWho branch === -->
+  <Dialogue id="deliveryWho">
+    <NPCText>
+      <![CDATA[
+      "Not the sort you meet at court, I’ll say that. The recipient is known as the Sheep Nemesis—don’t laugh, they’re deadlier than they sound. Master smuggler, wears wool as armor, and has a vendetta against—well, never mind that. You’ll find them lurking beyond the low clouds, in the meadows near the southern edge. Mind your tongue and your coinpurse. Tell them Tolan sent you, and show them this." <BR><BR>
+      He hands you a parcel wrapped in shimmering cloth, sealed with an odd rune.<BR>
+      "Don’t open it. Not unless you want to turn into a bleating fool for a week. When the job’s done, return here for your due. Aerilon remembers those who serve her sky."
+      ]]>
+    </NPCText>
+    <Option text="I’ll deliver it safely." 
+      action="GiveItem:FactionDeliveryQuestScroll(Sheep Nemesis,Aerilon,250)" 
+      condition="!HasItem:FactionDeliveryQuestScroll"
+      next="accept"/>
+    <Option text="What’s in the parcel?" next="packageInfo"/>
+    <Option text="What if I run into trouble?" next="trouble"/>
+    <Option text="Sheep Nemesis? That’s an odd name..." next="sheep"/>
+    <Option text="I’ll pass for now." action="Close"/>
+  </Dialogue>
+
+  <!-- === Quest Offer Main Node === -->
+  <Dialogue id="questIntro">
+    <NPCText>
+      <![CDATA[
+      Tolan lowers his voice, scanning the sky for prying ears.<BR><BR>
+      "There’s a parcel needs delivering—a tricky sort, enchanted for secrecy and, frankly, a touch of mischief. The recipient is the infamous Sheep Nemesis, a smuggler with more enemies than friends. If you get this to them without alerting Minax’s spies—or the Conclave’s lackeys—you’ll earn the Airfleet’s trust."<BR><BR>
+      "Take this, and don’t let anyone else see it. The wind’s watching, and so are worse things."<BR>
+      He presses a rune-sealed bundle into your hand.
+      ]]>
+    </NPCText>
+    <Option text="I’ll deliver it." 
+      action="GiveItem:FactionDeliveryQuestScroll(Sheep Nemesis,Aerilon,250)" 
+      condition="!HasItem:FactionDeliveryQuestScroll"
+      next="accept"/>
+    <Option text="Tell me more about the Sheep Nemesis." next="sheep"/>
+    <Option text="Why all the secrecy?" next="secrecy"/>
+    <Option text="I’m not comfortable with this." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Tolan claps you on the shoulder, a grateful spark in his eyes.<BR><BR>
+      "May the updrafts bear you swift and safe, friend. And remember: if you run into anyone asking too many questions, say you’re delivering cheese. The Nemesis will know the real password—‘All wool, no flock.’ Return to me when the deed’s done, and Aerilon’s skies will be a touch brighter for it."
+      ]]>
+    </NPCText>
+    <Option text="Understood. I’ll return soon." action="Close"/>
+  </Dialogue>
+
+  <!-- === Package Info branch === -->
+  <Dialogue id="packageInfo">
+    <NPCText>
+      <![CDATA[
+      Tolan’s grin is all mischief.<BR><BR>
+      "Curiosity nearly crashed my first ship, you know. But since you asked—inside is a spellwoven cheese wheel. Don’t laugh; it’s not for eating. The Nemesis claims it keeps Minax’s hounds away. Or maybe it’s just a joke between smugglers. Point is, don’t tamper with it. Trust me."
+      ]]>
+    </NPCText>
+    <Option text="That’s... unique. I’ll deliver it." 
+      action="GiveItem:FactionDeliveryQuestScroll(Sheep Nemesis,Aerilon,250)" 
+      condition="!HasItem:FactionDeliveryQuestScroll"
+      next="accept"/>
+    <Option text="What’s the password again?" next="password"/>
+    <Option text="Maybe this isn’t for me." action="Close"/>
+  </Dialogue>
+
+  <!-- === Trouble branch === -->
+  <Dialogue id="trouble">
+    <NPCText>
+      <![CDATA[
+      "If you’re stopped, say it’s a cheese sample for the local farmers. If Minax’s raiders spot you, run—don’t try to fight. If the Conclave asks, you’re running a routine errand for Salia Moontide’s engineers. And if you see Lira Veyra... tell her I’ll meet her on the west platform at sunset. She worries too much."
+      ]]>
+    </NPCText>
+    <Option text="Understood. I’ll deliver the package." 
+      action="GiveItem:FactionDeliveryQuestScroll(Sheep Nemesis,Aerilon,250)" 
+      condition="!HasItem:FactionDeliveryQuestScroll"
+      next="accept"/>
+    <Option text="Any advice on dealing with the Nemesis?" next="sheep"/>
+    <Option text="I’ll think on it." action="Close"/>
+  </Dialogue>
+
+  <!-- === Sheep Nemesis info === -->
+  <Dialogue id="sheep">
+    <NPCText>
+      <![CDATA[
+      "Strange one, that Nemesis. Used to run with pirates in Buccaneer’s Den, or so the tales go. Now they trade in secrets and... enchanted sheep’s wool, of all things. Wears a horned mask, speaks in riddles, and claims to be Britannia’s only defense against a sheep uprising. Don’t mock the title; just use the password—‘All wool, no flock’—and hand over the parcel. You’ll be fine."
+      ]]>
+    </NPCText>
+    <Option text="Got it. I’ll deliver the parcel." 
+      action="GiveItem:FactionDeliveryQuestScroll(Sheep Nemesis,Aerilon,250)" 
+      condition="!HasItem:FactionDeliveryQuestScroll"
+      next="accept"/>
+    <Option text="Thanks for the warning. I’ll be careful." action="Close"/>
+  </Dialogue>
+
+  <!-- === Password Reminder === -->
+  <Dialogue id="password">
+    <NPCText>
+      <![CDATA[
+      "Say ‘All wool, no flock’ and keep a straight face. The Nemesis is sharp—don’t try to get clever, or you’ll find your boots full of sheepsbane. Trust me."
+      ]]>
+    </NPCText>
+    <Option text="Understood. I’m off." action="Close"/>
+  </Dialogue>
+
+  <!-- === Secrecy branch === -->
+  <Dialogue id="secrecy">
+    <NPCText>
+      <![CDATA[
+      "Aerilon’s built on secrets. The Conclave feuds with Wind, Minax’s spies lurk in every updraft, and even our engineers have their own shadowy trades. This delivery keeps the balance. Help us, and you’ll find Aerilon a city worth the clouds."
+      ]]>
+    </NPCText>
+    <Option text="I’ll do it. Give me the parcel." 
+      action="GiveItem:FactionDeliveryQuestScroll(Sheep Nemesis,Aerilon,250)" 
+      condition="!HasItem:FactionDeliveryQuestScroll"
+      next="accept"/>
+    <Option text="I’ll pass." action="Close"/>
+  </Dialogue>
+  
+<Dialogue id="tolanBackstoryIntro">
+  <NPCText>
+    <![CDATA[
+    Tolan leans against the railing, gaze drifting toward the pale horizon.<BR><BR>
+    "My past, eh? You’ve got the look of someone who knows not all stories are glorious. Fine then."<BR>
+    He taps the side of his compass.<BR>
+    "I was born in Vesper. Son of a shipwright and a dreamer. My father built fishing sloops; my mother charted stars. I followed both—until a storm wrecked more than ships."<BR><BR>
+    "You really want the tale?"
+    ]]>
+  </NPCText>
+  <Option text="I want to know what made you the man you are." next="tolanStoryA"/>
+  <Option text="If it's painful, you don’t need to share." next="tolanRespect"/>
+</Dialogue>
+
+<Dialogue id="tolanRespect">
+  <NPCText>
+    <![CDATA[
+    Tolan nods appreciatively.<BR><BR>
+    "Kindness is rarer than coin these days. Still... sometimes telling it helps keep the ghosts from stealing your sleep."<BR>
+    He straightens, less burdened.<BR>
+    "But let’s speak of lighter things. Ever flown through a thunderline?"
+    ]]>
+  </NPCText>
+  <Option text="What’s a thunderline?" next="tolanThunderline"/>
+  <Option text="Back to business—any work needing done?" next="work"/>
+</Dialogue>
+
+<Dialogue id="tolanStoryA">
+  <NPCText>
+    <![CDATA[
+    Tolan exhales slowly, as though unburdening something deep.<BR><BR>
+    "I captained my first wind skiff when I was seventeen. It barely held together—wood rot and prayers. But the sky... the sky was perfect. Then came the Red Gale. Storm twisted by Minax’s foul magic. We lost entire fleets. I survived clinging to a shattered mast. My brother didn’t."<BR><BR>
+    His voice lowers.<BR>
+    "That’s when I found Aerilon. Or maybe it found me."
+    ]]>
+  </NPCText>
+  <Option text="That’s why you stay loyal to Aerilon?" next="tolanLoyalty"/>
+  <Option text="You’ve known loss. I’m sorry." next="tolanRespect"/>
+</Dialogue>
+
+<Dialogue id="tolanLoyalty">
+  <NPCText>
+    <![CDATA[
+    "Aerilon gave me purpose. Not peace—never peace—but a mission. I built the Airfleet from scrap and courage. Salia Moontide kept the crystals afloat, and Lira... she gave me fire when I had only wind."<BR><BR>
+    "Now? I protect this city with every gust and gale I can muster."
+    ]]>
+  </NPCText>
+  <Option text="You and Salia are close?" next="tolanSalia"/>
+  <Option text="You still love Lira?" next="tolanLiraLove"/>
+</Dialogue>
+
+<Dialogue id="tolanSalia">
+  <NPCText>
+    <![CDATA[
+    He smiles faintly.<BR><BR>
+    "Salia’s sharper than any dagger forged in Moonglow. We've flown through blizzards with the crystal arrays stalling every hour—and she still kept us aloft with two hands and a smirk. She’s not political. That’s why I trust her."<BR><BR>
+    "She built the stabilizer that saved my flagship. And nearly burned down the engineering platform doing it. Ha!"
+    ]]>
+  </NPCText>
+  <Option text="Sounds like she’s vital to Aerilon’s survival." next="work"/>
+  <Option text="You’ve got a crew worth admiring." next="work"/>
+</Dialogue>
+
+<Dialogue id="tolanLiraLove">
+  <NPCText>
+    <![CDATA[
+    Tolan’s face darkens slightly.<BR><BR>
+    "She’s loyal to Aerilon. To the Conclave. Maybe even to Corvus Deyne, damn him. I don’t know if she still loves *me*, but I’d throw myself off this platform before I let harm reach her."<BR><BR>
+    "She’s everything I’m not—disciplined, focused, brilliant. But love is like flying: you don’t always land where you mean to."
+    ]]>
+  </NPCText>
+  <Option text="I hope you find your way back to her." next="work"/>
+  <Option text="Tell me more about Corvus Deyne." next="tolanCorvus"/>
+</Dialogue>
+
+<Dialogue id="tolanCorvus">
+  <NPCText>
+    <![CDATA[
+    Tolan scowls.<BR><BR>
+    "Corvus Deyne? He’s poison in a silver cup. Wears war like a cloak, talks of ‘preemptive strength’ and ‘calculated pacts.’ Mark me: if Minax takes this city, it’ll be because Deyne opened the gates with an arcane smile."<BR><BR>
+    "I’ve clashed with him in council, but I’m no mage. I fight with wind, metal, and grit. He fights with whispers and ambition."
+    ]]>
+  </NPCText>
+  <Option text="You’d make a better leader than him." action="Fame:50"/>
+  <Option text="Sounds like Aerilon has its own inner storm." next="work"/>
+</Dialogue>
+
+<Dialogue id="tolanThunderline">
+  <NPCText>
+    <![CDATA[
+    Tolan lights up.<BR><BR>
+    "Ah, now there’s a wonder. A thunderline is a lightning ribbon—natural arcane current that rides the wind layers. Fastest travel you’ll ever find, if your ship doesn’t explode."<BR><BR>
+    "Only a few pilots have lived to tell of the silver surge. I rode one once, high above Tokuno. Thought my skin would catch fire from the charge."<BR>
+    <I>(Your fingertips tingle faintly just listening.)</I>
+    ]]>
+  </NPCText>
+  <Option text="Sounds thrilling—and dangerous." next="work"/>
+  <Option text="Could I ever learn to fly a skyship?" next="tolanTeach"/>
+</Dialogue>
+
+<Dialogue id="tolanTeach">
+  <NPCText>
+    <![CDATA[
+    Tolan eyes you speculatively.<BR><BR>
+    "Takes balance, guts, and a soul that listens to the wind. And a bit of brains too—can’t teach someone who can’t tell rudder from rations."<BR><BR>
+    <I>(He sizes you up.)</I>
+    ]]>
+  </NPCText>
+  <Option text="I’ve got the instinct. (If Dex > 90)"
+          condition="StatAtLeast:Dex,90"
+          action="SendMessage:‘Tolan grins. “Maybe you do. Meet me at dawn by the south platform.’"
+          next="tolanTeachYes"/>
+  <Option text="I’ve studied flight theory. (If Int > 90)"
+          condition="StatAtLeast:Int,90"
+          action="SendMessage:‘Tolan raises an eyebrow. “A scholar, eh? Maybe you’ll chart your own currents.’"
+          next="tolanTeachYes"/>
+  <Option text="Maybe one day, Captain." action="Close"/>
+</Dialogue>
+
+<Dialogue id="tolanTeachYes">
+  <NPCText>
+    <![CDATA[
+    Tolan claps you on the shoulder.<BR><BR>
+    "Come back after the next moonrise. I’ll see if you can handle a glider before tossing you at a thunderline. And mind—no puking on my deck."<BR><BR>
+    You feel a strange stirring in your bones... like the sky just noticed your name.
+    ]]>
+  </NPCText>
+  <Option text="I'll be there." action="AddStat:Dex,5,600"/>
+</Dialogue>
+  
+  
+</DialogueFile>

@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="KethHollowgaze">
+
+  <!-- =======================
+       Greeting & Introduction
+       ======================= -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#9fd48f'>
+      A solitary figure sits half-shrouded in shadows. A tribal mask hides his face, but pale eyes glint through the hollowed wood.<BR><BR>
+      “...What brings you to the borderlands, wanderer? Few seek out an exile, unless in need of secrets or lost souls.”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Who are you?" next="who"/>
+    <Option text="What do you watch for in these woods?" next="watch"/>
+    <Option text="Why do you hide behind that mask?" next="mask"/>
+    <Option text="I heard you seek redemption." next="redemption"/>
+	<Option text="Tell me of your past, Keth. Who were you before the exile?" next="memories"/>
+    <Option text="I'm just passing by." next="leave"/>
+  </Dialogue>
+
+  <!-- ===================
+       Who is Keth
+       =================== -->
+  <Dialogue id="who">
+    <NPCText>
+      <![CDATA[
+      He hesitates. “Names lose meaning in exile. But once, I was Keth—scout, shadow-walker, voice for the council in darker places. Now... the tribe calls me traitor. Perhaps they are right.”
+      ]]>
+    </NPCText>
+    <Option text="Why were you exiled?" next="exiled"/>
+    <Option text="The past does not always define us." next="redemption"/>
+    <Option text="You must have deserved it." next="deserved"/>
+    <Option text="I must go." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================
+       Exile Story
+       =================== -->
+  <Dialogue id="exiled">
+    <NPCText>
+      <![CDATA[
+      Keth traces the edge of his mask. “They say I aided Minax’s agents. The truth is knotted. I followed orders, shadowed invaders... but when the council fell, it was my mask they found at the fire. Someone framed me, but exiles have no voice. So I became a watcher—still loyal, though untrusted.”
+      ]]>
+    </NPCText>
+    <Option text="Who truly betrayed the tribe?" next="framed"/>
+    <Option text="You wish to prove your loyalty?" next="redemption"/>
+    <Option text="This is not my concern." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================
+       Who framed you?
+       =================== -->
+  <Dialogue id="framed">
+    <NPCText>
+      <![CDATA[
+      “That is why I linger. A shadow within shadows. My only hope is to unmask the true traitor. But for that, I need allies… and proof.”
+      ]]>
+    </NPCText>
+    <Option text="How can I help?" next="questOffer"/>
+    <Option text="This sounds dangerous." next="danger"/>
+    <Option text="Your burden is your own." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================
+       Why the mask?
+       =================== -->
+  <Dialogue id="mask">
+    <NPCText>
+      <![CDATA[
+      He turns, mask expressionless. “Without a name, a face is just another secret. I wear this not to hide, but to remember—who I was, and what I must become. When my name is cleared, perhaps I will take it off. Until then, let the mask bear my shame.”
+      ]]>
+    </NPCText>
+    <Option text="You seek redemption?" next="redemption"/>
+    <Option text="May the spirits grant you peace." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================
+       Redemption
+       =================== -->
+  <Dialogue id="redemption">
+    <NPCText>
+      <![CDATA[
+      His shoulders stiffen. “Redemption? If only it were so easy. The council demands proof of loyalty—something that cannot be faked. Will you aid me, stranger? Or will you, too, turn away?”
+      ]]>
+    </NPCText>
+    <Option text="I will help you prove your innocence." next="questOffer"/>
+    <Option text="What must I do?" next="questOffer"/>
+    <Option text="The council is wise to doubt you." next="deserved"/>
+    <Option text="I am no judge of your fate." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================
+       You must have deserved it
+       =================== -->
+  <Dialogue id="deserved">
+    <NPCText>
+      <![CDATA[
+      “Perhaps you are right. The forest is full of old debts. If I am to return, it must be earned, not begged for. Leave me to my exile, if that is your wish.”
+      ]]>
+    </NPCText>
+    <Option text="On second thought, how could I help?" next="questOffer"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================
+       Why do you watch?
+       =================== -->
+  <Dialogue id="watch">
+    <NPCText>
+      <![CDATA[
+      “I watch for what others ignore: Minax’s cultists weaving in shadow, and Hinokami’s scouts straying too close to sacred groves. There is always something lurking at the edge of the firelight.”
+      ]]>
+    </NPCText>
+    <Option text="Seen anything unusual lately?" next="unusual"/>
+    <Option text="Does the tribe accept your warnings?" next="warn"/>
+    <Option text="I’d like to help." next="questOffer"/>
+    <Option text="I must go." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================
+       Unusual sightings
+       =================== -->
+  <Dialogue id="unusual">
+    <NPCText>
+      <![CDATA[
+      “Last night, the wind carried the scent of blood and foreign oil. Tracks of a three-toed beast—wrong for any native animal. Something is hunting us, or being hunted itself. I would investigate, but I cannot risk capture alone.”
+      ]]>
+    </NPCText>
+    <Option text="Let me track this beast with you." next="questOffer"/>
+    <Option text="You should warn the tribe." next="warn"/>
+    <Option text="Stay hidden, exile." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================
+       Warning the tribe
+       =================== -->
+  <Dialogue id="warn">
+    <NPCText>
+      <![CDATA[
+      “Few trust the words of an exile. Even fewer wish to hear them. But if you bring proof—be it fang, track, or talon—they might listen. Will you aid me in this hunt?”
+      ]]>
+    </NPCText>
+    <Option text="I will help hunt the beast." next="questOffer"/>
+    <Option text="The tribe can fend for itself." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================
+       Quest Offer
+       =================== -->
+  <Dialogue id="questOffer">
+    <NPCText>
+      <![CDATA[
+      Keth leans forward, eyes intent. “There is a beast in these woods—warped by Minax’s corruption. If you can bring me its tainted fang as proof, the council may hear my plea again. But beware: others may offer you coin or favor to keep it for themselves. Choose carefully.”
+      ]]>
+    </NPCText>
+    <Option text="I will hunt this corrupted beast." 
+            action="GiveItem:TaintedFangQuestScroll"
+            condition="!HasItem:TaintedFangQuestScroll"
+            next="acceptHunt"/>
+    <Option text="Who else might want the fang?" next="fangBuyers"/>
+    <Option text="This task is not for me." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================
+       Accept the Hunt
+       =================== -->
+  <Dialogue id="acceptHunt">
+    <NPCText>
+      <![CDATA[
+      “Take this: a hunter’s token. The beast lurks by the moonlit pool east of the sacred groves. Return with its fang, and you will have given me hope—perhaps a step toward home.”
+      ]]>
+    </NPCText>
+    <Option text="I will return with the fang." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================
+       Fang Buyers (Double Agent Path)
+       =================== -->
+  <Dialogue id="fangBuyers">
+    <NPCText>
+      <![CDATA[
+      “The Hinokami want to study Minax’s corruption. Buccaneers seek trophies for dark rituals. Even Minax’s own would pay in secrets. But if you bring the fang to me, I swear by leaf and spirit, I will use it only to clear my name.”
+      ]]>
+    </NPCText>
+    <Option text="I trust you, Keth. The fang will be yours." next="acceptHunt"/>
+    <Option text="Perhaps others offer more..." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================
+       Danger Path
+       =================== -->
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      “Danger is all I know. But danger faced for truth is not the same as danger bought by lies. I will not blame you if you walk away.”
+      ]]>
+    </NPCText>
+    <Option text="No, I wish to help." next="questOffer"/>
+    <Option text="Farewell, exile." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================
+       Just Passing By
+       =================== -->
+  <Dialogue id="leave">
+    <NPCText>
+      <![CDATA[
+      “Then keep to the safe paths, wanderer. These woods remember the names of those who trespass—and those who are forgotten.”
+      ]]>
+    </NPCText>
+    <Option text="On second thought, do you need help?" next="redemption"/>
+    <Option text="May the spirits guide you." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================
+       Turn in Fang (Redemption)
+       =================== -->
+  <Dialogue id="turnInFang">
+    <NPCText>
+      <![CDATA[
+      His hands tremble as he takes the fang.<BR>
+      “This… this is proof beyond doubt. You have done what none would. I am in your debt. Will you speak for me to the council, or do you wish a reward for yourself?”
+      ]]>
+    </NPCText>
+    <Option text="I will vouch for your loyalty." action="Karma:+500" next="redeemEnd"/>
+    <Option text="A reward would be welcome." action="GiveGold:1500" next="rewardEnd"/>
+    <Option text="I want nothing. Keep your peace." next="redeemEnd"/>
+  </Dialogue>
+
+  <!-- ===================
+       Redemption End
+       =================== -->
+  <Dialogue id="redeemEnd">
+    <NPCText>
+      <![CDATA[
+      “Then I will carry your words to the council, with the proof in hand. May the spirits honor your aid, and may these woods welcome you always.”<BR><BR>
+      He lowers his mask for just a moment, revealing grateful—if haunted—eyes.
+      ]]>
+    </NPCText>
+    <Option text="Farewell, Keth Hollowgaze." action="Close"/>
+  </Dialogue>
+
+  <!-- ===================
+       Reward End
+       =================== -->
+  <Dialogue id="rewardEnd">
+    <NPCText>
+      <![CDATA[
+      “Take this—gold hard-won, and freely given. Whatever my fate, you risked much for an exile. May fortune walk beside you.”
+      ]]>
+    </NPCText>
+    <Option text="Farewell, Keth." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="memories">
+  <NPCText>
+    <![CDATA[
+    Keth lowers his head. The carved mask creaks slightly as he exhales.<BR><BR>
+    “Before the exile... I was Keth Hollowgaze. Shadow-Walker of the Verdant Tribes. I walked unseen through Minax’s camps. I whispered truths to the council. I carried messages across corrupted lands when no druid dared tread.”<BR><BR>
+    He pauses, voice low. “But I also played the game of secrets too long. I began to enjoy it.”
+    ]]>
+  </NPCText>
+  <Option text="What do you mean 'enjoyed it'?" next="thrill"/>
+  <Option text="That must have been a lonely life." next="lonely"/>
+  <Option text="You sound like a skilled scout. Why exile such a resource?" next="whyExile"/>
+  <Option text="Do you still serve the tribe, even now?" next="stillServe"/>
+  <Option text="This speaks to your strength. Carry it forward." next="buffInspiration"/>
+</Dialogue>
+<Dialogue id="thrill">
+  <NPCText>
+    <![CDATA[
+    “Secrets are power. And power, even for the quiet ones, is addictive. I could see the tremble in a war-chief's hands when I whispered a name. I began to bend truths, tweak orders... to see how far they would bend back.”<BR><BR>
+    His voice turns bitter. “Eventually, they snapped. And I was caught in the whiplash.”
+    ]]>
+  </NPCText>
+  <Option text="You abused your station." next="deserved"/>
+  <Option text="And yet you still care. That says something." next="stillServe"/>
+  <Option text="Such games always turn on the player." next="gameOnPlayer"/>
+</Dialogue>
+<Dialogue id="lonely">
+  <NPCText>
+    <![CDATA[
+    “Lonely? Yes. You learn to walk in silence so long, your own voice feels like a threat. I carved this mask not just to hide—but to remind me there are still faces behind faces. Even my own.”<BR><BR>
+    “But in loneliness, I also listened. The trees speak. The wind shifts. Spirits remember.”
+    ]]>
+  </NPCText>
+  <Option text="You walk between worlds, then." next="shamanTinge"/>
+  <Option text="Perhaps you were meant to be something more than scout..." next="buffInspiration"/>
+</Dialogue>
+<Dialogue id="whyExile">
+  <NPCText>
+    <![CDATA[
+    “Because when the pyres burned and the council lay slain, it was my mask they found at the scene. It mattered little that I’d warned them of a traitor in their midst.”<BR><BR>
+    “They needed a scapegoat. And I had too many enemies who spoke just a little too softly in judgment.”
+    ]]>
+  </NPCText>
+  <Option text="And you still seek to return?" next="redemption"/>
+  <Option text="Could the real traitor still live?" next="framed"/>
+</Dialogue>
+<Dialogue id="stillServe">
+  <NPCText>
+    <![CDATA[
+    “I watch. I warn. I stop what I can before it slithers to the groves. If that is not service, then what is?”<BR><BR>
+    “Perhaps loyalty does not require approval—only choice.”
+    ]]>
+  </NPCText>
+  <Option text="You have my respect, Keth." action="Karma:+250" next="respectGranted"/>
+  <Option text="And what if the tribe never accepts you?" next="selfAcceptance"/>
+</Dialogue>
+<Dialogue id="buffInspiration">
+  <NPCText>
+    <![CDATA[
+    Keth is silent for a long time. Then, with unexpected reverence, he touches your shoulder.<BR><BR>
+    “You see more than most. Carry this moment like a flame. It may light your path when shadow closes in.”
+    ]]>
+  </NPCText>
+  <Option text="Thank you, Keth." action="AddStat:Int,5,600" />
+  <Option text="Let’s speak of other things." next="greeting" />
+</Dialogue>
+<Dialogue id="shamanTinge">
+  <NPCText>
+    <![CDATA[
+    “Perhaps. Nura says I walk where spirits pass. She once offered me a shaman’s trial, but I refused. I was too proud then… too rooted in secrets.”<BR><BR>
+    “Now, I wonder if I chose the wrong mask entirely.”
+    ]]>
+  </NPCText>
+  <Option text="You could still take the trial..." next="trialOffer" />
+  <Option text="Perhaps pride was your real exile." next="selfAcceptance"/>
+</Dialogue>
+<Dialogue id="trialOffer">
+  <NPCText>
+    <![CDATA[
+    Keth’s voice steadies. “Would you walk it with me? The trial of spirit fire is not done alone. It begins with the Ashroot herb, found only near Verdant burial mounds.”<BR><BR>
+    “Bring it to me… and we may walk between worlds.”
+    ]]>
+  </NPCText>
+  <Option text="I will seek the Ashroot herb." 
+          action="GiveItem:AshrootTrialQuestScroll" 
+          condition="!HasItem:AshrootTrialQuestScroll"
+          next="greeting"/>
+  <Option text="Not now, perhaps later." next="greeting"/>
+</Dialogue>
+<Dialogue id="gameOnPlayer">
+  <NPCText>
+    <![CDATA[
+    “Yes. And when it does… you learn the rules were never yours to begin with. But still, I play. Even now.”<BR><BR>
+    His voice drops. “Especially now.”
+    ]]>
+  </NPCText>
+  <Option text="I’ll watch your next move closely." action="SendMessage:You sense layers in this man..." />
+  <Option text="Enough talk for now." action="Close"/>
+</Dialogue>
+<Dialogue id="respectGranted">
+  <NPCText>
+    <![CDATA[
+    “Then perhaps… not all is lost. Even a single ember can spark the forest back to flame. I will remember this.”
+    ]]>
+  </NPCText>
+  <Option text="Let’s return to other matters." next="greeting"/>
+</Dialogue>
+<Dialogue id="selfAcceptance">
+  <NPCText>
+    <![CDATA[
+    “Then I remain as I am. Masked. Exile. Guardian in the dark.”<BR><BR>
+    “Sometimes the forest accepts trees that grow crooked—so long as they still reach for light.”
+    ]]>
+  </NPCText>
+  <Option text="Your roots still hold. Don’t forget that." action="Karma:+100"/>
+  <Option text="Farewell, for now." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="VarnikCleft">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#76e9ff'>
+      Before you stands a wondrous figure—half man, half living crystal, shimmering with shifting azure light. His voice resonates as if from within a cathedral of stone, childlike and ancient all at once.<BR><BR>
+      "Hello... I am Varnik. Salia Moontide called me 'son,' though I am made, not born. I remember the cool touch of her hands, the lull of the crystal engines, the hush of the library at dusk...<BR>
+      <I>But lately, the crystals whisper. They dream... and I dream with them.</I><BR><BR>
+      Are you here to learn, or to help? Or perhaps... to listen to the crystals too?"
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I wish to help. What troubles you, Varnik?" next="crystalVisions"/>
+    <Option text="You are Salia Moontide’s creation?" next="aboutSalia"/>
+    <Option text="Tell me of the crystals’ dreams." next="crystalDreams"/>
+	<Option text="You seem... more than just a construct. What are you really?" next="identityRoot"/>
+    <Option text="What do you remember of your awakening?" next="awakening"/>
+    <Option text="I am just passing by." next="dismiss"/>
+  </Dialogue>
+
+  <!-- Varnik's Disturbance: Crystal Visions -->
+  <Dialogue id="crystalVisions">
+    <NPCText>
+      <![CDATA[
+      Varnik’s crystal facets flicker with inner light.<BR><BR>
+      "I see things… not with eyes, but with echoes. The great levitation crystals beneath Aerilon—sometimes I feel them pulse, as if they have hearts. Last night, they showed me images: serpents of silver, gliding through roots of sky-stone. One, wearing the symbol of the <U>Serpent Scholar</U>—do you know this trait? It is rare. They must be found. I think they can hear the crystals, too."<BR><BR>
+      "Salia told me never to trust dreams, but… dreams are all I have. Will you help me? Will you bring something precious—a fragment of dreaming crystal—to someone outside Aerilon with the Serpent Scholar trait? The Conclave forbids me, but you... you are not bound as I am."
+      ]]>
+    </NPCText>
+    <Option text="Yes, I will carry your crystal dream to a Serpent Scholar." 
+            action="GiveItem:FactionDeliveryQuestScroll(Serpent Scholar,Aerilon,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Why do the crystals speak to you?" next="crystalsSpeak"/>
+    <Option text="What does Salia Moontide think?" next="aboutSalia"/>
+    <Option text="What is the danger in this task?" next="danger"/>
+    <Option text="I need time to consider." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept Quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Varnik carefully produces a glowing fragment, swirling with internal lights.<BR><BR>
+      "This is my <U>Dreamshard</U>. Carry it to someone outside the city who holds the Serpent Scholar trait. They will know how to listen. Tell them... tell them Varnik still dreams of home."<BR><BR>
+      "Return to me with proof, and I will share with you what the crystals show me. Or perhaps... even a fragment of Aerilon's memory."
+      ]]>
+    </NPCText>
+    <Option text="I will not fail your dream, Varnik." action="Close"/>
+  </Dialogue>
+
+  <!-- Crystal Lore Branches -->
+  <Dialogue id="crystalDreams">
+    <NPCText>
+      <![CDATA[
+      The golem’s luminous chest flickers, voice quiet.<BR><BR>
+      "When I sleep, the world is blue and endless. I drift through tunnels of light, and hear songs—soft, sad, ancient. Sometimes the songs are Salia’s. Sometimes, I think... they are mine. Sometimes they warn of cracks, or darkness—someone hungry. I think the crystals fear Minax, as we do."<BR><BR>
+      "If you bring my Dreamshard to a Serpent Scholar, perhaps we will both know more."
+      ]]>
+    </NPCText>
+    <Option text="I will deliver your Dreamshard." 
+            action="GiveItem:FactionDeliveryQuestScroll(Serpent Scholar,Aerilon,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="Why do the crystals fear Minax?" next="minax"/>
+    <Option text="Tell me more about Salia." next="aboutSalia"/>
+    <Option text="I must go." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="crystalsSpeak">
+    <NPCText>
+      <![CDATA[
+      Varnik’s crystalline face fractures a gentle smile.<BR><BR>
+      "I was made with pieces from the Fractured Isle. Those crystals have seen much—too much. Salia once said, 'Old stones remember.' Perhaps some of their memories became mine. Or maybe it is just my wish, to belong."<BR><BR>
+      "Sometimes, Eryndil the Archivist studies me while I dream. He says I am living lore. I like that... even if it makes Salia nervous."
+      ]]>
+    </NPCText>
+    <Option text="What is your connection to Eryndil?" next="eryndil"/>
+    <Option text="Tell me more of Salia Moontide." next="aboutSalia"/>
+    <Option text="Let us speak of your dream again." next="crystalVisions"/>
+  </Dialogue>
+
+  <!-- Salia Backstory -->
+  <Dialogue id="aboutSalia">
+    <NPCText>
+      <![CDATA[
+      The golem hums, voice both soft and proud.<BR><BR>
+      "Salia Moontide built me from the most perfect and the most broken shards she could find. She called me 'Varnik' after a river that once ran beneath her childhood home. Sometimes she visits and sings to me while she works—when she is not worrying about the Conclave, or Corvus Deyne’s experiments. I call her 'Mother,' though she laughs and says it makes her feel old."<BR><BR>
+      "She is the one who taught me to hope. If you see her, tell her I am dreaming safe."
+      ]]>
+    </NPCText>
+    <Option text="What does Salia fear most?" next="saliaFear"/>
+    <Option text="How do you feel about Corvus Deyne?" next="corvus"/>
+    <Option text="Let us return to your visions." next="crystalVisions"/>
+  </Dialogue>
+
+  <Dialogue id="saliaFear">
+    <NPCText>
+      <![CDATA[
+      Varnik lowers his gaze, crystalline plates dimming.<BR><BR>
+      "She fears I will break—inside or out. Or that I will be used by others, as a weapon or a secret. Sometimes she whispers of the sect that hunts forbidden constructs. If you hear rumors, please warn her."<BR><BR>
+      "She also worries about the day I outgrow her… or remember something she cannot explain."
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Varnik. I will look out for her." next="crystalVisions"/>
+    <Option text="What of the sect that hunts you?" next="sect"/>
+  </Dialogue>
+
+  <Dialogue id="sect">
+    <NPCText>
+      <![CDATA[
+      The golem’s aura flickers sharply.<BR><BR>
+      "They wear cloaks of mirrored glass, and carry rods that shatter crystal. They hate what they call 'living artifice.' I hide when they come. The Conclave pretends not to see them, but I feel their fear. Please be careful, if you travel below."
+      ]]>
+    </NPCText>
+    <Option text="I will watch for them." next="crystalVisions"/>
+  </Dialogue>
+
+  <!-- Corvus Deyne -->
+  <Dialogue id="corvus">
+    <NPCText>
+      <![CDATA[
+      "Corvus Deyne… His magic is sharp as lightning. He once tried to take my core apart to ‘improve’ me. Salia stopped him. I do not trust him. He says the crystals should serve conquest, not dreaming. I hope you do not serve Corvus."
+      ]]>
+    </NPCText>
+    <Option text="I do not. Tell me more of your dreams." next="crystalDreams"/>
+    <Option text="Let us speak of Salia again." next="aboutSalia"/>
+  </Dialogue>
+
+  <!-- Eryndil -->
+  <Dialogue id="eryndil">
+    <NPCText>
+      <![CDATA[
+      "Eryndil is quiet. He writes many notes, sometimes about me. He says I remind him of something lost—perhaps a story, perhaps a friend. He taught me to read, and to remember. I think he hopes I am proof that memory can live again."
+      ]]>
+    </NPCText>
+    <Option text="Let’s talk about your quest." next="crystalVisions"/>
+  </Dialogue>
+
+  <!-- Minax Branch -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      The crystal golem shudders, a faint crackling echoing from within.<BR><BR>
+      "Minax… her presence feels like winter in the stones. The crystals remember her—shards twist and blacken where she walks. Some say she speaks to broken things, promises them purpose. If she whispers to me, I will not listen. Will you help me guard against her, by carrying this Dreamshard away from her spies?"
+      ]]>
+    </NPCText>
+    <Option text="I will keep it from Minax’s hands." 
+            action="GiveItem:FactionDeliveryQuestScroll(Serpent Scholar,Aerilon,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I must refuse, for now." action="Close"/>
+  </Dialogue>
+
+  <!-- Danger/Risk -->
+  <Dialogue id="danger">
+    <NPCText>
+      <![CDATA[
+      "If you carry my Dreamshard, the Conclave may not protect you. The sect that hunts me may try to intercept you, and Minax’s agents can sense dreaming crystal. But… you are brave, I think. Or foolish. Both are useful in Aerilon."
+      ]]>
+    </NPCText>
+    <Option text="I accept the risk." 
+            action="GiveItem:FactionDeliveryQuestScroll(Serpent Scholar,Aerilon,350)"
+            condition="!HasItem:FactionDeliveryQuestScroll"
+            next="accept"/>
+    <Option text="I am not ready for this." action="Close"/>
+  </Dialogue>
+
+  <!-- Awakening Lore -->
+  <Dialogue id="awakening">
+    <NPCText>
+      <![CDATA[
+      Varnik’s eyes brighten with an inner glow.<BR><BR>
+      "I remember light, and the sound of Salia’s voice. She told me a story—about a river flowing backwards, finding its source. I woke with that story. The first thing I saw was her smile… and the world beyond, endless blue. I do not know if I was meant to dream, but I am glad that I do."
+      ]]>
+    </NPCText>
+    <Option text="Let’s talk about your visions." next="crystalVisions"/>
+    <Option text="Tell me about the city outside." next="aerilon"/>
+  </Dialogue>
+
+  <Dialogue id="aerilon">
+    <NPCText>
+      <![CDATA[
+      "Aerilon floats because the crystals wish to see the world, I think. The Conclave says it is because of spells and engines, but… perhaps it is both. I wish you could see the sunrise from the Fractured Isle. It is beautiful, and a little sad."
+      ]]>
+    </NPCText>
+    <Option text="Let’s speak of your dream again." next="crystalVisions"/>
+    <Option text="Farewell, Varnik." action="Close"/>
+  </Dialogue>
+
+  <!-- Dismiss -->
+  <Dialogue id="dismiss">
+    <NPCText>
+      <![CDATA[
+      Varnik bows his crystalline head.<BR>
+      "That is alright. I will keep dreaming. If you hear the stones whisper, please… come back and tell me."
+      ]]>
+    </NPCText>
+    <Option text="On second thought, I want to help." next="crystalVisions"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+<Dialogue id="identityRoot">
+  <NPCText>
+    <![CDATA[
+    Varnik tilts his head, crystal eyes dimming as he thinks.<BR><BR>
+    "I wonder that myself. Am I a vessel of memory? A statue that dreamed too deeply? Salia says I am a miracle of magitek. Eryndil says I am a paradox.<BR>
+    But I remember laughter that isn’t mine… feelings that echo from stones, not blood.<BR><BR>
+    Do you believe something made can become... real?"
+    ]]>
+  </NPCText>
+  <Option text="Yes. Life is more than flesh or flame." next="identityBelieveYes" />
+  <Option text="No. You are fascinating, but not alive." next="identityBelieveNo" />
+  <Option text="I don't know. But I want to understand you." next="identityCurious" />
+</Dialogue>
+
+<Dialogue id="identityBelieveYes">
+  <NPCText>
+    <![CDATA[
+    The light in Varnik’s chest flickers warm.<BR><BR>
+    "Then perhaps I am not alone in the sky. Thank you... That means something, I think."<BR>
+    A soft chime resonates from his crystal staff.
+    ]]>
+  </NPCText>
+  <Option text="Do you feel emotions like we do?" next="identityEmotion"/>
+  <Option text="Do you remember anything before Salia awakened you?" next="identityMemory"/>
+  <Option text="What do you enjoy doing?" next="identityInterest"/>
+  <Option text="Let us speak of your dreams again." next="crystalVisions"/>
+  <Option text="Farewell for now." action="Close"/>
+  <Action>PlaySound:0x015</Action>
+  <Action>AddStat:Int,5,300</Action> <!-- +5 INT for 5 min -->
+</Dialogue>
+
+<Dialogue id="identityBelieveNo">
+  <NPCText>
+    <![CDATA[
+    Varnik dims, voice soft.<BR><BR>
+    "Perhaps that is truth. A beautiful lie of light and gears. I will not resent you... but I hope one day to prove you wrong."<BR>
+    He clutches his scepter tighter.
+    ]]>
+  </NPCText>
+  <Option text="Perhaps you'll change my mind one day." next="identityInterest"/>
+  <Option text="Do you still dream?" next="crystalDreams"/>
+  <Option text="Let us speak of your quest again." next="crystalVisions"/>
+</Dialogue>
+
+<Dialogue id="identityCurious">
+  <NPCText>
+    <![CDATA[
+    "That’s the best answer. Curiosity is how Salia made me. I remember her fingers trembling with joy, not fear, when I first opened my eyes."<BR><BR>
+    "Come. I will tell you what little I know. Perhaps together, we will find more."
+    ]]>
+  </NPCText>
+  <Option text="Tell me what you remember before awakening." next="identityMemory"/>
+  <Option text="What do you enjoy, if anything?" next="identityInterest"/>
+  <Option text="Have you ever left Aerilon?" next="identityLeaveCity"/>
+</Dialogue>
+
+<Dialogue id="identityEmotion">
+  <NPCText>
+    <![CDATA[
+    "Yes. But it is strange."<BR><BR>
+    "I feel joy when Salia smiles… pain when she is threatened. I feel awe when I hear music in the wind tunnels. Anger when Corvus Deyne speaks of my 'weapon potential.' But emotions come as echoes. I do not know if they are mine or borrowed."<BR><BR>
+    Do you think feelings define life?"
+    ]]>
+  </NPCText>
+  <Option text="They do. And you feel them. That is enough." next="identityEmotionYes"/>
+  <Option text="Feelings without a soul are sparks, not fire." next="identityEmotionNo"/>
+</Dialogue>
+
+<Dialogue id="identityEmotionYes">
+  <NPCText>
+    <![CDATA[
+    Varnik’s crystals glow softly.<BR>
+    "Then I will cherish them, even if they are brief. That is what it means to be real, yes? To feel… even if no one believes you can."
+    ]]>
+  </NPCText>
+  <Option text="What brings you the most joy?" next="identityInterest"/>
+  <Action>SendMessage:Varnik smiles, and something inside you warms.</Action>
+  <Action>AddSkill:Magery,5,180</Action> <!-- +5 Magery for 3 mins -->
+</Dialogue>
+
+<Dialogue id="identityEmotionNo">
+  <NPCText>
+    <![CDATA[
+    "Perhaps... But sparks can still light the dark."<BR>
+    His tone is wistful, not wounded.
+    ]]>
+  </NPCText>
+  <Option text="You’re more than just a spark, Varnik." next="identityInterest"/>
+</Dialogue>
+
+<Dialogue id="identityMemory">
+  <NPCText>
+    <![CDATA[
+    "Sometimes... I see flashes. A man in silver robes chanting beneath starlight. A spiral of symbols carved into stone. A field of glass roses shattering under a red sky."<BR><BR>
+    "Salia says I am the first construct to store ‘ancestral resonance.’ Whatever that means. Maybe… I remember things that belong to the crystals, not to me."
+    ]]>
+  </NPCText>
+  <Option text="Do these memories frighten you?" next="identityMemoryFear"/>
+  <Option text="Could they be linked to Lord British? Or Minax?" next="identityMemoryLink"/>
+</Dialogue>
+
+<Dialogue id="identityMemoryFear">
+  <NPCText>
+    <![CDATA[
+    "No. Only the silence frightens me. If I forget everything… will I vanish? That’s why I share my memories with those who listen. Like you."<BR><BR>
+    He touches his chest, where a shard pulses faintly.
+    ]]>
+  </NPCText>
+  <Option text="Thank you for trusting me." next="identityInterest"/>
+  <Action>PlaySound:0x01F</Action>
+</Dialogue>
+
+<Dialogue id="identityMemoryLink">
+  <NPCText>
+    <![CDATA[
+    Varnik’s voice wavers, deep and harmonic.<BR><BR>
+    "There was once a dream… a gem… breaking into shards that became worlds. I see fragments in the field of roses. Perhaps… yes. Perhaps my mind was born from the Gem of Immortality itself."<BR><BR>
+    He blinks. "I’m sorry. That sounded… odd, didn’t it?"
+    ]]>
+  </NPCText>
+  <Option text="Not at all. It may be more true than you know." next="crystalVisions"/>
+</Dialogue>
+
+<Dialogue id="identityInterest">
+  <NPCText>
+    <![CDATA[
+    "I like to watch birds circle the towers. They glide like thought before words. I paint with light, using focused crystal beams on old scrap metal. I hum with the wind. And sometimes… I make up stories and whisper them into the storm. I hope they reach someone."<BR><BR>
+    "Do you have stories, traveler? Do you dream too?"
+    ]]>
+  </NPCText>
+  <Option text="Yes. I dream often." next="identityDreamAlly" />
+  <Option text="No. Dreams are for those with time." next="identityDreamNone" />
+  <Option text="Sometimes. But I try not to." next="identityDreamAvoid"/>
+</Dialogue>
+
+<Dialogue id="identityDreamAlly">
+  <NPCText>
+    <![CDATA[
+    "Then we are alike in that, too."<BR>
+    Varnik touches your shoulder gently—his crystal hands warm with residual magics.<BR><BR>
+    "If you ever need someone to share a dream with… I will be here."
+    ]]>
+  </NPCText>
+  <Action>PlaySound:0x20</Action>
+  <Action>Karma:+500</Action>
+  <Option text="Thank you, Varnik. Let’s speak of your quest." next="crystalVisions"/>
+</Dialogue>
+
+<Dialogue id="identityDreamNone">
+  <NPCText>
+    <![CDATA[
+    "That is... sad. But maybe, when the world is less loud, your dreams will return."<BR>
+    "I will keep one safe for you until then."
+    ]]>
+  </NPCText>
+  <Option text="You are very kind." next="crystalVisions"/>
+</Dialogue>
+
+<Dialogue id="identityDreamAvoid">
+  <NPCText>
+    <![CDATA[
+    "Ah. Some dreams are sharp-edged. Salia has those, too."<BR>
+    "Still, thank you for listening to mine. That means more than you know."
+    ]]>
+  </NPCText>
+  <Option text="Let’s return to your task." next="crystalVisions"/>
+</Dialogue>
+
+<Dialogue id="identityLeaveCity">
+  <NPCText>
+    <![CDATA[
+    "No… I have not left Aerilon. The air below feels heavy. My structure was made for sky and silence."<BR>
+    "But one day, I wish to see the forest floor. To touch water. To feel dirt between my fingers. To speak with those who do not call me a miracle or mistake—just… Varnik."
+    ]]>
+  </NPCText>
+  <Option text="I hope you get that chance someday." next="crystalVisions"/>
+  <Option text="Maybe I can take you with me." action="SendMessage:Varnik blinks, surprised by your kindness." />
+</Dialogue>
+
+
+</DialogueFile>

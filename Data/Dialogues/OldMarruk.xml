@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="OldMarruk">
+  <!-- === root greeting ===================================================== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#a6e2ed'>
+      You find a stooped old man squatting on a lopsided stool outside a half-collapsed shack. 
+      A herd of shaggy, ice-crusted goats crowd around, their blue eyes gleaming in the perpetual dusk. 
+      Marruk’s face is lost behind a wild white beard, and his sightless eyes are covered by a tattered blue hood.<br><br>
+      He runs gnarled fingers over the nearest goat’s horns.<br>
+      <I>“Soft steps, sharp wind. Are you a thief, or just lost? Speak plain—my goats see more than I do.”</I>
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I mean no harm. Are you Marruk, the goat-herder?" next="confirm"/>
+    <Option text="Those are… unusual goats. Do they really see for you?" next="goats"/>
+    <Option text="What do you mean, your goats ‘see’?" next="goatseers"/>
+	<Option text="Tell me your story, old man. You weren’t always a goat-herder, were you?" next="backstory"/>
+    <Option text="Never mind, I’ll leave you be." action="Close"/>
+  </Dialogue>
+
+  <!-- Confirm identity, lead to quest -->
+  <Dialogue id="confirm">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#a6e2ed'>
+      “Aye, Marruk I am. Keeper of Frostmere’s last true herd, since the storms took my kin. These goats—ah, the clever old souls—they carry what’s left of us inside.”<br>
+      He leans closer, sniffing.<br>
+      “You’re not from here. Don’t mind the cold? Good. The frost spirits sniff at your boots, but they’re not gnawing yet.”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="Are you all right? You seem troubled." next="troubled"/>
+    <Option text="Your goats are restless. Is something wrong?" next="problem"/>
+    <Option text="Why do you say your goats carry souls?" next="soulgoats"/>
+    <Option text="Farewell, Marruk." action="Close"/>
+  </Dialogue>
+
+  <!-- Goat powers explanation -->
+  <Dialogue id="goats">
+    <NPCText>
+      <![CDATA[
+      Marruk grins, revealing surprisingly strong teeth.<br>
+      “Aye, their eyes see the dead, the buried, the forgotten. They whisper to me when something is near—the shiver in the snow, the wailing in the wind. Svala listens, though the rest laugh. But my goats never lie.”
+      ]]>
+    </NPCText>
+    <Option text="What do they see now?" next="problem"/>
+    <Option text="Has Svala helped you?" next="svala"/>
+    <Option text="I don’t believe in such things." next="skeptic"/>
+  </Dialogue>
+
+  <!-- Svala branch -->
+  <Dialogue id="svala">
+    <NPCText>
+      <![CDATA[
+      Marruk nods, beard swaying.<br>
+      “Aye, Svala the Huntress. She brings me salt for the goats, listens when the others will not. She’s seen what the spirits can do—she lost a brother, you know. The wind brought his name to her on the solstice.”<br>
+      He gazes east, sightless.<br>
+      “She trusts the old ways. You’d do well to trust her in turn.”
+      ]]>
+    </NPCText>
+    <Option text="Do the goats warn you of danger?" next="problem"/>
+    <Option text="What do the spirits say now?" next="problem"/>
+    <Option text="I see. Thank you, Marruk." action="Close"/>
+  </Dialogue>
+
+  <!-- Skeptical player -->
+  <Dialogue id="skeptic">
+    <NPCText>
+      <![CDATA[
+      Marruk snorts.<br>
+      “Doubt’s colder than ice, but it keeps you alive, I suppose. Still, if you hear wailing in the blizzard, remember my words: some souls do not sleep.”<br>
+      A goat nudges your hand, as if to comfort you.
+      ]]>
+    </NPCText>
+    <Option text="Why are your goats upset?" next="problem"/>
+    <Option text="Farewell, old man." action="Close"/>
+  </Dialogue>
+
+  <!-- Old ways / soulgoats -->
+  <Dialogue id="soulgoats">
+    <NPCText>
+      <![CDATA[
+      Marruk strokes the smallest goat.<br>
+      “When folk die in the frost, the cold takes more than flesh. These beasts—they’re born on solstice night, when the veils are thinnest. That’s when the souls drift. Sometimes they find a home in warm wool and stubborn hearts. These goats remember things that no man should.”<br>
+      He looks up, eyes glinting behind his hood.<br>
+      “A soul-storm is coming. I feel it in their bones.”
+      ]]>
+    </NPCText>
+    <Option text="A soul-storm? What do you mean?" next="problem"/>
+    <Option text="Are you in danger?" next="troubled"/>
+  </Dialogue>
+
+  <!-- Marruk's worries -->
+  <Dialogue id="troubled">
+    <NPCText>
+      <![CDATA[
+      Marruk sighs deeply.<br>
+      “I’ve seen a dozen winters since my eyes went dark, but never one so strange. The goats twitch at night. Their breath comes in clouds like old ghosts. Last night, three of my herd collapsed, their eyes wide and white. No wound, no frostbite—just gone. Tosk the Bellringer heard the wailing too.”<br>
+      He fingers a charm hanging from his crook.<br>
+      “Folk think I’m mad, but Svala listens. Will you?”
+      ]]>
+    </NPCText>
+    <Option text="Of course. How can I help you?" next="questIntro"/>
+    <Option text="What does Tosk say about it?" next="tosk"/>
+    <Option text="I have to go." action="Close"/>
+  </Dialogue>
+
+  <!-- Tosk branch -->
+  <Dialogue id="tosk">
+    <NPCText>
+      <![CDATA[
+      Marruk’s voice drops to a whisper.<br>
+      “Tosk walks the night, bell in hand. He heard the wailing by the northern copse—said the shadows froze his blood. He believes me, though he won’t say it near Captain Bryndra.”<br>
+      Marruk gestures at his shack.<br>
+      “If you see Tosk, tell him the goats miss his tune. But beware the dark—something new has come, a hungry thing.”
+      ]]>
+    </NPCText>
+    <Option text="Tell me what’s happening, Marruk." next="questIntro"/>
+    <Option text="I’ll keep an eye out for Tosk." action="Close"/>
+  </Dialogue>
+
+  <!-- Main quest hook: GlacialWraith -->
+  <Dialogue id="problem">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#b6fcff'>
+      Marruk’s hands tremble.<br>
+      “Something wicked stalks the snow—an icy wraith, drifting where the Obelisk’s shadow falls. My goats know death, but not like this. Their souls are being eaten—ripped away. The village sleeps, but the wind screams.”<br>
+      He draws you close.<br>
+      “Will you hunt it? The GlacialWraith, white as death, with eyes like blue lanterns. If you slay it, bring me the shard of ice that pulses in its chest. The goats will bless you—and so will I.”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I will hunt the GlacialWraith for you." 
+            action="GiveItem:FactionKillQuestScroll(GlacialWraith,1,Frostmere,750)" 
+            condition="!HasItem:FactionKillQuestScroll"
+            next="accept"/>
+    <Option text="How can I find this wraith?" next="tracking"/>
+    <Option text="Are you certain it is the cause?" next="doubt"/>
+    <Option text="That sounds dangerous. I must refuse." action="Close"/>
+  </Dialogue>
+
+  <!-- Accept quest -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Marruk’s goats press around you, as if sensing hope.<br>
+      “The spirit wanders by the frozen fen at moonrise. If you hear bells in the blizzard, the wraith is near. Take care—the cold it brings is not of this world. Return with the Heartshard of Ice, and you’ll have the goats’ blessing—and my thanks.”<br>
+      He hands you a silver charm, etched with a goat’s eye.<br>
+      “Carry this. It might keep the wraith’s hunger from you, or at least fool it for a breath.”
+      ]]>
+    </NPCText>
+    <Option text="I’ll be careful, Marruk. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- How to track the wraith -->
+  <Dialogue id="tracking">
+    <NPCText>
+      <![CDATA[
+      “The GlacialWraith shuns the light. It’s drawn to places where the Obelisk’s shadow lies thickest. Seek the cracked pond north of here, where the reeds have frozen black. Some say it weeps, but those who listen too long are never found. Listen for Tosk’s bell—he won’t go near, but the goats know the sound. And remember: the wraith fears warmth, but not steel.”
+      ]]>
+    </NPCText>
+    <Option text="Thank you. I’ll hunt the wraith." 
+            action="GiveItem:FactionKillQuestScroll(GlacialWraith,1,Frostmere,750)" 
+            condition="!HasItem:FactionKillQuestScroll"
+            next="accept"/>
+    <Option text="This sounds… unnerving. I may reconsider." action="Close"/>
+  </Dialogue>
+
+  <!-- Player doubts the cause -->
+  <Dialogue id="doubt">
+    <NPCText>
+      <![CDATA[
+      Marruk frowns.<br>
+      “Doubt as you will. But the old ways remember things the mind forgets. My goats are dying, their souls gone hollow. No wolf, no blade, no frostbite. Only the wraith feeds like that.”<br>
+      He stands, leaning on his Soul-Seer’s Crook.<br>
+      “If you won’t help, no shame. But soon you’ll hear their cries yourself, and then you’ll know.”
+      ]]>
+    </NPCText>
+    <Option text="I believe you. I’ll hunt the wraith." 
+            action="GiveItem:FactionKillQuestScroll(GlacialWraith,1,Frostmere,750)" 
+            condition="!HasItem:FactionKillQuestScroll"
+            next="accept"/>
+    <Option text="I still refuse. Good luck, old man." action="Close"/>
+  </Dialogue>
+  
+<!-- === Old Marruk's Backstory Branch === -->
+
+<Dialogue id="backstory">
+  <NPCText>
+    <![CDATA[
+    <BASEFONT COLOR='#a6e2ed'>
+    Marruk chuckles softly, the sound like wind against an old shed.<br>
+    “No, I was not born with a crook in hand nor goats at my feet. Once, I lived near Moonglow. I was a winter scribe in the Lyceum, keeper of death chants and funereal rites. But I saw something I should not have—voices under the Obelisk, ancient words that live still in the wind.”<br><br>
+    He leans in.<br>
+    “They called me mad. Irinya believed. The others—banished me. So I wandered north. Found peace in these beasts and frost.”
+    </BASEFONT>
+    ]]>
+  </NPCText>
+  <Option text="You were a scholar of death rites?" next="rites"/>
+  <Option text="What did you see near the Obelisk?" next="vision"/>
+  <Option text="And the goats? Why them?" next="whyGoats"/>
+  <Option text="I’m sorry for what you lost." next="lost"/>
+</Dialogue>
+
+<Dialogue id="rites">
+  <NPCText>
+    <![CDATA[
+    “Aye, I transcribed the final thoughts of the dying, etched their breath into ice-charms, and read the stars for signs of restful passage. Death is not an ending, friend—it is a crossing. But the old roads are broken now. Minax shattered them. Some souls wander too far and return… wrong.”
+    ]]>
+  </NPCText>
+  <Option text="Did you ever see one return?" next="returningDead"/>
+  <Option text="That’s unsettling. But fascinating." next="vision"/>
+</Dialogue>
+
+<Dialogue id="returningDead">
+  <NPCText>
+    <![CDATA[
+    Marruk’s voice turns to a whisper.<br>
+    “Once. A child, thought drowned. Found wandering months later, humming a song from a forgotten age. No soul in her eyes—just ice and echoes. She melted when touched by fire. The priests burned my journals after that.”
+    ]]>
+  </NPCText>
+  <Option text="That’s horrifying..." next="vision"/>
+  <Option text="So you fled north?" next="whyGoats"/>
+</Dialogue>
+
+<Dialogue id="vision">
+  <NPCText>
+    <![CDATA[
+    “The Obelisk—Veyra, it is called in the forgotten tongue—does not sleep. It dreams of something cold and vast. I once read its patterns in a falling blizzard, like runes across the sky. It showed me a world where Minax had *already won*. I swore never to let it happen here.”<br><br>
+    He exhales.<br>
+    “But I am old. And the ice grows louder.”
+    ]]>
+  </NPCText>
+  <Option text="Why not warn the village elders?" next="distrust"/>
+  <Option text="Maybe the dream was a warning, not prophecy." next="hope"/>
+</Dialogue>
+
+<Dialogue id="distrust">
+  <NPCText>
+    <![CDATA[
+    “Ha! Bryndra sees only threats. Aelric sees only theories. Irinya listens—but her dreams are tangled now. The young ones think I am a ghost in rags. So I speak to the goats. They do not mock, nor forget.”
+    ]]>
+  </NPCText>
+  <Option text="Still, someone must stand with you." next="playerStands"/>
+  <Option text="It’s a lonely life you live." next="whyGoats"/>
+</Dialogue>
+
+<Dialogue id="hope">
+  <NPCText>
+    <![CDATA[
+    Marruk blinks behind his veil.<br>
+    “A wise thought. Perhaps it was a warning. Perhaps you were meant to hear this, traveler.”<br><br>
+    He mutters a blessing and draws a rune in the snow.
+    ]]>
+  </NPCText>
+  <Option text="(Receive a blessing of resistance)" 
+          action="AddStat:Int,5,600;AddSkill:SpiritSpeak,10,600;SendMessage:The frost around you feels... lighter." 
+          condition="!HasAttachment:XmlBlessingMarruk"
+          next="blessingGiven"/>
+    <Option text="I will remember what you’ve said." action="Close"/>
+</Dialogue>
+
+<Dialogue id="blessingGiven">
+  <NPCText>
+    <![CDATA[
+    “You walk now with clearer breath. Speak to the wind. It may answer.”<br>
+    He smiles faintly.<br>
+    “Not all frost is death. Some of it remembers.”
+    ]]>
+  </NPCText>
+  <Option text="Thank you, Marruk. I won’t waste it." action="Close"/>
+</Dialogue>
+
+<Dialogue id="playerStands">
+  <NPCText>
+    <![CDATA[
+    “Then let us both be fools together. The world changes when fools act boldly.”<br>
+    He grins.<br>
+    “You remind me of the hunter who taught me to carve sigils in ice—Kaelen’s grandfather. Brave and foolish both.”
+    ]]>
+  </NPCText>
+  <Option text="I’m honored. Let’s keep the spirits from winning." action="Fame:+100;Karma:+100;Close"/>
+</Dialogue>
+
+<Dialogue id="whyGoats">
+  <NPCText>
+    <![CDATA[
+    “Goats are simple. Honest. Their breath fogs with old memories. They sense spirits better than dogs, and judge men faster than priests. When one bleats thrice in stillness, I know a soul has passed into wind.”<br><br>
+    He touches a pendant carved from horn.<br>
+    “This one holds my wife’s memory. The goats know her still.”
+    ]]>
+  </NPCText>
+  <Option text="That’s beautiful." next="lost"/>
+  <Option text="You’re truly one of a kind, Marruk." next="playerStands"/>
+</Dialogue>
+
+<Dialogue id="lost">
+  <NPCText>
+    <![CDATA[
+    “Aye, we all lose. Some mourn. Others remember.”<br>
+    He gently pets the oldest goat.<br>
+    “But none are truly gone if their name is still whispered. The wind carries such things, you know.”<br><br>
+    He listens to the breeze.<br>
+    “Hark. She says you’ll face the frost soon. Be ready.”
+    ]]>
+  </NPCText>
+  <Option text="Thank you, Marruk. I’ll be careful." action="Close"/>
+</Dialogue>
+  
+  
+</DialogueFile>

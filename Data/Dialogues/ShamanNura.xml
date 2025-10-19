@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="ShamanNura">
+
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#8FE388'>
+      A gentle aroma of herbs fills the air as Shaman Nura regards you, her eyes unfocused, as if seeing both this world and another.<BR><BR>
+      “Ahh... you walk between root and sky. Have you come to seek wisdom, healing, or guidance along the spirit’s path?”
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I seek your wisdom, Shaman." next="wisdom"/>
+    <Option text="Can you heal my wounds?" next="heal"/>
+    <Option text="Tell me of the Verdant Tribes." next="tribelore"/>
+    <Option text="Do you have any tasks for me?" next="tasks"/>
+	<Option text="Who are you, truly, Shaman Nura?" next="nura_backstory_intro"/>
+    <Option text="I wish to leave." action="Close"/>
+  </Dialogue>
+
+  <!-- Lore Branch -->
+  <Dialogue id="tribelore">
+    <NPCText>
+      <![CDATA[
+      Nura’s voice is like rustling leaves.<BR><BR>
+      “We are the Verdant Tribes, children of the ancient groves. Our spirits are older than stone, our roots deeper than rivers. Many see only our huts and spears, but beneath these woods lies memory—and power Minax would steal, if she could.”<BR><BR>
+      She traces a spiral in the air.<BR>
+      “All things return to the earth. But with wisdom, we may shape what is yet to come.”
+      ]]>
+    </NPCText>
+    <Option text="How do you resist Minax’s corruption?" next="resistMinax"/>
+    <Option text="What wisdom can you share?" next="wisdom"/>
+    <Option text="Do you need aid?" next="tasks"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Wisdom Branch -->
+  <Dialogue id="wisdom">
+    <NPCText>
+      <![CDATA[
+      Nura closes her eyes, inhaling the scent of crushed herbs.<BR><BR>
+      “Listen. The world is wounded, but the spirits still whisper. If you still your heart, you may hear them too.”<BR>
+      She glances toward the sacred groves.<BR>
+      “If you wish true vision, walk the spirit-path. I can guide you... if you are willing to brave your own shadows.”
+      ]]>
+    </NPCText>
+    <Option text="I am ready to walk the spirit-path." next="visionquest_intro"/>
+    <Option text="Not now, thank you." action="Close"/>
+  </Dialogue>
+
+  <!-- Heal Branch -->
+  <Dialogue id="heal">
+    <NPCText>
+      <![CDATA[
+      Nura hums softly, laying cool hands upon your wounds.<BR>
+      “Be still, as the moss on stone. The spirit’s balm will knit you whole.”<BR><BR>
+      You feel a tingling warmth spreading through you.
+      ]]>
+    </NPCText>
+    <Option text="Thank you, Shaman." action="Heal:40"/>
+    <Option text="Can you tell me more about the tribe?" next="tribelore"/>
+    <Option text="Do you need any help?" next="tasks"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Tasks / Quest Hub -->
+  <Dialogue id="tasks">
+    <NPCText>
+      <![CDATA[
+      Nura’s gaze sharpens.<BR><BR>
+      “The Verdant Tribes stand at a crossroads. Spirits are restless, Minax’s poison spreads, and allies are few. Yet there is hope if hearts remain true. Will you aid us?”<BR><BR>
+      She offers a handful of dried herbs and a knowing smile.
+      ]]>
+    </NPCText>
+    <Option text="I wish to walk the spirit-path." next="visionquest_intro"/>
+    <Option text="What other help do you need?" next="herbquest_intro"/>
+    <Option text="Tell me of Minax’s threat." next="minax"/>
+    <Option text="Another time, Shaman." action="Close"/>
+  </Dialogue>
+
+  <!-- Vision Quest Branch -->
+  <Dialogue id="visionquest_intro">
+    <NPCText>
+      <![CDATA[
+      Nura gestures for you to sit by the sacred fire.<BR>
+      “Close your eyes. The smoke will open your senses; the spirits will guide your steps. But beware: the journey reveals not what you wish to see, but what you need.”<BR><BR>
+      (Begin Vision Quest? Only one spirit quest may be active at a time.)
+      ]]>
+    </NPCText>
+    <Option text="I am ready. Guide me." 
+            action="GiveItem:SpiritVisionQuestScroll(Verdant,1)" 
+            condition="!HasItem:SpiritVisionQuestScroll"
+            next="visionquest_begin"/>
+    <Option text="What dangers await in the spirit realm?" next="visionquest_warning"/>
+    <Option text="Not yet." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="visionquest_begin">
+    <NPCText>
+      <![CDATA[
+      Nura sprinkles sacred herbs on the fire. The smoke swirls, colors shifting.<BR>
+      “Breathe deeply. Let go of fear. Seek the wolf of memory, the serpent of change, and the shadow behind your eyes. When you return, bring me a token from the spirit realm.”<BR><BR>
+      You feel your senses slipping into another world…
+      ]]>
+    </NPCText>
+    <Option text="(You embark on a vision quest…)" action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="visionquest_warning">
+    <NPCText>
+      <![CDATA[
+      “The spirit-path is never safe. You may face memories, regrets, or truths you have long buried. But wisdom is worth the price, if you return with open eyes.”
+      ]]>
+    </NPCText>
+    <Option text="I am prepared." 
+            action="GiveItem:SpiritVisionQuestScroll(Verdant,1)" 
+            condition="!HasItem:SpiritVisionQuestScroll"
+            next="visionquest_begin"/>
+    <Option text="I will wait until I am ready." action="Close"/>
+  </Dialogue>
+
+  <!-- Herbalism Quest Branch -->
+  <Dialogue id="herbquest_intro">
+    <NPCText>
+      <![CDATA[
+      “The tribe’s wards weaken; the forest grows anxious. I need rare moonbloom petals to weave a new charm. Will you gather them?”<BR><BR>
+      (You may only accept if you do not already have a Moonbloom Gathering Scroll.)
+      ]]>
+    </NPCText>
+    <Option text="I will gather moonbloom petals for you."
+            action="GiveItem:MoonbloomGatheringScroll(Verdant,1)"
+            condition="!HasItem:MoonbloomGatheringScroll"
+            next="herbquest_accepted"/>
+    <Option text="Where can I find these petals?" next="herbquest_hint"/>
+    <Option text="Perhaps another time." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="herbquest_accepted">
+    <NPCText>
+      <![CDATA[
+      Nura nods gratefully.<BR>
+      “Seek the groves where moonlight lingers longest. Beware: Minax’s servants sometimes skulk there. Return with the petals, and our wards will hold.”<BR><BR>
+      (You have accepted a Moonbloom Gathering quest.)
+      ]]>
+    </NPCText>
+    <Option text="I will return soon." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="herbquest_hint">
+    <NPCText>
+      <![CDATA[
+      “Moonbloom grows where the silver moon kisses the damp earth. Search near streams at dusk, but do not linger—spirits protect these groves, and not all are friendly.”
+      ]]>
+    </NPCText>
+    <Option text="I will seek them out." 
+            action="GiveItem:MoonbloomGatheringScroll(Verdant,1)"
+            condition="!HasItem:MoonbloomGatheringScroll"
+            next="herbquest_accepted"/>
+    <Option text="Maybe later." action="Close"/>
+  </Dialogue>
+
+  <!-- Minax Lore Branch -->
+  <Dialogue id="minax">
+    <NPCText>
+      <![CDATA[
+      “Minax hungers for power and corruption. Her shadow seeps into root and stream; she would shatter all that binds us to our ancestors. If the Verdant falls, so too does hope for these woods.”<BR><BR>
+      Nura’s gaze turns flinty.<BR>
+      “But the spirits have not abandoned us. Nor shall I.”
+      ]]>
+    </NPCText>
+    <Option text="How can I help fight her?" next="tasks"/>
+    <Option text="I will stand with the Verdant." next="tasks"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- Resistance Lore Branch -->
+  <Dialogue id="resistMinax">
+    <NPCText>
+      <![CDATA[
+      “We ward our groves with song and spirit, with root and stone. Minax’s magic corrupts, but the earth remembers purity. If you would aid us, learn the ways of the wild—your strength will grow, and so too will ours.”
+      ]]>
+    </NPCText>
+    <Option text="Teach me the ways of the wild." next="wisdom"/>
+    <Option text="How else can I serve?" next="tasks"/>
+    <Option text="Farewell." action="Close"/>
+  </Dialogue>
+
+<!-- BACKSTORY INTRO -->
+<Dialogue id="nura_backstory_intro">
+  <NPCText>
+    <![CDATA[
+    Nura's expression softens. Her eyes seem to look beyond the present.<BR><BR>
+    “You ask not what I *do*... but who I *am*. Few do. That is... kind.”<BR>
+    She places a finger to her lips and murmurs a chant.<BR><BR>
+    “Very well. If you wish to walk my memories, tread lightly.”
+    ]]>
+  </NPCText>
+  <Option text="Tell me of your childhood among the Verdant." next="nura_childhood"/>
+  <Option text="What led you to become a shaman?" next="nura_calling"/>
+  <Option text="I heard you speak to Kaoru of Hinokami..." next="nura_kaoru"/>
+  <Option text="Never mind." action="Close"/>
+</Dialogue>
+
+<!-- CHILDHOOD -->
+<Dialogue id="nura_childhood">
+  <NPCText>
+    <![CDATA[
+    “I was born under a blood moon,” Nura begins, kneeling to trace a spiral in the dirt.<BR>
+    “The spirits whispered to my mother as she gave birth, saying I would ‘speak for the roots.’ I saw my first ghost at age five. He was a bear spirit, wounded and angry.”<BR><BR>
+    She smiles faintly.<BR>
+    “He taught me to listen—not to what is said, but to what is silent.”<BR>
+    ]]>
+  </NPCText>
+  <Option text="And that shaped you?" next="nura_calling"/>
+  <Option text="The spirits chose you, then." next="nura_spiritgift"/>
+  <Option text="Enough for now." action="Close"/>
+</Dialogue>
+
+<!-- SPIRIT GIFT -->
+<Dialogue id="nura_spiritgift">
+  <NPCText>
+    <![CDATA[
+    Nura closes her eyes.<BR><BR>
+    “Some gifts are blessings... others, burdens.”<BR>
+    “The spirits walk beside me always. I cannot sleep easily, for their dreams are my own. Yet without their voices, I would be lost in these changing times.”<BR><BR>
+    Her fingers tighten on her staff.<BR>
+    “It is why I stand against Minax. She would silence the spirits forever.”
+    ]]>
+  </NPCText>
+  <Option text="I will help protect your path." next="tasks"/>
+  <Option text="And if the spirits ever go silent?" next="nura_fear"/>
+  <Option text="You carry much, Shaman." action="SendMessage:Nura nods silently, her burden evident."/>
+  <Option text="Farewell for now." action="Close"/>
+</Dialogue>
+
+<!-- HER CALLING -->
+<Dialogue id="nura_calling">
+  <NPCText>
+    <![CDATA[
+    “I was not trained—I was called.”<BR>
+    “One night, during a fever, I wandered from the village. I fell into a deep hollow and dreamt I became a tree. When I woke, a root had grown around my ankle... and I knew the grove had accepted me.”<BR><BR>
+    She chuckles.<BR>
+    “Or perhaps I just had strange dreams. But I listened. And I learned.”
+    ]]>
+  </NPCText>
+  <Option text="What did you learn in the grove?" next="nura_grovelessons"/>
+  <Option text="Dreams can be powerful." action="SendMessage:Nura nods slowly, eyes distant."/>
+  <Option text="That explains your wisdom." next="nura_flattered"/>
+  <Option text="I should go." action="Close"/>
+</Dialogue>
+
+<!-- GROVE LESSONS -->
+<Dialogue id="nura_grovelessons">
+  <NPCText>
+    <![CDATA[
+    “The grove taught me three things.”<BR>
+    “First: All things must return. Second: Power unbalanced invites ruin. Third: The smallest root may topple the tallest tower.”<BR><BR>
+    She touches your shoulder lightly.<BR>
+    “You would do well to remember these.”
+    ]]>
+  </NPCText>
+  <Option text="I will. Thank you, Shaman." action="Fame:+100"/>
+  <Option text="That last one—was that a warning?" next="nura_warning"/>
+  <Option text="I understand." action="Close"/>
+</Dialogue>
+
+<!-- FAME BOOST -->
+<Dialogue id="nura_flattered">
+  <NPCText>
+    <![CDATA[
+    “Wisdom is a river, not a well. It flows through all who are open to it.”<BR>
+    She smiles.<BR>
+    “If you ever doubt your own wisdom, come and drink.”
+    ]]>
+  </NPCText>
+  <Option text="You honor me." action="Fame:+50"/>
+  <Option text="Back to more serious matters..." next="tasks"/>
+  <Option text="Farewell." action="Close"/>
+</Dialogue>
+
+<!-- WARNING NODE -->
+<Dialogue id="nura_warning">
+  <NPCText>
+    <![CDATA[
+    Nura’s tone shifts subtly.<BR>
+    “Many forget the quiet things. The overlooked. The underestimated.”<BR>
+    “Minax did not rise from a throne—but from a wound. We must guard our roots, or she will rot them from beneath us.”<BR>
+    ]]>
+  </NPCText>
+  <Option text="You speak with deep foresight." next="nura_flattered"/>
+  <Option text="I will remember this." action="Karma:+50"/>
+  <Option text="Farewell." action="Close"/>
+</Dialogue>
+
+<!-- CONNECTION TO KAORU -->
+<Dialogue id="nura_kaoru">
+  <NPCText>
+    <![CDATA[
+    Nura’s cheeks flush faintly.<BR>
+    “Kaoru... yes. The Lantern Keeper and I have shared visions for years. Though oceans and jungles divide us, our minds sometimes touch when the moons align.”<BR><BR>
+    She hesitates.<BR>
+    “Some among my tribe disapprove. They say Hinokami walks too far from the old ways. But Kaoru’s light has never dimmed.”<BR>
+    ]]>
+  </NPCText>
+  <Option text="Do you trust Kaoru?" next="nura_kaoru_trust"/>
+  <Option text="Do you... love him?" next="nura_love"/>
+  <Option text="That must be difficult." next="nura_politics"/>
+  <Option text="This sounds like a bond worth protecting." action="Karma:+100"/>
+</Dialogue>
+
+<!-- KAORU TRUST -->
+<Dialogue id="nura_kaoru_trust">
+  <NPCText>
+    <![CDATA[
+    “I trust his light. But trust is not just about one’s nature—it is about what choices they make when tested.”<BR>
+    “We may be tested soon. Should he falter... I must choose my path wisely.”<BR>
+    ]]>
+  </NPCText>
+  <Option text="I understand. I’ll support you." action="Karma:+50"/>
+  <Option text="Then let's prepare for what’s coming." next="tasks"/>
+  <Option text="Farewell." action="Close"/>
+</Dialogue>
+
+<!-- LOVE? -->
+<Dialogue id="nura_love">
+  <NPCText>
+    <![CDATA[
+    Nura’s smile is small, private.<BR>
+    “I would not call it love. Not yet. But... sometimes, when he lights his lantern, I feel warmer in the dark.”<BR><BR>
+    She exhales softly.<BR>
+    “That is enough for now.”
+    ]]>
+  </NPCText>
+  <Option text="Thank you for your honesty." next="nura_flattered"/>
+  <Option text="You both carry hope." action="Fame:+75"/>
+  <Option text="Goodbye, Nura." action="Close"/>
+</Dialogue>
+
+<!-- POLITICS -->
+<Dialogue id="nura_politics">
+  <NPCText>
+    <![CDATA[
+    “The council mistrusts Hinokami. Some fear they will try to control us as Britain once did. But I have seen a different path—one where we stand together.”<BR>
+    “Still... even within the tribe, old grudges die slowly.”
+    ]]>
+  </NPCText>
+  <Option text="Will you speak to the council on his behalf?" next="nura_council"/>
+  <Option text="Then we must prove the unity is possible." next="tasks"/>
+  <Option text="I’ll leave politics to you." action="Close"/>
+</Dialogue>
+
+<!-- COUNCIL -->
+<Dialogue id="nura_council">
+  <NPCText>
+    <![CDATA[
+    “Perhaps. But not alone.”<BR>
+    “If I ask you to stand with me—before warriors, hunters, and the ancient spirits—will you do so?”<BR><BR>
+    (This will unlock a future tribal council event if implemented.)
+    ]]>
+  </NPCText>
+  <Option text="Yes. I will stand with you." action="AttachXml:XmlVerdantCouncilAlly,1"/>
+  <Option text="I need time to consider." action="Close"/>
+</Dialogue>
+
+
+</DialogueFile>

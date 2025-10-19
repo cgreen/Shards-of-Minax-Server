@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogueFile npc="AldricTheHunter">
+  <!-- === Root Greeting =================================================== -->
+  <Dialogue id="greeting">
+    <NPCText>
+      <![CDATA[
+      <BASEFONT COLOR='#74a176'>
+      You find Aldric at the edge of the forest, his silhouette part of the wild landscape. He’s clad in bramble-stitched leather and a crow-feathered hat, his weathered face half-shadowed beneath the brim. He barely glances at you, a crossbow resting at his side.<BR><BR>
+      "Not often we see travelers brave these woods. Most come for coin or gossip—and few come back. If you’re looking for trouble, the marsh will oblige you. If you’re looking for honest work, speak your mind quick. I’ve no patience for fools or spies."
+      </BASEFONT>
+      ]]>
+    </NPCText>
+    <Option text="I’m here to help. Do you have work for a capable hand?" next="work"/>
+    <Option text="You look like a man with stories. How long have you watched over Eldermoor?" next="stories"/>
+    <Option text="You always this wary of newcomers?" next="wary"/>
+    <Option text="Just passing through. Don’t mind me." action="Close"/>
+  </Dialogue>
+
+  <!-- === Work/Quest Introduction ========================================= -->
+  <Dialogue id="work">
+    <NPCText>
+      <![CDATA[
+      Aldric’s gaze sharpens, measuring you.<BR><BR>
+      "Help, is it? Most who offer end up needing it themselves. Still... these lands breed desperate folk and stranger things. We’ve a Frostwarden Ettin plaguing our pasture—a beast twice the size of a bull, hides like winter stone, foul breath like the grave. I’ve tracked it for weeks, but my old wound slows me now. That brute’s not natural—there’s ice on its breath in midsummer, and Edda swears it’s ‘tainted by new magic.’"
+      <BR><BR>
+      He leans closer, voice low.<BR>
+      "You take on the Frostwarden, you do more than a favor for this town. You’ll be keeping Mira’s father from ruin, and Edda’s apothecary from empty shelves. Bring me one of the Ettin’s frostbitten tusks as proof and I’ll see to it you’re rewarded. More than gold, you’ll earn a hunter’s respect."
+      ]]>
+    </NPCText>
+    <Option text="Tell me more about this Frostwarden Ettin." next="ettinDetails"/>
+    <Option text="Why not ask Thalen or someone else?" next="helpWhyNot"/>
+    <Option text="I’ll do it. Where can I find the beast?"
+      action="GiveItem:FactionKillQuestScroll(FrostwardenEttin,1,Eldermoor,750)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="How did you come by that limp?" next="limp"/>
+    <Option text="You’re close to Mira, aren’t you?" next="mira"/>
+    <Option text="I need to think about it." action="Close"/>
+  </Dialogue>
+
+  <!-- === Ettin Lore Branch =============================================== -->
+  <Dialogue id="ettinDetails">
+    <NPCText>
+      <![CDATA[
+      Aldric’s jaw sets as if remembering old pain.<BR><BR>
+      "The beast’s bigger than any I’ve seen—stands upright, taller than the gate, with twin heads arguing in broken tongue. I tracked it to the Ice-Sunken Circle, where the marsh meets the frosted hollow. They say the old druids bound spirits there... Now, it’s where cold creeps from the ground and the Ettin guards something precious—maybe a trinket Minax wants, maybe just a pile of bones."
+      <BR><BR>
+      "Its tusks are blue with hoarfrost, and it’s clever for a monster—traps its prey, waits for night. If you fight it, use fire or blessed weapons. If you die, I’ll drag what’s left back for a proper grave. Fair?"
+      ]]>
+    </NPCText>
+    <Option text="I’ll take the job. Give me the details."
+      action="GiveItem:FactionKillQuestScroll(FrostwardenEttin,1,Eldermoor,750)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Not sure I’m up for it." action="Close"/>
+  </Dialogue>
+
+  <!-- === Why Not Others? ================================================= -->
+  <Dialogue id="helpWhyNot">
+    <NPCText>
+      <![CDATA[
+      Aldric smirks, voice dropping.<BR><BR>
+      "Thalen’s a smith, not a hunter—good lad, stubborn as a boar, but green in the wilds. Edda can brew a potion that’ll raise the dead, but she’s no match for claws and stone fists. Miralda... well, she thinks every problem’s a lesson from the Virtues. Me, I’d rather deal with what’s in front of me. And Mira? She’s got more sense than all of us—knows not to chase monsters into the fog. That leaves you, or nobody."
+      ]]>
+    </NPCText>
+    <Option text="Then I’ll do it. Hand me what I need."
+      action="GiveItem:FactionKillQuestScroll(FrostwardenEttin,1,Eldermoor,750)"
+      condition="!HasItem:FactionKillQuestScroll"
+      next="accept"/>
+    <Option text="Maybe I’ll sit this one out." action="Close"/>
+  </Dialogue>
+
+  <!-- === Accept Quest Node =============================================== -->
+  <Dialogue id="accept">
+    <NPCText>
+      <![CDATA[
+      Aldric nods, respect flickering in his eyes.<BR><BR>
+      "You’ll find the Frostwarden at dusk, near the sunken circle past the birch grove. Track the frost on the reeds and the broken trunks. Kill it, and bring back its tusk—white-blue and bigger than your arm. If you find strange tokens or marks, show Edda or Priestess Miralda before you sell them. Minax’s corruption runs deep, and some curses you don’t want in your pack."
+      <BR><BR>
+      "And—don’t let your guard down. The Ettin’s not the only thing with eyes in the wilds."
+      ]]>
+    </NPCText>
+    <Option text="I’ll bring you proof soon." action="Close"/>
+  </Dialogue>
+
+  <!-- === Aldric’s Past: War Wound ======================================== -->
+  <Dialogue id="limp">
+    <NPCText>
+      <![CDATA[
+      Aldric shifts, weight settling on his good leg.<BR><BR>
+      "You’re sharper than most. Got this limp in the king’s service—Britannia’s militia, years back. Fought bandits, then Minax’s scouts. Saw too much rot in ‘noble’ ranks, so I walked away. Some say that makes me a deserter; I say I kept my soul. Now I serve the people I choose, not the ones who forgot us."
+      ]]>
+    </NPCText>
+    <Option text="Seems you and Halric have that in common." next="halric"/>
+    <Option text="The wilds are lucky to have you." next="respect"/>
+    <Option text="Does that past trouble you?" next="trouble"/>
+    <Option text="Back to the Frostwarden Ettin..." next="work"/>
+  </Dialogue>
+
+  <Dialogue id="halric">
+    <NPCText>
+      <![CDATA[
+      "Aye. Halric’s stubborn, but he’s kept Eldermoor standing when the cities would let it burn. We don’t always agree, but I trust his judgment—and his axe."
+      ]]>
+    </NPCText>
+    <Option text="Let’s talk about that Ettin..." next="work"/>
+    <Option text="Thanks for sharing." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="respect">
+    <NPCText>
+      <![CDATA[
+      Aldric almost smiles.<BR><BR>
+      "Careful, flattery’s rare here. Means you’ll owe someone soon."
+      ]]>
+    </NPCText>
+    <Option text="Let’s get back to that job." next="work"/>
+    <Option text="Farewell, hunter." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="trouble">
+    <NPCText>
+      <![CDATA[
+      "Trouble? Regret, maybe. Sometimes the old banners haunt me at night, and I wonder if we could’ve done more—saved more. But regret’s just another trap. Here, I can fight for something real."
+      ]]>
+    </NPCText>
+    <Option text="Let’s talk about your quest." next="work"/>
+    <Option text="That’s all I needed to know." action="Close"/>
+  </Dialogue>
+
+  <!-- === Mira Branch ===================================================== -->
+  <Dialogue id="mira">
+    <NPCText>
+      <![CDATA[
+      For the first time, Aldric’s voice softens.<BR><BR>
+      "Mira’s as much a sister as I’ve ever had. Grew up together, running wild through these woods—before Minax, before war. I keep an eye on her, though she’d say I hover too much. She dreams of far-off cities, ships, stories I can’t promise her. I hope she finds her path, but I pray it’s safer than mine."
+      ]]>
+    </NPCText>
+    <Option text="Would you really let her go to Sunreach?" next="sunreach"/>
+    <Option text="Back to business. What about that Ettin?" next="work"/>
+    <Option text="Thanks for trusting me." action="Close"/>
+  </Dialogue>
+
+  <Dialogue id="sunreach">
+    <NPCText>
+      <![CDATA[
+      "Let her? Mira’s will is stronger than any lock. If she goes, it’ll be on her terms. All I can do is warn her, teach her to defend herself, and be ready if she calls for help. That’s what family means."
+      ]]>
+    </NPCText>
+    <Option text="Back to the hunt..." next="work"/>
+    <Option text="Understood. Farewell." action="Close"/>
+  </Dialogue>
+
+  <!-- === Wary of Outsiders =============================================== -->
+  <Dialogue id="wary">
+    <NPCText>
+      <![CDATA[
+      Aldric’s gaze narrows, sizing you up.<BR><BR>
+      "Wary? You’d be too, if you’d seen what walks these woods when the sun dips. Too many strangers wear friendly faces, but carry secrets for Minax—or worse. I watch, I wait, and I remember every lie told in these fields. But earn my trust, and you’ll have a friend worth more than gold."
+      ]]>
+    </NPCText>
+    <Option text="How can I prove myself to you?" next="work"/>
+    <Option text="Suit yourself, hunter." action="Close"/>
+  </Dialogue>
+
+  <!-- === Minax/Corruption Lore =========================================== -->
+  <Dialogue id="minaxLore">
+    <NPCText>
+      <![CDATA[
+      "Minax’s taint is in every shadow, every whisper. The Ettin isn’t just a beast; it’s a warning. I’ve found strange symbols burned into trees, animals with glassy eyes that bleed frost, and tracks that vanish in the mist. If you find proof of Minax’s magic in the lair, bring it to me, Edda, or Miralda. Some secrets must be handled by those who know what they’re facing."
+      ]]>
+    </NPCText>
+    <Option text="I’ll keep watch for strange signs." next="work"/>
+    <Option text="Sounds like you need more than a hunter..." action="Close"/>
+  </Dialogue>
+
+</DialogueFile>
